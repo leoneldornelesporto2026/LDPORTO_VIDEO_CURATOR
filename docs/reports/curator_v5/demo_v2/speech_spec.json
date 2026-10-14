@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "phrases": [
+    {
+      "id": "S1",
+      "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios."
+    },
+    {
+      "id": "S2",
+      "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana."
+    },
+    {
+      "id": "S3",
+      "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final."
+    }
+  ]
+}

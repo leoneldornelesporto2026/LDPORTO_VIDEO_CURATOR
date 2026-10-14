@@ -1,0 +1,18 @@
+L.D.PORTO VIDEO CURATOR v1.0.2 - CAMERA ADAPTATIVA
+
+PROBLEMA CORRIGIDO:
+Em cenas de podcast com pessoas nas laterais, um crop central podia mostrar apenas mesa/logo.
+
+NOVA REGRA:
+- 1 pessoa clara -> crop no sujeito
+- 2 pessoas separadas -> split-screen
+- grupo ou composicao ambigua -> quadro inteiro com fundo desfocado
+- decisao por trecho da timeline, nao por um centro unico do clip inteiro
+
+COMO APLICAR:
+1. Feche o Curator.
+2. Extraia este ZIP sobre C:\Users\leone\Downloads\LDPORTO_VIDEO_CURATOR
+3. Confirme substituir os arquivos.
+4. Abra ABRIR_CURADOR.bat
+5. Clique CURAR e depois TESTAR 1 CORTE novamente.
+6. NAO clique APROVAR TESTE ate revisar o novo preview.

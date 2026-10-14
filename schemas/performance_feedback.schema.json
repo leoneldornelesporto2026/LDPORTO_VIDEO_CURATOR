@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional observed clip feedback V4.4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_sha256", "clip_id", "observed_at", "metrics"],
+  "properties": {
+    "schema_version": {"const": "4.4.0"},
+    "source_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "clip_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "decision_id": {"type": ["string", "null"]},
+    "platform": {"type": ["string", "null"], "maxLength": 128},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "manual_approval": {"type": ["boolean", "null"]},
+    "manual_rejection": {"type": ["boolean", "null"]},
+    "metrics": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "views": {"type": ["integer", "null"], "minimum": 0},
+        "likes": {"type": ["integer", "null"], "minimum": 0},
+        "comments": {"type": ["integer", "null"], "minimum": 0},
+        "shares": {"type": ["integer", "null"], "minimum": 0},
+        "retention": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "completion_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "ctr": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

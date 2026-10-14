@@ -1,0 +1,10 @@
+{
+  "segment_count": 3,
+  "all_source_phrases_exact": true,
+  "segment_ids": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "literal_matches_source": true
+}

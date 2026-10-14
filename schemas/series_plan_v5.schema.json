@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "L.D.PORTO V5.1 evidence-based editorial proposals",
+  "description": "Additive proposal contract. This document grants no official V4.4 render approval.",
+  "type": "object",
+  "required": ["schema_version", "methodology", "source_sha256", "source", "mode", "duration_preset", "status", "episodes", "extras", "story_map", "approval_required", "official_decisions_modified"],
+  "properties": {
+    "schema_version": {"const": "5.1.0"},
+    "methodology": {"type": "string", "minLength": 1},
+    "source_sha256": {"type": "string", "minLength": 1},
+    "source": {"type": "object", "required": ["sha256", "duration"], "properties": {"sha256": {"type": "string", "minLength": 1}, "duration": {"type": "number", "exclusiveMinimum": 0}}},
+    "mode": {"enum": ["MOMENTOS_INDEPENDENTES", "SERIE_CRONOLOGICA", "MELHORES_MOMENTOS", "COMBINADO", "DOSSIER_ONLY"]},
+    "duration_preset": {"$ref": "#/$defs/durationPreset"},
+    "status": {"enum": ["DRAFT", "REVIEW_REQUIRED", "PREVIEW_READY", "PREVIEW_APPROVED", "FINAL_RENDERED", "PUBLISH_READY", "REJECTED"]},
+    "episodes": {"type": "array", "items": {"$ref": "#/$defs/episode"}},
+    "extras": {"type": "array", "items": {"$ref": "#/$defs/episode"}},
+    "approval_required": {"const": true},
+    "official_decisions_modified": {"const": false},
+    "story_map": {
+      "type": "object",
+      "required": ["total_source_duration", "blocks", "covered_time_seconds", "coverage_pct_speech", "gaps", "excluded_intervals"],
+      "properties": {
+        "total_source_duration": {"type": "number", "exclusiveMinimum": 0},
+        "covered_time_seconds": {"type": "number", "minimum": 0},
+        "coverage_pct_speech": {"type": "number", "minimum": 0, "maximum": 100},
+        "blocks": {"type": "array", "items": {"type": "object", "required": ["start", "end", "kind", "segment_ids", "episode_ids"]}},
+        "gaps": {"type": "array"}, "excluded_intervals": {"type": "array"}
+      }
+    }
+  },
+  "$defs": {
+    "durationPreset": {"enum": ["auto_under_90", "under_30", "from_30_to_59", "from_60_to_89", "from_90_to_180", "from_180_to_300", "from_300_to_600", "from_600_to_900"]},
+    "episode": {
+      "type": "object",
+      "required": ["episode_id", "series_id", "order", "story_order", "source_start", "source_end", "duration", "segment_ids", "candidate_ids", "status", "needs_review", "duration_preset", "duration_min_seconds", "duration_max_seconds", "duration_max_inclusive", "actual_duration_seconds", "duration_within_target", "original_excerpt_support", "risk_flags"],
+      "properties": {
+        "episode_id": {"type": "string", "pattern": "^PROP_[a-f0-9]{24}$"},
+        "series_id": {"type": "string", "minLength": 1},
+        "order": {"type": "integer", "minimum": 1}, "story_order": {"type": "integer", "minimum": 1},
+        "source_start": {"type": "number", "minimum": 0}, "source_end": {"type": "number", "exclusiveMinimum": 0},
+        "duration": {"type": "number", "exclusiveMinimum": 0},
+        "segment_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "candidate_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "status": {"enum": ["DRAFT", "REVIEW_REQUIRED", "PREVIEW_READY", "PREVIEW_APPROVED", "FINAL_RENDERED", "PUBLISH_READY", "REJECTED"]},
+        "needs_review": {"type": "boolean"},
+        "duration_preset": {"$ref": "#/$defs/durationPreset"},
+        "duration_min_seconds": {"type": "number", "minimum": 0},
+        "duration_max_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "duration_max_inclusive": {"type": "boolean"},
+        "actual_duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "duration_within_target": {"type": "boolean"},
+        "original_excerpt_support": {"type": "array", "minItems": 1},
+        "risk_flags": {"type": "array", "items": {"type": "string"}},
+        "title_options": {"type": "array", "maxItems": 5, "items": {"type": "object", "required": ["text", "kind", "segment_ids", "support_status"]}}
+      }
+    }
+  }
+}

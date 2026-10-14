@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "video_id": "yZ78vCgiPZk",
+  "source_title": "CLÓVIS DE BARROS AO VIVO | PÂNICO - 07/05/26",
+  "curation_type": "second_editorial_curation",
+  "curator": "ChatGPT",
+  "strategy": {
+    "primary_goal": "strong standalone social clips",
+    "prefer": [
+      "clear hook",
+      "complete thought/payoff",
+      "evergreen relevance",
+      "30-90s",
+      "Clóvis philosophical insight",
+      "human/emotional stories"
+    ],
+    "reject": [
+      "commercial reads",
+      "housekeeping",
+      "weak fragments",
+      "duplicated angles"
+    ],
+    "note": "First-pass rank was treated as a proposal, not ground truth."
+  },
+  "approved_clips": [
+    {
+      "rank": 1,
+      "start": 7173.9,
+      "end": 7221.9,
+      "score": 97,
+      "title": "VOCÊ POSTA FELICIDADE OU PEDE APROVAÇÃO?",
+      "style": "PERGUNTA",
+      "reason": "Pergunta extremamente atual e universal; resposta curta, clara e compartilhável sobre validação nas redes sociais."
+    },
+    {
+      "rank": 2,
+      "start": 4849.1,
+      "end": 4921.78,
+      "score": 96,
+      "title": "A LIBERDADE É INSEPARÁVEL DA RESPONSABILIDADE",
+      "style": "REFLEXAO",
+      "reason": "Tese forte, exemplo cotidiano e conclusão memorável; o início foi ampliado para incluir a pergunta que dá contexto à resposta."
+    },
+    {
+      "rank": 3,
+      "start": 6770.49,
+      "end": 6833.75,
+      "score": 95,
+      "title": "A ESCOLA PODE MATAR O TALENTO QUE NINGUÉM MAIS INCENTIVA",
+      "style": "IMPACTO",
+      "reason": "Conflito muito claro entre vocação e pressão social, com exemplos concretos de flautista/atriz e payoff sobre o papel da escola."
+    },
+    {
+      "rank": 4,
+      "start": 7726.56,
+      "end": 7815.78,
+      "score": 95,
+      "title": "EU TINHA DUAS OPÇÕES: FUGIR OU MORRER ATIRANDO",
+      "style": "HISTORIA",
+      "reason": "Melhor arco narrativo do pacote: medo, decisão, lembrança do pai, ação e payoff com oito mil pessoas de pé."
+    },
+    {
+      "rank": 5,
+      "start": 5261.31,
+      "end": 5313.1,
+      "score": 94,
+      "title": "DINHEIRO NÃO GARANTE UMA VIDA FELIZ",
+      "style": "REFLEXAO",
+      "reason": "Começa com a tese econômica e fecha com uma contraposição forte sobre recursos materiais e felicidade."
+    },
+    {
+      "rank": 6,
+      "start": 4729.43,
+      "end": 4813.02,
+      "score": 93,
+      "title": "VOCÊ PRECISA GOSTAR DA PRÓPRIA COMPANHIA",
+      "style": "EMOCIONAL",
+      "reason": "Grande promoção da segunda curadoria: reflexão muito humana sobre solitude, leitura, amizade e gostar de ser quem é."
+    },
+    {
+      "rank": 7,
+      "start": 6404.03,
+      "end": 6456.72,
+      "score": 92,
+      "title": "VIVER CONTRA O PRÓPRIO TALENTO TEM UM PREÇO",
+      "style": "IMPACTO",
+      "reason": "Une dois fragmentos que separados perdiam força: talento desperdiçado, esforço e o exemplo de César Cielo."
+    },
+    {
+      "rank": 8,
+      "start": 6833.93,
+      "end": 6870.81,
+      "score": 91,
+      "title": "QUEM DECIDE O QUE É SUCESSO?",
+      "style": "PERGUNTA",
+      "reason": "Hook natural e discussão direta sobre escola, carreira, dinheiro e definição social de sucesso."
+    },
+    {
+      "rank": 9,
+      "start": 5620.57,
+      "end": 5666.25,
+      "score": 90,
+      "title": "NÃO É SOBRE DUBAI — É SOBRE O QUE VOCÊ DEIXA DE VIVER",
+      "style": "CURIOSIDADE",
+      "reason": "Outra forte promoção: pergunta curiosa sobre Dubai vira reflexão simples sobre tempo escasso e escolhas excludentes."
+    },
+    {
+      "rank": 10,
+      "start": 6320.58,
+      "end": 6398.92,
+      "score": 89,
+      "title": "VOCÊ PODE VIVER NA CONTRAMÃO DA SUA NATUREZA",
+      "style": "REFLEXAO",
+      "reason": "Tese filosófica completa, exemplo de professor e pressão familiar/social; forte para conteúdo de carreira e propósito."
+    },
+    {
+      "rank": 11,
+      "start": 6529.77,
+      "end": 6579.04,
+      "score": 88,
+      "title": "QUANTOS TALENTOS A SOCIEDADE FAZ A GENTE ABANDONAR?",
+      "style": "PERGUNTA",
+      "reason": "Dois candidatos medianos formam juntos um corte forte: desenhistas, cantores e poetas abandonando talentos para seguir o que a sociedade premia."
+    },
+    {
+      "rank": 12,
+      "start": 6244.62,
+      "end": 6287.78,
+      "score": 86,
+      "title": "O QUE É JUSTIÇA? CLÓVIS RESPONDE EM 40 SEGUNDOS",
+      "style": "PERGUNTA",
+      "reason": "Conceito filosófico condensado em linguagem simples e com uma frase final forte sobre avançar no espaço do outro."
+    }
+  ],
+  "notable_second_pass_changes": [
+    "Havan commercial candidate rejected from the first-pass shortlist.",
+    "Openbox treated as a commercial false negative.",
+    "Candidates originally ranked far below the shortlist were promoted.",
+    "Some adjacent candidates were merged conceptually to form stronger standalone clips."
+  ]
+}

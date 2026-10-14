@@ -1,0 +1,314 @@
+{
+  "ldporto_curator/analysis_loader.py": {
+    "bytes": 3485,
+    "sha256": "b4399ab9676a1f9e5f360e779f031a150b468ac5a63019ccc358bd7a543eb8fb"
+  },
+  "ldporto_curator/approval.py": {
+    "bytes": 2570,
+    "sha256": "aa3542ce26bab6e2bb34d0497930afcc91cad9b297a49e79e58ecd4369125b33"
+  },
+  "ldporto_curator/broadcast_graphics.py": {
+    "bytes": 4819,
+    "sha256": "7f9c9bff1eff73a95ca9fb0573381c2b900eed679f3d0dff15927131fcacea3e"
+  },
+  "ldporto_curator/camera.py": {
+    "bytes": 37433,
+    "sha256": "9f08ce040c1b79fc7cb10ea6f7814b102ef6e4449479dd05617aa84e584ec917"
+  },
+  "ldporto_curator/camera_evidence.py": {
+    "bytes": 3117,
+    "sha256": "66b7f22836f5b8618972cdbfd22261cc6420511fd31fc8080ba290921f5c0874"
+  },
+  "ldporto_curator/camera_geometry.py": {
+    "bytes": 4549,
+    "sha256": "bb1f9d336324ef57a98a488e758f12c6642654e9505f79a969fda5798da7a0bc"
+  },
+  "ldporto_curator/camera_motion.py": {
+    "bytes": 9100,
+    "sha256": "ea46a014f0d7bb65e72ee7513be190841cea40ce234252844a98dcd44b78b4ce"
+  },
+  "ldporto_curator/camera_refinement.py": {
+    "bytes": 14733,
+    "sha256": "e068f34abbab44a12c1e7273eef8ac469abcda9170f0c4125261370ea228a6be"
+  },
+  "ldporto_curator/camera_verifier.py": {
+    "bytes": 2853,
+    "sha256": "971a5429896812877ddcc61b27312edb1acd00b13caa07badbe6039fa844c8fe"
+  },
+  "ldporto_curator/config.py": {
+    "bytes": 437,
+    "sha256": "8bc0f83d1ddd6e53c922c109cc806431b2ff066a2d8b82dbfd8d73c2a431d113"
+  },
+  "ldporto_curator/curator.py": {
+    "bytes": 7660,
+    "sha256": "0ea60379fed8c8fbf62f1be311eb597b993b198fae0c7cd35a6932d8a2a35531"
+  },
+  "ldporto_curator/director_config.py": {
+    "bytes": 9455,
+    "sha256": "21d8f3df9ad891058f5b2f49756ead2e6648fad528f80aff83db5c66a876b06a"
+  },
+  "ldporto_curator/duration_presets.py": {
+    "bytes": 3157,
+    "sha256": "dc8714d7a22322fb7ba789cf726157edec44ee382bf5c09448933c6a46df1a10"
+  },
+  "ldporto_curator/episode_approval.py": {
+    "bytes": 4443,
+    "sha256": "02aa459c24ae980fe7df010e13c6abf80c6696249728822f76f5939155863584"
+  },
+  "ldporto_curator/eta.py": {
+    "bytes": 3878,
+    "sha256": "5dce7c63a6456e6049643bd807e418b828a1b24aa76798b1ea2e0917ce824e31"
+  },
+  "ldporto_curator/evidence_source.py": {
+    "bytes": 28138,
+    "sha256": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f"
+  },
+  "ldporto_curator/feedback.py": {
+    "bytes": 3339,
+    "sha256": "707fbdfc7950630a4f32ae6586afd1612f87fd010f5f7d64794db1f091b69d19"
+  },
+  "ldporto_curator/final_camera.py": {
+    "bytes": 3540,
+    "sha256": "1024b1dce5bdd8e970a2e6df719b268a1d5f99e8c6fe213dc588acbea17e35ac"
+  },
+  "ldporto_curator/full_handoff.py": {
+    "bytes": 21651,
+    "sha256": "9c3e8737ed6cabcfe03e9814af2df8f9d569be663d921622e5840d0137d19231"
+  },
+  "ldporto_curator/gui.py": {
+    "bytes": 18124,
+    "sha256": "8f5263558256cbb3e77fd4392fe12d68db67dad5f63d6b1ec5aa07696974a389"
+  },
+  "ldporto_curator/interview_layout.py": {
+    "bytes": 1040,
+    "sha256": "067c397975797c5edf4bae04c5fba94dec9f691418a7667bb5428c30bf748c55"
+  },
+  "ldporto_curator/local_player.py": {
+    "bytes": 4397,
+    "sha256": "ae56b96cdeae3ad2db2328a30de9ba0bc3d7b96220282cc14ea28984990a5987"
+  },
+  "ldporto_curator/media_effects.py": {
+    "bytes": 10035,
+    "sha256": "01577b0cd45194bd64a7e9105b033e9d8164d587ed06f6a07d0025927d9f6448"
+  },
+  "ldporto_curator/micro_perception.py": {
+    "bytes": 8372,
+    "sha256": "dc2dc3897564d233080ffce0b242eec7703fad6cef04814336fdc3b318d0d5ed"
+  },
+  "ldporto_curator/ollama_client.py": {
+    "bytes": 3735,
+    "sha256": "5d413d4ad6cfb64e5e849d700ab239e7476ff767bcdd29ab1c22b358b4b5d4ce"
+  },
+  "ldporto_curator/pipeline.py": {
+    "bytes": 14258,
+    "sha256": "8fb0aa495e12105d74d195c48aab7b2337000f0b8d27cbc2ae134d3cc8072466"
+  },
+  "ldporto_curator/render.py": {
+    "bytes": 18600,
+    "sha256": "a875d6e734f2ab88af95a261fb2fbbf7abeaaa5d1f71fc2d8c42fcd0aa8a0258"
+  },
+  "ldporto_curator/review.py": {
+    "bytes": 3834,
+    "sha256": "95990a4fbbfde6dde59fe59b02154dd7475719db24b67b409ec770b454e111bd"
+  },
+  "ldporto_curator/second_curation_decisions.py": {
+    "bytes": 7213,
+    "sha256": "b7e10f1ff08a76f34c8ecca3bebda581b438fcf0cd6caeef7899785620ad7fce"
+  },
+  "ldporto_curator/second_curation_import.py": {
+    "bytes": 8255,
+    "sha256": "1f4964af4bb5504955a1cbec9690c3fe5d3a6ec15db8c179a73c7f0a2bb8134e"
+  },
+  "ldporto_curator/series_planner.py": {
+    "bytes": 45766,
+    "sha256": "07b522782616d9d9e19c889d8e232a1419fbaa7f94b9cbc6a284c12d434fb253"
+  },
+  "ldporto_curator/series_review.py": {
+    "bytes": 31171,
+    "sha256": "376880c2c3e2c68f0ced3300342cca97f1f14b53c194bdd04fa76a86f49dda7f"
+  },
+  "ldporto_curator/series_workflow.py": {
+    "bytes": 26060,
+    "sha256": "68f74797ba58bf32bba73d6516beb09517936d053cdb750e8a70a47e7d18fcb2"
+  },
+  "ldporto_curator/source_video.py": {
+    "bytes": 2317,
+    "sha256": "5251db6683e15d9c14d4ae28fe56aa4cf2528b9e0234afd3b9fb5a5da5070351"
+  },
+  "ldporto_curator/storage.py": {
+    "bytes": 4824,
+    "sha256": "1d343bcd3ca2b060b2bc6e6be7d99624022f942547a3771dfa2fee1bc1a161fa"
+  },
+  "ldporto_curator/storage_dialog.py": {
+    "bytes": 3087,
+    "sha256": "10df8cebc5b5046d57094b90a8ccbd62eb4ad47ce92e1cb543d10cf6e771eb4a"
+  },
+  "ldporto_curator/subtitles.py": {
+    "bytes": 4000,
+    "sha256": "0d547d343006df3ea8d7ce95d549ed16b1d6eee6439540cd64f9ebcf217bc9dd"
+  },
+  "ldporto_curator/subtitle_presets.py": {
+    "bytes": 25432,
+    "sha256": "bee209a3be54bfdf5807e0c846a1b712335dcfa7fca22fc9e80f3b6c8f11b496"
+  },
+  "ldporto_curator/temporal.py": {
+    "bytes": 3034,
+    "sha256": "f1c637e879eadd8878edee530f93b980f8d699f2f26f76753841340651d29ca5"
+  },
+  "ldporto_curator/thumbnails.py": {
+    "bytes": 2772,
+    "sha256": "12376087615586b318d8d6a4325b6fef7a48e13e916273ef1d176821e8a483f2"
+  },
+  "ldporto_curator/thumbnail_presets.py": {
+    "bytes": 12841,
+    "sha256": "c1bc3e917b60b886e52e1e17eeb8a17ababd66fc8afb87e4134642ac9e82d3b8"
+  },
+  "ldporto_curator/title_card.py": {
+    "bytes": 5243,
+    "sha256": "fab207934522eecd041b69a3375f15c0e7ab5b0cd9b06397990107c47914e2b1"
+  },
+  "ldporto_curator/title_presets.py": {
+    "bytes": 2696,
+    "sha256": "4f39e379df77026ce7a762c991acccc254c89186af061025a950e1b80a1760c1"
+  },
+  "ldporto_curator/utils.py": {
+    "bytes": 1798,
+    "sha256": "97e0abc5cf9f9a40eb67be14355054a22acb52558c62c5bc1900a71554881604"
+  },
+  "ldporto_curator/__init__.py": {
+    "bytes": 22,
+    "sha256": "179996d3ba52c86aea0cd636121afe5290f3a41b4df85b185344066567fa3c91"
+  },
+  "cli.py": {
+    "bytes": 4010,
+    "sha256": "c6ab96fd2d22f42d8d371ec40fb6d39d8ae4ff6a971e8abb6d1a33ef6e879d26"
+  },
+  "README.md": {
+    "bytes": 4924,
+    "sha256": "e711cde4fb751e6634230776f393c53e508f1d4759e94f176d786276a2022b1e"
+  },
+  "schemas/performance_feedback.schema.json": {
+    "bytes": 1375,
+    "sha256": "50406ac58a30a7a458093d689cded69fbe50ede311d82cab12029d46fba8c134"
+  },
+  "schemas/second_curation_decisions.schema.json": {
+    "bytes": 3188,
+    "sha256": "a374d1f749a3f4e1685c5a65c759ee50efe0ac06c7f7141840f3a96e5865eef8"
+  },
+  "schemas/series_plan_v5.schema.json": {
+    "bytes": 4124,
+    "sha256": "793d175ea31de36da34c23aadb32187b2f071f7ecffde9d66a73c75d76f68a24"
+  },
+  "tests/test_core.py": {
+    "bytes": 9275,
+    "sha256": "1733a84eba8b2134110501c9f3d921527450daf3dfe910774c6384fe8f05ea8f"
+  },
+  "tests/test_episode_approval.py": {
+    "bytes": 8906,
+    "sha256": "67cdc757f2ffc5de45325bef37a23ddaa1ab9f7143c1bef094c3bf52d3d823e3"
+  },
+  "tests/test_evidence_source.py": {
+    "bytes": 9267,
+    "sha256": "d052fb55c2e2c85134ff3abba133fada4827c58c07770edbcc611a4824ff325d"
+  },
+  "tests/test_full_handoff.py": {
+    "bytes": 9234,
+    "sha256": "7f94b197bf54b4d6c4ef1dd33a9a17351274ddd41eea6789aefc94888af6edc0"
+  },
+  "tests/test_handoff_media_privacy.py": {
+    "bytes": 1334,
+    "sha256": "18771304a96d2b304aa2a026c2e3434bae251c592e0d134e152687854691a484"
+  },
+  "tests/test_media_effects.py": {
+    "bytes": 7075,
+    "sha256": "f3ff0ed9fc07c9f6f108b283bbcd8b52d6eb3a08efa59fec1db9845ee56e8794"
+  },
+  "tests/test_progress.py": {
+    "bytes": 742,
+    "sha256": "b64980c13b701e513d18eb10f5be9195fac986ce79418138849f5c949b14a856"
+  },
+  "tests/test_safe_camera_maps.py": {
+    "bytes": 4414,
+    "sha256": "cacb6b0cfeeaf210a5183a7c60a38c0d55ce4d6a9443cdef12dab08eb40a23e9"
+  },
+  "tests/test_semantic_split.py": {
+    "bytes": 5934,
+    "sha256": "ad080735d5674ac54f66ce6465acd3e5e37e44532bae74f36d3ee21fc461977f"
+  },
+  "tests/test_series_workflow.py": {
+    "bytes": 5700,
+    "sha256": "d7bee1cd01bef3fa2cf0e22c386e6ba591f8ad24d5e4e768a75687cff6d84dd2"
+  },
+  "tests/test_subtitle_readability.py": {
+    "bytes": 8123,
+    "sha256": "7ceee1a8bb338bab5c605fa19b44f8df3d8a4c6231041fc48e4fcd9afb7b650c"
+  },
+  "tests/test_subtitle_word_alignment.py": {
+    "bytes": 8120,
+    "sha256": "78ab39e7211fcdf05a5813a5631f5548a5096afd8a5d349f40d24177127c45e0"
+  },
+  "tests/test_thumbnail_presets.py": {
+    "bytes": 4642,
+    "sha256": "31dd3c623c518b48ba62503ab7eaf197a7208f3f2ec32f1687a274a347d4b67b"
+  },
+  "tests/test_title_presets.py": {
+    "bytes": 1191,
+    "sha256": "fc7d19143d96c272d3172eb155f40d418038ca83501709807d7b48fc62568508"
+  },
+  "tests/test_v44_approval.py": {
+    "bytes": 1877,
+    "sha256": "37e196845f79915226d8f378af42518b76eabcaf7471728c6f16d06585c42560"
+  },
+  "tests/test_v44_feedback.py": {
+    "bytes": 896,
+    "sha256": "4d48e8d59adf791fd94ab41f82505d60991dcaa8933ada4114bbb23ae2f1b2a9"
+  },
+  "tests/test_v44_ingestion.py": {
+    "bytes": 3092,
+    "sha256": "f4e2eb969e29ced8c08c16a7db787faea2c34086a89bde975a7a0977b1868c08"
+  },
+  "tests/test_v44_micro_camera.py": {
+    "bytes": 7378,
+    "sha256": "a4c7f6821d60ee8f5c204b963c290af5cc00a11395641ab766904dd42714454a"
+  },
+  "tests/test_v44_ops.py": {
+    "bytes": 1889,
+    "sha256": "b4b28e251be283f9e4c1a50a9192ed2b3ee1441095211a34b583ba8c796273fe"
+  },
+  "tests/test_v44_render_graphics.py": {
+    "bytes": 2205,
+    "sha256": "38f849a6389a73f75fc65dbaf7caf80bf5549b383203eaf71f0a994a6ca49bd1"
+  },
+  "tests/test_v5_series_planner.py": {
+    "bytes": 17989,
+    "sha256": "7337f405b9ab5c9e30b7bdf244e6773b792ca319bf04ff58e2c6adaf9462da16"
+  },
+  "tests/test_windows_gui_workflows.py": {
+    "bytes": 16874,
+    "sha256": "1954fcd4d6a85a47a2081bc5fbe4f5c561c79bd0b31af0f180d9d72a06382e61"
+  },
+  "scripts/capture_v5_ui.py": {
+    "bytes": 1960,
+    "sha256": "166193e277195aebbb7e72786cf9ed5cdcf474853e393c845f7037198efd65e5"
+  },
+  "scripts/demo_curator_v5.py": {
+    "bytes": 9162,
+    "sha256": "82d93f6cd0a4fc88cef6291667ba2484dc403fbe44da19e52b7ea49383eb728c"
+  },
+  "scripts/demo_speech.ps1": {
+    "bytes": 1030,
+    "sha256": "b2d36cf8af5ddc5ba83e338aa0474db0eb094493bd4d47a141b3fdc165ed34f7"
+  },
+  "scripts/validate_curator_v5.py": {
+    "bytes": 7156,
+    "sha256": "93543d5366313d0e9a358015a085eeefe4986bc36b9697c8802610001dbb6149"
+  },
+  "scripts/validate_v44_promoted_preview.py": {
+    "bytes": 983,
+    "sha256": "75362d0d609a3aaf71aadbd809a27117eaba412f2aef9401a6806564a3a55eac"
+  },
+  "scripts/validate_v44_real_clips.py": {
+    "bytes": 2889,
+    "sha256": "eb837109e43e85bac45460a6d4f061e44f1c9524a53934adf7e64c3488eeb870"
+  }
+}

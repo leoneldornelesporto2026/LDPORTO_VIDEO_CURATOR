@@ -1,0 +1,28 @@
+L.D.PORTO VIDEO CURATOR v1.0 — VALIDATION REPORT
+
+Validated in the build environment:
+- Python syntax / compileall: PASS
+- Automated core tests: 5/5 PASS
+- Real Analyzer fixture discovery/load: PASS
+- Human-curated sample: 7 approved clips, each 30–120 seconds: PASS
+- Conservative camera plan with real timeline/person positions: PASS
+- ASS/SRT generation: PASS
+- Synthetic vertical preview render 540x960 + audio: PASS
+- FFprobe post-render validation: PASS
+- Synthetic split-screen render 540x960 + audio: PASS
+- NVENC runtime failure path -> explicit libx264 fallback: PASS
+- Windows BAT files use CRLF only: PASS
+
+Important:
+The uploaded analysis does not contain the original MP4, so the real Rick Bonadio clip cannot be rendered inside this build environment. On Windows the app will reuse a local source if found or download it from the recorded YouTube URL with yt-dlp.
+
+Safety gate:
+RENDERIZAR TODOS is blocked until TESTAR 1 CORTE has completed and the user clicks APROVAR TESTE.
+
+v1.0.1 hotfix validation
+- Fixed Python 3.11 SyntaxError in ldporto_curator/subtitles.py (backslash inside f-string expression).
+- Python 3.11 AST compatibility scan: PASS.
+- compileall: PASS.
+- pytest: 5 passed.
+- ASS smoke test: PASS; explicit \\N line breaks preserved for title/captions.
+- Windows BAT line endings: CRLF verified.

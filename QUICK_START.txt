@@ -1,0 +1,14 @@
+L.D.PORTO VIDEO CURATOR — PRIMEIRO TESTE
+
+1) Extrair a pasta.
+2) Rodar INSTALAR.bat.
+3) Confirmar config.yaml: analysis_root deve apontar para LDPORTO_VIDEO_ANALYZER\analysis.
+4) Rodar ABRIR_CURADOR.bat.
+5) Colar a URL já analisada.
+6) Clicar CURAR.
+7) Clicar TESTAR 1 CORTE (rank 1).
+8) Assistir ao preview em output\renders\<video_id>\CLIP_001.
+9) Se estiver bom, clicar APROVAR TESTE.
+10) Só então clicar RENDERIZAR TODOS.
+
+O lote é bloqueado antes da aprovação do primeiro teste.

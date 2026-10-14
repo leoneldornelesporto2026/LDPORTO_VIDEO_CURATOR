@@ -1,0 +1,31 @@
+PROP_aae5b058158b22933022af28: libx264; fonte SHA256 validada; câmera full_frame_blur
+{
+  "synthetic_fixture": true,
+  "package": "docs\\reports\\curator_v5\\demo_v2\\SECOND_CURATION_PARTIAL_SYNTHETIC_bdd775c43545.zip",
+  "project": "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282",
+  "preview": "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\serie_01\\001_PROP_aae5b058158b22933022af28\\74781f1d14ddb2d2\\preview\\PREVIEW_540x960.mp4",
+  "preview_sha256": "f2aed228570b0ace06a7d9e1e5fcda581713338fd39020ece1f620a60795e774",
+  "handoff": "docs\\reports\\curator_v5\\EXEMPLO_HANDOFF_CHATGPT_ab22873e1808.zip",
+  "handoff_bytes": 552997,
+  "manifest_files": 66,
+  "shortlist_count": 0,
+  "episodes": [
+    {
+      "id": "PROP_aae5b058158b22933022af28",
+      "order": 1,
+      "start": 0.0,
+      "end": 27.32235827664399,
+      "state": "PREVIEW_READY"
+    },
+    {
+      "id": "PROP_afa6ecc399f7ff1a2d1a08f0",
+      "order": 2,
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "state": "REVIEW_REQUIRED"
+    }
+  ],
+  "human_approvals": 0,
+  "final_rendered": false
+}
+

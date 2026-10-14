@@ -1,0 +1,2 @@
+3 captures saved; actual Tk widgets on Windows, fixture only. Human QA remains pending.
+

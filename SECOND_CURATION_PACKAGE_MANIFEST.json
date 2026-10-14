@@ -1,0 +1,19 @@
+{
+  "package": "LDPORTO_VIDEO_CURATOR_SECOND_CURATION_READY",
+  "video_id": "yZ78vCgiPZk",
+  "root_override": "curation_overrides.json",
+  "override_entries": {
+    "wA1ipztt54c": 7,
+    "yZ78vCgiPZk": 12
+  },
+  "apply_to": "LDPORTO_VIDEO_CURATOR project root",
+  "first_preview": {
+    "rank": 1,
+    "start": 7173.9,
+    "end": 7221.9,
+    "score": 97,
+    "title": "VOCÊ POSTA FELICIDADE OU PEDE APROVAÇÃO?",
+    "style": "PERGUNTA",
+    "reason": "Pergunta extremamente atual e universal; resposta curta, clara e compartilhável sobre validação nas redes sociais."
+  }
+}

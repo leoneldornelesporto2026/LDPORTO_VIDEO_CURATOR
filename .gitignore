@@ -1,0 +1,296 @@
+# ============================================================
+# L.D.PORTO VIDEO ANALYZER
+# .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Python environments
+# ------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ------------------------------------------------------------
+# Python cache / compiled files
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ------------------------------------------------------------
+# Build / packaging
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+*.whl
+
+# ------------------------------------------------------------
+# IDE / editor
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ------------------------------------------------------------
+# OS junk
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------
+# Secrets / credentials
+# NEVER commit tokens or credentials
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+HF_TOKEN
+HF_TOKEN.*
+hf_token.txt
+hf_token_*.txt
+
+credentials.json
+credentials*.json
+secrets.json
+secrets*.json
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# ------------------------------------------------------------
+# Runtime logs / diagnostics
+# ------------------------------------------------------------
+*.log
+logs/
+diagnostics/
+diagnosticos/
+crashlogs/
+*.trace
+*.tmp
+*.temp
+*.bak
+*.old
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# ANALYZER runtime outputs
+# Heavy generated analysis must stay out of Git
+# ------------------------------------------------------------
+analysis/
+analysis_*/
+output/
+outputs/
+results/
+runs/
+runtime/
+
+# ------------------------------------------------------------
+# Generated review/export packages
+# ------------------------------------------------------------
+pacotes_para_enviar/
+/exports/
+/export/
+review_packages/
+reviews_generated/
+/PROJECT_EXPORT_*
+/WORK_PACKAGE_*
+benchmark_inputs/
+
+CHATGPT_REVIEW_*.zip
+LDPORTO_PROJETO_ATUAL_*.zip
+*.zip
+
+# ------------------------------------------------------------
+# Input/downloaded media
+# ------------------------------------------------------------
+input/
+downloads/
+download/
+media/
+videos/
+audio/
+
+# Common large media formats
+*.mp4
+*.mkv
+*.webm
+*.mov
+*.avi
+*.m4v
+*.mpeg
+*.mpg
+*.ts
+
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.opus
+*.wma
+
+# Subtitle/transcript exports generated at runtime
+*.srt
+*.vtt
+
+# ------------------------------------------------------------
+# AI / ML models and downloaded weights
+# Keep model download scripts/config in Git, not model binaries
+# ------------------------------------------------------------
+models/
+weights/
+checkpoints/
+model_cache/
+
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.tflite
+*.task
+
+# ------------------------------------------------------------
+# Hugging Face / Torch / ML caches
+# ------------------------------------------------------------
+.cache/
+huggingface/
+.huggingface/
+torch_cache/
+torch_extensions/
+transformers_cache/
+
+# ------------------------------------------------------------
+# Ollama / local model runtime data
+# ------------------------------------------------------------
+.ollama/
+ollama_models/
+
+# ------------------------------------------------------------
+# Analyzer checkpoints / temporary processing
+# ------------------------------------------------------------
+checkpoints_runtime/
+checkpoint/
+tmp/
+temp/
+work/
+workspace_tmp/
+
+# ------------------------------------------------------------
+# FFmpeg generated intermediates / previews
+# ------------------------------------------------------------
+frames/
+thumbnails/
+previews/
+preview/
+render_tmp/
+ffmpeg_tmp/
+
+# ------------------------------------------------------------
+# Large/generated data artifacts
+# ------------------------------------------------------------
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.parquet
+*.feather
+*.arrow
+
+# ------------------------------------------------------------
+# SQLite / local runtime databases
+# ------------------------------------------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ------------------------------------------------------------
+# Node/frontend artifacts (future GUI/web components)
+# ------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.next/
+vite.config.*.timestamp-*
+dist-web/
+
+# ------------------------------------------------------------
+# Local overrides / machine-specific configuration
+# ------------------------------------------------------------
+config.local.*
+config/*.local.*
+*.local.json
+*.local.yaml
+*.local.yml
+
+# ------------------------------------------------------------
+# Profiling / benchmark raw outputs
+# Keep benchmark code + curated reports, not raw profiler dumps
+# ------------------------------------------------------------
+*.prof
+*.pstats
+profile_output/
+profiling_raw/
+
+# ------------------------------------------------------------
+# Windows-specific generated files
+# ------------------------------------------------------------
+*.stackdump
+
+# ------------------------------------------------------------
+# IMPORTANT:
+# Source code, tests, schemas, docs, configs and scripts SHOULD
+# remain versioned. Examples:
+#
+# src/
+# scripts/
+# tests/
+# schemas/
+# config/
+# docs/
+# examples/
+# analyze.py
+# app.py
+# compare_runs.py
+# *.bat used by the project
+# requirements*.txt
+# README*.md
+# DELIVERY_MANIFEST*.json
+# ------------------------------------------------------------

@@ -1,0 +1,75 @@
+{
+  "synthetic": true,
+  "voice": "Microsoft Maria Desktop",
+  "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+  "source_duration_ffprobe": 43.633333,
+  "segments": [
+    {
+      "segment_id": "S1",
+      "start": 0.0,
+      "end": 13.886621315192743,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    },
+    {
+      "segment_id": "S2",
+      "start": 13.886621315192743,
+      "end": 27.32235827664399,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    },
+    {
+      "segment_id": "S3",
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SCENE_1",
+      "start": 0.0,
+      "end": 13.886621315192743,
+      "visual_description": "Painel azul com três caixas numeradas.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    },
+    {
+      "scene_id": "SCENE_2",
+      "start": 13.886621315192743,
+      "end": 27.32235827664399,
+      "visual_description": "Painel azul com três caixas conectadas por uma linha.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    },
+    {
+      "scene_id": "SCENE_3",
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "visual_description": "Painel azul com caixas conectadas e texto REVISAO.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    }
+  ],
+  "word_alignment": "not_measured",
+  "audio_human_review": "pending"
+}
