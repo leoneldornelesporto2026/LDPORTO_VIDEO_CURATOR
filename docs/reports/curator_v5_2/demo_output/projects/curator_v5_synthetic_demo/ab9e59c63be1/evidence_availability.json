@@ -1,0 +1,210 @@
+{
+  "segments": {
+    "status": "partial",
+    "count": 3,
+    "sources": [
+      "transcript/full_segments.jsonl"
+    ],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+  },
+  "words": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "scenes": {
+    "status": "available",
+    "count": 3,
+    "sources": [
+      "scenes.json"
+    ],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+  },
+  "timeline": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "chapters": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "qa": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "candidates": {
+    "status": "available",
+    "count": 0,
+    "sources": [
+      "editorial/candidate_catalog.json"
+    ],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+  },
+  "shortlist": {
+    "status": "available",
+    "count": 0,
+    "sources": [
+      "editorial/default_shortlist.json"
+    ],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "review_queue": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "story_arcs": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "program_sections": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "speakers": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "participants": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "speaker_person_mapping": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "people_observations": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "frame_samples": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "camera_timeline": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "ocr": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "graphics": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "visual_refs": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "silences": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "excluded_intervals": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "quality": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "blockers": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "decisions": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  }
+}

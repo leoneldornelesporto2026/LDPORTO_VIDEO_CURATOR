@@ -1,0 +1,17 @@
+{
+  "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+  "duration": 43.633333,
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "source": {
+    "id": "curator_v5_synthetic_demo",
+    "title": "Demonstração sintética local V5.1",
+    "type": "local_synthetic_fixture",
+    "filename": "SYNTHETIC_SOURCE.mp4"
+  },
+  "analyzer_version": "fixture_contract_v4.4",
+  "video_id": "curator_v5_synthetic_demo",
+  "id": "curator_v5_synthetic_demo",
+  "title": "Demonstração sintética local V5.1"
+}

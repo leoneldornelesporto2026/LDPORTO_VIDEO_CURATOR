@@ -1,0 +1,1330 @@
+{
+  "schema_version": "5.1.0",
+  "methodology": "evidence_semantic_boundaries_v1",
+  "plan_id": "PLAN_914d7b9d8d5fb7bbcbd66768",
+  "source": {
+    "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "duration": 43.633333,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "source": {
+      "id": "curator_v5_synthetic_demo",
+      "title": "Demonstração sintética local V5.1",
+      "type": "local_synthetic_fixture",
+      "filename": "SYNTHETIC_SOURCE.mp4"
+    },
+    "analyzer_version": "fixture_contract_v4.4",
+    "video_id": "curator_v5_synthetic_demo",
+    "id": "curator_v5_synthetic_demo",
+    "title": "Demonstração sintética local V5.1"
+  },
+  "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+  "provenance": {
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "input_package_sha256": "bdd775c43545633c445be0941f7e1ea1269ae5dbffceb0c853f9dfcdf31995b5",
+    "analyzer_version": "fixture_contract_v4.4",
+    "analyzer_fingerprint": null,
+    "analyzer_provenance": {},
+    "curator_version": "1.3.0",
+    "evidence_adapter_version": "5.1.0",
+    "curator_fingerprint": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f",
+    "source_hash_validation": "declared_metadata_and_manifest_consistency_not_media_rehash",
+    "analysis_status": "partial",
+    "build_mismatch": null,
+    "artifact_inventory": [
+      {
+        "path": "SECOND_CURATION_MANIFEST.json",
+        "bytes": 1084,
+        "sha256": "2edcf869d6152a9c473911738edf6fc6eae699c4cc32f4f363d98f86c69593c3"
+      },
+      {
+        "path": "SYNTHETIC_FIXTURE.md",
+        "bytes": 134,
+        "sha256": "520890ee6c783660dd1ae490ae7063227909e37d8df9c31fa042ef395c5c6a64"
+      },
+      {
+        "path": "editorial/candidate_catalog.json",
+        "bytes": 18,
+        "sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+      },
+      {
+        "path": "editorial/default_shortlist.json",
+        "bytes": 2,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "path": "scenes.json",
+        "bytes": 881,
+        "sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+      },
+      {
+        "path": "source/metadata.json",
+        "bytes": 354,
+        "sha256": "29a626d6a86327040689ab57788cc58e197b338f174e412577d2a5019afbe5d2"
+      },
+      {
+        "path": "transcript/full_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      },
+      {
+        "path": "transcript/relevant_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      }
+    ]
+  },
+  "availability": {
+    "segments": {
+      "status": "partial",
+      "count": 3,
+      "sources": [
+        "transcript/full_segments.jsonl"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+    },
+    "words": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "scenes": {
+      "status": "available",
+      "count": 3,
+      "sources": [
+        "scenes.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+    },
+    "timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "chapters": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "qa": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "candidates": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/candidate_catalog.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+    },
+    "shortlist": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/default_shortlist.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_queue": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "story_arcs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "program_sections": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speakers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "participants": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speaker_person_mapping": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "people_observations": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "frame_samples": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "camera_timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "ocr": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "graphics": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "visual_refs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "silences": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "excluded_intervals": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "quality": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "blockers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "decisions": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    }
+  },
+  "mode": "COMBINADO",
+  "duration_preset": "under_30",
+  "duration_label": "<30s",
+  "status": "REVIEW_REQUIRED",
+  "episodes": [
+    {
+      "episode_id": "PROP_aae5b058158b22933022af28",
+      "episode_id_origin": "derived_proposal_not_analyzer_candidate",
+      "series_id": "SERIE_01",
+      "internal_title": "HISTORIA_001",
+      "order": 1,
+      "story_order": 1,
+      "rank": 1,
+      "source_start": 0.0,
+      "source_end": 27.32235827664399,
+      "start": 0.0,
+      "end": 27.32235827664399,
+      "duration": 27.32235827664399,
+      "segment_ids": [
+        "S1",
+        "S2"
+      ],
+      "word_ids": [],
+      "scene_ids": [
+        "SCENE_1",
+        "SCENE_2"
+      ],
+      "candidate_ids": [],
+      "chapter_ids": [],
+      "story_arc_ids": [],
+      "qa_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "needs_review": true,
+      "human_approval": null,
+      "official_render_decision": null,
+      "title_text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+      "title_options": [
+        {
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S1"
+          ],
+          "source_start": 0.0,
+          "source_end": 13.886621315192743,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S2"
+          ],
+          "source_start": 13.886621315192743,
+          "source_end": 27.32235827664399,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "title_kind": "transcript_excerpt",
+      "cover_title": null,
+      "publication_title": null,
+      "hook_options": [
+        {
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S1"
+          ],
+          "source_start": 0.0,
+          "source_end": 13.886621315192743,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S2"
+          ],
+          "source_start": 13.886621315192743,
+          "source_end": 27.32235827664399,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "hook": {
+        "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S1"
+        ],
+        "source_start": 0.0,
+        "source_end": 13.886621315192743,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "story_premise": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S1",
+            "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+            "start": 0.0,
+            "end": 13.886621315192743,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "setup": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S1",
+            "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+            "start": 0.0,
+            "end": 13.886621315192743,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "development": {
+        "status": "literal_excerpt_only",
+        "evidence": []
+      },
+      "payoff": {
+        "status": "unknown",
+        "evidence": [],
+        "needs_human_review": true
+      },
+      "conflict": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "open_loop": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "bridge_from_previous": null,
+      "teaser_next": {
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S3"
+        ],
+        "source_start": 27.32235827664399,
+        "source_end": 43.61741496598639,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "next_episode_teaser": {
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S3"
+        ],
+        "source_start": 27.32235827664399,
+        "source_end": 43.61741496598639,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "continuation_required": true,
+      "carry_over_context": [],
+      "original_excerpt_support": [
+        {
+          "segment_id": "S1",
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+          "start": 0.0,
+          "end": 13.886621315192743,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "segment_id": "S2",
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+          "start": 13.886621315192743,
+          "end": 27.32235827664399,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "transcript_literal": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios. No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+      "editorial_rationale": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "semantic_split_reason": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "auto_duration_reason": null,
+      "preferred_cut_boundaries": [
+        {
+          "time": 0.0,
+          "kind": "segment_start",
+          "segment_id": "S1"
+        },
+        {
+          "time": 27.32235827664399,
+          "kind": "sentence_or_qa",
+          "segment_id": "S2"
+        }
+      ],
+      "boundary_quality": "sentence_or_qa",
+      "claims_to_verify": [
+        {
+          "claim": "Desfecho e contexto narrativo completo",
+          "status": "unknown"
+        }
+      ],
+      "uncertainties": [
+        "A ordem segue o relato na fonte; cronologia histórica não foi inferida.",
+        "Frase concluída não comprova desfecho narrativo.",
+        "Evidência insuficiente para três títulos distintos; não foram inventados."
+      ],
+      "risk_flags": [
+        "payoff_unverified",
+        "audio_not_homologated"
+      ],
+      "spoiler_risk": "not_measured",
+      "viral_potential": {
+        "status": "not_measured",
+        "kind": "editorial_hypothesis",
+        "score": null
+      },
+      "duration_alternatives": [],
+      "camera_mode": "SOURCE_PRESERVE",
+      "subtitle_preset": "LDP_KARAOKE_VERDE",
+      "duration_preset": "under_30",
+      "duration_label": "<30s",
+      "duration_min_seconds": 0,
+      "duration_min_inclusive": false,
+      "duration_max_seconds": 30,
+      "duration_max_inclusive": false,
+      "actual_duration_seconds": 27.32235827664399,
+      "duration_within_target": true,
+      "requested_duration": "<30s",
+      "proposed_duration": 27.32235827664399,
+      "preview_duration": null,
+      "rendered_duration": null,
+      "duration_deviation_reason": null,
+      "encoding_tolerance_seconds": null,
+      "duration_verified_by_ffprobe": false
+    },
+    {
+      "episode_id": "PROP_afa6ecc399f7ff1a2d1a08f0",
+      "episode_id_origin": "derived_proposal_not_analyzer_candidate",
+      "series_id": "SERIE_01",
+      "internal_title": "HISTORIA_002",
+      "order": 2,
+      "story_order": 2,
+      "rank": 2,
+      "source_start": 27.32235827664399,
+      "source_end": 43.61741496598639,
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "duration": 16.295056689342402,
+      "segment_ids": [
+        "S3"
+      ],
+      "word_ids": [],
+      "scene_ids": [
+        "SCENE_3"
+      ],
+      "candidate_ids": [],
+      "chapter_ids": [],
+      "story_arc_ids": [],
+      "qa_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "needs_review": true,
+      "human_approval": null,
+      "official_render_decision": null,
+      "title_text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+      "title_options": [
+        {
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S3"
+          ],
+          "source_start": 27.32235827664399,
+          "source_end": 43.61741496598639,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "title_kind": "transcript_excerpt",
+      "cover_title": null,
+      "publication_title": null,
+      "hook_options": [
+        {
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S3"
+          ],
+          "source_start": 27.32235827664399,
+          "source_end": 43.61741496598639,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "hook": {
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S3"
+        ],
+        "source_start": 27.32235827664399,
+        "source_end": 43.61741496598639,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "story_premise": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S3",
+            "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+            "start": 27.32235827664399,
+            "end": 43.61741496598639,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "setup": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S3",
+            "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+            "start": 27.32235827664399,
+            "end": 43.61741496598639,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "development": {
+        "status": "literal_excerpt_only",
+        "evidence": []
+      },
+      "payoff": {
+        "status": "unknown",
+        "evidence": [],
+        "needs_human_review": true
+      },
+      "conflict": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "open_loop": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "bridge_from_previous": {
+        "kind": "source_adjacency",
+        "episode_id": "PROP_aae5b058158b22933022af28",
+        "evidence": [
+          {
+            "segment_id": "S2",
+            "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+            "start": 13.886621315192743,
+            "end": 27.32235827664399,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ],
+        "semantic_relation": "needs_human_review"
+      },
+      "teaser_next": null,
+      "next_episode_teaser": null,
+      "continuation_required": false,
+      "carry_over_context": [
+        {
+          "segment_id": "S2",
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+          "start": 13.886621315192743,
+          "end": 27.32235827664399,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "original_excerpt_support": [
+        {
+          "segment_id": "S3",
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+          "start": 27.32235827664399,
+          "end": 43.61741496598639,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "transcript_literal": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+      "editorial_rationale": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "semantic_split_reason": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "auto_duration_reason": null,
+      "preferred_cut_boundaries": [
+        {
+          "time": 27.32235827664399,
+          "kind": "segment_start",
+          "segment_id": "S3"
+        },
+        {
+          "time": 43.61741496598639,
+          "kind": "sentence_or_qa",
+          "segment_id": "S3"
+        }
+      ],
+      "boundary_quality": "sentence_or_qa",
+      "claims_to_verify": [
+        {
+          "claim": "Desfecho e contexto narrativo completo",
+          "status": "unknown"
+        }
+      ],
+      "uncertainties": [
+        "A ordem segue o relato na fonte; cronologia histórica não foi inferida.",
+        "Frase concluída não comprova desfecho narrativo.",
+        "Evidência insuficiente para três títulos distintos; não foram inventados."
+      ],
+      "risk_flags": [
+        "payoff_unverified",
+        "audio_not_homologated"
+      ],
+      "spoiler_risk": "not_measured",
+      "viral_potential": {
+        "status": "not_measured",
+        "kind": "editorial_hypothesis",
+        "score": null
+      },
+      "duration_alternatives": [],
+      "camera_mode": "SOURCE_PRESERVE",
+      "subtitle_preset": "LDP_KARAOKE_VERDE",
+      "duration_preset": "under_30",
+      "duration_label": "<30s",
+      "duration_min_seconds": 0,
+      "duration_min_inclusive": false,
+      "duration_max_seconds": 30,
+      "duration_max_inclusive": false,
+      "actual_duration_seconds": 16.295056689342402,
+      "duration_within_target": true,
+      "requested_duration": "<30s",
+      "proposed_duration": 16.295056689342402,
+      "preview_duration": null,
+      "rendered_duration": null,
+      "duration_deviation_reason": null,
+      "encoding_tolerance_seconds": null,
+      "duration_verified_by_ffprobe": false
+    }
+  ],
+  "extras": [
+    {
+      "episode_id": "PROP_71119f894969bda8a1ce6291",
+      "episode_id_origin": "derived_proposal_not_analyzer_candidate",
+      "series_id": "EXTRAS_MELHORES_MOMENTOS",
+      "internal_title": "EXTRA_001",
+      "order": 1,
+      "story_order": 1,
+      "rank": 1,
+      "source_start": 0.0,
+      "source_end": 27.32235827664399,
+      "start": 0.0,
+      "end": 27.32235827664399,
+      "duration": 27.32235827664399,
+      "segment_ids": [
+        "S1",
+        "S2"
+      ],
+      "word_ids": [],
+      "scene_ids": [
+        "SCENE_1",
+        "SCENE_2"
+      ],
+      "candidate_ids": [],
+      "chapter_ids": [],
+      "story_arc_ids": [],
+      "qa_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "needs_review": true,
+      "human_approval": null,
+      "official_render_decision": null,
+      "title_text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+      "title_options": [
+        {
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S1"
+          ],
+          "source_start": 0.0,
+          "source_end": 13.886621315192743,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S2"
+          ],
+          "source_start": 13.886621315192743,
+          "source_end": 27.32235827664399,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "title_kind": "transcript_excerpt",
+      "cover_title": null,
+      "publication_title": null,
+      "hook_options": [
+        {
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S1"
+          ],
+          "source_start": 0.0,
+          "source_end": 13.886621315192743,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S2"
+          ],
+          "source_start": 13.886621315192743,
+          "source_end": 27.32235827664399,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "hook": {
+        "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S1"
+        ],
+        "source_start": 0.0,
+        "source_end": 13.886621315192743,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "story_premise": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S1",
+            "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+            "start": 0.0,
+            "end": 13.886621315192743,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "setup": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S1",
+            "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+            "start": 0.0,
+            "end": 13.886621315192743,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "development": {
+        "status": "literal_excerpt_only",
+        "evidence": []
+      },
+      "payoff": {
+        "status": "unknown",
+        "evidence": [],
+        "needs_human_review": true
+      },
+      "conflict": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "open_loop": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "bridge_from_previous": null,
+      "teaser_next": null,
+      "next_episode_teaser": null,
+      "continuation_required": false,
+      "carry_over_context": [],
+      "original_excerpt_support": [
+        {
+          "segment_id": "S1",
+          "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+          "start": 0.0,
+          "end": 13.886621315192743,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        },
+        {
+          "segment_id": "S2",
+          "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+          "start": 13.886621315192743,
+          "end": 27.32235827664399,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "transcript_literal": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios. No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+      "editorial_rationale": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "semantic_split_reason": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "auto_duration_reason": null,
+      "preferred_cut_boundaries": [
+        {
+          "time": 0.0,
+          "kind": "segment_start",
+          "segment_id": "S1"
+        },
+        {
+          "time": 27.32235827664399,
+          "kind": "sentence_or_qa",
+          "segment_id": "S2"
+        }
+      ],
+      "boundary_quality": "sentence_or_qa",
+      "claims_to_verify": [
+        {
+          "claim": "Desfecho e contexto narrativo completo",
+          "status": "unknown"
+        }
+      ],
+      "uncertainties": [
+        "A ordem segue o relato na fonte; cronologia histórica não foi inferida.",
+        "Frase concluída não comprova desfecho narrativo.",
+        "Evidência insuficiente para três títulos distintos; não foram inventados."
+      ],
+      "risk_flags": [
+        "payoff_unverified",
+        "audio_not_homologated"
+      ],
+      "spoiler_risk": "not_measured",
+      "viral_potential": {
+        "status": "not_measured",
+        "kind": "editorial_hypothesis",
+        "score": null
+      },
+      "duration_alternatives": [],
+      "camera_mode": "SOURCE_PRESERVE",
+      "subtitle_preset": "LDP_KARAOKE_VERDE",
+      "duration_preset": "under_30",
+      "duration_label": "<30s",
+      "duration_min_seconds": 0,
+      "duration_min_inclusive": false,
+      "duration_max_seconds": 30,
+      "duration_max_inclusive": false,
+      "actual_duration_seconds": 27.32235827664399,
+      "duration_within_target": true,
+      "requested_duration": "<30s",
+      "proposed_duration": 27.32235827664399,
+      "preview_duration": null,
+      "rendered_duration": null,
+      "duration_deviation_reason": null,
+      "encoding_tolerance_seconds": null,
+      "duration_verified_by_ffprobe": false
+    },
+    {
+      "episode_id": "PROP_41c1e4700ca67881f6e7f2de",
+      "episode_id_origin": "derived_proposal_not_analyzer_candidate",
+      "series_id": "EXTRAS_MELHORES_MOMENTOS",
+      "internal_title": "EXTRA_002",
+      "order": 2,
+      "story_order": 2,
+      "rank": 2,
+      "source_start": 27.32235827664399,
+      "source_end": 43.61741496598639,
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "duration": 16.295056689342402,
+      "segment_ids": [
+        "S3"
+      ],
+      "word_ids": [],
+      "scene_ids": [
+        "SCENE_3"
+      ],
+      "candidate_ids": [],
+      "chapter_ids": [],
+      "story_arc_ids": [],
+      "qa_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "needs_review": true,
+      "human_approval": null,
+      "official_render_decision": null,
+      "title_text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+      "title_options": [
+        {
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S3"
+          ],
+          "source_start": 27.32235827664399,
+          "source_end": 43.61741496598639,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "title_kind": "transcript_excerpt",
+      "cover_title": null,
+      "publication_title": null,
+      "hook_options": [
+        {
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+          "kind": "transcript_excerpt",
+          "segment_ids": [
+            "S3"
+          ],
+          "source_start": 27.32235827664399,
+          "source_end": 43.61741496598639,
+          "support_status": "supported_by_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "hook": {
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa",
+        "kind": "transcript_excerpt",
+        "segment_ids": [
+          "S3"
+        ],
+        "source_start": 27.32235827664399,
+        "source_end": 43.61741496598639,
+        "support_status": "supported_by_transcript",
+        "audio_verification": "not_measured"
+      },
+      "story_premise": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S3",
+            "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+            "start": 27.32235827664399,
+            "end": 43.61741496598639,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "setup": {
+        "status": "literal_excerpt_only",
+        "evidence": [
+          {
+            "segment_id": "S3",
+            "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+            "start": 27.32235827664399,
+            "end": 43.61741496598639,
+            "kind": "literal_transcript",
+            "audio_verification": "not_measured"
+          }
+        ]
+      },
+      "development": {
+        "status": "literal_excerpt_only",
+        "evidence": []
+      },
+      "payoff": {
+        "status": "unknown",
+        "evidence": [],
+        "needs_human_review": true
+      },
+      "conflict": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "open_loop": {
+        "status": "unknown",
+        "evidence": []
+      },
+      "bridge_from_previous": null,
+      "teaser_next": null,
+      "next_episode_teaser": null,
+      "continuation_required": false,
+      "carry_over_context": [],
+      "original_excerpt_support": [
+        {
+          "segment_id": "S3",
+          "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+          "start": 27.32235827664399,
+          "end": 43.61741496598639,
+          "kind": "literal_transcript",
+          "audio_verification": "not_measured"
+        }
+      ],
+      "transcript_literal": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+      "editorial_rationale": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "semantic_split_reason": "Limites de frases/Q&A comprovados; capítulos/tópicos disponíveis e ordem temporal da fonte.",
+      "auto_duration_reason": null,
+      "preferred_cut_boundaries": [
+        {
+          "time": 27.32235827664399,
+          "kind": "segment_start",
+          "segment_id": "S3"
+        },
+        {
+          "time": 43.61741496598639,
+          "kind": "sentence_or_qa",
+          "segment_id": "S3"
+        }
+      ],
+      "boundary_quality": "sentence_or_qa",
+      "claims_to_verify": [
+        {
+          "claim": "Desfecho e contexto narrativo completo",
+          "status": "unknown"
+        }
+      ],
+      "uncertainties": [
+        "A ordem segue o relato na fonte; cronologia histórica não foi inferida.",
+        "Frase concluída não comprova desfecho narrativo.",
+        "Evidência insuficiente para três títulos distintos; não foram inventados."
+      ],
+      "risk_flags": [
+        "payoff_unverified",
+        "audio_not_homologated"
+      ],
+      "spoiler_risk": "not_measured",
+      "viral_potential": {
+        "status": "not_measured",
+        "kind": "editorial_hypothesis",
+        "score": null
+      },
+      "duration_alternatives": [],
+      "camera_mode": "SOURCE_PRESERVE",
+      "subtitle_preset": "LDP_KARAOKE_VERDE",
+      "duration_preset": "under_30",
+      "duration_label": "<30s",
+      "duration_min_seconds": 0,
+      "duration_min_inclusive": false,
+      "duration_max_seconds": 30,
+      "duration_max_inclusive": false,
+      "actual_duration_seconds": 16.295056689342402,
+      "duration_within_target": true,
+      "requested_duration": "<30s",
+      "proposed_duration": 16.295056689342402,
+      "preview_duration": null,
+      "rendered_duration": null,
+      "duration_deviation_reason": null,
+      "encoding_tolerance_seconds": null,
+      "duration_verified_by_ffprobe": false
+    }
+  ],
+  "story_map": {
+    "total_source_duration": 43.633333,
+    "source_order": "narration_timestamps",
+    "historical_event_order": "not_inferred",
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "duration": 13.886621315192743,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S1"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "duration": 13.435736961451246,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S2"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "duration": 16.295056689342402,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S3"
+        ],
+        "episode_ids": [
+          "PROP_afa6ecc399f7ff1a2d1a08f0"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "duration": 0.015918034013608917,
+        "kind": "evidence_gap",
+        "segment_ids": [],
+        "episode_ids": [],
+        "reasons": [
+          "no_transcript_evidence_silence_not_assumed"
+        ],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "evidence_gap"
+      }
+    ],
+    "covered_time_seconds": 43.61741496598639,
+    "covered_speech_seconds": 43.61741496598639,
+    "available_speech_seconds": 43.61741496598639,
+    "coverage_pct_speech": 100.0,
+    "coverage_pct_source": 99.96351863834558,
+    "gaps": [
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "reason": "no_transcript_evidence_silence_not_assumed",
+        "kind": "evidence_gap"
+      }
+    ],
+    "excluded_intervals": [],
+    "coverage_denominator": "available_transcript_intervals_not_assumed_complete",
+    "series_episode_duration_sum": 43.61741496598639
+  },
+  "coverage": {
+    "total_source_duration": 43.633333,
+    "source_order": "narration_timestamps",
+    "historical_event_order": "not_inferred",
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "duration": 13.886621315192743,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S1"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "duration": 13.435736961451246,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S2"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "duration": 16.295056689342402,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S3"
+        ],
+        "episode_ids": [
+          "PROP_afa6ecc399f7ff1a2d1a08f0"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "duration": 0.015918034013608917,
+        "kind": "evidence_gap",
+        "segment_ids": [],
+        "episode_ids": [],
+        "reasons": [
+          "no_transcript_evidence_silence_not_assumed"
+        ],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "evidence_gap"
+      }
+    ],
+    "covered_time_seconds": 43.61741496598639,
+    "covered_speech_seconds": 43.61741496598639,
+    "available_speech_seconds": 43.61741496598639,
+    "coverage_pct_speech": 100.0,
+    "coverage_pct_source": 99.96351863834558,
+    "gaps": [
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "reason": "no_transcript_evidence_silence_not_assumed",
+        "kind": "evidence_gap"
+      }
+    ],
+    "excluded_intervals": [],
+    "coverage_denominator": "available_transcript_intervals_not_assumed_complete",
+    "series_episode_duration_sum": 43.61741496598639
+  },
+  "warnings": [
+    "words: missing; conteúdo preservado no inventário, sem uso factual",
+    "timeline: missing; conteúdo preservado no inventário, sem uso factual",
+    "chapters: missing; conteúdo preservado no inventário, sem uso factual",
+    "qa: missing; conteúdo preservado no inventário, sem uso factual",
+    "story_arcs: missing; conteúdo preservado no inventário, sem uso factual",
+    "Completude da transcrição não confirmada; cobertura usa apenas evidências disponíveis."
+  ],
+  "official_shortlist": [],
+  "official_decisions_modified": false,
+  "human_approval": null,
+  "approval_required": true,
+  "audit_trail": []
+}

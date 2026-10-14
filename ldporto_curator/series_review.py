@@ -10,6 +10,7 @@ from tkinter import ttk, filedialog, messagebox
 from .duration_presets import DURATION_PRESETS
 from .series_workflow import SeriesProject
 from .local_player import LocalPlayer
+from .timeline_editor import EpisodeTimeline,timestamp
 
 MODES = ('SERIE_CRONOLOGICA', 'MELHORES_MOMENTOS', 'COMBINADO', 'MOMENTOS_INDEPENDENTES', 'DOSSIER_ONLY')
 PRESET_LABELS = tuple(p.label for p in DURATION_PRESETS)
@@ -23,7 +24,7 @@ class SeriesReview(tk.Toplevel):
         self.project = None
         self.events, self.cancel = queue.Queue(), threading.Event()
         self.busy, self.page = False, 0
-        self.title('L.D.PORTO V5.1 · Propostas e revisão humana')
+        self.title('L.D.PORTO V5.2 · Histórias e revisão visual')
         self.geometry('1240x860')
         self.minsize(1020, 720)
         self.protocol('WM_DELETE_WINDOW', self._close)
@@ -61,8 +62,8 @@ class SeriesReview(tk.Toplevel):
         self.progress.pack(fill='x')
         self.tabs = ttk.Notebook(main)
         self.tabs.pack(fill='both', expand=True, pady=6)
-        map_tab, edit_container, cover_tab, export_tab = [ttk.Frame(self.tabs, padding=8) for _ in range(4)]
-        for frame, name in zip((map_tab, edit_container, cover_tab, export_tab), ('Mapa e evidências', 'Episódios e estilos', 'Capas', 'Dossiê e pendências')):
+        map_tab, edit_container, cover_tab, export_tab, advanced_tab = [ttk.Frame(self.tabs, padding=8) for _ in range(5)]
+        for frame, name in zip((map_tab, edit_container, cover_tab, export_tab, advanced_tab), ('História e timeline', 'Episódios e estilos', 'Capas', 'Dossiê e pendências','Avançado / diagnóstico')):
             self.tabs.add(frame, text=name)
         scroll=ttk.Scrollbar(edit_container,orient='vertical')
         scroll.pack(side='right',fill='y')
@@ -73,8 +74,9 @@ class SeriesReview(tk.Toplevel):
         item=edit_canvas.create_window((0,0),window=edit_tab,anchor='nw')
         edit_tab.bind('<Configure>',lambda event:edit_canvas.configure(scrollregion=edit_canvas.bbox('all')))
         edit_canvas.bind('<Configure>',lambda event:edit_canvas.itemconfigure(item,width=event.width))
-        self.timeline = tk.Canvas(map_tab, height=110, bg='#202028', highlightthickness=0)
-        self.timeline.pack(fill='x')
+        self.timeline_editor=EpisodeTimeline(map_tab,on_seek=self._timeline_seek,on_select=self._timeline_select,on_apply=self._apply_limits)
+        self.timeline_editor.pack(fill='x')
+        self.timeline=self.timeline_editor.canvas
         self.map_text = tk.Text(map_tab, wrap='word', height=22)
         self.map_text.pack(fill='both', expand=True)
         columns = ('order', 'start', 'end', 'duration', 'state', 'title')
@@ -90,6 +92,10 @@ class SeriesReview(tk.Toplevel):
         ttk.Button(nav, text='Próxima página', command=lambda: self._page(1)).pack(side='left')
         self.page_label = tk.StringVar()
         ttk.Label(nav, textvariable=self.page_label).pack(side='left', padx=10)
+        self.undo_button=ttk.Button(nav,text='Desfazer',command=lambda:self._history('undo'))
+        self.undo_button.pack(side='right',padx=3)
+        self.redo_button=ttk.Button(nav,text='Refazer',command=lambda:self._history('redo'))
+        self.redo_button.pack(side='right',padx=3)
         player_row = ttk.Frame(edit_tab)
         player_row.pack(fill='x')
         self.original_player = LocalPlayer(player_row, 430, 220)
@@ -113,6 +119,11 @@ class SeriesReview(tk.Toplevel):
             ('Parar', self._stop), ('Gerar preview + 3 capas', lambda: self._operate('preview')),
             ('Dividir semanticamente', self._split), ('Aprovar preview assistido', self._approve), ('Rejeitar', self._reject)]:
             ttk.Button(actions, text=label, command=action).pack(side='left', padx=2)
+        history_row=ttk.Frame(edit_tab);history_row.pack(fill='x',pady=3)
+        ttk.Button(history_row,text='Episódio anterior',command=lambda:self._step_episode(-1)).pack(side='left',padx=2)
+        ttk.Button(history_row,text='Próximo episódio',command=lambda:self._step_episode(1)).pack(side='left',padx=2)
+        ttk.Button(history_row,text='Mesclar com próximo',command=self._merge_next).pack(side='left',padx=2)
+        ttk.Button(history_row,text='Ver timeline / arrastar limites',command=lambda:self.tabs.select(0)).pack(side='left',padx=2)
         editor = ttk.Frame(edit_tab)
         editor.pack(fill='x')
         self.fields = {}
@@ -133,7 +144,11 @@ class SeriesReview(tk.Toplevel):
             ('Câmera',self.camera_mode,('SOURCE_PRESERVE','AUTO_CONSERVADOR','FOCO_PESSOA','DOIS_PARTICIPANTES','MANUAL_KEYFRAMES'))]:
             ttk.Label(style, text=label).pack(side='left')
             ttk.Combobox(style, textvariable=var, values=values, state='readonly', width=21).pack(side='left', padx=3)
-        customize = ttk.Frame(edit_tab)
+        form_buttons=ttk.Frame(edit_tab);form_buttons.pack(fill='x',pady=6)
+        ttk.Button(form_buttons,text='Aplicar ajustes do episódio',command=self._save).pack(side='left',padx=3)
+        ttk.Button(form_buttons,text='Salvar modelo de legenda',command=self._save_style).pack(side='left',padx=3)
+        ttk.Button(form_buttons,text='Carregar modelo',command=self._load_style).pack(side='left',padx=3)
+        customize = ttk.Frame(advanced_tab)
         customize.pack(fill='x')
         self.subtitle_custom = tk.StringVar(value='{}')
         ttk.Label(customize, text='Legenda personalizada (JSON):').pack(side='left')
@@ -141,7 +156,7 @@ class SeriesReview(tk.Toplevel):
         ttk.Button(customize, text='Salvar ajuste', command=self._save).pack(side='left', padx=3)
         ttk.Button(customize, text='Salvar modelo', command=self._save_style).pack(side='left', padx=3)
         ttk.Button(customize, text='Carregar modelo', command=self._load_style).pack(side='left', padx=3)
-        audio_row = ttk.Frame(edit_tab)
+        audio_row = ttk.Frame(advanced_tab)
         audio_row.pack(fill='x', pady=3)
         self.audio_custom, self.watermark_custom = tk.StringVar(value='{"mode":"original"}'),tk.StringVar(value='null')
         ttk.Label(audio_row,text='Áudio (JSON):').pack(side='left')
@@ -149,7 +164,7 @@ class SeriesReview(tk.Toplevel):
         ttk.Label(audio_row,text='Marca (JSON):').pack(side='left')
         ttk.Entry(audio_row,textvariable=self.watermark_custom,width=32).pack(side='left',fill='x',expand=True)
         ttk.Button(audio_row,text='Trilha própria',command=self._choose_music).pack(side='left')
-        manual_row=ttk.Frame(edit_tab)
+        manual_row=ttk.Frame(advanced_tab)
         manual_row.pack(fill='x',pady=3)
         self.camera_keyframes=tk.StringVar(value='[]')
         self.thumbnail_custom=tk.StringVar(value='{}')
@@ -157,6 +172,8 @@ class SeriesReview(tk.Toplevel):
         ttk.Entry(manual_row,textvariable=self.camera_keyframes,width=28).pack(side='left',fill='x',expand=True)
         ttk.Label(manual_row,text='Capa/frame/layout (JSON):').pack(side='left')
         ttk.Entry(manual_row,textvariable=self.thumbnail_custom,width=28).pack(side='left',fill='x',expand=True)
+        self.diagnostic=tk.Text(advanced_tab,wrap='word')
+        self.diagnostic.pack(fill='both',expand=True,pady=8)
         self.cover_frames=[]
         self.cover_selection=tk.StringVar(value='CAPA_01')
         for index in range(3):
@@ -275,26 +292,33 @@ class SeriesReview(tk.Toplevel):
         self.page_label.set(f'Página {self.page+1} · {len(episodes)} propostas · série e extras separados no índice')
         if selected and self.table.exists(selected):
             self.table.selection_set(selected)
+        elif self.table.get_children():
+            self.table.selection_set(self.table.get_children()[0])
         self.map_text.delete('1.0', 'end')
         story=self.project.plan.get('story_map') or {}
-        self.map_text.insert('end', json.dumps({'coverage':{k:v for k,v in story.items() if k not in {'blocks'}},
-            'first_100_blocks':story.get('blocks',[])[:100],
-            'full_map_file':'story_map.json','availability':self.project.evidence.get('availability')}, ensure_ascii=False,indent=2))
-        self.timeline.delete('all')
-        total = self.project.evidence['source']['duration']
-        width = max(800,self.timeline.winfo_width())-30
-        for episode in self.project.plan.get('episodes', []):
-            x, end = 15+width*episode['source_start']/total, 15+width*episode['source_end']/total
-            self.timeline.create_rectangle(x,30,end,70,fill='#56bbbd',outline='#202028')
-            if end-x > 26:
-                self.timeline.create_text((x+end)/2,50,text=str(episode['order']))
-        self.timeline.create_text(15,90,anchor='w',text=f'Fonte: 0 → {total:.3f}s · espaços sem episódio são lacunas',fill='white')
+        self.map_text.insert('end',f"Ordem: como a narrativa foi contada na fonte. Cronologia histórica não inferida.\n"
+            f"Série: {len(self.project.plan.get('episodes',[]))} partes · extras: {len(self.project.plan.get('extras',[]))}\n"
+            f"Fala disponível coberta: {story.get('coverage_pct_speech',0):.1f}% · fonte coberta: {story.get('coverage_pct_source',0):.1f}%\n"
+            'Cobertura da fala disponível não comprova transcrição integral da obra.\n\nEVIDÊNCIAS\n')
+        for name,row in self.project.evidence.get('availability',{}).items():
+            self.map_text.insert('end',f"{name}: {row.get('status','unknown')} · {row.get('count',0)} registros\n")
+        self.map_text.insert('end','\nLACUNAS E EXCLUSÕES\n')
+        for gap in story.get('gaps',[])[:100]:
+            self.map_text.insert('end',f"{timestamp(gap['start'])} → {timestamp(gap['end'])}: {gap.get('reason','sem evidência')}\n")
+        if not story.get('gaps'):self.map_text.insert('end','Nenhuma lacuna medida entre os intervalos selecionados disponíveis.\n')
+        self.timeline_editor.set_project(self.project.plan,self.project.evidence)
+        self.diagnostic.delete('1.0','end')
+        self.diagnostic.insert('end',json.dumps({'coverage':story,'availability':self.project.evidence.get('availability'),
+            'provenance':self.project.evidence.get('provenance')},ensure_ascii=False,indent=2))
+        self.undo_button.configure(state='normal' if getattr(self.project,'can_undo',False) else 'disabled')
+        self.redo_button.configure(state='normal' if getattr(self.project,'can_redo',False) else 'disabled')
         self.export_text.delete('1.0','end')
         self.export_text.insert('end', f'Projeto: {self.project.directory}\n\nAprovação de preview não autoriza publicação.\n'
             'Revisar fala, continuidade, mapas/textos, enquadramento, áudio e títulos antes do final.\n'
             'Karaokê só usa timestamps existentes; lacunas permanecem explícitas no pacote.\n'
-            'A alteração global cria outra revisão do plano, preservando a anterior.\n\n'+
-            json.dumps(self.project.plan.get('coverage',{}),ensure_ascii=False,indent=2))
+            'A alteração global cria outra revisão do plano, preservando a anterior.\n\n'
+            f"Cobertura de fala disponível: {story.get('coverage_pct_speech',0):.1f}%\nLacunas: {len(story.get('gaps',[]))}\n"
+            'Abra o ZIP exportado e leia INDEX.md. MP4 fonte permanece externo por padrão, com hash.\n')
 
     def _page(self, direction):
         if self.project:
@@ -309,6 +333,7 @@ class SeriesReview(tk.Toplevel):
         if not key or not self.project:
             return
         episode = self.project.episode(key)
+        self.timeline_editor.select_episode(episode)
         for field,var in self.fields.items():
             value = episode.get(field, '')
             if field == 'title_text' and not value:
@@ -327,15 +352,19 @@ class SeriesReview(tk.Toplevel):
         self.thumbnail_custom.set(json.dumps(episode.get('thumbnail_overrides',{}),ensure_ascii=False))
         st,en=episode['source_start'],episode['source_end']
         self.transcript.delete('1.0','end')
-        self.transcript.insert('end',json.dumps({k:episode.get(k) for k in ('requested_duration','proposed_duration','preview_duration','rendered_duration','duration_within_target','duration_deviation_reason')},ensure_ascii=False)+'\n\n')
+        self.transcript.insert('end',f"Faixa: {episode.get('requested_duration')}\nProposta: {episode['duration']:.3f}s\n"
+            f"Prévia: {episode.get('preview_duration') or 'não gerada'} · final: {episode.get('rendered_duration') or 'não gerado'}\n"
+            f"{episode.get('duration_deviation_reason') or 'Faixa atendida.'}\n\n")
         if episode.get('preview'):
-            self.transcript.insert('end','LEGENDA: '+json.dumps({k:episode['preview'].get(k) for k in ('subtitle_alignment','subtitle_needs_review','subtitle_diagnostics')},ensure_ascii=False)+'\n\n')
+            self.transcript.insert('end','Precisão da legenda: '+str(episode['preview'].get('subtitle_alignment','unknown'))+
+                (' · revisão de legibilidade pendente' if episode['preview'].get('subtitle_needs_review') else '')+'\n\n')
         for segment in self.project.evidence.get('segments',[]):
             if segment['end'] > st-15 and segment['start'] < en+15:
                 self.transcript.insert('end',f"[{segment['start']:.3f}–{segment['end']:.3f}] {segment.get('text','')}\n")
         for scene in self.project.evidence.get('scenes',[]):
             if scene.get('end',0)>st and scene.get('start',float('inf'))<en:
-                self.transcript.insert('end','\nCENA: '+json.dumps(scene,ensure_ascii=False))
+                description=scene.get('observed_description') or scene.get('visual_description') or scene.get('description')
+                self.transcript.insert('end',f"\nCena {scene.get('scene_id','?')}: {description or 'Imagem não descrita/observação não confirmada.'}\n")
         if self.media.get():
             self.original_player.show(self.media.get(),st,en)
             self.seek_scale.configure(from_=st,to=en)
@@ -458,6 +487,66 @@ class SeriesReview(tk.Toplevel):
         project=self.project
         preset=PRESET_KEYS[PRESET_LABELS.index(self.episode_duration.get())]
         self._task(lambda:(project.split(key,preset,confirm_invalidation=True),'Divisão salva; revise a continuidade e as prévias.')[1])
+
+    def _history(self,action):
+        if not self.project or self.busy:
+            return
+        project=self.project
+        if not getattr(project,'can_'+action,False):
+            return
+        self._task(lambda:(getattr(project,action)(), 'Histórico aplicado. As partes afetadas exigem outra prévia/aprovação.')[1])
+
+    def _timeline_select(self,key):
+        if not self.project or self.busy:
+            return
+        episodes=self.project.episodes()
+        index=next((i for i,e in enumerate(episodes) if e['episode_id']==key),None)
+        if index is not None:
+            page=index//100
+            if page!=self.page:self.page=page;self._refresh()
+            self.table.selection_set(key)
+            self.table.see(key)
+            self._select()
+
+    def _timeline_seek(self,seconds):
+        self.source_seek.set(seconds)
+        if self.media.get():
+            self.original_player.show(self.media.get(),seconds)
+        key=self._selected()
+        if key:
+            episode=self.project.episode(key)
+            preview=episode.get('preview',{}).get('project_path')
+            if preview and episode['source_start']<=seconds<episode['source_end']:
+                self.preview_player.show(self.project.directory/preview,seconds-episode['source_start'])
+        self.status.set('Fonte em '+timestamp(seconds)+' · seeking do backend; PTS observado no player quando disponível')
+
+    def _apply_limits(self,start,end):
+        key=self._selected()
+        if not key or self.busy:
+            return
+        episode=self.project.episode(key)
+        if episode.get('human_approval') and not messagebox.askyesno('Invalidar prévia','Aplicar os limites invalida a aprovação desta parte. Continuar?',parent=self):
+            return
+        project=self.project
+        self._task(lambda:(project.edit(key,source_start=start,source_end=end,confirm_invalidation=True),
+            'Limites aplicados; revise frases/Q&A e gere outra prévia.')[1])
+
+    def _step_episode(self,direction):
+        if not self.project:return
+        episodes=self.project.episodes();key=self._selected()
+        index=next((i for i,e in enumerate(episodes) if e['episode_id']==key),0)
+        index=max(0,min(len(episodes)-1,index+direction))
+        if episodes:self._timeline_select(episodes[index]['episode_id'])
+
+    def _merge_next(self):
+        key=self._selected()
+        if not key or self.busy:return
+        episodes=self.project.plan.get('episodes',[])
+        index=next((i for i,e in enumerate(episodes) if e['episode_id']==key),None)
+        if index is None or index+1>=len(episodes):return
+        if not messagebox.askyesno('Mesclar partes','Mesclar com a parte seguinte somente se não houver lacuna excluída? A numeração muda e prévias afetadas serão invalidadas.',parent=self):return
+        project=self.project;ids=[key,episodes[index+1]['episode_id']]
+        self._task(lambda:(project.merge(ids,confirm_invalidation=True),'Partes mescladas; continuidade e faixa exigem revisão.')[1])
 
     def _play_original(self):
         key=self._selected()

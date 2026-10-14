@@ -1,0 +1,42 @@
+ETAPA B V5.2 — HISTÓRICO DO EDITOR
+
+Comando executado no workspace:
+.venv\Scripts\python.exe -m pytest tests\test_v52_history.py tests\test_v5_series_planner.py tests\test_episode_approval.py tests\test_series_workflow.py -q
+
+Saída final registrada:
+127 passed in 12.09s
+
+Distribuição: 21 testes novos de histórico; 100 testes existentes de planner/aprovação; 6 testes existentes do workflow.
+Nenhuma falha, erro ou skip nesta execução.
+
+Arquivos implementados:
+ldporto_curator/series_workflow.py
+ldporto_curator/series_planner.py
+ldporto_curator/editing_history.py
+tests/test_v52_history.py
+
+SeriesProject mantém a API e adiciona undo(), redo(), can_undo/can_redo, history_status() e merge().
+O cursor e o plano são persistidos juntos na substituição atômica de series_index.json.
+Snapshots completos e imutáveis possuem referências relativas e SHA-256, sob editing_history/snapshots/.
+Uma edição divergente invalida redo e conserva os snapshots e a referência ao ramo abandonado.
+Edições de limites, título, preset, capa, câmera, estilo, rejeição, split, merge e reorder entram no histórico.
+Undo/redo restaura os valores editoriais e IDs/evidências, mantendo ativos os estados dos episódios não afetados.
+Episódios afetados recebem revision_nonce nova e perdem previews/finais/aprovações ativos; arquivos anteriores e referências permanecem históricos.
+Nenhuma aprovação antiga é restaurada. Reordenação invalida somente as posições/capas alteradas.
+
+Regressões demonstradas:
+- Edição numérica com timestamp inteiro/float não muda IDs quando os limites reais são iguais.
+- Mescla aceita apenas partes consecutivas do mesmo conjunto, contíguas na fonte, sem exclusões, sobreposição, lacunas ou rejeições ocultas.
+- Mescla de 900 segundos aceita; 910 segundos recusada sem mutação.
+- Duplicação de proposta por ajuste de limites é recusada antes de gravar histórico/plano.
+- Proveniência de split/merge permanece após edições subsequentes.
+- Falha simulada antes da substituição do índice deixa plano/cursor anteriores e memória intactos.
+- Snapshots ausentes, adulterados ou externos são recusados sem mover o cursor.
+
+Integração real de FFmpeg em mídia sintética de 2 segundos:
+Preview antigo gerado e aprovado por ação explícita do TESTE; edição; undo; retomada;
+preview novo em pasta de geração diferente; final bloqueado até nova ação explícita do TESTE;
+final 9:16 gerado depois dessa ação. O hash do MP4 antigo permaneceu igual.
+Essas ações de teste não constituem aprovação humana/editorial de vídeo real.
+
+Não foram usados Analyzer, ASR, modelos ou vídeos de terceiros. A homologação editorial real continua pendente.

@@ -14,6 +14,8 @@ import re
 
 from .duration_presets import (DEFAULT_DURATION_PRESET, duration_metadata,
                                finite_seconds, get_preset, validate_window)
+from .editorial_copy import (build_editorial_copy, build_narrative_roles,
+                             confirmed_continuation)
 
 SCHEMA_VERSION = "5.1.0"
 METHODOLOGY = "evidence_semantic_boundaries_v1"
@@ -377,16 +379,35 @@ def _episode(group, data, preset, order, series_id):
                                   if not metadata["duration_within_target"] else [],
         "camera_mode": "SOURCE_PRESERVE", "subtitle_preset": "LDP_KARAOKE_VERDE", **metadata,
     }
-    if len(titles) < 3:
-        episode["uncertainties"].append("Evidência insuficiente para três títulos distintos; não foram inventados.")
+    copy = build_editorial_copy(episode, segments, data["scenes"])
+    chosen = copy["alternatives"][0] if copy["alternatives"] else None
+    episode.update({"editorial_copy": copy, "title_internal": episode["internal_title"],
+                    "publish_title_draft": chosen["publish_title_draft"] if chosen else None,
+                    "cover_text": chosen["cover_text"] if chosen else f"PARTE {order:02d}",
+                    "hook_overlay": chosen["hook_overlay"] if chosen else None,
+                    "episode_part_label": f"Parte {order:02d}",
+                    "narrative_roles": build_narrative_roles(episode, data["chapters"], data["story_arcs"], data["qa"]),
+                    "continuation_status": "unverified", "ending_label": "ending_unverified"})
+    episode["thumbnail_title"] = episode["cover_text"]
+    if copy["insufficient_evidence"]:
+        episode["uncertainties"].append(copy["insufficiency_reason"])
     return episode
 
 
-def _continuity(episodes):
+def _continuity(episodes, data=None):
     for previous, following in zip(episodes, episodes[1:]):
         related = bool(set(previous["chapter_ids"]) & set(following["chapter_ids"]))
         near = following["source_start"] - previous["source_end"] <= 3
         previous["continuation_required"] = related or near
+        confirmed = confirmed_continuation(previous, following, (data or {}).get("story_arcs", []))
+        if confirmed:
+            previous["continuation_status"] = "supported"
+            previous["ending_label"] = "continues_next"
+            previous["continuation_evidence"] = confirmed
+        else:
+            previous["continuation_status"] = "partial" if related or near else "unverified"
+            previous["ending_label"] = "continuity_needs_review" if related or near else "ending_unverified"
+            previous["continuation_evidence"] = []
         if related or near:
             support = previous["original_excerpt_support"][-1:]
             following["carry_over_context"] = support
@@ -420,6 +441,8 @@ def _independent(units, data, preset):
     for index, episode in enumerate(episodes):
         episode["order"] = episode["rank"] = index + 1
         episode["internal_title"] = f"EXTRA_{index + 1:03d}"
+        episode["title_internal"] = episode["internal_title"]
+        episode["episode_part_label"] = f"Parte {index + 1:02d}"
     return episodes
 
 
@@ -488,7 +511,7 @@ def plan_series(evidence, duration_preset=DEFAULT_DURATION_PRESET, mode="SERIE_C
     primary = ([_episode(group, data, preset, index + 1, "SERIE_01")
                 for index, group in enumerate(_groups(units, preset))]
                if mode in {"SERIE_CRONOLOGICA", "COMBINADO"} else [])
-    _continuity(primary)
+    _continuity(primary, data)
     extras = _independent(units, data, preset) if mode == "COMBINADO" else []
     if mode in {"MELHORES_MOMENTOS", "MOMENTOS_INDEPENDENTES"}:
         primary = _independent(units, data, preset)
@@ -520,7 +543,15 @@ def update_episode(plan, episode_id, evidence, *, confirm_invalidation=False, **
     Bounds remain exact manual choices with warnings if they cut words or Q&A.
     Revision always clears approval and rendered/preview measurements.
     """
-    allowed = {"source_start", "source_end", "duration_preset", "title_text", "camera_mode",
+    aliases = {"title_internal": "internal_title", "publish_title_draft": "publication_title",
+               "cover_text": "thumbnail_title", "hook_overlay": "title_text"}
+    changes = deepcopy(changes)
+    for alias, legacy in aliases.items():
+        if alias in changes:
+            if legacy in changes and changes[alias] != changes[legacy]:
+                raise ValueError(f"Campos {alias}/{legacy} devem conter o mesmo valor")
+            changes[legacy] = changes.pop(alias)
+    allowed = {"source_start", "source_end", "duration_preset", "title_text", "internal_title", "camera_mode",
                "subtitle_preset", "subtitle_style", "cover_title", "publication_title", "thumbnail_selection",
                "thumbnail_text", "thumbnail_title", "thumbnail_overrides", "camera_keyframes", "subtitle_overrides",
                "order", "layout", "watermark", "audio", "zoom", "title_enabled"}
@@ -539,7 +570,8 @@ def update_episode(plan, episode_id, evidence, *, confirm_invalidation=False, **
     data = _prepare(evidence)
     if data["source"]["sha256"] != plan["source_sha256"]:
         raise ValueError("Plano e evidências pertencem a fontes diferentes")
-    start, end = changes.get("source_start", old["source_start"]), changes.get("source_end", old["source_end"])
+    start = finite_seconds(changes.get("source_start", old["source_start"]), "source_start")
+    end = finite_seconds(changes.get("source_end", old["source_end"]), "source_end")
     validate_window(start, end, data["total"])
     preset = get_preset(changes.get("duration_preset", old["duration_preset"]))
     units = [u for u in _units(data) if _overlaps(start, end, u)]
@@ -574,6 +606,17 @@ def update_episode(plan, episode_id, evidence, *, confirm_invalidation=False, **
             episode[key] = deepcopy(changes[key])
         elif key in old:
             episode[key] = deepcopy(old[key])
+    episode["title_internal"] = episode["internal_title"]
+    if episode.get("publication_title"):
+        episode["publish_title_draft"] = episode["publication_title"]
+    episode["cover_text"] = episode.get("thumbnail_title") or episode["cover_text"]
+    if "title_text" in changes:
+        episode["hook_overlay"] = episode["title_text"]
+    elif old.get("hook_overlay"):
+        episode["hook_overlay"] = old["hook_overlay"]
+    for key in ("split_origin", "merged_episode_ids", "merge_origin", "source_editor_settings", "source_camera_settings"):
+        if key in old:
+            episode[key] = deepcopy(old[key])
     title = episode.get("title_text", "")
     if not isinstance(title, str) or not any(title in s["text"] for s in episode["original_excerpt_support"]):
         episode["risk_flags"].append("title_unverified")
@@ -607,7 +650,14 @@ def update_episode(plan, episode_id, evidence, *, confirm_invalidation=False, **
         revised["audit_trail"].append({"action": "manual_reorder", "episode_id": episode["episode_id"],
                                         "previous_order": index + 1, "requested_order": order,
                                         "source_timestamps_preserved": True})
-    _continuity(revised["episodes"])
+        moved_approvals = [item for item in revised[collection]
+                          if item["episode_id"] != episode["episode_id"]
+                          and item.get("order") != next(previous["order"] for previous in plan[collection]
+                                                       if previous["episode_id"] == item["episode_id"])
+                          and (item.get("status") in _APPROVED_STATES or item.get("human_approval"))]
+        if moved_approvals and not confirm_invalidation:
+            raise ValueError("Reordenação invalida aprovações afetadas; confirme explicitamente a invalidação")
+    _continuity(revised["episodes"], data)
     revised["story_map"] = _coverage(data, revised["episodes"])
     revised["coverage"] = deepcopy(revised["story_map"])
     revised["status"], revised["human_approval"] = "REVIEW_REQUIRED", None
@@ -623,21 +673,135 @@ def reorder_episodes(plan, episode_ids, *, confirm_invalidation=False):
     ids = [e["episode_id"] for e in current]
     if len(episode_ids) != len(ids) or set(episode_ids) != set(ids):
         raise ValueError("Reordenação deve conter cada episódio exatamente uma vez")
-    if any(e.get("status") in _APPROVED_STATES or e.get("human_approval") for e in current) and not confirm_invalidation:
+    affected = [e for position, identifier in enumerate(episode_ids, 1)
+                for e in current if e["episode_id"] == identifier and e["order"] != position]
+    if any(e.get("status") in _APPROVED_STATES or e.get("human_approval") for e in affected) and not confirm_invalidation:
         raise ValueError("Reordenação invalida aprovações; confirme explicitamente a invalidação")
     revised, by_id = deepcopy(plan), {e["episode_id"]: deepcopy(e) for e in current}
     revised["episodes"] = [by_id[cid] for cid in episode_ids]
     for order, episode in enumerate(revised["episodes"], 1):
+        if episode["order"] == order:
+            continue
         episode["order"] = order
+        if "title_internal" in episode:
+            episode["title_internal"] = episode["internal_title"]
+            episode["episode_part_label"] = f"Parte {order:02d}"
         if episode.get("human_approval"):
             episode.setdefault("approval_history", []).append({"approval": deepcopy(episode["human_approval"]),
                                                                "status": "stale", "reason": "manual_reorder"})
-        episode["status"], episode["human_approval"] = "REVIEW_REQUIRED", None
-        episode["approval_invalidated"] = True
+        original = next(e for e in current if e["episode_id"] == episode["episode_id"])
+        _mark_split_stale(episode, original, "manual_reorder")
         episode["risk_flags"] = list(dict.fromkeys(episode["risk_flags"] + ["manual_reordering_needs_context_review"]))
     revised["status"], revised["human_approval"] = "REVIEW_REQUIRED", None
     revised.setdefault("audit_trail", []).append({"action": "manual_reorder", "source_order": ids,
                                                   "editorial_order": list(episode_ids), "approval_invalidated": True})
+    return revised
+
+
+def merge_episodes(plan, episode_ids, evidence, duration_preset=None, *, confirm_invalidation=False):
+    """Merge adjacent proposals without silently adding excluded or absent time.
+
+    Original proposal IDs and their evidence remain in the merge provenance.
+    Later numbered covers are invalidated; earlier episodes remain untouched.
+    """
+    ids = list(episode_ids)
+    if len(ids) < 2 or len(set(ids)) != len(ids):
+        raise ValueError("Mescla requer ao menos dois episódios distintos")
+    collection = next((key for key in ("episodes", "extras")
+                       if set(ids) <= {e["episode_id"] for e in plan.get(key, [])}), None)
+    if collection is None:
+        raise ValueError("Mescla requer episódios do mesmo conjunto/série")
+    rows = plan[collection]
+    positions = sorted(i for i, episode in enumerate(rows) if episode["episode_id"] in ids)
+    if positions != list(range(positions[0], positions[-1] + 1)):
+        raise ValueError("Mescla requer episódios consecutivos; lacunas não podem ser ocultadas")
+    selected = [rows[position] for position in positions]
+    if len({e["series_id"] for e in selected}) != 1:
+        raise ValueError("Mescla requer a mesma série")
+    if any(e.get("status") == "REJECTED" or e.get("state") == "REJECTED" for e in selected):
+        raise ValueError("Episódio rejeitado requer revisão antes de mesclar")
+    for left, right in zip(selected, selected[1:]):
+        if abs(right["source_start"] - left["source_end"]) > 0.000001:
+            raise ValueError("Mescla exige intervalos contíguos na fonte, sem lacuna, sobreposição ou ordem invertida")
+    data = _prepare(evidence)
+    if data["source"]["sha256"] != plan["source_sha256"]:
+        raise ValueError("Plano e evidências pertencem a fontes diferentes")
+    start, end = selected[0]["source_start"], selected[-1]["source_end"]
+    duration = validate_window(start, end, data["total"])
+    if duration > 900:
+        raise ValueError("Mescla excede o limite inclusivo de 900 segundos; mantenha partes separadas")
+    units = [unit for unit in _units(data) if _overlaps(start, end, unit)]
+    if not units or any(unit["start"] < start or unit["end"] > end for unit in units):
+        raise ValueError("Mescla corta uma frase/Q&A; revise os limites semânticos")
+    if any(_overlaps(start, end, row) for row in data["exclusions"]):
+        raise ValueError("Mescla cruza intervalo excluído/comercial; original preservado")
+    preset = get_preset(duration_preset or selected[0].get("duration_preset", plan["duration_preset"]))
+    affected = rows[positions[0]:]
+    if any(e.get("status") in _APPROVED_STATES or e.get("state") in _APPROVED_STATES
+           or e.get("human_approval") or e.get("approval") for e in affected) and not confirm_invalidation:
+        raise ValueError("Mescla/renumeração invalida aprovações afetadas; confirme explicitamente a invalidação")
+    merged = _episode(units, data, preset, positions[0] + 1, selected[0]["series_id"])
+    merged.update({"source_start": start, "start": start, "source_end": end, "end": end, "duration": duration,
+                   **duration_metadata(preset.key, duration)})
+    merged["episode_id"] = "PROP_" + _hash(plan["source_sha256"], start, end, SCHEMA_VERSION,
+                                          METHODOLOGY, selected[0]["series_id"])[:24]
+    if any(e["episode_id"] == merged["episode_id"] for e in rows if e["episode_id"] not in ids):
+        raise ValueError("Mescla produziria uma proposta duplicada já existente")
+    merged["merged_episode_ids"] = [e["episode_id"] for e in selected]
+    merged["merge_origin"] = [{"episode_id": e["episode_id"], "source_start": e["source_start"],
+                               "source_end": e["source_end"], "segment_ids": deepcopy(e["segment_ids"])}
+                              for e in selected]
+    merged["story_order"] = selected[0]["story_order"]
+    merged["duration_override"] = duration_preset is not None or selected[0].get("duration_override", False)
+    merged["source_editor_settings"] = []
+    for original in selected:
+        settings = {key: deepcopy(original[key]) for key in (
+            "camera_mode", "camera_keyframes", "subtitle_preset", "subtitle_overrides", "thumbnail_overrides",
+            "watermark", "audio", "title_enabled", "title_text", "thumbnail_title", "thumbnail_selection")
+                    if key in original}
+        merged["source_editor_settings"].append({"episode_id": original["episode_id"], "settings": settings})
+    first_settings = merged["source_editor_settings"][0]["settings"]
+    for key, value in first_settings.items():
+        if key not in {"camera_keyframes", "thumbnail_selection", "title_text", "thumbnail_title"}:
+            merged[key] = deepcopy(value)
+    if any(e.get("camera_mode") == "MANUAL_KEYFRAMES" for e in selected):
+        merged["camera_mode"], merged["camera_keyframes"] = "SOURCE_PRESERVE", []
+        merged["risk_flags"].append("manual_camera_keyframes_require_remapping")
+    if any(item["settings"] != first_settings for item in merged["source_editor_settings"][1:]):
+        merged["risk_flags"].append("merged_editor_settings_need_review")
+        merged["uncertainties"].append("Configurações diferentes nas partes originais; revise estilo e câmera da mescla.")
+    _mark_split_stale(merged, selected[0], "episode_merge")
+    for original in selected[1:]:
+        approval = original.get("human_approval") or original.get("approval")
+        if approval:
+            merged["approval_history"].append({"approval": deepcopy(approval), "status": "stale", "reason": "episode_merge"})
+        for kind in ("preview", "final"):
+            if original.get(kind):
+                merged["artifact_history"].append({"kind": kind, "artifact": deepcopy(original[kind]),
+                                                   "status": "stale", "reason": "episode_merge"})
+    revised = deepcopy(plan)
+    revised[collection][positions[0]:positions[-1] + 1] = [merged]
+    renumbered = []
+    for position, episode in enumerate(revised[collection], 1):
+        if episode["order"] != position:
+            original = deepcopy(episode)
+            episode["order"] = episode["rank"] = position
+            prefix = "HISTORIA" if episode["series_id"] == "SERIE_01" else "EXTRA"
+            episode["internal_title"] = f"{prefix}_{position:03d}"
+            if "title_internal" in episode:
+                episode["title_internal"] = episode["internal_title"]
+                episode["episode_part_label"] = f"Parte {position:02d}"
+            _mark_split_stale(episode, original, "episode_merge_renumbered_cover")
+            renumbered.append(episode["episode_id"])
+    _continuity(revised["episodes"], data)
+    revised["story_map"] = _coverage(data, revised["episodes"])
+    revised["coverage"] = deepcopy(revised["story_map"])
+    revised["status"], revised["human_approval"] = "REVIEW_REQUIRED", None
+    revised.setdefault("audit_trail", []).append({"action": "episode_merge", "episode_ids_before": ids,
+                                                  "episode_id_after": merged["episode_id"],
+                                                  "renumbered_episode_ids": renumbered,
+                                                  "source_timestamps_preserved": True, "approval_invalidated": True,
+                                                  "official_decisions_modified": False})
     return revised
 
 
@@ -737,7 +901,7 @@ def split_episode(plan, episode_id, evidence, duration_preset=None, *, confirm_i
         if len(parts) == 1:
             part["risk_flags"].append("semantic_split_unavailable")
             part["uncertainties"].append("Nenhum limite semântico adicional permite a divisão; a unidade foi preservada integralmente.")
-    _continuity(parts)
+    _continuity(parts, data)
     parts[0]["bridge_from_previous"] = deepcopy(original.get("bridge_from_previous"))
     parts[0]["carry_over_context"] = deepcopy(original.get("carry_over_context", []))
     parts[-1]["teaser_next"] = deepcopy(original.get("teaser_next"))
@@ -752,6 +916,9 @@ def split_episode(plan, episode_id, evidence, duration_preset=None, *, confirm_i
             episode["rank"] = position
             prefix = "HISTORIA" if episode["series_id"] == "SERIE_01" else "EXTRA"
             episode["internal_title"] = f"{prefix}_{position:03d}"
+            if "title_internal" in episode:
+                episode["title_internal"] = episode["internal_title"]
+                episode["episode_part_label"] = f"Parte {position:02d}"
             _mark_split_stale(episode, previous, "semantic_split_renumbered_cover")
             renumbered.append(episode["episode_id"])
     revised["status"], revised["human_approval"] = "REVIEW_REQUIRED", None

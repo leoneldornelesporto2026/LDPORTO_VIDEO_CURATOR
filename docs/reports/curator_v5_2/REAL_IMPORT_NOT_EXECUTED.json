@@ -1,0 +1,8 @@
+{
+  "status": "REAL_IMPORT_NOT_EXECUTED",
+  "reason": "No finalized real Analyzer ZIP/snapshot was found within the Curator workspace. Historical edit decisions and rendered excerpts are not a verified full import package.",
+  "dependency": "Operator-selected closed Analyzer package copied into Curator; matching explicit authorized source media for real audiovisual smoke.",
+  "analyzer": "Active process ancestry observed; no Analyzer files or processes changed/accessed.",
+  "synthetic_fallback_report": "SMOKE_IMPORT_FIXTURE.json",
+  "human_approvals": 0
+}

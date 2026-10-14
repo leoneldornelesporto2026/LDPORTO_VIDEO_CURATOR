@@ -1,0 +1,413 @@
+{
+  "operation": "read_only_import_and_proposals",
+  "input_package_sha256": "bdd775c43545633c445be0941f7e1ea1269ae5dbffceb0c853f9dfcdf31995b5",
+  "source": {
+    "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "duration": 43.633333,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "source": {
+      "id": "curator_v5_synthetic_demo",
+      "title": "Demonstração sintética local V5.1",
+      "type": "local_synthetic_fixture",
+      "filename": "SYNTHETIC_SOURCE.mp4"
+    },
+    "analyzer_version": "fixture_contract_v4.4",
+    "video_id": "curator_v5_synthetic_demo",
+    "id": "curator_v5_synthetic_demo",
+    "title": "Demonstração sintética local V5.1"
+  },
+  "provenance": {
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "input_package_sha256": "bdd775c43545633c445be0941f7e1ea1269ae5dbffceb0c853f9dfcdf31995b5",
+    "analyzer_version": "fixture_contract_v4.4",
+    "analyzer_fingerprint": null,
+    "analyzer_provenance": {},
+    "curator_version": "1.3.0",
+    "evidence_adapter_version": "5.1.0",
+    "curator_fingerprint": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f",
+    "source_hash_validation": "declared_metadata_and_manifest_consistency_not_media_rehash",
+    "analysis_status": "partial",
+    "build_mismatch": null,
+    "artifact_inventory": [
+      {
+        "path": "SECOND_CURATION_MANIFEST.json",
+        "bytes": 1084,
+        "sha256": "2edcf869d6152a9c473911738edf6fc6eae699c4cc32f4f363d98f86c69593c3"
+      },
+      {
+        "path": "SYNTHETIC_FIXTURE.md",
+        "bytes": 134,
+        "sha256": "520890ee6c783660dd1ae490ae7063227909e37d8df9c31fa042ef395c5c6a64"
+      },
+      {
+        "path": "editorial/candidate_catalog.json",
+        "bytes": 18,
+        "sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+      },
+      {
+        "path": "editorial/default_shortlist.json",
+        "bytes": 2,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "path": "scenes.json",
+        "bytes": 881,
+        "sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+      },
+      {
+        "path": "source/metadata.json",
+        "bytes": 354,
+        "sha256": "29a626d6a86327040689ab57788cc58e197b338f174e412577d2a5019afbe5d2"
+      },
+      {
+        "path": "transcript/full_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      },
+      {
+        "path": "transcript/relevant_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      }
+    ]
+  },
+  "availability": {
+    "segments": {
+      "status": "partial",
+      "count": 3,
+      "sources": [
+        "transcript/full_segments.jsonl"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+    },
+    "words": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "scenes": {
+      "status": "available",
+      "count": 3,
+      "sources": [
+        "scenes.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+    },
+    "timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "chapters": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "qa": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "candidates": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/candidate_catalog.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+    },
+    "shortlist": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/default_shortlist.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_queue": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "story_arcs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "program_sections": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speakers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "participants": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speaker_person_mapping": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "people_observations": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "frame_samples": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "camera_timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "ocr": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "graphics": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "visual_refs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "silences": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "excluded_intervals": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "quality": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "blockers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "decisions": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    }
+  },
+  "media": {
+    "status": "available_verified",
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "duration": 43.633333,
+    "location_inferred": false,
+    "filename": "SYNTHETIC_SOURCE.mp4",
+    "selected_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "bytes": 592496
+  },
+  "candidates": 0,
+  "review_queue": 0,
+  "official_shortlist": 0,
+  "series_episodes": 2,
+  "extras": 2,
+  "review_sample": [
+    {
+      "episode_id": "PROP_aae5b058158b22933022af28",
+      "source_start": 0.0,
+      "source_end": 27.32235827664399,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "episode_id": "PROP_afa6ecc399f7ff1a2d1a08f0",
+      "source_start": 27.32235827664399,
+      "source_end": 43.61741496598639,
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "coverage": {
+    "total_source_duration": 43.633333,
+    "source_order": "narration_timestamps",
+    "historical_event_order": "not_inferred",
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "duration": 13.886621315192743,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S1"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "duration": 13.435736961451246,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S2"
+        ],
+        "episode_ids": [
+          "PROP_aae5b058158b22933022af28"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "duration": 16.295056689342402,
+        "kind": "speech_evidence",
+        "segment_ids": [
+          "S3"
+        ],
+        "episode_ids": [
+          "PROP_afa6ecc399f7ff1a2d1a08f0"
+        ],
+        "reasons": [],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "speech_evidence"
+      },
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "duration": 0.015918034013608917,
+        "kind": "evidence_gap",
+        "segment_ids": [],
+        "episode_ids": [],
+        "reasons": [
+          "no_transcript_evidence_silence_not_assumed"
+        ],
+        "chapter_ids": [],
+        "qa_ids": [],
+        "story_arc_ids": [],
+        "source_event_type": "evidence_gap"
+      }
+    ],
+    "covered_time_seconds": 43.61741496598639,
+    "covered_speech_seconds": 43.61741496598639,
+    "available_speech_seconds": 43.61741496598639,
+    "coverage_pct_speech": 100.0,
+    "coverage_pct_source": 99.96351863834558,
+    "gaps": [
+      {
+        "start": 43.61741496598639,
+        "end": 43.633333,
+        "reason": "no_transcript_evidence_silence_not_assumed",
+        "kind": "evidence_gap"
+      }
+    ],
+    "excluded_intervals": [],
+    "coverage_denominator": "available_transcript_intervals_not_assumed_complete",
+    "series_episode_duration_sum": 43.61741496598639
+  },
+  "approved_count": 0,
+  "models_executed": false,
+  "render_executed": false,
+  "source_modified": false,
+  "limits": [
+    "Coverage is measured against available speech, not assumed full-source transcription.",
+    "Import/proposals do not constitute audiovisual or editorial homologation."
+  ],
+  "fixture_kind": "explicitly_synthetic_v51_closed_package",
+  "input_path": "docs/reports/curator_v5/demo_v2/SECOND_CURATION_PARTIAL_SYNTHETIC_bdd775c43545.zip"
+}

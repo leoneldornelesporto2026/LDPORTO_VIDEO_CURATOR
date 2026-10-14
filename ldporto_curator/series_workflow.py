@@ -207,7 +207,65 @@ class SeriesProject:
         return [*self.plan.get('episodes', []), *self.plan.get('extras', [])]
 
     def episode(self, episode_id):
-        return next(e for e in self.episodes() if e['episode_id'] == episode_id)
+        episode = next((e for e in self.episodes() if e['episode_id'] == episode_id), None)
+        if episode is None:
+            raise ValueError('Episódio não encontrado; atualize a seleção após editar/desfazer')
+        return episode
+
+    @property
+    def can_undo(self):
+        from .editing_history import history_for
+        return history_for(self.plan)['cursor'] > 0
+
+    @property
+    def can_redo(self):
+        from .editing_history import history_for
+        history = history_for(self.plan)
+        return history['cursor'] < len(history['entries'])
+
+    def history_status(self):
+        from .editing_history import history_for
+        history = history_for(self.plan)
+        return {'cursor': history['cursor'], 'commands': len(history['entries']),
+                'can_undo': self.can_undo, 'can_redo': self.can_redo,
+                'undo_action': history['entries'][history['cursor'] - 1]['action'] if self.can_undo else None,
+                'redo_action': history['entries'][history['cursor']]['action'] if self.can_redo else None}
+
+    def _commit_plan(self, revised):
+        """Commit plan and history cursor together; keep memory unchanged on failure."""
+        previous = self.plan
+        json.dumps(revised, ensure_ascii=False, allow_nan=False)
+        self.plan = revised
+        try:
+            self.save()
+        except Exception:
+            self.plan = previous
+            raise
+
+    def _editor_command(self, revised, action, *, explicit=(), details=None):
+        from .editing_history import affected_ids, invalidate_plan, append_command
+        ids = [episode['episode_id'] for key in ('episodes', 'extras') for episode in revised.get(key, [])]
+        if len(ids) != len(set(ids)):
+            raise ValueError('A edição produziria uma proposta duplicada já presente no projeto')
+        identifiers = affected_ids(self.plan, revised, explicit)
+        invalidate_plan(revised, self.plan, identifiers, reason='editor_' + action)
+        for episode in [e for key in ('episodes', 'extras') for e in revised.get(key, [])]:
+            if episode['episode_id'] in identifiers:
+                self.signature(episode)
+        append_command(self.directory, self.plan, revised, action=action,
+                       identifiers=identifiers, details=details)
+        self._commit_plan(revised)
+        return self.plan
+
+    def undo(self):
+        from .editing_history import restore_command
+        self._commit_plan(restore_command(self.directory, self.plan))
+        return self.plan
+
+    def redo(self):
+        from .editing_history import restore_command
+        self._commit_plan(restore_command(self.directory, self.plan, redo=True))
+        return self.plan
 
     def folder(self, episode):
         group = 'EXTRAS_MELHORES_MOMENTOS' if episode.get('series_id') == 'EXTRAS_MELHORES_MOMENTOS' else 'serie_01'
@@ -225,12 +283,14 @@ class SeriesProject:
                 history.write_bytes(old)
         temporary = path.with_suffix('.pending.json')
         write_json(temporary, self.plan)
-        temporary.replace(path)
         write_json(self.directory / 'evidence.json', self.evidence)
         write_json(self.directory / 'source_manifest.json', self.evidence.get('source', {}))
         write_json(self.directory / 'evidence_availability.json', self.evidence.get('availability', {}))
         write_json(self.directory / 'story_map.json', self.plan.get('story_map', {}))
         self._playlist()
+        # series_index.json is authoritative. Its command cursor and plan cross
+        # the commit boundary in one atomic replace, after derived files.
+        temporary.replace(path)
 
     def _playlist(self):
         rows = ['#EXTM3U']
@@ -242,6 +302,7 @@ class SeriesProject:
 
     def edit(self, episode_id, **changes):
         from .series_planner import update_episode
+        self.episode(episode_id)
         # Accepted controls must have a renderer. Reject unused model fields explicitly.
         unsupported = set(changes) & {'layout', 'zoom', 'subtitle_style'}
         if unsupported:
@@ -253,28 +314,43 @@ class SeriesProject:
         if episode.get('thumbnail_selection') not in {None,'CAPA_01','CAPA_02','CAPA_03'}:
             raise ValueError('Escolha uma das três capas geradas')
         self.signature(episode)  # Validate finite serialization/effect inputs before committing the edit.
-        self.plan = revised
-        self.save()
-        return episode
+        self._editor_command(revised, 'edit', explicit=(episode_id, episode['episode_id']),
+                             details={'episode_id': episode_id, 'changes': deepcopy(changes)})
+        return self.episode(episode['episode_id'])
 
     def reject(self, episode_id):
-        episode = self.episode(episode_id)
+        self.episode(episode_id)
+        revised = deepcopy(self.plan)
+        episode = next(e for key in ('episodes', 'extras') for e in revised.get(key, [])
+                       if e['episode_id'] == episode_id)
         episode['state'] = episode['status'] = 'REJECTED'
         episode['human_approval'] = None
-        self.plan.setdefault('audit_trail', []).append({'action': 'human_rejection', 'episode_id': episode_id})
-        self.save()
+        revised.setdefault('audit_trail', []).append({'action': 'human_rejection', 'episode_id': episode_id})
+        self._editor_command(revised, 'reject', explicit=(episode_id,))
+        return self.episode(episode_id)
 
     def reorder(self, episode_ids, *, confirm_invalidation=False):
         from .series_planner import reorder_episodes
-        self.plan = reorder_episodes(self.plan, episode_ids, confirm_invalidation=confirm_invalidation)
-        self.save()
+        revised = reorder_episodes(self.plan, episode_ids, confirm_invalidation=confirm_invalidation)
+        if list(episode_ids) == [e['episode_id'] for e in self.plan.get('episodes', [])]:
+            return self.plan
+        return self._editor_command(revised, 'reorder', details={'episode_ids': list(episode_ids)})
 
     def split(self, episode_id, duration_preset=None, *, confirm_invalidation=False):
         from .series_planner import split_episode
-        self.plan = split_episode(self.plan, episode_id, self.evidence, duration_preset,
-                                  confirm_invalidation=confirm_invalidation)
-        self.save()
-        return self.plan
+        revised = split_episode(self.plan, episode_id, self.evidence, duration_preset,
+                                confirm_invalidation=confirm_invalidation)
+        identifiers = [e['episode_id'] for key in ('episodes', 'extras') for e in revised.get(key, [])
+                       if e.get('revision_of') == episode_id]
+        return self._editor_command(revised, 'split', explicit=(episode_id, *identifiers),
+                                    details={'episode_id': episode_id, 'duration_preset': duration_preset})
+
+    def merge(self, episode_ids, duration_preset=None, *, confirm_invalidation=False):
+        from .series_planner import merge_episodes
+        revised = merge_episodes(self.plan, episode_ids, self.evidence, duration_preset,
+                                 confirm_invalidation=confirm_invalidation)
+        return self._editor_command(revised, 'merge', explicit=episode_ids,
+                                    details={'episode_ids': list(episode_ids), 'duration_preset': duration_preset})
 
     def export(self):
         from .full_handoff import export_handoff

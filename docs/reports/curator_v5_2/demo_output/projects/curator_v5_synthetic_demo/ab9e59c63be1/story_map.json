@@ -1,0 +1,89 @@
+{
+  "total_source_duration": 43.633333,
+  "source_order": "narration_timestamps",
+  "historical_event_order": "not_inferred",
+  "blocks": [
+    {
+      "start": 0.0,
+      "end": 13.886621315192743,
+      "duration": 13.886621315192743,
+      "kind": "speech_evidence",
+      "segment_ids": [
+        "S1"
+      ],
+      "episode_ids": [
+        "PROP_aae5b058158b22933022af28"
+      ],
+      "reasons": [],
+      "chapter_ids": [],
+      "qa_ids": [],
+      "story_arc_ids": [],
+      "source_event_type": "speech_evidence"
+    },
+    {
+      "start": 13.886621315192743,
+      "end": 27.32235827664399,
+      "duration": 13.435736961451246,
+      "kind": "speech_evidence",
+      "segment_ids": [
+        "S2"
+      ],
+      "episode_ids": [
+        "PROP_aae5b058158b22933022af28"
+      ],
+      "reasons": [],
+      "chapter_ids": [],
+      "qa_ids": [],
+      "story_arc_ids": [],
+      "source_event_type": "speech_evidence"
+    },
+    {
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "duration": 16.295056689342402,
+      "kind": "speech_evidence",
+      "segment_ids": [
+        "S3"
+      ],
+      "episode_ids": [
+        "PROP_afa6ecc399f7ff1a2d1a08f0"
+      ],
+      "reasons": [],
+      "chapter_ids": [],
+      "qa_ids": [],
+      "story_arc_ids": [],
+      "source_event_type": "speech_evidence"
+    },
+    {
+      "start": 43.61741496598639,
+      "end": 43.633333,
+      "duration": 0.015918034013608917,
+      "kind": "evidence_gap",
+      "segment_ids": [],
+      "episode_ids": [],
+      "reasons": [
+        "no_transcript_evidence_silence_not_assumed"
+      ],
+      "chapter_ids": [],
+      "qa_ids": [],
+      "story_arc_ids": [],
+      "source_event_type": "evidence_gap"
+    }
+  ],
+  "covered_time_seconds": 43.61741496598639,
+  "covered_speech_seconds": 43.61741496598639,
+  "available_speech_seconds": 43.61741496598639,
+  "coverage_pct_speech": 100.0,
+  "coverage_pct_source": 99.96351863834558,
+  "gaps": [
+    {
+      "start": 43.61741496598639,
+      "end": 43.633333,
+      "reason": "no_transcript_evidence_silence_not_assumed",
+      "kind": "evidence_gap"
+    }
+  ],
+  "excluded_intervals": [],
+  "coverage_denominator": "available_transcript_intervals_not_assumed_complete",
+  "series_episode_duration_sum": 43.61741496598639
+}

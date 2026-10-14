@@ -1,0 +1,562 @@
+{
+  "schema_version": "5.1.0",
+  "source": {
+    "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "duration": 43.633333,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "source": {
+      "id": "curator_v5_synthetic_demo",
+      "title": "Demonstração sintética local V5.1",
+      "type": "local_synthetic_fixture",
+      "filename": "SYNTHETIC_SOURCE.mp4"
+    },
+    "analyzer_version": "fixture_contract_v4.4",
+    "video_id": "curator_v5_synthetic_demo",
+    "id": "curator_v5_synthetic_demo",
+    "title": "Demonstração sintética local V5.1"
+  },
+  "metadata": {
+    "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "duration": 43.633333,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "source": {
+      "id": "curator_v5_synthetic_demo",
+      "title": "Demonstração sintética local V5.1",
+      "type": "local_synthetic_fixture",
+      "filename": "SYNTHETIC_SOURCE.mp4"
+    },
+    "analyzer_version": "fixture_contract_v4.4"
+  },
+  "availability": {
+    "segments": {
+      "status": "partial",
+      "count": 3,
+      "sources": [
+        "transcript/full_segments.jsonl"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+    },
+    "words": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "scenes": {
+      "status": "available",
+      "count": 3,
+      "sources": [
+        "scenes.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+    },
+    "timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "chapters": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "qa": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "candidates": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/candidate_catalog.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+    },
+    "shortlist": {
+      "status": "available",
+      "count": 0,
+      "sources": [
+        "editorial/default_shortlist.json"
+      ],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "available_inventory_only",
+      "artifact_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_queue": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "story_arcs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "program_sections": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speakers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "participants": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "speaker_person_mapping": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "people_observations": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "frame_samples": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "camera_timeline": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "ocr": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "graphics": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "visual_refs": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "silences": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "excluded_intervals": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "quality": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "blockers": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    },
+    "decisions": {
+      "status": "missing",
+      "count": 0,
+      "sources": [],
+      "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "completeness_claim": "not_complete",
+      "artifact_sha256": null
+    }
+  },
+  "provenance": {
+    "source_sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+    "input_package_sha256": "bdd775c43545633c445be0941f7e1ea1269ae5dbffceb0c853f9dfcdf31995b5",
+    "analyzer_version": "fixture_contract_v4.4",
+    "analyzer_fingerprint": null,
+    "analyzer_provenance": {},
+    "curator_version": "1.3.0",
+    "evidence_adapter_version": "5.1.0",
+    "curator_fingerprint": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f",
+    "source_hash_validation": "declared_metadata_and_manifest_consistency_not_media_rehash",
+    "analysis_status": "partial",
+    "build_mismatch": null,
+    "artifact_inventory": [
+      {
+        "path": "SECOND_CURATION_MANIFEST.json",
+        "bytes": 1084,
+        "sha256": "2edcf869d6152a9c473911738edf6fc6eae699c4cc32f4f363d98f86c69593c3"
+      },
+      {
+        "path": "SYNTHETIC_FIXTURE.md",
+        "bytes": 134,
+        "sha256": "520890ee6c783660dd1ae490ae7063227909e37d8df9c31fa042ef395c5c6a64"
+      },
+      {
+        "path": "editorial/candidate_catalog.json",
+        "bytes": 18,
+        "sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+      },
+      {
+        "path": "editorial/default_shortlist.json",
+        "bytes": 2,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "path": "scenes.json",
+        "bytes": 881,
+        "sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+      },
+      {
+        "path": "source/metadata.json",
+        "bytes": 354,
+        "sha256": "29a626d6a86327040689ab57788cc58e197b338f174e412577d2a5019afbe5d2"
+      },
+      {
+        "path": "transcript/full_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      },
+      {
+        "path": "transcript/relevant_segments.jsonl",
+        "bytes": 1152,
+        "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+      }
+    ]
+  },
+  "quality": {},
+  "blockers": [],
+  "documents": {
+    "SECOND_CURATION_MANIFEST.json": {
+      "source_hash": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "schema_version": "4.4.0",
+      "package_type": "SECOND_CURATION_PARTIAL",
+      "files": [
+        {
+          "path": "source/metadata.json",
+          "bytes": 354,
+          "sha256": "29a626d6a86327040689ab57788cc58e197b338f174e412577d2a5019afbe5d2"
+        },
+        {
+          "path": "editorial/candidate_catalog.json",
+          "bytes": 18,
+          "sha256": "2dcfac8486ebe9fded63f6461cf1dd2630ed7be976bd4e96ec257d1b53cc1906"
+        },
+        {
+          "path": "editorial/default_shortlist.json",
+          "bytes": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "transcript/relevant_segments.jsonl",
+          "bytes": 1152,
+          "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+        },
+        {
+          "path": "transcript/full_segments.jsonl",
+          "bytes": 1152,
+          "sha256": "0d4d06bd3b6adac2d540b76a8e8eb8a471ff45cf644124a8718c699ab3f507f4"
+        },
+        {
+          "path": "scenes.json",
+          "bytes": 881,
+          "sha256": "ad2e85e692f64a643ace8a411fb813f4d5011a7a3b30070f601256f95d23a715"
+        },
+        {
+          "path": "SYNTHETIC_FIXTURE.md",
+          "bytes": 134,
+          "sha256": "520890ee6c783660dd1ae490ae7063227909e37d8df9c31fa042ef395c5c6a64"
+        }
+      ]
+    },
+    "editorial/candidate_catalog.json": {
+      "candidates": []
+    },
+    "editorial/default_shortlist.json": [],
+    "scenes.json": [
+      {
+        "scene_id": "SCENE_1",
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "visual_description": "Painel azul com três caixas numeradas.",
+        "description_method": "authored_fixture_slide",
+        "confidence": 1.0,
+        "synthetic": true,
+        "critical_text": true,
+        "camera_policy": "source_preserve"
+      },
+      {
+        "scene_id": "SCENE_2",
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "visual_description": "Painel azul com três caixas conectadas por uma linha.",
+        "description_method": "authored_fixture_slide",
+        "confidence": 1.0,
+        "synthetic": true,
+        "critical_text": true,
+        "camera_policy": "source_preserve"
+      },
+      {
+        "scene_id": "SCENE_3",
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "visual_description": "Painel azul com caixas conectadas e texto REVISAO.",
+        "description_method": "authored_fixture_slide",
+        "confidence": 1.0,
+        "synthetic": true,
+        "critical_text": true,
+        "camera_policy": "source_preserve"
+      }
+    ],
+    "source/metadata.json": {
+      "sha256": "c053f01968900d279d35d39ba01b69deea96ce67324c1ce11ababb7207f2f33b",
+      "duration": 43.633333,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "source": {
+        "id": "curator_v5_synthetic_demo",
+        "title": "Demonstração sintética local V5.1",
+        "type": "local_synthetic_fixture",
+        "filename": "SYNTHETIC_SOURCE.mp4"
+      },
+      "analyzer_version": "fixture_contract_v4.4"
+    },
+    "transcript/full_segments.jsonl": [
+      {
+        "segment_id": "S1",
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      },
+      {
+        "segment_id": "S2",
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      },
+      {
+        "segment_id": "S3",
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      }
+    ],
+    "transcript/relevant_segments.jsonl": [
+      {
+        "segment_id": "S1",
+        "start": 0.0,
+        "end": 13.886621315192743,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      },
+      {
+        "segment_id": "S2",
+        "start": 13.886621315192743,
+        "end": 27.32235827664399,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      },
+      {
+        "segment_id": "S3",
+        "start": 27.32235827664399,
+        "end": 43.61741496598639,
+        "speaker": "SYNTHETIC_NARRATOR",
+        "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+        "timestamp_method": "separate_sapi_wave_boundaries",
+        "synthetic": true,
+        "sentence_complete": true
+      }
+    ]
+  },
+  "unresolved_references": [],
+  "segments": [
+    {
+      "segment_id": "S1",
+      "start": 0.0,
+      "end": 13.886621315192743,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "Esta é uma demonstração sintética local do Curator. O primeiro quadro mostra um painel azul com três caixas numeradas, que representam a ordem dos episódios.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    },
+    {
+      "segment_id": "S2",
+      "start": 13.886621315192743,
+      "end": 27.32235827664399,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "No segundo quadro, as caixas estão conectadas por uma linha. A sequência mantém os tempos da fonte, e as lacunas ficam registradas para a revisão humana.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    },
+    {
+      "segment_id": "S3",
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "speaker": "SYNTHETIC_NARRATOR",
+      "text": "O último quadro mostra a palavra revisão. Os vídeos continuam sendo propostas: a pessoa precisa assistir à prévia, conferir as legendas e aprovar cada episódio antes do render final.",
+      "timestamp_method": "separate_sapi_wave_boundaries",
+      "synthetic": true,
+      "sentence_complete": true
+    }
+  ],
+  "words": [],
+  "scenes": [
+    {
+      "scene_id": "SCENE_1",
+      "start": 0.0,
+      "end": 13.886621315192743,
+      "visual_description": "Painel azul com três caixas numeradas.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    },
+    {
+      "scene_id": "SCENE_2",
+      "start": 13.886621315192743,
+      "end": 27.32235827664399,
+      "visual_description": "Painel azul com três caixas conectadas por uma linha.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    },
+    {
+      "scene_id": "SCENE_3",
+      "start": 27.32235827664399,
+      "end": 43.61741496598639,
+      "visual_description": "Painel azul com caixas conectadas e texto REVISAO.",
+      "description_method": "authored_fixture_slide",
+      "confidence": 1.0,
+      "synthetic": true,
+      "critical_text": true,
+      "camera_policy": "source_preserve"
+    }
+  ],
+  "timeline": [],
+  "chapters": [],
+  "qa": [],
+  "candidates": [],
+  "shortlist": [],
+  "review_queue": [],
+  "story_arcs": [],
+  "program_sections": [],
+  "speakers": [],
+  "participants": [],
+  "speaker_person_mapping": [],
+  "people_observations": [],
+  "frame_samples": [],
+  "camera_timeline": [],
+  "ocr": [],
+  "graphics": [],
+  "visual_refs": [],
+  "silences": [],
+  "excluded_intervals": [],
+  "decisions": {},
+  "evidence_semantics": {
+    "transcript": "literal_asr_not_human_audio_verified",
+    "speaker": "acoustic_diarization_not_identity",
+    "visible_person": "visual_observation_not_named_identity",
+    "speaker_person_mapping": "only_explicit_source_mapping",
+    "scene_description": "source_observation_or_labeled_model_interpretation",
+    "camera": "suggestion_not_render_validation",
+    "candidate": "proposal_not_human_approval"
+  },
+  "asset_inventory": [],
+  "_asset_payloads": {}
+}
