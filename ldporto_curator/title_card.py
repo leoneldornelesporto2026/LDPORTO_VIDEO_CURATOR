@@ -106,10 +106,9 @@ def create_title_card(clip: dict, out_dir: Path, cfg: dict, preview: bool = Fals
             font = candidate_font
             break
     if lines is None:
-        font = _load_font(min_size, preferred_font)
-        words = title.split()
-        mid = max(1, len(words) // 2)
-        lines = [' '.join(words[:mid]), ' '.join(words[mid:])]
+        # Never paint an overlong title outside the card. A too-long editorial
+        # proposal must be shortened/reviewed before preview or final render.
+        raise ValueError("Título excede a caixa segura; revise o texto antes de renderizar")
 
     boxes = [draw.textbbox((0, 0), line, font=font) for line in lines]
     widths = [b[2] - b[0] for b in boxes]
@@ -122,6 +121,9 @@ def create_title_card(clip: dict, out_dir: Path, cfg: dict, preview: bool = Fals
     y0 = top_margin
     x1 = x0 + card_w
     y1 = y0 + card_h
+    # Keep every glyph inside the measured card and away from lower UI/captions.
+    if y1 > int(H * 0.35) or text_w > max_text_width:
+        raise ValueError("Título excede a região segura de abertura")
 
     # Soft shadow + solid white rounded card. No transparency in the card itself.
     draw.rounded_rectangle(

@@ -1,0 +1,165 @@
+{
+  "schema_version": "4.4.0",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "input_package_sha256": "bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251",
+  "provider": "manual_json",
+  "notes": [
+    "PROPOSTAS para triagem; não são aprovadas nem publicáveis. Todos os candidatos da primeira passagem tinham gates P1/shortlist oficial vazia.",
+    "Sem áudio original e sem MP4, nenhuma palavra foi substituída ou inferência visual validada.",
+    "Execute TESTAR 1 CORTE, revise vídeo/áudio e somente depois aprove.",
+    "Importe primeiro o SECOND_CURATION_PARTIAL ZIP no Curator; depois este JSON."
+  ],
+  "actions": [
+    {
+      "decision_id": "LDP26_REEL_01",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00005_0001"
+      ],
+      "reason": "Proposta rank 1 para REVISÃO HUMANA; tópico de fonte: Uso do rádio HF e tentativa de contato com Belém; qualidade registrada: 0.862; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "SEM CONTATO POR VHF: E AGORA?",
+      "rank": 1,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00164",
+        "SEG_00165",
+        "SEG_00166",
+        "SEG_00167",
+        "SEG_00168"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_02",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00004_0002"
+      ],
+      "reason": "Proposta rank 2 para REVISÃO HUMANA; tópico de fonte: Problemas com o alcance das antenas na Amazônia e a antena de Tucuruí; qualidade registrada: 0.859; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "POR QUE O RÁDIO NÃO ALCANÇAVA?",
+      "rank": 2,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00137",
+        "SEG_00138",
+        "SEG_00139",
+        "SEG_00140",
+        "SEG_00141",
+        "SEG_00142"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_03",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00002_0003"
+      ],
+      "reason": "Proposta rank 3 para REVISÃO HUMANA; tópico de fonte: Detalhes do voo entre Imperatriz e Marabá; qualidade registrada: 0.859; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "O TRECHO SEM AEROVIA",
+      "rank": 3,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00076",
+        "SEG_00077",
+        "SEG_00078",
+        "SEG_00079",
+        "SEG_00080"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_04",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00004_0004"
+      ],
+      "reason": "Proposta rank 4 para REVISÃO HUMANA; tópico de fonte: Checklist de procedimentos de aproximação e pouso; qualidade registrada: 0.851; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "O CHECKLIST ANTES DO POUSO",
+      "rank": 4,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00146",
+        "SEG_00147",
+        "SEG_00148",
+        "SEG_00149",
+        "SEG_00150"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_05",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00002_0002"
+      ],
+      "reason": "Proposta rank 5 para REVISÃO HUMANA; tópico de fonte: Detalhes do voo e rota entre Brasília e Imperatriz; qualidade registrada: 0.749; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "A ROTA DO VOO 254",
+      "rank": 5,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00072",
+        "SEG_00073",
+        "SEG_00074",
+        "SEG_00075"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_06",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00002_0000"
+      ],
+      "reason": "Proposta rank 6 para REVISÃO HUMANA; tópico de fonte: Introdução ao voo e informações sobre os pilotos; qualidade registrada: 0.754; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "QUEM ESTAVA NO COMANDO?",
+      "rank": 6,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00061",
+        "SEG_00062",
+        "SEG_00063",
+        "SEG_00064",
+        "SEG_00065"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_07",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00011_0003"
+      ],
+      "reason": "Proposta rank 7 para REVISÃO HUMANA; tópico de fonte: Consequências legais para os pilotos e objetivo da investigação; qualidade registrada: 0.727; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "O QUE A INVESTIGAÇÃO BUSCAVA?",
+      "rank": 7,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00356",
+        "SEG_00357",
+        "SEG_00358"
+      ]
+    },
+    {
+      "decision_id": "LDP26_REEL_08",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00006_0001"
+      ],
+      "reason": "Proposta rank 8 para REVISÃO HUMANA; tópico de fonte: Panificação eletrônica e confusão com a localização do avião; qualidade registrada: 0.813; nenhum áudio verificado nesta curadoria. Gate original P1_DEGRADED permanece.",
+      "title": "O QUE O PAINEL INDICAVA?",
+      "rank": 8,
+      "suggested_layout": "source_preserve",
+      "evidence_segment_ids": [
+        "SEG_00208",
+        "SEG_00209",
+        "SEG_00210",
+        "SEG_00211",
+        "SEG_00212",
+        "SEG_00213",
+        "SEG_00214",
+        "SEG_00215",
+        "SEG_00216",
+        "SEG_00217",
+        "SEG_00218",
+        "SEG_00219",
+        "SEG_00220",
+        "SEG_00221"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "synthetic": true,
+  "real_ffmpeg_render": true,
+  "render_mocked": false,
+  "models_called": false,
+  "curation_mock_scope": "Somente decisões editoriais da fixture; sem simular render.",
+  "automated_fixture_approval": true,
+  "human_approval_of_product_content": false,
+  "source": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\SYNTHETIC_ORIGINAL.mp4",
+    "sha256": "73ac48496375112689e8fbedbfcdc6034e2236cd387d6d383fc65f44a8200dfe",
+    "bytes": 395146,
+    "ffprobe": {
+      "duration": 4.0,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "nb_frames": "96"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 1,
+          "nb_frames": "189"
+        }
+      ]
+    }
+  },
+  "first_plan_revision": "86836a79741f4efd83581c583c9a15d1",
+  "after_explicit_recurate_revision": "7713e08c49ae42aea3fdead21ddd2661",
+  "curate_call_count_before_explicit_recurate": 1,
+  "curate_calls_total": 2,
+  "find_analysis_calls_total": 2,
+  "load_bundle_calls_total": 2,
+  "selection_during_four_actions": 7,
+  "explicit_recuration_selection": 3,
+  "editorial_clips_identical_across_four_actions": true,
+  "revision_identical_across_four_actions": true,
+  "final_approval_state_before_explicit_recurate": "BATCH_COMPLETED",
+  "new_revision_approval_state": "PLAN_READY",
+  "preview": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_001\\previews\\2bf06da05897433a8dbfb6319a027e16\\CLIP_001_PREVIEW.mp4",
+    "sha256": "eadf7fa0a0929b641a3d0ee3eca269fb3b98ba9bf9ef4a6224be8d0690e7b111",
+    "bytes": 66673,
+    "ffprobe": {
+      "duration": 0.5,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 540,
+          "height": 960,
+          "nb_frames": "12"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 1,
+          "nb_frames": "25"
+        }
+      ]
+    }
+  },
+  "finals": [
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_001\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_001_FINAL.mp4",
+      "sha256": "b64444c232a95c3713a695d0e848365508b63a0b0192fef7010d8ca54c637088",
+      "bytes": 165145,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_002\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_002_FINAL.mp4",
+      "sha256": "da6ed55fc7319e777037c9e462550255439137345e6cec5404ed6b1a32404641",
+      "bytes": 163063,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_003\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_003_FINAL.mp4",
+      "sha256": "f01ecd944e697db6ca65face8dc59ecd2ed463f0a4ee8d7f08fa802a37c1a6d1",
+      "bytes": 178355,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "21"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_004\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_004_FINAL.mp4",
+      "sha256": "a0ae188ec8f90367b03f90733fd3fb45aa240249c049491bb6cebff397bea2bb",
+      "bytes": 190971,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_005\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_005_FINAL.mp4",
+      "sha256": "edc30140eecdcfdca33a8482a945f37af1b3957e82e499d22e388d45bec77f49",
+      "bytes": 181891,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_006\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_006_FINAL.mp4",
+      "sha256": "36cb2f82a2c43df9314ac8c3b51d3011337d10dcbdc67ba7ba76dc1d0c28c21a",
+      "bytes": 183291,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CLIP_007\\batches\\6e9d744168914dc08482ea91878fb09c\\CLIP_007_FINAL.mp4",
+      "sha256": "e25d943bd50f93efe2e229dd829a83a2c701c122e959f9a1e30415727defa978",
+      "bytes": 211884,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -29,6 +29,7 @@ DURATION_PRESETS = (
     DurationPreset("from_300_to_600", "5m~10m", 300, 600),
     DurationPreset("from_600_to_900", "10m~15m", 600, 900, True),
 )
+STORY_60_PRESET = DurationPreset("story_upto_60", "Stories (até 60s)", 0, 60, True)
 DEFAULT_DURATION_PRESET = "auto_under_90"
 
 
@@ -39,6 +40,8 @@ def finite_seconds(value, name="time") -> float:
 
 
 def get_preset(key=DEFAULT_DURATION_PRESET) -> DurationPreset:
+    if key in (STORY_60_PRESET.key, STORY_60_PRESET.label):
+        return STORY_60_PRESET
     for preset in DURATION_PRESETS:
         if key in (preset.key, preset.label):
             return preset

@@ -203,6 +203,29 @@ class SeriesProject:
             project.save()
         return project
 
+    @classmethod
+    def create_stories(cls, evidence, story_document, output_root, cfg=None, **kwargs):
+        """Create a separate, review-only project for the ChatGPT story proposals.
+
+        This never modifies an existing V4 Reel project or an approved V5 plan.
+        """
+        from .story_import import plan_reviewed_stories
+        plan = plan_reviewed_stories(evidence, story_document)
+        identity = _canonical_hash({'source_sha256': evidence['source']['sha256'],
+            'story_plan_id': plan['plan_id'], 'workflow': 'stories_review_v2'})[:16]
+        source = evidence['source']
+        directory = (Path(output_root) / 'projects' /
+            safe_name(source.get('video_id') or source.get('id') or source['sha256'][:12]) /
+            ('stories_' + identity))
+        project = cls(directory, cfg, **kwargs)
+        if project.plan:
+            if project.plan.get('plan_id') != plan['plan_id'] or project.evidence.get('source', {}).get('sha256') != source['sha256']:
+                raise ValueError('Projeto de Stories existente diverge das evidências; nenhum dado foi substituído')
+        else:
+            project.evidence, project.plan = evidence, plan
+            project.save()
+        return project
+
     def episodes(self):
         return [*self.plan.get('episodes', []), *self.plan.get('extras', [])]
 
@@ -268,7 +291,10 @@ class SeriesProject:
         return self.plan
 
     def folder(self, episode):
-        group = 'EXTRAS_MELHORES_MOMENTOS' if episode.get('series_id') == 'EXTRAS_MELHORES_MOMENTOS' else 'serie_01'
+        series_id = episode.get('series_id', 'SERIE_01')
+        group = ('EXTRAS_MELHORES_MOMENTOS' if series_id == 'EXTRAS_MELHORES_MOMENTOS'
+                 else 'serie_01' if series_id == 'SERIE_01'
+                 else 'serie_' + safe_name(series_id).lower())
         # Stable identity survives reordering; number is maintained by playlist/index.
         return self.directory / group / (f"{episode['story_order']:03d}_" + safe_name(episode['episode_id']))
 
@@ -311,8 +337,8 @@ class SeriesProject:
         episode = next(e for key in ('episodes','extras') for e in revised.get(key,[]) if e.get('revision_of') == episode_id)
         from .subtitle_presets import resolve_subtitle_preset
         resolve_subtitle_preset(episode.get('subtitle_preset','LDP_KARAOKE_VERDE'),episode.get('subtitle_overrides'))
-        if episode.get('thumbnail_selection') not in {None,'CAPA_01','CAPA_02','CAPA_03'}:
-            raise ValueError('Escolha uma das três capas geradas')
+        if episode.get('thumbnail_selection') not in {None, 'CAPA_01', 'CAPA_02', 'CAPA_03', 'CAPA_04', 'CAPA_05'}:
+            raise ValueError('Escolha uma das cinco capas disponíveis')
         self.signature(episode)  # Validate finite serialization/effect inputs before committing the edit.
         self._editor_command(revised, 'edit', explicit=(episode_id, episode['episode_id']),
                              details={'episode_id': episode_id, 'changes': deepcopy(changes)})
@@ -424,12 +450,17 @@ class SeriesProject:
         if isinstance(title, dict):
             title = title.get('text') or title.get('title') or ''
         clip = {**episode, 'clip_id': episode_id, 'title_text': title}
+        clip.setdefault('title_duration', 5.0)
         card = create_episode_title_card(clip, directory, settings, preview=preview)
         # Thumbnails are materialized without changing the signed editorial plan.
+        thumbnail_options = dict(episode.get('thumbnail_overrides') or {})
+        if 'frame_count' not in thumbnail_options:
+            legacy_count = len(thumbnail_options.get('frame_times') or thumbnail_options.get('layouts') or [])
+            thumbnail_options['frame_count'] = 3 if legacy_count == 3 else 5
         thumbnails = generate_thumbnail_choices(media, clip, directory / 'thumbnails',
             evidence=self.evidence, source_sha256=self.evidence['source']['sha256'],
-            titles=[episode.get('thumbnail_title') or title]*3,
-            overrides=episode.get('thumbnail_overrides')) if preview else None
+            titles=[episode.get('thumbnail_title') or title],
+            overrides=thumbnail_options) if preview else None
         encoders = ['h264_nvenc', 'libx264'] if settings['render'].get('prefer_nvenc', True) and ffmpeg_has_nvenc() else ['libx264']
         partial = directory / ('ENCODING_' + name)
         for encoder in encoders:

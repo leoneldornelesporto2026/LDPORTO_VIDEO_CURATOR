@@ -368,6 +368,18 @@ def _render_clip(bundle, clip, video: Path, out_dir: Path, cfg, preview=True, lo
             if progress:
                 progress(0.98, 'validando arquivo')
             validate_output(out, rw, rh)
+            # Record what FFmpeg actually used, including a runtime NVENC fallback.
+            from .approval import file_hash
+            from .utils import write_json
+            from .persisted_plan import render_settings, _fingerprint
+            write_json(out_dir / (name + '.render.json'), {
+                'encoder': encoder, 'preview': bool(preview), 'width': rw, 'height': rh,
+                'duration': float(clip['duration']), 'source_start': float(clip['source_start']),
+                'subtitle_sha256': file_hash(ass),
+                'title_card_sha256': file_hash(title_card) if title_card else None,
+                'media_sha256': file_hash(out),
+                'render_settings_fingerprint': _fingerprint(render_settings(cfg)),
+            })
             if progress:
                 progress(1.0, 'MP4 validado')
             return out

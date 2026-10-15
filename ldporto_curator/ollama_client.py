@@ -1,5 +1,5 @@
 from __future__ import annotations
-import json, requests
+import hashlib, json, requests
 
 def review_candidates(candidates, cfg, log=print):
     ocfg=cfg.get('ollama',{})
@@ -33,6 +33,8 @@ def review_candidates(candidates, cfg, log=print):
         log(f'Ollama Fase 2: revisando {len(candidates)} candidatos com {model}...')
         r=requests.post(base+'/api/generate',json=payload,timeout=float(ocfg.get('timeout_seconds',600))); r.raise_for_status()
         raw=r.json().get('response') or '{}'; data=json.loads(raw); ranking=data.get('ranking') or []
+        evidence = {'editorial_response': data, 'raw_editorial_response': raw,
+                    'response_sha256': hashlib.sha256(raw.encode('utf-8')).hexdigest()}
         byid={c['clip_id']:c for c in candidates}; valid=[]
         seen=set()
         for x in ranking:
@@ -47,10 +49,10 @@ def review_candidates(candidates, cfg, log=print):
                 valid.append(c)
         # Keep candidates omitted by model only as review-needed if model response was incomplete.
         if not valid:
-            return candidates,{'used':True,'valid':False,'reason':'no_valid_approved_items'}
+            return candidates,{'used':True,'valid':False,'reason':'no_valid_approved_items', **evidence}
         valid.sort(key=lambda c:c['score'],reverse=True)
         for i,c in enumerate(valid,1): c['rank']=i; c['clip_id']=f'CLIP_{i:03d}'
-        return valid,{'used':True,'valid':True,'model':model,'returned':len(ranking),'approved':len(valid)}
+        return valid,{'used':True,'valid':True,'model':model,'returned':len(ranking),'approved':len(valid), **evidence}
     except Exception as e:
         log('Ollama Fase 2 indisponível; mantendo curadoria determinística. Motivo: '+str(e))
         return candidates,{'used':False,'reason':'error','error':str(e)}

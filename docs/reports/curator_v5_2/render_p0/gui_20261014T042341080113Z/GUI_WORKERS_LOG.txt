@@ -1,0 +1,20 @@
+PLANO {"approval_state": "PLAN_READY", "approved_revision": null, "event": "plan_state", "invalidation_reason": "Nova CURAR explícita criou outra revisão; a aprovação da revisão de6d34ce20e94c48823ca52f7b5d2cce permanece no histórico.", "operation": "test", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "GENERATING_PREVIEW", "approved_revision": null, "event": "plan_state", "invalidation_reason": "Nova CURAR explícita criou outra revisão; a aprovação da revisão de6d34ce20e94c48823ca52f7b5d2cce permanece no histórico.", "operation": "test", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+Render preview: CLIP_001 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+PLANO {"approval_state": "PREVIEW_READY", "approved_revision": null, "event": "plan_state", "invalidation_reason": null, "operation": "test", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+TESTE DE 1 CORTE PRONTO: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\gui_20261014T042341080113Z\output\renders\P0_SYNTHETIC_FROZEN\revisions\0323c8282ffa4ea09249f070acb43b9d\CLIP_001\previews\323e783e596e430fbe575a217fc946df\CLIP_001_PREVIEW.mp4
+PREVIEW PRONTO. Assista antes de aprovar: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\gui_20261014T042341080113Z\output\renders\P0_SYNTHETIC_FROZEN\revisions\0323c8282ffa4ea09249f070acb43b9d\CLIP_001\previews\323e783e596e430fbe575a217fc946df\CLIP_001_PREVIEW.mp4
+PLANO {"approval_state": "PREVIEW_READY", "approved_revision": null, "event": "plan_state", "invalidation_reason": null, "operation": "approve", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "TEST_APPROVED", "approved_revision": "0323c8282ffa4ea09249f070acb43b9d", "event": "plan_state", "invalidation_reason": null, "operation": "approve", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+TESTE APROVADO. Renderização em lote liberada.
+
+
+
+PLANO {"approval_state": "TEST_APPROVED", "approved_revision": "0323c8282ffa4ea09249f070acb43b9d", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "BATCH_RENDERING", "approved_revision": "0323c8282ffa4ea09249f070acb43b9d", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+Render final: CLIP_001 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_002 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_003 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+PLANO {"approval_state": "BATCH_COMPLETED", "approved_revision": "0323c8282ffa4ea09249f070acb43b9d", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "0323c8282ffa4ea09249f070acb43b9d", "project_id": "P0_SYNTHETIC_FROZEN"}
+LOTE FINAL CONCLUÍDO.
+

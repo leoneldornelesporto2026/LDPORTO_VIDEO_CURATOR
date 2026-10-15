@@ -1,0 +1,42 @@
+{
+  "schema_version": "LDP_RENDER_POLICY_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "state": "REVIEW_REQUIRED",
+  "title": {
+    "duration_seconds": 5.0,
+    "max_lines": 3,
+    "font_fit_and_measured_bounds": true,
+    "overflow": "REJECT_RENDER",
+    "min_top_safe": 0.08,
+    "max_width_ratio": 0.84
+  },
+  "subtitle": {
+    "verbatim": true,
+    "verify_audio": true,
+    "word_timing_only_if_supported": true,
+    "overlay_safe_zone": true,
+    "do_not_cover_faces": true
+  },
+  "camera": {
+    "fallback": "SOURCE_PRESERVE",
+    "no_unverified_active_speaker_crop": true,
+    "human_review_crop_required": true,
+    "natural_smooth_zoom": true,
+    "do_not_regenerate_after_approval": true
+  },
+  "thumbnail": {
+    "options_per_reel": 5,
+    "source_sha256_required": true,
+    "candidate_times_are_plans_only": true,
+    "real_image_files_generated": false,
+    "resolution_after_local_source_extraction": [
+      1080,
+      1920
+    ]
+  },
+  "approval": {
+    "preview_first": true,
+    "manual_approval_only": true,
+    "do_not_override_signed_revision": true
+  }
+}

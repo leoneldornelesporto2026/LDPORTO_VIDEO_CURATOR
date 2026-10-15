@@ -45,7 +45,7 @@ def test_real_preview_handoff_final_and_edit_gates(media, tmp_path):
     report = json.loads((preview.parent/'RENDER_VALIDATION.json').read_text())
     assert report['width'] == 540 and report['height'] == 960
     assert abs(report['duration']-4) < .15 and len(report['samples']) == 3
-    assert len(list((preview.parent/'thumbnails').glob('CAPA_*.png'))) == 3
+    assert len(list((preview.parent/'thumbnails').glob('CAPA_*.png'))) == 5
     assert (preview.parent/'CAPTIONS.srt').is_file() and (preview.parent/'CAPTIONS.ass').is_file()
     assert project.render(identifier, media) == preview
     packet = project.export()

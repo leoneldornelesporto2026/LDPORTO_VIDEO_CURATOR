@@ -1,0 +1,28 @@
+{
+  "isolated_copy": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc",
+  "original_project_modified": false,
+  "source_available": false,
+  "new_preview_block_reason": "Mídia original indisponível. Selecione o original ou autorize o download; o plano persistido será reutilizado sem Qwen ou reprocessamento.",
+  "approval_block_reason": "Gere e revise uma prévia desta revisão antes de APROVAR TESTE.",
+  "approval_state": "NEEDS_REVIEW",
+  "recovered_clips": 3,
+  "transcript_segments": 46,
+  "words": 0,
+  "human_approved": false,
+  "models_called": false,
+  "analyzer_accessed": false,
+  "plan_revision": "fbfdd9edc1c642ad8c0abcef3ac596d0",
+  "legacy_evidence": {
+    "analysis_coverage": "partial_local_handoff",
+    "human_approval_reused": false,
+    "original_media_sha256": null,
+    "preview": {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\CLIP_001\\CLIP_001_PREVIEW.mp4",
+      "plan_signature": "dc6a397b869d8f340b4980ad79a7b290d1173d271ae48c968312ad040478ec1a",
+      "reviewed_clip_id": "CLIP_001",
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a"
+    },
+    "preview_sha256_verified": true,
+    "refined_plan_matches_legacy_preview": false
+  }
+}

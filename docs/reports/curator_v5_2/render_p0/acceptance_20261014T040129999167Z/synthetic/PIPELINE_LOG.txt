@@ -1,0 +1,23 @@
+Análise encontrada: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\acceptance_20261014T040129999167Z\synthetic
+Curadoria: 7 cortes selecionados para revisão.
+PLANO {"approval_state": "PLAN_READY", "event": "plan_state", "invalidation_reason": null, "operation": "curate", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "PLAN_READY", "event": "plan_state", "invalidation_reason": null, "operation": "test", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "GENERATING_PREVIEW", "event": "plan_state", "invalidation_reason": null, "operation": "test", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+Render preview: CLIP_001 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+PLANO {"approval_state": "PREVIEW_READY", "event": "plan_state", "invalidation_reason": null, "operation": "test", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+TESTE DE 1 CORTE PRONTO: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\acceptance_20261014T040129999167Z\synthetic\output\renders\P0_SYNTHETIC_FROZEN\revisions\eec94e4d02804f01996578d643d96c4d\CLIP_001\previews\505870b9fce047478a142bda389f86c0\CLIP_001_PREVIEW.mp4
+PLANO {"approval_state": "PREVIEW_READY", "event": "plan_state", "invalidation_reason": null, "operation": "approve", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "TEST_APPROVED", "event": "plan_state", "invalidation_reason": null, "operation": "approve", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "TEST_APPROVED", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+PLANO {"approval_state": "BATCH_RENDERING", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+Render final: CLIP_001 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_002 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_003 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_004 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_005 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_006 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+Render final: CLIP_007 via libx264 / câmera=adaptive_timeline / 1 decisões / motion=0 / título=card PNG branco
+PLANO {"approval_state": "BATCH_COMPLETED", "event": "plan_state", "invalidation_reason": null, "operation": "batch", "plan_fingerprint": "0e929c7adb9549f6ae92147ffb6f9a3affcc996ffd5e084f51065801bd45736c", "plan_revision": "eec94e4d02804f01996578d643d96c4d", "project_id": "P0_SYNTHETIC_FROZEN"}
+Análise encontrada: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\acceptance_20261014T040129999167Z\synthetic
+Curadoria: 3 cortes selecionados para revisão.
+PLANO {"approval_state": "PLAN_READY", "event": "plan_state", "invalidation_reason": "Nova CURAR explícita criou outra revisão; a aprovação da revisão eec94e4d02804f01996578d643d96c4d permanece no histórico.", "operation": "curate", "plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7", "plan_revision": "5e0ed99e46374e3e9243f0f644b941ea", "project_id": "P0_SYNTHETIC_FROZEN"}

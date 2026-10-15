@@ -1,0 +1,2918 @@
+{
+  "schema_version": "p0.audit.1",
+  "audited_at_local": "2026-10-14T00:46:18.070667-03:00",
+  "project_id": "zd_wjssZ7mc",
+  "read_only_originals": true,
+  "analyzer_workspace_accessed": false,
+  "models_called": false,
+  "source_original_media_sha256": null,
+  "source_reference_fields_found_in_micro_and_final_camera": [],
+  "root_cause": {
+    "gui_handlers": "gui.App.work -> Pipeline.curate_only/test_one/approve_test/render_all",
+    "unintended_curation_calls": [
+      "test_one -> _prepare_curation -> curate -> review_candidates",
+      "render_all -> _prepare_curation -> curate -> review_candidates"
+    ],
+    "approve_action_does_not_call_qwen": true,
+    "selection_can_change": "review_candidates filters approve flags, sorts and reassigns rank/clip_id; new response may change count/order/titles",
+    "persisted_count": 3,
+    "qwen_metadata": {
+      "used": true,
+      "valid": true,
+      "model": "qwen3:14b",
+      "returned": 8,
+      "approved": 3
+    },
+    "historical_seven_count": "only user logs; seven-clip snapshot not present in authorized artifacts",
+    "refinement_overwrite": "test_one refine_clip replaces camera/subtitle plan, then later _prepare_curation overwrites EDIT_DECISIONS with basic plans",
+    "approval_files_present": {
+      "FIRST_TEST_APPROVED.flag": false,
+      "FIRST_TEST_APPROVED_V44.json": false
+    },
+    "approval_flag_deletion": "not evidenced in pipeline; current absence cannot be attributed from cache alone"
+  },
+  "legacy_signatures": {
+    "stored_edit_all": "6ae34156e27432b38c53c67dac0fe005081bc7bc822734bf62fd9929259509cf",
+    "recomputed_edit_all": "6ae34156e27432b38c53c67dac0fe005081bc7bc822734bf62fd9929259509cf",
+    "recomputed_basic_reviewed": "81aea4c0253b9dbf1fa0f63ef5de2f0942ec23f824eb5f2f9ad232d90a77ca0f",
+    "stored_preview_reviewed": "dc6a397b869d8f340b4980ad79a7b290d1173d271ae48c968312ad040478ec1a",
+    "recomputed_restored_reviewed": "dc6a397b869d8f340b4980ad79a7b290d1173d271ae48c968312ad040478ec1a",
+    "stored_edit_equals_recomputed": true,
+    "stored_preview_equals_restored_recomputed": true,
+    "settings_and_renderer_hash_inputs": {
+      "render": {
+        "preview_width": 540,
+        "preview_height": 960,
+        "final_width": 1080,
+        "final_height": 1920,
+        "quality": "QUALITY",
+        "prefer_nvenc": true,
+        "fps_mode": "source",
+        "audio_lufs": -14,
+        "audio_true_peak": -1.5
+      },
+      "subtitles": {
+        "font": "Segoe UI",
+        "font_size_final": 72,
+        "font_size_preview": 36,
+        "max_lines": 2,
+        "margin_v_final": 320,
+        "outline_final": 6,
+        "shadow_final": 2,
+        "highlight_current_word": true
+      },
+      "title": {
+        "duration": 3.2,
+        "font_size_final": 64,
+        "font_size_min_final": 48,
+        "top_margin_final": 92,
+        "card_max_width_ratio": 0.84,
+        "card_padding_x": 34,
+        "card_padding_y": 20,
+        "card_radius": 28,
+        "card_shadow_offset": 6,
+        "line_spacing": 9,
+        "fade_ms": 180
+      },
+      "output": null,
+      "camera": {
+        "strategy": "speaker_aware_conservative",
+        "min_decision_seconds": 0.85,
+        "adaptive_timeline": true,
+        "speaker_aware": true,
+        "observation_window_seconds": 0.9,
+        "observation_min_coverage": 0.45,
+        "lip_min_samples": 3,
+        "lip_min_activity": 0.035,
+        "lip_activity_margin": 1.35,
+        "question_focus_heuristic": true,
+        "question_focus_lookahead_seconds": 9.0,
+        "question_focus_match_x": 0.16,
+        "uncertain_two_faces": "split_screen",
+        "group_fallback": "full_frame_blur",
+        "motion_follow": true,
+        "motion_keyframe_seconds": 0.9,
+        "motion_ema_alpha": 0.42,
+        "motion_deadzone_x": 0.012,
+        "motion_deadzone_y": 0.015,
+        "max_pan_speed_per_second": 0.18,
+        "max_tilt_speed_per_second": 0.12,
+        "motion_simplify_x": 0.01,
+        "motion_simplify_y": 0.012,
+        "motion_simplify_zoom": 0.007,
+        "subject_screen_y": 0.38,
+        "smart_zoom": true,
+        "min_zoom": 1.0,
+        "max_zoom": 1.13,
+        "zoom_face_height_small": 0.1,
+        "zoom_face_height_large": 0.3,
+        "zoom_speaker_bonus": 0.012,
+        "zoom_lip_threshold": 0.2,
+        "zoom_lip_bonus": 0.008,
+        "zoom_motion_speed_threshold": 0.1,
+        "zoom_motion_widening": 0.025,
+        "zoom_max_step": 0.012,
+        "enable_split_screen": true
+      },
+      "camera_v44": null,
+      "micro_perception": null,
+      "subtitle_renderer_fingerprint": "0d547d343006df3ea8d7ce95d549ed16b1d6eee6439540cd64f9ebcf217bc9dd",
+      "title_renderer_fingerprint": "fab207934522eecd041b69a3375f15c0e7ab5b0cd9b06397990107c47914e2b1",
+      "renderer_fingerprint": "a875d6e734f2ab88af95a261fb2fbbf7abeaaa5d1f71fc2d8c42fcd0aa8a0258"
+    }
+  },
+  "preview": {
+    "record": {
+      "plan_signature": "dc6a397b869d8f340b4980ad79a7b290d1173d271ae48c968312ad040478ec1a",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\CLIP_001\\CLIP_001_PREVIEW.mp4",
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "reviewed_clip_id": "CLIP_001"
+    },
+    "media_sha256_measured": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+    "sha256_matches_record": true,
+    "ffprobe": {
+      "format": {
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "duration": "41.249542",
+        "size": "7522073"
+      },
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 540,
+          "height": 960,
+          "duration": "41.249542",
+          "nb_frames": "989",
+          "sample_rate": null,
+          "channels": null
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "width": null,
+          "height": null,
+          "duration": "41.237000",
+          "nb_frames": "1934",
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ]
+    }
+  },
+  "camera_diff_summary": {
+    "persisted_clip1_segments": 14,
+    "rendered_clip1_segments": 10,
+    "persisted_visual_source": "people_observations",
+    "rendered_visual_source": "clip_micro_perception",
+    "rendered_subtitle_margin_v_final": 320
+  },
+  "all_clip1_differences": [
+    {
+      "path": "/approved_clips/0/camera_plan/diagnostics",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": {
+        "target_switches": 3,
+        "proposed_target_switches": 3,
+        "shot_resets": 5,
+        "unsafe_crop_avoided": 0,
+        "resolved_visual_focus_fraction": 0.12939085474228512,
+        "zoom_factor": 1.0,
+        "speaker_identity_confirmed_count": 0,
+        "graphics_intervals": 9
+      }
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/dominant_mode",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "crop",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/dynamic_active_speaker",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/micro_status",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "measured"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/motion_follow",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/motion_segments",
+      "kind": "value",
+      "persisted_value": 13,
+      "rendered_value": 3
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/needs_review",
+      "kind": "value",
+      "persisted_value": false,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/normalized_center_x",
+      "kind": "value",
+      "persisted_value": 0.4814,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/reason",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "Câmera v3: speaker/person explícito -> crop; atividade labial confiável -> crop; uma face -> crop; duas faces sem locutor resolvido -> split-screen; grupo/ambiguidade -> quadro completo com fundo desfocado. Usa observações densas de rosto quando disponíveis e não suaviza através de cortes reais de cena; crop ativo acompanha o rosto com pan/tilt suave e zoom inteligente conservador.",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/schema_version",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "4.4.0"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments",
+      "kind": "length",
+      "persisted_length": 14,
+      "rendered_length": 10
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SHOT_SWITCH"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_x",
+      "kind": "value",
+      "persisted_value": 0.48389,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48389,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48389,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.24164,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.24164,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/end",
+      "kind": "value",
+      "persisted_value": 0.9,
+      "rendered_value": 3.031958333333307
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.10921474358974359,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.940343774461878,
+            "sample_count": 32,
+            "observed_seconds": 5.367458333333303
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00045",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0000"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/0/zoom",
+      "kind": "value",
+      "persisted_value": 1.0144,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "HOLD"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_x",
+      "kind": "value",
+      "persisted_value": 0.48391,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48391,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48391,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.24807,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.24807,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/end",
+      "kind": "value",
+      "persisted_value": 6.3,
+      "rendered_value": 5.367624999999975
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "DOMINANT_FACE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.10921474358974359,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.940343774461878,
+            "sample_count": 32,
+            "observed_seconds": 5.367458333333303
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/person_id",
+      "kind": "value",
+      "persisted_value": "PERSON_001",
+      "rendered_value": "LOCAL_MICRO_TRACK_00001"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "DOMINANT_FACE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00046",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0000"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/start",
+      "kind": "value",
+      "persisted_value": 0.9,
+      "rendered_value": 3.031958333333307
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/1/zoom",
+      "kind": "value",
+      "persisted_value": 1.0201,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "HOLD"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_x",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_x_end",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_x_start",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.4964407801628113
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_y_end",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/center_y_start",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/end",
+      "kind": "value",
+      "persisted_value": 11.7,
+      "rendered_value": 6.034958333333321
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "DOMINANT_FACE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.9555555555555556,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.05654296875,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9561264641528062,
+            "sample_count": 6,
+            "observed_seconds": 1.001166666666677
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.11578525641025642,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9947322652490176,
+            "sample_count": 6,
+            "observed_seconds": 1.001166666666677
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/mode",
+      "kind": "value",
+      "persisted_value": "full_frame_blur",
+      "rendered_value": "crop"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/motion_follow",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/person_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "LOCAL_MICRO_TRACK_00001"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/reason",
+      "kind": "value",
+      "persisted_value": "gap_fallback",
+      "rendered_value": "MINIMUM_DWELL_HOLD"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0000"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/speaker_evidence",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/start",
+      "kind": "value",
+      "persisted_value": 6.3,
+      "rendered_value": 5.367624999999975
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/2/zoom",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "RETURN_SOURCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/end",
+      "kind": "value",
+      "persisted_value": 14.4,
+      "rendered_value": 6.36862499999998
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.9555555555555556,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.05654296875,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9561264641528062,
+            "sample_count": 6,
+            "observed_seconds": 1.001166666666677
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.11578525641025642,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9947322652490176,
+            "sample_count": 6,
+            "observed_seconds": 1.001166666666677
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0000"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/start",
+      "kind": "value",
+      "persisted_value": 11.7,
+      "rendered_value": 6.034958333333321
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/3/zoom",
+      "kind": "value",
+      "persisted_value": 1.0169,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SHOT_SWITCH"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/end",
+      "kind": "value",
+      "persisted_value": 16.2,
+      "rendered_value": 11.707291666666663
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.9555555555555556,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.15517578125,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9999283503688672,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.11538461538461539,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9999627239150687,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0001"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/start",
+      "kind": "value",
+      "persisted_value": 14.4,
+      "rendered_value": 6.36862499999998
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/4/zoom",
+      "kind": "value",
+      "persisted_value": 1.0206,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "HOLD"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/end",
+      "kind": "value",
+      "persisted_value": 18.0,
+      "rendered_value": 12.207791666666651
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "none"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0001"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/start",
+      "kind": "value",
+      "persisted_value": 16.2,
+      "rendered_value": 11.707291666666663
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/5/zoom",
+      "kind": "value",
+      "persisted_value": 1.0203,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SHOT_SWITCH"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/end",
+      "kind": "value",
+      "persisted_value": 18.9,
+      "rendered_value": 32.35291666666666
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.9555555555555556,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.050537109375,
+            "horizontal_coverage": 0.5,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9337547935933507,
+            "sample_count": 32,
+            "observed_seconds": 5.29679166666665
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.11049679487179487,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9876099461065955,
+            "sample_count": 32,
+            "observed_seconds": 5.29679166666665
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0002"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/start",
+      "kind": "value",
+      "persisted_value": 18.0,
+      "rendered_value": 12.207791666666651
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/6/zoom",
+      "kind": "value",
+      "persisted_value": 1.0183,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SHOT_SWITCH"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/end",
+      "kind": "value",
+      "persisted_value": 19.8,
+      "rendered_value": 35.355916666666644
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.7944444444444444,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.14508928571428573,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9997148276192737,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.10008012820512821,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9993177878610189,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0003"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/start",
+      "kind": "value",
+      "persisted_value": 18.9,
+      "rendered_value": 32.35291666666666
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/7/zoom",
+      "kind": "value",
+      "persisted_value": 1.0181,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "HOLD"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.6289610008398692
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.6289610008398692
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.6289610008398692
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/end",
+      "kind": "value",
+      "persisted_value": 24.3,
+      "rendered_value": 37.69158333333331
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "DOMINANT_FACE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.7944444444444444,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.14508928571428573,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9997148276192737,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.10008012820512821,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9993177878610189,
+            "sample_count": 32,
+            "observed_seconds": 5.338499999999982
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/person_id",
+      "kind": "value",
+      "persisted_value": "PERSON_001",
+      "rendered_value": "LOCAL_MICRO_TRACK_00003"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "DOMINANT_FACE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0003"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/start",
+      "kind": "value",
+      "persisted_value": 19.8,
+      "rendered_value": 35.355916666666644
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/8/zoom",
+      "kind": "value",
+      "persisted_value": 1.0122,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/camera_state",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SHOT_SWITCH"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_x",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_x_end",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_x_start",
+      "kind": "value",
+      "persisted_value": 0.48141,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_y_end",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/center_y_start",
+      "kind": "value",
+      "persisted_value": 0.25549,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/crop_safe",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/end",
+      "kind": "value",
+      "persisted_value": 25.2,
+      "rendered_value": 41.25999999999999
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/evidence_role",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "SOURCE_PRESERVE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/graphics_policy",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "single_copy_source_strip"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/graphics_regions",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "kind": "lower_third",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.6,
+          "y_end": 0.9555555555555556,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.052734375,
+            "horizontal_coverage": 0.5,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9503607712168257,
+            "sample_count": 22,
+            "observed_seconds": 3.5684166666666783
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        },
+        {
+          "kind": "banner",
+          "x_start": 0.0,
+          "x_end": 1.0,
+          "y_start": 0.0,
+          "y_end": 0.21666666666666667,
+          "persistent": true,
+          "confidence": 0.75,
+          "needs_review": true,
+          "evidence": {
+            "edge_density": 0.11209935897435898,
+            "horizontal_coverage": 1.0,
+            "fixed_coordinate_persistence": 0.75,
+            "color_stability_proxy": 0.9894274943330288,
+            "sample_count": 22,
+            "observed_seconds": 3.5684166666666783
+          },
+          "ocr_text": [],
+          "measurement": "graphic_candidate_not_text_recognition"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/mode",
+      "kind": "value",
+      "persisted_value": "crop",
+      "rendered_value": "full_frame_blur"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/motion_easing",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "smoothstep"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/motion_follow",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/needs_review",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": true
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/panel_source_height",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.6
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/person_id",
+      "kind": "type",
+      "persisted_value": "PERSON_001",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/person_ids",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": []
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/protected",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/reason",
+      "kind": "value",
+      "persisted_value": "active_person+speaker_person_mapping+smart_motion",
+      "rendered_value": "INSUFFICIENT_VISUAL_EVIDENCE"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/scene_id",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": "SCENE_00048",
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/source_shot_id",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": "MICRO_SHOT_0004"
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/speaker_evidence",
+      "kind": "value",
+      "persisted_value": true,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/speaker_identity_confirmed",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": false
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/start",
+      "kind": "value",
+      "persisted_value": 24.3,
+      "rendered_value": 37.69158333333331
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/subject_screen_y",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 0.5
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/segments/9/zoom",
+      "kind": "value",
+      "persisted_value": 1.0182,
+      "rendered_value": 1.0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/smart_zoom",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/source_observation_intervals",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": 40,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/source_timeline_intervals",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": 843,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/speaker_aware",
+      "kind": "presence",
+      "persisted_present": true,
+      "rendered_present": false,
+      "persisted_value": true,
+      "rendered_value": null
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/speaker_evidence_segments",
+      "kind": "value",
+      "persisted_value": 13,
+      "rendered_value": 0
+    },
+    {
+      "path": "/approved_clips/0/camera_plan/visual_source",
+      "kind": "value",
+      "persisted_value": "people_observations",
+      "rendered_value": "clip_micro_perception"
+    },
+    {
+      "path": "/approved_clips/0/subtitle_plan/margin_v_final",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 320
+    },
+    {
+      "path": "/approved_clips/0/thumbnail_plan/candidates",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": [
+        {
+          "time": 203.87033333333332,
+          "file": "candidate_01_203.87s.jpg"
+        },
+        {
+          "time": 214.42254166666666,
+          "file": "candidate_02_214.42s.jpg"
+        },
+        {
+          "time": 216.09087499999998,
+          "file": "candidate_03_216.09s.jpg"
+        },
+        {
+          "time": 217.5506666666667,
+          "file": "candidate_04_217.55s.jpg"
+        },
+        {
+          "time": 219.42754166666666,
+          "file": "candidate_05_219.43s.jpg"
+        },
+        {
+          "time": 229.7295,
+          "file": "candidate_06_229.73s.jpg"
+        },
+        {
+          "time": 232.14858333333333,
+          "file": "candidate_07_232.15s.jpg"
+        },
+        {
+          "time": 233.39983333333333,
+          "file": "candidate_08_233.40s.jpg"
+        },
+        {
+          "time": 234.65108333333333,
+          "file": "candidate_09_234.65s.jpg"
+        }
+      ]
+    },
+    {
+      "path": "/approved_clips/0/thumbnail_plan/opening_frame_time",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 203.87033333333332
+    },
+    {
+      "path": "/approved_clips/0/thumbnail_plan/thumbnail_best_time",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 229.7295
+    },
+    {
+      "path": "/approved_clips/0/thumbnail_plan/thumbnail_clean_time",
+      "kind": "presence",
+      "persisted_present": false,
+      "rendered_present": true,
+      "persisted_value": null,
+      "rendered_value": 229.7295
+    }
+  ],
+  "tests_executed": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_v44_approval.py tests/test_v44_ops.py -q",
+    "result": "6 passed in 0.29s",
+    "scope": "baseline gates; P0 regressions pending parent implementation"
+  },
+  "required_test_audit": {
+    "A_E_F": "Assert total curate/review_candidates calls == 1 and same revision in every renderer, fresh Pipeline reload without Analyzer/Qwen",
+    "B": "Explicit recuration creates revision and archive, invalidates old approval with reasons",
+    "C": "Read-only reload/open results preserves signature/media/approval; normalize float/key order/diagnostics",
+    "D": "Duration/title_duration, timestamps, source bytes, caption text/timing, camera/crop of any batch clip invalidate with changed field",
+    "G": "Competing Pipeline instances, repeated clicks, delayed callback tokens, revision changed during encode cannot publish stale state",
+    "H": "Real existing preview hash/probe verified; original-source regeneration cannot be claimed absent original media; no approval artifact exists"
+  },
+  "gui_race_audit": [
+    "busy covers primary dispatch but no durable project lock",
+    "Tk src/rank read inside worker",
+    "Mutable shared cfg changed by open_results/_sync or select_media while worker",
+    "done/progress lacks operation token",
+    "Other windows/processes outside single busy gate"
+  ],
+  "original_files_before": {
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json": {
+      "sha256": "18056bdcbeba566842693e8dc3a00bfe51c62d0695ca4b33fadb9be50eb3fd01",
+      "size_bytes": 59847
+    },
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "sha256": "6748a35aa436a9f7211641ed291f4d63f5715fd110ce0b5329dc280b137db907",
+      "size_bytes": 6702
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip.json": {
+      "sha256": "30139d728ad8725d657a09a28ebda29de79cda07a1b0df1ccb51be0699d3ead3",
+      "size_bytes": 27171
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip_micro_perception.json": {
+      "sha256": "5597c914987a14eea56a5957eb3dab44c2e4c1d4402c9c937018c19d6425fef1",
+      "size_bytes": 234463
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/FINAL_CAMERA_PLAN_V44.json": {
+      "sha256": "4845382692bfbdb9cc3e53361e3aa3836a65b05d24ddf2060d596d3d6307bf8d",
+      "size_bytes": 20501
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/micro_cache/1a1e799298e89db7e133d338918403af0f17b57a6234b1392c5401f2d66cf349.json": {
+      "sha256": "a5f2d0bc1d5e0c9bd453755bf0e5237cebec7a3d10bd28f5b377ad6d9f345b20",
+      "size_bytes": 250320
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_01_203.87s.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_02_214.42s.jpg": {
+      "sha256": "bbe2c184516bb3ab4f2777d90085942c50ff76ff28e4cd5e0bafb3ea4d3a04d4",
+      "size_bytes": 192084
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_03_216.09s.jpg": {
+      "sha256": "94ddf70d3c94437bd3d2b90aca56fdf25ea7a2c1432aec22e08b15e3f9ae3a8a",
+      "size_bytes": 188761
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_04_217.55s.jpg": {
+      "sha256": "c0336639b88612e48af9bfe305e240c4531a2364ee7c50cf4b6047b48857c93b",
+      "size_bytes": 178027
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_05_219.43s.jpg": {
+      "sha256": "6a3516f65a50f54286c5e0089218dfd44f4ed61017420630f63b7ded992200d3",
+      "size_bytes": 191852
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_06_229.73s.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_07_232.15s.jpg": {
+      "sha256": "e01b2c11ebd887fa7e68a06859a1215cc16a13e4916bbe9c2519187fee580503",
+      "size_bytes": 186648
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_08_233.40s.jpg": {
+      "sha256": "c10115a3bd6526e8728c1aa1e6f2d57391c7f849ec9f0623120b6bb5f287d1dc",
+      "size_bytes": 186665
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_09_234.65s.jpg": {
+      "sha256": "c5cdbc6c555e4db5f8da79b66f2a553f2c435ed221abaf4296b20cea0528ad91",
+      "size_bytes": 186679
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/opening_frame.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_best.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_candidates.json": {
+      "sha256": "8342fa3a2170647ddda80bbe556799343684fb8c75db00452d300a53bf283e1d",
+      "size_bytes": 962
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_clean.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.html": {
+      "sha256": "265512fb5e57c50e604e37f85ba918124171861bc54ea63375f83ad6eb1a4cc1",
+      "size_bytes": 776
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.png": {
+      "sha256": "094da8fc994df85e5742ab5b48ae87849c595d526d6a6cda78b65ac065b2ef6e",
+      "size_bytes": 132677
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "sha256": "4adfd4a379b518a56ed789e9e9eabc0802c30ce76474ebee3eddd41d4df0f830",
+      "size_bytes": 1442
+    },
+    "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json": {
+      "sha256": "9e72b9a1971052d7ae7c83c2b09d9f7db3fb1366c5e3758f1651dc8d5c008164",
+      "size_bytes": 49739
+    },
+    "output/curation/zd_wjssZ7mc/PREVIEW_REVIEW_V44.json": {
+      "sha256": "0ad79e01bce1007868369f41da7b75a5e02dd048b9f2c17c4b813c143b8ba49c",
+      "size_bytes": 351
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/CLIP_001_PREVIEW.mp4": {
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "size_bytes": 7522073
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/PREVIEW_CAMERA_VERIFIER_V44.json": {
+      "sha256": "916b05fa960cf6c2d645fb4e368505053cf8a4a40977c9f1e90d0b6a19517043",
+      "size_bytes": 4591
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles.srt": {
+      "sha256": "faccc8fc3d4c15cf19f14a0ce4df989a5aa6e98ad40f0a08745477debcfb7973",
+      "size_bytes": 1611
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles_preview.ass": {
+      "sha256": "67f8d0cdcd193686a5533619d6a60f9735dfa072de7d997ef970f88482f5135d",
+      "size_bytes": 3085
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/title_card_preview.png": {
+      "sha256": "dd22583a3644307b4b3911b2f7344d4c7848a01c7480d941fb23985644518a3d",
+      "size_bytes": 11014
+    }
+  },
+  "original_files_after": {
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json": {
+      "sha256": "18056bdcbeba566842693e8dc3a00bfe51c62d0695ca4b33fadb9be50eb3fd01",
+      "size_bytes": 59847
+    },
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "sha256": "6748a35aa436a9f7211641ed291f4d63f5715fd110ce0b5329dc280b137db907",
+      "size_bytes": 6702
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip.json": {
+      "sha256": "30139d728ad8725d657a09a28ebda29de79cda07a1b0df1ccb51be0699d3ead3",
+      "size_bytes": 27171
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip_micro_perception.json": {
+      "sha256": "5597c914987a14eea56a5957eb3dab44c2e4c1d4402c9c937018c19d6425fef1",
+      "size_bytes": 234463
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/FINAL_CAMERA_PLAN_V44.json": {
+      "sha256": "4845382692bfbdb9cc3e53361e3aa3836a65b05d24ddf2060d596d3d6307bf8d",
+      "size_bytes": 20501
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/micro_cache/1a1e799298e89db7e133d338918403af0f17b57a6234b1392c5401f2d66cf349.json": {
+      "sha256": "a5f2d0bc1d5e0c9bd453755bf0e5237cebec7a3d10bd28f5b377ad6d9f345b20",
+      "size_bytes": 250320
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_01_203.87s.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_02_214.42s.jpg": {
+      "sha256": "bbe2c184516bb3ab4f2777d90085942c50ff76ff28e4cd5e0bafb3ea4d3a04d4",
+      "size_bytes": 192084
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_03_216.09s.jpg": {
+      "sha256": "94ddf70d3c94437bd3d2b90aca56fdf25ea7a2c1432aec22e08b15e3f9ae3a8a",
+      "size_bytes": 188761
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_04_217.55s.jpg": {
+      "sha256": "c0336639b88612e48af9bfe305e240c4531a2364ee7c50cf4b6047b48857c93b",
+      "size_bytes": 178027
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_05_219.43s.jpg": {
+      "sha256": "6a3516f65a50f54286c5e0089218dfd44f4ed61017420630f63b7ded992200d3",
+      "size_bytes": 191852
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_06_229.73s.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_07_232.15s.jpg": {
+      "sha256": "e01b2c11ebd887fa7e68a06859a1215cc16a13e4916bbe9c2519187fee580503",
+      "size_bytes": 186648
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_08_233.40s.jpg": {
+      "sha256": "c10115a3bd6526e8728c1aa1e6f2d57391c7f849ec9f0623120b6bb5f287d1dc",
+      "size_bytes": 186665
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_09_234.65s.jpg": {
+      "sha256": "c5cdbc6c555e4db5f8da79b66f2a553f2c435ed221abaf4296b20cea0528ad91",
+      "size_bytes": 186679
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/opening_frame.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_best.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_candidates.json": {
+      "sha256": "8342fa3a2170647ddda80bbe556799343684fb8c75db00452d300a53bf283e1d",
+      "size_bytes": 962
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_clean.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.html": {
+      "sha256": "265512fb5e57c50e604e37f85ba918124171861bc54ea63375f83ad6eb1a4cc1",
+      "size_bytes": 776
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.png": {
+      "sha256": "094da8fc994df85e5742ab5b48ae87849c595d526d6a6cda78b65ac065b2ef6e",
+      "size_bytes": 132677
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "sha256": "4adfd4a379b518a56ed789e9e9eabc0802c30ce76474ebee3eddd41d4df0f830",
+      "size_bytes": 1442
+    },
+    "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json": {
+      "sha256": "9e72b9a1971052d7ae7c83c2b09d9f7db3fb1366c5e3758f1651dc8d5c008164",
+      "size_bytes": 49739
+    },
+    "output/curation/zd_wjssZ7mc/PREVIEW_REVIEW_V44.json": {
+      "sha256": "0ad79e01bce1007868369f41da7b75a5e02dd048b9f2c17c4b813c143b8ba49c",
+      "size_bytes": 351
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/CLIP_001_PREVIEW.mp4": {
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "size_bytes": 7522073
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/PREVIEW_CAMERA_VERIFIER_V44.json": {
+      "sha256": "916b05fa960cf6c2d645fb4e368505053cf8a4a40977c9f1e90d0b6a19517043",
+      "size_bytes": 4591
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles.srt": {
+      "sha256": "faccc8fc3d4c15cf19f14a0ce4df989a5aa6e98ad40f0a08745477debcfb7973",
+      "size_bytes": 1611
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles_preview.ass": {
+      "sha256": "67f8d0cdcd193686a5533619d6a60f9735dfa072de7d997ef970f88482f5135d",
+      "size_bytes": 3085
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/title_card_preview.png": {
+      "sha256": "dd22583a3644307b4b3911b2f7344d4c7848a01c7480d941fb23985644518a3d",
+      "size_bytes": 11014
+    }
+  },
+  "original_files_unchanged": true
+}

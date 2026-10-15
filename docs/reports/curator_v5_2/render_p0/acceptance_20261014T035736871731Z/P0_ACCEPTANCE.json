@@ -1,0 +1,282 @@
+{
+  "report_directory": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T035736871731Z",
+  "originals_before": {
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json": {
+      "sha256": "18056bdcbeba566842693e8dc3a00bfe51c62d0695ca4b33fadb9be50eb3fd01",
+      "size_bytes": 59847
+    },
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "sha256": "6748a35aa436a9f7211641ed291f4d63f5715fd110ce0b5329dc280b137db907",
+      "size_bytes": 6702
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip.json": {
+      "sha256": "30139d728ad8725d657a09a28ebda29de79cda07a1b0df1ccb51be0699d3ead3",
+      "size_bytes": 27171
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip_micro_perception.json": {
+      "sha256": "5597c914987a14eea56a5957eb3dab44c2e4c1d4402c9c937018c19d6425fef1",
+      "size_bytes": 234463
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/FINAL_CAMERA_PLAN_V44.json": {
+      "sha256": "4845382692bfbdb9cc3e53361e3aa3836a65b05d24ddf2060d596d3d6307bf8d",
+      "size_bytes": 20501
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/micro_cache/1a1e799298e89db7e133d338918403af0f17b57a6234b1392c5401f2d66cf349.json": {
+      "sha256": "a5f2d0bc1d5e0c9bd453755bf0e5237cebec7a3d10bd28f5b377ad6d9f345b20",
+      "size_bytes": 250320
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_01_203.87s.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_02_214.42s.jpg": {
+      "sha256": "bbe2c184516bb3ab4f2777d90085942c50ff76ff28e4cd5e0bafb3ea4d3a04d4",
+      "size_bytes": 192084
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_03_216.09s.jpg": {
+      "sha256": "94ddf70d3c94437bd3d2b90aca56fdf25ea7a2c1432aec22e08b15e3f9ae3a8a",
+      "size_bytes": 188761
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_04_217.55s.jpg": {
+      "sha256": "c0336639b88612e48af9bfe305e240c4531a2364ee7c50cf4b6047b48857c93b",
+      "size_bytes": 178027
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_05_219.43s.jpg": {
+      "sha256": "6a3516f65a50f54286c5e0089218dfd44f4ed61017420630f63b7ded992200d3",
+      "size_bytes": 191852
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_06_229.73s.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_07_232.15s.jpg": {
+      "sha256": "e01b2c11ebd887fa7e68a06859a1215cc16a13e4916bbe9c2519187fee580503",
+      "size_bytes": 186648
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_08_233.40s.jpg": {
+      "sha256": "c10115a3bd6526e8728c1aa1e6f2d57391c7f849ec9f0623120b6bb5f287d1dc",
+      "size_bytes": 186665
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_09_234.65s.jpg": {
+      "sha256": "c5cdbc6c555e4db5f8da79b66f2a553f2c435ed221abaf4296b20cea0528ad91",
+      "size_bytes": 186679
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/opening_frame.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_best.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_candidates.json": {
+      "sha256": "8342fa3a2170647ddda80bbe556799343684fb8c75db00452d300a53bf283e1d",
+      "size_bytes": 962
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_clean.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.html": {
+      "sha256": "265512fb5e57c50e604e37f85ba918124171861bc54ea63375f83ad6eb1a4cc1",
+      "size_bytes": 776
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.png": {
+      "sha256": "094da8fc994df85e5742ab5b48ae87849c595d526d6a6cda78b65ac065b2ef6e",
+      "size_bytes": 132677
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "sha256": "4adfd4a379b518a56ed789e9e9eabc0802c30ce76474ebee3eddd41d4df0f830",
+      "size_bytes": 1442
+    },
+    "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json": {
+      "sha256": "9e72b9a1971052d7ae7c83c2b09d9f7db3fb1366c5e3758f1651dc8d5c008164",
+      "size_bytes": 49739
+    },
+    "output/curation/zd_wjssZ7mc/PREVIEW_REVIEW_V44.json": {
+      "sha256": "0ad79e01bce1007868369f41da7b75a5e02dd048b9f2c17c4b813c143b8ba49c",
+      "size_bytes": 351
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/CLIP_001_PREVIEW.mp4": {
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "size_bytes": 7522073
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/PREVIEW_CAMERA_VERIFIER_V44.json": {
+      "sha256": "916b05fa960cf6c2d645fb4e368505053cf8a4a40977c9f1e90d0b6a19517043",
+      "size_bytes": 4591
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles.srt": {
+      "sha256": "faccc8fc3d4c15cf19f14a0ce4df989a5aa6e98ad40f0a08745477debcfb7973",
+      "size_bytes": 1611
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles_preview.ass": {
+      "sha256": "67f8d0cdcd193686a5533619d6a60f9735dfa072de7d997ef970f88482f5135d",
+      "size_bytes": 3085
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/title_card_preview.png": {
+      "sha256": "dd22583a3644307b4b3911b2f7344d4c7848a01c7480d941fb23985644518a3d",
+      "size_bytes": 11014
+    }
+  },
+  "analyzer_accessed": false,
+  "models_called": false,
+  "real_cached_preview": {
+    "project_id": "zd_wjssZ7mc",
+    "preview": {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\CLIP_001\\CLIP_001_PREVIEW.mp4",
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "bytes": 7522073,
+      "ffprobe": {
+        "duration": 41.249542,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 540,
+            "height": 960,
+            "nb_frames": "989"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "nb_frames": "1934"
+          }
+        ]
+      }
+    },
+    "restored_legacy_signature": "dc6a397b869d8f340b4980ad79a7b290d1173d271ae48c968312ad040478ec1a",
+    "matches_recorded_preview_signature": true,
+    "original_source_sha256": null,
+    "analyzer_accessed": false,
+    "words_available": 0,
+    "recovered_segment_count": 46,
+    "human_approval_claimed": false,
+    "limits": [
+      "Original fonte não disponível no cache autorizado.",
+      "Transcrição recuperada é somente o contexto já existente no handoff.",
+      "Este MP4 é o preview histórico preservado; não foi regenerado."
+    ]
+  },
+  "status": "passed",
+  "originals_after": {
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json": {
+      "sha256": "18056bdcbeba566842693e8dc3a00bfe51c62d0695ca4b33fadb9be50eb3fd01",
+      "size_bytes": 59847
+    },
+    "output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "sha256": "6748a35aa436a9f7211641ed291f4d63f5715fd110ce0b5329dc280b137db907",
+      "size_bytes": 6702
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip.json": {
+      "sha256": "30139d728ad8725d657a09a28ebda29de79cda07a1b0df1ccb51be0699d3ead3",
+      "size_bytes": 27171
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/clip_micro_perception.json": {
+      "sha256": "5597c914987a14eea56a5957eb3dab44c2e4c1d4402c9c937018c19d6425fef1",
+      "size_bytes": 234463
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/FINAL_CAMERA_PLAN_V44.json": {
+      "sha256": "4845382692bfbdb9cc3e53361e3aa3836a65b05d24ddf2060d596d3d6307bf8d",
+      "size_bytes": 20501
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/micro_cache/1a1e799298e89db7e133d338918403af0f17b57a6234b1392c5401f2d66cf349.json": {
+      "sha256": "a5f2d0bc1d5e0c9bd453755bf0e5237cebec7a3d10bd28f5b377ad6d9f345b20",
+      "size_bytes": 250320
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_01_203.87s.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_02_214.42s.jpg": {
+      "sha256": "bbe2c184516bb3ab4f2777d90085942c50ff76ff28e4cd5e0bafb3ea4d3a04d4",
+      "size_bytes": 192084
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_03_216.09s.jpg": {
+      "sha256": "94ddf70d3c94437bd3d2b90aca56fdf25ea7a2c1432aec22e08b15e3f9ae3a8a",
+      "size_bytes": 188761
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_04_217.55s.jpg": {
+      "sha256": "c0336639b88612e48af9bfe305e240c4531a2364ee7c50cf4b6047b48857c93b",
+      "size_bytes": 178027
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_05_219.43s.jpg": {
+      "sha256": "6a3516f65a50f54286c5e0089218dfd44f4ed61017420630f63b7ded992200d3",
+      "size_bytes": 191852
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_06_229.73s.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_07_232.15s.jpg": {
+      "sha256": "e01b2c11ebd887fa7e68a06859a1215cc16a13e4916bbe9c2519187fee580503",
+      "size_bytes": 186648
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_08_233.40s.jpg": {
+      "sha256": "c10115a3bd6526e8728c1aa1e6f2d57391c7f849ec9f0623120b6bb5f287d1dc",
+      "size_bytes": 186665
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/candidate_09_234.65s.jpg": {
+      "sha256": "c5cdbc6c555e4db5f8da79b66f2a553f2c435ed221abaf4296b20cea0528ad91",
+      "size_bytes": 186679
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/opening_frame.jpg": {
+      "sha256": "d91c6be2b71aa32eb848e09f7ebdafdf8248874c99e9c3647f962ae648b2ebd0",
+      "size_bytes": 208804
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_best.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_candidates.json": {
+      "sha256": "8342fa3a2170647ddda80bbe556799343684fb8c75db00452d300a53bf283e1d",
+      "size_bytes": 962
+    },
+    "output/curation/zd_wjssZ7mc/clips/CLIP_001/thumbnails/thumbnail_clean.jpg": {
+      "sha256": "5db58048b5926cce097dea0d690e4ed60127f41de371c15c441f0898af97290f",
+      "size_bytes": 185820
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.html": {
+      "sha256": "265512fb5e57c50e604e37f85ba918124171861bc54ea63375f83ad6eb1a4cc1",
+      "size_bytes": 776
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_BOARD.png": {
+      "sha256": "094da8fc994df85e5742ab5b48ae87849c595d526d6a6cda78b65ac065b2ef6e",
+      "size_bytes": 132677
+    },
+    "output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "sha256": "4adfd4a379b518a56ed789e9e9eabc0802c30ce76474ebee3eddd41d4df0f830",
+      "size_bytes": 1442
+    },
+    "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json": {
+      "sha256": "9e72b9a1971052d7ae7c83c2b09d9f7db3fb1366c5e3758f1651dc8d5c008164",
+      "size_bytes": 49739
+    },
+    "output/curation/zd_wjssZ7mc/PREVIEW_REVIEW_V44.json": {
+      "sha256": "0ad79e01bce1007868369f41da7b75a5e02dd048b9f2c17c4b813c143b8ba49c",
+      "size_bytes": 351
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/CLIP_001_PREVIEW.mp4": {
+      "sha256": "d20972bfc76b364b8008354cad396caee7ad5d66be151e5ee664113bcbf4c40a",
+      "size_bytes": 7522073
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/PREVIEW_CAMERA_VERIFIER_V44.json": {
+      "sha256": "916b05fa960cf6c2d645fb4e368505053cf8a4a40977c9f1e90d0b6a19517043",
+      "size_bytes": 4591
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles.srt": {
+      "sha256": "faccc8fc3d4c15cf19f14a0ce4df989a5aa6e98ad40f0a08745477debcfb7973",
+      "size_bytes": 1611
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/subtitles_preview.ass": {
+      "sha256": "67f8d0cdcd193686a5533619d6a60f9735dfa072de7d997ef970f88482f5135d",
+      "size_bytes": 3085
+    },
+    "output/renders/zd_wjssZ7mc/CLIP_001/title_card_preview.png": {
+      "sha256": "dd22583a3644307b4b3911b2f7344d4c7848a01c7480d941fb23985644518a3d",
+      "size_bytes": 11014
+    }
+  },
+  "originals_unchanged": true
+}

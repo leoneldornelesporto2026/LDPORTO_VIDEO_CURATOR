@@ -1,0 +1,527 @@
+{
+  "schema_version": "LDP_REEL_REVIEW_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "source_package_sha256": "bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251",
+  "status": "PROPOSED_NOT_APPROVED",
+  "reels": [
+    {
+      "review_rank": 1,
+      "candidate_id": "MOMENT_00005_0001",
+      "source_start": 977.18,
+      "source_end": 1009.26,
+      "duration": 32.08,
+      "title_main": "SEM CONTATO POR VHF: E AGORA?",
+      "title_alternatives": [
+        "O rádio HF era a alternativa?",
+        "A tentativa de falar com Belém"
+      ],
+      "topic_from_analyzer": "Uso do rádio HF e tentativa de contato com Belém",
+      "original_rank": 1,
+      "source_segment_ids": [
+        "SEG_00164",
+        "SEG_00165",
+        "SEG_00166",
+        "SEG_00167",
+        "SEG_00168"
+      ],
+      "original_literal_excerpt": "Bom, depois que eles insistiram muito no VHF e não conseguiram contato, eles tentaram falar com Belém pelo rádio de HF. Isso já era quase 6 da tarde. Esse tipo de rádio tem um alcance muito maior, porque os sinais de rádio se refletem na ionosfera e na superfície da Terra. E aí permite que você conserve com alguém na Europa, por exemplo, estando lá no Amazonas. Então, mesmo voando para o outro lado, e a mais de 200 km de Belém, pelo menos, finalmente eles conseguiram ir em contato.",
+      "original_editorial_score": 0.862,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          982.527,
+          987.873,
+          993.22,
+          998.567,
+          1003.913
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 2,
+      "candidate_id": "MOMENT_00004_0002",
+      "source_start": 793.2,
+      "source_end": 837.86,
+      "duration": 44.66,
+      "title_main": "POR QUE O RÁDIO NÃO ALCANÇAVA?",
+      "title_alternatives": [
+        "As antenas e a distância",
+        "O desafio de falar com Belém"
+      ],
+      "topic_from_analyzer": "Problemas com o alcance das antenas na Amazônia e a antena de Tucuruí",
+      "original_rank": 3,
+      "source_segment_ids": [
+        "SEG_00137",
+        "SEG_00138",
+        "SEG_00139",
+        "SEG_00140",
+        "SEG_00141",
+        "SEG_00142"
+      ],
+      "original_literal_excerpt": "O problema é que era comum as antenas da Amazônia não terem um alcance muito longo, E ele imaginou que ainda não estava na distância suficiente para entrar na área das antenas de Belém. E aí, nem se preocuparam com isso. Só que eles não se tocaram de um detalhe. Sabendo que as antenas na Amazônia apresentam esse problema, as autoridades construíram outra antena de radionavegação justamente entre Marabá e Belém, nas proximidades de Tucuruí. Inclusive, essa antena aparece nas cartas de navegação da região. Se os pilotos tivessem tentado sintonizar essa antena, ela poderia aparecer no ADF, mesmo que eles estivessem voando em outra direção, porque eles estavam dentro do alcance dela.",
+      "original_editorial_score": 0.859,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          800.643,
+          808.087,
+          815.53,
+          822.973,
+          830.417
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 3,
+      "candidate_id": "MOMENT_00002_0003",
+      "source_start": 448.68,
+      "source_end": 485.26,
+      "duration": 36.58,
+      "title_main": "O TRECHO SEM AEROVIA",
+      "title_alternatives": [
+        "Como seguir a rota até Marabá?",
+        "Um trecho que exigia atenção"
+      ],
+      "topic_from_analyzer": "Detalhes do voo entre Imperatriz e Marabá",
+      "original_rank": 2,
+      "source_segment_ids": [
+        "SEG_00076",
+        "SEG_00077",
+        "SEG_00078",
+        "SEG_00079",
+        "SEG_00080"
+      ],
+      "original_literal_excerpt": "Sendo que nesta etapa o Zili estava pilotando e o Garcês monitorando o voo. O trecho entre Imperatriz e Marabá não possuía uma aerovia, mas o plano de voo que eles pegaram ainda em Brasília indicava que Marabá estava a 292 graus de Imperatriz. Vamos relembrar, a Varig tinha mudado a forma de indicar direções nos documentos no plano de voo. E este plano de voo indicava o rumo 2920 para os pilotos seguirem. Mas como eu falei lá no começo do vídeo, os pilotos sabem que as bússolas só indicam até 360 graus.",
+      "original_editorial_score": 0.859,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          454.777,
+          460.873,
+          466.97,
+          473.067,
+          479.163
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 4,
+      "candidate_id": "MOMENT_00004_0004",
+      "source_start": 855.96,
+      "source_end": 887.22,
+      "duration": 31.26,
+      "title_main": "O CHECKLIST ANTES DO POUSO",
+      "title_alternatives": [
+        "O que havia nas cartas?",
+        "Procedimentos de aproximação"
+      ],
+      "topic_from_analyzer": "Checklist de procedimentos de aproximação e pouso",
+      "original_rank": 4,
+      "source_segment_ids": [
+        "SEG_00146",
+        "SEG_00147",
+        "SEG_00148",
+        "SEG_00149",
+        "SEG_00150"
+      ],
+      "original_literal_excerpt": "Na aviação existe checklist de tudo, inclusive do procedimento de aproximação e pouso. Naquela hora, eles iriam consultar as cartas de aproximação de Belém, pegando informações sobre o trajeto, velocidade, o ângulo de descida, a rota de arremetida. Em um procedimento normal, um dos pilotos pega a carta de aproximação e lê as informações. O outro piloto coteja, isso é, checa se está tudo certo e repete a informação em voz alta. para o primeiro piloto ouvir e confirmar.",
+      "original_editorial_score": 0.851,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          861.17,
+          866.38,
+          871.59,
+          876.8,
+          882.01
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 5,
+      "candidate_id": "MOMENT_00002_0002",
+      "source_start": 422.54,
+      "source_end": 448.6,
+      "duration": 26.06,
+      "title_main": "A ROTA DO VOO 254",
+      "title_alternatives": [
+        "O trajeto até Imperatriz",
+        "O plano de voo em Brasília"
+      ],
+      "topic_from_analyzer": "Detalhes do voo e rota entre Brasília e Imperatriz",
+      "original_rank": 11,
+      "source_segment_ids": [
+        "SEG_00072",
+        "SEG_00073",
+        "SEG_00074",
+        "SEG_00075"
+      ],
+      "original_literal_excerpt": "Às 2h05 da tarde, o Mike Kilo decolou de Brasília. E como o trecho até Imperatriz, no Maranhão, possuía uma aerovia, os pilotos olharam a carta de navegação e seguiram a indicação que estava lá. Foram 46 minutos de voo de Brasília até Imperatriz. Alguns passageiros desembarcaram, outros embarcaram e às 16h35 o Boeing 737 decolou na direção de Marabá, no Pará.",
+      "original_editorial_score": 0.749,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          426.883,
+          431.227,
+          435.57,
+          439.913,
+          444.257
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 6,
+      "candidate_id": "MOMENT_00002_0000",
+      "source_start": 358.54,
+      "source_end": 384.76,
+      "duration": 26.22,
+      "title_main": "QUEM ESTAVA NO COMANDO?",
+      "title_alternatives": [
+        "A troca de tripulação",
+        "Os pilotos do voo 254"
+      ],
+      "topic_from_analyzer": "Introdução ao voo e informações sobre os pilotos",
+      "original_rank": 8,
+      "source_segment_ids": [
+        "SEG_00061",
+        "SEG_00062",
+        "SEG_00063",
+        "SEG_00064",
+        "SEG_00065"
+      ],
+      "original_literal_excerpt": "Ali, a tripulação do comandante Genaro passou o avião para a equipe do comandante César Garcês, que faria os trechos finais do RG254. No dia do voo, ele tinha 32 anos de idade e voava desde 1976, 13 anos antes. Ele se tornou piloto de linha aérea em 1982. E antes de pilotar o 737, ele ainda havia sido piloto do Boeing 727 e do Lockheed Electra, além de aviões militares.",
+      "original_editorial_score": 0.754,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          362.91,
+          367.28,
+          371.65,
+          376.02,
+          380.39
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 7,
+      "candidate_id": "MOMENT_00011_0003",
+      "source_start": 2015.1,
+      "source_end": 2045.0,
+      "duration": 29.9,
+      "title_main": "O QUE A INVESTIGAÇÃO BUSCAVA?",
+      "title_alternatives": [
+        "As consequências para os pilotos",
+        "O objetivo de investigar um acidente"
+      ],
+      "topic_from_analyzer": "Consequências legais para os pilotos e objetivo da investigação",
+      "original_rank": 14,
+      "source_segment_ids": [
+        "SEG_00356",
+        "SEG_00357",
+        "SEG_00358"
+      ],
+      "original_literal_excerpt": "No fim das contas, os pilotos perderam suas licenças de voo e chegaram a ser condenados a quatro anos de prisão, e a pena foi convertida em trabalhos comunitários. Sempre vale dizer que a investigação do acidente aéreo não tem a intenção de punir ninguém, mas de determinar as causas do acidente e o que pode ser feito para evitar que ele se repita. Por exemplo, se fosse somente punição, os pilotos seriam punidos, o plano de voo da Varig não mudaria e aconteceria um outro acidente muito parecido.",
+      "original_editorial_score": 0.727,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          2020.083,
+          2025.067,
+          2030.05,
+          2035.033,
+          2040.017
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    },
+    {
+      "review_rank": 8,
+      "candidate_id": "MOMENT_00006_0001",
+      "source_start": 1198.82,
+      "source_end": 1242.5,
+      "duration": 43.68,
+      "title_main": "O QUE O PAINEL INDICAVA?",
+      "title_alternatives": [
+        "A confusão sobre a posição",
+        "Uma informação que causou estranheza"
+      ],
+      "topic_from_analyzer": "Panificação eletrônica e confusão com a localização do avião",
+      "original_rank": 5,
+      "source_segment_ids": [
+        "SEG_00208",
+        "SEG_00209",
+        "SEG_00210",
+        "SEG_00211",
+        "SEG_00212",
+        "SEG_00213",
+        "SEG_00214",
+        "SEG_00215",
+        "SEG_00216",
+        "SEG_00217",
+        "SEG_00218",
+        "SEG_00219",
+        "SEG_00220",
+        "SEG_00221"
+      ],
+      "original_literal_excerpt": "Belém, o Varig 254 teve uma pane no porão eletrônico. O porão eletrônico é a central eletrônica do avião. O Zilli estranhou essa informação. Ele olhou para o painel e os instrumentos todos funcionavam normalmente, apesar das luzes de Belém não aparecerem. O tempo estava claro e o avião voava a 20 mil pés, aproximadamente 6 mil metros de altitude. Era para a cidade ter aparecido em algum momento. O primeiro oficial abriu a carta de navegação e olhou pra fora. Ele sobrevoava um rio naquele momento. Ele não sabia, mas era o rio Xingu. Eles estavam a 650 quilômetros a sudoeste de Belém. Ele olhou os rios na carta, que ficavam perto de Belém, e esses rios não pareciam com o que ele estava vendo lá embaixo.",
+      "original_editorial_score": 0.813,
+      "editorial_blockers": [],
+      "narrative_status": "unverified",
+      "human_approval": false,
+      "publication_ready": false,
+      "needs_audio_review": true,
+      "needs_visual_review": true,
+      "title_overlay": {
+        "duration_seconds": 5.0,
+        "start_seconds": 0.0,
+        "safe_width_ratio": 0.84,
+        "max_lines": 3,
+        "auto_fit_required": true,
+        "keep_source_video_moving": true
+      },
+      "subtitle_policy": {
+        "source_language": "pt-BR",
+        "preserve_verbatim_speech": true,
+        "allow_unverified_replacements": false,
+        "word_timing": "source_only_or_review_required"
+      },
+      "camera_policy": {
+        "default": "SOURCE_PRESERVE",
+        "focus_on_unverified_speaker": false,
+        "crop_requires_spatial_proof": true,
+        "movement": "natural_smooth",
+        "max_zoom_suggestion": 1.13
+      },
+      "thumbnail_proposal": {
+        "source_frame_times": [
+          1206.1,
+          1213.38,
+          1220.66,
+          1227.94,
+          1235.22
+        ],
+        "count": 5,
+        "method": "evenly_spaced_planning_only_not_image_ranked",
+        "actual_frames_extracted": false,
+        "requires_local_source_video_hash_check": true
+      },
+      "state": "PROPOSED_NEEDS_HUMAN_REVIEW"
+    }
+  ]
+}

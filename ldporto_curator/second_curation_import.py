@@ -21,7 +21,7 @@ def read_package(path):
             name = member.filename
             if PurePosixPath(name).is_absolute() or '..' in PurePosixPath(name).parts or '\\' in name or ':' in name:
                 raise ValueError('Caminho inválido no pacote')
-            if stat.S_ISLNK(member.external_attr >> 16) or Path(name).suffix.lower() not in {'.json', '.jsonl', '.jpg', '.jpeg', '.png', '.webp', '.txt', '.md', '.srt'}:
+            if stat.S_ISLNK(member.external_attr >> 16) or (Path(name).suffix.lower() not in {'.json', '.jsonl', '.jpg', '.jpeg', '.png', '.webp', '.txt', '.md', '.srt'} and name != 'NARRATIVE_REVIEW.html') or (name == 'NARRATIVE_REVIEW.html' and member.file_size > 3 * 1024 ** 2):
                 raise ValueError('Tipo de arquivo inválido no pacote')
         files = {name: archive.read(name) for name in names}
     manifest = json.loads(files['SECOND_CURATION_MANIFEST.json'])

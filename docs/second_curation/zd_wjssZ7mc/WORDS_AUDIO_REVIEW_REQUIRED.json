@@ -1,0 +1,1525 @@
+{
+  "schema_version": "LDP_AUDIO_REVIEW_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "original_asr_immutable": true,
+  "audio_verified": false,
+  "review_count": 116,
+  "review_words": [
+    {
+      "word_id": "WORD_0000002",
+      "segment_id": "SEG_00000",
+      "observed_word": "um",
+      "source_start": 0.94,
+      "source_end": 1.38,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.30615234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000003",
+      "segment_id": "SEG_00000",
+      "observed_word": "zero",
+      "source_start": 1.38,
+      "source_end": 1.76,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.8837890625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000007",
+      "segment_id": "SEG_00000",
+      "observed_word": "que",
+      "source_start": 2.9,
+      "source_end": 3.48,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.98779296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000053",
+      "segment_id": "SEG_00006",
+      "observed_word": "Volvaring",
+      "source_start": 23.38,
+      "source_end": 24.14,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5557454427083334,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000055",
+      "segment_id": "SEG_00007",
+      "observed_word": "Senta,",
+      "source_start": 26.02,
+      "source_end": 26.66,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.998046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000293",
+      "segment_id": "SEG_00023",
+      "observed_word": "Então",
+      "source_start": 141.76,
+      "source_end": 142.06,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.1160888671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000301",
+      "segment_id": "SEG_00023",
+      "observed_word": "090",
+      "source_start": 144.0,
+      "source_end": 144.9,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.99755859375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000540",
+      "segment_id": "SEG_00037",
+      "observed_word": "era",
+      "source_start": 241.36,
+      "source_end": 242.06,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.6494140625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000546",
+      "segment_id": "SEG_00037",
+      "observed_word": "que",
+      "source_start": 243.92,
+      "source_end": 244.16,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.54052734375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000609",
+      "segment_id": "SEG_00041",
+      "observed_word": "quatro",
+      "source_start": 267.3,
+      "source_end": 267.58,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.57421875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000615",
+      "segment_id": "SEG_00043",
+      "observed_word": "Só",
+      "source_start": 269.44,
+      "source_end": 269.68,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.99462890625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000649",
+      "segment_id": "SEG_00046",
+      "observed_word": "Para",
+      "source_start": 285.78,
+      "source_end": 286.12,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.53271484375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000650",
+      "segment_id": "SEG_00046",
+      "observed_word": "um",
+      "source_start": 286.12,
+      "source_end": 286.24,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.9951171875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000651",
+      "segment_id": "SEG_00046",
+      "observed_word": "pouquinho,",
+      "source_start": 286.24,
+      "source_end": 286.56,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.9990234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000652",
+      "segment_id": "SEG_00046",
+      "observed_word": "descansa",
+      "source_start": 286.65999999999997,
+      "source_end": 287.12,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.952880859375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000653",
+      "segment_id": "SEG_00046",
+      "observed_word": "um",
+      "source_start": 287.12,
+      "source_end": 287.26,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.9990234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000654",
+      "segment_id": "SEG_00046",
+      "observed_word": "pouquinho,",
+      "source_start": 287.26,
+      "source_end": 287.62,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.99951171875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000655",
+      "segment_id": "SEG_00046",
+      "observed_word": "quinhentos",
+      "source_start": 287.68,
+      "source_end": 288.15999999999997,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.6400146484375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000659",
+      "segment_id": "SEG_00047",
+      "observed_word": "pessoal",
+      "source_start": 289.46,
+      "source_end": 289.65999999999997,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.98583984375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000660",
+      "segment_id": "SEG_00047",
+      "observed_word": "da",
+      "source_start": 289.65999999999997,
+      "source_end": 289.86,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.9912109375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000661",
+      "segment_id": "SEG_00047",
+      "observed_word": "direita!",
+      "source_start": 289.86,
+      "source_end": 290.4,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.999267578125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000667",
+      "segment_id": "SEG_00049",
+      "observed_word": "o",
+      "source_start": 291.58,
+      "source_end": 291.64,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.43359375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000673",
+      "segment_id": "SEG_00049",
+      "observed_word": "você",
+      "source_start": 293.48,
+      "source_end": 293.68,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.9912109375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000732",
+      "segment_id": "SEG_00053",
+      "observed_word": "75.",
+      "source_start": 315.48,
+      "source_end": 315.98,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.283935546875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000806",
+      "segment_id": "SEG_00058",
+      "observed_word": "Goiânia.",
+      "source_start": 348.4,
+      "source_end": 349.08,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.98779296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000812",
+      "segment_id": "SEG_00059",
+      "observed_word": "dia",
+      "source_start": 350.7,
+      "source_end": 350.86,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.53076171875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0000818",
+      "segment_id": "SEG_00059",
+      "observed_word": "decolou",
+      "source_start": 352.6,
+      "source_end": 353.0,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.9998372395833334,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001043",
+      "segment_id": "SEG_00075",
+      "observed_word": "desembarcaram,",
+      "source_start": 439.52,
+      "source_end": 440.62,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 1.0,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001046",
+      "segment_id": "SEG_00075",
+      "observed_word": "e",
+      "source_start": 442.36,
+      "source_end": 442.46000000000004,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5712890625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001049",
+      "segment_id": "SEG_00075",
+      "observed_word": "o",
+      "source_start": 443.82,
+      "source_end": 444.56,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.873046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001091",
+      "segment_id": "SEG_00077",
+      "observed_word": "ainda",
+      "source_start": 461.26,
+      "source_end": 461.4,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5712890625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001096",
+      "segment_id": "SEG_00077",
+      "observed_word": "Marabá",
+      "source_start": 463.06,
+      "source_end": 463.65999999999997,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 1.0,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001454",
+      "segment_id": "SEG_00103",
+      "observed_word": "para",
+      "source_start": 598.3,
+      "source_end": 598.44,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5390625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001455",
+      "segment_id": "SEG_00103",
+      "observed_word": "a",
+      "source_start": 598.44,
+      "source_end": 598.5,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree"
+      ],
+      "confidence_not_accuracy": 0.98583984375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001526",
+      "segment_id": "SEG_00109",
+      "observed_word": "então",
+      "source_start": 622.76,
+      "source_end": 623.06,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.54248046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001540",
+      "segment_id": "SEG_00109",
+      "observed_word": "e",
+      "source_start": 626.74,
+      "source_end": 627.22,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5439453125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001637",
+      "segment_id": "SEG_00117",
+      "observed_word": "gente,",
+      "source_start": 662.2,
+      "source_end": 662.5,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.50341796875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001642",
+      "segment_id": "SEG_00117",
+      "observed_word": "aéreo",
+      "source_start": 664.3199999999999,
+      "source_end": 664.8,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.9998779296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001759",
+      "segment_id": "SEG_00126",
+      "observed_word": "Como",
+      "source_start": 712.54,
+      "source_end": 712.96,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.42138671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001840",
+      "segment_id": "SEG_00131",
+      "observed_word": "o",
+      "source_start": 744.58,
+      "source_end": 744.66,
+      "review_reasons": [
+        "acoustic_hypotheses_disagree",
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.57568359375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001844",
+      "segment_id": "SEG_00131",
+      "observed_word": "ele",
+      "source_start": 746.56,
+      "source_end": 746.76,
+      "review_reasons": [
+        "comparison_clip_boundary"
+      ],
+      "confidence_not_accuracy": 0.8291015625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001977",
+      "segment_id": "SEG_00137",
+      "observed_word": "E",
+      "source_start": 798.88,
+      "source_end": 799.24,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.3603515625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0001989",
+      "segment_id": "SEG_00137",
+      "observed_word": "na",
+      "source_start": 803.38,
+      "source_end": 803.56,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.432861328125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002273",
+      "segment_id": "SEG_00155",
+      "observed_word": "km.",
+      "source_start": 913.1800000000001,
+      "source_end": 913.7,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5498046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002288",
+      "segment_id": "SEG_00156",
+      "observed_word": "É",
+      "source_start": 918.04,
+      "source_end": 918.28,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.1790771484375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002368",
+      "segment_id": "SEG_00157",
+      "observed_word": "para",
+      "source_start": 942.36,
+      "source_end": 942.74,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.58251953125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002482",
+      "segment_id": "SEG_00165",
+      "observed_word": "6",
+      "source_start": 987.04,
+      "source_end": 987.46,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.525390625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002536",
+      "segment_id": "SEG_00168",
+      "observed_word": "km",
+      "source_start": 1004.96,
+      "source_end": 1005.3,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.52099609375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002556",
+      "segment_id": "SEG_00172",
+      "observed_word": "Sem",
+      "source_start": 1014.57,
+      "source_end": 1014.81,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.196044921875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002567",
+      "segment_id": "SEG_00175",
+      "observed_word": "Nas",
+      "source_start": 1021.62,
+      "source_end": 1021.74,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.328857421875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002568",
+      "segment_id": "SEG_00175",
+      "observed_word": "quatro",
+      "source_start": 1021.74,
+      "source_end": 1022.08,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.58056640625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002584",
+      "segment_id": "SEG_00175",
+      "observed_word": "Sem",
+      "source_start": 1028.12,
+      "source_end": 1028.92,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.55908203125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002628",
+      "segment_id": "SEG_00178",
+      "observed_word": "na",
+      "source_start": 1045.94,
+      "source_end": 1046.06,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.480224609375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002704",
+      "segment_id": "SEG_00181",
+      "observed_word": "Ao",
+      "source_start": 1075.58,
+      "source_end": 1075.8,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.422119140625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002712",
+      "segment_id": "SEG_00182",
+      "observed_word": "E",
+      "source_start": 1078.1,
+      "source_end": 1078.42,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.56640625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002728",
+      "segment_id": "SEG_00185",
+      "observed_word": "Varg",
+      "source_start": 1084.12,
+      "source_end": 1084.62,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.591552734375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002739",
+      "segment_id": "SEG_00186",
+      "observed_word": "E",
+      "source_start": 1089.2,
+      "source_end": 1089.68,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5615234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002759",
+      "segment_id": "SEG_00188",
+      "observed_word": "do",
+      "source_start": 1097.76,
+      "source_end": 1097.8600000000001,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.54638671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002799",
+      "segment_id": "SEG_00191",
+      "observed_word": "Belém,",
+      "source_start": 1113.02,
+      "source_end": 1113.62,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.59271240234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002874",
+      "segment_id": "SEG_00198",
+      "observed_word": "Flaring",
+      "source_start": 1144.23,
+      "source_end": 1144.47,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.383636474609375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002968",
+      "segment_id": "SEG_00206",
+      "observed_word": "De",
+      "source_start": 1186.6,
+      "source_end": 1187.24,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.399658203125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0002977",
+      "segment_id": "SEG_00207",
+      "observed_word": "Foi",
+      "source_start": 1190.44,
+      "source_end": 1190.9,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.1318359375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003001",
+      "segment_id": "SEG_00209",
+      "observed_word": "254",
+      "source_start": 1199.88,
+      "source_end": 1200.54,
+      "review_reasons": [
+        "timestamp_anomaly"
+      ],
+      "confidence_not_accuracy": 0.980712890625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003024",
+      "segment_id": "SEG_00214",
+      "observed_word": "para",
+      "source_start": 1208.2,
+      "source_end": 1208.3,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.49169921875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003077",
+      "segment_id": "SEG_00217",
+      "observed_word": "pra",
+      "source_start": 1225.66,
+      "source_end": 1225.8,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.47900390625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003079",
+      "segment_id": "SEG_00218",
+      "observed_word": "Ele",
+      "source_start": 1226.36,
+      "source_end": 1226.56,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.373779296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003139",
+      "segment_id": "SEG_00222",
+      "observed_word": "o",
+      "source_start": 1246.36,
+      "source_end": 1246.48,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.464111328125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003373",
+      "segment_id": "SEG_00247",
+      "observed_word": "E",
+      "source_start": 1323.92,
+      "source_end": 1324.24,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.44970703125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003425",
+      "segment_id": "SEG_00250",
+      "observed_word": "e",
+      "source_start": 1344.34,
+      "source_end": 1344.7,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5888671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003476",
+      "segment_id": "SEG_00252",
+      "observed_word": "A",
+      "source_start": 1363.9,
+      "source_end": 1364.3,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.10076904296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003522",
+      "segment_id": "SEG_00255",
+      "observed_word": "Eles",
+      "source_start": 1396.9,
+      "source_end": 1397.58,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.168701171875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003526",
+      "segment_id": "SEG_00256",
+      "observed_word": "Como",
+      "source_start": 1399.1399999999999,
+      "source_end": 1399.4,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.06982421875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003550",
+      "segment_id": "SEG_00256",
+      "observed_word": "E",
+      "source_start": 1408.42,
+      "source_end": 1408.76,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5380859375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003616",
+      "segment_id": "SEG_00260",
+      "observed_word": "Zili",
+      "source_start": 1431.38,
+      "source_end": 1431.72,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5863037109375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003625",
+      "segment_id": "SEG_00262",
+      "observed_word": "O",
+      "source_start": 1435.12,
+      "source_end": 1435.52,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.407470703125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003644",
+      "segment_id": "SEG_00267",
+      "observed_word": "a",
+      "source_start": 1442.36,
+      "source_end": 1442.78,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.440185546875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003646",
+      "segment_id": "SEG_00267",
+      "observed_word": "é",
+      "source_start": 1443.0,
+      "source_end": 1443.16,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.517578125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003688",
+      "segment_id": "SEG_00271",
+      "observed_word": "pra",
+      "source_start": 1457.4,
+      "source_end": 1457.58,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5927734375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003795",
+      "segment_id": "SEG_00278",
+      "observed_word": "E",
+      "source_start": 1494.9,
+      "source_end": 1495.02,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.2174072265625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003798",
+      "segment_id": "SEG_00278",
+      "observed_word": "pra",
+      "source_start": 1495.96,
+      "source_end": 1496.32,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.53271484375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003802",
+      "segment_id": "SEG_00278",
+      "observed_word": "pra",
+      "source_start": 1497.32,
+      "source_end": 1497.52,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5654296875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003814",
+      "segment_id": "SEG_00278",
+      "observed_word": "E",
+      "source_start": 1501.4,
+      "source_end": 1501.68,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.42626953125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003829",
+      "segment_id": "SEG_00278",
+      "observed_word": "tava",
+      "source_start": 1505.58,
+      "source_end": 1505.78,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.541015625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003922",
+      "segment_id": "SEG_00285",
+      "observed_word": "de",
+      "source_start": 1533.32,
+      "source_end": 1533.52,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.474853515625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0003994",
+      "segment_id": "SEG_00290",
+      "observed_word": "O",
+      "source_start": 1557.92,
+      "source_end": 1558.34,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.322265625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004031",
+      "segment_id": "SEG_00292",
+      "observed_word": "na",
+      "source_start": 1570.58,
+      "source_end": 1570.92,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5146484375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004059",
+      "segment_id": "SEG_00293",
+      "observed_word": "né,",
+      "source_start": 1582.78,
+      "source_end": 1582.88,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5126953125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004098",
+      "segment_id": "SEG_00294",
+      "observed_word": "o",
+      "source_start": 1596.94,
+      "source_end": 1597.0,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.55224609375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004159",
+      "segment_id": "SEG_00298",
+      "observed_word": "o",
+      "source_start": 1621.96,
+      "source_end": 1622.08,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.434814453125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004302",
+      "segment_id": "SEG_00307",
+      "observed_word": "na",
+      "source_start": 1680.3,
+      "source_end": 1680.4,
+      "review_reasons": [
+        "timestamp_anomaly"
+      ],
+      "confidence_not_accuracy": 0.67236328125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004366",
+      "segment_id": "SEG_00311",
+      "observed_word": "não",
+      "source_start": 1703.92,
+      "source_end": 1704.22,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.49951171875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004368",
+      "segment_id": "SEG_00311",
+      "observed_word": "nenhum",
+      "source_start": 1704.52,
+      "source_end": 1704.68,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.25,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004394",
+      "segment_id": "SEG_00315",
+      "observed_word": "Os",
+      "source_start": 1751.91,
+      "source_end": 1752.43,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.284912109375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004403",
+      "segment_id": "SEG_00316",
+      "observed_word": "Os",
+      "source_start": 1764.23,
+      "source_end": 1764.43,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.195068359375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004520",
+      "segment_id": "SEG_00326",
+      "observed_word": "com",
+      "source_start": 1826.26,
+      "source_end": 1826.38,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.53466796875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004555",
+      "segment_id": "SEG_00328",
+      "observed_word": "hatch,",
+      "source_start": 1837.12,
+      "source_end": 1837.44,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.20751953125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004601",
+      "segment_id": "SEG_00332",
+      "observed_word": "Então",
+      "source_start": 1856.03,
+      "source_end": 1856.43,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.45263671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004621",
+      "segment_id": "SEG_00332",
+      "observed_word": "no",
+      "source_start": 1863.23,
+      "source_end": 1863.35,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.56494140625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004641",
+      "segment_id": "SEG_00333",
+      "observed_word": "nos",
+      "source_start": 1870.57,
+      "source_end": 1870.77,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.4130859375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004656",
+      "segment_id": "SEG_00333",
+      "observed_word": "1",
+      "source_start": 1876.27,
+      "source_end": 1876.37,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.537109375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004663",
+      "segment_id": "SEG_00333",
+      "observed_word": "E",
+      "source_start": 1880.17,
+      "source_end": 1880.43,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.406494140625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004731",
+      "segment_id": "SEG_00341",
+      "observed_word": "para",
+      "source_start": 1908.01,
+      "source_end": 1908.45,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.57373046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004864",
+      "segment_id": "SEG_00347",
+      "observed_word": "que",
+      "source_start": 1959.44,
+      "source_end": 1959.74,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.54931640625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0004885",
+      "segment_id": "SEG_00348",
+      "observed_word": "um",
+      "source_start": 1967.22,
+      "source_end": 1967.24,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5888671875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005106",
+      "segment_id": "SEG_00359",
+      "observed_word": "Senipa",
+      "source_start": 2046.44,
+      "source_end": 2046.74,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.5526529947916666,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005126",
+      "segment_id": "SEG_00361",
+      "observed_word": "Quando",
+      "source_start": 2055.76,
+      "source_end": 2056.16,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.0911865234375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005195",
+      "segment_id": "SEG_00363",
+      "observed_word": "a",
+      "source_start": 2083.94,
+      "source_end": 2084.22,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.50927734375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005265",
+      "segment_id": "SEG_00365",
+      "observed_word": "e",
+      "source_start": 2108.86,
+      "source_end": 2109.12,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.48681640625,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005407",
+      "segment_id": "SEG_00373",
+      "observed_word": "e",
+      "source_start": 2157.64,
+      "source_end": 2158.14,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.45068359375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005414",
+      "segment_id": "SEG_00374",
+      "observed_word": "e",
+      "source_start": 2160.0,
+      "source_end": 2160.28,
+      "review_reasons": [
+        "missing_or_low_model_probability",
+        "timestamp_anomaly"
+      ],
+      "confidence_not_accuracy": 0.091796875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005459",
+      "segment_id": "SEG_00375",
+      "observed_word": "G's",
+      "source_start": 2175.56,
+      "source_end": 2175.94,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.2713623046875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005508",
+      "segment_id": "SEG_00376",
+      "observed_word": "Até",
+      "source_start": 2193.02,
+      "source_end": 2193.5,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.22216796875,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005557",
+      "segment_id": "SEG_00379",
+      "observed_word": "para",
+      "source_start": 2209.3,
+      "source_end": 2209.48,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.58251953125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005577",
+      "segment_id": "SEG_00379",
+      "observed_word": "além",
+      "source_start": 2214.26,
+      "source_end": 2214.52,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.462158203125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005584",
+      "segment_id": "SEG_00379",
+      "observed_word": "ó,",
+      "source_start": 2215.66,
+      "source_end": 2215.78,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.440673828125,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    },
+    {
+      "word_id": "WORD_0005587",
+      "segment_id": "SEG_00379",
+      "observed_word": "para",
+      "source_start": 2216.5,
+      "source_end": 2216.6,
+      "review_reasons": [
+        "missing_or_low_model_probability"
+      ],
+      "confidence_not_accuracy": 0.52099609375,
+      "human_verified_correction": null,
+      "state": "AWAITING_SOURCE_AUDIO"
+    }
+  ]
+}

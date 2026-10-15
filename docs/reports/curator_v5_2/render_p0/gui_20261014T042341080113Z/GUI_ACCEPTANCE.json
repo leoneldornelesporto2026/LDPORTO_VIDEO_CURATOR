@@ -1,0 +1,212 @@
+{
+  "fixture_only": true,
+  "automated_fixture_approval": true,
+  "human_quality_approval_claimed": false,
+  "tk_widgets_mocked": false,
+  "render_mocked": false,
+  "pipeline_mocked": false,
+  "original_report_fixture": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\synthetic",
+  "new_isolated_gui_project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z",
+  "approved_screenshot": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\APPROVED.png",
+    "sha256": "f3aeda1ca677e74b10e301940a9f92978715ba2366734b3ac252432088e874c1",
+    "app_window_only": true,
+    "bounds": [
+      28,
+      51,
+      1248,
+      971
+    ]
+  },
+  "reopened_approved_state": "Estado: TEST_APPROVED | projeto: P0_SYNTHETIC_FROZEN | revisão: 0323c8282ffa4ea09249f070acb43b9d | plano: 4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7",
+  "completed_screenshot": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\BATCH_COMPLETED.png",
+    "sha256": "d39136ecf9e0c8bace6821ac4373b33d13b46f41691921ab609d7b6ba2503801",
+    "app_window_only": true,
+    "bounds": [
+      28,
+      51,
+      1248,
+      971
+    ]
+  },
+  "status": "passed",
+  "project_id": "P0_SYNTHETIC_FROZEN",
+  "plan_revision": "0323c8282ffa4ea09249f070acb43b9d",
+  "states": [
+    "PLAN_READY",
+    "PREVIEW_READY",
+    "TEST_APPROVED",
+    "TEST_APPROVED",
+    "BATCH_COMPLETED"
+  ],
+  "revision_and_clips_preserved": true,
+  "displayed_plan_fingerprint_unchanged": true,
+  "displayed_plan_fingerprint": "4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7",
+  "elapsed_seconds": {
+    "test": 0.7809999999590218,
+    "approve": 0.14000000001396984,
+    "batch": 1.9690000000409782
+  },
+  "forbidden_calls": {
+    "ldporto_curator.pipeline.find_analysis": 0,
+    "ldporto_curator.pipeline.load_bundle": 0,
+    "ldporto_curator.pipeline.curate": 0,
+    "ldporto_curator.curator.review_candidates": 0,
+    "ldporto_curator.ollama_client.review_candidates": 0
+  },
+  "external_player_suppressed_calls": 1,
+  "preview": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CLIP_001\\previews\\323e783e596e430fbe575a217fc946df\\CLIP_001_PREVIEW.mp4",
+    "sha256": "eadf7fa0a0929b641a3d0ee3eca269fb3b98ba9bf9ef4a6224be8d0690e7b111",
+    "bytes": 66673,
+    "ffprobe": {
+      "duration": 0.5,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 540,
+          "height": 960,
+          "nb_frames": "12"
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 1,
+          "nb_frames": "25"
+        }
+      ]
+    },
+    "effective_render": {
+      "encoder": "libx264",
+      "preview": true,
+      "width": 540,
+      "height": 960,
+      "duration": 0.5,
+      "source_start": 0.0,
+      "subtitle_sha256": "6111ed8461e736aa2ac64647efe1d8525669529ddb114bbf24393bf209429ead",
+      "title_card_sha256": "161bc16df7d85a52bd2d8f8bc52646d869731bb0d0979366631386182ed5b337",
+      "media_sha256": "eadf7fa0a0929b641a3d0ee3eca269fb3b98ba9bf9ef4a6224be8d0690e7b111",
+      "render_settings_fingerprint": "fa701aa433c13506d307006dad32c9c70ec40a6392cf26d0982090edf947fad9"
+    },
+    "effective_render_metadata_sha256": "a6c5445e85bd26f89ae4935fbc65a2999870019f4b0fa787164b70a25fb4965c"
+  },
+  "finals": [
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CLIP_001\\batches\\13a5a79047b149b096334f373f966868\\CLIP_001_FINAL.mp4",
+      "sha256": "b64444c232a95c3713a695d0e848365508b63a0b0192fef7010d8ca54c637088",
+      "bytes": 165145,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "effective_render": {
+        "encoder": "libx264",
+        "preview": false,
+        "width": 1080,
+        "height": 1920,
+        "duration": 0.5,
+        "source_start": 0.0,
+        "subtitle_sha256": "d48a4ce8be829437cb50ebbf5ac6d50c152c0ca04d96c17fcf65e6ebe2b23ecc",
+        "title_card_sha256": "a9196982024d92af4c22c2e313e07f55cb9cc310fd4e2bc43de37c4072796bef",
+        "media_sha256": "b64444c232a95c3713a695d0e848365508b63a0b0192fef7010d8ca54c637088",
+        "render_settings_fingerprint": "fa701aa433c13506d307006dad32c9c70ec40a6392cf26d0982090edf947fad9"
+      },
+      "effective_render_metadata_sha256": "679d89b8851ed82303ab39b8619408bd830f09c724266c22f705e546093cd3df"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CLIP_002\\batches\\13a5a79047b149b096334f373f966868\\CLIP_002_FINAL.mp4",
+      "sha256": "da6ed55fc7319e777037c9e462550255439137345e6cec5404ed6b1a32404641",
+      "bytes": 163063,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "effective_render": {
+        "encoder": "libx264",
+        "preview": false,
+        "width": 1080,
+        "height": 1920,
+        "duration": 0.5,
+        "source_start": 0.5,
+        "subtitle_sha256": "d48a4ce8be829437cb50ebbf5ac6d50c152c0ca04d96c17fcf65e6ebe2b23ecc",
+        "title_card_sha256": "c6220ff7fa5e21bdf36f8c7c70f5ae57c604d37823af3fa3cdaf323b923b9d38",
+        "media_sha256": "da6ed55fc7319e777037c9e462550255439137345e6cec5404ed6b1a32404641",
+        "render_settings_fingerprint": "fa701aa433c13506d307006dad32c9c70ec40a6392cf26d0982090edf947fad9"
+      },
+      "effective_render_metadata_sha256": "dc36d09b9cd12673f6bc080c1f9d4a8744120102e57d5f43d7a3b6c965098ee0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\renders\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CLIP_003\\batches\\13a5a79047b149b096334f373f966868\\CLIP_003_FINAL.mp4",
+      "sha256": "f01ecd944e697db6ca65face8dc59ecd2ed463f0a4ee8d7f08fa802a37c1a6d1",
+      "bytes": 178355,
+      "ffprobe": {
+        "duration": 0.5,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "nb_frames": "12"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 1,
+            "nb_frames": "21"
+          }
+        ]
+      },
+      "effective_render": {
+        "encoder": "libx264",
+        "preview": false,
+        "width": 1080,
+        "height": 1920,
+        "duration": 0.5,
+        "source_start": 1.0,
+        "subtitle_sha256": "d48a4ce8be829437cb50ebbf5ac6d50c152c0ca04d96c17fcf65e6ebe2b23ecc",
+        "title_card_sha256": "ee24f98c610707e7ae441c295f0d2429d95af3d768fbcbc2c06ccbfc45f1922e",
+        "media_sha256": "f01ecd944e697db6ca65face8dc59ecd2ed463f0a4ee8d7f08fa802a37c1a6d1",
+        "render_settings_fingerprint": "fa701aa433c13506d307006dad32c9c70ec40a6392cf26d0982090edf947fad9"
+      },
+      "effective_render_metadata_sha256": "91bbb26387c7be69268e7186cc2a34003f4a4814f7629d03ea69ba1d43674c0c"
+    }
+  ],
+  "final_gui_state": "Estado: BATCH_COMPLETED | projeto: P0_SYNTHETIC_FROZEN | revisão: 0323c8282ffa4ea09249f070acb43b9d | plano: 4384b95f3273656506623df05643752174dbfb66fac8852039585d67c58f85b7",
+  "original_files_unchanged": true,
+  "historical_fixture_unchanged": true
+}

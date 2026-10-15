@@ -1,0 +1,74 @@
+{
+  "schema_version": "p0.validation.1",
+  "completed_at_utc": "2026-10-14T04:26:02.964549+00:00",
+  "implementation_status": "complete",
+  "real_original_integration_status": "partial_missing_original",
+  "tests": {
+    "targeted": {
+      "passed": 102,
+      "seconds": 16.47,
+      "path": "docs\\reports\\curator_v5_2\\render_p0\\TESTES_DIRECIONADOS.txt",
+      "sha256": "191ced09a324b7aa9de8565546b95caa8bb77f914a16f48cfb59484e8aa62bb7"
+    },
+    "full_regression": {
+      "passed": 462,
+      "seconds": 38.63,
+      "path": "docs\\reports\\curator_v5_2\\render_p0\\REGRESSAO_FINAL.txt",
+      "sha256": "598c86a17daa96521a041c0c3411d5576ec545a357a4d853b078224fbbf679fe"
+    },
+    "new_p0_test_cases": 94,
+    "compileall": "passed",
+    "git_diff_check": "passed"
+  },
+  "evidence": {
+    "backend": {
+      "path": "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\P0_ACCEPTANCE.json",
+      "sha256": "d9c186fbb11e524b2dc11b90fcf03c2829d6193fe6654c4a642729c076e1804c"
+    },
+    "actual_tk_gui": {
+      "path": "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\GUI_ACCEPTANCE.json",
+      "sha256": "cc50c3d426fdbc23c122fbbf0b601761353f698691c939172cb0a1e809d4341f"
+    }
+  },
+  "gui_display_fingerprint_stable": true,
+  "downstream_analysis_and_model_calls": {
+    "ldporto_curator.pipeline.find_analysis": 0,
+    "ldporto_curator.pipeline.load_bundle": 0,
+    "ldporto_curator.pipeline.curate": 0,
+    "ldporto_curator.curator.review_candidates": 0,
+    "ldporto_curator.ollama_client.review_candidates": 0
+  },
+  "original_files_checked": 29,
+  "original_files_unchanged": true,
+  "legacy_original_source_sha256": null,
+  "legacy_original_analysis_sha256": null,
+  "fixture_only_automated_approvals": true,
+  "real_human_approval_claimed": false,
+  "analyzer_modified_or_reprocessed": false,
+  "models_installed_or_called": false,
+  "commits_created": false,
+  "historical_results_deleted": false,
+  "changed_code_and_checkpoint_sha256": {
+    "ldporto_curator/approval.py": "4a7b23788c752dae97dc2354564647407f50a0aa5c244038025991715691e8f4",
+    "ldporto_curator/gui.py": "94e02c880afca2a14337820479f5d5eaf427337fbece2730d4e2d93fa592009b",
+    "ldporto_curator/ollama_client.py": "801daaf673611cdabb2f29bf97d6b5e34685ebe30d3baee2a554664610b1889d",
+    "ldporto_curator/pipeline.py": "b20bc425653c9810b836015c9c7869d9ce9b728908be5c00e5a3ff771615577c",
+    "ldporto_curator/render.py": "34645ad935d5a8b2ffb8bbc7e90f42f95cc21e32fc383a5b577275c4782c0c45",
+    "ldporto_curator/review.py": "624b4fd996a3edc7baca5e8d2cc9ed8e6f98a550ed258af9b118420ca68c950a",
+    "ldporto_curator/persisted_plan.py": "ee567af11581a0231aae2915466f404922d5df60c833ee1b02e6d2ce84e7f497",
+    "ldporto_curator/pipeline_recovery.py": "99cefe3018da001c3c3c63bddc79408a8bdb6209202324fff67f25dff004c92f",
+    "scripts/validate_render_p0.py": "b36fcb33c2a69c60c1b06d124a36f08bb102610dadd5746f944e6f5f0a7b5ffe",
+    "scripts/capture_render_p0_ui.py": "194cef18b5d2f3e6d296bcb4a81b6c4e1918c96072c4a193b6b2f4dee426c280",
+    "tests/test_p0_editorial_response.py": "8155f13b2677c1b74c24fd528036878bc26aebdf6e0fc0f78449b00003135a63",
+    "tests/test_p0_gui.py": "f5a2143d3109f678cd608b2cde925da2e19b85ce6ed6e05d375ed214c9ba9b49",
+    "tests/test_p0_legacy_recovery.py": "b8f5d892fad984a834bc6b82a599869b7b572d297fdaca5c16397a69ae54066f",
+    "tests/test_p0_pipeline.py": "46c1fcc245e78f1bfea7b74f5dd061779c185aec1c89fec7f13658374de8f739",
+    "tests/test_p0_plan_store.py": "f6a7bf3a58ac7a7e4af31bbbbb0feca4626e2e6df041bdd35472ba3754f1fd2c",
+    "docs/reports/curator_v5_2/CHECKPOINT.md": "d3c57f2ff056c4445352077054d48def01ddd72ee83829329ef74806f43c28d0",
+    "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md": "8ca08529dc1ebf3c384a80bd768e84173ba5a9024d1f50f227c7f631c6df3b28"
+  },
+  "pending": [
+    "Select original zd_wjssZ7mc media, generate/review a new preview, explicitly approve, then render the matching batch.",
+    "Resume V5.2 Stage C after P0 homologation; existing A/B and partial C preserved."
+  ]
+}

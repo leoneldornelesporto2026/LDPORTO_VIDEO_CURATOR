@@ -56,3 +56,17 @@ def test_tampering_and_archive_traversal_are_rejected(tmp_path):
     with pytest.raises(ValueError):
         read_package(path)
     assert not (tmp_path.parent / 'escape.json').exists()
+
+
+def test_manifest_verified_narrative_html_is_inert_and_allowed(tmp_path):
+    archive_path=tmp_path/'with_html.zip'
+    make_package(archive_path)
+    with zipfile.ZipFile(archive_path) as archive:
+        entries={n:archive.read(n) for n in archive.namelist() if n!='SECOND_CURATION_MANIFEST.json'}
+    entries['NARRATIVE_REVIEW.html']=b'<html>Review only</html>'
+    manifest={'source_hash':'HASH','files':[{'path':n,'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest()} for n,payload in entries.items()]}
+    with zipfile.ZipFile(archive_path,'w') as archive:
+        for n,payload in entries.items():archive.writestr(n,payload)
+        archive.writestr('SECOND_CURATION_MANIFEST.json',json.dumps(manifest))
+    result=read_package(archive_path)
+    assert result['files']['NARRATIVE_REVIEW.html']==b'<html>Review only</html>'

@@ -47,7 +47,7 @@ def curate(bundle, cfg, project_root: Path, log=print):
         for row in rows[:maxn]:
             decisions.append({'clip_id': f"SECOND_{row['decision_id']}", 'rank': len(decisions) + 1,
                 'source_start': row['start'], 'source_end': row['end'], 'duration': row['end'] - row['start'],
-                'title_text': row['title'], 'hook_text': row['title'], 'title_style': 'IMPACTO', 'title_duration': 3.2,
+                'title_text': row['title'], 'hook_text': row['title'], 'title_style': 'IMPACTO', 'title_duration': 5.0,
                 'score': None, 'reason': row['reason'], 'topic': 'second_curator', 'context_summary': '',
                 'evidence_segment_ids': row['evidence_segment_ids'], 'word_ids': [], 'scene_ids': [],
                 'warnings': [], **{key: row[key] for key in ('curation_source', 'candidate_ids', 'action', 'original_ranks', 'suggested_layout', 'needs_review')}})
@@ -80,7 +80,7 @@ def curate(bundle, cfg, project_root: Path, log=print):
               'clip_id':f"CLIP_{len(decisions)+1:03d}",'rank':len(decisions)+1,'score':seed.get('score',90),
               'source_start':start,'source_end':end,'duration':round(end-start,3),'reason':seed.get('reason'),
               'topic':'human_curated','context_summary':' '.join(s.get('text','') for s in segs[:3])[:700],
-              'hook_text':seed.get('title'),'title_text':seed.get('title'),'title_style':seed.get('style','IMPACTO'),'title_duration':3.2,
+              'hook_text':seed.get('title'),'title_text':seed.get('title'),'title_style':seed.get('style','IMPACTO'),'title_duration':5.0,
               'evidence_segment_ids':[s.get('segment_id') for s in segs], 'scene_ids':sorted({x for s in segs for x in (s.get('scene_ids') or [])}),
               'word_ids':[x for s in segs for x in (s.get('word_ids') or [])], 'warnings':[], 'needs_review':False,
               'curation_source':'MANUAL_OVERRIDE'
@@ -107,7 +107,7 @@ def curate(bundle, cfg, project_root: Path, log=print):
               'clip_id':f"CLIP_{len(decisions)+1:03d}",'rank':len(decisions)+1,'score':score,
               'source_start':start,'source_end':end,'duration':round(end-start,3),
               'reason':rr.get('why') or m.get('reason'),'topic':','.join(m.get('categories') or []),'context_summary':' '.join(s.get('text','') for s in segs[:3])[:700],
-              'hook_text':rr.get('hook_text') or title,'title_text':title.upper(),'title_style':'IMPACTO','title_duration':3.2,
+              'hook_text':rr.get('hook_text') or title,'title_text':title.upper(),'title_style':'IMPACTO','title_duration':5.0,
               'evidence_segment_ids':[s.get('segment_id') for s in segs], 'scene_ids':sorted({x for s in segs for x in (s.get('scene_ids') or [])}),
               'word_ids':[x for s in segs for x in (s.get('word_ids') or [])], 'warnings':[], 'needs_review':bool(m.get('context_required')),
               'curation_source':'FIRST_PASS'

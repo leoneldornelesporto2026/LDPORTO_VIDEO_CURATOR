@@ -88,3 +88,15 @@ def test_real_ffmpeg_frames_become_three_vertical_covers(tmp_path):
     assert len(result["choices"])==3
     assert all((tmp_path/"thumbs"/choice["frame_file"]).is_file() for choice in result["choices"])
     assert all(choice["frame_sha256"] != choice["sha256"] for choice in result["choices"])
+
+
+def test_five_distinct_real_source_frames_opt_in(tmp_path,monkeypatch):
+    monkeypatch.setattr('ldporto_curator.thumbnail_presets.extract_frame',_fake_extract)
+    video=tmp_path/'source.mp4';video.write_bytes(b'controlled source')
+    result=generate_thumbnail_choices(video,_episode(),tmp_path/'five',titles=['O avião aparece no mapa.'],overrides={'frame_count':5})
+    assert len(result['choices'])==5
+    assert len({choice['source_timestamp'] for choice in result['choices']})==5
+    for choice in result['choices']:
+        assert (tmp_path/'five'/choice['file']).is_file()
+        assert (tmp_path/'five'/choice['frame_file']).is_file()
+        assert choice['cover_title']['human_approved'] is False

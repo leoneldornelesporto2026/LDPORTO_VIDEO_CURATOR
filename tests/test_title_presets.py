@@ -23,3 +23,9 @@ def test_title_toggle_and_overlong_text_are_explicit(tmp_path):
     assert create_episode_title_card({'title_enabled':False,'title_text':'Título'},tmp_path,{},True) is None
     with pytest.raises(ValueError,match='longo'):
         create_episode_title_card({'title_text':'muito '*100},tmp_path,{},True)
+
+
+def test_legacy_title_card_never_renders_overflow(tmp_path):
+    from ldporto_curator.title_card import create_title_card
+    with pytest.raises(ValueError,match='caixa segura'):
+        create_title_card({'title_text':'Pneumoultramicroscopicossilicovulcanoconiotico '*8},tmp_path,{},False)

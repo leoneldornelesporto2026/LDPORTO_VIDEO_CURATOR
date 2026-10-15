@@ -1,0 +1,382 @@
+{
+  "schema_version": "LDP_STORIES_REVIEW_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "narrative_automated_complete_count": 0,
+  "state": "PROPOSED_NOT_APPROVED",
+  "series": [
+    {
+      "series_id": "S01",
+      "title": "DO PLANO DE VOO À ROTA",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00002_0000",
+          "start": 358.54,
+          "end": 384.76,
+          "duration": 26.22,
+          "topic": "Introdução ao voo e informações sobre os pilotos",
+          "source_segment_ids": [
+            "SEG_00061",
+            "SEG_00062",
+            "SEG_00063",
+            "SEG_00064",
+            "SEG_00065"
+          ],
+          "title_proposal": "DO PLANO DE VOO À ROTA — PARTE 1",
+          "literal_excerpt": "Ali, a tripulação do comandante Genaro passou o avião para a equipe do comandante César Garcês, que faria os trechos finais do RG254. No dia do voo, ele tinha 32 anos de idade e voava desde 1976, 13 anos antes. Ele se tornou piloto de linha aérea em 1982. E antes de pilotar o 737, ele ainda havia sido piloto do Boeing 727 e do Lockheed Electra, além de aviões militares.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00002_0002",
+          "start": 422.54,
+          "end": 448.6,
+          "duration": 26.06,
+          "topic": "Detalhes do voo e rota entre Brasília e Imperatriz",
+          "source_segment_ids": [
+            "SEG_00072",
+            "SEG_00073",
+            "SEG_00074",
+            "SEG_00075"
+          ],
+          "title_proposal": "DO PLANO DE VOO À ROTA — PARTE 2",
+          "literal_excerpt": "Às 2h05 da tarde, o Mike Kilo decolou de Brasília. E como o trecho até Imperatriz, no Maranhão, possuía uma aerovia, os pilotos olharam a carta de navegação e seguiram a indicação que estava lá. Foram 46 minutos de voo de Brasília até Imperatriz. Alguns passageiros desembarcaram, outros embarcaram e às 16h35 o Boeing 737 decolou na direção de Marabá, no Pará.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 3,
+          "candidate_id": "MOMENT_00002_0003",
+          "start": 448.68,
+          "end": 485.26,
+          "duration": 36.58,
+          "topic": "Detalhes do voo entre Imperatriz e Marabá",
+          "source_segment_ids": [
+            "SEG_00076",
+            "SEG_00077",
+            "SEG_00078",
+            "SEG_00079",
+            "SEG_00080"
+          ],
+          "title_proposal": "DO PLANO DE VOO À ROTA — PARTE 3",
+          "literal_excerpt": "Sendo que nesta etapa o Zili estava pilotando e o Garcês monitorando o voo. O trecho entre Imperatriz e Marabá não possuía uma aerovia, mas o plano de voo que eles pegaram ainda em Brasília indicava que Marabá estava a 292 graus de Imperatriz. Vamos relembrar, a Varig tinha mudado a forma de indicar direções nos documentos no plano de voo. E este plano de voo indicava o rumo 2920 para os pilotos seguirem. Mas como eu falei lá no começo do vídeo, os pilotos sabem que as bússolas só indicam até 360 graus.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        }
+      ],
+      "state": "PROVISIONAL_NOT_COMPLETE",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    },
+    {
+      "series_id": "S02",
+      "title": "RADIONAVEGAÇÃO E COMUNICAÇÃO",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00004_0002",
+          "start": 793.2,
+          "end": 837.86,
+          "duration": 44.66,
+          "topic": "Problemas com o alcance das antenas na Amazônia e a antena de Tucuruí",
+          "source_segment_ids": [
+            "SEG_00137",
+            "SEG_00138",
+            "SEG_00139",
+            "SEG_00140",
+            "SEG_00141",
+            "SEG_00142"
+          ],
+          "title_proposal": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 1",
+          "literal_excerpt": "O problema é que era comum as antenas da Amazônia não terem um alcance muito longo, E ele imaginou que ainda não estava na distância suficiente para entrar na área das antenas de Belém. E aí, nem se preocuparam com isso. Só que eles não se tocaram de um detalhe. Sabendo que as antenas na Amazônia apresentam esse problema, as autoridades construíram outra antena de radionavegação justamente entre Marabá e Belém, nas proximidades de Tucuruí. Inclusive, essa antena aparece nas cartas de navegação da região. Se os pilotos tivessem tentado sintonizar essa antena, ela poderia aparecer no ADF, mesmo que eles estivessem voando em outra direção, porque eles estavam dentro do alcance dela.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00004_0004",
+          "start": 855.96,
+          "end": 887.22,
+          "duration": 31.26,
+          "topic": "Checklist de procedimentos de aproximação e pouso",
+          "source_segment_ids": [
+            "SEG_00146",
+            "SEG_00147",
+            "SEG_00148",
+            "SEG_00149",
+            "SEG_00150"
+          ],
+          "title_proposal": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 2",
+          "literal_excerpt": "Na aviação existe checklist de tudo, inclusive do procedimento de aproximação e pouso. Naquela hora, eles iriam consultar as cartas de aproximação de Belém, pegando informações sobre o trajeto, velocidade, o ângulo de descida, a rota de arremetida. Em um procedimento normal, um dos pilotos pega a carta de aproximação e lê as informações. O outro piloto coteja, isso é, checa se está tudo certo e repete a informação em voz alta. para o primeiro piloto ouvir e confirmar.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 3,
+          "candidate_id": "MOMENT_00005_0001",
+          "start": 977.18,
+          "end": 1009.26,
+          "duration": 32.08,
+          "topic": "Uso do rádio HF e tentativa de contato com Belém",
+          "source_segment_ids": [
+            "SEG_00164",
+            "SEG_00165",
+            "SEG_00166",
+            "SEG_00167",
+            "SEG_00168"
+          ],
+          "title_proposal": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 3",
+          "literal_excerpt": "Bom, depois que eles insistiram muito no VHF e não conseguiram contato, eles tentaram falar com Belém pelo rádio de HF. Isso já era quase 6 da tarde. Esse tipo de rádio tem um alcance muito maior, porque os sinais de rádio se refletem na ionosfera e na superfície da Terra. E aí permite que você conserve com alguém na Europa, por exemplo, estando lá no Amazonas. Então, mesmo voando para o outro lado, e a mais de 200 km de Belém, pelo menos, finalmente eles conseguiram ir em contato.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 4,
+          "candidate_id": "MOMENT_00006_0001",
+          "start": 1198.82,
+          "end": 1242.5,
+          "duration": 43.68,
+          "topic": "Panificação eletrônica e confusão com a localização do avião",
+          "source_segment_ids": [
+            "SEG_00208",
+            "SEG_00209",
+            "SEG_00210",
+            "SEG_00211",
+            "SEG_00212",
+            "SEG_00213",
+            "SEG_00214",
+            "SEG_00215",
+            "SEG_00216",
+            "SEG_00217",
+            "SEG_00218",
+            "SEG_00219",
+            "SEG_00220",
+            "SEG_00221"
+          ],
+          "title_proposal": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 4",
+          "literal_excerpt": "Belém, o Varig 254 teve uma pane no porão eletrônico. O porão eletrônico é a central eletrônica do avião. O Zilli estranhou essa informação. Ele olhou para o painel e os instrumentos todos funcionavam normalmente, apesar das luzes de Belém não aparecerem. O tempo estava claro e o avião voava a 20 mil pés, aproximadamente 6 mil metros de altitude. Era para a cidade ter aparecido em algum momento. O primeiro oficial abriu a carta de navegação e olhou pra fora. Ele sobrevoava um rio naquele momento. Ele não sabia, mas era o rio Xingu. Eles estavam a 650 quilômetros a sudoeste de Belém. Ele olhou os rios na carta, que ficavam perto de Belém, e esses rios não pareciam com o que ele estava vendo lá embaixo.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 5,
+          "candidate_id": "MOMENT_00007_0000",
+          "start": 1242.84,
+          "end": 1257.12,
+          "duration": 14.28,
+          "topic": "Discussão sobre cartas de navegação e desacordo entre Zille e Garcês",
+          "source_segment_ids": [
+            "SEG_00222",
+            "SEG_00223",
+            "SEG_00224"
+          ],
+          "title_proposal": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 5",
+          "literal_excerpt": "O Zille então questionou o comandante, falando que o rio não batia com o que estava aparecendo na carta. O Garcês só disse que as cartas WAC que a Varig usava eram uma porcaria e que as cartas boas eram as da Jepsen. E só.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        }
+      ],
+      "state": "PROVISIONAL_NOT_COMPLETE",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    },
+    {
+      "series_id": "S03",
+      "title": "A EMERGÊNCIA E AS CONSEQUÊNCIAS",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00009_0008",
+          "start": 1637.12,
+          "end": 1648.52,
+          "duration": 11.4,
+          "topic": "Sintonização dos rádios navegadores",
+          "source_segment_ids": [
+            "SEG_00301"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 1",
+          "literal_excerpt": "Os pilotos então sintonizaram os rádios navegadores do avião nas frequências de Carajás, 370, e Marabá, 320 kHz, e decidiram voar naquela direção.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00009_0014",
+          "start": 1684.0,
+          "end": 1693.14,
+          "duration": 9.14,
+          "topic": "Solicitação de fechamento de aeroportos",
+          "source_segment_ids": [
+            "SEG_00308"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 2",
+          "literal_excerpt": "O controle de tráfego aéreo de Belém chegou a solicitar o fechamento dos aeroportos de Marabá e de Santarém para dar prioridade ao RG254.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 3,
+          "candidate_id": "MOMENT_00010_0000",
+          "start": 1761.61,
+          "end": 1842.3,
+          "duration": 80.69,
+          "topic": "Preparação para o pouso e ações dos pilotos",
+          "source_segment_ids": [
+            "SEG_00316",
+            "SEG_00317",
+            "SEG_00318",
+            "SEG_00319",
+            "SEG_00320",
+            "SEG_00321",
+            "SEG_00322",
+            "SEG_00323",
+            "SEG_00324",
+            "SEG_00325",
+            "SEG_00326",
+            "SEG_00327",
+            "SEG_00328"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 3",
+          "literal_excerpt": "pilotos começaram a planejar como seria o pouso Os manuais da Varig só tinham indicações de pouso na água Então os pilotos tinham de decidir na hora o que eles iam fazer Decidiram manter o avião nivelado a 8.500 pés Quando os motores se apagassem, eles iriam planar o avião esperando que as copas das árvores amortecessem a queda. E foi o que aconteceu. Primeiro acabou o combustível do motor 1. Dois minutos depois, acabou o do motor 2. Eles baixaram os flaps completamente, mas eles pararam na posição 2 por falta de pressão hidráulica. Os pilotos mantiveram os trens de pouso recolhidos para evitar que algum galho enganchasse neles e o que poderia fazer o avião virar uma cambalhota. Eles baixaram os assentos com a cabeça na altura do painel e fizeram, de certa forma, um pouso por instrumentos. Aliás, sem combustível para os motores e para o APU, o avião ficou sem eletricidade. O 737 não possui hatch, então eles ligaram as baterias para que pudessem ver os instrumentos durante a descida.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "context_gap_requires_review",
+            "topic_boundary_crossed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 4,
+          "candidate_id": "MOMENT_00010_0001",
+          "start": 1845.89,
+          "end": 1888.67,
+          "duration": 42.78,
+          "topic": "Impacto com a floresta e danos ao avião",
+          "source_segment_ids": [
+            "SEG_00329",
+            "SEG_00330",
+            "SEG_00331",
+            "SEG_00332",
+            "SEG_00333",
+            "SEG_00334",
+            "SEG_00335"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 4",
+          "literal_excerpt": "O avião começou a roçar a copa das árvores e então mergulhou na floresta. Primeiro, uma árvore arranhou toda a porção direita da fuselagem do avião. Arrancando a asa daquele lado Então uma outra árvore arrancou a asa esquerda A fuselagem se chocou contra o solo Por volta das 21 horas, no dia 3 de setembro de 1989 Terminava o voo Varig 254 Ele havia caído em uma porção de floresta nos arredores de São José do Xingu Ao norte do Mato Grosso Eles estavam a 1.112 quilômetros a sudoeste de Belém E a 689 quilômetros, também a sudoeste de Marabá. Por causa da falta de combustível, o avião não se incendiou.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "story_payoff_not_grounded",
+            "topic_boundary_crossed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 5,
+          "candidate_id": "MOMENT_00011_0001",
+          "start": 1974.2,
+          "end": 1985.96,
+          "duration": 11.76,
+          "topic": "Localização do sinal de emergência e busca pelos sobreviventes",
+          "source_segment_ids": [
+            "SEG_00349",
+            "SEG_00350"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 5",
+          "literal_excerpt": "Naquela hora, os satélites do INPE começaram a receber sinais vindos do norte do Mato Grosso. E as buscas que estavam mais focadas na região lá de Carajás foram enviadas para aquela área.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        },
+        {
+          "part": 6,
+          "candidate_id": "MOMENT_00011_0002",
+          "start": 1989.04,
+          "end": 2014.8,
+          "duration": 25.76,
+          "topic": "Resgate dos sobreviventes e número de vítimas",
+          "source_segment_ids": [
+            "SEG_00352",
+            "SEG_00353",
+            "SEG_00354",
+            "SEG_00355"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 6",
+          "literal_excerpt": "Na terça-feira, um grupo com quatro passageiros menos machucados saiu para buscar ajuda. E encontraram uma fazenda, também no município de São José do Xingu, de onde conseguiram então entrar em contato com as autoridades e pedir ajuda. O resgate durou mais de um dia. Dos 43 resgatados, apenas mais um acabou não resistindo, elevando para 12 o número de vítimas fatais desse acidente.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "story_payoff_not_grounded"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 7,
+          "candidate_id": "MOMENT_00011_0003",
+          "start": 2015.1,
+          "end": 2045.0,
+          "duration": 29.9,
+          "topic": "Consequências legais para os pilotos e objetivo da investigação",
+          "source_segment_ids": [
+            "SEG_00356",
+            "SEG_00357",
+            "SEG_00358"
+          ],
+          "title_proposal": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 7",
+          "literal_excerpt": "No fim das contas, os pilotos perderam suas licenças de voo e chegaram a ser condenados a quatro anos de prisão, e a pena foi convertida em trabalhos comunitários. Sempre vale dizer que a investigação do acidente aéreo não tem a intenção de punir ninguém, mas de determinar as causas do acidente e o que pode ser feito para evitar que ele se repita. Por exemplo, se fosse somente punição, os pilotos seriam punidos, o plano de voo da Varig não mudaria e aconteceria um outro acidente muito parecido.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [],
+          "render_approved": false
+        }
+      ],
+      "state": "PROVISIONAL_NOT_COMPLETE",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    }
+  ]
+}

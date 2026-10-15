@@ -10,10 +10,15 @@ def _font(size,bold=False):
         except: pass
     return ImageFont.load_default()
 
-def build_board(decisions, cur_root:Path):
+def build_board(decisions, cur_root:Path, thumbnail_paths=None):
     cards=[]
     for d in decisions:
         imgp=cur_root/'clips'/d['clip_id']/'thumbnails'/'thumbnail_best.jpg'
+        reference = (thumbnail_paths or {}).get(d['clip_id'])
+        if reference:
+            candidate = (cur_root / reference).resolve()
+            if candidate.is_relative_to(cur_root.resolve()):
+                imgp = candidate
         cards.append((d,imgp))
     W=1800; cw=860; ch=360; rows=(len(cards)+1)//2; H=max(500,100+rows*(ch+30))
     im=Image.new('RGB',(W,H),(18,18,22)); dr=ImageDraw.Draw(im); titlef=_font(48,True); body=_font(28,True); small=_font(23)

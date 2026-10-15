@@ -1,0 +1,30 @@
+{
+  "ldporto_curator/pipeline.py": {
+    "sha256": "8fb0aa495e12105d74d195c48aab7b2337000f0b8d27cbc2ae134d3cc8072466",
+    "bytes": 14258
+  },
+  "ldporto_curator/gui.py": {
+    "sha256": "8f5263558256cbb3e77fd4392fe12d68db67dad5f63d6b1ec5aa07696974a389",
+    "bytes": 18124
+  },
+  "ldporto_curator/approval.py": {
+    "sha256": "aa3542ce26bab6e2bb34d0497930afcc91cad9b297a49e79e58ecd4369125b33",
+    "bytes": 2570
+  },
+  "ldporto_curator/render.py": {
+    "sha256": "a875d6e734f2ab88af95a261fb2fbbf7abeaaa5d1f71fc2d8c42fcd0aa8a0258",
+    "bytes": 18600
+  },
+  "ldporto_curator/subtitles.py": {
+    "sha256": "0d547d343006df3ea8d7ce95d549ed16b1d6eee6439540cd64f9ebcf217bc9dd",
+    "bytes": 4000
+  },
+  "ldporto_curator/title_card.py": {
+    "sha256": "fab207934522eecd041b69a3375f15c0e7ab5b0cd9b06397990107c47914e2b1",
+    "bytes": 5243
+  },
+  "config.yaml": {
+    "sha256": "d09106a335ff9796282c0451803f09853298b9507056ac1ef4bce8009bf60222",
+    "bytes": 2277
+  }
+}

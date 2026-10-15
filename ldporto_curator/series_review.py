@@ -7,14 +7,14 @@ import queue
 import threading
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from .duration_presets import DURATION_PRESETS
+from .duration_presets import DURATION_PRESETS, STORY_60_PRESET
 from .series_workflow import SeriesProject
 from .local_player import LocalPlayer
 from .timeline_editor import EpisodeTimeline,timestamp
 
 MODES = ('SERIE_CRONOLOGICA', 'MELHORES_MOMENTOS', 'COMBINADO', 'MOMENTOS_INDEPENDENTES', 'DOSSIER_ONLY')
-PRESET_LABELS = tuple(p.label for p in DURATION_PRESETS)
-PRESET_KEYS = tuple(p.key for p in DURATION_PRESETS)
+PRESET_LABELS = tuple(p.label for p in DURATION_PRESETS) + (STORY_60_PRESET.label,)
+PRESET_KEYS = tuple(p.key for p in DURATION_PRESETS) + (STORY_60_PRESET.key,)
 
 
 class SeriesReview(tk.Toplevel):
@@ -37,12 +37,13 @@ class SeriesReview(tk.Toplevel):
         header = ttk.Frame(main)
         header.pack(fill='x')
         self.mode = tk.StringVar(value='SERIE_CRONOLOGICA')
-        self.duration = tk.StringVar(value=PRESET_LABELS[0])
+        self.duration = tk.StringVar(value='Auto (<90s)')
         ttk.Label(header, text='Modo').pack(side='left')
         ttk.Combobox(header, values=MODES, textvariable=self.mode, state='readonly', width=25).pack(side='left', padx=6)
         ttk.Label(header, text='Duração do clipe').pack(side='left')
         ttk.Combobox(header, values=PRESET_LABELS, textvariable=self.duration, state='readonly', width=16).pack(side='left', padx=6)
         ttk.Button(header, text='Importar ZIP', command=self._import_zip).pack(side='left', padx=3)
+        ttk.Button(header, text='Importar Stories 60s', command=self._import_stories).pack(side='left', padx=3)
         ttk.Button(header, text='Analysis concluído', command=self._import_directory).pack(side='left', padx=3)
         ttk.Button(header, text='Retomar projeto', command=self._resume).pack(side='left', padx=3)
         controls = ttk.Frame(main)
@@ -176,9 +177,9 @@ class SeriesReview(tk.Toplevel):
         self.diagnostic.pack(fill='both',expand=True,pady=8)
         self.cover_frames=[]
         self.cover_selection=tk.StringVar(value='CAPA_01')
-        for index in range(3):
+        for index in range(5):
             column=ttk.Frame(cover_tab)
-            column.pack(side='left',padx=18,fill='y')
+            column.pack(side='left',padx=5,fill='y')
             label=ttk.Label(column,text=f'Capa {index+1}: gere a prévia para ver.')
             label.pack(pady=10)
             ttk.Radiobutton(column,text=f'Escolher capa {index+1}',variable=self.cover_selection,value=f'CAPA_{index+1:02d}').pack()
@@ -251,6 +252,27 @@ class SeriesReview(tk.Toplevel):
 
     def _import_zip(self):
         self._import(filedialog.askopenfilename(parent=self, title='Pacote Analyzer concluído', filetypes=[('ZIP','*.zip')]))
+
+    def _import_stories(self):
+        """Load a reviewed story proposal into a *separate* unapproved V5 project."""
+        if self.busy:
+            return
+        if not self.project:
+            messagebox.showinfo('Stories 60s',
+                'Primeiro use Importar ZIP para carregar o pacote original do Analyzer na V5.2.', parent=self)
+            return
+        path = filedialog.askopenfilename(parent=self,
+            title='Selecione STORIES_SEQUENCIAIS_REVISAR.json',
+            filetypes=[('Stories da segunda curadoria', '*.json')])
+        if not path:
+            return
+        current = self.project
+        def create():
+            doc = json.loads(Path(path).read_text(encoding='utf-8-sig'))
+            return SeriesProject.create_stories(current.evidence, doc,
+                self.cfg['paths']['output_root'], self.cfg, cancel=self.cancel,
+                progress=lambda f,d='': self.events.put(('progress',(f,d))))
+        self._task(create)
 
     def _import_directory(self):
         self._import(filedialog.askdirectory(parent=self, title='Diretório de artefatos concluídos'))
@@ -380,7 +402,7 @@ class SeriesReview(tk.Toplevel):
             folder=self.project.directory/episode['preview']['review_folder']/'thumbnails'
             try:
                 with Image.open(folder/choice['file']) as image:
-                    photo=ImageTk.PhotoImage(image.resize((220,391)))
+                    photo=ImageTk.PhotoImage(image.resize((145,258)))
                 self.cover_photos.append(photo)
                 label.configure(image=photo,text=choice['layout'],compound='bottom')
             except (OSError,KeyError):

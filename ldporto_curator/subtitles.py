@@ -1,5 +1,11 @@
 from __future__ import annotations
+
+from collections import defaultdict
 from pathlib import Path
+import math
+import re
+
+from .title_card import _load_font
 
 
 def ass_time(sec):
@@ -21,6 +27,7 @@ def _ass_wrapped_text(text):
 
 
 def wrap_caption(text, max_chars=28):
+    """Legacy helper kept for callers; render safety uses measured pixel widths."""
     words=str(text).strip().split(); lines=[]; cur=[]
     for w in words:
         if cur and len(' '.join(cur+[w]))>max_chars:
@@ -30,7 +37,6 @@ def wrap_caption(text, max_chars=28):
     if cur:
         lines.append(' '.join(cur))
     if len(lines)>2:
-        # Balance two lines instead of leaving a tiny orphan line.
         best=None
         for i in range(1,len(words)):
             a=' '.join(words[:i]); b=' '.join(words[i:])
@@ -40,44 +46,160 @@ def wrap_caption(text, max_chars=28):
     return '\\N'.join(lines[:2])
 
 
-def _karaoke(words, clip_start):
-    out=[]
-    for w in words or []:
-        raw=w.get('word') or w.get('raw') or ''
-        dur=max(0.04,float(w.get('end',0))-float(w.get('start',0)))
-        cs=max(1,int(round(dur*100)))
-        out.append(f"{{\\k{cs}}}{esc_ass(raw.strip())}")
-    return ' '.join(out)
+def _normalized_word(word):
+    return re.sub(r'[^\w]', '', str(word).casefold(), flags=re.UNICODE)
+
+
+def _collect_aligned_words(caption, word_index):
+    """Use only checked timings; never distribute segment time among guessed words."""
+    raw = caption.get('words') or word_index.get(str(caption.get('segment_id') or ''), [])
+    literal = str(caption.get('display_text') or caption.get('text') or '').strip()
+    tokens = literal.split()
+    if not isinstance(raw, list) or len(tokens) != len(raw) or not tokens:
+        return []
+    aligned = []
+    previous_start = -1.0
+    for token, item in zip(tokens, raw):
+        if not isinstance(item, dict):
+            return []
+        word = str(item.get('word') or item.get('raw') or '').strip()
+        if not word or _normalized_word(token) != _normalized_word(word):
+            return []
+        try:
+            a, b = float(item['start']), float(item['end'])
+        except (KeyError, ValueError, TypeError):
+            return []
+        if not (math.isfinite(a) and math.isfinite(b) and a <= b and a >= previous_start):
+            return []
+        aligned.append(dict(text=token, start=a, end=b))
+        previous_start = a
+    return aligned
+
+
+def _measured_lines(text, font_size, max_width, font_name):
+    """Return one/two complete lines only if they fit the actual font measurements."""
+    font = _load_font(int(font_size), font_name)
+    tokens = text.split()
+    def width(value):
+        box = font.getbbox(value)
+        return box[2] - box[0]
+    if width(text) <= max_width:
+        return [text], None
+    best = None
+    for i in range(1, len(tokens)):
+        a, b = ' '.join(tokens[:i]), ' '.join(tokens[i:])
+        w1, w2 = width(a), width(b)
+        if w1 <= max_width and w2 <= max_width:
+            score = max(w1, w2) + 0.2*abs(w1-w2)
+            if best is None or score < best[0]:
+                best = score, [a,b], i
+    if best is None:
+        return None, None
+    return best[1], best[2]
+
+
+def _fitted_text(tokens, requested_size, min_size, max_width, font_name):
+    text = ' '.join(tokens)
+    for font_size in range(requested_size, min_size-1, -1):
+        lines, split = _measured_lines(text, font_size, max_width, font_name)
+        if lines is not None:
+            return font_size, lines, split
+    return None
+
+
+def _karaoke_chunk(tokens, timings, split, start, end):
+    parts=[]
+    for i, token in enumerate(tokens):
+        current = max(start, float(timings[i]['start']))
+        nxt = max(float(timings[i]['end']), float(timings[i+1]['start'])) if i+1<len(tokens) else end
+        duration = max(0.01, min(end,nxt)-current)
+        if i == split:
+            parts.append('\\N')
+        elif i:
+            parts.append(' ')
+        parts.append('{\\k' + str(max(1, int(round(duration*100)))) + '}' + esc_ass(token))
+    return ''.join(parts)
 
 
 def write_subtitles(bundle, clip, out_dir: Path, cfg, preview=False):
-    """Write ONLY spoken captions.
+    """Safe legacy Reels subtitles: validated word windows and no off-screen text.
 
-    The opening title is intentionally not drawn by ASS anymore. It is rendered as
-    a real RGBA PNG card by title_card.py and composited by FFmpeg. This avoids
-    libass BorderStyle differences that previously produced a dark/transparent box.
+    SRT keeps the literal transcript. On missing word alignment a long caption is
+    explicitly blocked instead of faking word timings or rendering off screen.
     """
-    out_dir.mkdir(parents=True,exist_ok=True)
-    st,en=clip['source_start'],clip['source_end']
+    out_dir = Path(out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    st,en = float(clip['source_start']), float(clip['source_end'])
     caps=[c for c in bundle.captions if c.get('end',0)>st and c.get('start',1e9)<en]
     W,H=(540,960) if preview else (1080,1920)
     subcfg=cfg.get('subtitles',{})
     fs=int(subcfg.get('font_size_preview' if preview else 'font_size_final',36 if preview else 72))
+    # Safe legibility default: stay under 60px at 1080x1920 for speech subtitles.
+    fs=min(fs,30 if preview else 60)
+    min_fs=24 if preview else 48
     margin=int((clip.get('subtitle_plan', {}).get('margin_v_final') or subcfg.get('margin_v_final',320))*(0.5 if preview else 1))
+    margin=max(0, min(margin, int(H*0.35)))
     outline=max(2,int(subcfg.get('outline_final',6)*(0.5 if preview else 1)))
     shadow=max(1,int(subcfg.get('shadow_final',2)*(0.5 if preview else 1)))
-    header=f"""[Script Info]\nScriptType: v4.00+\nPlayResX: {W}\nPlayResY: {H}\nScaledBorderAndShadow: yes\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: Sub,{subcfg.get('font','Segoe UI')},{fs},&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,{outline},{shadow},2,70,70,{margin},1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"""
-    lines=[header]
-    srt=[]; idx=1
+    # Approx 11% left/right inset. Libass applies margins separately too.
+    side_margin=max(65 if preview else 130, int(W*.12))
+    max_width=W-2*side_margin - 2*(outline+shadow+4)
+    family=str(subcfg.get('font','Segoe UI'))
+    # Use a family name for libass and let the Windows font resolver choose locally.
+    header=f"""[Script Info]\nScriptType: v4.00+\nPlayResX: {W}\nPlayResY: {H}\nScaledBorderAndShadow: yes\nWrapStyle: 2\n\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: Sub,{family},{fs},&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,{outline},{shadow},2,{side_margin},{side_margin},{margin},1\n\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"""
+    index=defaultdict(list)
+    for row in getattr(bundle, 'words', []) or []:
+        if isinstance(row,dict) and row.get('segment_id'):
+            index[str(row['segment_id'])].append(row)
+    lines=[header]; srt=[]; event_count=0
     for c in caps:
-        a=max(st,float(c.get('start',st)))-st; b=min(en,float(c.get('end',en)))-st
+        a=max(st,float(c.get('start',st))); b=min(en,float(c.get('end',en)))
         if b<=a:
             continue
-        txt=c.get('display_text') or c.get('text') or ''
-        words=c.get('words') or []
-        ass_txt=_karaoke(words,st) if words else _ass_wrapped_text(wrap_caption(txt))
-        lines.append(f"Dialogue: 0,{ass_time(a)},{ass_time(b)},Sub,,0,0,0,,{ass_txt}\n")
-        srt.append(f"{idx}\n{srt_time(a)} --> {srt_time(b)}\n{txt.strip()}\n\n"); idx+=1
-    ass=out_dir/('subtitles_preview.ass' if preview else 'subtitles.ass'); ass.write_text(''.join(lines),encoding='utf-8-sig')
+        txt=str(c.get('display_text') or c.get('text') or '').strip()
+        if not txt:
+            continue
+        aligned=_collect_aligned_words(c,index)
+        if aligned:
+            visible=[w for w in aligned if float(w['end']) > st and float(w['start']) < en]
+            if not visible:
+                continue
+            cursor=0
+            while cursor < len(visible):
+                group=[]; fitted=None
+                for token in visible[cursor:cursor+7]:
+                    candidate=group+[token]
+                    proposed=_fitted_text([r['text'] for r in candidate],fs,min_fs,max_width,None)
+                    dur=min(en,float(candidate[-1]['end']))-max(st,float(candidate[0]['start']))
+                    if proposed is None or (group and dur>2.6):
+                        break
+                    group=candidate; fitted=proposed
+                if not group or fitted is None:
+                    raise ValueError('Legenda precisa revisão: palavra longa demais para área segura.')
+                ga=max(st,float(group[0]['start'])); gb=min(en,float(group[-1]['end']))
+                if gb<=ga:
+                    cursor+=len(group)
+                    continue
+                used_fs,display,split=fitted
+                phrase=' '.join(r['text'] for r in group)
+                body=_karaoke_chunk([r['text'] for r in group],group,split,ga,gb)
+                # Fonts are measured before writing and a per-event override is safe.
+                ass_txt=f'{{\\fs{used_fs}}}'+body
+                lines.append(f"Dialogue: 0,{ass_time(ga-st)},{ass_time(gb-st)},Sub,,0,0,0,,{ass_txt}\n")
+                event_count+=1
+                srt.append(f"{event_count}\n{srt_time(ga-st)} --> {srt_time(gb-st)}\n{phrase}\n\n")
+                cursor+=len(group)
+        else:
+            # No verified word evidence: do NOT fabricate granular timestamps.
+            fit=_fitted_text(txt.split(),fs,min_fs,max_width,None)
+            if fit is None:
+                raise ValueError('Legenda longa sem alinhamento confiável; necessária revisão do áudio/segmentação antes do preview.')
+            used_fs,display,_=fit
+            body='\\N'.join(esc_ass(row) for row in display)
+            lines.append(f"Dialogue: 0,{ass_time(a-st)},{ass_time(b-st)},Sub,,0,0,0,,{{\\fs{used_fs}}}{body}\n")
+            event_count+=1
+            srt.append(f"{event_count}\n{srt_time(a-st)} --> {srt_time(b-st)}\n{txt}\n\n")
+    ass=out_dir/('subtitles_preview.ass' if preview else 'subtitles.ass')
+    ass.write_text(''.join(lines),encoding='utf-8-sig')
     srtp=out_dir/'subtitles.srt'; srtp.write_text(''.join(srt),encoding='utf-8')
     return ass

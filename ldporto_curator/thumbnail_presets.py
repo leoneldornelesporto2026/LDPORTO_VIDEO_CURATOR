@@ -86,7 +86,7 @@ def _title_records(episode,titles,evidence):
             text = f"Parte {int(episode.get('order') or 1):02d}"
         records.append({"text": text, "status": "FACT_CHECK_REQUIRED", "support": "literal_excerpt" if literal else "episode_number",
                         "evidence_refs": episode.get("segment_ids") or [], "literal_excerpt_match": bool(literal), "human_approved": False})
-    return [records[index%len(records)] for index in range(3)]
+    return records
 
 
 def _wrap(draw,text,font,width):
@@ -124,7 +124,7 @@ def _draw_fitted_text(draw,text,box,color,base_size,font_path=None):
 
 
 def generate_thumbnail_choices(source_path,episode,output_dir,titles=None,evidence=None,overrides=None,source_sha256=None):
-    """Generate three real 1080x1920 candidates and a portable editable manifest.
+    """Generate 3 or 5 real 1080x1920 candidates and a portable editable manifest.
 
     Overrides accept ``frame_times``, ``layouts``, ``font_path``, ``brand``,
     ``show_part`` and per-layout color/text geometry. All frame images retain the
@@ -137,26 +137,36 @@ def generate_thumbnail_choices(source_path,episode,output_dir,titles=None,eviden
     if st<0 or en<=st:
         raise ValueError("Intervalo de episódio inválido")
     overrides=dict(overrides or {})
-    allowed={"frame_times","layouts","font_path","brand","show_part","layout_overrides"}
+    allowed={"frame_times","layouts","font_path","brand","show_part","layout_overrides","frame_count"}
     if set(overrides)-allowed:
         raise ValueError("Controles de capa desconhecidos: "+", ".join(sorted(set(overrides)-allowed)))
-    layouts=overrides.get("layouts") or ["IMPACTO","DOCUMENTAL","MINIMALISTA"]
-    if len(layouts)!=3 or any(layout not in THUMBNAIL_PRESETS for layout in layouts):
-        raise ValueError("Escolha exatamente três layouts de capa válidos")
+    count=overrides.get("frame_count", 3)
+    if type(count) is not int or count not in (3, 5):
+        raise ValueError("frame_count deve ser 3 ou 5")
+    defaults=["IMPACTO","DOCUMENTAL","MINIMALISTA","MISTERIO","IMPACTO"]
+    layouts=overrides.get("layouts") or defaults[:count]
+    if len(layouts)!=count or any(layout not in THUMBNAIL_PRESETS for layout in layouts):
+        raise ValueError("Quantidade ou layouts de capa inválidos")
     explicit_times=overrides.get("frame_times")
     if explicit_times is not None:
-        if len(explicit_times)!=3:
-            raise ValueError("Escolha três timestamps de origem")
+        if len(explicit_times)!=count:
+            raise ValueError("Escolha exatamente frame_count timestamps de origem")
         times=[_finite(t,"frame_times") for t in explicit_times]
     else:
         # Reuse the legacy real-frame quality ranking when evidence is available.
         class Samples:
             frame_samples=_get(evidence,"frame_samples")
-        ranked=select_candidates(Samples(),episode,n=3)
-        times=[time for time in ranked if st<=time<en][:3]
-        if len(times)<3:
-            times.extend(st+(en-st)*fraction for fraction in (.25,.5,.75))
-            times=times[:3]
+        ranked=select_candidates(Samples(),episode,n=count)
+        times=[time for time in ranked if st<=time<en][:count]
+        if len(times)<count:
+            for i in range(count):
+                candidate=st+(en-st)*(i+1)/(count+1)
+                if all(abs(candidate - prev)>0.02 for prev in times):
+                    times.append(candidate)
+                if len(times)==count:
+                    break
+        if len(times)<count:
+            raise ValueError("Intervalo sem frames distintos suficientes")
     if any(not st<=time<en for time in times):
         raise ValueError("Frame deve pertencer ao intervalo real do episódio")
     actual_source_hash=_sha256(source_path)
@@ -174,7 +184,8 @@ def generate_thumbnail_choices(source_path,episode,output_dir,titles=None,eviden
     manifest={"schema":"LDP_THUMBNAIL_CHOICES_V5.1","episode_id":episode.get("episode_id"),"source_sha256":actual_source_hash,
               "source_start":st,"source_end":en,"state":"thumbnail_candidate","human_approved":False,
               "visual_origin":"actual_source_frames","composition":"full_source_preserve","choices":[]}
-    for index,(layout,time,title) in enumerate(zip(layouts,times,titles),1):
+    for index,(layout,time) in enumerate(zip(layouts,times),1):
+        title=titles[(index-1)%len(titles)]
         style=dict(THUMBNAIL_PRESETS[layout])
         style.update((overrides.get("layout_overrides") or {}).get(layout,{}))
         if set(style)!=set(THUMBNAIL_PRESETS[layout]):

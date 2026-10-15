@@ -1,0 +1,103 @@
+camera:
+  adaptive_timeline: true
+  enable_split_screen: true
+  group_fallback: full_frame_blur
+  lip_activity_margin: 1.35
+  lip_min_activity: 0.035
+  lip_min_samples: 3
+  max_pan_speed_per_second: 0.18
+  max_tilt_speed_per_second: 0.12
+  max_zoom: 1.13
+  min_decision_seconds: 0.85
+  min_zoom: 1
+  motion_deadzone_x: 0.012
+  motion_deadzone_y: 0.015
+  motion_ema_alpha: 0.42
+  motion_follow: true
+  motion_keyframe_seconds: 0.9
+  motion_simplify_x: 0.01
+  motion_simplify_y: 0.012
+  motion_simplify_zoom: 0.007
+  observation_min_coverage: 0.45
+  observation_window_seconds: 0.9
+  question_focus_heuristic: true
+  question_focus_lookahead_seconds: 9
+  question_focus_match_x: 0.16
+  smart_zoom: true
+  speaker_aware: true
+  strategy: speaker_aware_conservative
+  subject_screen_y: 0.38
+  uncertain_two_faces: split_screen
+  zoom_face_height_large: 0.3
+  zoom_face_height_small: 0.1
+  zoom_lip_bonus: 0.008
+  zoom_lip_threshold: 0.2
+  zoom_max_step: 0.012
+  zoom_motion_speed_threshold: 0.1
+  zoom_motion_widening: 0.025
+  zoom_speaker_bonus: 0.012
+curation:
+  context_seconds: 25
+  max_approved_clips: 12
+  max_duration: 120
+  min_duration: 30
+  overlap_threshold: 0.72
+  use_human_overrides: true
+micro_perception:
+  face_model: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\acceptance_20261014T040322246282Z\synthetic\NO_MODEL.onnx
+ollama:
+  base_url: http://127.0.0.1:11434
+  enabled: true
+  keep_alive: 15m
+  model: qwen3:14b
+  num_ctx: 32768
+  num_predict: 4096
+  repeat_penalty: 1.05
+  seed: 42
+  temperature: 0
+  timeout_seconds: 600
+  top_k: 40
+  top_p: 0.9
+paths:
+  analysis_root: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\gui_20261014T041033147402Z\NO_ANALYZER
+  output_root: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\gui_20261014T041033147402Z\output
+  source_cache: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\gui_20261014T041033147402Z\EMPTY_SOURCE_CACHE
+render:
+  audio_lufs: -14
+  audio_true_peak: -1.5
+  final_height: 1920
+  final_width: 1080
+  fps_mode: source
+  prefer_nvenc: false
+  preview_height: 960
+  preview_width: 540
+  quality: QUALITY
+safety:
+  require_first_test_approval_before_batch: true
+source_media:
+  path: C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR\docs\reports\curator_v5_2\render_p0\acceptance_20261014T040322246282Z\synthetic\SYNTHETIC_ORIGINAL.mp4
+  allow_download: false
+subtitles:
+  font: Segoe UI
+  font_size_final: 72
+  font_size_preview: 36
+  highlight_current_word: true
+  margin_v_final: 320
+  max_lines: 2
+  outline_final: 6
+  shadow_final: 2
+thumbnail:
+  candidate_count: 1
+  jpeg_quality: 95
+title:
+  card_max_width_ratio: 0.84
+  card_padding_x: 34
+  card_padding_y: 20
+  card_radius: 28
+  card_shadow_offset: 6
+  duration: 3.2
+  fade_ms: 180
+  font_size_final: 64
+  font_size_min_final: 48
+  line_spacing: 9
+  top_margin_final: 92
