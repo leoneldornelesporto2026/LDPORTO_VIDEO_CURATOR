@@ -1,0 +1,207 @@
+diff --git a/ldporto_curator/combined_batch.py b/ldporto_curator/combined_batch.py
+index 658c709..fcbf5fa 100644
+--- a/ldporto_curator/combined_batch.py
++++ b/ldporto_curator/combined_batch.py
+@@ -175,11 +175,17 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
+             or file_hash(Path(source_path)) != expected_source):
+         raise ValueError('Fonte SHA256 da revisão recuperada diverge do Analyzer')
+     parents = recovery.get('parent_hashes') or {}
+-    for name in ('series_index.json', 'evidence.json', 'source_manifest.json'):
++    # series_index.json legitimately changes after each preview as states and
++    # review paths are saved; identity and immutable editorial fields are
++    # verified below. Only the evidential files must remain byte-identical.
++    for name in ('evidence.json', 'source_manifest.json'):
+         file = (project.directory / name).resolve()
+         if (file.is_symlink() or not file.is_file() or
+                 parents.get(name) != file_hash(file)):
+-            raise ValueError('Projeto pai mudou após recuperar o Story 6 (' + name + '). Recrie a revisão sem sobrescrever o histórico.')
++            raise ValueError('Evidência pai mudou após recuperar o Story 6 (' + name + '). Revisão bloqueada.')
++    index = (project.directory / 'series_index.json')
++    if index.is_symlink() or not index.is_file():
++        raise ValueError('Índice atual dos Stories ausente ou inseguro')
+     if len(saved.episodes()) != 1:
+         raise ValueError('Recuperação deveria conter somente Story 6')
+     child = saved.episode(_STORY06_ID)
+@@ -244,6 +250,31 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
+     return movie
+ 
+ 
++
++def _create_verified_story06_preview(project, episode, source, log):
++    """Derive ONLY an unapproved Story 6 preview from signed ASR evidence.
++
++    The failed parent render (with its receipt) remains untouched. Never infer
++    12 missing words or lift safety checks; use the existing repair's gates.
++    """
++    if episode.get('episode_id') != _STORY06_ID:
++        return None
++    # Resolve from installed project root, not the output/project nesting.
++    root = Path(__file__).resolve().parents[1]
++    manifest = root / 'docs' / 'reports' / 'WORD_EVIDENCE_SEG00163.json'
++    if not manifest.is_file():
++        raise ValueError('Story 6 requer WORD_EVIDENCE_SEG00163.json original; evidência não disponível, lote interrompido sem alterar a origem')
++    from scripts.REPARAR_STORY06_SEM_QWEN import check_case, derive_unpreviewed_story
++    _, _, report = check_case(project, manifest)
++    if report['status'] != 'SAFE_TO_DERIVE' or report.get('added_words') != 12:
++        raise ValueError('Story 6 exige 12 palavras verificadas; não será forçada legenda')
++    import uuid
++    destination = project.directory.parent / ('story06_caption_recovered_' + uuid.uuid4().hex[:12])
++    derived, provenance = derive_unpreviewed_story(project, destination, manifest)
++    log('Story 6: nova revisão independente sem aprovação; câmera=' + provenance)
++    preview = derived.render(_STORY06_ID, source, preview=True)
++    return destination, preview
++
+ def render_stories_review_batch(project, source_path, log=print, progress=None, *, recovered_revision=None):
+     """Render all Story previews in order, and finals ONLY where explicitly approved.
+ 
+@@ -278,6 +309,10 @@ def render_stories_review_batch(project, source_path, log=print, progress=None,
+         # Refer to it without changing this project's episode, camera or approval.
+         recovered = _verified_recovered_preview(project, episode, source,
+                                                  explicit_revision=recovered_revision)
++        if recovered is None and eid == _STORY06_ID and not (episode.get('preview') or {}).get('review_folder'):
++            destination, _ = _create_verified_story06_preview(project, episode, source, log)
++            recovered = _verified_recovered_preview(project, episode, source,
++                                                    explicit_revision=destination)
+         if recovered is not None:
+             log('Story 6: revisão recuperada conferida; prévia reutilizada para revisão humana (sem aprovação automática).')
+             rows.append({**_story_record(episode, recovered, status='PREVIEW_RECUPERADA_REVISAO_HUMANA'),
+diff --git a/ldporto_curator/final_camera.py b/ldporto_curator/final_camera.py
+index f8f73f6..1f218d0 100644
+--- a/ldporto_curator/final_camera.py
++++ b/ldporto_curator/final_camera.py
+@@ -9,7 +9,8 @@ from .storage import media_lease
+ from .smart_composition import improve_camera_plan
+ 
+ 
+-def refine_from_existing_metadata(clip, metadata, *, micro=None, director=None, cfg=None):
++def refine_from_existing_metadata(clip, metadata, *, micro=None, director=None, cfg=None,
++                                  prefer_visual_focus=False):
+     """Return a new camera proposal using saved evidence only, without any I/O.
+ 
+     The caller creates a separate revision. Clip/editorial/caption inputs and any
+@@ -23,8 +24,21 @@ def refine_from_existing_metadata(clip, metadata, *, micro=None, director=None,
+     if micro is not None and not isinstance(micro, dict):
+         raise ValueError('Existing camera metadata must be an object')
+     evidence = deepcopy(micro or {})
+-    style = cfg.get('camera_v44', {})
++    style = deepcopy(cfg.get('camera_v44', {}))
+     suggested = clip.get('suggested_layout')
++    # Explicit *new revision* opt-in. Historical plans are never mutated here.
++    # SECOND_CURATOR often labels every clip source_preserve even when measured
++    # single-face geometry is available. Keep blur for ambiguous/map shots.
++    reframe_requested = (prefer_visual_focus is True and
++                         clip.get('curation_source') == 'SECOND_CURATOR' and
++                         suggested == 'source_preserve' and
++                         bool(evidence.get('observations')))
++    if reframe_requested:
++        suggested = None
++        # Face-only shot windows are often 2-3s in the VARIG edit. The
++        # default 3s minimum suppresses *every* otherwise safe crop. An
++        # explicit camera-only revision may shorten dwell to 2s, never below.
++        style.setdefault('director_style', {})['min_hold_seconds'] = 2.0
+     if clip.get('camera_mode') in {'SOURCE_PRESERVE', 'source_preserve'}:
+         suggested = 'source_preserve'
+     if suggested == 'source_preserve':
+@@ -73,7 +87,9 @@ def refine_from_existing_metadata(clip, metadata, *, micro=None, director=None,
+         new_analysis_executed=False, source_timestamps_changed=False,
+         subtitle_inputs_changed=False, editorial_decisions_recomputed=False,
+         existing_micro_observations_available=bool(evidence.get('observations')),
+-        unreviewed_graphics_source_preserved=unreviewed_graphics)
++        unreviewed_graphics_source_preserved=unreviewed_graphics,
++        safe_second_curator_reframe_requested=reframe_requested,
++        effective_crop_count=sum(row.get('mode') == 'crop' for row in plan.get('segments') or []))
+     plan['needs_review'] = True
+     return plan
+ 
+@@ -87,8 +103,14 @@ def _refine_clip(bundle, clip, video, folder, cfg, progress=None):
+     if not cfg.get('camera', {}).get('v44_refinement', True):
+         return clip['camera_plan']
+     start, end = clip['source_start'], clip['source_end']
++    # A second-curation global SOURCE_PRESERVE label must not defeat *measured*
++    # presenter crops on a freshly created review revision. No visual evidence,
++    # graphics uncertainty, or map -> existing conservative fallback remains.
++    reframe_requested = (clip.get('curation_source') == 'SECOND_CURATOR' and
++                         clip.get('suggested_layout') == 'source_preserve')
++    suggested_for_camera = None if reframe_requested else clip.get('suggested_layout')
+     micro = None
+-    plan = use_analyzer_director(getattr(bundle, 'director', []), start, end) if not clip.get('suggested_layout') else None
++    plan = use_analyzer_director(getattr(bundle, 'director', []), start, end) if not suggested_for_camera else None
+     if plan is not None:
+         graphics = inspect_candidate_graphics(video, [{'core_moment':{'start':start,'end':end}}], limit=1)
+         # A source crop certificate does not certify a changed GC composition.
+@@ -118,16 +140,24 @@ def _refine_clip(bundle, clip, video, folder, cfg, progress=None):
+                     'diagnostics':{'dense_perception_executed':False, 'resolved_visual_focus_fraction':0.}}
+         else:
+             micro = inspect_clip(video, clip, folder / 'micro_cache', micro_cfg, progress=progress)
+-            plan = refine_camera_plan(micro, bundle.analysis['metadata'], start, end, cfg.get('camera_v44', {}), clip.get('suggested_layout'))
++            style = deepcopy(cfg.get('camera_v44', {}))
++            if reframe_requested:
++                style.setdefault('director_style', {})['min_hold_seconds'] = 2.0
++            plan = refine_camera_plan(micro, bundle.analysis['metadata'], start, end, style, suggested_for_camera)
+             plan['micro_status'] = micro['status']
+         write_json(folder / 'clip_micro_perception.json', micro)
+     # Only explicit camera re-generation reaches here. Never mutate a frozen review.
+     # Input map ROIs require visual samples and human review; without evidence, source is preserved.
+-    if micro is not None and clip.get('suggested_layout') == 'source_preserve':
++    if micro is not None and suggested_for_camera == 'source_preserve':
+         micro = {**micro, 'visual_focus_regions': []}
+     elif micro is not None and isinstance(clip.get('visual_focus_regions'), list):
+         micro = {**micro, 'visual_focus_regions': clip['visual_focus_regions']}
+-    plan = improve_camera_plan(plan, micro, bundle.analysis['metadata'], start, end, cfg.get('camera_v44', {}))
++    style = deepcopy(cfg.get('camera_v44', {}))
++    if reframe_requested:
++        style.setdefault('director_style', {})['min_hold_seconds'] = 2.0
++    plan = improve_camera_plan(plan, micro, bundle.analysis['metadata'], start, end, style)
++    plan.setdefault('diagnostics', {})['safe_second_curator_reframe_requested'] = reframe_requested
++    plan['diagnostics']['effective_crop_count'] = sum(x.get('mode') == 'crop' for x in plan.get('segments') or [])
+     write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', plan)
+     clip['camera_plan'] = plan
+     if any(s.get('graphics_regions') for s in plan['segments']):
+diff --git a/scripts/REVISAR_CAMERA_SEM_QWEN.py b/scripts/REVISAR_CAMERA_SEM_QWEN.py
+index cb3ee7f..842761e 100644
+--- a/scripts/REVISAR_CAMERA_SEM_QWEN.py
++++ b/scripts/REVISAR_CAMERA_SEM_QWEN.py
+@@ -30,7 +30,8 @@ def _existing_metadata(base, document, clip):
+     return path, micro
+ 
+ 
+-def camera_revision(source: str, rank: int | None, apply: bool = False, *, existing_metadata: bool = True):
++def camera_revision(source: str, rank: int | None, apply: bool = False, *, existing_metadata: bool = True,
++                    prefer_visual_focus: bool = False):
+     from ldporto_curator.config import load_config
+     from ldporto_curator.pipeline import Pipeline
+     from ldporto_curator.persisted_plan import PlanStore, project_lock, compare_settings
+@@ -78,14 +79,17 @@ def camera_revision(source: str, rank: int | None, apply: bool = False, *, exist
+             folder = staging / 'clips' / clip['clip_id']
+             metadata_path, micro = existing[clip['clip_id']]
+             clip['camera_plan'] = refine_from_existing_metadata(clip, bundle.analysis['metadata'],
+-                micro=micro, director=getattr(bundle, 'director', []), cfg=pinned_cfg)
++                micro=micro, director=getattr(bundle, 'director', []), cfg=pinned_cfg,
++                prefer_visual_focus=prefer_visual_focus)
+             folder.mkdir(parents=True, exist_ok=False)
+             write_json(folder / 'clip_micro_perception.json', micro)
+             write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', clip['camera_plan'])
+             write_json(folder / 'CAMERA_ONLY_PROVENANCE.json', {
+                 'metadata_source':str(metadata_path), 'metadata_sha256':file_hash(metadata_path),
+                 'existing_metadata_only':True, 'new_analysis_executed':False,
+-                'editorial_decisions_recomputed':False, 'approval_required':True})
++                'editorial_decisions_recomputed':False, 'approval_required':True,
++                'safe_visual_reframe_requested':prefer_visual_focus,
++                'effective_crop_segments':sum(x.get('mode') == 'crop' for x in clip['camera_plan'].get('segments', []))})
+         if file_hash(video) != sha:
+             raise ValueError('O video original mudou durante o refinamento; sem publicacao.')
+         # PlanStore creates a new revision with immutable snapshot and history.
+@@ -113,10 +117,12 @@ def main():
+     p.add_argument('--apply', action='store_true', help='Confirma a criacao de uma NOVA revisao')
+     p.add_argument('--existing-metadata', action='store_true', default=True,
+                    help='Reutiliza somente planning_evidence existente (padrao; nunca executa nova percepcao)')
++    p.add_argument('--safe-visual-focus', action='store_true', help='Reenquadrar somente cenas com rosto medido; nova revisao, sem Qwen')
+     args = p.parse_args()
+     if args.rank is not None and args.rank < 1:
+         p.error('--rank deve ser maior que zero')
+-    camera_revision(args.source, None if args.all else args.rank, args.apply, existing_metadata=args.existing_metadata)
++    camera_revision(args.source, None if args.all else args.rank, args.apply,
++                    existing_metadata=args.existing_metadata, prefer_visual_focus=args.safe_visual_focus)
+ 
+ 
+ if __name__ == '__main__':

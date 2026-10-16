@@ -1,0 +1,82 @@
+{
+  "output_exists": true,
+  "output_children": [],
+  "recent_cache": [
+    {
+      "path": ".cache\\gui_session_v52.json",
+      "bytes": 179,
+      "mtime": "2026-10-16T09:28:10.598804"
+    },
+    {
+      "path": ".cache\\runtime_history_v44.json",
+      "bytes": 6299,
+      "mtime": "2026-10-16T09:27:51.581171"
+    },
+    {
+      "path": ".cache\\karaoke_engine_smoke\\SUBTITLE_SYNC.json",
+      "bytes": 119150,
+      "mtime": "2026-10-15T16:31:49.605248"
+    },
+    {
+      "path": ".cache\\karaoke_engine_smoke\\CAPTIONS.srt",
+      "bytes": 942,
+      "mtime": "2026-10-15T16:31:49.602743"
+    },
+    {
+      "path": ".cache\\karaoke_engine_smoke\\CAPTIONS.ass",
+      "bytes": 5802,
+      "mtime": "2026-10-15T16:31:49.601740"
+    },
+    {
+      "path": ".cache\\second_curation_registry.json",
+      "bytes": 960,
+      "mtime": "2026-10-15T00:41:25.225408"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\second_curation_decision_ref.json",
+      "bytes": 158,
+      "mtime": "2026-10-15T00:41:25.225408"
+    },
+    {
+      "path": ".cache\\second_curation_decisions\\0df85b53f4a64e868dd36abb73455b5e.json",
+      "bytes": 6056,
+      "mtime": "2026-10-15T00:41:25.224026"
+    },
+    {
+      "path": ".cache\\second_curation_feedback\\feedback_b84befb7bd064dada1ff7d3c2c041613.jsonl",
+      "bytes": 282892,
+      "mtime": "2026-10-15T00:41:25.224026"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\words.json",
+      "bytes": 2974653,
+      "mtime": "2026-10-15T00:39:39.952641"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\analysis.json",
+      "bytes": 320504,
+      "mtime": "2026-10-15T00:39:39.883380"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\visuals\\MOMENT_00011_0001\\contact_sheet.jpg",
+      "bytes": 83607,
+      "mtime": "2026-10-15T00:39:39.877726"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\visuals\\MOMENT_00009_0008\\contact_sheet.jpg",
+      "bytes": 88026,
+      "mtime": "2026-10-15T00:39:39.876221"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\visuals\\MOMENT_00009_0014\\contact_sheet.jpg",
+      "bytes": 92829,
+      "mtime": "2026-10-15T00:39:39.876221"
+    },
+    {
+      "path": ".cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251\\visuals\\MOMENT_00009_0001\\contact_sheet.jpg",
+      "bytes": 68852,
+      "mtime": "2026-10-15T00:39:39.875221"
+    }
+  ],
+  "backup_intentionally_named_exists": false
+}

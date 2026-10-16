@@ -133,14 +133,25 @@ def _story_record(episode, path, *, status):
 _STORY06_ID = 'PROP_f5106b486d19e3c2e8be43ca'
 
 
+class RecoverySelectionError(ValueError):
+    """A human must choose between distinct, already-approved revisions."""
+
+
 def _verified_recovered_preview(project, episode, source_path, *, explicit_revision=None):
+    info = _recovered_preview_info(project, episode, source_path,
+                                   explicit_revision=explicit_revision)
+    return info['movie'] if info else None
+
+
+def _recovered_preview_info(project, episode, source_path, *, explicit_revision=None):
     """Return a SHA-verified, read-only standalone preview for Story 6.
 
     Fail closed on ambiguous revisions, stale source/parent, changed camera,
     unsupported formats or altered assets. Never merge unsigned word records
     into the original SeriesProject or claim human approval.
     """
-    from .series_workflow import SeriesProject, _canonical_hash
+    from .series_workflow import (SeriesProject, _canonical_hash,
+                                   _verified_supplemental_words, _validate_episode_window)
 
     if episode.get('episode_id') != _STORY06_ID:
         return None
@@ -153,7 +164,21 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
     if not candidates:
         return None
     if len(candidates) != 1:
-        raise ValueError('Há múltiplas revisões recuperadas do Story 6; escolha a revisão explicitamente via script de retomada. Nada foi alterado.')
+        valid, errors = [], []
+        for candidate in candidates:
+            try:
+                valid.append(_recovered_preview_info(project, episode, source_path,
+                                                       explicit_revision=candidate))
+            except ValueError as exc:
+                errors.append(str(candidate) + ': ' + str(exc))
+        if not valid:
+            raise ValueError('Nenhuma revisão recuperada íntegra: ' + '; '.join(errors))
+        # Prefer the exact human-approved revision, otherwise a deterministic
+        # valid identity. Incomplete/older attempts remain untouched.
+        approved = [item for item in valid if item['ready_for_final_render']]
+        if len(approved) > 1:
+            raise RecoverySelectionError('Múltiplas revisões aprovadas do Story 6; selecione uma explicitamente')
+        return (approved or valid)[0]
     directory = candidates[0]
     if (directory == project.directory or not directory.is_relative_to(base)
             or directory.is_symlink() or not directory.is_dir()):
@@ -169,25 +194,41 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
                 'original_unapproved_camera_copied'}):
         raise ValueError('Revisão de Story 6 sem vínculo/proveniência congelada verificável')
     expected_source = project.evidence.get('source', {}).get('sha256')
+    parent_identity = project.plan.get('project_id') or project.evidence['source'].get('video_id') or base.name
+    child_identity = saved.plan.get('project_id') or saved.evidence.get('source', {}).get('video_id') or base.name
+    if (child_identity != parent_identity
+            or saved.plan.get('source') != project.plan.get('source')
+            or load_json(directory / 'source_manifest.json', {}) != saved.evidence.get('source')):
+        raise ValueError('Identidade do projeto/manifesto da recuperação diverge da origem')
     if (saved.evidence.get('source', {}).get('sha256') != expected_source
             or saved.plan.get('source_sha256') != expected_source
             or recovery.get('source_sha256') != expected_source
             or file_hash(Path(source_path)) != expected_source):
         raise ValueError('Fonte SHA256 da revisão recuperada diverge do Analyzer')
     parents = recovery.get('parent_hashes') or {}
-    for name in ('series_index.json', 'evidence.json', 'source_manifest.json'):
+    # series_index.json legitimately changes after each preview as states and
+    # review paths are saved; identity and immutable editorial fields are
+    # verified below. Only the evidential files must remain byte-identical.
+    for name in ('evidence.json', 'source_manifest.json'):
         file = (project.directory / name).resolve()
         if (file.is_symlink() or not file.is_file() or
                 parents.get(name) != file_hash(file)):
-            raise ValueError('Projeto pai mudou após recuperar o Story 6 (' + name + '). Recrie a revisão sem sobrescrever o histórico.')
+            raise ValueError('Evidência pai mudou após recuperar o Story 6 (' + name + '). Revisão bloqueada.')
+    index = (project.directory / 'series_index.json')
+    if index.is_symlink() or not index.is_file():
+        raise ValueError('Índice atual dos Stories ausente ou inseguro')
     if len(saved.episodes()) != 1:
         raise ValueError('Recuperação deveria conter somente Story 6')
     child = saved.episode(_STORY06_ID)
+    _validate_episode_window(child)
     for key in ('episode_id','source_start','source_end','duration','series_id','order','title_text'):
         if child.get(key) != episode.get(key):
             raise ValueError('Decisão editorial do Story 6 difere da revisão original: ' + key)
     if _canonical_hash(child.get('camera_plan')) != recovery.get('camera_sha256'):
         raise ValueError('Câmera do Story 6 foi alterada após recuperação')
+    camera = child.get('camera_plan') or {}
+    if not camera.get('segments'):
+        raise ValueError('Plano de câmera recuperado ausente')
     supplemental = set(recovery.get('added_word_ids') or [])
     if not supplemental or len(supplemental) != len(recovery.get('added_word_ids') or []):
         raise ValueError('Recuperação de palavras inválida')
@@ -195,6 +236,28 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
     child_ids = {w.get('word_id') for w in saved.evidence.get('words', [])}
     if (supplemental & parent_ids or child_ids != parent_ids | supplemental):
         raise ValueError('Palavras recuperadas não correspondem ao complemento da transcrição original')
+    # Re-read the original SHA-bound lexical evidence, including every measured
+    # timestamp. An ID set alone cannot prove that word records were preserved.
+    audit = recovery.get('evidence_enrichment') or {}
+    manifest = (audit.get('manifest') or {})
+    manifest_path = Path(manifest.get('path') or '')
+    if (not manifest_path.is_file() or manifest_path.is_symlink()
+            or file_hash(manifest_path) != manifest.get('sha256')):
+        raise ValueError('Manifesto lexical da recuperação ausente ou alterado')
+    words, verified_audit = _verified_supplemental_words(manifest_path, project.evidence)
+    expected_evidence = deepcopy(project.evidence)
+    expected_evidence.setdefault('words', []).extend(deepcopy(words))
+    expected_evidence['words'].sort(key=lambda w: (w['start'], w['end'], w.get('word_id', '')))
+    expected_evidence.setdefault('provenance', {})['supplemental_word_evidence'] = verified_audit
+    if (set(w['word_id'] for w in words) != supplemental
+            or _canonical_hash(expected_evidence) != _canonical_hash(saved.evidence)
+            or _canonical_hash(audit) != _canonical_hash(verified_audit)):
+        raise ValueError('Evidência lexical/IDs/timestamps da revisão recuperada divergem do original')
+    for name in ('series_index.json', 'evidence.json', 'source_manifest.json'):
+        snapshot = directory / 'parent_snapshot' / name
+        if (not snapshot.is_file() or snapshot.is_symlink()
+                or file_hash(snapshot) != parents.get(name)):
+            raise ValueError('Snapshot de origem da recuperação inválido: ' + name)
     preview = child.get('preview') or {}
     relative = Path(preview.get('review_folder') or '')
     if relative.is_absolute() or '..' in relative.parts or not relative.parts:
@@ -204,12 +267,31 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
         raise ValueError('Preview recuperado fora da revisão')
     review_path = folder / 'PREVIEW_REVIEW_V5.json'
     review = load_json(review_path, {}) or {}
+    # V1 rendered with parent.cfg but omitted it when reopening the recovery.
+    # Recover that context ONLY when it reproduces the entire signed identity.
+    # New revisions pin the exact JSON types too (1 and 1.0 hash differently).
+    pinned = recovery.get('render_settings')
+    if pinned is not None:
+        if (not isinstance(pinned, dict)
+                or _canonical_hash(pinned) != recovery.get('render_settings_sha256')):
+            raise ValueError('Configuração congelada da recuperação foi alterada')
+        contexts = [pinned]
+    else:
+        selected_media = deepcopy(project.cfg)
+        selected_media.setdefault('source_media', {})['path'] = Path(source_path).resolve().as_posix()
+        contexts = [project.cfg, selected_media]
+    for context in contexts:
+        saved.cfg = deepcopy(context)
+        if saved.signature(child) == review.get('plan_signature'):
+            break
+    else:
+        raise ValueError('Assinatura da recuperação diverge: settings/episódio/transcrição/renderer não reproduzem plan_signature')
     if (review.get('plan_signature') != preview.get('plan_hash')
             or review.get('plan_signature') != saved.signature(child)
             or review.get('sha256') != preview.get('sha256')
             or review.get('preview_approved_by_human') is not False
             or review.get('validation', {}).get('status') != 'validated'):
-        raise ValueError('Assinatura/estado da prévia recuperada não confere')
+        raise ValueError('Assinatura/estado da prévia recuperada não confere: recibo, plano, SHA256 ou validação técnica')
     movie_rel = Path(review.get('path') or '')
     if movie_rel.is_absolute() or '..' in movie_rel.parts or not movie_rel.parts:
         raise ValueError('Caminho do MP4 recuperado inválido')
@@ -231,8 +313,10 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
                 or file_hash(asset) != row.get('sha256')):
             raise ValueError('Asset de Story 6 divergiu: ' + str(rel))
         paths.add(rel.as_posix())
-    if not {'CAPTIONS.ass','CAPTIONS.srt','SUBTITLE_SYNC.json'} <= paths:
+    if not {'CAPTIONS.ass','CAPTIONS.srt','SUBTITLE_SYNC.json','camera_plan.json', movie_rel.as_posix()} <= paths:
         raise ValueError('Legendas da prévia recuperada não estão no manifesto')
+    if _canonical_hash(load_json(folder / 'camera_plan.json', {})) != recovery['camera_sha256']:
+        raise ValueError('Câmera renderizada diverge do plano recuperado')
     sync = load_json(folder / 'SUBTITLE_SYNC.json', {}) or {}
     if (not sync.get('renderable') or sync.get('alignment') != 'word'
             or sync.get('visual_behavior') != 'yellow_phrase_cumulative_white_at_measured_onset'
@@ -241,7 +325,92 @@ def _verified_recovered_preview(project, episode, source_path, *, explicit_revis
                 or len(e.get('layout', {}).get('visual_lines', [])) > 2
                 for e in sync['events'])):
         raise ValueError('A revisão de Story 6 perdeu o karaoke/área segura')
-    return movie
+    # Validate the canonical lexical timeline against the evidence, and prove
+    # the actual ASS/SRT corresponds to it without rewriting any saved asset.
+    from tempfile import TemporaryDirectory
+    from .subtitle_presets import write_episode_subtitles
+    with TemporaryDirectory(prefix='ldporto_recovery_validate_') as scratch:
+        rebuilt = write_episode_subtitles(saved.evidence, child, Path(scratch),
+            preset=child.get('subtitle_preset', 'LDP_REELS_KARAOKE'),
+            overrides=child.get('subtitle_overrides'), width=540, height=960,
+            canonical_timeline=sync)
+        if (not rebuilt['sync'].get('renderable')
+                or any(file_hash(Path(rebuilt[key])) != file_hash(folder / name)
+                       for key, name in (('ass', 'CAPTIONS.ass'), ('srt', 'CAPTIONS.srt')))
+                or sync.get('canonical_timeline_sha256') != preview.get('canonical_timeline_sha256')):
+            raise ValueError('ASS/SRT/timeline recuperados não correspondem às palavras verificadas')
+    approved = episode_approval_matches(folder, review['plan_signature'])
+    return {'movie': movie, 'project': saved, 'episode': child,
+            'signature': review['plan_signature'],
+            'technical_state': 'RECOVERED_PREVIEW_VALIDATED',
+            'human_review_state': 'PREVIEW_APPROVED' if approved else 'HUMAN_REVIEW_REQUIRED',
+            'ready_for_final_render': approved}
+
+
+
+def _create_verified_story06_preview(project, episode, source, log):
+    """Derive ONLY an unapproved Story 6 preview from signed ASR evidence.
+
+    The failed parent render (with its receipt) remains untouched. Never infer
+    12 missing words or lift safety checks; use the existing repair's gates.
+    """
+    if episode.get('episode_id') != _STORY06_ID:
+        return None
+    # Resolve from installed project root, not the output/project nesting.
+    root = Path(__file__).resolve().parents[1]
+    manifest = root / 'docs' / 'reports' / 'WORD_EVIDENCE_SEG00163.json'
+    if not manifest.is_file():
+        raise ValueError('Story 6 requer WORD_EVIDENCE_SEG00163.json original; evidência não disponível, lote interrompido sem alterar a origem')
+    from scripts.REPARAR_STORY06_SEM_QWEN import check_case, derive_unpreviewed_story
+    _, _, report = check_case(project, manifest)
+    if report['status'] != 'SAFE_TO_DERIVE' or report.get('added_words') != 12:
+        raise ValueError('Story 6 exige 12 palavras verificadas; não será forçada legenda')
+    import uuid
+    destination = project.directory.parent / ('story06_caption_recovered_' + uuid.uuid4().hex[:12])
+    derived, provenance = derive_unpreviewed_story(project, destination, manifest)
+    log('Story 6: nova revisão independente sem aprovação; câmera=' + provenance)
+    preview = derived.render(_STORY06_ID, source, preview=True)
+    return destination, preview
+
+
+def _write_batch_json(path, document):
+    """Publish once; preserve differing historical documents and retry safely."""
+    from .series_workflow import _canonical_hash
+    path = Path(path)
+    if path.is_file():
+        if load_json(path, {}) == document:
+            return path
+        path = path.parent / 'review_batches' / _canonical_hash(document) / path.name
+    if path.is_file() and load_json(path, {}) != document:
+        # A prior interrupted write at the content-addressed destination is
+        # evidence too. Preserve it and choose a stable successor.
+        path = path.with_name(path.stem + '_after_' + file_hash(path)[:16] + path.suffix)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    content = json.dumps(document, ensure_ascii=False, indent=2, allow_nan=False)
+    import os
+    import tempfile
+    descriptor, pending = tempfile.mkstemp(prefix='.batch_', suffix='.pending', dir=path.parent)
+    try:
+        with os.fdopen(descriptor, 'w', encoding='utf-8') as stream:
+            stream.write(content)
+            stream.flush()
+            os.fsync(stream.fileno())
+        try:
+            os.link(pending, path)
+        except FileExistsError:
+            if load_json(path, {}) != document:
+                raise ValueError('Manifesto existente divergente; preservado: ' + str(path))
+    finally:
+        # Only the temporary file created by this invocation; never history.
+        os.unlink(pending)
+    return path
+
+
+def _story_review_states(row, *, signature, approved=False):
+    row.update({'plan_signature': signature, 'technical_state': 'PREVIEW_VALIDATED',
+                'human_review_state': 'PREVIEW_APPROVED' if approved else 'HUMAN_REVIEW_REQUIRED',
+                'ready_for_final_render': approved, 'publication_ready': False})
+    return row
 
 
 def render_stories_review_batch(project, source_path, log=print, progress=None, *, recovered_revision=None):
@@ -276,19 +445,70 @@ def render_stories_review_batch(project, source_path, log=print, progress=None, 
         log(f'Story {index}/{len(episodes)}: {episode.get("episode_part_label")} — {eid}')
         # A previously blocked Story 6 has a separately SHA-validated preview.
         # Refer to it without changing this project's episode, camera or approval.
-        recovered = _verified_recovered_preview(project, episode, source,
-                                                 explicit_revision=recovered_revision)
+        recovered = None
+        if eid == _STORY06_ID:
+            try:
+                try:
+                    recovered = _recovered_preview_info(project, episode, source,
+                                                        explicit_revision=recovered_revision)
+                except RecoverySelectionError:
+                    raise
+                except ValueError as exc:
+                    log('Story 6: tentativa incompatível preservada: ' + str(exc))
+                if recovered is None and not folder:
+                    destination, _ = _create_verified_story06_preview(project, episode, source, log)
+                    recovered = _recovered_preview_info(project, episode, source,
+                                                        explicit_revision=destination)
+            except (ValueError, RuntimeError) as exc:
+                from .series_workflow import OperationCancelled
+                if isinstance(exc, OperationCancelled):
+                    raise
+                # A failed lexical/technical gate is still a failure. Record it
+                # without preventing independent, unapproved previews 7–16.
+                rows.append({'series_id': episode['series_id'], 'part': episode['order'],
+                    'part_label': episode.get('episode_part_label'), 'episode_id': eid,
+                    'source_start': episode['source_start'], 'source_end': episode['source_end'],
+                    'duration_seconds': episode['duration'], 'title': episode.get('title_text'),
+                    'status': 'RECOVERY_BLOCKED', 'technical_state': 'BLOCKED',
+                    'human_review_state': 'HUMAN_REVIEW_REQUIRED', 'error': str(exc),
+                    'file': None, 'sha256': None, 'ready_for_final_render': False,
+                    'publication_ready': False})
+                log('Story 6: BLOQUEADO para revisão; lote continua com as partes independentes: ' + str(exc))
+                _write_batch_json(project.directory / 'review_batches' / 'checkpoints' /
+                                  (hashlib.sha256(json.dumps(rows[-1], sort_keys=True).encode()).hexdigest() + '.json'), rows[-1])
+                continue
         if recovered is not None:
-            log('Story 6: revisão recuperada conferida; prévia reutilizada para revisão humana (sem aprovação automática).')
-            rows.append({**_story_record(episode, recovered, status='PREVIEW_RECUPERADA_REVISAO_HUMANA'),
-                         'recovery_project': str(recovered_revision or recovered.parents[4]),
-                         'needs_audio_review': True, 'publication_ready': False})
+            approved = recovered['ready_for_final_render']
+            media = recovered['movie']
+            if approved:
+                media = recovered['project'].render(eid, source, preview=False)
+            log('Story 6: revisão recuperada íntegra; ' +
+                ('aprovação humana da revisão conferida.' if approved else
+                 'prévia reutilizada; aprovação audiovisual humana pendente.'))
+            row = _story_review_states(_story_record(episode, media,
+                status='FINAL_REVISADO' if approved else 'PREVIEW_RECUPERADA_REVISAO_HUMANA'),
+                signature=recovered['signature'], approved=approved)
+            row.update({'recovery_project': str(recovered['project'].directory),
+                        'revision_id': recovered['project'].plan['plan_id'],
+                        'technical_state': recovered['technical_state'],
+                        'needs_audio_review': not approved})
+            rows.append(row)
         elif approved:
             final = project.render(eid, source, preview=False)
-            rows.append(_story_record(project.episode(eid), final, status='FINAL_REVISADO'))
+            rows.append(_story_review_states(_story_record(project.episode(eid), final,
+                status='FINAL_REVISADO'), signature=project.signature(episode), approved=True))
         else:
+            if folder:
+                from .episode_approval import _matches
+                if not _matches(project.directory / folder,
+                    load_json(project.directory / folder / 'PREVIEW_REVIEW_V5.json', {}),
+                    project.signature(episode)):
+                    raise ValueError('Preview existente sem integridade comprovada; preservado: ' + eid)
             preview = project.render(eid, source, preview=True)
-            rows.append(_story_record(project.episode(eid), preview, status='PREVIEW_AGUARDA_APROVACAO'))
+            rows.append(_story_review_states(_story_record(project.episode(eid), preview,
+                status='PREVIEW_AGUARDA_APROVACAO'), signature=project.signature(episode)))
+        _write_batch_json(project.directory / 'review_batches' / 'checkpoints' /
+                          (hashlib.sha256(json.dumps(rows[-1], sort_keys=True).encode()).hexdigest() + '.json'), rows[-1])
     if progress:
         progress(len(episodes), len(episodes), None)
     manifest = {
@@ -298,12 +518,15 @@ def render_stories_review_batch(project, source_path, log=print, progress=None, 
         'max_seconds': MAX_STORY_SECONDS,
         'total_parts': len(rows),
         'finals': sum(r['status'] == 'FINAL_REVISADO' for r in rows),
-        'previews_pending': sum(r['status'] != 'FINAL_REVISADO' for r in rows),
+        'previews_pending': sum(r['status'].startswith('PREVIEW_') for r in rows),
+        'blocked': sum(r['technical_state'] == 'BLOCKED' for r in rows),
+        'pending_human_approval': [r['episode_id'] for r in rows
+                                   if r['human_review_state'] == 'HUMAN_REVIEW_REQUIRED'],
         'publication_approved': False,
         'order': rows,
     }
     dest = project.directory / 'LOTE_STORIES_EM_ORDEM.json'
-    write_json(dest, manifest)
+    dest = _write_batch_json(dest, manifest)
     # Playlists contain reviewed final movies where available, otherwise
     # clearly marked previews. Group by series to avoid losing sequence.
     grouped = {}
@@ -312,8 +535,19 @@ def render_stories_review_batch(project, source_path, log=print, progress=None, 
     for sid, parts in grouped.items():
         lines = ['#EXTM3U', '# Playlist de revisão. PREVIEW não significa publicação aprovada.']
         for row in parts:
+            if not row.get('file'):
+                continue
             lines += [f'#EXTINF:{row["duration_seconds"]:.3f},{sid} {row["part_label"]} {row["status"]}', row['file']]
-        (project.directory / f'{safe_name(sid)}_PARTES_EM_ORDEM.m3u').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+        playlist = dest.parent / f'{safe_name(sid)}_PARTES_EM_ORDEM.m3u'
+        content = '\n'.join(lines) + '\n'
+        if playlist.exists() and playlist.read_text(encoding='utf-8') != content:
+            playlist = dest.parent / 'review_batches' / hashlib.sha256(content.encode()).hexdigest() / playlist.name
+        playlist.parent.mkdir(parents=True, exist_ok=True)
+        if not playlist.exists():
+            with playlist.open('x', encoding='utf-8') as stream:
+                stream.write(content)
+    log('Manifesto de revisão das 16 partes: ' + str(dest))
+    manifest['manifest_path'] = str(dest)
     return manifest
 
 
@@ -353,5 +587,6 @@ def render_combined_batch(pipeline, source_input):
     pipeline.log(f'STORIES: {result["total_parts"]} partes em ordem; '
                  f'{result["finals"]} finais aprovados; '
                  f'{result["previews_pending"]} previews para revisão humana. '
+                 f'{result.get("blocked", 0)} partes bloqueadas. '
                  'Nenhuma aprovação automática.')
     return result

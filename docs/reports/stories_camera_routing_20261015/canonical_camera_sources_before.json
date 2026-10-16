@@ -1,0 +1,25 @@
+{
+  "schema": "LDP_EXISTING_CANONICAL_CAMERA_HASHES_V1",
+  "files": [
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\analysis.json",
+      "bytes": 64952083,
+      "sha256": "6672dc5b14ea215a89127df86f72783bef183fd5d7b331390cf461e873dd91a1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\people_observations.json",
+      "bytes": 35600556,
+      "sha256": "a0afbe730b8b36087d5e9be63bf5595133b95bb07c9d8038bb32a7ad9bf4c3e1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_director_timeline.json",
+      "bytes": 1866385,
+      "sha256": "984ffbc4905187a29fa459b9b34cbff6045185663638951c740343a9b58eefdb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\scenes.json",
+      "bytes": 135997,
+      "sha256": "979dfa1fd67d0469dcde2c2d3afb5b0c9a492730bbf8b71293f9d36fa5843ac3"
+    }
+  ]
+}

@@ -166,6 +166,8 @@ def derive_unpreviewed_story(parent, destination, manifest_path):
         "human_audio_review": "REQUIRED", "human_visual_review": "REQUIRED",
         "approved": False, "qwen_executed": False,
         "historical_camera_or_preview_claimed": False,
+        "render_settings": deepcopy(parent.cfg),
+        "render_settings_sha256": _canonical_hash(parent.cfg),
     }
     plan.setdefault("audit_trail", []).append({"action": "new_story06_review_without_historical_preview",
         "camera_provenance": camera_provenance, "automatic_approval": False})

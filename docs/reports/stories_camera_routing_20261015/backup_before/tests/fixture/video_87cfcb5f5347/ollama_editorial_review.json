@@ -1,0 +1,79 @@
+{
+  "overview": "Seleção de momentos com maior potencial editorial, priorizando clareza, força de abertura e autonomia. Inclui reflexões sobre carreira, decisões profissionais e relações pessoais, com destaque para trechos que funcionam isoladamente ou com contexto mínimo.",
+  "top_moments": [
+    {
+      "moment_id": "MOMENT_00004_0002",
+      "editorial_score": 0.8,
+      "why": "Conflito com presidente da gravadora sobre risco de lançar CD single com Charlie Brown, demonstrando decisão ousada e autenticidade profissional.",
+      "hook_text": "Aí o presidente da gravadora, Luizio Reis, falou pra mim: 'Vamos fazer isso com o Charlie Brown'. Puta, eu pensei: caramba, não, com o Charlie Brown não...",
+      "title_idea": "O Risco de Lançar um CD Single com o Charlie Brown",
+      "context_note": "Contexto histórico da Virgin Records e da carreira do Charlie Brown Jr. é útil, mas o trecho funciona isoladamente."
+    },
+    {
+      "moment_id": "MOMENT_00005_0002",
+      "editorial_score": 0.85,
+      "why": "Avaliação direta e emocional sobre o Chorão, com linguagem impactante e autenticidade.",
+      "hook_text": "O Chorão é um cara foda.",
+      "title_idea": "O Carisma do Chorão em Palavras Simples",
+      "context_note": "Requer conhecimento prévio sobre a relação entre o locutor e o Chorão, mas é potente como standalone."
+    },
+    {
+      "moment_id": "MOMENT_00003_0000",
+      "editorial_score": 0.75,
+      "why": "História do sucesso de 'Era Uma Vez' com base em live de mixagem, mostrando intuição artística e visão de mercado.",
+      "hook_text": "Eu assisti seu vídeo de mixagem de Era Uma Vez antes de... Ah, eu vi que você falou isso, eu fiquei muito feliz.",
+      "title_idea": "A Intuição que Antecipou o Sucesso de 'Era Uma Vez'",
+      "context_note": "Beneficia-se do conhecimento prévio sobre a música e sua trajetória, mas é compreensível isoladamente."
+    },
+    {
+      "moment_id": "MOMENT_00001_0000",
+      "editorial_score": 0.7,
+      "why": "Decisão ousada de mudar a gravadora para São Paulo e ascender à presidência aos 27 anos, mostrando trajetória profissional marcante.",
+      "hook_text": "E a EMI era no Rio de Janeiro... Vamos mudar a gravadora pra São Paulo. E eles acreditaram em mim.",
+      "title_idea": "A Revolução da Virgin Records no Interior do Brasil",
+      "context_note": "Contexto histórico das gravadoras no Brasil é útil, mas o trecho é autônomo."
+    },
+    {
+      "moment_id": "MOMENT_00004_0003",
+      "editorial_score": 0.6,
+      "why": "Reflexão sobre produção de discos do Charlie Brown Jr., destacando volume de trabalho e impacto artístico.",
+      "hook_text": "aí o Luiz falou, não, não, Rick você tá acreditando... fizemos o disco e aí o que que tinha nesse primeiro disco de música?",
+      "title_idea": "Sete Discos do Charlie Brown: O Investimento que Pagou",
+      "context_note": "Contexto sobre carreira do Charlie Brown Jr. é útil, mas o trecho é compreensível isoladamente."
+    }
+  ],
+  "content_angles": [
+    {
+      "angle": "Decisões Profissionais Arriscadas",
+      "moment_ids": [
+        "MOMENT_00004_0002",
+        "MOMENT_00001_0000"
+      ],
+      "reason": "Ambos os momentos destacam decisões ousadas que moldaram carreiras e trajetórias profissionais, com risco calculado."
+    },
+    {
+      "angle": "Relações Pessoais e Carisma",
+      "moment_ids": [
+        "MOMENT_00005_0002",
+        "MOMENT_00005_0001"
+      ],
+      "reason": "Refletem sobre vínculos humanos e a importância do carisma em contextos profissionais e pessoais."
+    },
+    {
+      "angle": "Sucesso Musical e Intuição Artística",
+      "moment_ids": [
+        "MOMENT_00003_0000",
+        "MOMENT_00003_0001"
+      ],
+      "reason": "Exploram a dificuldade de prever sucesso e a importância da intuição na indústria fonográfica."
+    }
+  ],
+  "notes": [
+    "Momentos com referências a nomes artísticos (Manu Gavassi, Chorão) exigem contexto histórico para plena compreensão.",
+    "Trechos emocionais como 'Tenho muita saudade do Chorão' precisam de contexto sobre a relação entre o locutor e o artista para maior impacto editorial."
+  ],
+  "method": "ollama_global_review",
+  "inference": true,
+  "needs_review": true,
+  "candidate_pool_size": 25
+}

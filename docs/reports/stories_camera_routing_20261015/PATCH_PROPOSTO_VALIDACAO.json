@@ -1,0 +1,59 @@
+{
+  "scope": "prepared_patch_only_not_installed_code",
+  "production_patch_applied": false,
+  "syntax_valid": true,
+  "isolated_temporary_tests": 12,
+  "all_passed": true,
+  "temporary_root_removed": true,
+  "production_script_sha256": "04d04a925a0491e20ce717a8752f710c7a900f6dd2e62c306c3e2f0ae7fdc434",
+  "tests": [
+    {
+      "test": "batch_valid_with_explicit_missing_evidence",
+      "status": "passed"
+    },
+    {
+      "test": "reject_source_sha_mismatch",
+      "status": "passed"
+    },
+    {
+      "test": "reject_stale_parent_plan_hash",
+      "status": "passed"
+    },
+    {
+      "test": "reject_duplicate_episode_ids",
+      "status": "passed"
+    },
+    {
+      "test": "reject_unknown_episode",
+      "status": "passed"
+    },
+    {
+      "test": "reject_micro_sha_mismatch",
+      "status": "passed"
+    },
+    {
+      "test": "reject_ancestor_sha_mismatch",
+      "status": "passed"
+    },
+    {
+      "test": "reject_preservation_with_micro_binding",
+      "status": "passed"
+    },
+    {
+      "test": "reject_unknown_binding_schema",
+      "status": "passed"
+    },
+    {
+      "test": "dry_run_no_fork_or_disk_changes",
+      "status": "passed"
+    },
+    {
+      "test": "reject_render_without_apply_and_source",
+      "status": "passed"
+    },
+    {
+      "test": "legacy_single_episode_selection_preserved",
+      "status": "passed"
+    }
+  ]
+}

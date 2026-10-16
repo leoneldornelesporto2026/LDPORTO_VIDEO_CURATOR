@@ -1,0 +1,33 @@
+{
+  "schema": "LDP_STORY_CAMERA_APPROVAL_PREVIEWS_V1",
+  "host_preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\PREVIA_LITO_9x16.mp4",
+  "map_preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\PREVIA_MAPA_AMPLO.mp4",
+  "host_full_story_review": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\duas_previas\\review_project\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\ba9f93d3f025f5e8\\preview\\PREVIEW_540x960.mp4",
+  "map_full_story_review": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\duas_previas\\review_project\\serie_s01\\002_PROP_0cd8967b4785b114a6b605c0\\48131feec2fa4035\\preview\\PREVIEW_540x960.mp4",
+  "excerpt_only_not_editorial_revision": true,
+  "source_start": 2029.7813333333334,
+  "source_end": 2039.1239999999998,
+  "clip_start": 14.681333333333333,
+  "clip_end": 24.024,
+  "frames": 224,
+  "fps": "24000/1001",
+  "duration": 9.342666666666668,
+  "subtitles_already_burned_no_regeneration": true,
+  "full_story_audio_pcm_identical": true,
+  "original_editorial_windows_unchanged": true,
+  "integration_status": "AWAITING_USER_APPROVAL",
+  "approved": false,
+  "map_alias_method": "hard_link_to_new_derived_preview_only",
+  "files": [
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\PREVIA_LITO_9x16.mp4",
+      "sha256": "23b5549eaee3590cb8ea2f1f3b29da85691bf09bfb4f1540ec49e8a5bf979aa7",
+      "bytes": 2058948
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\stories_camera_routing_20261015\\PREVIA_MAPA_AMPLO.mp4",
+      "sha256": "ff302af75d2b931d03c49f5639ad984e790f67789389ab1ecc7f3d08ff412bde",
+      "bytes": 2439692
+    }
+  ]
+}

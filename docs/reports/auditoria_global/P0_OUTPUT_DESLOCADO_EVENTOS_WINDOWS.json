@@ -1,0 +1,41 @@
+{
+    "schema":  "LDP_OUTPUT_WINDOWS_EVENT_READONLY_V1",
+    "created_utc":  "2026-10-16T12:49:31.0195911Z",
+    "start_utc":  "2026-10-16T11:30:00.0000000Z",
+    "end_utc":  "2026-10-16T12:34:00.0000000Z",
+    "queries":  [
+                    {
+                        "log":  "Security",
+                        "requested_ids":  [
+                                              4663,
+                                              4688
+                                          ],
+                        "status":  "UNAVAILABLE_OR_EMPTY",
+                        "error_type":  "Exception",
+                        "error_id":  "NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand"
+                    },
+                    {
+                        "log":  "Microsoft-Windows-PowerShell/Operational",
+                        "requested_ids":  [
+                                              4103,
+                                              4104
+                                          ],
+                        "status":  "UNAVAILABLE_OR_EMPTY",
+                        "error_type":  "Exception",
+                        "error_id":  "NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand"
+                    },
+                    {
+                        "log":  "Windows PowerShell",
+                        "requested_ids":  [
+                                              400,
+                                              403,
+                                              600
+                                          ],
+                        "status":  "UNAVAILABLE_OR_EMPTY",
+                        "error_type":  "Exception",
+                        "error_id":  "NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand"
+                    }
+                ],
+    "raw_command_messages_included":  false,
+    "source_logs_modified":  false
+}

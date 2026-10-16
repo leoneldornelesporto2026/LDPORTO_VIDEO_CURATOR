@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "path": "scripts/validate_story_camera_routing.py",
+      "sha256": "a1c4fb9cc16b883ebe3367995fb6704fefd0cb5c055354553f324ffb20e163ff",
+      "bytes": 15370
+    },
+    {
+      "path": "tests/test_story_camera_routing_demo.py",
+      "sha256": "0c6b11948f2c482210bc3b018c4553ce15c6eabbc545a038c6900c09742fb610",
+      "bytes": 12528
+    }
+  ],
+  "existing_production_files_modified": [],
+  "patch_applied": false,
+  "awaiting_visual_approval": true
+}

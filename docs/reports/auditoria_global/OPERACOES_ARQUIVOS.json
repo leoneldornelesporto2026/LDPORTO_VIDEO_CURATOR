@@ -1,0 +1,2907 @@
+[
+  {
+    "file": "ldporto_curator/approval.py",
+    "line": 52,
+    "call": "(folder / 'FIRST_TEST_APPROVED.flag').write_text('approved\\n', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/approval.py",
+    "line": 10,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "ldporto_curator/camera_metadata.py",
+    "line": 76,
+    "call": "value.replace('\\\\', '/')"
+  },
+  {
+    "file": "ldporto_curator/camera_metadata.py",
+    "line": 155,
+    "call": "deepcopy(micro)"
+  },
+  {
+    "file": "ldporto_curator/camera_metadata.py",
+    "line": 181,
+    "call": "deepcopy(loaded)"
+  },
+  {
+    "file": "ldporto_curator/camera_refinement.py",
+    "line": 161,
+    "call": "controller.move([*geo['center'], 1.0], t, until - t, style)"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 121,
+    "call": "(destination / 'CAMERA_REVISION_INCOMPLETE.json').rename(destination / 'CAMERA_REVISION_COMPLETE.json')"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 65,
+    "call": "deepcopy(episode)"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 85,
+    "call": "deepcopy(plans[identifier])"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 95,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 96,
+    "call": "shutil.copy2(row['path'], target)"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 107,
+    "call": "write_json(destination / relative, micro)"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 26,
+    "call": "node.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/camera_revision.py",
+    "line": 114,
+    "call": "shutil.copy2(provenance[key], target)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 248,
+    "call": "deepcopy(project.evidence)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 388,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 529,
+    "call": "_write_batch_json(dest, manifest)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 184,
+    "call": "directory.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 218,
+    "call": "index.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 244,
+    "call": "manifest_path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 249,
+    "call": "deepcopy(words)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 266,
+    "call": "folder.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 280,
+    "call": "deepcopy(project.cfg)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 284,
+    "call": "deepcopy(context)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 299,
+    "call": "movie.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 333,
+    "call": "write_episode_subtitles(saved.evidence, child, Path(scratch), preset=child.get('subtitle_preset', 'LDP_REELS_KARAOKE'), overrides=child.get('subtitle_overrides'), width=540, height=960, canonical_timeline=sync)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 405,
+    "call": "os.unlink(pending)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 510,
+    "call": "_write_batch_json(project.directory / 'review_batches' / 'checkpoints' / (hashlib.sha256(json.dumps(rows[-1], sort_keys=True).encode()).hexdigest() + '.json'), rows[-1])"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 545,
+    "call": "playlist.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 214,
+    "call": "file.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 258,
+    "call": "snapshot.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 312,
+    "call": "asset.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 394,
+    "call": "os.fdopen(descriptor, 'w', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 395,
+    "call": "stream.write(content)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 399,
+    "call": "os.link(pending, path)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 547,
+    "call": "playlist.open('x', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 548,
+    "call": "stream.write(content)"
+  },
+  {
+    "file": "ldporto_curator/combined_batch.py",
+    "line": 477,
+    "call": "_write_batch_json(project.directory / 'review_batches' / 'checkpoints' / (hashlib.sha256(json.dumps(rows[-1], sort_keys=True).encode()).hexdigest() + '.json'), rows[-1])"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 128,
+    "call": "deepcopy(validated)"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 315,
+    "call": "deepcopy(self._points)"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 321,
+    "call": "deepcopy(points)"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 326,
+    "call": "deepcopy(episode.get('camera_keyframes') or [])"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 350,
+    "call": "frame.copy()"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 107,
+    "call": "deepcopy(original)"
+  },
+  {
+    "file": "ldporto_curator/crop_editor.py",
+    "line": 325,
+    "call": "deepcopy(episode)"
+  },
+  {
+    "file": "ldporto_curator/director_config.py",
+    "line": 59,
+    "call": "deepcopy(SMART_ZOOM_DEFAULTS)"
+  },
+  {
+    "file": "ldporto_curator/director_config.py",
+    "line": 107,
+    "call": "deepcopy(DEFAULTS)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 25,
+    "call": "deepcopy(plan.get(HISTORY_KEY) or {'feature_version': '5.2.0', 'entries': [], 'cursor': 0, 'abandoned_branches': []})"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 47,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 183,
+    "call": "deepcopy(current.get('audit_trail') or [])"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 37,
+    "call": "deepcopy(value)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 53,
+    "call": "pending.write_bytes(data)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 54,
+    "call": "pending.replace(path)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 62,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 88,
+    "call": "deepcopy(episode)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 154,
+    "call": "write_snapshot(directory, before)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 154,
+    "call": "write_snapshot(directory, after)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 155,
+    "call": "deepcopy(details or {})"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 49,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 91,
+    "call": "deepcopy(source.get('artifact_history') or [])"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 92,
+    "call": "deepcopy(source.get('approval_history') or [])"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 176,
+    "call": "deepcopy(current_by_id[episode['episode_id']])"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 99,
+    "call": "deepcopy(approval)"
+  },
+  {
+    "file": "ldporto_curator/editing_history.py",
+    "line": 95,
+    "call": "deepcopy(source[kind])"
+  },
+  {
+    "file": "ldporto_curator/editorial_copy.py",
+    "line": 197,
+    "call": "deepcopy(result)"
+  },
+  {
+    "file": "ldporto_curator/editorial_copy.py",
+    "line": 213,
+    "call": "deepcopy(pair)"
+  },
+  {
+    "file": "ldporto_curator/episode_approval.py",
+    "line": 57,
+    "call": "write_json(directory / 'PREVIEW_REVIEW_V5.json', record)"
+  },
+  {
+    "file": "ldporto_curator/episode_approval.py",
+    "line": 85,
+    "call": "write_json(directory / 'PREVIEW_APPROVED_V5.json', record)"
+  },
+  {
+    "file": "ldporto_curator/eta.py",
+    "line": 75,
+    "call": "write_json(self.path, self.history)"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 227,
+    "call": "deepcopy(metadata)"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 348,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 405,
+    "call": "deepcopy(bundle.analysis)"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 86,
+    "call": "root.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 94,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 152,
+    "call": "deepcopy(document)"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 236,
+    "call": "deepcopy(metadata)"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 240,
+    "call": "deepcopy(manifest.get('provenance') or metadata.get('provenance') or {})"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 244,
+    "call": "deepcopy(manifest.get('build_mismatch', metadata.get('build_mismatch', analysis.get('build_mismatch'))))"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 266,
+    "call": "deepcopy(document or {})"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 156,
+    "call": "deepcopy(document[key])"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 383,
+    "call": "deepcopy(canonical[component])"
+  },
+  {
+    "file": "ldporto_curator/evidence_source.py",
+    "line": 384,
+    "call": "deepcopy(canonical['availability'][component])"
+  },
+  {
+    "file": "ldporto_curator/feedback.py",
+    "line": 27,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/feedback.py",
+    "line": 28,
+    "call": "path.write_text(''.join((json.dumps(r, ensure_ascii=False) + '\\n' for r in records)), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/feedback.py",
+    "line": 49,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/feedback.py",
+    "line": 50,
+    "call": "path.write_text(encoded, encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/feedback.py",
+    "line": 40,
+    "call": "value.replace('Z', '+00:00')"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 26,
+    "call": "deepcopy(micro or {})"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 27,
+    "call": "deepcopy(cfg.get('camera_v44', {}))"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 155,
+    "call": "deepcopy(cfg.get('camera_v44', {}))"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 161,
+    "call": "write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', plan)"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 148,
+    "call": "write_json(folder / 'clip_micro_perception.json', micro)"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 47,
+    "call": "deepcopy(clip['visual_focus_regions'])"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 127,
+    "call": "open_clip_source(video, start, end)"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 143,
+    "call": "deepcopy(cfg.get('camera_v44', {}))"
+  },
+  {
+    "file": "ldporto_curator/final_camera.py",
+    "line": 57,
+    "call": "deepcopy(old)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 41,
+    "call": "deepcopy(value)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 190,
+    "call": "root.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 288,
+    "call": "folder.mkdir()"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 157,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 188,
+    "call": "root.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 291,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 292,
+    "call": "target.write_bytes(payload)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 298,
+    "call": "archive.writestr(info, payload)"
+  },
+  {
+    "file": "ldporto_curator/full_handoff.py",
+    "line": 188,
+    "call": "parent.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 98,
+    "call": "ttk.Button(buttons, text='Abrir resultados', command=self.open_results).pack(side='left', padx=8)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 404,
+    "call": "deepcopy(self.cfg)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 477,
+    "call": "deepcopy(self.cfg)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 542,
+    "call": "p.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 558,
+    "call": "filedialog.askopenfilename(title='Selecione a mídia original analisada', filetypes=[('Vídeo', '*.mp4 *.mkv *.webm *.mov')])"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 363,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 364,
+    "call": "temporary.write_text(json.dumps(session, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 365,
+    "call": "os.replace(temporary, path)"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 465,
+    "call": "filedialog.askopenfilename(title='Importar segunda curadoria', filetypes=[('Pacote ou decisões', '*.zip *.json')])"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 161,
+    "call": "filedialog.askopenfilename(filetypes=[('Vídeos', '*.mp4 *.mkv *.mov *.webm'), ('Todos', '*.*')])"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 367,
+    "call": "self.write('Sessão da interface não foi salva: ' + str(exc))"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 546,
+    "call": "subprocess.Popen(['xdg-open', str(p)])"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 505,
+    "call": "write('Importação validada: ' + report['curation_source'])"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 533,
+    "call": "write('ERRO: ' + str(e))"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 529,
+    "call": "write('MÍDIA INDISPONÍVEL: ' + str(e))"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 510,
+    "call": "write('PREVIEW PRONTO. Assista antes de aprovar: ' + str(mp4))"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 514,
+    "call": "write('TESTE APROVADO. Renderização em lote liberada.')"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 517,
+    "call": "write('CONFIGURAÇÕES APLICADAS À REVISÃO ' + str(doc['plan_revision']) + '. Gere e aprove um novo preview.')"
+  },
+  {
+    "file": "ldporto_curator/gui.py",
+    "line": 521,
+    "call": "write('REELS + STORIES: lote organizado; ' + str(result['finals']) + ' Stories finais revisados, ' + str(result['previews_pending']) + ' Stories em prévia para aprovação; ' + str(result.get('blocked', 0)) + ' bloqueados. Manifesto: ' + str(result.get('manifest_path', 'LOTE_STORIES_EM_ORDEM.json')))"
+  },
+  {
+    "file": "ldporto_curator/import_smoke.py",
+    "line": 15,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/local_player.py",
+    "line": 56,
+    "call": "subprocess.Popen([*cmd, '-i', str(path)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+  },
+  {
+    "file": "ldporto_curator/media_effects.py",
+    "line": 142,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/media_effects.py",
+    "line": 36,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "ldporto_curator/micro_perception.py",
+    "line": 68,
+    "call": "open_clip_source(video, start, end)"
+  },
+  {
+    "file": "ldporto_curator/micro_perception.py",
+    "line": 145,
+    "call": "write_json(path, {'key': key, 'checksum': hashlib.sha256(json.dumps(result, sort_keys=True).encode()).hexdigest(), 'data': result})"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 238,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 280,
+    "call": "os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 384)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 290,
+    "call": "base.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 97,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 174,
+    "call": "deepcopy(getattr(bundle, field.name, default))"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 245,
+    "call": "os.replace(temp, path)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 281,
+    "call": "os.fdopen(fd, 'w', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 372,
+    "call": "deepcopy(snapshot['bundle'])"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 230,
+    "call": "Path(path).open('r', encoding='utf-8-sig')"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 241,
+    "call": "temp.open('x', encoding='utf-8', newline='\\n')"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 248,
+    "call": "temp.unlink()"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 327,
+    "call": "path.unlink()"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 430,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 446,
+    "call": "self._write_state(document)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 448,
+    "call": "deepcopy(document)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 482,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 484,
+    "call": "self._write_state(saved)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 302,
+    "call": "reclaim.unlink()"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 318,
+    "call": "path.unlink()"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 408,
+    "call": "deepcopy(bundle.source)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 412,
+    "call": "deepcopy(decisions)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 412,
+    "call": "deepcopy(cfg)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 322,
+    "call": "reclaim.unlink()"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 435,
+    "call": "archive.mkdir(exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/persisted_plan.py",
+    "line": 436,
+    "call": "shutil.copy2(original, archive / name)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 39,
+    "call": "deepcopy(cfg)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 335,
+    "call": "deepcopy(doc['render_config'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 337,
+    "call": "deepcopy(self.cfg['paths'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 196,
+    "call": "deepcopy(render_config if render_config is not None else self.cfg)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 197,
+    "call": "deepcopy(decisions if decisions is not None else old['approved_clips'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 215,
+    "call": "write_handoff(bundle, selected, store.revision_dir(doc))"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 245,
+    "call": "deepcopy(bundle)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 315,
+    "call": "write_handoff(frozen, decisions, revision)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 323,
+    "call": "(revision / 'CURATION_REPORT.md').write_text('\\n'.join(report), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 389,
+    "call": "deepcopy(doc['approved_clips'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 395,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 403,
+    "call": "write_json(cd / 'clip.json', clip)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 477,
+    "call": "deepcopy(doc['approved_clips'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 103,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 188,
+    "call": "deepcopy(doc['approved_clips'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 274,
+    "call": "deepcopy(bundle.review)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 275,
+    "call": "deepcopy(editorial_response)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 326,
+    "call": "deepcopy(decisions)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 351,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 499,
+    "call": "write_handoff(bundle, decisions, revision)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 96,
+    "call": "deepcopy(old)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 297,
+    "call": "cd.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 467,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 485,
+    "call": "write_json(cd / 'clip.json', clip)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 496,
+    "call": "deepcopy(details)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 130,
+    "call": "deepcopy(artifact)"
+  },
+  {
+    "file": "ldporto_curator/pipeline.py",
+    "line": 459,
+    "call": "deepcopy(doc)"
+  },
+  {
+    "file": "ldporto_curator/pipeline_recovery.py",
+    "line": 16,
+    "call": "deepcopy(old['approved_clips'])"
+  },
+  {
+    "file": "ldporto_curator/pipeline_recovery.py",
+    "line": 18,
+    "call": "deepcopy(decisions)"
+  },
+  {
+    "file": "ldporto_curator/pipeline_recovery.py",
+    "line": 58,
+    "call": "deepcopy(segments)"
+  },
+  {
+    "file": "ldporto_curator/pipeline_recovery.py",
+    "line": 45,
+    "call": "deepcopy(segment)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 25,
+    "call": "subprocess.Popen(pcmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 53,
+    "call": "str(path.resolve()).replace('\\\\', '/')"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 54,
+    "call": "s.replace(':', '\\\\:').replace(\"'\", \"\\\\'\")"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 461,
+    "call": "out_dir.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 468,
+    "call": "write_subtitles(bundle, clip, out_dir, cfg, preview=preview)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 199,
+    "call": "subject_filter.replace(f'[v{index}]', f'[{base}panel]')"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 228,
+    "call": "crop.replace(f'[v{index}]', f'[{base}focusportrait]')"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 446,
+    "call": "write_json(out_dir / ('PREVIEW_CAMERA_VERIFIER_V44.json' if preview else 'FINAL_CAMERA_VERIFIER_V44.json'), report)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 466,
+    "call": "(out_dir / 'RENDER_ATTEMPT.json').open('x', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 54,
+    "call": "s.replace(':', '\\\\:')"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 490,
+    "call": "os.link(pending, out)"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 491,
+    "call": "pending.unlink()"
+  },
+  {
+    "file": "ldporto_curator/render.py",
+    "line": 496,
+    "call": "write_json(out_dir / (name + '.render.json'), {'encoder': encoder, 'preview': bool(preview), 'width': rw, 'height': rh, 'duration': float(clip['duration']), 'source_start': float(clip['source_start']), 'subtitle_sha256': file_hash(ass), 'title_card_sha256': file_hash(title_card) if title_card else None, 'media_sha256': file_hash(out), 'render_settings_fingerprint': _fingerprint(render_settings(cfg))})"
+  },
+  {
+    "file": "ldporto_curator/review.py",
+    "line": 48,
+    "call": "(cur_root / 'CURATION_BOARD.html').write_text(''.join(h), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/review.py",
+    "line": 58,
+    "call": "(cur_root / 'CHATGPT_HANDOFF.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/review.py",
+    "line": 64,
+    "call": "(cur_root / 'CHATGPT_HANDOFF.md').write_text('\\n'.join(lines), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/review.py",
+    "line": 30,
+    "call": "Image.open(p).convert('RGB')"
+  },
+  {
+    "file": "ldporto_curator/review.py",
+    "line": 30,
+    "call": "Image.open(p)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_decisions.py",
+    "line": 116,
+    "call": "deepcopy(document)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_decisions.py",
+    "line": 120,
+    "call": "deepcopy(self.document)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 129,
+    "call": "write_json(registry_path, registry)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 69,
+    "call": "folder.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 80,
+    "call": "write_json(folder / 'analysis.json', analysis)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 81,
+    "call": "write_json(folder / 'second_curation_decision_ref.json', {'path': None})"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 123,
+    "call": "write_json(destination, document)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 74,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 83,
+    "call": "write_json(folder / 'words.json', [json.loads(line) for line in package['files']['transcript/relevant_words.jsonl'].decode('utf-8-sig').splitlines() if line])"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 96,
+    "call": "write_json(destination, document)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 98,
+    "call": "write_json(project_root / '.cache/active_override_import.json', report)"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 125,
+    "call": "write_json(folder / 'second_curation_decision_ref.json', {'path': str(destination)})"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 72,
+    "call": "target.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/second_curation_import.py",
+    "line": 76,
+    "call": "target.write_bytes(payload)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 110,
+    "call": "deepcopy(evidence.get('source') or {})"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 382,
+    "call": "build_editorial_copy(episode, segments, data['scenes'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 518,
+    "call": "deepcopy(evidence.get('availability') or {})"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 548,
+    "call": "deepcopy(changes)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 561,
+    "call": "deepcopy(plan)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 582,
+    "call": "deepcopy(units)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 627,
+    "call": "deepcopy(old.get('approval_history', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 631,
+    "call": "deepcopy(old.get('artifact_history', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 662,
+    "call": "deepcopy(revised['story_map'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 782,
+    "call": "deepcopy(plan)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 798,
+    "call": "deepcopy(revised['story_map'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 810,
+    "call": "deepcopy(original.get('approval_history', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 814,
+    "call": "deepcopy(original.get('artifact_history', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 878,
+    "call": "deepcopy(plan)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 905,
+    "call": "deepcopy(original.get('bridge_from_previous'))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 906,
+    "call": "deepcopy(original.get('carry_over_context', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 907,
+    "call": "deepcopy(original.get('teaser_next'))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 908,
+    "call": "deepcopy(original.get('next_episode_teaser'))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 926,
+    "call": "deepcopy(revised['story_map'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 530,
+    "call": "deepcopy(evidence.get('provenance') or {})"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 533,
+    "call": "deepcopy(coverage)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 535,
+    "call": "deepcopy(evidence.get('shortlist') or [])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 680,
+    "call": "deepcopy(plan)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 134,
+    "call": "deepcopy(item)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 606,
+    "call": "deepcopy(changes[key])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 619,
+    "call": "deepcopy(old[key])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 665,
+    "call": "deepcopy(changes)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 680,
+    "call": "deepcopy(e)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 752,
+    "call": "deepcopy(e['segment_ids'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 758,
+    "call": "deepcopy(original[key])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 766,
+    "call": "deepcopy(value)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 787,
+    "call": "deepcopy(episode)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 914,
+    "call": "deepcopy(episode)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 608,
+    "call": "deepcopy(old[key])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 629,
+    "call": "deepcopy(old['human_approval'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 813,
+    "call": "deepcopy(approval)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 889,
+    "call": "deepcopy(original[key])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 892,
+    "call": "deepcopy(original.get('camera_keyframes', []))"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 634,
+    "call": "deepcopy(old[kind])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 690,
+    "call": "deepcopy(episode['human_approval'])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 777,
+    "call": "deepcopy(approval)"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 817,
+    "call": "deepcopy(original[kind])"
+  },
+  {
+    "file": "ldporto_curator/series_planner.py",
+    "line": 780,
+    "call": "deepcopy(original[kind])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 302,
+    "call": "filedialog.askopenfilename(parent=self, title='Selecione STORIES_SEQUENCIAIS_REVISAR.json', filetypes=[('Stories da segunda curadoria', '*.json')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 321,
+    "call": "filedialog.askopenfilename(parent=self, title='series_index.json', filetypes=[('Plano V5', 'series_index.json')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 459,
+    "call": "filedialog.askopenfilename(parent=self, filetypes=[('Vídeo', '*.mp4 *.mkv *.webm *.mov')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 511,
+    "call": "filedialog.askopenfilename(parent=self, filetypes=[('Modelo', '*.json')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 668,
+    "call": "filedialog.askopenfilename(parent=self, title='Trilha própria autorizada', filetypes=[('Áudio', '*.wav *.mp3 *.flac *.m4a')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 61,
+    "call": "deepcopy(cfg)"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 292,
+    "call": "filedialog.askopenfilename(parent=self, title='Pacote Analyzer concluído', filetypes=[('ZIP', '*.zip')])"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 506,
+    "call": "Path(path).write_text(json.dumps({'preset': self.subtitle_preset.get(), 'overrides': overrides}, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/series_review.py",
+    "line": 451,
+    "call": "Image.open(folder / choice['file'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 219,
+    "call": "deepcopy(cfg)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 238,
+    "call": "subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 53,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 450,
+    "call": "destination.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 517,
+    "call": "write_episode_subtitles(self.evidence, episode, directory, preset=episode.get('subtitle_preset', 'LDP_CLEAN'), overrides=episode.get('subtitle_overrides'), width=540, height=960)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 643,
+    "call": "self.directory.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 652,
+    "call": "write_json(temporary, self.plan)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 653,
+    "call": "write_json(self.directory / 'evidence.json', self.evidence)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 654,
+    "call": "write_json(self.directory / 'source_manifest.json', self.evidence.get('source', {}))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 655,
+    "call": "write_json(self.directory / 'evidence_availability.json', self.evidence.get('availability', {}))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 656,
+    "call": "write_json(self.directory / 'story_map.json', self.plan.get('story_map', {}))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 660,
+    "call": "temporary.replace(path)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 668,
+    "call": "(self.directory / 'SERIES_PLAYLIST_ORDER.m3u').write_text('\\n'.join(rows) + '\\n', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 690,
+    "call": "deepcopy(self.plan)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 775,
+    "call": "directory.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 798,
+    "call": "write_episode_subtitles(self.evidence, episode, directory, preset={'documentary': 'LDP_DOCUMENTARIO'}.get(episode.get('subtitle_preset'), episode.get('subtitle_preset', 'LDP_KARAOKE_VERDE')), overrides=episode.get('subtitle_overrides'), width=width, height=height, canonical_timeline=canonical)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 807,
+    "call": "deepcopy(self.cfg)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 862,
+    "call": "os.link(partial, output)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 863,
+    "call": "partial.unlink()"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 864,
+    "call": "write_json(directory / 'RENDER_VALIDATION.json', validation)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 865,
+    "call": "write_json(directory / 'camera_plan.json', episode['camera_plan'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 866,
+    "call": "write_json(directory / 'episode.json', episode)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 89,
+    "call": "candidate.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 145,
+    "call": "deepcopy(words)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 313,
+    "call": "deepcopy(cfg or {})"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 319,
+    "call": "deepcopy(self.plan['caption_revision']['render_settings'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 403,
+    "call": "deepcopy(self.plan)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 403,
+    "call": "deepcopy(self.evidence)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 407,
+    "call": "deepcopy(enrichment)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 412,
+    "call": "deepcopy(self.cfg)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 417,
+    "call": "deepcopy(styles)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 435,
+    "call": "deepcopy(assets[identifier])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 452,
+    "call": "write_json(destination / 'CAMERA_REVISION_INCOMPLETE.json', {'schema': 'LDP_CAMERA_REVISION_PENDING_V1', 'parent_project': str(self.directory)})"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 456,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 457,
+    "call": "shutil.copy2(self.directory / name, target)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 461,
+    "call": "shutil.copytree(self.directory / 'editing_history', destination / 'editing_history')"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 787,
+    "call": "(directory / 'RENDER_ATTEMPT.json').open('x', encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 834,
+    "call": "deepcopy(frozen_assets['thumbnail_choices'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 850,
+    "call": "write_json(directory / 'RENDER_RUN.json', {'encoder': encoder, 'source_sha256': self.evidence['source']['sha256'], 'source_start': episode['source_start'], 'source_end': episode['source_end'], 'duration': episode['duration'], 'width': width, 'height': height, 'camera_mode': clip['camera_plan']['mode'], 'renderer_fingerprint': renderer_fingerprint(), 'output': name, 'preview': preview})"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 354,
+    "call": "deepcopy(subtitle_preset if subtitle_preset is not None else episode.get('subtitle_preset', 'LDP_CLEAN'))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 399,
+    "call": "deepcopy(preview.get('thumbnail_choices'))"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 431,
+    "call": "deepcopy(styles[identifier]['preset'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 432,
+    "call": "deepcopy(styles[identifier]['overrides'])"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 465,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 466,
+    "call": "shutil.copy2(item['source_path'], target)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 649,
+    "call": "history.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 650,
+    "call": "history.write_bytes(old)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 819,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 897,
+    "call": "shutil.copy2(cover, directory / 'CAPA_SELECIONADA.png')"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 357,
+    "call": "deepcopy(episode.get('subtitle_overrides') or {})"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 358,
+    "call": "deepcopy(subtitle_overrides or {})"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 685,
+    "call": "deepcopy(changes)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 823,
+    "call": "shutil.copy2(_inside_file(self.directory, item['project_path']), target)"
+  },
+  {
+    "file": "ldporto_curator/series_workflow.py",
+    "line": 733,
+    "call": "file.is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/smart_composition.py",
+    "line": 147,
+    "call": "deepcopy(segment)"
+  },
+  {
+    "file": "ldporto_curator/smart_composition.py",
+    "line": 270,
+    "call": "deepcopy(row)"
+  },
+  {
+    "file": "ldporto_curator/smart_composition.py",
+    "line": 313,
+    "call": "deepcopy(plan)"
+  },
+  {
+    "file": "ldporto_curator/smart_composition.py",
+    "line": 232,
+    "call": "deepcopy(region)"
+  },
+  {
+    "file": "ldporto_curator/source_video.py",
+    "line": 33,
+    "call": "cache.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 77,
+    "call": "marker.write_text(json.dumps({'path': str(path), 'pid': os.getpid(), 'started_at': time.time()}), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 192,
+    "call": "_without_links(root)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 197,
+    "call": "_files_without_links(root)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 225,
+    "call": "_without_links(preview['root'])"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 81,
+    "call": "marker.unlink(missing_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 86,
+    "call": "Path(path).is_symlink()"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 94,
+    "call": "_is_link(node)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 100,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 113,
+    "call": "_without_links(path)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 138,
+    "call": "_without_links(path)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 179,
+    "call": "_is_link(path)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 184,
+    "call": "_is_link(path)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 240,
+    "call": "path.unlink()"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 241,
+    "call": "removed.append(row)"
+  },
+  {
+    "file": "ldporto_curator/storage.py",
+    "line": 180,
+    "call": "directories.remove(name)"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 161,
+    "call": "deepcopy(data['source'])"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 164,
+    "call": "deepcopy(story_map)"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 164,
+    "call": "deepcopy(evidence.get('provenance') or {})"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 165,
+    "call": "deepcopy(evidence.get('availability') or {})"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 172,
+    "call": "deepcopy(evidence.get('shortlist') or [])"
+  },
+  {
+    "file": "ldporto_curator/story_import.py",
+    "line": 140,
+    "call": "opening[0].islower()"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 22,
+    "call": "str(s).replace('\\\\', '\\\\\\\\').replace('{', '\\\\{').replace('}', '\\\\}').replace('\\n', '\\\\N')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 26,
+    "call": "esc_ass(text).replace('\\\\\\\\N', '\\\\N')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 167,
+    "call": "out_dir.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 242,
+    "call": "ass.write_text(''.join(lines), encoding='utf-8-sig')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 243,
+    "call": "srtp.write_text(''.join(srt), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 22,
+    "call": "str(s).replace('\\\\', '\\\\\\\\').replace('{', '\\\\{').replace('}', '\\\\}')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 22,
+    "call": "str(s).replace('\\\\', '\\\\\\\\').replace('{', '\\\\{')"
+  },
+  {
+    "file": "ldporto_curator/subtitles.py",
+    "line": 22,
+    "call": "str(s).replace('\\\\', '\\\\\\\\')"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 129,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 130,
+    "call": "path.write_text(json.dumps(resolved, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 762,
+    "call": "directory.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 764,
+    "call": "paths['ass'].write_text(''.join(ass), encoding='utf-8-sig')"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 765,
+    "call": "paths['srt'].write_text(''.join(srt), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 766,
+    "call": "paths['sync_metadata'].write_text(json.dumps(metadata, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 63,
+    "call": "deepcopy(_BASE)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 64,
+    "call": "deepcopy(preset)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 68,
+    "call": "deepcopy(SUBTITLE_PRESETS[key])"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 70,
+    "call": "deepcopy(overrides or {})"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 708,
+    "call": "deepcopy(canonical_timeline.get('segments') or [])"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 709,
+    "call": "deepcopy(canonical_timeline.get('diagnostics') or [])"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 729,
+    "call": "deepcopy(base_event)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 638,
+    "call": "deepcopy(event.get(key))"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 248,
+    "call": "deepcopy(word.get('review_reasons') or [])"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 400,
+    "call": "deepcopy(event.get(key))"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 488,
+    "call": "deepcopy(words)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 489,
+    "call": "deepcopy(reference)"
+  },
+  {
+    "file": "ldporto_curator/subtitle_presets.py",
+    "line": 750,
+    "call": "deepcopy(layout)"
+  },
+  {
+    "file": "ldporto_curator/thumbnails.py",
+    "line": 30,
+    "call": "out.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/thumbnails.py",
+    "line": 36,
+    "call": "td.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/thumbnails.py",
+    "line": 56,
+    "call": "(td / 'thumbnail_candidates.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/thumbnails.py",
+    "line": 41,
+    "call": "extract_frame(video, t, td / f'candidate_{i:02d}_{t:.2f}s.jpg')"
+  },
+  {
+    "file": "ldporto_curator/thumbnails.py",
+    "line": 54,
+    "call": "shutil.copy2(src, td / name)"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 181,
+    "call": "output_dir.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 183,
+    "call": "frames.mkdir(exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 247,
+    "call": "manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 26,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 204,
+    "call": "extract_frame(source_path, time, frame_path)"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 243,
+    "call": "editable.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 205,
+    "call": "Image.open(frame_path)"
+  },
+  {
+    "file": "ldporto_curator/thumbnail_presets.py",
+    "line": 206,
+    "call": "opened.convert('RGB')"
+  },
+  {
+    "file": "ldporto_curator/title_card.py",
+    "line": 72,
+    "call": "out_dir.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/title_presets.py",
+    "line": 54,
+    "call": "directory.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/title_presets.py",
+    "line": 57,
+    "call": "write_json(directory / 'TITLE_LAYOUT.json', {'literal_title': text, 'lines': lines, 'font_size': size, 'width': width, 'height': height, 'card_bounds': [left, top, right, bottom], 'text_bounds': text_boxes, 'safe_width': [left, right], 'status': 'measured_layout_human_review_pending'})"
+  },
+  {
+    "file": "ldporto_curator/utils.py",
+    "line": 13,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "ldporto_curator/utils.py",
+    "line": 14,
+    "call": "path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 69,
+    "call": "shutil.copy2(source, target)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 124,
+    "call": "destination.mkdir(parents=True)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 138,
+    "call": "(destination / 'UPDATE_MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 139,
+    "call": "copy_verified(workspace_path(root / 'scripts/INSTALL_CAMERA_FINAL.ps1'), destination / 'INSTALL_CAMERA_FINAL.ps1')"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 140,
+    "call": "(destination / 'LEIA_PRIMEIRO.txt').write_text('L.D.PORTO - refinamento incremental de camera\\n\\nFeche o Curator. Extraia o ZIP em uma pasta separada e confira o SHA256 externo.\\nVerificar: powershell -NoProfile -ExecutionPolicy Bypass -File .\\\\INSTALL_CAMERA_FINAL.ps1 -TargetRoot \"C:\\\\caminho\\\\LDPORTO_VIDEO_CURATOR\" -VerifyOnly\\nInstalar: mesmo comando sem -VerifyOnly. Versoes locais divergentes sao recusadas.\\nRollback: acrescente -Rollback \"ba"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 156,
+    "call": "archive.with_suffix('.zip.sha256').write_text(sha(archive) + '  ' + archive.name + '\\n', encoding='ascii')"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 23,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 33,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 44,
+    "call": "reject_links(node)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 128,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 153,
+    "call": "reject_links(path)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 98,
+    "call": "reject_links(Path(directory) / name)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 129,
+    "call": "copy_verified(source, target)"
+  },
+  {
+    "file": "scripts/build_camera_update.py",
+    "line": 155,
+    "call": "package.write(path, path.relative_to(destination).as_posix())"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 34,
+    "call": "reject_links(path)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 58,
+    "call": "shutil.copy2(source, target)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 97,
+    "call": "destination.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 111,
+    "call": "(destination / 'UPDATE_MANIFEST.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 112,
+    "call": "copy_verified(ROOT / 'scripts/INSTALL_CAPTIONS_P0.ps1', destination / 'INSTALL_CAPTIONS_P0.ps1')"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 119,
+    "call": "(destination / 'LEIA_PRIMEIRO.txt').write_text('L.D.PORTO — correção de legendas P0\\n\\nFeche o Curator antes de atualizar. Extraia este ZIP em uma pasta separada.\\nConfira o SHA256 do ZIP no arquivo SHA256 fornecido ao lado dele.\\nVerificar sem alterações:\\npowershell -NoProfile -ExecutionPolicy Bypass -File .\\\\INSTALL_CAPTIONS_P0.ps1 -TargetRoot \"C:\\\\caminho\\\\LDPORTO_VIDEO_CURATOR\" -VerifyOnly\\nInstalar: mesmo comando sem -VerifyOnly. Os hashes "
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 135,
+    "call": "archive.with_suffix('.zip.sha256').write_text(sha(archive) + '  ' + archive.name + '\\n', encoding='ascii')"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 18,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 29,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 36,
+    "call": "reject_links(child)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 46,
+    "call": "reject_links(node)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 104,
+    "call": "target.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 105,
+    "call": "copy_verified(file, target)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 114,
+    "call": "shutil.copytree(evidence, destination / 'evidence', symlinks=True, ignore=shutil.ignore_patterns('UPDATE_*.zip', 'update_package'))"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 118,
+    "call": "copy_verified(ROOT / 'docs/reports' / filename, destination / filename)"
+  },
+  {
+    "file": "scripts/build_caption_update.py",
+    "line": 134,
+    "call": "z.write(path, path.relative_to(destination).as_posix())"
+  },
+  {
+    "file": "scripts/capture_render_p0_ui.py",
+    "line": 111,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/capture_render_p0_ui.py",
+    "line": 118,
+    "call": "shutil.copytree(fixture / 'output', directory / 'output')"
+  },
+  {
+    "file": "scripts/capture_render_p0_ui.py",
+    "line": 119,
+    "call": "deepcopy(initial['render_config'])"
+  },
+  {
+    "file": "scripts/capture_render_p0_ui.py",
+    "line": 123,
+    "call": "(directory / 'config.yaml').write_text(yaml.safe_dump(cfg, allow_unicode=True, sort_keys=False), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/capture_render_p0_ui.py",
+    "line": 190,
+    "call": "(directory / 'GUI_WORKERS_LOG.txt').write_text('\\n\\n'.join(logs), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 32,
+    "call": "directory.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 76,
+    "call": "(directory / 'slides.txt').write_text(concat, encoding='utf-8')"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 114,
+    "call": "write_json(directory / 'fixture_provenance.json', {'synthetic': True, 'voice': result.stdout.strip(), 'source_sha256': source_hash, 'source_duration_ffprobe': measured, 'segments': segments, 'scenes': scenes, 'word_alignment': 'not_measured', 'audio_human_review': 'pending'})"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 133,
+    "call": "shutil.copy2(handoff, example)"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 143,
+    "call": "write_json(directory / 'DEMO_REPORT.json', report)"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 37,
+    "call": "write_json(spec_file, {'synthetic': True, 'phrases': PHRASES})"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 72,
+    "call": "wave.open(str(directory / 'narration.wav'), 'wb')"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 74,
+    "call": "handle.writeframes(b''.join(pcm))"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 113,
+    "call": "package.write_bytes(package_bytes)"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 46,
+    "call": "wave.open(str(directory / (phrase['id'] + '.wav')), 'rb')"
+  },
+  {
+    "file": "scripts/demo_curator_v5.py",
+    "line": 108,
+    "call": "archive.writestr(info, payload)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 44,
+    "call": "deepcopy(parent.evidence)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 83,
+    "call": "deepcopy(parent.plan)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 92,
+    "call": "deepcopy(parent.cfg.get('camera_v44', {}))"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 23,
+    "call": "Path(p).open('rb')"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 31,
+    "call": "source.is_symlink()"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 141,
+    "call": "destination.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 143,
+    "call": "shutil.copytree(scratch / 'evidence', destination / 'camera_evidence')"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 144,
+    "call": "write_json(destination / 'CAMERA_AUDIT.json', {'schema': 'LDP_CAMERA_REVIEW_V1', 'parent_project': str(parent.directory), 'source_sha256': sha, 'crop_segments': total_crop, 'approved': False, 'all_16_captions_checked': True, 'added_words': len(added)})"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 37,
+    "call": "(parent.directory / name).is_symlink()"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 57,
+    "call": "deepcopy(added)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 132,
+    "call": "(scratch / 'evidence').mkdir(exist_ok=True)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 133,
+    "call": "write_json(scratch / 'evidence' / (e['episode_id'] + '_micro.json'), micro)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 125,
+    "call": "write_episode_subtitles(evidence, e, Path(capdir), preset='LDP_REELS_KARAOKE', width=540, height=960)"
+  },
+  {
+    "file": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "line": 128,
+    "call": "write_episode_subtitles(evidence, e, Path(capdir) / 'final', preset='LDP_REELS_KARAOKE', width=1080, height=1920, canonical_timeline=result['sync'])"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 128,
+    "call": "root.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 155,
+    "call": "deepcopy(evidence)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 237,
+    "call": "write_json(directory / 'OUTPUT_RECOVERY_AUDIT.json', statement)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 243,
+    "call": "snapshot.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 255,
+    "call": "write_json(snapshot / 'HASHES_SNAPSHOT.json', {'files': files, 'media_restored': False, 'approval_restored': False, 'source_sha256': EXPECTED_SOURCE})"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 300,
+    "call": "write_json(directory / 'PREVIAS_RECUPERADAS_EM_ORDEM.json', manifest)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 38,
+    "call": "Path(path).open('rb')"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 45,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 68,
+    "call": "archive.write(cache_dir / 'SECOND_CURATION_MANIFEST.json', 'SECOND_CURATION_MANIFEST.json')"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 99,
+    "call": "cached.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 134,
+    "call": "output.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 190,
+    "call": "destination.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 193,
+    "call": "snapshot.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 216,
+    "call": "directory.parent.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 251,
+    "call": "shutil.copy2(origin, target)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 85,
+    "call": "archive.write(target, name)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 170,
+    "call": "write_episode_subtitles(enriched, ep, Path(tmp) / ep['episode_id'], preset='LDP_REELS_KARAOKE', width=540, height=960)"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 248,
+    "call": "origin.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 101,
+    "call": "d.is_symlink()"
+  },
+  {
+    "file": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "line": 274,
+    "call": "p.is_symlink()"
+  },
+  {
+    "file": "scripts/render_camera_demos_hd.py",
+    "line": 31,
+    "call": "destination.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/render_camera_demos_hd.py",
+    "line": 38,
+    "call": "folder.mkdir(exist_ok=False)"
+  },
+  {
+    "file": "scripts/render_camera_demos_hd.py",
+    "line": 40,
+    "call": "write_episode_subtitles(project.evidence, episode, folder, preset=episode['subtitle_preset'], overrides=episode.get('subtitle_overrides'), width=1080, height=1920, canonical_timeline=canonical)"
+  },
+  {
+    "file": "scripts/render_camera_demos_hd.py",
+    "line": 62,
+    "call": "(destination / 'HD_DEMOS.json').write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 64,
+    "call": "deepcopy(project.evidence)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 122,
+    "call": "deepcopy(parent.evidence)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 125,
+    "call": "deepcopy(audit)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 127,
+    "call": "deepcopy(parent.episode(EPISODE_ID))"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 152,
+    "call": "deepcopy(parent.plan)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 180,
+    "call": "snapshot_dir.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 186,
+    "call": "write_json(destination / 'CAMERA_REVIEW_REQUIRED.json', {'camera_plan': camera, 'camera_provenance': camera_provenance, 'camera_sha256': _canonical_hash(camera), 'approved': False, 'source_sha256': SOURCE_SHA})"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 29,
+    "call": "path.open('rb')"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 65,
+    "call": "deepcopy(supplemental)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 68,
+    "call": "write_episode_subtitles(candidate, episode, Path(tmp), preset='LDP_REELS_KARAOKE', width=540, height=960)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 82,
+    "call": "write(candidate, episode, Path(tmp) / 'final', preset='LDP_REELS_KARAOKE', width=1080, height=1920, canonical_timeline=meta)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 123,
+    "call": "deepcopy(supplements)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 130,
+    "call": "deepcopy(episode.get('camera_plan'))"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 165,
+    "call": "deepcopy(audit)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 169,
+    "call": "deepcopy(parent.cfg)"
+  },
+  {
+    "file": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "line": 183,
+    "call": "shutil.copy2(parent.directory / name, target)"
+  },
+  {
+    "file": "scripts/RETOMAR_STORIES_RECUPERADOS.py",
+    "line": 36,
+    "call": "media.is_symlink()"
+  },
+  {
+    "file": "scripts/RETOMAR_STORIES_RECUPERADOS.py",
+    "line": 108,
+    "call": "write_episode_subtitles(project.evidence, ep, Path(tmp) / str(i), preset=ep.get('subtitle_preset', 'LDP_REELS_KARAOKE'), overrides=ep.get('subtitle_overrides'), width=540, height=960)"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 54,
+    "call": "deepcopy(old['render_config'])"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 55,
+    "call": "deepcopy(installed_cfg['paths'])"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 57,
+    "call": "deepcopy(old['approved_clips'])"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 103,
+    "call": "write_handoff(frozen, all_clips, store.revision_dir(doc))"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 84,
+    "call": "folder.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 85,
+    "call": "write_json(folder / 'clip_micro_perception.json', micro)"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 86,
+    "call": "write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', clip['camera_plan'])"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 87,
+    "call": "write_json(folder / 'CAMERA_ONLY_PROVENANCE.json', {'metadata_source': str(metadata_path), 'metadata_sha256': file_hash(metadata_path), 'existing_metadata_only': True, 'new_analysis_executed': False, 'editorial_decisions_recomputed': False, 'approval_required': True, 'safe_visual_reframe_requested': prefer_visual_focus, 'effective_crop_segments': sum((x.get('mode') == 'crop' for x in clip['camera_plan'].get('segments', [])))})"
+  },
+  {
+    "file": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "line": 24,
+    "call": "str(relative).replace('\\\\', '/')"
+  },
+  {
+    "file": "scripts/validate_camera_final_real.py",
+    "line": 40,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_camera_final_real.py",
+    "line": 135,
+    "call": "(destination / 'VALIDACAO_REAL.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_camera_final_real.py",
+    "line": 89,
+    "call": "camera_doc['planning_evidence'].replace('\\\\', '/')"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 21,
+    "call": "(REPORT / filename).write_text(result.stdout + '\\n' + result.stderr, encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 28,
+    "call": "REPORT.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 49,
+    "call": "(REPORT / 'FFPROBE_DEMO.json').write_text(probe.stdout, encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 70,
+    "call": "write_json(REPORT / 'PRESERVACAO_LEGADO.json', preservation)"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 71,
+    "call": "write_json(REPORT / 'VALIDACAO_FINAL.json', validation)"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 75,
+    "call": "write_json(REPORT / 'ARQUIVOS_E_HASHES.json', rows)"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 92,
+    "call": "(REPORT / 'RELATORIO_POR_FASE.md').write_text('\\n'.join(lines) + '\\n', encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 46,
+    "call": "shutil.copy2(packet, exact)"
+  },
+  {
+    "file": "scripts/validate_curator_v5.py",
+    "line": 44,
+    "call": "shutil.copy2(exact, archive)"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 38,
+    "call": "Path(path).parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 39,
+    "call": "Path(path).write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 139,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 209,
+    "call": "(directory / 'PIPELINE_LOG.txt').write_text('\\n'.join(logs), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 221,
+    "call": "shutil.copytree(source, copied)"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 249,
+    "call": "(directory / 'LEGACY_RECOVERY_LOG.txt').write_text('\\n'.join(logs), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 260,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_render_p0.py",
+    "line": 168,
+    "call": "deepcopy(first['approved_clips'])"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 110,
+    "call": "candidate.is_symlink()"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 144,
+    "call": "(destination / 'VALIDACAO_STORY_CAMERA_ROUTING.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 177,
+    "call": "destination.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 88,
+    "call": "planning.replace('\\\\', '/')"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 97,
+    "call": "deepcopy(micro['metadata_provenance'])"
+  },
+  {
+    "file": "scripts/validate_story_camera_routing.py",
+    "line": 137,
+    "call": "deepcopy(plan.get('diagnostics') or {})"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 35,
+    "call": "Path(path).parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 36,
+    "call": "Path(path).write_text(json.dumps(obj, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 106,
+    "call": "value.replace(',', '.').split(':')"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 155,
+    "call": "args.report.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 160,
+    "call": "demo_dir.mkdir()"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 168,
+    "call": "write_episode_subtitles(derived.evidence, derived.episode(EPISODE), demo_dir / 'resolution_1080x1920', preset=before_episode['subtitle_preset'], overrides=before_episode.get('subtitle_overrides'), width=1080, height=1920, canonical_timeline=sync)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 172,
+    "call": "extract_frames(old_media, preview, demo_dir, old_sync, sync)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 203,
+    "call": "(args.report / 'REVISAO.html').write_text('<!doctype html><meta charset=\"utf-8\"><title>Stories — revisão de legendas P0</title><style>body{font:16px system-ui;max-width:1100px;margin:auto;padding:24px;background:#111827;color:#fff}video{max-height:80vh;width:auto;max-width:100%}img{max-width:100%}td{padding:7px;border-bottom:1px solid #475569}a{color:#9de1ff}</style><h1>Parte 1 — legendas sincronizadas</h1><p>71 palavras preservadas. Exibição ind"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 137,
+    "call": "re.sub('\\\\{[^}]*\\\\}', '', ass_row[9]).replace('\\\\N', '\\n')"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 163,
+    "call": "shutil.copy2(preview.parent / filename, demo_dir / filename)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 186,
+    "call": "destination.mkdir(parents=True)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 80,
+    "call": "output.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 106,
+    "call": "value.replace(',', '.')"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 188,
+    "call": "shutil.copy2(result[key], destination / Path(result[key]).name)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 86,
+    "call": "Image.open(output)"
+  },
+  {
+    "file": "scripts/validate_story_captions_p0.py",
+    "line": 99,
+    "call": "Image.open(directory / 'frames' / f'comparativo_{t:05.2f}s.jpg')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 39,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 40,
+    "call": "path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 48,
+    "call": "value.replace(',', '.').split(':')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 129,
+    "call": "path.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 166,
+    "call": "directory.mkdir(parents=True, exist_ok=False)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 204,
+    "call": "subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 251,
+    "call": "frames.mkdir()"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 334,
+    "call": "args.report.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 341,
+    "call": "demo.mkdir()"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 349,
+    "call": "write_episode_subtitles(derived.evidence, selected, demo / 'resolution_1080x1920', preset=selected['subtitle_preset'], overrides=selected.get('subtitle_overrides'), width=1080, height=1920, canonical_timeline=sync)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 353,
+    "call": "extract_evidence(demo / 'PREVIEW_540x960.mp4', original, args.previous, args.reference_reel, sync, demo)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 368,
+    "call": "(args.report / 'REVISAO.html').write_text('<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>Parte 1 — karaokê dos Reels</title><style>body{font:16px system-ui;max-width:1400px;margin:auto;padding:24px;background:#111827;color:#fff}video{max-height:80vh;max-width:100%}img{max-width:100%}td{padding:8px;border-bottom:1px solid #475569}a{color:#9de1ff}figure{margin:24px 0}</style><h1>Parte 1 — karaokê dos Reels</h1><p>O bloco completo a"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 76,
+    "call": "re.sub('\\\\{[^}]*\\\\}', '', row[9]).replace('\\\\N', '\\n')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 345,
+    "call": "shutil.copy2(preview.parent / name, demo / name)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 48,
+    "call": "value.replace(',', '.')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 104,
+    "call": "line.removeprefix('Style: ').split(',')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 310,
+    "call": "Image.open(frame)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 179,
+    "call": "Image.open(after)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 289,
+    "call": "Image.open(frames / name)"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 104,
+    "call": "line.removeprefix('Style: ')"
+  },
+  {
+    "file": "scripts/validate_story_reel_karaoke.py",
+    "line": 185,
+    "call": "Image.open(before)"
+  },
+  {
+    "file": "scripts/validate_v44_promoted_preview.py",
+    "line": 15,
+    "call": "write_json(folder / 'PROMOTED_PREVIEW_VALIDATION.json', {'execution_scope': 'real_promoted_candidate_preview', 'preview': str(mp4), 'decision_source': 'SECOND_CURATOR', 'approval_granted': False, 'final_batch_rendered': False})"
+  },
+  {
+    "file": "scripts/validate_v44_real_clips.py",
+    "line": 50,
+    "call": "write_json(out / 'REAL_CAMERA_VALIDATION.json', {'execution_scope': 'real_short_clips', 'source_sha256': file_hash(video), 'clips': rows, 'identity_accuracy': 'not_measured', 'visual_review': 'pending', 'no_full_benchmark_credit': True})"
+  },
+  {
+    "file": "scripts/validate_v44_real_clips.py",
+    "line": 31,
+    "call": "write_json(folder / 'clip_micro_perception.json', micro)"
+  },
+  {
+    "file": "scripts/validate_v44_real_clips.py",
+    "line": 32,
+    "call": "write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', plan)"
+  },
+  {
+    "file": "scripts/validate_v44_real_clips.py",
+    "line": 43,
+    "call": "cv2.imwrite(str(folder / ('preview_frame.jpg' if preview else 'final_frame.jpg')), frame)"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 106,
+    "call": "report.parent.mkdir(parents=True, exist_ok=True)"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 107,
+    "call": "report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\\n', encoding='utf-8')"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 20,
+    "call": "path.open('rb')"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 29,
+    "call": "path.is_symlink()"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 64,
+    "call": "is_link(path)"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 65,
+    "call": "dirs.remove(name)"
+  },
+  {
+    "file": "scripts/verify_caption_protected_hashes.py",
+    "line": 66,
+    "call": "skipped_links.append(path.relative_to(root).as_posix())"
+  }
+]

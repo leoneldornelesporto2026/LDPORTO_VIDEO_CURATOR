@@ -17,6 +17,44 @@ PRESET_LABELS = tuple(p.label for p in DURATION_PRESETS) + (STORY_60_PRESET.labe
 PRESET_KEYS = tuple(p.key for p in DURATION_PRESETS) + (STORY_60_PRESET.key,)
 
 
+def _load_review_project(directory, cfg, source_path=None, *, log=print, progress=None, cancel=None):
+    """Restore a recovered preview's verified settings without saving its plan."""
+    project = SeriesProject(directory, cfg, log=log, progress=progress, cancel=cancel)
+    recovery = project.plan.get('story06_recovery')
+    if not recovery:
+        return project, None
+    if not isinstance(recovery, dict) or not recovery.get('parent_project'):
+        raise ValueError('Revisão recuperada sem vínculo verificável com o projeto original')
+    pinned = recovery.get('render_settings')
+    if pinned is not None and not isinstance(pinned, dict):
+        raise ValueError('Configuração congelada da recuperação inválida')
+    selected = (source_path or (pinned or {}).get('source_media', {}).get('path')
+                or cfg.get('source_media', {}).get('path'))
+    if not selected:
+        from .utils import load_json, safe_name
+        source = project.evidence.get('source') or {}
+        video_id = project.plan.get('project_id') or source.get('video_id') or source.get('id')
+        output_root = cfg.get('paths', {}).get('output_root')
+        if output_root and video_id:
+            state = load_json(Path(output_root) / 'curation' / safe_name(video_id) /
+                              'EDIT_DECISIONS.json', {}) or {}
+            selected = state.get('source_media_path')
+    if not selected or not Path(selected).is_file():
+        raise ValueError('Selecione a mídia original e retome esta revisão antes de aprovar o Story 6')
+    source = Path(selected).resolve()
+    from .combined_batch import _recovered_preview_info, _STORY06_ID
+    parent = SeriesProject(recovery['parent_project'], cfg, log=log)
+    verified = _recovered_preview_info(parent, parent.episode(_STORY06_ID), source,
+                                       explicit_revision=project.directory)
+    if not verified:
+        raise ValueError('Revisão recuperada sem prévia íntegra para aprovação humana')
+    project = verified['project']
+    project.log = log
+    project.progress = progress or (lambda fraction, detail='': None)
+    project.cancel = cancel
+    return project, source
+
+
 class SeriesReview(tk.Toplevel):
     def __init__(self, master, project_root, cfg):
         super().__init__(master)
@@ -282,8 +320,17 @@ class SeriesReview(tk.Toplevel):
             return
         path = filedialog.askopenfilename(parent=self, title='series_index.json', filetypes=[('Plano V5','series_index.json')])
         if path:
-            self.project = SeriesProject(Path(path).parent, self.cfg, cancel=self.cancel,
-                progress=lambda f,d='': self.events.put(('progress',(f,d))))
+            try:
+                project, source = _load_review_project(Path(path).parent, self.cfg,
+                    self.media.get(), cancel=self.cancel,
+                    progress=lambda f,d='': self.events.put(('progress',(f,d))))
+            except (ValueError, OSError, KeyError) as exc:
+                self.status.set(str(exc))
+                messagebox.showerror('Retomar revisão', str(exc), parent=self)
+                return
+            self.project = project
+            if source is not None:
+                self.media.set(str(source))
             self.mode.set(self.project.plan.get('mode','SERIE_CRONOLOGICA'))
             key=self.project.plan.get('duration_preset',PRESET_KEYS[0])
             self.duration.set(PRESET_LABELS[PRESET_KEYS.index(key)])

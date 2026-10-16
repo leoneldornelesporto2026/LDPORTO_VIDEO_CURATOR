@@ -520,7 +520,9 @@ class App(tk.Tk):
                     result = render_combined_batch(p, source_input)
                     write('REELS + STORIES: lote organizado; ' + str(result['finals']) +
                           ' Stories finais revisados, ' + str(result['previews_pending']) +
-                          ' Stories em prévia para aprovação. Ver LOTE_STORIES_EM_ORDEM.json.')
+                          ' Stories em prévia para aprovação; ' + str(result.get('blocked', 0)) +
+                          ' bloqueados. Manifesto: ' +
+                          str(result.get('manifest_path', 'LOTE_STORIES_EM_ORDEM.json')))
             except Exception as e:
                 from .source_video import SourceUnavailable
                 if isinstance(e, SourceUnavailable):

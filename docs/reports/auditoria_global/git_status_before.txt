@@ -1,0 +1,15 @@
+ M ldporto_curator/combined_batch.py
+ M ldporto_curator/final_camera.py
+ M ldporto_curator/gui.py
+ M ldporto_curator/series_review.py
+ M scripts/REPARAR_STORY06_SEM_QWEN.py
+ M scripts/RETOMAR_STORIES_RECUPERADOS.py
+ M scripts/REVISAR_CAMERA_SEM_QWEN.py
+?? docs/reports/stories_camera_routing_20261015/
+?? docs/reports/story06_signature_p0_20261016/
+?? scripts/NOVAS_PREVIAS_STORIES_CAMERA.py
+?? scripts/validate_story_camera_routing.py
+?? tests/test_integracao_camera_stories_p0.py
+?? tests/test_story06_review_context_p0.py
+?? tests/test_story06_signature_resume_p0.py
+?? tests/test_story_camera_routing_demo.py

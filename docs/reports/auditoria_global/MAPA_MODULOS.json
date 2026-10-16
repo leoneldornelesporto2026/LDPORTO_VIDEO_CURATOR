@@ -1,0 +1,9615 @@
+[
+  {
+    "path": "app.py",
+    "lines": 3,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 1
+      },
+      {
+        "module": "ldporto_curator.gui",
+        "names": [
+          "launch"
+        ],
+        "line": 2
+      }
+    ],
+    "definitions": []
+  },
+  {
+    "path": "cli.py",
+    "lines": 55,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 1
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 2
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 3
+      },
+      {
+        "module": "ldporto_curator.pipeline",
+        "names": [
+          "Pipeline"
+        ],
+        "line": 4
+      },
+      {
+        "module": "ldporto_curator.evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 25
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 26
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 34
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 49
+      },
+      {
+        "module": "ldporto_curator.second_curation_import",
+        "names": [
+          "import_second_curation"
+        ],
+        "line": 50
+      }
+    ],
+    "definitions": []
+  },
+  {
+    "path": "DIAGNOSTICO.py",
+    "lines": 7,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "shutil",
+          "subprocess",
+          "sys"
+        ],
+        "line": 1
+      }
+    ],
+    "definitions": []
+  },
+  {
+    "path": "ldporto_curator/analysis_loader.py",
+    "lines": 79,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "dataclass",
+          "field"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "youtube_id"
+        ],
+        "line": 4
+      }
+    ],
+    "definitions": [
+      {
+        "name": "AnalysisBundle",
+        "line": 7,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "_candidate_dirs",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "find_analysis",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_bundle",
+        "line": 53,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "source",
+        "line": 30,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/approval.py",
+    "lines": 59,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 3
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 4
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 5
+      },
+      {
+        "module": "persisted_plan",
+        "names": [
+          "_atomic_json"
+        ],
+        "line": 33
+      },
+      {
+        "module": "persisted_plan",
+        "names": [
+          "_atomic_json"
+        ],
+        "line": 50
+      }
+    ],
+    "definitions": [
+      {
+        "name": "file_hash",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "plan_signature",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "record_preview",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "approve_preview",
+        "line": 41,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "approval_matches",
+        "line": 56,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/broadcast_graphics.py",
+    "lines": 96,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 3
+      }
+    ],
+    "definitions": [
+      {
+        "name": "detect_graphics",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "face_safe_height",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "inspect_candidate_graphics",
+        "line": 44,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "GraphicsAccumulator",
+        "line": 71,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 73,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "add",
+        "line": 77,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "flush",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "result",
+        "line": 93,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera.py",
+    "lines": 940,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "statistics"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 416
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_cx",
+        "line": 7,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_area",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_face_bbox",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_positions",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_bbox_iou",
+        "line": 55,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_distinct_face_pair",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_mapping_dict",
+        "line": 95,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_timeline_speaker_target",
+        "line": 112,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_lip_target",
+        "line": 149,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_classify_interval",
+        "line": 180,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_scene_for_time",
+        "line": 237,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_cluster_nearby_faces",
+        "line": 244,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_summarize_observation_window",
+        "line": 276,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_build_observation_intervals",
+        "line": 343,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_merge_ranges",
+        "line": 385,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_question_ranges",
+        "line": 396,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_overlaps_any",
+        "line": 440,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_apply_question_focus",
+        "line": 444,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_duration",
+        "line": 508,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_compatible",
+        "line": 512,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_merge_pair",
+        "line": 529,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_merge_compatible",
+        "line": 545,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_absorb_short",
+        "line": 555,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_build_segments",
+        "line": 585,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_obs_xy",
+        "line": 643,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_obs_face_height",
+        "line": 651,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_cluster_obs_faces",
+        "line": 659,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_choose_motion_cluster",
+        "line": 709,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_smooth_motion_points",
+        "line": 729,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_zoom_for_point",
+        "line": 753,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_simplify_motion_points",
+        "line": 788,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_motion_points_for_segment",
+        "line": 809,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_expand_motion_segments",
+        "line": 858,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_camera_plan",
+        "line": 889,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_evidence.py",
+    "lines": 67,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 2
+      }
+    ],
+    "definitions": [
+      {
+        "name": "VisualTargetEvidence",
+        "line": 5,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "camera_state",
+        "line": 54,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "update",
+        "line": 9,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_geometry.py",
+    "lines": 96,
+    "imports": [
+      {
+        "module": "camera_motion",
+        "names": [
+          "clamp"
+        ],
+        "line": 2
+      },
+      {
+        "module": "temporal",
+        "names": [
+          "number"
+        ],
+        "line": 3
+      }
+    ],
+    "definitions": [
+      {
+        "name": "base_size",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "subject_box",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "crop_rect",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "contains",
+        "line": 54,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "geometry",
+        "line": 60,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_metadata.py",
+    "lines": 181,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath",
+          "PureWindowsPath"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 11
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_digest",
+        "line": 19,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_sha",
+        "line": 23,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_absolute",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_checked_file",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_read",
+        "line": 49,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_finite",
+        "line": 61,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_planning_parts",
+        "line": 73,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_bound_clip",
+        "line": 83,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate_times",
+        "line": 98,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_existing_camera_metadata",
+        "line": 133,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify_existing_camera_metadata",
+        "line": 162,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "inside",
+        "line": 103,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_motion.py",
+    "lines": 178,
+    "imports": [
+      {
+        "module": "dataclasses",
+        "names": [
+          "dataclass"
+        ],
+        "line": 2
+      },
+      {
+        "module": "collections",
+        "names": [
+          "deque"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 4
+      }
+    ],
+    "definitions": [
+      {
+        "name": "clamp",
+        "line": 7,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "ease_in_out",
+        "line": 11,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "SmartZoomState",
+        "line": 16,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "Axis",
+        "line": 127,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "CameraMotion",
+        "line": 147,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 17,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reset_shot",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curve",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "decide",
+        "line": 45,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "advance",
+        "line": 132,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 148,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "move",
+        "line": 153,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "snapshot",
+        "line": 174,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_refinement.py",
+    "lines": 227,
+    "imports": [
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 3
+      },
+      {
+        "module": "director_config",
+        "names": [
+          "resolve_config"
+        ],
+        "line": 4
+      },
+      {
+        "module": "camera_evidence",
+        "names": [
+          "VisualTargetEvidence",
+          "camera_state"
+        ],
+        "line": 5
+      },
+      {
+        "module": "camera_geometry",
+        "names": [
+          "geometry",
+          "crop_rect",
+          "contains",
+          "base_size",
+          "subject_box"
+        ],
+        "line": 6
+      },
+      {
+        "module": "camera_motion",
+        "names": [
+          "CameraMotion"
+        ],
+        "line": 7
+      },
+      {
+        "module": "temporal",
+        "names": [
+          "IntervalCursor"
+        ],
+        "line": 8
+      },
+      {
+        "module": "broadcast_graphics",
+        "names": [
+          "face_safe_height"
+        ],
+        "line": 9
+      }
+    ],
+    "definitions": [
+      {
+        "name": "use_analyzer_director",
+        "line": 12,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_render_rect",
+        "line": 64,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "refine_camera_plan",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "valid",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "center_at",
+        "line": 44,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_revision.py",
+    "lines": 122,
+    "imports": [
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 6
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 10
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 12
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "safe_name"
+        ],
+        "line": 13
+      },
+      {
+        "module": "final_camera",
+        "names": [
+          "refine_from_existing_metadata"
+        ],
+        "line": 17
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "_canonical_hash",
+          "_caption_editorial_inputs",
+          "_inside_file"
+        ],
+        "line": 18
+      },
+      {
+        "module": "camera_metadata",
+        "names": [
+          "verify_existing_camera_metadata"
+        ],
+        "line": 61
+      },
+      {
+        "module": "utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 105
+      }
+    ],
+    "definitions": [
+      {
+        "name": "derive_camera_revision",
+        "line": 16,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/camera_verifier.py",
+    "lines": 47,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 4
+      },
+      {
+        "module": "micro_perception",
+        "names": [
+          "_detector"
+        ],
+        "line": 5
+      }
+    ],
+    "definitions": [
+      {
+        "name": "verify_camera",
+        "line": 8,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/combined_batch.py",
+    "lines": 592,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 9
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 12
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 14
+      },
+      {
+        "module": "utils",
+        "names": [
+          "youtube_id",
+          "load_json",
+          "write_json",
+          "safe_name"
+        ],
+        "line": 15
+      },
+      {
+        "module": "episode_approval",
+        "names": [
+          "episode_approval_matches"
+        ],
+        "line": 16
+      },
+      {
+        "module": "story_import",
+        "names": [
+          "MAX_STORY_SECONDS"
+        ],
+        "line": 17
+      },
+      {
+        "module": "evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 46
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 47
+      },
+      {
+        "module": "story_import",
+        "names": [
+          "plan_reviewed_stories"
+        ],
+        "line": 70
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "SeriesProject",
+          "_canonical_hash",
+          "_verified_supplemental_words",
+          "_validate_episode_window"
+        ],
+        "line": 153
+      },
+      {
+        "module": "tempfile",
+        "names": [
+          "TemporaryDirectory"
+        ],
+        "line": 330
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 331
+      },
+      {
+        "module": "scripts.REPARAR_STORY06_SEM_QWEN",
+        "names": [
+          "check_case",
+          "derive_unpreviewed_story"
+        ],
+        "line": 364
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 368
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "_canonical_hash"
+        ],
+        "line": 378
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 390
+      },
+      {
+        "module": null,
+        "names": [
+          "tempfile"
+        ],
+        "line": 391
+      },
+      {
+        "module": "second_curation_import",
+        "names": [
+          "read_package"
+        ],
+        "line": 31
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "OperationCancelled"
+        ],
+        "line": 463
+      },
+      {
+        "module": "episode_approval",
+        "names": [
+          "_matches"
+        ],
+        "line": 502
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_candidate_package",
+        "line": 20,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "prepare_stories",
+        "line": 44,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reel_batch_complete",
+        "line": 97,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_story_record",
+        "line": 118,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "RecoverySelectionError",
+        "line": 136,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "_verified_recovered_preview",
+        "line": 140,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_recovered_preview_info",
+        "line": 146,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_create_verified_story06_preview",
+        "line": 351,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_write_batch_json",
+        "line": 376,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_story_review_states",
+        "line": 409,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_stories_review_batch",
+        "line": 416,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_combined_batch",
+        "line": 554,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "on_story_progress",
+        "line": 576,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "on_reel_progress",
+        "line": 563,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/config.py",
+    "lines": 13,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "yaml"
+        ],
+        "line": 3
+      }
+    ],
+    "definitions": [
+      {
+        "name": "load_config",
+        "line": 5,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/crop_editor.py",
+    "lines": 508,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 8
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "dataclass",
+          "field"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 11
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk"
+        ],
+        "line": 12
+      },
+      {
+        "module": "render",
+        "names": [
+          "_crop_dims_for_zoom"
+        ],
+        "line": 14
+      },
+      {
+        "module": "timeline_editor",
+        "names": [
+          "timestamp"
+        ],
+        "line": 15
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image"
+        ],
+        "line": 335
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageTk"
+        ],
+        "line": 477
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_finite",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "FrameFit",
+        "line": 29,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "CropModel",
+        "line": 62,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "_bbox",
+        "line": 148,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "protected_regions",
+        "line": 186,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "crop_diagnostic",
+        "line": 249,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "CropEditor",
+        "line": 270,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__post_init__",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "scale",
+        "line": 41,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "offset",
+        "line": 45,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "to_canvas",
+        "line": 49,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "to_source",
+        "line": 53,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__post_init__",
+        "line": 71,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "rectangle",
+        "line": 79,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "set_position",
+        "line": 90,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "fit",
+        "line": 99,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_keyframes",
+        "line": 102,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "set_keyframes",
+        "line": 125,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "at",
+        "line": 130,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "active",
+        "line": 197,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "visit",
+        "line": 211,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 272,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "points",
+        "line": 314,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "points",
+        "line": 318,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "set_episode",
+        "line": 324,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "show_frame",
+        "line": 334,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_refresh_points",
+        "line": 363,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_draw_keyframes",
+        "line": 370,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_zoom",
+        "line": 385,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_press",
+        "line": 392,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_drag",
+        "line": 401,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_select_point",
+        "line": 413,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "add_keyframe",
+        "line": 422,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "delete_keyframe",
+        "line": 443,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "apply",
+        "line": 457,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "apply_source_preserve",
+        "line": 472,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "draw",
+        "line": 476,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "box",
+        "line": 490,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/curator.py",
+    "lines": 119,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json",
+          "math"
+        ],
+        "line": 3
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 4
+      },
+      {
+        "module": "ollama_client",
+        "names": [
+          "review_candidates"
+        ],
+        "line": 5
+      },
+      {
+        "module": "second_curation_decisions",
+        "names": [
+          "compile_decisions"
+        ],
+        "line": 44
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_overlap",
+        "line": 7,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_segment_context",
+        "line": 12,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_snap",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_title_from_text",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curate",
+        "line": 39,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/director_config.py",
+    "lines": 166,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 3
+      }
+    ],
+    "definitions": [
+      {
+        "name": "resolve_smart_zoom",
+        "line": 24,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "resolve_config",
+        "line": 97,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/duration_presets.py",
+    "lines": 86,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "dataclass"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 5
+      }
+    ],
+    "definitions": [
+      {
+        "name": "DurationPreset",
+        "line": 9,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "finite_seconds",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "get_preset",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_window",
+        "line": 51,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "duration_metadata",
+        "line": 60,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "contains",
+        "line": 16,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/editing_history.py",
+    "lines": 186,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 10
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 11
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 12
+      }
+    ],
+    "definitions": [
+      {
+        "name": "history_for",
+        "line": 24,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "snapshot_payload",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write_snapshot",
+        "line": 40,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "read_snapshot",
+        "line": 58,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "episodes_by_id",
+        "line": 70,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "affected_ids",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "invalidate_episode",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "invalidate_plan",
+        "line": 126,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "append_command",
+        "line": 145,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "restore_command",
+        "line": 162,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "unique",
+        "line": 101,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/editorial_copy.py",
+    "lines": 214,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 10
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_normal",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_inside",
+        "line": 41,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_observed_scene",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_editorial_copy",
+        "line": 55,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_narrative_roles",
+        "line": 144,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "confirmed_continuation",
+        "line": 200,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "add",
+        "line": 71,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "add",
+        "line": 154,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/episode_approval.py",
+    "lines": 91,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 5
+      },
+      {
+        "module": "functools",
+        "names": [
+          "lru_cache"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 7
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 8
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 9
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 10
+      },
+      {
+        "module": "media_effects",
+        "names": [
+          "effect_input_fingerprints"
+        ],
+        "line": 35
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_ffmpeg_version",
+        "line": 14,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "renderer_fingerprint",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "episode_signature",
+        "line": 28,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "record_episode_preview",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_matches",
+        "line": 61,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "approve_episode_preview",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "episode_approval_matches",
+        "line": 89,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/eta.py",
+    "lines": 76,
+    "imports": [
+      {
+        "module": "collections",
+        "names": [
+          "deque"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "platform"
+        ],
+        "line": 5
+      },
+      {
+        "module": "statistics",
+        "names": [
+          "median"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "time"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 10
+      },
+      {
+        "module": "functools",
+        "names": [
+          "lru_cache"
+        ],
+        "line": 11
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 12
+      }
+    ],
+    "definitions": [
+      {
+        "name": "gpu_profile",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "CuratorEta",
+        "line": 29,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "context",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "update",
+        "line": 45,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/evidence_source.py",
+    "lines": 420,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "base64"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 12
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "__version__"
+        ],
+        "line": 16
+      },
+      {
+        "module": "analysis_loader",
+        "names": [
+          "AnalysisBundle"
+        ],
+        "line": 17
+      },
+      {
+        "module": "second_curation_import",
+        "names": [
+          "read_package"
+        ],
+        "line": 18
+      },
+      {
+        "module": "second_curation_decisions",
+        "names": [
+          "compile_decisions"
+        ],
+        "line": 19
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_json",
+        "line": 62,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_document",
+        "line": 70,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_relative_ref",
+        "line": 76,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_directory_files",
+        "line": 85,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_rows",
+        "line": 150,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate_interval",
+        "line": 160,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_declared_status",
+        "line": 186,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_assemble",
+        "line": 217,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_evidence",
+        "line": 341,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "evidence_from_bundle",
+        "line": 399,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "read",
+        "line": 106,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/feedback.py",
+    "lines": 51,
+    "imports": [
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 3
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 5
+      },
+      {
+        "module": "jsonschema",
+        "names": [
+          "Draft202012Validator",
+          "FormatChecker"
+        ],
+        "line": 34
+      }
+    ],
+    "definitions": [
+      {
+        "name": "record_feedback",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "record_observed_performance",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "dated",
+        "line": 39,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/final_camera.py",
+    "lines": 165,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 3
+      },
+      {
+        "module": "micro_perception",
+        "names": [
+          "inspect_clip",
+          "open_clip_source"
+        ],
+        "line": 4
+      },
+      {
+        "module": "camera_refinement",
+        "names": [
+          "refine_camera_plan",
+          "use_analyzer_director"
+        ],
+        "line": 5
+      },
+      {
+        "module": "utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 6
+      },
+      {
+        "module": "broadcast_graphics",
+        "names": [
+          "inspect_candidate_graphics"
+        ],
+        "line": 7
+      },
+      {
+        "module": "storage",
+        "names": [
+          "media_lease"
+        ],
+        "line": 8
+      },
+      {
+        "module": "smart_composition",
+        "names": [
+          "improve_camera_plan"
+        ],
+        "line": 9
+      }
+    ],
+    "definitions": [
+      {
+        "name": "refine_from_existing_metadata",
+        "line": 12,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "refine_clip",
+        "line": 97,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_refine_clip",
+        "line": 102,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/full_handoff.py",
+    "lines": 300,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 7
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "base64"
+        ],
+        "line": 172
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_sanitize",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_json_bytes",
+        "line": 44,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_slug",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_lines",
+        "line": 52,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_overlap",
+        "line": 56,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_scene_description",
+        "line": 60,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_safe_relative",
+        "line": 76,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_handoff",
+        "line": 83,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "export_handoff",
+        "line": 111,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "add",
+        "line": 201,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/gui.py",
+    "lines": 598,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 2
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk",
+          "filedialog",
+          "messagebox"
+        ],
+        "line": 3
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "threading",
+          "queue",
+          "subprocess",
+          "os",
+          "time",
+          "json"
+        ],
+        "line": 5
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 6
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 7
+      },
+      {
+        "module": "config",
+        "names": [
+          "load_config"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pipeline",
+        "names": [
+          "Pipeline"
+        ],
+        "line": 12
+      },
+      {
+        "module": "eta",
+        "names": [
+          "CuratorEta"
+        ],
+        "line": 183
+      },
+      {
+        "module": "series_review",
+        "names": [
+          "SeriesReview"
+        ],
+        "line": 552
+      },
+      {
+        "module": "storage_dialog",
+        "names": [
+          "show_cleanup"
+        ],
+        "line": 592
+      },
+      {
+        "module": "second_curation_import",
+        "names": [
+          "import_second_curation"
+        ],
+        "line": 502
+      },
+      {
+        "module": "source_video",
+        "names": [
+          "SourceUnavailable"
+        ],
+        "line": 527
+      },
+      {
+        "module": "combined_batch",
+        "names": [
+          "render_combined_batch"
+        ],
+        "line": 519
+      }
+    ],
+    "definitions": [
+      {
+        "name": "Pipeline",
+        "line": 10,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_fmt_seconds",
+        "line": 15,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "App",
+        "line": 30,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "launch",
+        "line": 597,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_build",
+        "line": 59,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_pathrow",
+        "line": 151,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write",
+        "line": 169,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "progress",
+        "line": 172,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_set_buttons",
+        "line": 178,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_reset_progress",
+        "line": 182,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_handle_progress",
+        "line": 200,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_poll",
+        "line": 292,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_show_missing_media",
+        "line": 353,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_remember_session",
+        "line": 357,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_restore_session",
+        "line": 369,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_schedule_state_refresh",
+        "line": 385,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_refresh_plan_state",
+        "line": 396,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_sync",
+        "line": 454,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "work",
+        "line": 459,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "open_results",
+        "line": 539,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "open_series_review",
+        "line": 548,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "select_media",
+        "line": 555,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "missing_media_dialog",
+        "line": 564,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "clean_heavy",
+        "line": 586,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "pick",
+        "line": 158,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "read_saved_state",
+        "line": 414,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "send",
+        "line": 491,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write",
+        "line": 493,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "progress",
+        "line": 495,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "runit",
+        "line": 498,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "choose",
+        "line": 569,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "capture",
+        "line": 419,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "retry",
+        "line": 578,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/import_smoke.py",
+    "lines": 43,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 3
+      },
+      {
+        "module": "evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 4
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "plan_series"
+        ],
+        "line": 5
+      }
+    ],
+    "definitions": [
+      {
+        "name": "inspect_media",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "smoke_import",
+        "line": 22,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/interview_layout.py",
+    "lines": 14,
+    "imports": [],
+    "definitions": [
+      {
+        "name": "choose_layout",
+        "line": 4,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/local_player.py",
+    "lines": 110,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "queue"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "threading"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "time"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 9
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 60
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageTk"
+        ],
+        "line": 95
+      }
+    ],
+    "definitions": [
+      {
+        "name": "LocalPlayer",
+        "line": 13,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 14,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_destroy",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "stop",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "show",
+        "line": 43,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_poll",
+        "line": 89,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "pause",
+        "line": 105,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "resume",
+        "line": 108,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "decode",
+        "line": 59,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/media_effects.py",
+    "lines": 212,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 9
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 11
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw"
+        ],
+        "line": 13
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 15
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_number",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_hash",
+        "line": 34,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_audio",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_watermark",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "effect_input_fingerprints",
+        "line": 103,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_watermark_png",
+        "line": 121,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "extend_render_command",
+        "line": 147,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/micro_perception.py",
+    "lines": 146,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 4
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 7
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json",
+          "file_fingerprint"
+        ],
+        "line": 8
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 9
+      },
+      {
+        "module": "broadcast_graphics",
+        "names": [
+          "detect_graphics"
+        ],
+        "line": 10
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_iou",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_detector",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "open_clip_source",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "inspect_clip",
+        "line": 51,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "detect",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "flush_graphics",
+        "line": 75,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/ollama_client.py",
+    "lines": 58,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib",
+          "json",
+          "requests"
+        ],
+        "line": 2
+      }
+    ],
+    "definitions": [
+      {
+        "name": "review_candidates",
+        "line": 4,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/persisted_plan.py",
+    "lines": 486,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "contextlib",
+        "names": [
+          "contextmanager"
+        ],
+        "line": 9
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 10
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "fields"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 15
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 16
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 17
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 18
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 19
+      },
+      {
+        "module": "analysis_loader",
+        "names": [
+          "AnalysisBundle"
+        ],
+        "line": 21
+      },
+      {
+        "module": null,
+        "names": [
+          "ctypes"
+        ],
+        "line": 255
+      },
+      {
+        "module": "ctypes",
+        "names": [
+          "wintypes"
+        ],
+        "line": 256
+      },
+      {
+        "module": "media_effects",
+        "names": [
+          "effect_input_fingerprints"
+        ],
+        "line": 153
+      }
+    ],
+    "definitions": [
+      {
+        "name": "StalePlanError",
+        "line": 61,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "canonical",
+        "line": 65,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_json_bytes",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_fingerprint",
+        "line": 91,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_file_hash",
+        "line": 95,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_semantic",
+        "line": 103,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_settings",
+        "line": 114,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_camera_projection",
+        "line": 128,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_editorial_projection",
+        "line": 146,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "editorial_fingerprint",
+        "line": 160,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_bundle_data",
+        "line": 165,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_source_projection",
+        "line": 179,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "source_fingerprint",
+        "line": 185,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_fingerprint",
+        "line": 189,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_differences",
+        "line": 201,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "compare_settings",
+        "line": 219,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_read_json",
+        "line": 228,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_atomic_json",
+        "line": 236,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_pid_alive",
+        "line": 251,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_new_lock",
+        "line": 279,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_exclusive_lock",
+        "line": 288,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "project_lock",
+        "line": 331,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "PlanStore",
+        "line": 337,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 338,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "revision_dir",
+        "line": 342,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_reference",
+        "line": 351,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate",
+        "line": 361,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create",
+        "line": 396,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load",
+        "line": 450,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_write_state",
+        "line": 459,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save_state",
+        "line": 466,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/pipeline.py",
+    "lines": 521,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 3
+      },
+      {
+        "module": "functools",
+        "names": [
+          "lru_cache"
+        ],
+        "line": 4
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 7
+      },
+      {
+        "module": "analysis_loader",
+        "names": [
+          "find_analysis",
+          "load_bundle"
+        ],
+        "line": 9
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash",
+          "record_preview",
+          "approve_preview",
+          "approval_matches"
+        ],
+        "line": 10
+      },
+      {
+        "module": "camera",
+        "names": [
+          "build_camera_plan"
+        ],
+        "line": 11
+      },
+      {
+        "module": "curator",
+        "names": [
+          "curate"
+        ],
+        "line": 12
+      },
+      {
+        "module": "persisted_plan",
+        "names": [
+          "PlanStore",
+          "DOCUMENT_TYPE",
+          "project_lock",
+          "render_fingerprint",
+          "compare_settings",
+          "_atomic_json",
+          "_fingerprint",
+          "canonical",
+          "_differences",
+          "StalePlanError"
+        ],
+        "line": 13
+      },
+      {
+        "module": "render",
+        "names": [
+          "render_clip"
+        ],
+        "line": 16
+      },
+      {
+        "module": "review",
+        "names": [
+          "build_board",
+          "write_handoff"
+        ],
+        "line": 17
+      },
+      {
+        "module": "source_video",
+        "names": [
+          "resolve_source",
+          "SourceUnavailable"
+        ],
+        "line": 18
+      },
+      {
+        "module": "thumbnails",
+        "names": [
+          "create_assets"
+        ],
+        "line": 19
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json",
+          "youtube_id",
+          "safe_name",
+          "run"
+        ],
+        "line": 20
+      },
+      {
+        "module": "second_curation_import",
+        "names": [
+          "registered_input"
+        ],
+        "line": 256
+      },
+      {
+        "module": "pipeline_recovery",
+        "names": [
+          "recover_local_plan"
+        ],
+        "line": 90
+      },
+      {
+        "module": "final_camera",
+        "names": [
+          "refine_clip"
+        ],
+        "line": 295
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_ffmpeg_version",
+        "line": 24,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "renderer_signature",
+        "line": 28,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "Pipeline",
+        "line": 35,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 38,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curation_root",
+        "line": 45,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_emit",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_state",
+        "line": 58,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_project_dir",
+        "line": 68,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_load",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_verified_batch_artifacts",
+        "line": 116,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_recover_batch_state",
+        "line": 133,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "read_state",
+        "line": 178,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "recover_legacy",
+        "line": 184,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "revise_plan",
+        "line": 190,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_video",
+        "line": 219,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_prepare_curation",
+        "line": 255,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curate_only",
+        "line": 328,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_render_cfg",
+        "line": 334,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_binding",
+        "line": 340,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate_preview",
+        "line": 347,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_checked_preview",
+        "line": 356,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_one",
+        "line": 385,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "approve_test",
+        "line": 424,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_all",
+        "line": 442,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/pipeline_recovery.py",
+    "lines": 73,
+    "imports": [
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": "analysis_loader",
+        "names": [
+          "AnalysisBundle"
+        ],
+        "line": 5
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash",
+          "plan_signature"
+        ],
+        "line": 6
+      },
+      {
+        "module": "persisted_plan",
+        "names": [
+          "PlanStore"
+        ],
+        "line": 7
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "safe_name"
+        ],
+        "line": 8
+      }
+    ],
+    "definitions": [
+      {
+        "name": "recover_local_plan",
+        "line": 11,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/render.py",
+    "lines": 528,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json",
+          "subprocess"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 4
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 5
+      },
+      {
+        "module": "utils",
+        "names": [
+          "run"
+        ],
+        "line": 6
+      },
+      {
+        "module": "subtitles",
+        "names": [
+          "write_subtitles"
+        ],
+        "line": 7
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "create_title_card"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 124
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 206
+      },
+      {
+        "module": "storage",
+        "names": [
+          "media_lease"
+        ],
+        "line": 440
+      },
+      {
+        "module": "camera_verifier",
+        "names": [
+          "verify_camera"
+        ],
+        "line": 441
+      },
+      {
+        "module": "utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 442
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 493
+      },
+      {
+        "module": "utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 494
+      },
+      {
+        "module": "persisted_plan",
+        "names": [
+          "render_settings",
+          "_fingerprint"
+        ],
+        "line": 495
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_ffmpeg_progress_fraction",
+        "line": 12,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_run_ffmpeg_with_progress",
+        "line": 20,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "ffmpeg_has_nvenc",
+        "line": 44,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_ass_filter_path",
+        "line": 52,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_video_dims",
+        "line": 57,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_crop_for",
+        "line": 67,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_crop_dims_for_zoom",
+        "line": 84,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_motion_crop_filter",
+        "line": 97,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_eased_zoom_crop_filter",
+        "line": 118,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_graphics_split_parts",
+        "line": 151,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_graphics_strip_parts",
+        "line": 172,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_graphics_crop_parts",
+        "line": 182,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_focus_transition_parts",
+        "line": 204,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_adaptive_camera_parts",
+        "line": 247,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_static_camera_parts",
+        "line": 341,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_finish_video_parts",
+        "line": 371,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_base_cmd",
+        "line": 392,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_clip",
+        "line": 439,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_render_clip",
+        "line": 452,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_output",
+        "line": 515,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "eased",
+        "line": 234,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/review.py",
+    "lines": 64,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw",
+          "ImageFont"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "json",
+          "html"
+        ],
+        "line": 4
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_font",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_board",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write_handoff",
+        "line": 51,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/second_curation_decisions.py",
+    "lines": 120,
+    "imports": [
+      {
+        "module": "abc",
+        "names": [
+          "ABC",
+          "abstractmethod"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "jsonschema"
+        ],
+        "line": 36
+      }
+    ],
+    "definitions": [
+      {
+        "name": "compile_decisions",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "SecondCuratorProvider",
+        "line": 108,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "ManualJsonProvider",
+        "line": 114,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "curate",
+        "line": 110,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 115,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curate",
+        "line": 118,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/second_curation_import.py",
+    "lines": 130,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 7
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath"
+        ],
+        "line": 8
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 9
+      },
+      {
+        "module": "second_curation_decisions",
+        "names": [
+          "compile_decisions"
+        ],
+        "line": 10
+      },
+      {
+        "module": "feedback",
+        "names": [
+          "record_feedback"
+        ],
+        "line": 120
+      }
+    ],
+    "definitions": [
+      {
+        "name": "read_package",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "registered_input",
+        "line": 54,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "import_second_curation",
+        "line": 62,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/series_planner.py",
+    "lines": 935,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "bisect",
+        "names": [
+          "bisect_left",
+          "bisect_right"
+        ],
+        "line": 9
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 13
+      },
+      {
+        "module": "duration_presets",
+        "names": [
+          "DEFAULT_DURATION_PRESET",
+          "duration_metadata",
+          "finite_seconds",
+          "get_preset",
+          "validate_window"
+        ],
+        "line": 15
+      },
+      {
+        "module": "editorial_copy",
+        "names": [
+          "build_editorial_copy",
+          "build_narrative_roles",
+          "confirmed_continuation"
+        ],
+        "line": 17
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_hash",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_rows",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_interval",
+        "line": 46,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_overlaps",
+        "line": 54,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_merged",
+        "line": 59,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_union",
+        "line": 69,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_intersection",
+        "line": 73,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_is_commercial",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_sentence_end",
+        "line": 101,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_prepare",
+        "line": 109,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_units",
+        "line": 193,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_make_unit",
+        "line": 248,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_groups",
+        "line": 259,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_literal",
+        "line": 298,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_episode",
+        "line": 308,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_continuity",
+        "line": 397,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_independent",
+        "line": 420,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_coverage",
+        "line": 449,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "plan_series",
+        "line": 506,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "update_episode",
+        "line": 540,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reorder_episodes",
+        "line": 670,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "merge_episodes",
+        "line": 701,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_mark_split_stale",
+        "line": 808,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "split_episode",
+        "line": 830,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "rank",
+        "line": 436,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/series_review.py",
+    "lines": 689,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 4
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "queue"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "threading"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 8
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk",
+          "filedialog",
+          "messagebox"
+        ],
+        "line": 9
+      },
+      {
+        "module": "duration_presets",
+        "names": [
+          "DURATION_PRESETS",
+          "STORY_60_PRESET"
+        ],
+        "line": 10
+      },
+      {
+        "module": "series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 11
+      },
+      {
+        "module": "local_player",
+        "names": [
+          "LocalPlayer"
+        ],
+        "line": 12
+      },
+      {
+        "module": "timeline_editor",
+        "names": [
+          "EpisodeTimeline",
+          "timestamp"
+        ],
+        "line": 13
+      },
+      {
+        "module": "combined_batch",
+        "names": [
+          "_recovered_preview_info",
+          "_STORY06_ID"
+        ],
+        "line": 45
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "safe_name"
+        ],
+        "line": 34
+      },
+      {
+        "module": "evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 285
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageTk"
+        ],
+        "line": 448
+      },
+      {
+        "module": "media_effects",
+        "names": [
+          "effect_input_fingerprints"
+        ],
+        "line": 489
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "resolve_subtitle_preset"
+        ],
+        "line": 504
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "resolve_subtitle_preset"
+        ],
+        "line": 517
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 651
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 652
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_load_review_project",
+        "line": 20,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "SeriesReview",
+        "line": 58,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 59,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_build",
+        "line": 72,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_task",
+        "line": 230,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_poll",
+        "line": 246,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_import",
+        "line": 279,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_import_zip",
+        "line": 291,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_import_stories",
+        "line": 294,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_import_directory",
+        "line": 315,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_resume",
+        "line": 318,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_replan",
+        "line": 339,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_refresh",
+        "line": 347,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_page",
+        "line": 392,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_selected",
+        "line": 397,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_select",
+        "line": 400,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_choose_media",
+        "line": 458,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_choose_canonical",
+        "line": 464,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_save",
+        "line": 469,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_save_style",
+        "line": 497,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_load_style",
+        "line": 510,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_operate",
+        "line": 524,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_approve",
+        "line": 534,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_reject",
+        "line": 544,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_split",
+        "line": 550,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_history",
+        "line": 560,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_timeline_select",
+        "line": 568,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_timeline_seek",
+        "line": 580,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_apply_limits",
+        "line": 592,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_step_episode",
+        "line": 603,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_merge_next",
+        "line": 610,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_play_original",
+        "line": 620,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_play_preview",
+        "line": 627,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_seek",
+        "line": 635,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_waveform",
+        "line": 645,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_choose_music",
+        "line": 667,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_choose_cover",
+        "line": 672,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_stop",
+        "line": 682,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_close",
+        "line": 686,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "worker",
+        "line": 236,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create",
+        "line": 284,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create",
+        "line": 308,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "worker",
+        "line": 649,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/series_workflow.py",
+    "lines": 934,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "queue"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "threading"
+        ],
+        "line": 13
+      },
+      {
+        "module": "types",
+        "names": [
+          "SimpleNamespace"
+        ],
+        "line": 14
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 15
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 17
+      },
+      {
+        "module": "episode_approval",
+        "names": [
+          "episode_signature",
+          "record_episode_preview",
+          "approve_episode_preview",
+          "episode_approval_matches",
+          "renderer_fingerprint"
+        ],
+        "line": 18
+      },
+      {
+        "module": "utils",
+        "names": [
+          "load_json",
+          "write_json",
+          "safe_name",
+          "run"
+        ],
+        "line": 20
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "_align_words"
+        ],
+        "line": 119
+      },
+      {
+        "module": "camera",
+        "names": [
+          "build_camera_plan"
+        ],
+        "line": 215
+      },
+      {
+        "module": "render",
+        "names": [
+          "_ffmpeg_progress_fraction"
+        ],
+        "line": 236
+      },
+      {
+        "module": "render",
+        "names": [
+          "validate_output"
+        ],
+        "line": 276
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 287
+      },
+      {
+        "module": "camera_revision",
+        "names": [
+          "derive_camera_revision"
+        ],
+        "line": 323
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "invalidate_episode"
+        ],
+        "line": 423
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 503
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "plan_series"
+        ],
+        "line": 528
+      },
+      {
+        "module": "story_import",
+        "names": [
+          "plan_reviewed_stories"
+        ],
+        "line": 549
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "history_for"
+        ],
+        "line": 581
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "history_for"
+        ],
+        "line": 586
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "history_for"
+        ],
+        "line": 591
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "affected_ids",
+          "invalidate_plan",
+          "append_command"
+        ],
+        "line": 610
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "restore_command"
+        ],
+        "line": 625
+      },
+      {
+        "module": "editing_history",
+        "names": [
+          "restore_command"
+        ],
+        "line": 630
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "update_episode"
+        ],
+        "line": 671
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "resolve_subtitle_preset"
+        ],
+        "line": 679
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "reorder_episodes"
+        ],
+        "line": 700
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "split_episode"
+        ],
+        "line": 707
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "merge_episodes"
+        ],
+        "line": 716
+      },
+      {
+        "module": "full_handoff",
+        "names": [
+          "export_handoff"
+        ],
+        "line": 723
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 750
+      },
+      {
+        "module": "thumbnail_presets",
+        "names": [
+          "generate_thumbnail_choices"
+        ],
+        "line": 751
+      },
+      {
+        "module": "render",
+        "names": [
+          "_base_cmd",
+          "ffmpeg_has_nvenc"
+        ],
+        "line": 752
+      },
+      {
+        "module": "title_presets",
+        "names": [
+          "create_episode_title_card"
+        ],
+        "line": 753
+      },
+      {
+        "module": "media_effects",
+        "names": [
+          "extend_render_command"
+        ],
+        "line": 754
+      },
+      {
+        "module": "subtitle_presets",
+        "names": [
+          "resolve_subtitle_preset"
+        ],
+        "line": 350
+      }
+    ],
+    "definitions": [
+      {
+        "name": "OperationCancelled",
+        "line": 23,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "_canonical_hash",
+        "line": 27,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_transcript_fingerprint",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_caption_editorial_inputs",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_inside_file",
+        "line": 50,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate_episode_window",
+        "line": 58,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_verified_supplemental_words",
+        "line": 71,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "conservative_camera",
+        "line": 156,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_encode",
+        "line": 234,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_episode_media",
+        "line": 275,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "SeriesProject",
+        "line": 308,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "read",
+        "line": 241,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 309,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "derive_camera_revision",
+        "line": 321,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "derive_caption_revision",
+        "line": 327,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_verify_caption_revision",
+        "line": 473,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "prepare_caption_timeline",
+        "line": 501,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create",
+        "line": 527,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create_stories",
+        "line": 544,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "episodes",
+        "line": 570,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "episode",
+        "line": 573,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "can_undo",
+        "line": 580,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "can_redo",
+        "line": 585,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "history_status",
+        "line": 590,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_commit_plan",
+        "line": 598,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_editor_command",
+        "line": 609,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "undo",
+        "line": 624,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "redo",
+        "line": 629,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "folder",
+        "line": 634,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save",
+        "line": 642,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_playlist",
+        "line": 662,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "edit",
+        "line": 670,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reject",
+        "line": 688,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reorder",
+        "line": 699,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "split",
+        "line": 706,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "merge",
+        "line": 715,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "export",
+        "line": 722,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_media",
+        "line": 737,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "signature",
+        "line": 744,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render",
+        "line": 749,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "approve",
+        "line": 907,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "render_approved",
+        "line": 922,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "raw_key",
+        "line": 140,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/smart_composition.py",
+    "lines": 386,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 11
+      },
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ],
+        "line": 12
+      },
+      {
+        "module": "camera_geometry",
+        "names": [
+          "base_size",
+          "contains",
+          "crop_rect",
+          "geometry",
+          "subject_box"
+        ],
+        "line": 14
+      },
+      {
+        "module": "director_config",
+        "names": [
+          "resolve_config"
+        ],
+        "line": 15
+      },
+      {
+        "module": "camera_motion",
+        "names": [
+          "ease_in_out"
+        ],
+        "line": 16
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_finite",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_bbox",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_map_evidence",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_host_zoom",
+        "line": 78,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_slice_segment",
+        "line": 145,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_protect_measured_host",
+        "line": 165,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_stabilize_focus",
+        "line": 206,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_mark_focus_transitions",
+        "line": 240,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_map_compose",
+        "line": 264,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "improve_camera_plan",
+        "line": 307,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "at",
+        "line": 154,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/source_video.py",
+    "lines": 46,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": "utils",
+        "names": [
+          "youtube_id",
+          "safe_name",
+          "run",
+          "which"
+        ],
+        "line": 3
+      },
+      {
+        "module": "approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 11
+      }
+    ],
+    "definitions": [
+      {
+        "name": "SourceUnavailable",
+        "line": 6,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "_verified",
+        "line": 10,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "resolve_source",
+        "line": 17,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/storage.py",
+    "lines": 244,
+    "imports": [
+      {
+        "module": "contextlib",
+        "names": [
+          "contextmanager"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 5
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "time"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "ctypes"
+        ],
+        "line": 35
+      },
+      {
+        "module": "ctypes",
+        "names": [
+          "wintypes"
+        ],
+        "line": 36
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_pid_alive",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "media_in_use",
+        "line": 59,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "media_lease",
+        "line": 74,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_is_link",
+        "line": 84,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_without_links",
+        "line": 90,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_sha256",
+        "line": 99,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_registrations",
+        "line": 104,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_protected_reason",
+        "line": 136,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_removable",
+        "line": 162,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_files_without_links",
+        "line": 174,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "cleanup_preview",
+        "line": 191,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "execute_cleanup",
+        "line": 220,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/storage_dialog.py",
+    "lines": 51,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": "storage",
+        "names": [
+          "cleanup_preview",
+          "execute_cleanup"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 7
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk",
+          "messagebox"
+        ],
+        "line": 8
+      }
+    ],
+    "definitions": [
+      {
+        "name": "show_cleanup",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "refresh",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "remove",
+        "line": 38,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/story_import.py",
+    "lines": 180,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 5
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 9
+      },
+      {
+        "module": "math",
+        "names": [
+          "isfinite"
+        ],
+        "line": 10
+      },
+      {
+        "module": "duration_presets",
+        "names": [
+          "duration_metadata"
+        ],
+        "line": 12
+      },
+      {
+        "module": "series_planner",
+        "names": [
+          "_prepare",
+          "_units",
+          "_episode",
+          "_coverage"
+        ],
+        "line": 13
+      },
+      {
+        "module": "duration_presets",
+        "names": [
+          "get_preset"
+        ],
+        "line": 179
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_fingerprint",
+        "line": 19,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_numerical_bounds",
+        "line": 24,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_split_at_sentences",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "plan_reviewed_stories",
+        "line": 49,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_story_preset",
+        "line": 178,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/subtitles.py",
+    "lines": 244,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ],
+        "line": 3
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 6
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 8
+      }
+    ],
+    "definitions": [
+      {
+        "name": "ass_time",
+        "line": 11,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "srt_time",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "esc_ass",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_ass_wrapped_text",
+        "line": 25,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "wrap_caption",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_normalized_word",
+        "line": 49,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_collect_aligned_words",
+        "line": 53,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_measured_lines",
+        "line": 79,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_fitted_text",
+        "line": 101,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "measured_karaoke_body",
+        "line": 110,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_karaoke_chunk",
+        "line": 149,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write_subtitles",
+        "line": 160,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "width",
+        "line": 83,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "color",
+        "line": 120,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/subtitle_presets.py",
+    "lines": 767,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": "functools",
+        "names": [
+          "lru_cache"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 14
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 15
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 16
+      },
+      {
+        "module": "subtitles",
+        "names": [
+          "esc_ass",
+          "measured_karaoke_body",
+          "srt_time"
+        ],
+        "line": 18
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 19
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_finite",
+        "line": 49,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "resolve_subtitle_preset",
+        "line": 59,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save_subtitle_preset",
+        "line": 126,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_subtitle_preset",
+        "line": 134,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_get",
+        "line": 138,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_ass_time",
+        "line": 142,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_ass_color",
+        "line": 148,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_token",
+        "line": 153,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_raw_words",
+        "line": 157,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_literal_word_spans",
+        "line": 167,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_align_words",
+        "line": 210,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_overlaps",
+        "line": 252,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_font_resolution",
+        "line": 261,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_sized_font",
+        "line": 281,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_measured_wrap",
+        "line": 285,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_caption_layout",
+        "line": 307,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_styled_body",
+        "line": 351,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_header",
+        "line": 369,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_digest",
+        "line": 393,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "canonical_timeline_hash",
+        "line": 398,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_transcript_reference",
+        "line": 403,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_block_groups",
+        "line": 419,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_canonical_events",
+        "line": 474,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_validate_frozen_timeline",
+        "line": 552,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_timed_block_body",
+        "line": 641,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write_episode_subtitles",
+        "line": 680,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "append",
+        "line": 477,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "layout_for",
+        "line": 700,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/temporal.py",
+    "lines": 72,
+    "imports": [
+      {
+        "module": "bisect",
+        "names": [
+          "bisect_left",
+          "bisect_right"
+        ],
+        "line": 2
+      },
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 4
+      }
+    ],
+    "definitions": [
+      {
+        "name": "number",
+        "line": 7,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "IntervalCursor",
+        "line": 11,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "VisualIndex",
+        "line": 34,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "SampleIndex",
+        "line": 54,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "union_duration",
+        "line": 67,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "at",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "near",
+        "line": 43,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 55,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "near",
+        "line": 59,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/thumbnails.py",
+    "lines": 57,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 3
+      },
+      {
+        "module": "utils",
+        "names": [
+          "run"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil",
+          "json"
+        ],
+        "line": 53
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_score",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "select_candidates",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "extract_frame",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create_assets",
+        "line": 34,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "score_item",
+        "line": 47,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/thumbnail_presets.py",
+    "lines": 248,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 6
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 8
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw",
+          "ImageOps"
+        ],
+        "line": 10
+      },
+      {
+        "module": "thumbnails",
+        "names": [
+          "extract_frame",
+          "select_candidates"
+        ],
+        "line": 12
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 13
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_sha256",
+        "line": 24,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_finite",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_get",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_literal_excerpt",
+        "line": 46,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_title_records",
+        "line": 65,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_wrap",
+        "line": 92,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_draw_fitted_text",
+        "line": 103,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "generate_thumbnail_choices",
+        "line": 126,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "Samples",
+        "line": 157,
+        "kind": "ClassDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/timeline_editor.py",
+    "lines": 171,
+    "imports": [
+      {
+        "module": "bisect",
+        "names": [
+          "bisect_left"
+        ],
+        "line": 2
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "dataclass",
+          "field"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 5
+      },
+      {
+        "module": "tkinter",
+        "names": [
+          "ttk"
+        ],
+        "line": 6
+      }
+    ],
+    "definitions": [
+      {
+        "name": "timestamp",
+        "line": 9,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "TimelineRange",
+        "line": 15,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "EpisodeTimeline",
+        "line": 67,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__post_init__",
+        "line": 23,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "select",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "to_pixel",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "from_pixel",
+        "line": 38,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "drag",
+        "line": 41,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "zoom",
+        "line": 54,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "pan",
+        "line": 61,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 68,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "set_project",
+        "line": 93,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "select_episode",
+        "line": 103,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "set_playhead",
+        "line": 109,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_width",
+        "line": 115,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_zoom",
+        "line": 116,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_pan",
+        "line": 117,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_info",
+        "line": 119,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "draw",
+        "line": 122,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_press",
+        "line": 156,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_drag",
+        "line": 168,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/title_card.py",
+    "lines": 147,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 4
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw",
+          "ImageFont"
+        ],
+        "line": 5
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_font_candidates",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_load_font",
+        "line": 25,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_text_width",
+        "line": 38,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_balanced_two_lines",
+        "line": 45,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create_title_card",
+        "line": 67,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/title_presets.py",
+    "lines": 60,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw"
+        ],
+        "line": 3
+      },
+      {
+        "module": "title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 4
+      },
+      {
+        "module": "utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 5
+      }
+    ],
+    "definitions": [
+      {
+        "name": "create_episode_title_card",
+        "line": 8,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/utils.py",
+    "lines": 44,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 1
+      },
+      {
+        "module": null,
+        "names": [
+          "json",
+          "re",
+          "subprocess",
+          "shutil",
+          "hashlib"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": "urllib.parse",
+        "names": [
+          "urlparse",
+          "parse_qs"
+        ],
+        "line": 4
+      }
+    ],
+    "definitions": [
+      {
+        "name": "load_json",
+        "line": 6,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "write_json",
+        "line": 12,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "youtube_id",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "safe_name",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "run",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "which",
+        "line": 41,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "file_fingerprint",
+        "line": 43,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "ldporto_curator/__init__.py",
+    "lines": 1,
+    "imports": [],
+    "definitions": []
+  },
+  {
+    "path": "scripts/build_camera_update.py",
+    "lines": 166,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 4
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 13
+      }
+    ],
+    "definitions": [
+      {
+        "name": "sha",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reject_links",
+        "line": 27,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "workspace_path",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "allowed_path",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "copy_verified",
+        "line": 67,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build",
+        "line": 75,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/build_caption_update.py",
+    "lines": 145,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 4
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 12
+      }
+    ],
+    "definitions": [
+      {
+        "name": "sha",
+        "line": 17,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "reject_links",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "validate_tree",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "workspace_path",
+        "line": 39,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "copy_verified",
+        "line": 55,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build",
+        "line": 65,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/capture_render_p0_ui.py",
+    "lines": 200,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "contextlib",
+        "names": [
+          "ExitStack"
+        ],
+        "line": 9
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 10
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 12
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 15
+      },
+      {
+        "module": null,
+        "names": [
+          "time"
+        ],
+        "line": 16
+      },
+      {
+        "module": "unittest.mock",
+        "names": [
+          "patch"
+        ],
+        "line": 17
+      },
+      {
+        "module": null,
+        "names": [
+          "yaml"
+        ],
+        "line": 22
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "ImageGrab"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.gui",
+        "names": [
+          "App"
+        ],
+        "line": 24
+      },
+      {
+        "module": "scripts.validate_render_p0",
+        "names": [
+          "EVIDENCE",
+          "artifact",
+          "file_hash",
+          "original_hashes",
+          "read_json",
+          "save_json"
+        ],
+        "line": 25
+      }
+    ],
+    "definitions": [
+      {
+        "name": "hashes",
+        "line": 28,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "capture",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "perform",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "instantiate",
+        "line": 79,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "close_app",
+        "line": 88,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "displayed_fingerprint",
+        "line": 101,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 105,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/capture_v5_ui.py",
+    "lines": 51,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "time"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "tkinter"
+        ],
+        "line": 6
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 10
+      },
+      {
+        "module": "ldporto_curator.series_review",
+        "names": [
+          "SeriesReview"
+        ],
+        "line": 11
+      },
+      {
+        "module": "ldporto_curator.series_review",
+        "names": [
+          "PRESET_LABELS",
+          "PRESET_KEYS"
+        ],
+        "line": 12
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 13
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "ImageGrab"
+        ],
+        "line": 14
+      }
+    ],
+    "definitions": [
+      {
+        "name": "main",
+        "line": 17,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/demo_curator_v5.py",
+    "lines": 148,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "io"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 5
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "wave"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 11
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 15
+      },
+      {
+        "module": "ldporto_curator.evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 16
+      },
+      {
+        "module": "ldporto_curator.full_handoff",
+        "names": [
+          "validate_handoff"
+        ],
+        "line": 17
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 18
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 19
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json",
+          "run"
+        ],
+        "line": 20
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw"
+        ],
+        "line": 21
+      },
+      {
+        "module": "ldporto_curator.title_card",
+        "names": [
+          "_load_font"
+        ],
+        "line": 22
+      }
+    ],
+    "definitions": [
+      {
+        "name": "build_fixture",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 120,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "lines": 179,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 10
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "tempfile"
+        ],
+        "line": 15
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "_verified_supplemental_words"
+        ],
+        "line": 30
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject",
+          "_canonical_hash"
+        ],
+        "line": 64
+      },
+      {
+        "module": "ldporto_curator.micro_perception",
+        "names": [
+          "inspect_clip"
+        ],
+        "line": 65
+      },
+      {
+        "module": "ldporto_curator.camera_refinement",
+        "names": [
+          "refine_camera_plan"
+        ],
+        "line": 66
+      },
+      {
+        "module": "ldporto_curator.smart_composition",
+        "names": [
+          "improve_camera_plan"
+        ],
+        "line": 67
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 68
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 69
+      },
+      {
+        "module": "ldporto_curator.editing_history",
+        "names": [
+          "invalidate_episode"
+        ],
+        "line": 79
+      },
+      {
+        "module": "ldporto_curator.camera_geometry",
+        "names": [
+          "base_size"
+        ],
+        "line": 80
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 96
+      },
+      {
+        "module": "tempfile",
+        "names": [
+          "TemporaryDirectory"
+        ],
+        "line": 97
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 160
+      }
+    ],
+    "definitions": [
+      {
+        "name": "digest",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "prepare",
+        "line": 29,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "make_camera_reviews",
+        "line": 63,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 151,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/RECUPERAR_OUTPUT_LDPORTO.py",
+    "lines": 333,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 11
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "tempfile"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "zipfile"
+        ],
+        "line": 15
+      },
+      {
+        "module": "ldporto_curator.evidence_source",
+        "names": [
+          "load_evidence"
+        ],
+        "line": 90
+      },
+      {
+        "module": "ldporto_curator.second_curation_import",
+        "names": [
+          "read_package"
+        ],
+        "line": 91
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 120
+      },
+      {
+        "module": "ldporto_curator.story_import",
+        "names": [
+          "plan_reviewed_stories"
+        ],
+        "line": 130
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "_verified_supplemental_words"
+        ],
+        "line": 131
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 132
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "_canonical_hash"
+        ],
+        "line": 185
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "safe_name"
+        ],
+        "line": 186
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 214
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 236
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 245
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 262
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 263
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "load_json",
+          "write_json"
+        ],
+        "line": 264
+      }
+    ],
+    "definitions": [
+      {
+        "name": "sha256",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "assert_safe_file",
+        "line": 44,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "safe_json",
+        "line": 50,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_verified_cache_zip",
+        "line": 57,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_load_verified_evidence",
+        "line": 89,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_settings",
+        "line": 119,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_prepare",
+        "line": 124,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "inspection",
+        "line": 200,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "rebuild",
+        "line": 213,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "preview_batch",
+        "line": 261,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 304,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/REFINAR_CAMERA_EXISTENTE.py",
+    "lines": 56,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 9
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 28
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 29
+      },
+      {
+        "module": "ldporto_curator.final_camera",
+        "names": [
+          "refine_from_existing_metadata"
+        ],
+        "line": 30
+      },
+      {
+        "module": "ldporto_curator.camera_metadata",
+        "names": [
+          "load_existing_camera_metadata"
+        ],
+        "line": 33
+      }
+    ],
+    "definitions": [
+      {
+        "name": "main",
+        "line": 15,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/render_camera_demos_hd.py",
+    "lines": 68,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 6
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 18
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject",
+          "validate_episode_media"
+        ],
+        "line": 19
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 20
+      },
+      {
+        "module": "ldporto_curator.title_presets",
+        "names": [
+          "create_episode_title_card"
+        ],
+        "line": 21
+      },
+      {
+        "module": "ldporto_curator.render",
+        "names": [
+          "_base_cmd",
+          "ffmpeg_has_nvenc"
+        ],
+        "line": 22
+      },
+      {
+        "module": "ldporto_curator.media_effects",
+        "names": [
+          "extend_render_command"
+        ],
+        "line": 23
+      }
+    ],
+    "definitions": [
+      {
+        "name": "main",
+        "line": 12,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/REPARAR_STORY06_SEM_QWEN.py",
+    "lines": 259,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 12
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "tempfile"
+        ],
+        "line": 15
+      },
+      {
+        "module": "uuid",
+        "names": [
+          "uuid4"
+        ],
+        "line": 16
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "_verified_supplemental_words"
+        ],
+        "line": 37
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 38
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject",
+          "conservative_camera",
+          "_verified_supplemental_words",
+          "_canonical_hash"
+        ],
+        "line": 103
+      },
+      {
+        "module": "ldporto_curator.editing_history",
+        "names": [
+          "invalidate_episode"
+        ],
+        "line": 105
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 106
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 212
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "_align_words"
+        ],
+        "line": 55
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 81
+      }
+    ],
+    "definitions": [
+      {
+        "name": "digest",
+        "line": 27,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "check_case",
+        "line": 35,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "derive_unpreviewed_story",
+        "line": 95,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 201,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/RETOMAR_STORIES_RECUPERADOS.py",
+    "lines": 134,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 9
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "tempfile"
+        ],
+        "line": 13
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 19
+      },
+      {
+        "module": "ldporto_curator.combined_batch",
+        "names": [
+          "_verified_recovered_preview",
+          "render_stories_review_batch"
+        ],
+        "line": 20
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 21
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 22
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "load_json"
+        ],
+        "line": 30
+      }
+    ],
+    "definitions": [
+      {
+        "name": "source_identity_report",
+        "line": 28,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify_source_identity",
+        "line": 64,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 73,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+    "lines": 129,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "uuid"
+        ],
+        "line": 12
+      },
+      {
+        "module": "ldporto_curator.camera_metadata",
+        "names": [
+          "load_existing_camera_metadata"
+        ],
+        "line": 27
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 35
+      },
+      {
+        "module": "ldporto_curator.pipeline",
+        "names": [
+          "Pipeline"
+        ],
+        "line": 36
+      },
+      {
+        "module": "ldporto_curator.persisted_plan",
+        "names": [
+          "PlanStore",
+          "project_lock",
+          "compare_settings"
+        ],
+        "line": 37
+      },
+      {
+        "module": "ldporto_curator.final_camera",
+        "names": [
+          "refine_from_existing_metadata"
+        ],
+        "line": 38
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 39
+      },
+      {
+        "module": "ldporto_curator.review",
+        "names": [
+          "write_handoff"
+        ],
+        "line": 40
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 41
+      }
+    ],
+    "definitions": [
+      {
+        "name": "_existing_metadata",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "camera_revision",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 111,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_camera_final_real.py",
+    "lines": 143,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 8
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 9
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 14
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 15
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 16
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 24
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 37
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 38
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw"
+        ],
+        "line": 39
+      },
+      {
+        "module": "ldporto_curator.camera_metadata",
+        "names": [
+          "load_existing_camera_metadata"
+        ],
+        "line": 86
+      }
+    ],
+    "definitions": [
+      {
+        "name": "run",
+        "line": 19,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "audio_digest",
+        "line": 23,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "probe",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "compare_frames",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 72,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_curator_v5.py",
+    "lines": 98,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 3
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 4
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "xml.etree.ElementTree"
+        ],
+        "line": 8
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 13
+      },
+      {
+        "module": "ldporto_curator.full_handoff",
+        "names": [
+          "validate_handoff"
+        ],
+        "line": 14
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 15
+      }
+    ],
+    "definitions": [
+      {
+        "name": "execute",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 27,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_render_p0.py",
+    "lines": 283,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": "dataclasses",
+        "names": [
+          "fields"
+        ],
+        "line": 10
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 13
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 15
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 16
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 17
+      },
+      {
+        "module": "unittest.mock",
+        "names": [
+          "patch"
+        ],
+        "line": 18
+      },
+      {
+        "module": "ldporto_curator.analysis_loader",
+        "names": [
+          "AnalysisBundle"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 24
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 25
+      },
+      {
+        "module": "ldporto_curator.pipeline",
+        "names": [
+          "Pipeline"
+        ],
+        "line": 26
+      },
+      {
+        "module": "ldporto_curator.source_video",
+        "names": [
+          "SourceUnavailable"
+        ],
+        "line": 27
+      }
+    ],
+    "definitions": [
+      {
+        "name": "read_json",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save_json",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "probe",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "artifact",
+        "line": 55,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "original_hashes",
+        "line": 68,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "recompute_legacy_signature",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "audit_real_cached_preview",
+        "line": 88,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "synthetic_bundle",
+        "line": 114,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "synthetic_decisions",
+        "line": 129,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "synthetic_acceptance",
+        "line": 138,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "isolated_legacy_acceptance",
+        "line": 214,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 254,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "curated",
+        "line": 157,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_story_camera_routing.py",
+    "lines": 265,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "copy",
+        "names": [
+          "deepcopy"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 11
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath",
+          "PureWindowsPath"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 13
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 19
+      },
+      {
+        "module": "ldporto_curator.camera_metadata",
+        "names": [
+          "load_existing_camera_metadata"
+        ],
+        "line": 20
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 21
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject",
+          "_canonical_hash"
+        ],
+        "line": 22
+      },
+      {
+        "module": "scripts.validate_camera_final_real",
+        "names": [
+          "audio_digest",
+          "compare_frames",
+          "probe"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.render",
+        "names": [
+          "_base_cmd"
+        ],
+        "line": 198
+      }
+    ],
+    "definitions": [
+      {
+        "name": "inventory",
+        "line": 26,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "selected_episodes",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_window",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "resolve_saved_micro",
+        "line": 61,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "checked_destination",
+        "line": 101,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_historical_asset",
+        "line": 108,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_routing_trace",
+        "line": 118,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_save_report",
+        "line": 143,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 148,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_story_captions_p0.py",
+    "lines": 221,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 7
+      },
+      {
+        "module": "collections",
+        "names": [
+          "Counter"
+        ],
+        "line": 8
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "html"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 12
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 14
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 15
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 16
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 17
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 21
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 22
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 24
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 45
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw",
+          "ImageFont"
+        ],
+        "line": 72
+      }
+    ],
+    "definitions": [
+      {
+        "name": "read",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save",
+        "line": 34,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "run",
+        "line": 39,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "audio_evidence",
+        "line": 43,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "extract_frames",
+        "line": 71,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_seconds",
+        "line": 105,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify",
+        "line": 110,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 149,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_story_reel_karaoke.py",
+    "lines": 385,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 8
+      },
+      {
+        "module": "collections",
+        "names": [
+          "Counter"
+        ],
+        "line": 9
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 10
+      },
+      {
+        "module": "fractions",
+        "names": [
+          "Fraction"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "html"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 13
+      },
+      {
+        "module": null,
+        "names": [
+          "math"
+        ],
+        "line": 14
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 15
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 16
+      },
+      {
+        "module": null,
+        "names": [
+          "shutil"
+        ],
+        "line": 17
+      },
+      {
+        "module": null,
+        "names": [
+          "subprocess"
+        ],
+        "line": 18
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 19
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 23
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 24
+      },
+      {
+        "module": "ldporto_curator.render",
+        "names": [
+          "_ass_filter_path"
+        ],
+        "line": 25
+      },
+      {
+        "module": "ldporto_curator.series_workflow",
+        "names": [
+          "SeriesProject"
+        ],
+        "line": 26
+      },
+      {
+        "module": "ldporto_curator.subtitle_presets",
+        "names": [
+          "write_episode_subtitles"
+        ],
+        "line": 27
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image"
+        ],
+        "line": 137
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 138
+      },
+      {
+        "module": null,
+        "names": [
+          "numpy"
+        ],
+        "line": 163
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image"
+        ],
+        "line": 164
+      },
+      {
+        "module": "PIL",
+        "names": [
+          "Image",
+          "ImageDraw",
+          "ImageFont"
+        ],
+        "line": 249
+      }
+    ],
+    "definitions": [
+      {
+        "name": "read",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "run",
+        "line": 43,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "seconds",
+        "line": 47,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify",
+        "line": 52,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "media_info",
+        "line": 118,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "video_frame",
+        "line": 126,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "subtitle_frame",
+        "line": 136,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify_encoded_karaoke",
+        "line": 156,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "extract_evidence",
+        "line": 248,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 325,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "path": "scripts/validate_v44_promoted_preview.py",
+    "lines": 18,
+    "imports": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 3
+      },
+      {
+        "module": "ldporto_curator.config",
+        "names": [
+          "load_config"
+        ],
+        "line": 5
+      },
+      {
+        "module": "ldporto_curator.pipeline",
+        "names": [
+          "Pipeline"
+        ],
+        "line": 6
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 7
+      }
+    ],
+    "definitions": []
+  },
+  {
+    "path": "scripts/validate_v44_real_clips.py",
+    "lines": 51,
+    "imports": [
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 2
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ],
+        "line": 3
+      },
+      {
+        "module": null,
+        "names": [
+          "sys"
+        ],
+        "line": 4
+      },
+      {
+        "module": "ldporto_curator.micro_perception",
+        "names": [
+          "inspect_clip"
+        ],
+        "line": 6
+      },
+      {
+        "module": "ldporto_curator.camera_refinement",
+        "names": [
+          "refine_camera_plan"
+        ],
+        "line": 7
+      },
+      {
+        "module": "ldporto_curator.analysis_loader",
+        "names": [
+          "AnalysisBundle"
+        ],
+        "line": 8
+      },
+      {
+        "module": "ldporto_curator.render",
+        "names": [
+          "render_clip"
+        ],
+        "line": 9
+      },
+      {
+        "module": "ldporto_curator.utils",
+        "names": [
+          "write_json"
+        ],
+        "line": 10
+      },
+      {
+        "module": "ldporto_curator.approval",
+        "names": [
+          "file_hash"
+        ],
+        "line": 11
+      },
+      {
+        "module": null,
+        "names": [
+          "cv2"
+        ],
+        "line": 12
+      },
+      {
+        "module": null,
+        "names": [
+          "yaml"
+        ],
+        "line": 13
+      }
+    ],
+    "definitions": []
+  },
+  {
+    "path": "scripts/verify_caption_protected_hashes.py",
+    "lines": 113,
+    "imports": [
+      {
+        "module": "__future__",
+        "names": [
+          "annotations"
+        ],
+        "line": 2
+      },
+      {
+        "module": null,
+        "names": [
+          "argparse"
+        ],
+        "line": 4
+      },
+      {
+        "module": "datetime",
+        "names": [
+          "datetime",
+          "timezone"
+        ],
+        "line": 5
+      },
+      {
+        "module": null,
+        "names": [
+          "hashlib"
+        ],
+        "line": 6
+      },
+      {
+        "module": null,
+        "names": [
+          "json"
+        ],
+        "line": 7
+      },
+      {
+        "module": null,
+        "names": [
+          "os"
+        ],
+        "line": 8
+      },
+      {
+        "module": "pathlib",
+        "names": [
+          "Path",
+          "PurePosixPath"
+        ],
+        "line": 9
+      },
+      {
+        "module": null,
+        "names": [
+          "re"
+        ],
+        "line": 10
+      },
+      {
+        "module": null,
+        "names": [
+          "stat"
+        ],
+        "line": 11
+      }
+    ],
+    "definitions": [
+      {
+        "name": "sha",
+        "line": 18,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "is_link",
+        "line": 28,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "verify",
+        "line": 33,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 92,
+        "kind": "FunctionDef"
+      }
+    ]
+  }
+]

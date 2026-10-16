@@ -30,7 +30,8 @@ def _existing_metadata(base, document, clip):
     return path, micro
 
 
-def camera_revision(source: str, rank: int | None, apply: bool = False, *, existing_metadata: bool = True):
+def camera_revision(source: str, rank: int | None, apply: bool = False, *, existing_metadata: bool = True,
+                    prefer_visual_focus: bool = False):
     from ldporto_curator.config import load_config
     from ldporto_curator.pipeline import Pipeline
     from ldporto_curator.persisted_plan import PlanStore, project_lock, compare_settings
@@ -78,14 +79,17 @@ def camera_revision(source: str, rank: int | None, apply: bool = False, *, exist
             folder = staging / 'clips' / clip['clip_id']
             metadata_path, micro = existing[clip['clip_id']]
             clip['camera_plan'] = refine_from_existing_metadata(clip, bundle.analysis['metadata'],
-                micro=micro, director=getattr(bundle, 'director', []), cfg=pinned_cfg)
+                micro=micro, director=getattr(bundle, 'director', []), cfg=pinned_cfg,
+                prefer_visual_focus=prefer_visual_focus)
             folder.mkdir(parents=True, exist_ok=False)
             write_json(folder / 'clip_micro_perception.json', micro)
             write_json(folder / 'FINAL_CAMERA_PLAN_V44.json', clip['camera_plan'])
             write_json(folder / 'CAMERA_ONLY_PROVENANCE.json', {
                 'metadata_source':str(metadata_path), 'metadata_sha256':file_hash(metadata_path),
                 'existing_metadata_only':True, 'new_analysis_executed':False,
-                'editorial_decisions_recomputed':False, 'approval_required':True})
+                'editorial_decisions_recomputed':False, 'approval_required':True,
+                'safe_visual_reframe_requested':prefer_visual_focus,
+                'effective_crop_segments':sum(x.get('mode') == 'crop' for x in clip['camera_plan'].get('segments', []))})
         if file_hash(video) != sha:
             raise ValueError('O video original mudou durante o refinamento; sem publicacao.')
         # PlanStore creates a new revision with immutable snapshot and history.
@@ -113,10 +117,12 @@ def main():
     p.add_argument('--apply', action='store_true', help='Confirma a criacao de uma NOVA revisao')
     p.add_argument('--existing-metadata', action='store_true', default=True,
                    help='Reutiliza somente planning_evidence existente (padrao; nunca executa nova percepcao)')
+    p.add_argument('--safe-visual-focus', action='store_true', help='Reenquadrar somente cenas com rosto medido; nova revisao, sem Qwen')
     args = p.parse_args()
     if args.rank is not None and args.rank < 1:
         p.error('--rank deve ser maior que zero')
-    camera_revision(args.source, None if args.all else args.rank, args.apply, existing_metadata=args.existing_metadata)
+    camera_revision(args.source, None if args.all else args.rank, args.apply,
+                    existing_metadata=args.existing_metadata, prefer_visual_focus=args.safe_visual_focus)
 
 
 if __name__ == '__main__':

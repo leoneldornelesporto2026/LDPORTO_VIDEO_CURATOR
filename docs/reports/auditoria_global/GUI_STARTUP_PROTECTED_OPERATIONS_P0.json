@@ -1,0 +1,124 @@
+{
+  "schema": "LDP_GUI_STARTUP_DELETION_STATIC_P0_V1",
+  "scope": "Leitura est?tica do c?digo atual e stat de output; sem GUI, sem testes, sem limpeza, sem restaura??o e sem uso da Lixeira.",
+  "output": {
+    "exists": true,
+    "entries": 0,
+    "mtime_ns": 1792154000845764500,
+    "ctime_ns": 1791060100407822100
+  },
+  "sources": [
+    {
+      "path": "app.py",
+      "bytes": 131,
+      "sha256": "d77bc146caf7a43e69d8104e7701857b957b17a4940afb106679e6cbd0588a6b"
+    },
+    {
+      "path": "ABRIR_CURADOR.bat",
+      "bytes": 689,
+      "sha256": "58fc91c6964eecb5baaff4652135fc3c2a8f3984b6e40d686201070989ea3b5f"
+    },
+    {
+      "path": "INSTALAR.bat",
+      "bytes": 791,
+      "sha256": "7a9a3b578bc3629dab6a6d309dac10162c44defc3cc3a939c2910777833916d1"
+    },
+    {
+      "path": "DIAGNOSTICO.bat",
+      "bytes": 184,
+      "sha256": "be638bc991e2600fbf8ae12a111c34363b1b54b3aaf9f9e608a96969dfdcfd4e"
+    },
+    {
+      "path": "TESTAR_1_CORTE.bat",
+      "bytes": 325,
+      "sha256": "e1133e7211ea4dc973ca91d5fa3890487c9f949b9812245536de73acb0b9af0c"
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "bytes": 30099,
+      "sha256": "2a756d2e691163923401bde2e9a3eeacfd38e0d0c4f63b3f9c6f99e1424f5733"
+    },
+    {
+      "path": "ldporto_curator/storage_dialog.py",
+      "bytes": 2944,
+      "sha256": "b57a285feb89b7eba2597bc88167e744d71d4b92a64e50e8ae7ecab231f72d5a"
+    },
+    {
+      "path": "ldporto_curator/storage.py",
+      "bytes": 10592,
+      "sha256": "0c51705f96dbad38de1293588a70c3eac2b981436d6f54eae3896f4776e30cca"
+    },
+    {
+      "path": "ldporto_curator/config.py",
+      "bytes": 437,
+      "sha256": "8bc0f83d1ddd6e53c922c109cc806431b2ff066a2d8b82dbfd8d73c2a431d113"
+    },
+    {
+      "path": "ldporto_curator/pipeline.py",
+      "bytes": 32636,
+      "sha256": "b20bc425653c9810b836015c9c7869d9ce9b728908be5c00e5a3ff771615577c"
+    },
+    {
+      "path": "ldporto_curator/persisted_plan.py",
+      "bytes": 21493,
+      "sha256": "0c8a5485aead7badcbc0eab5ae0571ca576afb1f7dcc8547b6f8d02a890a063d"
+    },
+    {
+      "path": "ldporto_curator/pipeline_recovery.py",
+      "bytes": 4186,
+      "sha256": "99cefe3018da001c3c3c63bddc79408a8bdb6209202324fff67f25dff004c92f"
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "bytes": 26728,
+      "sha256": "764e6c1042d74697acc201adcf00b454850e81af08e2570441b7f471689bc552"
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "bytes": 57483,
+      "sha256": "2611c62cd5a167de3c163c447b971ff51c219bffd3a6bc9907e1342f0c93ad44"
+    },
+    {
+      "path": "ldporto_curator/combined_batch.py",
+      "bytes": 34090,
+      "sha256": "aa71f9c2fd394a4da66cd00be18674b437ced94b9f250ad8340106aefcfbddac"
+    }
+  ],
+  "negative_search": {
+    "excluded": [
+      ".venv",
+      ".git",
+      ".cache",
+      "source_cache",
+      "docs/reports"
+    ],
+    "searched": [
+      "ldporto_curator",
+      "scripts",
+      "tests",
+      "root py/bat/ps1"
+    ],
+    "patterns": [
+      "send2trash",
+      "SHFileOperation",
+      "IFileOperation",
+      "RecycleBin",
+      "Recycle",
+      "rmtree",
+      "Remove-Item",
+      "unlink(",
+      "rmdir",
+      "del /"
+    ],
+    "recycle_api_matches_active_code": 0,
+    "rmtree_matches_active_code": 0
+  },
+  "modifications_by_this_agent": [
+    "docs/reports/auditoria_global/AUDITORIA_GUI_PERFORMANCE_DOCS.md",
+    "docs/reports/auditoria_global/GUI_PERFORMANCE_EVIDENCIAS.json",
+    "docs/reports/auditoria_global/GUI_STARTUP_PROTECTED_OPERATIONS_P0.json"
+  ],
+  "production_modified_by_this_agent": false,
+  "tests_executed": false,
+  "cause_attributed": false
+}

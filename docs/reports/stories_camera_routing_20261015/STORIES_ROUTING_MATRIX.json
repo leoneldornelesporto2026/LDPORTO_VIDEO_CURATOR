@@ -1,0 +1,387 @@
+{
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "episodes": [
+    {
+      "episode_id": "PROP_f654d728d26180f2fb0e5816",
+      "story_order": 1,
+      "series_id": "S01",
+      "source_start": 358.54,
+      "source_end": 384.76,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\2b24e250560e23e7\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "689c35524ff21b757c98508c2f3b034493dedb58482f47e77464c82b223c6105",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_06_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_06_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_0cd8967b4785b114a6b605c0",
+      "story_order": 2,
+      "series_id": "S01",
+      "source_start": 422.53999999999996,
+      "source_end": 448.6,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\002_PROP_0cd8967b4785b114a6b605c0\\4b2c493eb3583359\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "409b2d03b17be7766196c7b67206e2a1f44cbe8be5a65c98c2b3b627ef43abc0",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_05_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_05_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_812c2557222a7626d29648e5",
+      "story_order": 3,
+      "series_id": "S01",
+      "source_start": 448.68,
+      "source_end": 485.26,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\003_PROP_812c2557222a7626d29648e5\\71850873bfd91963\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "3fcd60c237b1a5aae28e9b73686f1e1638497634ab153f811b04c1ac9b93a5df",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_03_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_03_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_820da3ee0287202220af0541",
+      "story_order": 4,
+      "series_id": "S02",
+      "source_start": 793.2,
+      "source_end": 837.86,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\004_PROP_820da3ee0287202220af0541\\9b7af6093aeef2e8\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "8024bdac86e63539218f68184793c3236ab7440e8f392ea7f467291981b80727",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_02_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_02_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_8c4d75f845814355a102e570",
+      "story_order": 5,
+      "series_id": "S02",
+      "source_start": 855.96,
+      "source_end": 887.22,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\005_PROP_8c4d75f845814355a102e570\\45e2ba82ddf439cb\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "f22e693cc9c1bbaf24d18293e1b3440851c9ff9261b7f38181d4bb043738aa30",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_04_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_04_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_f5106b486d19e3c2e8be43ca",
+      "story_order": 6,
+      "series_id": "S02",
+      "source_start": 972.12,
+      "source_end": 1009.26,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\b340b55ff11fdb56\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "de03970ca00948a08bde175572ad56f22d29cd11a793800904e5fb3e675145d4",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_01_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_c5d036c5bb3221b93dc74e80",
+      "story_order": 7,
+      "series_id": "S02",
+      "source_start": 1186.6,
+      "source_end": 1242.5,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\007_PROP_c5d036c5bb3221b93dc74e80\\18edd08dc145a88d\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "b18b4a043b0ec1da7b7eef6bdc31c0036d83d8eeafa77ac58b526d908692c056",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_08_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_357a5b428e187549af18d145",
+      "story_order": 8,
+      "series_id": "S02",
+      "source_start": 1242.84,
+      "source_end": 1257.12,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\008_PROP_357a5b428e187549af18d145\\a93c24c492cad483\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "ee430eb6c51589fad4d6fb1a034ac46daeb15e77bce161cdf975ff963a8dd6a5",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_25dc70b2dc7d735acde2e530",
+      "story_order": 9,
+      "series_id": "S03",
+      "source_start": 1637.12,
+      "source_end": 1648.52,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\009_PROP_25dc70b2dc7d735acde2e530\\8d04b328ad664762\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "c715e3b33539e697c6f60abf971487ce431a558139ee1555f60c685638290cf4",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_3fc57f8ea450b03956ec1a52",
+      "story_order": 10,
+      "series_id": "S03",
+      "source_start": 1684.0,
+      "source_end": 1693.14,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\010_PROP_3fc57f8ea450b03956ec1a52\\46e6bbaa692485d5\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "d62c47faf627a07e54f392e8fc4fdcad8a7a7498cc347675b1872f073978685a",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "story_order": 11,
+      "series_id": "S03",
+      "source_start": 1761.61,
+      "source_end": 1814.82,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\011_PROP_7d2a4a4e4b06aa96eeb267f3\\b83b3a8880c17bed\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "c465dfac103e42360b8cd9d5312e5ef5dc17feca36d48351e329158d6368b8b3",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "story_order": 12,
+      "series_id": "S03",
+      "source_start": 1814.98,
+      "source_end": 1842.3,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\012_PROP_7accaf6623ef8d9ca9f74e89\\46d1e2cad70b7c29\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "f60404e5ccb14e411791816282320b88e466e74f9239ded7812fe9b514d9df8d",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "story_order": 13,
+      "series_id": "S03",
+      "source_start": 1845.8899999999999,
+      "source_end": 1888.67,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\013_PROP_ffbc72dbd1f751a8ab4ec7b5\\38276616d8c0d2b9\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "c0854fd332ae7771f5da466f13e857da9488e41dda4a25925673ef4ce3d3178a",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_7945d8231636c7684fdaedbe",
+      "story_order": 14,
+      "series_id": "S03",
+      "source_start": 1974.2,
+      "source_end": 1985.96,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\014_PROP_7945d8231636c7684fdaedbe\\14a739ea0bc14d7c\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "095588f9e8cd214a1198389e19a4f8dc0bbdbb3ad1b6c06e1c136fb9a8a4db9f",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "story_order": 15,
+      "series_id": "S03",
+      "source_start": 1989.04,
+      "source_end": 2014.8,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\015_PROP_0ebe2d28febbe714d8a86c0e\\56ffa96378a43b73\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "d8ab22fa14dc5f5376673a0b081a595bd1c001ba45e72b98d34be121bab600a2",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [],
+      "overlapping_micro_candidates": [],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    },
+    {
+      "episode_id": "PROP_f47b1a26cfc3a496c457c437",
+      "story_order": 16,
+      "series_id": "S03",
+      "source_start": 2015.1,
+      "source_end": 2045.0,
+      "camera_mode_selected": "AUTO_CONSERVADOR",
+      "persisted_camera_plan_mode": "full_frame_blur",
+      "rendered_camera_plan_mode": "full_frame_blur",
+      "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\c2c75e4d205c3046\\preview\\PREVIEW_540x960.mp4",
+      "canonical_timeline_sha256": "ac09697dc99e166e8ab8112a85e3c1c86ce96bf635d53a9f54111d974315de6f",
+      "karaoke_visual_behavior": "yellow_phrase_cumulative_white_at_measured_onset",
+      "exact_micro_candidates": [
+        "SECOND_LDP26_REEL_07_01"
+      ],
+      "overlapping_micro_candidates": [
+        "SECOND_LDP26_REEL_07_01"
+      ],
+      "evidence_status": {
+        "timeline": 0,
+        "scenes": 0,
+        "people_observations": 0,
+        "frame_samples": 0,
+        "camera_timeline": 0
+      }
+    }
+  ],
+  "full_frame_blur_count": 16,
+  "current_preview_manifest": "series_index.json (authoritative); older recovered-order manifests were not used"
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "LDP_NORMAL_COMBINED_DRY_RUN_V1",
+  "read_only": true,
+  "normal_gui_route": "CuratorApp.work(all) -> render_combined_batch",
+  "project_id": "zd_wjssZ7mc",
+  "reel_revision": "6a1b69bda19d4103a932d9223ceb9c81",
+  "reels_already_complete": true,
+  "reel_finals": 8,
+  "source": {
+    "schema": "LDP_STORIES_SHA256_DIAGNOSTICO_V1",
+    "episode_count": 16,
+    "project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2",
+    "media_path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\input\\youtube\\zd_wjssZ7mc\\zd_wjssZ7mc.mp4",
+    "media_exists_regular_file": true,
+    "source_sha256_evidence": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "source_sha256_plan": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "source_sha256_manifest": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "source_sha256_actual_media": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "metadata_match": true,
+    "media_match": true,
+    "reason": "SOURCE_IDENTITY_OK"
+  },
+  "recovery": {
+    "movie": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\story06_caption_recovered_8bb69282f0f4\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\9868ff1cb8711f21\\preview\\PREVIEW_540x960.mp4",
+    "signature": "9868ff1cb8711f21e100fada9adf34b8d32776f5747a21bd3783386728705f8f",
+    "technical_state": "RECOVERED_PREVIEW_VALIDATED",
+    "human_review_state": "HUMAN_REVIEW_REQUIRED",
+    "ready_for_final_render": false
+  },
+  "new_recovery_required": false,
+  "stories_pending_preview": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "existing_previews_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "logs": [
+    "PLANO {\"approval_state\": \"BATCH_COMPLETED\", \"approved_revision\": \"6a1b69bda19d4103a932d9223ceb9c81\", \"event\": \"plan_state\", \"invalidation_reason\": null, \"operation\": \"read\", \"plan_fingerprint\": \"59544eadf05d29cd17db34d755fa305b7d2701027824870f7507ab9ef82c5d54\", \"plan_revision\": \"6a1b69bda19d4103a932d9223ceb9c81\", \"project_id\": \"zd_wjssZ7mc\"}",
+    "PLANO {\"approval_state\": \"BATCH_COMPLETED\", \"approved_revision\": \"6a1b69bda19d4103a932d9223ceb9c81\", \"event\": \"plan_state\", \"invalidation_reason\": null, \"operation\": \"read\", \"plan_fingerprint\": \"59544eadf05d29cd17db34d755fa305b7d2701027824870f7507ab9ef82c5d54\", \"plan_revision\": \"6a1b69bda19d4103a932d9223ceb9c81\", \"project_id\": \"zd_wjssZ7mc\"}"
+  ]
+}

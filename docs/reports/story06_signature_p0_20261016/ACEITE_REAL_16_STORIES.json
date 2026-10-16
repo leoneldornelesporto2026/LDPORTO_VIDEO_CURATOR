@@ -1,0 +1,851 @@
+{
+  "schema": "LDP_STORY06_REAL_ACCEPTANCE_V1",
+  "stories": [
+    {
+      "story": 1,
+      "episode_id": "PROP_f654d728d26180f2fb0e5816",
+      "series": "S01",
+      "part": 1,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\f51efcea03391114\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "681c139626b505af9c3d1f0d2d12902163af72897832bc33e1231c2c0fe116ab",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 26.234542,
+        "expected_duration": 26.21999999999997,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 2.621999999999997,
+            "mean_brightness": 142.06438078703704,
+            "decodable": true
+          },
+          {
+            "time": 13.109999999999985,
+            "mean_brightness": 136.6565117026749,
+            "decodable": true
+          },
+          {
+            "time": 23.597999999999974,
+            "mean_brightness": 125.56018518518519,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 15,
+      "word_ids": 71,
+      "caption_timeline": "689c35524ff21b757c98508c2f3b034493dedb58482f47e77464c82b223c6105",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 2,
+      "episode_id": "PROP_0cd8967b4785b114a6b605c0",
+      "series": "S01",
+      "part": 2,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\002_PROP_0cd8967b4785b114a6b605c0\\95f18912057fdd55\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "33169342dd46c0f7e40e6d84db7dffccf49edca0ee2c3942569d1b1e6d4ba754",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 26.067708,
+        "expected_duration": 26.06000000000006,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 2.606000000000006,
+            "mean_brightness": 127.64209233539094,
+            "decodable": true
+          },
+          {
+            "time": 13.03000000000003,
+            "mean_brightness": 99.00854552469136,
+            "decodable": true
+          },
+          {
+            "time": 23.454000000000054,
+            "mean_brightness": 107.34802469135802,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 14,
+      "word_ids": 62,
+      "caption_timeline": "409b2d03b17be7766196c7b67206e2a1f44cbe8be5a65c98c2b3b627ef43abc0",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 3,
+      "episode_id": "PROP_812c2557222a7626d29648e5",
+      "series": "S01",
+      "part": 3,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\003_PROP_812c2557222a7626d29648e5\\2caa7e792f59ce15\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "6cff21d6cbece81ba44aeab3eb1be14bb75ca4967a480fbd82966a51b29525ea",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 36.619917,
+        "expected_duration": 36.579999999999984,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 3.6579999999999986,
+            "mean_brightness": 117.74576324588477,
+            "decodable": true
+          },
+          {
+            "time": 18.289999999999992,
+            "mean_brightness": 109.51360339506172,
+            "decodable": true
+          },
+          {
+            "time": 32.92199999999999,
+            "mean_brightness": 140.58878729423867,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 20,
+      "word_ids": 94,
+      "caption_timeline": "3fcd60c237b1a5aae28e9b73686f1e1638497634ab153f811b04c1ac9b93a5df",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 4,
+      "episode_id": "PROP_820da3ee0287202220af0541",
+      "series": "S02",
+      "part": 1,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\004_PROP_820da3ee0287202220af0541\\ffb92953a5c2fac5\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "07bdea4f1c0f1e636cd995fd6af9bd9e781b9dd3fb38f2e64b7bec8bcdafc782",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 44.669625,
+        "expected_duration": 44.65999999999997,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 4.465999999999997,
+            "mean_brightness": 144.66076967592593,
+            "decodable": true
+          },
+          {
+            "time": 22.329999999999984,
+            "mean_brightness": 119.14079668209877,
+            "decodable": true
+          },
+          {
+            "time": 40.193999999999974,
+            "mean_brightness": 104.3278170010288,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 25,
+      "word_ids": 113,
+      "caption_timeline": "8024bdac86e63539218f68184793c3236ab7440e8f392ea7f467291981b80727",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 5,
+      "episode_id": "PROP_8c4d75f845814355a102e570",
+      "series": "S02",
+      "part": 2,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\005_PROP_8c4d75f845814355a102e570\\71ee6c0e4fa7decd\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "b9cee039967e05b6a67b4bc9c9b2d8243b586aa277b712d23739f6943c7479bd",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 31.281,
+        "expected_duration": 31.25999999999999,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 3.1259999999999994,
+            "mean_brightness": 148.44561471193416,
+            "decodable": true
+          },
+          {
+            "time": 15.629999999999995,
+            "mean_brightness": 140.76339699074074,
+            "decodable": true
+          },
+          {
+            "time": 28.133999999999993,
+            "mean_brightness": 139.76445730452676,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 18,
+      "word_ids": 79,
+      "caption_timeline": "f22e693cc9c1bbaf24d18293e1b3440851c9ff9261b7f38181d4bb043738aa30",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 6,
+      "episode_id": "PROP_f5106b486d19e3c2e8be43ca",
+      "series": "S02",
+      "part": 3,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\story06_caption_recovered_8bb69282f0f4\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\9868ff1cb8711f21\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "a71843925517db816d75324edb763a5cba384aaadbdd4b23b34567e158bccb07",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 37.162,
+        "expected_duration": 37.139999999999986,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 3.7139999999999986,
+            "mean_brightness": 144.5425090020576,
+            "decodable": true
+          },
+          {
+            "time": 18.569999999999993,
+            "mean_brightness": 139.43142168209877,
+            "decodable": true
+          },
+          {
+            "time": 33.42599999999999,
+            "mean_brightness": 139.16392554012344,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 21,
+      "word_ids": 102,
+      "caption_timeline": "de03970ca00948a08bde175572ad56f22d29cd11a793800904e5fb3e675145d4",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 7,
+      "episode_id": "PROP_c5d036c5bb3221b93dc74e80",
+      "series": "S02",
+      "part": 4,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\007_PROP_c5d036c5bb3221b93dc74e80\\169a8df5e391fc3b\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "94f1729ed6132f855b17a39ab9d0f827ec9442d7073114fe6d059a8fffd39105",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 55.930875,
+        "expected_duration": 55.90000000000009,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 5.59000000000001,
+            "mean_brightness": 107.51725951646091,
+            "decodable": true
+          },
+          {
+            "time": 27.950000000000045,
+            "mean_brightness": 141.1271585648148,
+            "decodable": true
+          },
+          {
+            "time": 50.31000000000008,
+            "mean_brightness": 115.24419495884774,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 37,
+      "word_ids": 158,
+      "caption_timeline": "b18b4a043b0ec1da7b7eef6bdc31c0036d83d8eeafa77ac58b526d908692c056",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 8,
+      "episode_id": "PROP_357a5b428e187549af18d145",
+      "series": "S02",
+      "part": 5,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\008_PROP_357a5b428e187549af18d145\\b8027af43db4f79f\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "7bf58f05352cf4e2ea56782c83f98299abdfbd0788bbfe8ef4ec5154bcc73892",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 14.305958,
+        "expected_duration": 14.279999999999973,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 1.4279999999999973,
+            "mean_brightness": 122.44324266975309,
+            "decodable": true
+          },
+          {
+            "time": 7.139999999999986,
+            "mean_brightness": 115.65533050411523,
+            "decodable": true
+          },
+          {
+            "time": 12.851999999999975,
+            "mean_brightness": 108.95872620884774,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 10,
+      "word_ids": 45,
+      "caption_timeline": "ee430eb6c51589fad4d6fb1a034ac46daeb15e77bce161cdf975ff963a8dd6a5",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 9,
+      "episode_id": "PROP_25dc70b2dc7d735acde2e530",
+      "series": "S03",
+      "part": 1,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\009_PROP_25dc70b2dc7d735acde2e530\\827e768fd8e2ace9\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "6cd1d5fea32df56b758a448e48e88fc5a5a12e05afe9e2cdfb01b806eb6466b1",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 11.428,
+        "expected_duration": 11.400000000000091,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 1.1400000000000092,
+            "mean_brightness": 122.13844457304526,
+            "decodable": true
+          },
+          {
+            "time": 5.7000000000000455,
+            "mean_brightness": 54.51387795781893,
+            "decodable": true
+          },
+          {
+            "time": 10.260000000000081,
+            "mean_brightness": 38.56977880658436,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 6,
+      "word_ids": 23,
+      "caption_timeline": "c715e3b33539e697c6f60abf971487ce431a558139ee1555f60c685638290cf4",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 10,
+      "episode_id": "PROP_3fc57f8ea450b03956ec1a52",
+      "series": "S03",
+      "part": 2,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\010_PROP_3fc57f8ea450b03956ec1a52\\bfe055b1b3b93600\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "7982b40046d1b5820704006e683adb889c191db635f514350141ad6d089c0e10",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 9.175833,
+        "expected_duration": 9.1400000000001,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 0.91400000000001,
+            "mean_brightness": 80.4419637345679,
+            "decodable": true
+          },
+          {
+            "time": 4.57000000000005,
+            "mean_brightness": 80.61004115226338,
+            "decodable": true
+          },
+          {
+            "time": 8.22600000000009,
+            "mean_brightness": 141.7548096707819,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 5,
+      "word_ids": 24,
+      "caption_timeline": "d62c47faf627a07e54f392e8fc4fdcad8a7a7498cc347675b1872f073978685a",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 11,
+      "episode_id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "series": "S03",
+      "part": 3,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\011_PROP_7d2a4a4e4b06aa96eeb267f3\\1b2392d0d0313d76\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "3085c1190faf917e8f337c6cd1b38589dc3ff730f3a527c83276dd44690a47c7",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 53.219833,
+        "expected_duration": 53.210000000000036,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 5.321000000000004,
+            "mean_brightness": 140.31339827674898,
+            "decodable": true
+          },
+          {
+            "time": 26.605000000000018,
+            "mean_brightness": 38.50459940843621,
+            "decodable": true
+          },
+          {
+            "time": 47.88900000000003,
+            "mean_brightness": 106.92502443415638,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 22,
+      "word_ids": 96,
+      "caption_timeline": "c465dfac103e42360b8cd9d5312e5ef5dc17feca36d48351e329158d6368b8b3",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 12,
+      "episode_id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "series": "S03",
+      "part": 4,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\012_PROP_7accaf6623ef8d9ca9f74e89\\f7fe92683d29aa8b\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "c09b8a4f6b480a1861326632574a5b316c9355fd4122bdf5d467bd16403e4c32",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 27.360667,
+        "expected_duration": 27.319999999999936,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 2.731999999999994,
+            "mean_brightness": 31.91144804526749,
+            "decodable": true
+          },
+          {
+            "time": 13.659999999999968,
+            "mean_brightness": 11.387664609053498,
+            "decodable": true
+          },
+          {
+            "time": 24.587999999999944,
+            "mean_brightness": 11.4084079218107,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 16,
+      "word_ids": 79,
+      "caption_timeline": "f60404e5ccb14e411791816282320b88e466e74f9239ded7812fe9b514d9df8d",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 13,
+      "episode_id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "series": "S03",
+      "part": 5,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\013_PROP_ffbc72dbd1f751a8ab4ec7b5\\33a515cc37a47c40\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "1dc4bd093efd7f3029bec84f448403962281b44ebf2d0918fbe8c93b29383fc4",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 42.79275,
+        "expected_duration": 42.7800000000002,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 4.27800000000002,
+            "mean_brightness": 33.06704282407407,
+            "decodable": true
+          },
+          {
+            "time": 21.3900000000001,
+            "mean_brightness": 14.28909079218107,
+            "decodable": true
+          },
+          {
+            "time": 38.50200000000018,
+            "mean_brightness": 137.80635223765432,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 26,
+      "word_ids": 113,
+      "caption_timeline": "c0854fd332ae7771f5da466f13e857da9488e41dda4a25925673ef4ce3d3178a",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 14,
+      "episode_id": "PROP_7945d8231636c7684fdaedbe",
+      "series": "S03",
+      "part": 6,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\014_PROP_7945d8231636c7684fdaedbe\\977d574a6d0be954\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "3ef0a8651fbd6a70561754c672115320e8d5b2f4ae6a162d1548a48ce5363c95",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 11.76175,
+        "expected_duration": 11.759999999999991,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 1.175999999999999,
+            "mean_brightness": 129.97409336419753,
+            "decodable": true
+          },
+          {
+            "time": 5.8799999999999955,
+            "mean_brightness": 108.12804205246914,
+            "decodable": true
+          },
+          {
+            "time": 10.583999999999993,
+            "mean_brightness": 132.5622080761317,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 6,
+      "word_ids": 33,
+      "caption_timeline": "095588f9e8cd214a1198389e19a4f8dc0bbdbb3ad1b6c06e1c136fb9a8a4db9f",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 15,
+      "episode_id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "series": "S03",
+      "part": 7,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\015_PROP_0ebe2d28febbe714d8a86c0e\\4e3b248999cceef5\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "7a14465da7bfbc066e3233a7271bd2b8199876f2f65eb713d8a2a0bb83169b01",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 25.77575,
+        "expected_duration": 25.75999999999999,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 2.575999999999999,
+            "mean_brightness": 149.0480613425926,
+            "decodable": true
+          },
+          {
+            "time": 12.879999999999995,
+            "mean_brightness": 139.16419238683127,
+            "decodable": true
+          },
+          {
+            "time": 23.183999999999994,
+            "mean_brightness": 138.02635480967078,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 14,
+      "word_ids": 65,
+      "caption_timeline": "d8ab22fa14dc5f5376673a0b081a595bd1c001ba45e72b98d34be121bab600a2",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    },
+    {
+      "story": 16,
+      "episode_id": "PROP_f47b1a26cfc3a496c457c437",
+      "series": "S03",
+      "part": 8,
+      "file": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\da5d1e2698380fdd\\preview\\PREVIEW_540x960.mp4",
+      "sha256": "73f3fa47fe5a4a77468346bbbbe1f77935f251bdb5f0b7eff1406b801acfe46c",
+      "matches_manifest": true,
+      "assets_verified": true,
+      "media_validation": {
+        "status": "validated",
+        "duration": 29.904875,
+        "expected_duration": 29.90000000000009,
+        "width": 540,
+        "height": 960,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "samples": [
+          {
+            "time": 2.990000000000009,
+            "mean_brightness": 121.82458912037038,
+            "decodable": true
+          },
+          {
+            "time": 14.950000000000045,
+            "mean_brightness": 111.10055684156379,
+            "decodable": true
+          },
+          {
+            "time": 26.910000000000082,
+            "mean_brightness": 107.4941763117284,
+            "decodable": true
+          }
+        ],
+        "visual_human_review": "pending",
+        "audio_human_review": "pending"
+      },
+      "editorial_unchanged": true,
+      "caption_events": 17,
+      "word_ids": 89,
+      "caption_timeline": "ac09697dc99e166e8ab8112a85e3c1c86ce96bf635d53a9f54111d974315de6f",
+      "karaoke_yellow_to_white": true,
+      "caption_safe_max_two_lines": true,
+      "human_review_state": "HUMAN_REVIEW_REQUIRED",
+      "publication_ready": false
+    }
+  ],
+  "reels": [
+    {
+      "clip_id": "SECOND_LDP26_REEL_01_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_01_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_01_01_FINAL.mp4",
+      "sha256": "694a18e2517c162de0a6cad6ebbde8f21e527c6ccc6ce406ce09117fe21ee1b7",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_02_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_02_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_02_01_FINAL.mp4",
+      "sha256": "5773a4b7fb8a6f1b47d33bfd18557d5b43111c183685e587b2fca6efd61330d6",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_03_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_03_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_03_01_FINAL.mp4",
+      "sha256": "84a77591ea6fb056c413a93aa347a122292765b6223a4c842c6284c361b5bfbf",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_04_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_04_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_04_01_FINAL.mp4",
+      "sha256": "e0088be42cd08fdc40856d8c7cd8e2a8d3b829078ad2146c2256046dc5229052",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_05_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_05_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_05_01_FINAL.mp4",
+      "sha256": "5b9d83176e1a57d260a3354af094ec8fb415c6481775e56867cfff4d9c1b9a43",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_06_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_06_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_06_01_FINAL.mp4",
+      "sha256": "8e054714ee948c96127b522f38a74a8142d21df5e515458e3361f62dacb39582",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_07_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_07_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_07_01_FINAL.mp4",
+      "sha256": "17edff94068f8818ecea180d7302901a5df1a344edcf9543cab901bbaf1784c2",
+      "matches": true
+    },
+    {
+      "clip_id": "SECOND_LDP26_REEL_08_01",
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\zd_wjssZ7mc\\revisions\\6a1b69bda19d4103a932d9223ceb9c81\\SECOND_LDP26_REEL_08_01\\batches\\d480e8cbfe1b4e23a566e535dced7177\\SECOND_LDP26_REEL_08_01_FINAL.mp4",
+      "sha256": "bd566701225c130e0234814e77eee562220de866bc76e77c0423533fbc512dce",
+      "matches": true
+    }
+  ],
+  "series_counts": {
+    "S01": 3,
+    "S02": 5,
+    "S03": 8
+  },
+  "finals_approved": 0,
+  "previews_pending_human": 16,
+  "blocked": 0,
+  "renderer_fingerprint": "93dee24827dae9c710dc7d5fc1e0305b0de8ca7277b4ebf92c7abcf9f9da20d6",
+  "gui_recovery_open": {
+    "signature_matches": true,
+    "source": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\input\\youtube\\zd_wjssZ7mc\\zd_wjssZ7mc.mp4",
+    "cfg_restored": true,
+    "human_approval_record_exists": false
+  },
+  "baseline_index_preserved_in_revision": true,
+  "cleanup_read_only_checks": [
+    {
+      "root": "output",
+      "removable_files": 0,
+      "reclaimable_bytes": 0,
+      "protected_candidates": 196,
+      "skipped_links": [],
+      "source_removal_disabled": true
+    },
+    {
+      "root": ".cache",
+      "removable_files": 0,
+      "reclaimable_bytes": 0,
+      "protected_candidates": 8,
+      "skipped_links": [],
+      "source_removal_disabled": true
+    },
+    {
+      "root": "source_cache",
+      "removable_files": 0,
+      "reclaimable_bytes": 0,
+      "protected_candidates": 0,
+      "skipped_links": [],
+      "source_removal_disabled": true
+    }
+  ],
+  "inventory_totals": {
+    "output": {
+      "files": 964,
+      "bytes": 710423936
+    },
+    ".cache": {
+      "files": 502,
+      "bytes": 94732892
+    },
+    "source_cache": {
+      "files": 1,
+      "bytes": 1200651212
+    }
+  },
+  "duplicate_groups": 169,
+  "historical_incomplete_attempts_preserved": [
+    "output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\cc73a6c2fd0046b2\\preview\\RENDER_ATTEMPT.json"
+  ]
+}

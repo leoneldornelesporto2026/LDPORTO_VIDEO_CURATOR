@@ -1,0 +1,1015 @@
+{
+  "schema": "LDPORTO_GUI_PERFORMANCE_READONLY_AUDIT_V1",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "root": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR",
+  "measurement_scope": "Importa??es em subprocessos Python -B; sem Tk(), sem reprodu??o, sem modelos e sem render. Sistema de arquivos somente leitura at? salvar este relat?rio.",
+  "benchmarks": {
+    "ldporto_curator.gui": {
+      "samples": [
+        {
+          "import_seconds": 0.04816970000683796,
+          "process_seconds": 0.09392990000196733
+        },
+        {
+          "import_seconds": 0.045053900001221336,
+          "process_seconds": 0.08661950001260266
+        },
+        {
+          "import_seconds": 0.04572410001128446,
+          "process_seconds": 0.08865980000700802
+        },
+        {
+          "import_seconds": 0.04558629999519326,
+          "process_seconds": 0.0878250000096159
+        },
+        {
+          "import_seconds": 0.04495640000095591,
+          "process_seconds": 0.08944640000117943
+        }
+      ],
+      "median_import_seconds": 0.04558629999519326,
+      "median_process_seconds": 0.08865980000700802,
+      "loaded_heavy": []
+    },
+    "ldporto_curator.series_review": {
+      "samples": [
+        {
+          "import_seconds": 0.05549969999992754,
+          "process_seconds": 0.10236119999899529
+        },
+        {
+          "import_seconds": 0.05095140000048559,
+          "process_seconds": 0.09378000001015607
+        },
+        {
+          "import_seconds": 0.05004180000105407,
+          "process_seconds": 0.09633269999176264
+        },
+        {
+          "import_seconds": 0.051714900007937104,
+          "process_seconds": 0.09477359999436885
+        },
+        {
+          "import_seconds": 0.053658299992093816,
+          "process_seconds": 0.09775230000377633
+        }
+      ],
+      "median_import_seconds": 0.051714900007937104,
+      "median_process_seconds": 0.09633269999176264,
+      "loaded_heavy": []
+    },
+    "ldporto_curator.pipeline": {
+      "samples": [
+        {
+          "import_seconds": 0.16941850000876002,
+          "process_seconds": 0.22013849999348167
+        },
+        {
+          "import_seconds": 0.17292480000469368,
+          "process_seconds": 0.22676800000772346
+        },
+        {
+          "import_seconds": 0.16017060000740457,
+          "process_seconds": 0.2101939999993192
+        },
+        {
+          "import_seconds": 0.15340990001277532,
+          "process_seconds": 0.20197229999757838
+        },
+        {
+          "import_seconds": 0.15782279999984894,
+          "process_seconds": 0.20748319999256637
+        }
+      ],
+      "median_import_seconds": 0.16017060000740457,
+      "median_process_seconds": 0.2101939999993192,
+      "loaded_heavy": [
+        "requests",
+        "PIL",
+        "ldporto_curator.pipeline"
+      ]
+    },
+    "ldporto_curator.local_player": {
+      "samples": [
+        {
+          "import_seconds": 0.027240399998845533,
+          "process_seconds": 0.07082170000649057
+        },
+        {
+          "import_seconds": 0.024117099994327873,
+          "process_seconds": 0.06470579998858739
+        },
+        {
+          "import_seconds": 0.028514300007373095,
+          "process_seconds": 0.06783040000300389
+        },
+        {
+          "import_seconds": 0.024860700010322034,
+          "process_seconds": 0.06257380000897683
+        },
+        {
+          "import_seconds": 0.026580399993690662,
+          "process_seconds": 0.0675286000041524
+        }
+      ],
+      "median_import_seconds": 0.026580399993690662,
+      "median_process_seconds": 0.0675286000041524,
+      "loaded_heavy": []
+    },
+    "ldporto_curator.timeline_editor": {
+      "samples": [
+        {
+          "import_seconds": 0.026864700004807673,
+          "process_seconds": 0.07178089999069925
+        },
+        {
+          "import_seconds": 0.025482700002612546,
+          "process_seconds": 0.0709363000059966
+        },
+        {
+          "import_seconds": 0.02756650000810623,
+          "process_seconds": 0.07470300000568386
+        },
+        {
+          "import_seconds": 0.026876900010393,
+          "process_seconds": 0.07070679999014828
+        },
+        {
+          "import_seconds": 0.027189499989617616,
+          "process_seconds": 0.072490899998229
+        }
+      ],
+      "median_import_seconds": 0.026876900010393,
+      "median_process_seconds": 0.07178089999069925,
+      "loaded_heavy": []
+    },
+    "gpu_profile_first_call": {
+      "seconds": 0.049820500003988855,
+      "profile": [
+        "NVIDIA GeForce RTX 5070, 12227, 610.60"
+      ]
+    }
+  },
+  "module_import_graph_including_lazy": {
+    "analysis_loader": [
+      "utils"
+    ],
+    "approval": [
+      "persisted_plan",
+      "utils"
+    ],
+    "broadcast_graphics": [],
+    "camera": [],
+    "camera_evidence": [],
+    "camera_geometry": [
+      "camera_motion",
+      "temporal"
+    ],
+    "camera_metadata": [],
+    "camera_motion": [],
+    "camera_refinement": [
+      "broadcast_graphics",
+      "camera_evidence",
+      "camera_geometry",
+      "camera_motion",
+      "director_config",
+      "temporal"
+    ],
+    "camera_revision": [
+      "approval",
+      "camera_metadata",
+      "final_camera",
+      "series_workflow",
+      "utils"
+    ],
+    "camera_verifier": [
+      "micro_perception"
+    ],
+    "combined_batch": [
+      "approval",
+      "episode_approval",
+      "evidence_source",
+      "second_curation_import",
+      "series_workflow",
+      "story_import",
+      "subtitle_presets",
+      "utils"
+    ],
+    "config": [],
+    "crop_editor": [
+      "render",
+      "timeline_editor"
+    ],
+    "curator": [
+      "ollama_client",
+      "second_curation_decisions",
+      "utils"
+    ],
+    "director_config": [],
+    "duration_presets": [],
+    "editing_history": [],
+    "editorial_copy": [],
+    "episode_approval": [
+      "approval",
+      "media_effects",
+      "utils"
+    ],
+    "eta": [
+      "utils"
+    ],
+    "evidence_source": [
+      "analysis_loader",
+      "second_curation_decisions",
+      "second_curation_import"
+    ],
+    "feedback": [],
+    "final_camera": [
+      "broadcast_graphics",
+      "camera_refinement",
+      "micro_perception",
+      "smart_composition",
+      "storage",
+      "utils"
+    ],
+    "full_handoff": [],
+    "gui": [
+      "combined_batch",
+      "config",
+      "eta",
+      "pipeline",
+      "second_curation_import",
+      "series_review",
+      "source_video",
+      "storage_dialog"
+    ],
+    "import_smoke": [
+      "approval",
+      "evidence_source",
+      "series_planner"
+    ],
+    "interview_layout": [],
+    "local_player": [],
+    "media_effects": [
+      "title_card"
+    ],
+    "micro_perception": [
+      "approval",
+      "broadcast_graphics",
+      "utils"
+    ],
+    "ollama_client": [],
+    "persisted_plan": [
+      "analysis_loader",
+      "media_effects"
+    ],
+    "pipeline": [
+      "analysis_loader",
+      "approval",
+      "camera",
+      "curator",
+      "final_camera",
+      "persisted_plan",
+      "pipeline_recovery",
+      "render",
+      "review",
+      "second_curation_import",
+      "source_video",
+      "thumbnails",
+      "utils"
+    ],
+    "pipeline_recovery": [
+      "analysis_loader",
+      "approval",
+      "persisted_plan",
+      "utils"
+    ],
+    "render": [
+      "approval",
+      "camera_verifier",
+      "persisted_plan",
+      "storage",
+      "subtitles",
+      "title_card",
+      "utils"
+    ],
+    "review": [],
+    "second_curation_decisions": [],
+    "second_curation_import": [
+      "feedback",
+      "second_curation_decisions",
+      "utils"
+    ],
+    "series_planner": [
+      "duration_presets",
+      "editorial_copy"
+    ],
+    "series_review": [
+      "combined_batch",
+      "duration_presets",
+      "evidence_source",
+      "local_player",
+      "media_effects",
+      "series_workflow",
+      "subtitle_presets",
+      "timeline_editor",
+      "utils"
+    ],
+    "series_workflow": [
+      "approval",
+      "camera",
+      "camera_revision",
+      "editing_history",
+      "episode_approval",
+      "full_handoff",
+      "media_effects",
+      "render",
+      "series_planner",
+      "story_import",
+      "subtitle_presets",
+      "thumbnail_presets",
+      "title_presets",
+      "utils"
+    ],
+    "smart_composition": [
+      "camera_geometry",
+      "camera_motion",
+      "director_config"
+    ],
+    "source_video": [
+      "approval",
+      "utils"
+    ],
+    "storage": [],
+    "storage_dialog": [
+      "storage"
+    ],
+    "story_import": [
+      "duration_presets",
+      "series_planner"
+    ],
+    "subtitles": [
+      "title_card"
+    ],
+    "subtitle_presets": [
+      "subtitles",
+      "title_card"
+    ],
+    "temporal": [],
+    "thumbnails": [
+      "utils"
+    ],
+    "thumbnail_presets": [
+      "thumbnails",
+      "title_card"
+    ],
+    "timeline_editor": [],
+    "title_card": [],
+    "title_presets": [
+      "title_card",
+      "utils"
+    ],
+    "utils": [],
+    "__init__": []
+  },
+  "guarded_entrypoints": [
+    "app.py",
+    "scripts\\build_camera_update.py",
+    "scripts\\build_caption_update.py",
+    "scripts\\capture_render_p0_ui.py",
+    "scripts\\capture_v5_ui.py",
+    "scripts\\demo_curator_v5.py",
+    "scripts\\NOVAS_PREVIAS_STORIES_CAMERA.py",
+    "scripts\\RECUPERAR_OUTPUT_LDPORTO.py",
+    "scripts\\REFINAR_CAMERA_EXISTENTE.py",
+    "scripts\\render_camera_demos_hd.py",
+    "scripts\\REPARAR_STORY06_SEM_QWEN.py",
+    "scripts\\RETOMAR_STORIES_RECUPERADOS.py",
+    "scripts\\REVISAR_CAMERA_SEM_QWEN.py",
+    "scripts\\validate_camera_final_real.py",
+    "scripts\\validate_curator_v5.py",
+    "scripts\\validate_render_p0.py",
+    "scripts\\validate_story_camera_routing.py",
+    "scripts\\validate_story_captions_p0.py",
+    "scripts\\validate_story_reel_karaoke.py",
+    "scripts\\verify_caption_protected_hashes.py"
+  ],
+  "unguarded_cli_entrypoints": [
+    "cli.py",
+    "DIAGNOSTICO.py"
+  ],
+  "script_usage": [
+    {
+      "path": "scripts\\build_camera_update.py",
+      "references_outside_docs": [
+        "tests\\test_camera_update_package.py"
+      ]
+    },
+    {
+      "path": "scripts\\build_caption_update.py",
+      "references_outside_docs": [
+        "tests\\test_caption_update_package.py"
+      ]
+    },
+    {
+      "path": "scripts\\capture_render_p0_ui.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\capture_v5_ui.py",
+      "references_outside_docs": [
+        "scripts\\validate_curator_v5.py"
+      ]
+    },
+    {
+      "path": "scripts\\demo_curator_v5.py",
+      "references_outside_docs": [
+        "scripts\\validate_curator_v5.py",
+        "README.md"
+      ]
+    },
+    {
+      "path": "scripts\\demo_speech.ps1",
+      "references_outside_docs": [
+        "scripts\\demo_curator_v5.py"
+      ]
+    },
+    {
+      "path": "scripts\\INSTALL_CAMERA_FINAL.ps1",
+      "references_outside_docs": [
+        "tests\\test_camera_update_package.py",
+        "scripts\\build_camera_update.py"
+      ]
+    },
+    {
+      "path": "scripts\\INSTALL_CAPTIONS_P0.ps1",
+      "references_outside_docs": [
+        "tests\\test_caption_installer.py",
+        "tests\\test_caption_update_package.py",
+        "scripts\\build_caption_update.py"
+      ]
+    },
+    {
+      "path": "scripts\\NOVAS_PREVIAS_STORIES_CAMERA.py",
+      "references_outside_docs": [
+        "tests\\test_integracao_camera_stories_p0.py"
+      ]
+    },
+    {
+      "path": "scripts\\RECUPERAR_OUTPUT_LDPORTO.py",
+      "references_outside_docs": [
+        "tests\\test_recuperar_output_ldporto.py"
+      ]
+    },
+    {
+      "path": "scripts\\REFINAR_CAMERA_EXISTENTE.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\render_camera_demos_hd.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\REPARAR_STORY06_SEM_QWEN.py",
+      "references_outside_docs": [
+        "ldporto_curator\\combined_batch.py",
+        "tests\\test_story06_camera_revision_p0.py",
+        "tests\\test_story06_recovery_p0.py",
+        "tests\\test_story06_signature_resume_p0.py"
+      ]
+    },
+    {
+      "path": "scripts\\RETOMAR_STORIES_RECUPERADOS.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\REVISAR_CAMERA_SEM_QWEN.py",
+      "references_outside_docs": [
+        "tests\\test_camera_final_refinement.py"
+      ]
+    },
+    {
+      "path": "scripts\\validate_camera_final_real.py",
+      "references_outside_docs": [
+        "scripts\\validate_story_camera_routing.py"
+      ]
+    },
+    {
+      "path": "scripts\\validate_curator_v5.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\validate_render_p0.py",
+      "references_outside_docs": [
+        "tests\\test_p0_legacy_recovery.py",
+        "scripts\\capture_render_p0_ui.py"
+      ]
+    },
+    {
+      "path": "scripts\\validate_story_camera_routing.py",
+      "references_outside_docs": [
+        "tests\\test_story_camera_routing_demo.py"
+      ]
+    },
+    {
+      "path": "scripts\\validate_story_captions_p0.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\validate_story_reel_karaoke.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\validate_v44_promoted_preview.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\validate_v44_real_clips.py",
+      "references_outside_docs": []
+    },
+    {
+      "path": "scripts\\verify_caption_protected_hashes.py",
+      "references_outside_docs": []
+    }
+  ],
+  "directory_snapshot": {
+    "docs": {
+      "exists": true,
+      "files": 5337,
+      "bytes": 1449820352
+    },
+    ".docs": {
+      "exists": false
+    },
+    "scripts": {
+      "exists": true,
+      "files": 42,
+      "bytes": 537339
+    },
+    "examples": {
+      "exists": true,
+      "files": 1,
+      "bytes": 44844
+    }
+  },
+  "extension_snapshot": {
+    ".md": {
+      "files": 102,
+      "bytes": 444526
+    },
+    ".json": {
+      "files": 2419,
+      "bytes": 814650493
+    },
+    ".txt": {
+      "files": 57,
+      "bytes": 557198
+    },
+    ".patch": {
+      "files": 2,
+      "bytes": 113367
+    },
+    ".xml": {
+      "files": 35,
+      "bytes": 2138500
+    },
+    ".jpg": {
+      "files": 449,
+      "bytes": 36681554
+    },
+    ".yaml": {
+      "files": 7,
+      "bytes": 18474
+    },
+    ".ini": {
+      "files": 4,
+      "bytes": 108
+    },
+    ".py": {
+      "files": 694,
+      "bytes": 7274006
+    },
+    ".pyc": {
+      "files": 33,
+      "bytes": 1004519
+    },
+    ".ps1": {
+      "files": 20,
+      "bytes": 148635
+    },
+    ".jsonl": {
+      "files": 16,
+      "bytes": 279020
+    },
+    ".png": {
+      "files": 929,
+      "bytes": 332168755
+    },
+    ".m3u": {
+      "files": 12,
+      "bytes": 3360
+    },
+    ".ass": {
+      "files": 217,
+      "bytes": 1007870
+    },
+    ".srt": {
+      "files": 216,
+      "bytes": 572047
+    },
+    ".mp4": {
+      "files": 106,
+      "bytes": 202653967
+    },
+    ".zip": {
+      "files": 13,
+      "bytes": 35474967
+    },
+    ".sha256": {
+      "files": 3,
+      "bytes": 287
+    },
+    ".html": {
+      "files": 19,
+      "bytes": 48475
+    },
+    ".wav": {
+      "files": 12,
+      "bytes": 11499580
+    },
+    ".flag": {
+      "files": 10,
+      "bytes": 100
+    },
+    ".diff": {
+      "files": 2,
+      "bytes": 61754
+    },
+    ".gif": {
+      "files": 1,
+      "bytes": 3594095
+    },
+    ".log": {
+      "files": 2,
+      "bytes": 6878
+    }
+  },
+  "largest_media_archives": [
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_hd_final\\apresentador\\DEMO_APRESENTADOR_1080x1920.mp4",
+      "bytes": 20130838
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_hd\\apresentador\\DEMO_APRESENTADOR_1080x1920.mp4",
+      "bytes": 19981640
+    },
+    {
+      "path": "docs\\reports\\captions_p0_package_20261015_v2\\UPDATE_LEGENDAS_STORIES_P0.zip",
+      "bytes": 15755859
+    },
+    {
+      "path": "docs\\reports\\captions_p0_package_20261015\\UPDATE_LEGENDAS_STORIES_P0.zip",
+      "bytes": 15728260
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_hd\\mapa_rota\\DEMO_MAPA_ROTA_1080x1920.mp4",
+      "bytes": 9505959
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_hd_final\\mapa_rota\\DEMO_MAPA_ROTA_1080x1920.mp4",
+      "bytes": 9505959
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos\\review_project\\serie_s02\\004_PROP_820da3ee0287202220af0541\\20822f2e7ecbb0a9\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 8398573
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_final\\review_project\\serie_s02\\004_PROP_820da3ee0287202220af0541\\39abc30b5df7478f\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7838583
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_v2\\review_project\\serie_s02\\004_PROP_820da3ee0287202220af0541\\3e16e36c06c63601\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7838583
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_final\\review_project\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\4ee7abc6679cfa2b\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7481123
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_v2\\review_project\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\545bee7fd9e1890c\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7481123
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos\\review_project\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\2847ce51c8cf01fb\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7478273
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_final\\review_project\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\cd6d32aa00924976\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7336998
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_v2\\review_project\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\ab06268b602f0302\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7294930
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos\\review_project\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\0b40b7236e34f003\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 7293373
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos\\review_project\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\e49f038af2fa5c68\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 4418038
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_final\\review_project\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\3af4f090770a5527\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 4417915
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos_v2\\review_project\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\854920d308219203\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 4417915
+    },
+    {
+      "path": "docs\\reports\\stories_reel_karaoke_20261015\\story_parte_1\\PREVIEW_540x960.mp4",
+      "bytes": 4394077
+    },
+    {
+      "path": "docs\\reports\\stories_camera_routing_20261015\\duas_previas\\review_project\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\ba9f93d3f025f5e8\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 4387430
+    },
+    {
+      "path": "docs\\reports\\captions_p0_20261015\\story_parte_1\\PREVIEW_540x960.mp4",
+      "bytes": 4375493
+    },
+    {
+      "path": "docs\\reports\\captions_p0_20261015_v2\\story_parte_1\\PREVIEW_540x960.mp4",
+      "bytes": 4375493
+    },
+    {
+      "path": "docs\\reports\\captions_p0_package_20261015\\update_package\\evidence\\story_parte_1\\PREVIEW_540x960.mp4",
+      "bytes": 4375493
+    },
+    {
+      "path": "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\evidence\\story_parte_1\\PREVIEW_540x960.mp4",
+      "bytes": 4375493
+    },
+    {
+      "path": "docs\\reports\\camera_final_20261015\\demos\\review_project\\serie_s01\\002_PROP_0cd8967b4785b114a6b605c0\\9123d59a0a8e2162\\preview\\PREVIEW_540x960.mp4",
+      "bytes": 4201153
+    }
+  ],
+  "identical_text_groups": [
+    {
+      "sha256": "d7a7a44bef74a4f6f58a02f3cdeeeddd355a29b023c38da7d9e7f65b9f68cacb",
+      "paths": [
+        "docs\\architecture\\CAMERA_VERTICAL_SEGURA.md",
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\docs\\architecture\\CAMERA_VERTICAL_SEGURA.md"
+      ]
+    },
+    {
+      "sha256": "53292c7fd3b14f991ecbac8d93a7fa442e91797809c11e4e3bb69f86d8e6cbf0",
+      "paths": [
+        "docs\\reports\\ORGANIZACAO_PROJETO.md",
+        "docs\\reports\\captions_p0_20261015_v2\\validation\\ORGANIZACAO_PROJETO.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\ORGANIZACAO_PROJETO.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\evidence\\validation\\ORGANIZACAO_PROJETO.md"
+      ]
+    },
+    {
+      "sha256": "edd715bab0a65458deddbfc29af8c48f5f33f1792a64a6b8e79082725060c1fa",
+      "paths": [
+        "docs\\reports\\auditoria_global\\git_head_before.txt",
+        "docs\\reports\\story06_signature_p0_20261016\\git_head.txt"
+      ]
+    },
+    {
+      "sha256": "ccd220b811f85a02ba4f5e0c3f5d31ae4b36b00244142a8036222b3ee06cf246",
+      "paths": [
+        "docs\\reports\\auditoria_global\\git_status_before.txt",
+        "docs\\reports\\story06_signature_p0_20261016\\git_status_after.txt"
+      ]
+    },
+    {
+      "sha256": "b638434f0c6e26b4d0771f92cd08e29416c684b4fef5ee6d272952e0679916fb",
+      "paths": [
+        "docs\\reports\\camera_final_20261015\\AUDITORIA_ORGANIZACAO.md",
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\docs\\reports\\camera_final_20261015\\AUDITORIA_ORGANIZACAO.md"
+      ]
+    },
+    {
+      "sha256": "f56cc1252c640056b7ae0848f0b12f2f8f3248685ec600e4fd1dbf4988ca075e",
+      "paths": [
+        "docs\\reports\\camera_final_20261015\\ENTREGA.md",
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\docs\\reports\\camera_final_20261015\\ENTREGA.md"
+      ]
+    },
+    {
+      "sha256": "6540110f8bbf7a55bf6e0872cd196e672553cee5c0c509ef3c194f5ba3088443",
+      "paths": [
+        "docs\\reports\\camera_final_20261015\\INSTALLER_VALIDATION.md",
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\docs\\reports\\camera_final_20261015\\INSTALLER_VALIDATION.md"
+      ]
+    },
+    {
+      "sha256": "7b99faff135dd566e039d403f682a7466618a464f089b14d528a8badcdfa24fc",
+      "paths": [
+        "docs\\reports\\camera_final_20261015\\PROTECAO_OUTPUT.md",
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\docs\\reports\\camera_final_20261015\\PROTECAO_OUTPUT.md"
+      ]
+    },
+    {
+      "sha256": "b46e5749bc39667aec98eda4dec5f5003247778616240db00e00c89e09a01c45",
+      "paths": [
+        "docs\\reports\\camera_final_20261015\\backup_before\\requirements.txt",
+        "docs\\reports\\stories_camera_routing_20261015\\backup_before\\requirements.txt",
+        "docs\\reports\\story06_signature_p0_20261016\\backup_code\\requirements.txt"
+      ]
+    },
+    {
+      "sha256": "cad196487bfb35a5700aa5b32d27d1c70cc230f384a1b1cb3c06bf077cd77351",
+      "paths": [
+        "docs\\reports\\camera_final_package_20261015\\update_package\\payload\\README.md",
+        "docs\\reports\\stories_camera_routing_20261015\\backup_before\\README.md"
+      ]
+    },
+    {
+      "sha256": "4342a7a326593133ac3c63d1bd4eb123ec5c1ea1f9f0e558f96d9b1fe5611d8e",
+      "paths": [
+        "docs\\reports\\captions_p0_20261015_v2\\ENTREGA.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\evidence\\ENTREGA.md"
+      ]
+    },
+    {
+      "sha256": "302e3cb427ddcb11bcf1a594ee55b57fcca762be42b15ded56e4038e3d78d5aa",
+      "paths": [
+        "docs\\reports\\captions_p0_20261015_v2\\validation\\CAUSA_RAIZ_LEGENDAS_STORIES_P0.md",
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\evidence\\validation\\CAUSA_RAIZ_LEGENDAS_STORIES_P0.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\evidence\\validation\\CAUSA_RAIZ_LEGENDAS_STORIES_P0.md"
+      ]
+    },
+    {
+      "sha256": "18d5723d46ed34b41aa7d67f84c9bf381323517e9ec4bca29b7cfaa426400950",
+      "paths": [
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\LEIA_PRIMEIRO.txt",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\LEIA_PRIMEIRO.txt"
+      ]
+    },
+    {
+      "sha256": "13455a6e0b967b9e4bb8ea1bc4cc56816f9447451108c8b8dc42535732c28a4c",
+      "paths": [
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\ORGANIZACAO_PROJETO.md",
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\evidence\\validation\\ORGANIZACAO_PROJETO.md"
+      ]
+    },
+    {
+      "sha256": "e710166fc9fe8c325ecb04230f7acf4007ed2379f72fe26109cfaec2e99a0aff",
+      "paths": [
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\payload\\README.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\payload\\README.md"
+      ]
+    },
+    {
+      "sha256": "ed27909dd9b913d6192dd8edd4d8ec498dae2e4a1faf12d098f2780a444911f7",
+      "paths": [
+        "docs\\reports\\captions_p0_package_20261015\\update_package\\payload\\docs\\architecture\\LEGENDAS_WORD_ALIGNED.md",
+        "docs\\reports\\captions_p0_package_20261015_v2\\update_package\\payload\\docs\\architecture\\LEGENDAS_WORD_ALIGNED.md"
+      ]
+    },
+    {
+      "sha256": "df0d6546c4fd7aee1b9da736c67d9e05e33e8ec50f0d14f67099124cb6da8ebc",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\INDEX.md",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\INDEX.md"
+      ]
+    },
+    {
+      "sha256": "60d85b23111fc3bf57487c637c1cd8f7526fc4dd4356d33e413080ebc9cf68ce",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\001_PROP_aae5b058158b22933022af28\\story_and_scenes.md",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\001_PROP_aae5b058158b22933022af28\\story_and_scenes.md"
+      ]
+    },
+    {
+      "sha256": "90e32c07d788b5fca84d532c973b3b09c89755cecc882b6e7e7558993ab4c66d",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\001_PROP_aae5b058158b22933022af28\\transcript_context.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\001_PROP_aae5b058158b22933022af28\\transcript_context.txt"
+      ]
+    },
+    {
+      "sha256": "94247993682fe3269a095c849dde1396ba78739093599f86357af1efd9395562",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\001_PROP_aae5b058158b22933022af28\\transcript_exact.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\001_PROP_aae5b058158b22933022af28\\transcript_exact.txt"
+      ]
+    },
+    {
+      "sha256": "705cc01e05abbf585c1aa294ec884dbf0968452c2de17fb31ced5846c060db25",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\story_and_scenes.md",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\story_and_scenes.md"
+      ]
+    },
+    {
+      "sha256": "fb091b417fe17ee843d4503e4a8db11ec4b7dfc38c1e8c5666441e625763d1aa",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\transcript_context.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\transcript_context.txt"
+      ]
+    },
+    {
+      "sha256": "8f95714f2d24431ca3e7237922037b0f1014515159e22fb45149c5d6b4f1f22f",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\transcript_exact.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\episodes\\002_PROP_afa6ecc399f7ff1a2d1a08f0\\transcript_exact.txt"
+      ]
+    },
+    {
+      "sha256": "7dbf11a35b81da3f622530803d997ed0b23c4724f4cbea45283d11d59a9aebd2",
+      "paths": [
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\4a6693803282\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735\\transcript\\transcript_full_available.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\b0ef736394d9\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916\\transcript\\transcript_full_available.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\d76af30a3a47\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5\\episodes\\001_PROP_70828537f40c944a69dcf959\\transcript_exact.txt",
+        "docs\\reports\\curator_v5\\demo_v2\\output\\projects\\curator_v5_synthetic_demo\\d76af30a3a47\\CHATGPT_HANDOFF\\CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5\\transcript\\transcript_full_available.txt"
+      ]
+    },
+    {
+      "sha256": "6748a35aa436a9f7211641ed291f4d63f5715fd110ce0b5329dc280b137db907",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\058695c37387481497e7a24eaa5a5c74\\legacy_archive\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\e2be36ced2c54b9ea459025e20a22534\\legacy_archive\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\fbfdd9edc1c642ad8c0abcef3ac596d0\\legacy_archive\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\590cf9875eec417395f28422113682cf\\legacy_archive\\CHATGPT_HANDOFF.md"
+      ]
+    },
+    {
+      "sha256": "4adfd4a379b518a56ed789e9e9eabc0802c30ce76474ebee3eddd41d4df0f830",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\058695c37387481497e7a24eaa5a5c74\\legacy_archive\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\e2be36ced2c54b9ea459025e20a22534\\legacy_archive\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\fbfdd9edc1c642ad8c0abcef3ac596d0\\legacy_archive\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\legacy_isolated\\output\\curation\\zd_wjssZ7mc\\revisions\\590cf9875eec417395f28422113682cf\\legacy_archive\\CURATION_REPORT.md"
+      ]
+    },
+    {
+      "sha256": "1d71b4e1c3bf6b6c139b81903c501b9d8b499b2a4eb7b9dd88235ba5011d43f4",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\7713e08c49ae42aea3fdead21ddd2661\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\5e0ed99e46374e3e9243f0f644b941ea\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041033147402Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041144996792Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CHATGPT_HANDOFF.md"
+      ]
+    },
+    {
+      "sha256": "eb5cf3a94c7fff309abf74c00a9ac356df1846935e0a396b113dce64fb2cc749",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040020539584Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\86836a79741f4efd83581c583c9a15d1\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040129999167Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\eec94e4d02804f01996578d643d96c4d\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\de6d34ce20e94c48823ca52f7b5d2cce\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041033147402Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041144996792Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CHATGPT_HANDOFF.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\de6d34ce20e94c48823ca52f7b5d2cce\\CHATGPT_HANDOFF.md"
+      ]
+    },
+    {
+      "sha256": "1818e78954bbbd441c9260babf5fedb1629506ac78492fd5506dec1e1ba4b417",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041033147402Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041144996792Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\b474fc47aadb4543a1b3aa50a04dfd98\\CURATION_REPORT.md"
+      ]
+    },
+    {
+      "sha256": "3ea596d26669e79e24b87c6cda79bebfc88ae5d07a4d7975f28aa73aa3b1feb5",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T040322246282Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041033147402Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T041144996792Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\f514fbf67cba4208bcf12ad0a1bdb72d\\CURATION_REPORT.md"
+      ]
+    },
+    {
+      "sha256": "31dbe3a30f6474ea6240aed5d148425d1afd10cb6bb8bbf89d22617d4c3a150c",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\0323c8282ffa4ea09249f070acb43b9d\\CURATION_REPORT.md"
+      ]
+    },
+    {
+      "sha256": "8dd1483c86fa3861cf02e9647836a3d69854b3249232ad8e7ddfce687efe2d63",
+      "paths": [
+        "docs\\reports\\curator_v5_2\\render_p0\\acceptance_20261014T041942759404Z\\synthetic\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\de6d34ce20e94c48823ca52f7b5d2cce\\CURATION_REPORT.md",
+        "docs\\reports\\curator_v5_2\\render_p0\\gui_20261014T042341080113Z\\output\\curation\\P0_SYNTHETIC_FROZEN\\revisions\\de6d34ce20e94c48823ca52f7b5d2cce\\CURATION_REPORT.md"
+      ]
+    }
+  ],
+  "real_project_limitation": "output existe vazio no ambiente desta auditoria; SeriesProject antigo n?o pode ser medido e nenhuma alega??o de retomada real ? feita."
+}

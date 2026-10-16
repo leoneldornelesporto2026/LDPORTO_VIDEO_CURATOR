@@ -1,0 +1,1445 @@
+[
+  {
+    "size": 161419,
+    "sha256": "09210c6511718a24792c57a5b45e0f13111026511255fc01de390eeab7b50afd",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/STATE.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/states/00000013_4ee17852e6864fb48d173d0bc8ba18f2.json"
+    ]
+  },
+  {
+    "size": 14993,
+    "sha256": "af51bf48fa13a50ebd49cad16b3d92b8d14fd90257ff2030c31420ac60a4d0fd",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/CHATGPT_HANDOFF.md",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/CHATGPT_HANDOFF.md"
+    ]
+  },
+  {
+    "size": 19469,
+    "sha256": "1f92e8ff623b851435f77a6056fe4d7f8c05d355caffde793283589442932485",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/clip.json"
+    ]
+  },
+  {
+    "size": 156485,
+    "sha256": "24eeb6c019f3090940e2600848610195b5333b3026beaf4fb403d9cb87493402",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_980.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_01_980.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_980.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_01_980.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 160047,
+    "sha256": "7a6053ae8251277dd60e5bc89bda97c5ab1df3d11ee0bde0c83c81936d811b8c",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_983.60s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_02_983.60s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_983.60s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_02_983.60s.jpg"
+    ]
+  },
+  {
+    "size": 155062,
+    "sha256": "bb11646e5c7444ab406b07481673bfbee0b4dea4563ce5ef065ff7526ac49636",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_986.80s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_03_986.80s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_986.80s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_03_986.80s.jpg"
+    ]
+  },
+  {
+    "size": 138553,
+    "sha256": "c9aa1f0f6464340e16aac3beacfd95a4e679015c47fc5bc3d39ccc2fbc813100",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_990.01s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_04_990.01s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_990.01s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_04_990.01s.jpg"
+    ]
+  },
+  {
+    "size": 157138,
+    "sha256": "883056c047242437156adedfcebeb1b3912a9bee2c878c62093c1cb92f0f4b3b",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_993.22s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_05_993.22s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_993.22s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_05_993.22s.jpg"
+    ]
+  },
+  {
+    "size": 151780,
+    "sha256": "4578cf9ef601a0352f988eaa1a0147250c2a5985a6db513161fe6450bf287189",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_996.43s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_06_996.43s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_996.43s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_06_996.43s.jpg"
+    ]
+  },
+  {
+    "size": 127794,
+    "sha256": "a4d34762285adfe5036cd723cd0c886564402909958895699b15a84b3b368c93",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_999.64s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_07_999.64s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_999.64s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_07_999.64s.jpg"
+    ]
+  },
+  {
+    "size": 146257,
+    "sha256": "f8aa65ef86b1963a8a80d9b72aeab418771feea2f0a0198b03770f20ba228e6a",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_1002.84s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_08_1002.84s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_1002.84s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_08_1002.84s.jpg"
+    ]
+  },
+  {
+    "size": 135936,
+    "sha256": "c125ede5898de181e08fe19c52ada8cc681b5cab831e90f362ca13586f537301",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_1006.05s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/candidate_09_1006.05s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_1006.05s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/candidate_09_1006.05s.jpg"
+    ]
+  },
+  {
+    "size": 914,
+    "sha256": "30fd86eb2b370b72e79ec8039e6a09a0cd518b17ba787f1ead6b24df7f2b0d38",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 16136,
+    "sha256": "adb1f18cd128290544e24bd278eb2408d17baeb3f5df4dbd6a06900dd1e5d463",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 134614,
+    "sha256": "de5afdb165bc776c3a64eeaaf0a97e0069be09fc694c063c75d231514e99a9d8",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_797.67s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_797.67s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 153499,
+    "sha256": "5cc0f0e401dabae1dfd591660815cfdabbd025b8fcaac72d14e4a6a0ed2ba823",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_802.13s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_802.13s.jpg"
+    ]
+  },
+  {
+    "size": 137275,
+    "sha256": "ab8670a738eeca33043bdcf3aa2214d3daf3dc1c282ec091f23e5efb5ddc7573",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_806.60s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_806.60s.jpg"
+    ]
+  },
+  {
+    "size": 156143,
+    "sha256": "3451f8f7ebece01e1b058351d6557a110d50ba5f9b53dd1ed4c853a7ddf2d29d",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_811.06s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_811.06s.jpg"
+    ]
+  },
+  {
+    "size": 149160,
+    "sha256": "0561f34119e783d60e303c5a5bb4624a6043baa42ea80ee85d9b4d6d1cb8bd5e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_815.53s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_815.53s.jpg"
+    ]
+  },
+  {
+    "size": 136655,
+    "sha256": "bae085d179ce7c6c5195dac3b1e7e3fbcfdd72465c3eda6d581d1de6ed47b027",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_820.00s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_820.00s.jpg"
+    ]
+  },
+  {
+    "size": 147313,
+    "sha256": "ab560e88af5f388486c20d75b9f1037f0e08a04b24af073cdebfda54f744812a",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_824.46s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_824.46s.jpg"
+    ]
+  },
+  {
+    "size": 154889,
+    "sha256": "55cf8a7c3080793e9df064f949ddc4f7a41184a49fe4a5897d5b4d82f9957009",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_828.93s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_828.93s.jpg"
+    ]
+  },
+  {
+    "size": 152709,
+    "sha256": "b2a4b3b12b01dec3778754b4f6f27ef855f2ec64bcbbadff5df99750ac2853c4",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_833.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_833.39s.jpg"
+    ]
+  },
+  {
+    "size": 890,
+    "sha256": "8465f97ffcbad7b9efffcfdc52c9ab80e346aff0aab22a64368bd69580ef1be9",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 17428,
+    "sha256": "e7873cc8fbbe0735c72010426e632caa7e581ad1d6acc270143fba0534edf727",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 169039,
+    "sha256": "53076e0694a18fb367e2813debf7f127c7539d0eec6d518b990a86464ed6fd3c",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_452.34s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_452.34s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 167909,
+    "sha256": "884d0648f7a58c64b6a720bb49ac9edf7efafe171945c7bd563f576d630c2e8f",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_456.00s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_456.00s.jpg"
+    ]
+  },
+  {
+    "size": 167677,
+    "sha256": "a0a338f33c9a0ce6c6363170e3a3ec6810952c15c214a2672d4851daed3d1b0b",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_459.65s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_459.65s.jpg"
+    ]
+  },
+  {
+    "size": 163869,
+    "sha256": "7ad8ea3341d9a0ecc57f0025f37f89c34efb7f17c1200c6f7bc3e5f52ee44200",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_463.31s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_463.31s.jpg"
+    ]
+  },
+  {
+    "size": 168430,
+    "sha256": "e008135c110586cf51c9155d2f4fe7dd1f18dcf1eb524db9104d421784f87754",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_466.97s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_466.97s.jpg"
+    ]
+  },
+  {
+    "size": 146124,
+    "sha256": "c60265d7861ce690fafd00bf77517261aae142a72ccc6613423d83a6958c688f",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_470.63s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_470.63s.jpg"
+    ]
+  },
+  {
+    "size": 150807,
+    "sha256": "6a0b8e8e1b3322debd09adcc83b01fe582016f544f6d71b0056f0f30ccadd5f6",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_474.29s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_474.29s.jpg"
+    ]
+  },
+  {
+    "size": 166180,
+    "sha256": "cbbc9e7447a803e44a03d549b3bec1ae022f64d3943271f3566b431d89cb4c3e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_477.94s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_477.94s.jpg"
+    ]
+  },
+  {
+    "size": 213433,
+    "sha256": "8b6fa1bd88133862e536848573ec1f93cc56e94b53dba88653a9ce0813e2d042",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_481.60s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_481.60s.jpg"
+    ]
+  },
+  {
+    "size": 860,
+    "sha256": "c90f59bd7d05fcb0cf238d44f956a58558c76faece9be4852bcaf6ac4a1c8c68",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 16758,
+    "sha256": "c46816038e8911a1b3b47388d0fee1efcff98d27b83a2d46968bad7a09d0a706",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 138083,
+    "sha256": "06de379e4e0a8dbe7a3a9f3c993d56403db64695642301aa860d2671e60a8727",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_859.09s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_859.09s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 144978,
+    "sha256": "975e27c02355487bdc7e8b7ba7964dbd23fc945ac33f47d80485922da5bb9d3a",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_862.21s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_862.21s.jpg"
+    ]
+  },
+  {
+    "size": 156363,
+    "sha256": "adf00f69b4eb963d901af5b9edcfacaf2b495745dda3a917eaedcbb9fb101e86",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_865.34s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_865.34s.jpg"
+    ]
+  },
+  {
+    "size": 129280,
+    "sha256": "7746880b1a0d0e67ef1bb0aa8c6036a1c99981e2ac6cbc0da540bac4827a1cee",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_868.46s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_868.46s.jpg"
+    ]
+  },
+  {
+    "size": 139808,
+    "sha256": "3ab7819111b97c6ddc158362da1a16f98baf88f58e473d517b623ba4e45eef70",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_871.59s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_871.59s.jpg"
+    ]
+  },
+  {
+    "size": 141535,
+    "sha256": "a1fe64ddf3d793136b8ed31c4b8bbcfa3e43464aeb63e99f310276c4ee4b020a",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_874.72s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_874.72s.jpg"
+    ]
+  },
+  {
+    "size": 156243,
+    "sha256": "7e6d23c5f134fc99c8ee86f838382dad3b047623c81011216d92b10e3468046a",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_877.84s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_877.84s.jpg"
+    ]
+  },
+  {
+    "size": 147182,
+    "sha256": "b79ba80eb238f5f8dd71dbc11ba173eadfaaf11105fbe79e817604702ba298b4",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_880.97s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_880.97s.jpg"
+    ]
+  },
+  {
+    "size": 141972,
+    "sha256": "fa178d2afc9aacdfdd0e8e7b06af7d7e4e5943df74ac29967d138ca72e88ace7",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_884.09s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_884.09s.jpg"
+    ]
+  },
+  {
+    "size": 880,
+    "sha256": "b75b889b68044b513fea3c8a4860f646b679ceae74796ed82c0267e8f60f92ab",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 14241,
+    "sha256": "51cf1069515385f6939bb7f36df0f522d6e3de4b6c338d3f00d2735584ffb078",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 205117,
+    "sha256": "843b108770f38eaff05277cfbf4b0e695128a35cf5c0fca6c562e2eb97f831b1",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_425.15s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_425.15s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 187075,
+    "sha256": "f407692c0cc537adc1ac0534f0c924fe853ff823d890aa55186c978e76b2df15",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_427.75s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_427.75s.jpg"
+    ]
+  },
+  {
+    "size": 169025,
+    "sha256": "1b60446fef9c6e1222d63bd8cf2d333a5403ac4e87430a5ea2a0e05358648e9b",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_430.36s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_430.36s.jpg"
+    ]
+  },
+  {
+    "size": 150502,
+    "sha256": "e9e29df1a77dbb9373c3ff74b9300e05aef23adc41bac176087967482c8b86b5",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_432.96s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_432.96s.jpg"
+    ]
+  },
+  {
+    "size": 142628,
+    "sha256": "c61beb8437735f86c49b1b81ddbb774a28846c4139070a94881907d232c79b85",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_435.57s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_435.57s.jpg"
+    ]
+  },
+  {
+    "size": 148014,
+    "sha256": "874ad1df79753e931a2df315e2dbaa0dabef216e25a31c1ab91f97b23724833d",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_438.18s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_438.18s.jpg"
+    ]
+  },
+  {
+    "size": 130539,
+    "sha256": "7d865235c5f423693fa1566b0e30374ddad271a14fcbf75a6c971df57bdfac45",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_440.78s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_440.78s.jpg"
+    ]
+  },
+  {
+    "size": 153289,
+    "sha256": "a89a6e372be75f17f65e8242019a0deeb332794a8ef39ac166b8acae53d91b75",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_443.39s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_443.39s.jpg"
+    ]
+  },
+  {
+    "size": 159058,
+    "sha256": "8f4b08467dd4500d3ca806195c1c9e56a547d14cf5ff76674052c180b64a70f1",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_445.99s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_445.99s.jpg"
+    ]
+  },
+  {
+    "size": 905,
+    "sha256": "88169b5bbdc5de62f91265f0863171fe14558975ec3251f87e17e0772d5cecae",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 8473,
+    "sha256": "98922a34ee7fdd447d87dc9b8acdefc0570ceaf347ba999aaf7b33399995e8a6",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 134766,
+    "sha256": "e5de05dbd5715a5d5fc423f759639014c54cf3e63af53e87490354528436eaf7",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_361.16s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_361.16s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 182287,
+    "sha256": "d7752c71820a89465433ab04d797c754d91374cb9186821bd1eb11aff7676c49",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_363.78s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_363.78s.jpg"
+    ]
+  },
+  {
+    "size": 182136,
+    "sha256": "33247f40f9c9cf417d0a2f061af32ed3d92f6221e399dd5cd13e26c58f580bb8",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_366.41s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_366.41s.jpg"
+    ]
+  },
+  {
+    "size": 181541,
+    "sha256": "69a301f49a5d46bfaa8b48a8e49117757300290e365cfa093405f076ba385eb3",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_369.03s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_369.03s.jpg"
+    ]
+  },
+  {
+    "size": 180477,
+    "sha256": "f5528d8c013f6d903a937109dae81d3c621b31247ab051ce5308e9b66dcfaac4",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_371.65s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_371.65s.jpg"
+    ]
+  },
+  {
+    "size": 177011,
+    "sha256": "54c4d3cc9725f9d575bcbfdfe2f5dba8ec6c6b88a39b23b0eb38d889e4a95184",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_374.27s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_374.27s.jpg"
+    ]
+  },
+  {
+    "size": 177873,
+    "sha256": "4b4fc9afbf28f169c3244eca996e2d3dcd5e2f441884355f0143e4ee01b3f950",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_376.89s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_376.89s.jpg"
+    ]
+  },
+  {
+    "size": 182092,
+    "sha256": "7d57a48b7e844c85e75eb8f249ab75b1e1f24e57ce04507ccc95fd9f6f559d9c",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_379.52s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_379.52s.jpg"
+    ]
+  },
+  {
+    "size": 184673,
+    "sha256": "224ff02034079e7a9665880d2b1700d25f9bf521327af323f5ce06e2637165d1",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_382.14s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_382.14s.jpg"
+    ]
+  },
+  {
+    "size": 904,
+    "sha256": "5c4da4fb318140e2c7a2e2c767e49d01a7d33b7f34661553e962852b8121390e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 16682,
+    "sha256": "574c40547b2f833a0bfe55b15634804ceb19819362a0be8331d98cbb260388d5",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 157964,
+    "sha256": "fa10a8938f9c3c35c9f654806e158b7e82d3cf1a419d5b02160715d2f85c84cd",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_2018.09s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_2018.09s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 133527,
+    "sha256": "852c2ea244a83addb3c08785e13a20d022d4313787152740e62013c5d49c70f8",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_2021.08s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_2021.08s.jpg"
+    ]
+  },
+  {
+    "size": 152908,
+    "sha256": "0a003e17d67d603b3c90ec9e488ce6b4251f29d7040b7066a04672186a73f019",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_2024.07s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_2024.07s.jpg"
+    ]
+  },
+  {
+    "size": 139643,
+    "sha256": "262d107d288724cb6290dd12e36646465ade9873e86c3275b0a1bd09d798a825",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_2027.06s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_2027.06s.jpg"
+    ]
+  },
+  {
+    "size": 148054,
+    "sha256": "b03b0df5ec4d709da1e27020ff913e0fb4139c0b7fbed792e8d1ca880a044d5c",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_2030.05s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_2030.05s.jpg"
+    ]
+  },
+  {
+    "size": 152411,
+    "sha256": "a4e825bb4a028c6337db6c7fec440a24426325a16df5e8eaef28886151e9753e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_2033.04s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_2033.04s.jpg"
+    ]
+  },
+  {
+    "size": 146026,
+    "sha256": "74abf2fa50374a833111444859811f5cffd58a85199eec226024467ed653b6a3",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_2036.03s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_2036.03s.jpg"
+    ]
+  },
+  {
+    "size": 148568,
+    "sha256": "4375d91463db473fd41b4d0d420c982df4176f928c972c4cb80e81ffc3bd9935",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_2039.02s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_2039.02s.jpg"
+    ]
+  },
+  {
+    "size": 156362,
+    "sha256": "ca578f5e78ede80c38a6443986f4d8c647e0ac85a61f56f2e347682d2d60aa70",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_2042.01s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_2042.01s.jpg"
+    ]
+  },
+  {
+    "size": 870,
+    "sha256": "d68acf0d9a45d359dcd44f1e63d785f294716fa013185a6681e140fcf45e564c",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 21718,
+    "sha256": "42098c7368b8bce4b94962866eece116de71b9fdec41753a0bc8231d65e8a1b4",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json"
+    ]
+  },
+  {
+    "size": 152732,
+    "sha256": "e91d03d1a82b9b7e28a54e43bdcd1e99b1cd1789248ae99b176d6767ed284b8e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_01_1203.19s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_clean.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_01_1203.19s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/opening_frame.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_best.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 161234,
+    "sha256": "c599921eb3e305c6e77b1f6a8e8c118d44ad25d8acf30e7b301b35135d56efd7",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_02_1207.56s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_02_1207.56s.jpg"
+    ]
+  },
+  {
+    "size": 138074,
+    "sha256": "23c10e9f3a7dbb483918103d8c7bed0816dd13460d94f6574f4709cda0485865",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_03_1211.92s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_03_1211.92s.jpg"
+    ]
+  },
+  {
+    "size": 145246,
+    "sha256": "a8f82247dd158d85b44b096c90c2658d9d3e8bba37a7983bcfa1d1792c146f67",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_04_1216.29s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_04_1216.29s.jpg"
+    ]
+  },
+  {
+    "size": 128500,
+    "sha256": "cb4abee4ca01457332a0264aa2d6a485478b396fdde2ad470614fe2bfffa83d5",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_05_1220.66s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_05_1220.66s.jpg"
+    ]
+  },
+  {
+    "size": 72326,
+    "sha256": "4d18909f5e803449396f5715c23c8e702a24f9d99db11b7c48247f52f705a326",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_06_1225.03s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_06_1225.03s.jpg"
+    ]
+  },
+  {
+    "size": 100086,
+    "sha256": "700f8f26d8f8d7ac897443f97791c5508e28dc658eb9010d4c6112ddcf50d132",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_07_1229.40s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_07_1229.40s.jpg"
+    ]
+  },
+  {
+    "size": 69533,
+    "sha256": "61cb8f535b4bba91afc081d813e26dfed766b671b7b39cd7569ec4e3ebf9e5c6",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_08_1233.76s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_08_1233.76s.jpg"
+    ]
+  },
+  {
+    "size": 149772,
+    "sha256": "b431f36effb618c59dca437a2716149494f970feeb9984e2c5fab83199f5b44d",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/candidate_09_1238.13s.jpg",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/candidate_09_1238.13s.jpg"
+    ]
+  },
+  {
+    "size": 932,
+    "sha256": "07c51d0bf107830de71c0d5bdd1fe9fac34e6c8caa24069297cd59001393f72e",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/clips/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/thumbnails/thumbnail_candidates.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/thumbnails/thumbnail_candidates.json"
+    ]
+  },
+  {
+    "size": 756977,
+    "sha256": "9414a2d6d79bb2c5ea65b6da1c0766d7eb48fd0b08477e7f3e437261b695d88b",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/CURATION_BOARD.png",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/CURATION_BOARD.png"
+    ]
+  },
+  {
+    "size": 10,
+    "sha256": "62514795b7cc65aff0c9d8fc081596c3e45fd0ff513d28b8a83af5c82e6925f4",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/FIRST_TEST_APPROVED.flag",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/FIRST_TEST_APPROVED.flag"
+    ]
+  },
+  {
+    "size": 1461,
+    "sha256": "7904db9adeddf462f40a6c7aad3e968f593992683e27e7e1940eff62f408b0a0",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/FIRST_TEST_APPROVED_V44.json",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/PREVIEW_REVIEW_V44.json"
+    ]
+  },
+  {
+    "size": 157097,
+    "sha256": "714a246b8a98fe51eb2e80eece20e863bce50824901efbc46e2d99cb410eb1e5",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/STATE.json",
+      "output/curation/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/states/00000013_be65de72f7274a41b16ea817948e6505.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/legacy_archive/EDIT_DECISIONS.json"
+    ]
+  },
+  {
+    "size": 23375,
+    "sha256": "3944fd396a5e848e71412b85d213a7b152273f08f4eb2ad8ec9d1b9faa87b1ee",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/clip.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/clips/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/clip.json"
+    ]
+  },
+  {
+    "size": 1461,
+    "sha256": "ec4e07a41dd93520e462585a8656a29f6598225fabc2c157d054b1f2f392ce3b",
+    "paths": [
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/FIRST_TEST_APPROVED_V44.json",
+      "output/curation/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/PREVIEW_REVIEW_V44.json"
+    ]
+  },
+  {
+    "size": 46682340,
+    "sha256": "aea8317e9b6e06191639390561dc07e94daba533ab08ed9b57ed3529c9b44d5a",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/evidence.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/parent_snapshot/evidence.json"
+    ]
+  },
+  {
+    "size": 7092,
+    "sha256": "48a2ebdbfd3c5083660e5be76b6c9f67be46e5311b9fa762638e71ef8dc33557",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/evidence_availability.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/evidence_availability.json"
+    ]
+  },
+  {
+    "size": 1138058,
+    "sha256": "aa429a50ac14ffaffafe60490b06195d7fb74f1bbc4c37e46baf251d2ba7eb01",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/revisions/aa429a50ac14ffaf.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/parent_snapshot/series_index.json"
+    ]
+  },
+  {
+    "size": 5802,
+    "sha256": "61940674a62b8cdb57dc16d89030dd4dfd44408ec504304c715a8f785e248e84",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/serie_s01/001_PROP_f654d728d26180f2fb0e5816/f51efcea03391114/preview/CAPTIONS.ass",
+      ".cache/karaoke_engine_smoke/CAPTIONS.ass"
+    ]
+  },
+  {
+    "size": 942,
+    "sha256": "77f5caa8e2a4d230567fd031789d7601c1c3c7fa028f6e52b72beaadd3e1c5b9",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/serie_s01/001_PROP_f654d728d26180f2fb0e5816/f51efcea03391114/preview/CAPTIONS.srt",
+      ".cache/karaoke_engine_smoke/CAPTIONS.srt"
+    ]
+  },
+  {
+    "size": 635,
+    "sha256": "88d1c499865b3b7bd04015a5a251a966346392cd2c005f4b4661c641271a46d8",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/source_manifest.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/parent_snapshot/source_manifest.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/source_manifest.json"
+    ]
+  },
+  {
+    "size": 347409,
+    "sha256": "ad22226197a7786d1f7fcf4ee42aceb5feaf1105fc4b9a42e7159b8c3ce0a638",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/story_map.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/story_map.json"
+    ]
+  },
+  {
+    "size": 8056,
+    "sha256": "048cc624ae3c80bb071a70e58f489cda2fd7455f123e2482152c7a5136b8cdfd",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/caption_plan/CAPTIONS.ass",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/preview/CAPTIONS.ass"
+    ]
+  },
+  {
+    "size": 1360,
+    "sha256": "01157287078a2744edf182cdc42ab30ef8ec7e7166fa3887623ee87fc691e7de",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/caption_plan/CAPTIONS.srt",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/preview/CAPTIONS.srt"
+    ]
+  },
+  {
+    "size": 193785,
+    "sha256": "914e7de916ce6c4c1fda6a1279abb48bd88ff4926b7db6f4d0cd14b4458a3fe3",
+    "paths": [
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/caption_plan/SUBTITLE_SYNC.json",
+      "output/projects/zd_wjssZ7mc/story06_caption_recovered_8bb69282f0f4/serie_s02/006_PROP_f5106b486d19e3c2e8be43ca/9868ff1cb8711f21/preview/SUBTITLE_SYNC.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "234383ea364aa9f0c209d7a6694b41fc485e5e0948f352ebd2db88fab18cd894",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 6501,
+    "sha256": "d529d999daa46ff2b8dcce13345cb93a616773b80adfeb34d182477b0020e507",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1137,
+    "sha256": "5d38b80177ad9bf61a70f3ca12724544aaeac6665741595c7685f542d2aba02a",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/subtitles.srt"
+    ]
+  },
+  {
+    "size": 25520,
+    "sha256": "c9e8404bdfd64915ef53f7700f1771156df25e40d2053123121fca41011bf1c6",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 106,
+    "sha256": "a7dcf67937229c5fe98a928bfaaee99575cc12c01f731dad035241b2046a3a08",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 6497,
+    "sha256": "1361ea37c03c00673d64950ae2a96bb87ac096fe6a77c47a55093b56e260ce26",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/subtitles_preview.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/subtitles_preview.ass"
+    ]
+  },
+  {
+    "size": 10675,
+    "sha256": "68d999b743beb1990d141b9e42071b9660b5e2c15330e28de360f41ebadd4267",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_01_01/previews/5558d11e167f41689b25a8006f4cc83b/title_card_preview.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_01_01/previews/8787c8aa963e460ebac9adfd9e73da72/title_card_preview.png"
+    ]
+  },
+  {
+    "size": 5237,
+    "sha256": "b9205cbd6c3de626acfa7ff9a2521a25d1db029431439e48176e186b48574c8d",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "66e10bee8057c69642f43a0deb00adeea7832f60a4dbaed05752a2ae2de21900",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 20961741,
+    "sha256": "5773a4b7fb8a6f1b47d33bfd18557d5b43111c183685e587b2fca6efd61330d6",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_02_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_02_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 508,
+    "sha256": "341aa11450e29b848a9177724e4aad70f89ad4b84e015fc7babb9c12e709eae7",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_02_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_02_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 8104,
+    "sha256": "49c1e7a0f0ca3c9def035a71c3f3a00520327fb1c6d8e906f825448bd919d63a",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1500,
+    "sha256": "3d07ce354f45c0b67457080f7f9c22de0270621242291b996e0de4d3f2f63e41",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 25402,
+    "sha256": "c83f65fb966d9f183998c1e902ea6dfc05c11910f8562a79763e8575efe1701f",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_02_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_02_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 4374,
+    "sha256": "b3e60639cf66dc410f3d495f6c6cc95f08baaf0b96bb5cf4db7cee53cb05a37f",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "607e75aecbbf899a6bd27df94f5c9e91a654ee39a6063f1c2aae813113c9e22d",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 11555002,
+    "sha256": "84a77591ea6fb056c413a93aa347a122292765b6223a4c842c6284c361b5bfbf",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_03_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_03_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 509,
+    "sha256": "f37e942a8c44143355febb275fc87ce23522c3051f128288f5325bc9c959f10b",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_03_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_03_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 6826,
+    "sha256": "a3cca2f359f72f7bca3163d5a2455ac30d2584ebe7fe5872500934f8a9cf3a28",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1274,
+    "sha256": "3de71c2933ca0963eb7f50b3f4bc453c0916055129400a03df2c0fd7f57d4318",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 17729,
+    "sha256": "ff4ef6dc63e26752d1e77da1309bac65a3ed94ef0d768b9896b6548800b1382c",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_03_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_03_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 5818,
+    "sha256": "cccb3598c3a38e7d3936624d97a160da6650877de010e8bb176c0d6d9d4dde83",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "a9555c5438545d719d5504a7774d4389e198febefe782c24b137da3328a09100",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 16968684,
+    "sha256": "e0088be42cd08fdc40856d8c7cd8e2a8d3b829078ad2146c2256046dc5229052",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_04_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_04_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 509,
+    "sha256": "495627609bd3f6c636231b0ee242fd4d06c637319a043e7cd6f589c6a3c689e8",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_04_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_04_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 5855,
+    "sha256": "df18a087c61e7c0781ebde70e94ac4aceac3af86dcfd77c087aa4da51ec8de89",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1091,
+    "sha256": "b438523a03a4708b6d397ab84a1502ed8c5f396820d4289a64e9f96cce324b2e",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 21965,
+    "sha256": "bd411a31aa27b5dbc4a4c6c1f31b545ba525b2f32fd05e7566ca701f61570a4c",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_04_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_04_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 4103,
+    "sha256": "d26d20b505f66673cdec5fa2d548a31758957eb19eedf36f5aa2de209f4ab930",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "53555ad83a1b4d7ed933a183c1a238e03e2e1a4656ab94ac9b0197293b2487f9",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 9497319,
+    "sha256": "5b9d83176e1a57d260a3354af094ec8fb415c6481775e56867cfff4d9c1b9a43",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_05_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_05_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 509,
+    "sha256": "a27c83c841121dc61418754e7e5f27add3b16b0cf8abc6b76b9e762e596472f7",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_05_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_05_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 4732,
+    "sha256": "f11f72141d9c8d9d7d0e598fbe51f0015c7f83671f9635851e381ea5e2a65583",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 864,
+    "sha256": "b459ace7375729e806d6b7e7659a6f709e18ea6a8775494f8488afb0e659cb06",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 17339,
+    "sha256": "96f3e1985429aaee8d83786ebe37b2096382feb5d5819cfc6781eb86840a70c6",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_05_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_05_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 3245,
+    "sha256": "22967a875b68dbdf194216e65ccd96aca11a200b36d612fd80c625a2cb3c7b21",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "267a297cdc0bc0187cb8d6d6d2413362172020faa96170ec740da4e4374c8554",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 10473759,
+    "sha256": "8e054714ee948c96127b522f38a74a8142d21df5e515458e3361f62dacb39582",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_06_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_06_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 509,
+    "sha256": "4869a33458f0ea59b0fb43ada2f16ed9d31c46dad5293eb6f9380a754d395b45",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_06_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_06_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 5220,
+    "sha256": "1445345bbe49517096aa0a5e0b1d3f649b5986d6dc912eed6e59e8b5307f12ac",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 866,
+    "sha256": "33dd4c595bf5ffe9eaacc992d79068f68ab90cfc1749040faefe025077d102ee",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 24031,
+    "sha256": "66bea3bbdcc85521d5a9d2a3f5208331cc82fcfc11032346f23e3f3da22e215b",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_06_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_06_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 6093,
+    "sha256": "dad6159b74d16a7b901bc92f6164661630d7436cfa8c1899be7f9db7535d81ba",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "bacecfd1b64cbf0da8b18cd46e285640fd49798783f3744fd8add5cf65f62bd1",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 17449350,
+    "sha256": "17edff94068f8818ecea180d7302901a5df1a344edcf9543cab901bbaf1784c2",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_07_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_07_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 508,
+    "sha256": "df31a81d0f68438e3a703e6e6fbc85215043e7121b73f22d2e9afe1a80c47e03",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_07_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_07_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 6406,
+    "sha256": "ad0b8b6571ee868dbd15150834df579ae2577d22a92c3b07e45d1c86056701b4",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1074,
+    "sha256": "1626ea5835e6308d40887ce0a0b3c13cb47f01dcab01a5a5f544b30f83b822ab",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 27750,
+    "sha256": "4bb07e6c4562feaf6da5cf178694c08f93a4777ee0f08444e09defe060486d58",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_07_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_07_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 4963,
+    "sha256": "1dc121947a851c9649ae6a6eadb119299a7b57d168d0d7cdb1dbe550aabca288",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/FINAL_CAMERA_VERIFIER_V44.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/FINAL_CAMERA_VERIFIER_V44.json"
+    ]
+  },
+  {
+    "size": 104,
+    "sha256": "3a46bd0436a8df2c9ebf9864db6abe8d321985534f818a018a2fb97d318c16e6",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/RENDER_ATTEMPT.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/RENDER_ATTEMPT.json"
+    ]
+  },
+  {
+    "size": 18195604,
+    "sha256": "bd566701225c130e0234814e77eee562220de866bc76e77c0423533fbc512dce",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_08_01_FINAL.mp4",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_08_01_FINAL.mp4"
+    ]
+  },
+  {
+    "size": 510,
+    "sha256": "ab9a543275b9f58e500774894ac5c95933e74f5356353221990a221b89d422bd",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/SECOND_LDP26_REEL_08_01_FINAL.mp4.render.json",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/SECOND_LDP26_REEL_08_01_FINAL.mp4.render.json"
+    ]
+  },
+  {
+    "size": 9108,
+    "sha256": "294ebfc83490e99326bb53d34915b12ef2cd413a18c7bff65eb4b4480ab5c5f4",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.ass",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.ass"
+    ]
+  },
+  {
+    "size": 1788,
+    "sha256": "016d32ced000afc35c543d41da4bc95532ed60d3a8add15dce82f26c197f5b36",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/subtitles.srt",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/subtitles.srt"
+    ]
+  },
+  {
+    "size": 19679,
+    "sha256": "5e8fee85b36e099414dc85ae5478caa0c53859ae03a408d2605855bbeefc05c9",
+    "paths": [
+      "output/renders/zd_wjssZ7mc/revisions/4dacc45b2a134a2fb59dd42bf21bf9ec/SECOND_LDP26_REEL_08_01/batches/d519efca6c514e37ad50de2971b3fd55/title_card.png",
+      "output/renders/zd_wjssZ7mc/revisions/6a1b69bda19d4103a932d9223ceb9c81/SECOND_LDP26_REEL_08_01/batches/d480e8cbfe1b4e23a566e535dced7177/title_card.png"
+    ]
+  },
+  {
+    "size": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "paths": [
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/editorial/commercial_blocks_s8.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/editorial/excluded_commercials.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/social/caption_style_recommendations.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/social/stories_candidates.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/social/title_suggestions.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/transcript/original_import_segments.json",
+      ".cache/imported_second_curation/bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251/transcript/translations.json"
+    ]
+  },
+  {
+    "size": 338775,
+    "sha256": "6ee0a0f300d6c894c58aab44c8fc7bcf3d75c48f99b1ee6a09488072763dadb1",
+    "paths": [
+      ".cache/v44_validation/promoted_preview/curation/yZ78vCgiPZk/clips/SECOND_VALIDATION_PROMOTED_01_01/thumbnails/candidate_01_7735.48s.jpg",
+      ".cache/v44_validation/promoted_preview/curation/yZ78vCgiPZk/clips/SECOND_VALIDATION_PROMOTED_01_01/thumbnails/opening_frame.jpg",
+      ".cache/v44_validation/promoted_preview/curation/yZ78vCgiPZk/clips/SECOND_VALIDATION_PROMOTED_01_01/thumbnails/thumbnail_best.jpg",
+      ".cache/v44_validation/promoted_preview/curation/yZ78vCgiPZk/clips/SECOND_VALIDATION_PROMOTED_01_01/thumbnails/thumbnail_clean.jpg"
+    ]
+  },
+  {
+    "size": 569,
+    "sha256": "d48a4ce8be829437cb50ebbf5ac6d50c152c0ca04d96c17fcf65e6ebe2b23ecc",
+    "paths": [
+      ".cache/v44_validation/real_camera/commercial_gc/subtitles.ass",
+      ".cache/v44_validation/real_camera/interview/subtitles.ass",
+      ".cache/v44_validation/real_camera/story_payoff/subtitles.ass"
+    ]
+  },
+  {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paths": [
+      ".cache/v44_validation/real_camera/commercial_gc/subtitles.srt",
+      ".cache/v44_validation/real_camera/interview/subtitles.srt",
+      ".cache/v44_validation/real_camera/story_payoff/subtitles.srt"
+    ]
+  },
+  {
+    "size": 567,
+    "sha256": "6111ed8461e736aa2ac64647efe1d8525669529ddb114bbf24393bf209429ead",
+    "paths": [
+      ".cache/v44_validation/real_camera/commercial_gc/subtitles_preview.ass",
+      ".cache/v44_validation/real_camera/interview/subtitles_preview.ass",
+      ".cache/v44_validation/real_camera/story_payoff/subtitles_preview.ass"
+    ]
+  },
+  {
+    "size": 16049,
+    "sha256": "e12adb256a0fc62765aab265972ced20b828afc66b719919f06ef3b3c3f4a9f5",
+    "paths": [
+      ".cache/v44_validation/real_camera/commercial_gc/title_card.png",
+      ".cache/v44_validation/real_camera/interview/title_card.png",
+      ".cache/v44_validation/real_camera/story_payoff/title_card.png"
+    ]
+  },
+  {
+    "size": 5922,
+    "sha256": "06bd86efc15e4473d165f6231caddb62d33af5cefebf17e15247b87520117673",
+    "paths": [
+      ".cache/v44_validation/real_camera/commercial_gc/title_card_preview.png",
+      ".cache/v44_validation/real_camera/interview/title_card_preview.png",
+      ".cache/v44_validation/real_camera/story_payoff/title_card_preview.png"
+    ]
+  }
+]

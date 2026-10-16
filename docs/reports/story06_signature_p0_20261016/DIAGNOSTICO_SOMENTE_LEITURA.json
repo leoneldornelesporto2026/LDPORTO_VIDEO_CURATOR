@@ -1,0 +1,300 @@
+{
+  "schema": "LDP_STORY06_SIGNATURE_DIAGNOSIS_V1",
+  "read_only_project": true,
+  "parent_plan_id": "STORIES_3662fd63e827bcca7cf4ed66",
+  "recovery_plan_id": "STORIES_3662fd63e827bcca7cf4ed66_STORY06_REVIEW_066b05012ca5",
+  "old_signature": "bc3a8c2aa44352c79c48fc56e69d89de2744578bd984aca8a77ed4d7bd9d85b4",
+  "recovered_signature": "9868ff1cb8711f21e100fada9adf34b8d32776f5747a21bd3783386728705f8f",
+  "reopened_empty_config_signature": "3d683e23a8d77f2fafd1efaad5f58cf0211db72ee4eee3526ea4c2469be0282e",
+  "restored_render_config_signature": "9868ff1cb8711f21e100fada9adf34b8d32776f5747a21bd3783386728705f8f",
+  "exact_failing_field": "review.plan_signature != saved.signature(child): episode_signature.settings was {}",
+  "other_original_gates": {
+    "record_matches_preview": true,
+    "media_hash_matches": true,
+    "preview_approved_by_human": false,
+    "validation_status": "validated"
+  },
+  "settings_missing_on_reopen": [
+    {
+      "field": "settings.camera",
+      "left": null,
+      "right": {
+        "strategy": "speaker_aware_conservative",
+        "min_decision_seconds": 0.85,
+        "adaptive_timeline": true,
+        "speaker_aware": true,
+        "observation_window_seconds": 0.9,
+        "observation_min_coverage": 0.45,
+        "lip_min_samples": 3,
+        "lip_min_activity": 0.035,
+        "lip_activity_margin": 1.35,
+        "question_focus_heuristic": true,
+        "question_focus_lookahead_seconds": 9.0,
+        "question_focus_match_x": 0.16,
+        "uncertain_two_faces": "split_screen",
+        "group_fallback": "full_frame_blur",
+        "motion_follow": true,
+        "motion_keyframe_seconds": 0.9,
+        "motion_ema_alpha": 0.42,
+        "motion_deadzone_x": 0.012,
+        "motion_deadzone_y": 0.015,
+        "max_pan_speed_per_second": 0.18,
+        "max_tilt_speed_per_second": 0.12,
+        "motion_simplify_x": 0.01,
+        "motion_simplify_y": 0.012,
+        "motion_simplify_zoom": 0.007,
+        "subject_screen_y": 0.38,
+        "smart_zoom": true,
+        "min_zoom": 1.0,
+        "max_zoom": 1.13,
+        "zoom_face_height_small": 0.1,
+        "zoom_face_height_large": 0.3,
+        "zoom_speaker_bonus": 0.012,
+        "zoom_lip_threshold": 0.2,
+        "zoom_lip_bonus": 0.008,
+        "zoom_motion_speed_threshold": 0.1,
+        "zoom_motion_widening": 0.025,
+        "zoom_max_step": 0.012,
+        "enable_split_screen": true
+      }
+    },
+    {
+      "field": "settings.curation",
+      "left": null,
+      "right": {
+        "min_duration": 30,
+        "max_duration": 120,
+        "max_approved_clips": 12,
+        "use_human_overrides": true,
+        "context_seconds": 25,
+        "overlap_threshold": 0.72
+      }
+    },
+    {
+      "field": "settings.ollama",
+      "left": null,
+      "right": {
+        "enabled": true,
+        "base_url": "http://127.0.0.1:11434",
+        "model": "qwen3:14b",
+        "timeout_seconds": 600,
+        "num_ctx": 32768,
+        "num_predict": 4096,
+        "temperature": 0,
+        "top_k": 40,
+        "top_p": 0.9,
+        "repeat_penalty": 1.05,
+        "seed": 42,
+        "keep_alive": "15m"
+      }
+    },
+    {
+      "field": "settings.paths",
+      "left": null,
+      "right": {
+        "analysis_root": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis",
+        "output_root": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output",
+        "source_cache": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\source_cache"
+      }
+    },
+    {
+      "field": "settings.render",
+      "left": null,
+      "right": {
+        "preview_width": 540,
+        "preview_height": 960,
+        "final_width": 1080,
+        "final_height": 1920,
+        "quality": "QUALITY",
+        "prefer_nvenc": true,
+        "fps_mode": "source",
+        "audio_lufs": -14,
+        "audio_true_peak": -1.5
+      }
+    },
+    {
+      "field": "settings.safety",
+      "left": null,
+      "right": {
+        "require_first_test_approval_before_batch": true
+      }
+    },
+    {
+      "field": "settings.source_media",
+      "left": null,
+      "right": {
+        "path": "C:/Users/leone/Documentos/Meus Projetos/LDPORTO_VIDEO_ANALYZER/input/youtube/zd_wjssZ7mc/zd_wjssZ7mc.mp4"
+      }
+    },
+    {
+      "field": "settings.subtitles",
+      "left": null,
+      "right": {
+        "font": "Segoe UI",
+        "font_size_final": 72,
+        "font_size_preview": 36,
+        "max_lines": 2,
+        "margin_v_final": 320,
+        "outline_final": 6,
+        "shadow_final": 2,
+        "highlight_current_word": true
+      }
+    },
+    {
+      "field": "settings.thumbnail",
+      "left": null,
+      "right": {
+        "candidate_count": 9,
+        "jpeg_quality": 95
+      }
+    },
+    {
+      "field": "settings.title",
+      "left": null,
+      "right": {
+        "duration": 3.2,
+        "font_size_final": 64,
+        "font_size_min_final": 48,
+        "top_margin_final": 92,
+        "card_max_width_ratio": 0.84,
+        "card_padding_x": 34,
+        "card_padding_y": 20,
+        "card_radius": 28,
+        "card_shadow_offset": 6,
+        "line_spacing": 9,
+        "fade_ms": 180
+      }
+    }
+  ],
+  "frozen_reel_vs_gui_config_differences": [
+    {
+      "field": "settings.camera.min_zoom",
+      "left": 1,
+      "right": 1.0,
+      "left_type": "int",
+      "right_type": "float"
+    },
+    {
+      "field": "settings.camera.question_focus_lookahead_seconds",
+      "left": 9,
+      "right": 9.0,
+      "left_type": "int",
+      "right_type": "float"
+    }
+  ],
+  "renderer_fingerprint": "93dee24827dae9c710dc7d5fc1e0305b0de8ca7277b4ebf92c7abcf9f9da20d6",
+  "stories_before": [
+    {
+      "part": 1,
+      "episode_id": "PROP_f654d728d26180f2fb0e5816",
+      "signature_saved": "f51efcea03391114950a0f04422db1ca5efa37cb96dce86165f7032175c3e6c6",
+      "signature_recomputed_gui_config": "f51efcea03391114950a0f04422db1ca5efa37cb96dce86165f7032175c3e6c6",
+      "preview_exists": true
+    },
+    {
+      "part": 2,
+      "episode_id": "PROP_0cd8967b4785b114a6b605c0",
+      "signature_saved": "95f18912057fdd55001e4cb1ac6432456663adde1cb3b8d2bfa3efb88aa35c3d",
+      "signature_recomputed_gui_config": "95f18912057fdd55001e4cb1ac6432456663adde1cb3b8d2bfa3efb88aa35c3d",
+      "preview_exists": true
+    },
+    {
+      "part": 3,
+      "episode_id": "PROP_812c2557222a7626d29648e5",
+      "signature_saved": "2caa7e792f59ce1512b3d975cdaa54ce5adae600af115594c05541b65c8bcfce",
+      "signature_recomputed_gui_config": "2caa7e792f59ce1512b3d975cdaa54ce5adae600af115594c05541b65c8bcfce",
+      "preview_exists": true
+    },
+    {
+      "part": 4,
+      "episode_id": "PROP_820da3ee0287202220af0541",
+      "signature_saved": "ffb92953a5c2fac5e34cf21ed0cf883b64f846c43a12c9eac46a73879ab1b6da",
+      "signature_recomputed_gui_config": "ffb92953a5c2fac5e34cf21ed0cf883b64f846c43a12c9eac46a73879ab1b6da",
+      "preview_exists": true
+    },
+    {
+      "part": 5,
+      "episode_id": "PROP_8c4d75f845814355a102e570",
+      "signature_saved": "71ee6c0e4fa7decd0ed3584602b1de38ab1b699d0a77cf1d4d20142def1867a2",
+      "signature_recomputed_gui_config": "71ee6c0e4fa7decd0ed3584602b1de38ab1b699d0a77cf1d4d20142def1867a2",
+      "preview_exists": true
+    },
+    {
+      "part": 6,
+      "episode_id": "PROP_f5106b486d19e3c2e8be43ca",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "bc3a8c2aa44352c79c48fc56e69d89de2744578bd984aca8a77ed4d7bd9d85b4",
+      "preview_exists": false
+    },
+    {
+      "part": 7,
+      "episode_id": "PROP_c5d036c5bb3221b93dc74e80",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "8097c81831225502a6a8ad817ccc45d1503c0e16fbb5aa93d3e6b45f9606f35d",
+      "preview_exists": false
+    },
+    {
+      "part": 8,
+      "episode_id": "PROP_357a5b428e187549af18d145",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "fb54ae8a3eaf2a92a67a4a7d40aaa518f1d958fe5a57af42dd449ced45c85df2",
+      "preview_exists": false
+    },
+    {
+      "part": 9,
+      "episode_id": "PROP_25dc70b2dc7d735acde2e530",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "c8d77c5577a114f32c449bd69a80dd3c9cb8ace4c9fef97bae01bbbc61e46f8d",
+      "preview_exists": false
+    },
+    {
+      "part": 10,
+      "episode_id": "PROP_3fc57f8ea450b03956ec1a52",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "cdb0a80e4f873c9b412e7c86f8579ea39fe93151515662dde66dd69390d38c26",
+      "preview_exists": false
+    },
+    {
+      "part": 11,
+      "episode_id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "d3f149c2a0283e03070a0f06c59adf7058e62d05055a16cc585512983bc0f5d5",
+      "preview_exists": false
+    },
+    {
+      "part": 12,
+      "episode_id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "a5dac15158c6099cc8c229f97746b34bed032f694799f0380325099e27e50bf6",
+      "preview_exists": false
+    },
+    {
+      "part": 13,
+      "episode_id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "4ad6a9663fd9bef53d8952e1e8655d23a3c015727581b88fb59074ef85fc49bc",
+      "preview_exists": false
+    },
+    {
+      "part": 14,
+      "episode_id": "PROP_7945d8231636c7684fdaedbe",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "9373c0762ee032a9141841e99eab0320010755bce6541568ce3888a6b8ea1765",
+      "preview_exists": false
+    },
+    {
+      "part": 15,
+      "episode_id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "4f0f1bf350a8cc36b9307fa10ee63c11ead7ceffe740eee6b2614e08200f6a22",
+      "preview_exists": false
+    },
+    {
+      "part": 16,
+      "episode_id": "PROP_f47b1a26cfc3a496c457c437",
+      "signature_saved": null,
+      "signature_recomputed_gui_config": "838da9b80df68c0ea50394d88a5da6b920c3b87d7686d79ac70a9162ff12fed0",
+      "preview_exists": false
+    }
+  ]
+}

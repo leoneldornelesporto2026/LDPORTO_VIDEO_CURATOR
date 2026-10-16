@@ -1,0 +1,165 @@
+{
+  "schema": "LDP_OUTPUT_SHELL_EDITOR_READONLY_V1",
+  "created_utc": "2026-10-16T12:50:18.659324+00:00",
+  "psreadline": [
+    {
+      "path": "C:\\Users\\leone\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "status": "READ_ONLY",
+      "bytes": 339929,
+      "sha256": "b26344bd30b4693a67a6c84d3e9c98e1ab6c5309a1fb16ac6beda0fcc7feaf76",
+      "line_count": 9829,
+      "modified_utc": "2026-10-16T12:15:38.989882+00:00",
+      "command_timestamps_available": false,
+      "matches": [
+        {
+          "line_number": 9366,
+          "line_sha256": "a1dfada274edaf02772a1039019c97daa37d1d606fa5545932208d2288c3c071",
+          "operations": [],
+          "workspace_name_mentioned": true,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_command_omitted_for_privacy": true
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\leone\\AppData\\Roaming\\Microsoft\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "status": "NOT_FOUND"
+    }
+  ],
+  "vscode_workspaces": [
+    {
+      "workspace_json": "C:\\Users\\leone\\AppData\\Roaming\\Code\\User\\workspaceStorage\\0fe7a43aec3e55401d4ec4b8ef67d739\\workspace.json",
+      "workspace_json_sha256": "be83c4a051870cb929601b1301ad1fd9d2f68f8c6516af312c5d4c904457b765",
+      "workspace_json_modified_utc": "2026-10-13T23:02:33.360888+00:00",
+      "state_database": "C:\\Users\\leone\\AppData\\Roaming\\Code\\User\\workspaceStorage\\0fe7a43aec3e55401d4ec4b8ef67d739\\state.vscdb",
+      "database_rows": [
+        {
+          "key": "__$__targetStorageMarker",
+          "value_sha256": "51931d590baabc1bbdc1997532c32d38e6632b1ff6da76feb8e2410cb06aee19",
+          "characters": 2419,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "workbench.panel.output",
+          "value_sha256": "5a4807e709c4de82865b3c2d67e33f2dfee4cdfd8f2bf790019015f271786636",
+          "characters": 62,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "terminal",
+          "value_sha256": "e5dcc35f11f562ac6ed599ecce5f525e234068264d6b72953b63766bea519aec",
+          "characters": 60,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": false,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "workbench.panel.viewContainersWorkspaceState",
+          "value_sha256": "fdf50123b056ac97ca8220e535da6023bc470bf17d3069929d5d17ea9933e91e",
+          "characters": 324,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "workbench.explorer.treeViewState",
+          "value_sha256": "2cef05260084eead9946cf1f69e780fe9669b37134f360dccc7332f073e9fe2e",
+          "characters": 212,
+          "operations": [],
+          "workspace_name_mentioned": true,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "terminal.integrated.environmentVariableCollectionsV2",
+          "value_sha256": "00034b8b4ef779a1860693f19857249660db71f810eb964768016e510ca593ba",
+          "characters": 3630,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": false,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "terminal.integrated.layoutInfo",
+          "value_sha256": "ab8c6fcd2e60128bddeddc72b172474a6b29b60426002803127ccf40ebe79a85",
+          "characters": 169,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": false,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "history.entries",
+          "value_sha256": "86e7db5e469f1f99810654ad21c0bad399d5852ab990e099ff435d0f5eba707b",
+          "characters": 1975,
+          "operations": [],
+          "workspace_name_mentioned": true,
+          "relative_output_mentioned": false,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "chat.customModes.local",
+          "value_sha256": "33326ca59e449d7f7582f46988411a209ca1a9aa83ed5919441ae421d3922ff3",
+          "characters": 238209,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "memento/workbench.editors.files.textFileEditor",
+          "value_sha256": "526d2f4353341453a78b3fa2eb05bf6e60c610dec1836708a5df07e421af9876",
+          "characters": 6026,
+          "operations": [],
+          "workspace_name_mentioned": true,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "terminal.numberOfVisibleViews",
+          "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "characters": 1,
+          "operations": [],
+          "workspace_name_mentioned": false,
+          "relative_output_mentioned": false,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        },
+        {
+          "key": "codelens/cache2",
+          "value_sha256": "c21d2638c246447ff193870417ed0db16c95cbef064f61d0887208c764ab107b",
+          "characters": 678,
+          "operations": [],
+          "workspace_name_mentioned": true,
+          "relative_output_mentioned": true,
+          "named_two_story_backup_mentioned": false,
+          "raw_value_omitted_for_privacy": true
+        }
+      ],
+      "database_status": "READ_ONLY_IMMUTABLE"
+    }
+  ],
+  "vscode_logs": [],
+  "source_history_or_editor_modified": false,
+  "private_raw_commands_or_values_copied": false,
+  "attribution_limit": "Path mentions and operation words do not establish that a command ran or caused recycling."
+}

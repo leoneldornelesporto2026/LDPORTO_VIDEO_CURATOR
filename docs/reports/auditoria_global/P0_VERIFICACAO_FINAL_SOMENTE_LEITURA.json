@@ -1,0 +1,189 @@
+{
+  "created_utc": "2026-10-16T12:50:15.118781+00:00",
+  "baseline_file_count": 14020,
+  "files_sha256_verified": 12924,
+  "missing_since_audit_start": [],
+  "changed_since_audit_start": [],
+  "head_unchanged": true,
+  "production_code_changed_since_audit_start": [],
+  "output_children_after": [],
+  "original_source": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\input\\youtube\\zd_wjssZ7mc\\zd_wjssZ7mc.mp4",
+    "exists": true,
+    "sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f"
+  },
+  "current_media_checks": [
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_01_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_01_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_01_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "82fa058d5d5ffc0251ac5f4ae6899050f7623fcd4305fc68281a6fa44f6a0b87"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_02_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_02_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_02_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "210f68d485803c88a7b6f18ba2d8c9ef6ce6c1620807e949e840f0dfc1377298"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_03_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_03_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_03_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "1922018102c941e43c591b096af0bfc4bddc267df9283f1f33d7d6eb1e0fee68"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_04_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_04_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_04_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "d1c17fb7b07b2d5f60d15476f43fdcef232eb08ea1e5b14001c9797160b2fb21"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_05_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_05_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_05_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "586246395a9296d16cd36c1afb7f9cedcd36bcba520de665c4851fa9aef591a8"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_06_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_06_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_06_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "8e054714ee948c96127b522f38a74a8142d21df5e515458e3361f62dacb39582"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_07_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_07_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_07_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "fc2edb147852a5525a5028aaf6cddd824dd4543b8096eeb1a1141726a97b5b16"
+    },
+    {
+      "kind": "current_reels",
+      "id": "SECOND_LDP26_REEL_08_01",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\renders\\zd_wjssZ7mc\\revisions\\4489a2650087462ca459d23724415182\\SECOND_LDP26_REEL_08_01\\batches\\46da6f7f463d4989916102a74c1f745d\\SECOND_LDP26_REEL_08_01_FINAL.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "675f5b988f809d234d63c340eae22bcce1f15da1454c85eb9525f1f12085c05c"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_f654d728d26180f2fb0e5816",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\f51efcea03391114\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "681c139626b505af9c3d1f0d2d12902163af72897832bc33e1231c2c0fe116ab"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_0cd8967b4785b114a6b605c0",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\002_PROP_0cd8967b4785b114a6b605c0\\95f18912057fdd55\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "33169342dd46c0f7e40e6d84db7dffccf49edca0ee2c3942569d1b1e6d4ba754"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_812c2557222a7626d29648e5",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s01\\003_PROP_812c2557222a7626d29648e5\\2caa7e792f59ce15\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "6cff21d6cbece81ba44aeab3eb1be14bb75ca4967a480fbd82966a51b29525ea"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_820da3ee0287202220af0541",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\004_PROP_820da3ee0287202220af0541\\ffb92953a5c2fac5\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "07bdea4f1c0f1e636cd995fd6af9bd9e781b9dd3fb38f2e64b7bec8bcdafc782"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_8c4d75f845814355a102e570",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\005_PROP_8c4d75f845814355a102e570\\71ee6c0e4fa7decd\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "b9cee039967e05b6a67b4bc9c9b2d8243b586aa277b712d23739f6943c7479bd"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_f5106b486d19e3c2e8be43ca",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\story06_caption_recovered_047cafe2e748\\serie_s02\\006_PROP_f5106b486d19e3c2e8be43ca\\c20a8019f04c748e\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "a71843925517db816d75324edb763a5cba384aaadbdd4b23b34567e158bccb07"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_c5d036c5bb3221b93dc74e80",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\007_PROP_c5d036c5bb3221b93dc74e80\\169a8df5e391fc3b\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "94f1729ed6132f855b17a39ab9d0f827ec9442d7073114fe6d059a8fffd39105"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_357a5b428e187549af18d145",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s02\\008_PROP_357a5b428e187549af18d145\\b8027af43db4f79f\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "7bf58f05352cf4e2ea56782c83f98299abdfbd0788bbfe8ef4ec5154bcc73892"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_25dc70b2dc7d735acde2e530",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\009_PROP_25dc70b2dc7d735acde2e530\\827e768fd8e2ace9\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "6cd1d5fea32df56b758a448e48e88fc5a5a12e05afe9e2cdfb01b806eb6466b1"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_3fc57f8ea450b03956ec1a52",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\010_PROP_3fc57f8ea450b03956ec1a52\\bfe055b1b3b93600\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "7982b40046d1b5820704006e683adb889c191db635f514350141ad6d089c0e10"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\011_PROP_7d2a4a4e4b06aa96eeb267f3\\1b2392d0d0313d76\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "3085c1190faf917e8f337c6cd1b38589dc3ff730f3a527c83276dd44690a47c7"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\012_PROP_7accaf6623ef8d9ca9f74e89\\f7fe92683d29aa8b\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "c09b8a4f6b480a1861326632574a5b316c9355fd4122bdf5d467bd16403e4c32"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\013_PROP_ffbc72dbd1f751a8ab4ec7b5\\33a515cc37a47c40\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "1dc4bd093efd7f3029bec84f448403962281b44ebf2d0918fbe8c93b29383fc4"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_7945d8231636c7684fdaedbe",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\014_PROP_7945d8231636c7684fdaedbe\\977d574a6d0be954\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "3ef0a8651fbd6a70561754c672115320e8d5b2f4ae6a162d1548a48ce5363c95"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\015_PROP_0ebe2d28febbe714d8a86c0e\\4e3b248999cceef5\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "7a14465da7bfbc066e3233a7271bd2b8199876f2f65eb713d8a2a0bb83169b01"
+    },
+    {
+      "kind": "current_stories",
+      "id": "PROP_f47b1a26cfc3a496c457c437",
+      "path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\_quarentena_migracao\\recuperacao_20261016_093320\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2\\serie_s03\\016_PROP_f47b1a26cfc3a496c457c437\\da5d1e2698380fdd\\preview\\PREVIEW_540x960.mp4",
+      "matches_recorded_sha256": true,
+      "sha256": "73f3fa47fe5a4a77468346bbbbe1f77935f251bdb5f0b7eff1406b801acfe46c"
+    }
+  ],
+  "origin_deletion_attribution": "UNDETERMINED",
+  "source_files_modified_by_diagnostic": false,
+  "production_restored": false,
+  "tests_executed_in_loss_diagnostic": 0
+}

@@ -79,6 +79,9 @@ def main(argv=None):
     parser.add_argument('--diagnosticar-sha', action='store_true', help='Somente mostrar as quatro identidades SHA256, sem modificar arquivos')
     args = parser.parse_args(argv)
     cfg = load_config(ROOT / 'config.yaml')
+    # Match the GUI's selected-source context, including its POSIX path spelling.
+    # This is an input to the signed settings, never a hash migration.
+    cfg.setdefault('source_media', {})['path'] = args.midia.resolve().as_posix()
     project = SeriesProject(args.projeto, cfg)
     media = args.midia.resolve()
     if args.diagnosticar_sha:
@@ -117,7 +120,7 @@ def main(argv=None):
         return 0
     result = render_stories_review_batch(project, media, log=print,
                                          recovered_revision=args.revisao_story06)
-    print('LOTE_STORIES:', project.directory / 'LOTE_STORIES_EM_ORDEM.json')
+    print('LOTE_STORIES:', result.get('manifest_path', project.directory / 'LOTE_STORIES_EM_ORDEM.json'))
     print('PARTES:', result['total_parts'], 'PREVIAS_PENDENTES:', result['previews_pending'],
           'FINAIS_APROVADOS:', result['finals'])
     return 0
