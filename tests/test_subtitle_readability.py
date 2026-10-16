@@ -24,7 +24,7 @@ def episode(padding=True):
             "camera_plan": {"mode": "full_frame_blur"} if padding else {"mode": "manual_crop"}}
 
 
-def test_long_fallback_is_one_measured_event_readable_and_inside_source_padding(tmp_path):
+def test_long_unaligned_fallback_preserves_text_and_blocks_unsafe_render(tmp_path):
     result = write_episode_subtitles(long_evidence(), episode(), tmp_path)
     sync = result["sync"]
     assert sync["alignment"] == "segment" and len(sync["events"]) == 1
@@ -33,19 +33,11 @@ def test_long_fallback_is_one_measured_event_readable_and_inside_source_padding(
     assert (event["start"], event["end"]) == (0, 10.25)
     assert event["literal_text"] == LITERAL and event["active_word_ids"] == []
     layout = event["layout"]
-    assert layout["font_size"] >= 20 and layout["font_size_final"] >= 40
-    assert len(layout["visual_lines"]) > 2
-    assert "".join(layout["visual_lines"]) == LITERAL
-    assert layout["mode"] == "lower_caption_block"
-    assert layout["padding_evidence"] == "full_frame_blur_source_dimensions"
-    assert layout["bounds"]["top"] > layout["source_foreground_end"]
-    assert layout["fits_safe_box"] and not sync["needs_human_review"]
-    assert layout["bounds"]["left"] >= layout["safe_bounds"]["left"]
-    assert layout["bounds"]["right"] <= layout["safe_bounds"]["right"]
-    assert layout["bounds"]["bottom"] <= layout["safe_bounds"]["bottom"]
-    ass = Path(result["ass"]).read_text(encoding="utf-8-sig")
-    assert ass.count("Dialogue:") == 1 and "\\N" in ass
-    assert "CaptionBlock" in ass and "\\q2" in ass
+    assert layout["font_size_final"] == 68
+    assert layout["required_line_count"] > 2 and len(layout["visual_lines"]) <= 2
+    assert not layout["fits_safe_box"] and not event["ass_event_written"]
+    assert not sync["renderable"] and sync["needs_human_review"]
+    assert "Dialogue:" not in Path(result["ass"]).read_text(encoding="utf-8-sig")
     assert LITERAL in Path(result["srt"]).read_text(encoding="utf-8")
     assert sync["font_resolution"]["measurement"].startswith("Pillow")
 
@@ -62,8 +54,8 @@ def test_low_requested_font_is_raised_to_readable_minimum_with_diagnostic(tmp_pa
 def test_font_lower_bound_scales_for_final_1080_resolution(tmp_path):
     result = write_episode_subtitles(long_evidence(), episode(), tmp_path, width=1080, height=1920)
     layout = result["sync"]["events"][0]["layout"]
-    assert layout["font_size"] >= 40 and layout["fits_safe_box"]
-    assert "".join(layout["visual_lines"]) == LITERAL
+    assert layout["font_size"] == 68 and not layout["fits_safe_box"]
+    assert len(layout["visual_lines"]) <= 2 and not result["sync"]["renderable"]
 
 
 def test_overflow_keeps_exact_srt_and_one_measured_metadata_event_requires_review(tmp_path):
@@ -83,17 +75,17 @@ def test_overflow_keeps_exact_srt_and_one_measured_metadata_event_requires_revie
 def test_long_block_without_proven_padding_requires_visual_review(tmp_path):
     result = write_episode_subtitles(long_evidence(), episode(padding=False), tmp_path)
     layout = result["sync"]["events"][0]["layout"]
-    assert layout["fits_safe_box"] and layout["padding_evidence"] is None
+    assert not layout["fits_safe_box"] and layout["padding_evidence"] is None
     assert result["sync"]["needs_human_review"]
-    assert any(row["code"] == "caption_block_requires_source_visual_review" for row in result["sync"]["diagnostics"])
+    assert any(row["code"] == "caption_overflow_requires_human_review" for row in result["sync"]["diagnostics"])
 
 
 def test_wrapping_uses_actual_font_widths_not_character_count(tmp_path):
     thin = write_episode_subtitles(long_evidence("iii " * 20), episode(), tmp_path / "thin", overrides={"max_chars": 80})
     wide = write_episode_subtitles(long_evidence("WWW " * 20), episode(), tmp_path / "wide", overrides={"max_chars": 80})
-    thin_lines = thin["sync"]["events"][0]["layout"]["visual_lines"]
-    wide_lines = wide["sync"]["events"][0]["layout"]["visual_lines"]
-    assert len(wide_lines) > len(thin_lines)
+    thin_lines = thin["sync"]["events"][0]["layout"]["required_line_count"]
+    wide_lines = wide["sync"]["events"][0]["layout"]["required_line_count"]
+    assert wide_lines > thin_lines
 
 
 def test_unavailable_font_family_falls_back_explicitly_and_ass_matches_measured_font(tmp_path):
@@ -110,11 +102,12 @@ def test_word_highlight_spans_receive_visual_breaks_without_changed_boundaries(t
     result = write_episode_subtitles(data, {"source_start": 0, "source_end": 4}, tmp_path, overrides={"max_words": 4, "max_chars": 20})
     sync = result["sync"]
     assert sync["alignment"] == "word"
-    assert [(event["start"], event["end"]) for event in sync["events"]] == [(0,.8),(.8,1),(1,1.8),(1.8,2),(2,2.8),(2.8,3),(3,3.8)]
+    assert [(event["start"], event["end"]) for event in sync["events"]] == [(0,.8),(1,1.8),(2,2.8),(3,3.8)]
     ass = Path(result["ass"]).read_text(encoding="utf-8-sig")
-    assert "\\N" in ass
+    assert ass.count("Dialogue:") == 4
     assert all(event["layout"]["font_size"] >= 20 for event in sync["events"])
-    assert all(event["literal_text"] == " ".join(words) for event in sync["events"])
+    assert [event["literal_text"] for event in sync["events"]] == words
+    assert all(len(event["layout"]["visual_lines"]) <= 2 for event in sync["events"])
 
 
 def test_unicode_case_expansion_keeps_original_word_span_mapping(tmp_path):
@@ -128,22 +121,22 @@ def test_unicode_case_expansion_keeps_original_word_span_mapping(tmp_path):
 
 
 @pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="FFmpeg local ausente")
-def test_actual_libass_long_block_is_legible_inside_lower_padding(tmp_path):
+def test_actual_libass_word_is_legible_inside_safe_area(tmp_path):
     from ldporto_curator.render import _ass_filter_path
-    result = write_episode_subtitles(long_evidence(), episode(), tmp_path / "captions")
-    frame = tmp_path / "actual_long_caption.png"
+    data = {"segments": [{"segment_id": "S", "start": 0, "end": 1, "text": "Aviacao"}],
+            "words": [{"word_id": "W", "segment_id": "S", "word": "Aviacao", "start": 0, "end": 1}]}
+    result = write_episode_subtitles(data, {"source_start": 0, "source_end": 1}, tmp_path / "captions", preset="LDP_CLEAN")
+    frame = tmp_path / "actual_word_caption.png"
     subtitle_filter = "subtitles='" + _ass_filter_path(Path(result["ass"])) + "'"
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i",
         "color=c=gray:s=540x960:r=20:d=1", "-vf", subtitle_filter, "-frames:v", "1", str(frame)], check=True)
     with Image.open(frame) as image:
         pixels = image.convert("RGB")
-        rows = [y for y in range(pixels.height) if any(all(value > 220 for value in pixels.getpixel((x,y))) for x in range(pixels.width))]
-    assert rows and min(rows) > 632 and max(rows) <= 787
-    groups = []
-    for y in rows:
-        # Accents and descenders can leave a one-pixel gap inside a glyph row.
-        if not groups or y > groups[-1][-1] + 3:
-            groups.append([])
-        groups[-1].append(y)
-    assert len(groups) > 2
-    assert min(group[-1]-group[0]+1 for group in groups) >= 12
+        white = [(x,y) for y in range(pixels.height) for x in range(pixels.width)
+                 if all(value>220 for value in pixels.getpixel((x,y)))]
+    assert white
+    xs,ys = zip(*white)
+    bounds = result["sync"]["events"][0]["layout"]["safe_bounds"]
+    assert min(xs)>=bounds["left"] and max(xs)<=bounds["right"]
+    assert min(ys)>=bounds["top"] and max(ys)<=bounds["bottom"]
+    assert max(ys)-min(ys)>=18

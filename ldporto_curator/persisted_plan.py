@@ -40,6 +40,8 @@ _SEGMENT_FIELDS = {
     'motion_easing', 'subject_screen_y', 'split_centers_x', 'graphics_policy',
     'graphics_regions', 'panel_source_height', 'crop', 'crop_x', 'crop_y',
     'crop_width', 'crop_height', 'rotation', 'keyframes',
+    'zoom_start', 'zoom_end', 'zoom_transition_start', 'zoom_transition_duration', 'zoom_easing',
+    'focus_transition_in', 'focus_transition_out',
 }
 _REGION_FIELDS = {'persistent', 'x_start', 'x_end', 'y_start', 'y_end'}
 _CLIP_FIELDS = {

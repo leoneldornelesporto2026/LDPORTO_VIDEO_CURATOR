@@ -1,0 +1,2702 @@
+{
+  "method": "Textual path/basename occurrences; false positives possible; no deletion inferred from absence. AST imports are static.",
+  "references": {
+    ".pytest_cache/README.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "ABRIR_CURADOR.bat": {
+      "textual_references": [
+        "LEIA_PATCH.txt",
+        "QUICK_START.txt",
+        "README.md",
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/BASELINE_SHA256.json",
+        "docs/reports/curator_v5/PRESERVACAO_LEGADO.json",
+        "docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md",
+        "docs/reports/curator_v5/baseline/README.md",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/README.md"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "DIAGNOSTICO.bat": {
+      "textual_references": [
+        "docs/reports/curator_v5/BASELINE_SHA256.json",
+        "docs/reports/curator_v5/PRESERVACAO_LEGADO.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "INSTALAR.bat": {
+      "textual_references": [
+        "ABRIR_CURADOR.bat",
+        "QUICK_START.txt",
+        "README.md",
+        "docs/reports/curator_v5/BASELINE_SHA256.json",
+        "docs/reports/curator_v5/PRESERVACAO_LEGADO.json",
+        "docs/reports/curator_v5/baseline/README.md",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/source_video.py",
+        "ldporto_curator/source_video.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "LEIA_PATCH.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "PROGRESS_UI_V2_NOTES.md": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "QUICK_START.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "README.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "README_SEGUNDA_CURADORIA.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "TESTAR_1_CORTE.bat": {
+      "textual_references": [
+        "docs/reports/curator_v5/BASELINE_SHA256.json",
+        "docs/reports/curator_v5/PRESERVACAO_LEGADO.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "VALIDATION_REPORT.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/CHECKPOINT.md": {
+      "textual_references": [
+        "README.md",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/COMPILACAO.txt": {
+      "textual_references": [
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/DEMO_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/DIAGNOSTICO_ANTES_DEPOIS.md": {
+      "textual_references": [
+        "README.md",
+        "docs/reports/curator_v5/CHECKPOINT.md",
+        "docs/reports/curator_v5/RELATORIO_POR_FASE.md",
+        "docs/reports/curator_v5/VALIDACAO_FINAL.json",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/GUI_CAPTURE_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md": {
+      "textual_references": [
+        "README.md",
+        "docs/reports/curator_v5/CHECKPOINT.md",
+        "docs/reports/curator_v5/VALIDACAO_FINAL.json",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/REGRESSAO_COMPLETA.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/CHECKPOINT.md",
+        "docs/reports/curator_v5/DIAGNOSTICO_ANTES_DEPOIS.md",
+        "docs/reports/curator_v5/RELATORIO_POR_FASE.md",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/RELATORIO_POR_FASE.md": {
+      "textual_references": [
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/baseline/README.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo/slides.txt": {
+      "textual_references": [
+        "scripts/demo_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/INDEX.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "ldporto_curator/series_review.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/001_PROP_aae5b058158b22933022af28/story_and_scenes.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/001_PROP_aae5b058158b22933022af28/transcript_context.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/001_PROP_aae5b058158b22933022af28/transcript_exact.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/story_and_scenes.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/transcript_context.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/transcript_exact.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/transcript/transcript_full_available.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/INDEX.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "ldporto_curator/series_review.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/001_PROP_aae5b058158b22933022af28/story_and_scenes.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/001_PROP_aae5b058158b22933022af28/transcript_context.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/001_PROP_aae5b058158b22933022af28/transcript_exact.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/story_and_scenes.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/transcript_context.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/episodes/002_PROP_afa6ecc399f7ff1a2d1a08f0/transcript_exact.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/transcript/transcript_full_available.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/INDEX.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "ldporto_curator/series_review.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/episodes/001_PROP_70828537f40c944a69dcf959/story_and_scenes.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/episodes/001_PROP_70828537f40c944a69dcf959/transcript_context.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/episodes/001_PROP_70828537f40c944a69dcf959/transcript_exact.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/transcript/transcript_full_available.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/4a6693803282/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5083fcc9bad50735/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/b0ef736394d9/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_a6a4e4498da05916/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/INDEX.md",
+        "docs/reports/curator_v5/demo_v2/output/projects/curator_v5_synthetic_demo/d76af30a3a47/CHATGPT_HANDOFF/CHATGPT_SECOND_CURATION_PACKET_curator_v5_synthetic_demo_5aa82dbc225b36c5/MANIFEST_SHA256.json",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py",
+        "ldporto_curator/full_handoff.py",
+        "tests/test_full_handoff.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5/demo_v2/slides.txt": {
+      "textual_references": [
+        "scripts/demo_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/BASELINE_REGRESSAO.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/CHECKPOINT.md": {
+      "textual_references": [
+        "README.md",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/ETAPA_B_HISTORY_TESTS.txt": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/baseline/README.md": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5_2/BASELINE_V51_SHA256.json",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/P0_READONLY_AUDIT.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/REGRESSAO_FINAL.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/TESTES_DIRECIONADOS.txt": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/legacy_isolated/LEGACY_RECOVERY_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/legacy_isolated/output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/legacy_isolated/output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/058695c37387481497e7a24eaa5a5c74/legacy_archive/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/058695c37387481497e7a24eaa5a5c74/legacy_archive/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/synthetic/PIPELINE_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/7713e08c49ae42aea3fdead21ddd2661/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/7713e08c49ae42aea3fdead21ddd2661/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/86836a79741f4efd83581c583c9a15d1/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/86836a79741f4efd83581c583c9a15d1/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/legacy_isolated/LEGACY_RECOVERY_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/legacy_isolated/output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/legacy_isolated/output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/e2be36ced2c54b9ea459025e20a22534/legacy_archive/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/e2be36ced2c54b9ea459025e20a22534/legacy_archive/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/synthetic/PIPELINE_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/5e0ed99e46374e3e9243f0f644b941ea/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/5e0ed99e46374e3e9243f0f644b941ea/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/eec94e4d02804f01996578d643d96c4d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/eec94e4d02804f01996578d643d96c4d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/legacy_isolated/LEGACY_RECOVERY_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/legacy_isolated/output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/legacy_isolated/output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/fbfdd9edc1c642ad8c0abcef3ac596d0/legacy_archive/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/fbfdd9edc1c642ad8c0abcef3ac596d0/legacy_archive/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/synthetic/PIPELINE_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/legacy_isolated/LEGACY_RECOVERY_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/legacy_isolated/output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/legacy_isolated/output/curation/zd_wjssZ7mc/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/590cf9875eec417395f28422113682cf/legacy_archive/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/legacy_isolated/output/curation/zd_wjssZ7mc/revisions/590cf9875eec417395f28422113682cf/legacy_archive/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/synthetic/PIPELINE_LOG.txt": {
+      "textual_references": [
+        "scripts/validate_render_p0.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/0323c8282ffa4ea09249f070acb43b9d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/0323c8282ffa4ea09249f070acb43b9d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/de6d34ce20e94c48823ca52f7b5d2cce/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/synthetic/output/curation/P0_SYNTHETIC_FROZEN/revisions/de6d34ce20e94c48823ca52f7b5d2cce/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041033147402Z/GUI_WORKERS_LOG.txt": {
+      "textual_references": [
+        "scripts/capture_render_p0_ui.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041033147402Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041033147402Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041033147402Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041033147402Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041144996792Z/GUI_WORKERS_LOG.txt": {
+      "textual_references": [
+        "scripts/capture_render_p0_ui.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041144996792Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041144996792Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/b474fc47aadb4543a1b3aa50a04dfd98/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041144996792Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T041144996792Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/f514fbf67cba4208bcf12ad0a1bdb72d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T042341080113Z/GUI_WORKERS_LOG.txt": {
+      "textual_references": [
+        "scripts/capture_render_p0_ui.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T042341080113Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/0323c8282ffa4ea09249f070acb43b9d/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T042341080113Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/0323c8282ffa4ea09249f070acb43b9d/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T042341080113Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/de6d34ce20e94c48823ca52f7b5d2cce/CHATGPT_HANDOFF.md": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/review.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/reports/curator_v5_2/render_p0/gui_20261014T042341080113Z/output/curation/P0_SYNTHETIC_FROZEN/revisions/de6d34ce20e94c48823ca52f7b5d2cce/CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt",
+        "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py",
+        "docs/reports/curator_v5_2/render_p0/P0_BASELINE_AUDIT.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T035736871731Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040020539584Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040129999167Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T040322246282Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/acceptance_20261014T041942759404Z/P0_ACCEPTANCE.json",
+        "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py",
+        "ldporto_curator/persisted_plan.py",
+        "ldporto_curator/pipeline.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/second_curation/yZ78vCgiPZk/SECOND_CURATION_REPORT.md": {
+      "textual_references": [
+        "README_SEGUNDA_CURADORIA.txt"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "docs/second_curation/zd_wjssZ7mc/RELATORIO_EDITORIAL.md": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "requirements.txt": {
+      "textual_references": [
+        "ABRIR_CURADOR.bat",
+        "INSTALAR.bat"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/REVISAR_CAMERA_SEM_QWEN.py": {
+      "textual_references": [],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/capture_render_p0_ui.py": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/capture_v5_ui.py": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5/CHECKPOINT.md",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/demo_curator_v5.py": {
+      "textual_references": [
+        "README.md",
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "docs/reports/curator_v5/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/baseline/README.md",
+        "scripts/validate_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/demo_speech.ps1": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json",
+        "scripts/demo_curator_v5.py"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/validate_curator_v5.py": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/validate_render_p0.py": {
+      "textual_references": [
+        "docs/reports/curator_v5_2/CHECKPOINT.md",
+        "docs/reports/curator_v5_2/render_p0/RELATORIO_P0.md",
+        "docs/reports/curator_v5_2/render_p0/VALIDACAO_FINAL.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/validate_v44_promoted_preview.py": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    },
+    "scripts/validate_v44_real_clips.py": {
+      "textual_references": [
+        "docs/reports/curator_v5/ARQUIVOS_E_HASHES.json"
+      ],
+      "unreferenced_is_not_proof_of_unused": true
+    }
+  },
+  "imports": {
+    "DIAGNOSTICO.py": [
+      "shutil",
+      "subprocess",
+      "sys"
+    ],
+    "app.py": [
+      "ldporto_curator",
+      "pathlib"
+    ],
+    "cli.py": [
+      "argparse",
+      "json",
+      "ldporto_curator",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5/baseline/cli.py": [
+      "argparse",
+      "json",
+      "ldporto_curator",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5/baseline/ldporto_curator/gui.py": [
+      "__future__",
+      "config",
+      "eta",
+      "os",
+      "pathlib",
+      "pipeline",
+      "queue",
+      "second_curation_import",
+      "source_video",
+      "storage_dialog",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5/baseline/ldporto_curator/pipeline.py": [
+      "__future__",
+      "analysis_loader",
+      "approval",
+      "camera",
+      "curator",
+      "final_camera",
+      "pathlib",
+      "render",
+      "review",
+      "second_curation_import",
+      "source_video",
+      "thumbnails",
+      "utils"
+    ],
+    "docs/reports/curator_v5/baseline/ldporto_curator/second_curation_import.py": [
+      "feedback",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "second_curation_decisions",
+      "stat",
+      "utils",
+      "uuid",
+      "zipfile"
+    ],
+    "docs/reports/curator_v5_2/baseline/cli.py": [
+      "argparse",
+      "json",
+      "ldporto_curator",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/__init__.py": [],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/analysis_loader.py": [
+      "__future__",
+      "dataclasses",
+      "pathlib",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/approval.py": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/broadcast_graphics.py": [
+      "cv2",
+      "numpy"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera.py": [
+      "__future__",
+      "collections",
+      "math",
+      "re",
+      "statistics"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera_evidence.py": [
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera_geometry.py": [
+      "camera_motion",
+      "temporal"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera_motion.py": [
+      "collections",
+      "dataclasses",
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera_refinement.py": [
+      "broadcast_graphics",
+      "camera_evidence",
+      "camera_geometry",
+      "camera_motion",
+      "collections",
+      "director_config",
+      "math",
+      "temporal"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/camera_verifier.py": [
+      "cv2",
+      "micro_perception",
+      "numpy",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/config.py": [
+      "__future__",
+      "pathlib",
+      "yaml"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/curator.py": [
+      "__future__",
+      "json",
+      "math",
+      "ollama_client",
+      "pathlib",
+      "second_curation_decisions",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/director_config.py": [
+      "copy",
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/duration_presets.py": [
+      "__future__",
+      "dataclasses",
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/episode_approval.py": [
+      "__future__",
+      "approval",
+      "functools",
+      "hashlib",
+      "json",
+      "media_effects",
+      "pathlib",
+      "subprocess",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/eta.py": [
+      "collections",
+      "functools",
+      "hashlib",
+      "json",
+      "os",
+      "platform",
+      "shutil",
+      "statistics",
+      "subprocess",
+      "time",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/evidence_source.py": [
+      "__future__",
+      "analysis_loader",
+      "base64",
+      "copy",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "second_curation_decisions",
+      "second_curation_import"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/feedback.py": [
+      "datetime",
+      "json",
+      "jsonschema",
+      "pathlib",
+      "uuid"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/final_camera.py": [
+      "broadcast_graphics",
+      "camera_refinement",
+      "math",
+      "micro_perception",
+      "storage",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/full_handoff.py": [
+      "__future__",
+      "base64",
+      "copy",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "zipfile"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/gui.py": [
+      "__future__",
+      "config",
+      "eta",
+      "os",
+      "pathlib",
+      "pipeline",
+      "queue",
+      "second_curation_import",
+      "series_review",
+      "source_video",
+      "storage_dialog",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/interview_layout.py": [],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/local_player.py": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "pathlib",
+      "queue",
+      "shutil",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/media_effects.py": [
+      "PIL",
+      "__future__",
+      "hashlib",
+      "math",
+      "pathlib",
+      "re",
+      "title_card"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/micro_perception.py": [
+      "approval",
+      "broadcast_graphics",
+      "cv2",
+      "hashlib",
+      "json",
+      "math",
+      "numpy",
+      "pathlib",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/ollama_client.py": [
+      "__future__",
+      "json",
+      "requests"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/pipeline.py": [
+      "__future__",
+      "analysis_loader",
+      "approval",
+      "camera",
+      "curator",
+      "final_camera",
+      "pathlib",
+      "render",
+      "review",
+      "second_curation_import",
+      "source_video",
+      "thumbnails",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/render.py": [
+      "__future__",
+      "camera_verifier",
+      "json",
+      "pathlib",
+      "storage",
+      "subprocess",
+      "subtitles",
+      "title_card",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/review.py": [
+      "PIL",
+      "__future__",
+      "html",
+      "json",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/second_curation_decisions.py": [
+      "abc",
+      "copy",
+      "jsonschema",
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/second_curation_import.py": [
+      "feedback",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "second_curation_decisions",
+      "stat",
+      "utils",
+      "uuid",
+      "zipfile"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/series_planner.py": [
+      "__future__",
+      "bisect",
+      "copy",
+      "duration_presets",
+      "hashlib",
+      "json",
+      "re"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/series_review.py": [
+      "PIL",
+      "__future__",
+      "copy",
+      "duration_presets",
+      "evidence_source",
+      "json",
+      "local_player",
+      "media_effects",
+      "numpy",
+      "pathlib",
+      "queue",
+      "series_workflow",
+      "subprocess",
+      "subtitle_presets",
+      "threading",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/series_workflow.py": [
+      "__future__",
+      "approval",
+      "camera",
+      "copy",
+      "cv2",
+      "episode_approval",
+      "full_handoff",
+      "hashlib",
+      "json",
+      "math",
+      "media_effects",
+      "pathlib",
+      "queue",
+      "render",
+      "series_planner",
+      "shutil",
+      "subprocess",
+      "subtitle_presets",
+      "threading",
+      "thumbnail_presets",
+      "title_presets",
+      "types",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/source_video.py": [
+      "__future__",
+      "approval",
+      "pathlib",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/storage.py": [
+      "contextlib",
+      "ctypes",
+      "json",
+      "os",
+      "pathlib",
+      "time",
+      "uuid"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/storage_dialog.py": [
+      "pathlib",
+      "storage",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/subtitle_presets.py": [
+      "__future__",
+      "copy",
+      "functools",
+      "json",
+      "math",
+      "os",
+      "pathlib",
+      "re",
+      "subtitles",
+      "title_card"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/subtitles.py": [
+      "__future__",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/temporal.py": [
+      "bisect",
+      "collections",
+      "math"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/thumbnail_presets.py": [
+      "PIL",
+      "__future__",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "thumbnails",
+      "title_card"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/thumbnails.py": [
+      "__future__",
+      "json",
+      "math",
+      "pathlib",
+      "shutil",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/title_card.py": [
+      "PIL",
+      "__future__",
+      "os",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/title_presets.py": [
+      "PIL",
+      "pathlib",
+      "title_card",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/baseline/ldporto_curator/utils.py": [
+      "__future__",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "shutil",
+      "subprocess",
+      "urllib"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/approval.py": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/gui.py": [
+      "__future__",
+      "config",
+      "eta",
+      "os",
+      "pathlib",
+      "pipeline",
+      "queue",
+      "second_curation_import",
+      "series_review",
+      "source_video",
+      "storage_dialog",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/pipeline.py": [
+      "__future__",
+      "analysis_loader",
+      "approval",
+      "camera",
+      "curator",
+      "final_camera",
+      "pathlib",
+      "render",
+      "review",
+      "second_curation_import",
+      "source_video",
+      "thumbnails",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/render.py": [
+      "__future__",
+      "camera_verifier",
+      "json",
+      "pathlib",
+      "storage",
+      "subprocess",
+      "subtitles",
+      "title_card",
+      "utils"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/subtitles.py": [
+      "__future__",
+      "pathlib"
+    ],
+    "docs/reports/curator_v5_2/render_p0/legacy_code_baseline/ldporto_curator/title_card.py": [
+      "PIL",
+      "__future__",
+      "os",
+      "pathlib"
+    ],
+    "ldporto_curator/__init__.py": [],
+    "ldporto_curator/analysis_loader.py": [
+      "__future__",
+      "dataclasses",
+      "pathlib",
+      "utils"
+    ],
+    "ldporto_curator/approval.py": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "persisted_plan",
+      "utils"
+    ],
+    "ldporto_curator/broadcast_graphics.py": [
+      "cv2",
+      "numpy"
+    ],
+    "ldporto_curator/camera.py": [
+      "__future__",
+      "collections",
+      "math",
+      "re",
+      "statistics"
+    ],
+    "ldporto_curator/camera_evidence.py": [
+      "math"
+    ],
+    "ldporto_curator/camera_geometry.py": [
+      "camera_motion",
+      "temporal"
+    ],
+    "ldporto_curator/camera_motion.py": [
+      "collections",
+      "dataclasses",
+      "math"
+    ],
+    "ldporto_curator/camera_refinement.py": [
+      "broadcast_graphics",
+      "camera_evidence",
+      "camera_geometry",
+      "camera_motion",
+      "collections",
+      "director_config",
+      "math",
+      "temporal"
+    ],
+    "ldporto_curator/camera_verifier.py": [
+      "cv2",
+      "micro_perception",
+      "numpy",
+      "pathlib"
+    ],
+    "ldporto_curator/combined_batch.py": [
+      "__future__",
+      "approval",
+      "copy",
+      "episode_approval",
+      "evidence_source",
+      "hashlib",
+      "json",
+      "pathlib",
+      "second_curation_import",
+      "series_workflow",
+      "story_import",
+      "utils"
+    ],
+    "ldporto_curator/config.py": [
+      "__future__",
+      "pathlib",
+      "yaml"
+    ],
+    "ldporto_curator/crop_editor.py": [
+      "PIL",
+      "__future__",
+      "copy",
+      "dataclasses",
+      "math",
+      "render",
+      "timeline_editor",
+      "tkinter"
+    ],
+    "ldporto_curator/curator.py": [
+      "__future__",
+      "json",
+      "math",
+      "ollama_client",
+      "pathlib",
+      "second_curation_decisions",
+      "utils"
+    ],
+    "ldporto_curator/director_config.py": [
+      "copy",
+      "math"
+    ],
+    "ldporto_curator/duration_presets.py": [
+      "__future__",
+      "dataclasses",
+      "math"
+    ],
+    "ldporto_curator/editing_history.py": [
+      "__future__",
+      "copy",
+      "hashlib",
+      "json",
+      "pathlib",
+      "uuid"
+    ],
+    "ldporto_curator/editorial_copy.py": [
+      "__future__",
+      "copy",
+      "re"
+    ],
+    "ldporto_curator/episode_approval.py": [
+      "__future__",
+      "approval",
+      "functools",
+      "hashlib",
+      "json",
+      "media_effects",
+      "pathlib",
+      "subprocess",
+      "utils"
+    ],
+    "ldporto_curator/eta.py": [
+      "collections",
+      "functools",
+      "hashlib",
+      "json",
+      "os",
+      "platform",
+      "shutil",
+      "statistics",
+      "subprocess",
+      "time",
+      "utils"
+    ],
+    "ldporto_curator/evidence_source.py": [
+      "__future__",
+      "analysis_loader",
+      "base64",
+      "copy",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "second_curation_decisions",
+      "second_curation_import"
+    ],
+    "ldporto_curator/feedback.py": [
+      "datetime",
+      "json",
+      "jsonschema",
+      "pathlib",
+      "uuid"
+    ],
+    "ldporto_curator/final_camera.py": [
+      "broadcast_graphics",
+      "camera_refinement",
+      "math",
+      "micro_perception",
+      "smart_composition",
+      "storage",
+      "utils"
+    ],
+    "ldporto_curator/full_handoff.py": [
+      "__future__",
+      "base64",
+      "copy",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "zipfile"
+    ],
+    "ldporto_curator/gui.py": [
+      "__future__",
+      "combined_batch",
+      "config",
+      "copy",
+      "eta",
+      "json",
+      "os",
+      "pathlib",
+      "pipeline",
+      "queue",
+      "second_curation_import",
+      "series_review",
+      "source_video",
+      "storage_dialog",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter",
+      "uuid"
+    ],
+    "ldporto_curator/import_smoke.py": [
+      "approval",
+      "evidence_source",
+      "pathlib",
+      "series_planner"
+    ],
+    "ldporto_curator/interview_layout.py": [],
+    "ldporto_curator/local_player.py": [
+      "PIL",
+      "__future__",
+      "cv2",
+      "pathlib",
+      "queue",
+      "shutil",
+      "subprocess",
+      "threading",
+      "time",
+      "tkinter"
+    ],
+    "ldporto_curator/media_effects.py": [
+      "PIL",
+      "__future__",
+      "hashlib",
+      "math",
+      "pathlib",
+      "re",
+      "title_card"
+    ],
+    "ldporto_curator/micro_perception.py": [
+      "approval",
+      "broadcast_graphics",
+      "cv2",
+      "hashlib",
+      "json",
+      "math",
+      "numpy",
+      "pathlib",
+      "utils"
+    ],
+    "ldporto_curator/ollama_client.py": [
+      "__future__",
+      "hashlib",
+      "json",
+      "requests"
+    ],
+    "ldporto_curator/persisted_plan.py": [
+      "__future__",
+      "analysis_loader",
+      "contextlib",
+      "copy",
+      "ctypes",
+      "dataclasses",
+      "hashlib",
+      "json",
+      "math",
+      "media_effects",
+      "os",
+      "pathlib",
+      "re",
+      "shutil",
+      "uuid"
+    ],
+    "ldporto_curator/pipeline.py": [
+      "__future__",
+      "analysis_loader",
+      "approval",
+      "camera",
+      "copy",
+      "curator",
+      "final_camera",
+      "functools",
+      "json",
+      "pathlib",
+      "persisted_plan",
+      "pipeline_recovery",
+      "render",
+      "review",
+      "second_curation_import",
+      "source_video",
+      "thumbnails",
+      "utils",
+      "uuid"
+    ],
+    "ldporto_curator/pipeline_recovery.py": [
+      "analysis_loader",
+      "approval",
+      "copy",
+      "pathlib",
+      "persisted_plan",
+      "utils"
+    ],
+    "ldporto_curator/render.py": [
+      "__future__",
+      "approval",
+      "camera_verifier",
+      "json",
+      "pathlib",
+      "persisted_plan",
+      "storage",
+      "subprocess",
+      "subtitles",
+      "title_card",
+      "utils"
+    ],
+    "ldporto_curator/review.py": [
+      "PIL",
+      "__future__",
+      "html",
+      "json",
+      "pathlib"
+    ],
+    "ldporto_curator/second_curation_decisions.py": [
+      "abc",
+      "copy",
+      "jsonschema",
+      "math"
+    ],
+    "ldporto_curator/second_curation_import.py": [
+      "feedback",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "second_curation_decisions",
+      "stat",
+      "utils",
+      "uuid",
+      "zipfile"
+    ],
+    "ldporto_curator/series_planner.py": [
+      "__future__",
+      "bisect",
+      "copy",
+      "duration_presets",
+      "editorial_copy",
+      "hashlib",
+      "json",
+      "re"
+    ],
+    "ldporto_curator/series_review.py": [
+      "PIL",
+      "__future__",
+      "copy",
+      "duration_presets",
+      "evidence_source",
+      "json",
+      "local_player",
+      "media_effects",
+      "numpy",
+      "pathlib",
+      "queue",
+      "series_workflow",
+      "subprocess",
+      "subtitle_presets",
+      "threading",
+      "timeline_editor",
+      "tkinter"
+    ],
+    "ldporto_curator/series_workflow.py": [
+      "__future__",
+      "approval",
+      "camera",
+      "copy",
+      "cv2",
+      "editing_history",
+      "episode_approval",
+      "full_handoff",
+      "hashlib",
+      "json",
+      "math",
+      "media_effects",
+      "pathlib",
+      "queue",
+      "render",
+      "series_planner",
+      "shutil",
+      "story_import",
+      "subprocess",
+      "subtitle_presets",
+      "threading",
+      "thumbnail_presets",
+      "title_presets",
+      "types",
+      "utils"
+    ],
+    "ldporto_curator/smart_composition.py": [
+      "__future__",
+      "camera_geometry",
+      "collections",
+      "copy",
+      "director_config",
+      "math",
+      "re"
+    ],
+    "ldporto_curator/source_video.py": [
+      "__future__",
+      "approval",
+      "pathlib",
+      "utils"
+    ],
+    "ldporto_curator/storage.py": [
+      "contextlib",
+      "ctypes",
+      "json",
+      "os",
+      "pathlib",
+      "time",
+      "uuid"
+    ],
+    "ldporto_curator/storage_dialog.py": [
+      "pathlib",
+      "storage",
+      "tkinter"
+    ],
+    "ldporto_curator/story_import.py": [
+      "__future__",
+      "copy",
+      "duration_presets",
+      "hashlib",
+      "json",
+      "math",
+      "series_planner"
+    ],
+    "ldporto_curator/subtitle_presets.py": [
+      "__future__",
+      "copy",
+      "functools",
+      "json",
+      "math",
+      "os",
+      "pathlib",
+      "re",
+      "subtitles",
+      "title_card"
+    ],
+    "ldporto_curator/subtitles.py": [
+      "__future__",
+      "collections",
+      "math",
+      "pathlib",
+      "re",
+      "title_card"
+    ],
+    "ldporto_curator/temporal.py": [
+      "bisect",
+      "collections",
+      "math"
+    ],
+    "ldporto_curator/thumbnail_presets.py": [
+      "PIL",
+      "__future__",
+      "hashlib",
+      "json",
+      "math",
+      "pathlib",
+      "re",
+      "thumbnails",
+      "title_card"
+    ],
+    "ldporto_curator/thumbnails.py": [
+      "__future__",
+      "json",
+      "math",
+      "pathlib",
+      "shutil",
+      "utils"
+    ],
+    "ldporto_curator/timeline_editor.py": [
+      "bisect",
+      "dataclasses",
+      "math",
+      "tkinter"
+    ],
+    "ldporto_curator/title_card.py": [
+      "PIL",
+      "__future__",
+      "os",
+      "pathlib"
+    ],
+    "ldporto_curator/title_presets.py": [
+      "PIL",
+      "pathlib",
+      "title_card",
+      "utils"
+    ],
+    "ldporto_curator/utils.py": [
+      "__future__",
+      "hashlib",
+      "json",
+      "pathlib",
+      "re",
+      "shutil",
+      "subprocess",
+      "urllib"
+    ],
+    "scripts/REVISAR_CAMERA_SEM_QWEN.py": [
+      "__future__",
+      "argparse",
+      "copy",
+      "ldporto_curator",
+      "pathlib",
+      "sys",
+      "uuid"
+    ],
+    "scripts/capture_render_p0_ui.py": [
+      "PIL",
+      "__future__",
+      "argparse",
+      "contextlib",
+      "copy",
+      "datetime",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "scripts",
+      "shutil",
+      "sys",
+      "time",
+      "unittest",
+      "yaml"
+    ],
+    "scripts/capture_v5_ui.py": [
+      "PIL",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "sys",
+      "time",
+      "tkinter"
+    ],
+    "scripts/demo_curator_v5.py": [
+      "PIL",
+      "__future__",
+      "hashlib",
+      "io",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "wave",
+      "zipfile"
+    ],
+    "scripts/validate_curator_v5.py": [
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "xml"
+    ],
+    "scripts/validate_render_p0.py": [
+      "__future__",
+      "argparse",
+      "copy",
+      "dataclasses",
+      "datetime",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "unittest"
+    ],
+    "scripts/validate_v44_promoted_preview.py": [
+      "ldporto_curator",
+      "pathlib",
+      "sys"
+    ],
+    "scripts/validate_v44_real_clips.py": [
+      "cv2",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "sys",
+      "yaml"
+    ],
+    "tests/test_core.py": [
+      "PIL",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "sys",
+      "tempfile",
+      "types"
+    ],
+    "tests/test_episode_approval.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest"
+    ],
+    "tests/test_evidence_source.py": [
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "stat",
+      "zipfile"
+    ],
+    "tests/test_full_handoff.py": [
+      "copy",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "test_evidence_source",
+      "zipfile"
+    ],
+    "tests/test_handoff_media_privacy.py": [
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "zipfile"
+    ],
+    "tests/test_media_effects.py": [
+      "PIL",
+      "copy",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "numpy",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "subprocess"
+    ],
+    "tests/test_p0_editorial_response.py": [
+      "copy",
+      "dataclasses",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "types"
+    ],
+    "tests/test_p0_gui.py": [
+      "copy",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "queue",
+      "threading",
+      "types"
+    ],
+    "tests/test_p0_legacy_recovery.py": [
+      "copy",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "scripts",
+      "shutil"
+    ],
+    "tests/test_p0_pipeline.py": [
+      "copy",
+      "dataclasses",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "threading"
+    ],
+    "tests/test_p0_plan_store.py": [
+      "copy",
+      "dataclasses",
+      "json",
+      "ldporto_curator",
+      "os",
+      "pathlib",
+      "pytest",
+      "subprocess",
+      "sys"
+    ],
+    "tests/test_progress.py": [
+      "ldporto_curator",
+      "pathlib",
+      "sys"
+    ],
+    "tests/test_safe_camera_maps.py": [
+      "copy",
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_semantic_split.py": [
+      "copy",
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_series_workflow.py": [
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "threading"
+    ],
+    "tests/test_smart_composition.py": [
+      "copy",
+      "ldporto_curator",
+      "types"
+    ],
+    "tests/test_stories_60s_import.py": [
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest"
+    ],
+    "tests/test_subtitle_readability.py": [
+      "PIL",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "re",
+      "shutil",
+      "subprocess"
+    ],
+    "tests/test_subtitle_word_alignment.py": [
+      "PIL",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "subprocess"
+    ],
+    "tests/test_thumbnail_presets.py": [
+      "PIL",
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "shutil",
+      "subprocess"
+    ],
+    "tests/test_title_presets.py": [
+      "PIL",
+      "json",
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_v44_approval.py": [
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_v44_feedback.py": [
+      "json",
+      "jsonschema",
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_v44_ingestion.py": [
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "zipfile"
+    ],
+    "tests/test_v44_micro_camera.py": [
+      "cv2",
+      "ldporto_curator",
+      "numpy",
+      "pytest",
+      "types"
+    ],
+    "tests/test_v44_ops.py": [
+      "ldporto_curator",
+      "pytest",
+      "types"
+    ],
+    "tests/test_v44_render_graphics.py": [
+      "cv2",
+      "ldporto_curator",
+      "numpy",
+      "pathlib",
+      "pytest",
+      "subprocess",
+      "types"
+    ],
+    "tests/test_v52_history.py": [
+      "copy",
+      "json",
+      "ldporto_curator",
+      "pytest",
+      "shutil"
+    ],
+    "tests/test_v52_import_smoke.py": [
+      "hashlib",
+      "json",
+      "ldporto_curator",
+      "pytest",
+      "zipfile"
+    ],
+    "tests/test_v52_timeline.py": [
+      "ldporto_curator",
+      "pytest"
+    ],
+    "tests/test_v52_visual_callbacks.py": [
+      "ldporto_curator",
+      "pytest",
+      "types",
+      "unittest"
+    ],
+    "tests/test_v5_series_planner.py": [
+      "copy",
+      "json",
+      "ldporto_curator",
+      "pathlib",
+      "pytest"
+    ],
+    "tests/test_windows_gui_workflows.py": [
+      "ldporto_curator",
+      "pathlib",
+      "pytest",
+      "queue",
+      "threading",
+      "types"
+    ]
+  },
+  "absolute_path_occurrences": [
+    {
+      "path": "LEIA_PATCH.txt",
+      "matches": 1
+    },
+    {
+      "path": "TESTAR_1_CORTE.bat",
+      "matches": 1
+    },
+    {
+      "path": "config.yaml",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/ollama_client.py",
+      "matches": 2
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/review.py",
+      "matches": 2
+    },
+    {
+      "path": "ldporto_curator/second_curation_decisions.py",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/title_card.py",
+      "matches": 1
+    },
+    {
+      "path": "ldporto_curator/utils.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/analysis.json",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_evidence_source.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_full_handoff.py",
+      "matches": 3
+    },
+    {
+      "path": "tests/test_handoff_media_privacy.py",
+      "matches": 2
+    },
+    {
+      "path": "tests/test_media_effects.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_p0_gui.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_p0_pipeline.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_p0_plan_store.py",
+      "matches": 1
+    },
+    {
+      "path": "tests/test_v44_ingestion.py",
+      "matches": 1
+    }
+  ],
+  "syntax_errors": []
+}

@@ -25,10 +25,24 @@ def subject_box(obs, cfg):
     # Full head with breathing room; upper torso only when an actual body box exists.
     bottom = y+h+min(.08, h*.25)
     body = obs.get('bbox') if obs.get('body_visible') and obs.get('bbox_kind') == 'body' else None
+    left, right = max(0., x-.015), min(1., x+w+.015)
+    top = max(0., y-cfg['headroom'])
     if body:
-        bottom = max(bottom, min(1., number(body.get('y'))+number(body.get('height'))*.65))
-    return [max(0., x-.015), max(0., y-cfg['headroom']),
-            min(1., x+w+.015), min(1., bottom)]
+        bx, by, bw, bh = (number(body.get(k), -1.) for k in ('x', 'y', 'width', 'height'))
+        if min(bx, by) < 0 or min(bw, bh) <= 0 or bx+bw > 1.000001 or by+bh > 1.000001:
+            return None
+        # Preserve measured shoulders and upper torso, rather than certifying a
+        # face-only crop that silently trims a real, wider body detection.
+        left, right = min(left, bx), max(right, bx+bw)
+        bottom = max(bottom, min(1., by+bh*.65))
+    for hand in obs.get('hand_bboxes') or []:
+        if not isinstance(hand, dict):
+            return None
+        hx, hy, hw, hh = (number(hand.get(k), -1.) for k in ('x', 'y', 'width', 'height'))
+        if min(hx, hy) < 0 or min(hw, hh) <= 0 or hx+hw > 1.000001 or hy+hh > 1.000001:
+            return None
+        left, top, right, bottom = min(left, hx), min(top, hy), max(right, hx+hw), max(bottom, hy+hh)
+    return [left, top, right, min(1., bottom)]
 
 
 def crop_rect(center, zoom, base):

@@ -133,6 +133,14 @@ def test_worker_uses_main_thread_snapshot_and_duplicate_click_is_ignored(tmp_pat
     calls, enter, release = [], threading.Event(), threading.Event()
     monkeypatch.setattr(gui, 'Pipeline', lambda *a, **k: RecordingPipeline(
         *a, **k, calls=calls, enter=enter, release=release))
+    if action == 'all':
+        from ldporto_curator import combined_batch
+
+        def record_combined_batch(pipeline, source):
+            pipeline.render_all(source, preview=False)
+            return {'finals': 0, 'previews_pending': 0}
+
+        monkeypatch.setattr(combined_batch, 'render_combined_batch', record_combined_batch)
     view.work(action)
     operation = view._active_operation
     assert enter.wait(5)

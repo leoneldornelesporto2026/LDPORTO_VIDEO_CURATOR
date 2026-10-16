@@ -1,0 +1,219 @@
+{
+  "all_16_checked": true,
+  "episodes": [
+    {
+      "episode_id": "PROP_f654d728d26180f2fb0e5816",
+      "series": "S01",
+      "part": 1,
+      "words": 71,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_0cd8967b4785b114a6b605c0",
+      "series": "S01",
+      "part": 2,
+      "words": 62,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_812c2557222a7626d29648e5",
+      "series": "S01",
+      "part": 3,
+      "words": 94,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_820da3ee0287202220af0541",
+      "series": "S02",
+      "part": 1,
+      "words": 113,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_8c4d75f845814355a102e570",
+      "series": "S02",
+      "part": 2,
+      "words": 79,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_f5106b486d19e3c2e8be43ca",
+      "series": "S02",
+      "part": 3,
+      "words": 102,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_c5d036c5bb3221b93dc74e80",
+      "series": "S02",
+      "part": 4,
+      "words": 158,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_357a5b428e187549af18d145",
+      "series": "S02",
+      "part": 5,
+      "words": 45,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_25dc70b2dc7d735acde2e530",
+      "series": "S03",
+      "part": 1,
+      "words": 23,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_3fc57f8ea450b03956ec1a52",
+      "series": "S03",
+      "part": 2,
+      "words": 24,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "series": "S03",
+      "part": 3,
+      "words": 96,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "series": "S03",
+      "part": 4,
+      "words": 79,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "series": "S03",
+      "part": 5,
+      "words": 113,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_7945d8231636c7684fdaedbe",
+      "series": "S03",
+      "part": 6,
+      "words": 33,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "series": "S03",
+      "part": 7,
+      "words": 65,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    },
+    {
+      "episode_id": "PROP_f47b1a26cfc3a496c457c437",
+      "series": "S03",
+      "part": 8,
+      "words": 89,
+      "all_word_ids_unique_ordered": true,
+      "safe_layout": true,
+      "editorial_inputs_preserved": true,
+      "human_review_pending": true
+    }
+  ],
+  "new_active_preview_count": 1,
+  "new_final_count": 0,
+  "new_approvals": 0,
+  "preexisting_user_code_preserved": true,
+  "models_executed": false,
+  "analysis_reprocessed": false,
+  "source_media_modified": false,
+  "evidence_enrichment": {
+    "schema": "LDP_SUPPLEMENTAL_WORD_EVIDENCE_AUDIT_V1",
+    "manifest": {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\WORD_EVIDENCE_SEG00163.json",
+      "sha256": "325df4f84e8453b1160d633dc04d9d36b309609a077cce02b550fcbfd86766bd"
+    },
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "segment_ids": [
+      "SEG_00163"
+    ],
+    "files": {
+      "word_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\words.json",
+        "sha256": "1db36020a6b8fde0cf90e863ac5bfe16ff59e00d37efaf345441e8a73f25b5c1"
+      },
+      "transcript_segments_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcript_segments.json",
+        "sha256": "efa89f7ddfb917fdb664ffb2bc8f0ccd9baf43083f039fcf6c931ea9037b4e86"
+      },
+      "source_manifest_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\manifest.json",
+        "sha256": "0905423dec4b3cee3f0cc202e23f8a906a273ea0f1237b47f88c5739277a44cd"
+      },
+      "source_identity_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00004.json",
+        "sha256": "8283f5743cac491446773dafaef0d00162ed9c7c648884eb2ae145a6566df894"
+      }
+    },
+    "added_word_ids": [
+      "WORD_0002445",
+      "WORD_0002446",
+      "WORD_0002447",
+      "WORD_0002448",
+      "WORD_0002449",
+      "WORD_0002450",
+      "WORD_0002451",
+      "WORD_0002452",
+      "WORD_0002453",
+      "WORD_0002454",
+      "WORD_0002455",
+      "WORD_0002456"
+    ],
+    "new_asr_executed": false,
+    "literal_transcript_modified": false,
+    "timestamps_invented": false,
+    "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "validated",
+  "duration": 26.22,
+  "expected_duration": 26.21999999999997,
+  "width": 540,
+  "height": 960,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "samples": [
+    {
+      "time": 2.621999999999997,
+      "mean_brightness": 142.06323238168724,
+      "decodable": true
+    },
+    {
+      "time": 13.109999999999985,
+      "mean_brightness": 136.67480838477366,
+      "decodable": true
+    },
+    {
+      "time": 23.597999999999974,
+      "mean_brightness": 125.57447530864198,
+      "decodable": true
+    }
+  ],
+  "visual_human_review": "pending",
+  "audio_human_review": "pending"
+}

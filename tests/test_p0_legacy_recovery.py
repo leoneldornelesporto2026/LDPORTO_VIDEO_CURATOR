@@ -27,6 +27,16 @@ def cached_legacy():
     return read_json(required[0]), read_json(required[1])
 
 
+@pytest.fixture
+def complete_legacy_originals(cached_legacy):
+    _, baseline = cached_legacy
+    missing = [name for name in baseline['original_files_before']
+               if not (ROOT / name).is_file()]
+    if missing:
+        pytest.skip('Auditoria legada exige originais históricos ausentes: ' + ', '.join(missing))
+    return cached_legacy
+
+
 def test_refined_preview_matches_archived_renderer_identity_and_basic_plan_does_not(cached_legacy):
     recovered, baseline = cached_legacy
     preview = recovered['source_preview']
@@ -39,8 +49,8 @@ def test_refined_preview_matches_archived_renderer_identity_and_basic_plan_does_
     assert recompute_legacy_signature(restored, settings, preview['reviewed_clip_id']) != preview['plan_signature']
 
 
-def test_real_preview_verification_does_not_claim_unavailable_original_or_human_review(cached_legacy):
-    recovered, baseline = cached_legacy
+def test_real_preview_verification_does_not_claim_unavailable_original_or_human_review(complete_legacy_originals):
+    recovered, baseline = complete_legacy_originals
     if not Path(recovered['source_preview']['path']).is_file():
         pytest.skip('Preview real não está presente nesta máquina')
     before = original_hashes()
@@ -56,8 +66,8 @@ def test_real_preview_verification_does_not_claim_unavailable_original_or_human_
     assert original_hashes() == before == baseline['original_files_before']
 
 
-def test_local_legacy_recovery_is_non_destructive_and_missing_source_cannot_be_approved(tmp_path, monkeypatch, cached_legacy):
-    recovered, _ = cached_legacy
+def test_local_legacy_recovery_is_non_destructive_and_missing_source_cannot_be_approved(tmp_path, monkeypatch, complete_legacy_originals):
+    recovered, _ = complete_legacy_originals
     original = ROOT / 'output/curation' / REAL_PROJECT
     copied = tmp_path / 'output/curation' / REAL_PROJECT
     shutil.copytree(original, copied)

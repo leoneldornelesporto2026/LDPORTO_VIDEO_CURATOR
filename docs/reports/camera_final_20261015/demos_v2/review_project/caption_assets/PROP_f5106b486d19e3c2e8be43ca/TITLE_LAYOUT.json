@@ -1,0 +1,42 @@
+{
+  "literal_title": "RADIONAVEGAÇÃO E COMUNICAÇÃO — PARTE 3",
+  "lines": [
+    "RADIONAVEGAÇÃO E",
+    "COMUNICAÇÃO — PARTE",
+    "3"
+  ],
+  "font_size": 32,
+  "width": 540,
+  "height": 960,
+  "card_bounds": [
+    43,
+    124,
+    453,
+    253
+  ],
+  "text_bounds": [
+    [
+      90.5,
+      138,
+      405.5,
+      173
+    ],
+    [
+      57.0,
+      177,
+      439.0,
+      212
+    ],
+    [
+      239.0,
+      216,
+      257.0,
+      239
+    ]
+  ],
+  "safe_width": [
+    43,
+    453
+  ],
+  "status": "measured_layout_human_review_pending"
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.478" timestamp="2026-10-15T22:01:43.417996-03:00" hostname="leonelporto"><testcase classname="tests.test_karaoke_media_clock" name="test_finish_resets_output_clock_immediately_before_libass" time="0.000"><failure message="assert [&quot;[vcam]settb...s.ass'[vsub]&quot;] == [&quot;[vcam]setpt...s.ass'[vsub]&quot;]&#10;  &#10;  At index 0 diff: &quot;[vcam]settb=AVTB,setpts=PTS-STARTPTS,subtitles='captions.ass'[vsub]&quot; != &quot;[vcam]setpts=PTS-STARTPTS,subtitles='captions.ass'[vsub]&quot;&#10;  Use -v to get more diff">def test_finish_resets_output_clock_immediately_before_libass():
+        parts,label=_finish_video_parts([],"[vcam]","captions.ass",None,0)
+&gt;       assert parts==["[vcam]setpts=PTS-STARTPTS,subtitles='captions.ass'[vsub]"]
+E       assert ["[vcam]settb...s.ass'[vsub]"] == ["[vcam]setpt...s.ass'[vsub]"]
+E         
+E         At index 0 diff: "[vcam]settb=AVTB,setpts=PTS-STARTPTS,subtitles='captions.ass'[vsub]" != "[vcam]setpts=PTS-STARTPTS,subtitles='captions.ass'[vsub]"
+E         Use -v to get more diff
+
+tests\test_karaoke_media_clock.py:48: AssertionError</failure></testcase><testcase classname="tests.test_karaoke_media_clock" name="test_actual_seeked_mp4_colors_never_anticipate_word_and_audio_keeps_its_timing" time="0.341"><failure message="assert 15 == 14&#10; +  where 15 = len(array([[[[ 4,  4,  4],\n         [ 4,  4,  4],\n         [ 4,  4,  4],\n         ...,\n         [ 4,  4,  4],\n         [ 4...     ...,\n         [69, 69, 69],\n         [69, 69, 69],\n         [69, 69, 69]]]], shape=(15, 480, 270, 3), dtype=uint8))&#10; +  and   14 = len(array([[[[ 4,  4,  4],\n         [ 4,  4,  4],\n         [ 4,  4,  4],\n         ...,\n         [ 4,  4,  4],\n         [ 4...     ...,\n         [65, 65, 65],\n         [65, 65, 65],\n         [65, 65, 65]]]], shape=(14, 480, 270, 3), dtype=uint8))">tmp_path = WindowsPath('C:/Users/leone/AppData/Local/Temp/ldporto_camera_baseline_clock_20261015/test_actual_seeked_mp4_colors_0')
+
+    def test_actual_seeked_mp4_colors_never_anticipate_word_and_audio_keeps_its_timing(tmp_path):
+        media=source(tmp_path)
+        seek=.013
+        words=[{"word_id":f"W{i}","segment_id":"S","word":"WWW","start":seek+a,"end":seek+b}
+               for i,(a,b) in enumerate(((0,.06),(.1,.2),(.25,.5)))]
+        result=write_episode_subtitles(
+            {"segments":[{"segment_id":"S","start":seek,"end":seek+.6,"text":"WWW WWW WWW"}],"words":words},
+            {"source_start":seek,"source_end":seek+.6},tmp_path/"captions",
+            preset="LDP_REELS_KARAOKE",width=270,height=480)
+        assert len(result["sync"]["events"])==1
+        clip={"source_start":seek,"duration":.6,"camera_plan":{"mode":"manual_crop"}}
+        cfg={"render":{"preview_width":270,"preview_height":480,"audio_lufs":-14,"audio_true_peak":-1.5}}
+        out=tmp_path/"encoded.mp4"
+        command,_,_=_base_cmd(None,clip,media,out,Path(result["ass"]),None,cfg,True,"libx264")
+        run(*command)
+    
+        decoded=frames(out)
+        counts=np.all(decoded[:,350:450,:,:]&gt;190,axis=3).sum(axis=(1,2))
+        one_word=int(counts[0]);assert one_word&gt;30
+        # At output .08s, libass must still show just the first word in white.
+        # Before the clock reset it evaluated .107s and whitened word two early.
+        assert int(counts[2])&lt;one_word*1.4
+        assert int(counts[3])&gt;one_word*1.7
+        first_two=next(index for index,count in enumerate(counts) if count&gt;one_word*1.7)
+        assert first_two==3 and first_two/25&gt;=.1
+    
+        probe=json.loads(run("ffprobe","-v","error","-select_streams","v:0","-show_entries",
+            "frame=best_effort_timestamp_time","-of","json",out).stdout)
+        times=[float(frame["best_effort_timestamp_time"]) for frame in probe["frames"]]
+        assert times[:4]==pytest.approx([0,.04,.08,.12])
+    
+        # The correction changes the evaluation clock, not which decoded source
+        # frames are shown. Compare the marker with a plain precise-seek reference.
+        reference=tmp_path/"reference.mp4"
+        run("ffmpeg","-v","error","-y","-ss",str(seek),"-i",media,"-t","0.6",
+            "-an","-c:v","libx264","-crf","20","-pix_fmt","yuv420p",reference)
+        baseline=frames(reference)
+&gt;       assert len(decoded)==len(baseline)
+E       assert 15 == 14
+E        +  where 15 = len(array([[[[ 4,  4,  4],\n         [ 4,  4,  4],\n         [ 4,  4,  4],\n         ...,\n         [ 4,  4,  4],\n         [ 4...     ...,\n         [69, 69, 69],\n         [69, 69, 69],\n         [69, 69, 69]]]], shape=(15, 480, 270, 3), dtype=uint8))
+E        +  and   14 = len(array([[[[ 4,  4,  4],\n         [ 4,  4,  4],\n         [ 4,  4,  4],\n         ...,\n         [ 4,  4,  4],\n         [ 4...     ...,\n         [65, 65, 65],\n         [65, 65, 65],\n         [65, 65, 65]]]], shape=(14, 480, 270, 3), dtype=uint8))
+
+tests\test_karaoke_media_clock.py:89: AssertionError</failure></testcase></testsuite></testsuites>

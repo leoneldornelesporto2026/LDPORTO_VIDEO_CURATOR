@@ -1,6 +1,8 @@
 from __future__ import annotations
 from pathlib import Path
 import json, subprocess
+import os
+from uuid import uuid4
 from .utils import run
 from .subtitles import write_subtitles
 from .title_card import create_title_card
@@ -93,6 +95,8 @@ def _crop_dims_for_zoom(iw, ih, target_aspect, zoom):
 
 
 def _motion_crop_filter(base, seg, iw, ih, rw, rh, idx):
+    if 'zoom_start' in seg or 'zoom_end' in seg:
+        return _eased_zoom_crop_filter(base, seg, iw, ih, rw, rh, idx)
     zoom=float(seg.get('zoom') or 1.0)
     cw,ch=_crop_dims_for_zoom(iw,ih,rw/rh,zoom)
     cx0=float(seg.get('center_x_start',seg.get('center_x',0.5)))
@@ -111,6 +115,39 @@ def _motion_crop_filter(base, seg, iw, ih, rw, rh, idx):
     return f"[{base}]crop={cw}:{ch}:x='{xexpr}':y='{yexpr}',scale={rw}:{rh},setsar=1[v{idx}]"
 
 
+def _eased_zoom_crop_filter(base, seg, iw, ih, rw, rh, idx):
+    """Opt-in micro zoom; legacy frozen plans keep their original filter path.
+
+    Scale each frame before a fixed output crop, keeping cadence/PTS intact.
+    Even dimensions and clamped centers guarantee a fully filled portrait.
+    """
+    import math
+    z0, z1 = float(seg.get('zoom_start', 1.)), float(seg.get('zoom_end', seg.get('zoom', 1.)))
+    delay = float(seg.get('zoom_transition_start', 0.))
+    duration = float(seg.get('zoom_transition_duration', float(seg['end'])-float(seg['start'])))
+    if not all(math.isfinite(v) for v in (z0, z1, delay, duration)) or not 1 <= min(z0,z1) <= max(z0,z1) <= 1.05 or delay < 0 or duration <= 0:
+        raise ValueError('Invalid bounded camera micro zoom envelope')
+    fraction = f'max(0\\,min(1\\,(t-{delay:.6f})/{duration:.6f}))'
+    eased = f'pow(({fraction})\\,2)*(3-2*({fraction}))'
+    zoom = f'({z0:.8f}+({z1-z0:.8f})*({eased}))'
+    scale = max(rw/iw, rh/ih)
+    sw = f'ceil({iw*scale:.8f}*{zoom}/2)*2'
+    sh = f'ceil({ih*scale:.8f}*{zoom}/2)*2'
+    length = max(.001, float(seg['end'])-float(seg['start']))
+    movement = f'max(0\\,min(1\\,t/{length:.6f}))'
+    if seg.get('motion_easing') == 'smoothstep':
+        movement = f'pow(({movement})\\,2)*(3-2*({movement}))'
+    cx0 = float(seg.get('center_x_start', seg.get('center_x', .5)))
+    cx1 = float(seg.get('center_x_end', cx0))
+    cy0 = float(seg.get('center_y_start', .5))
+    cy1 = float(seg.get('center_y_end', cy0))
+    target_y = float(seg.get('subject_screen_y', .5))
+    x = f'max(0\\,min(iw-ow\\,({cx0:.8f}+({cx1-cx0:.8f})*({movement}))*iw-ow/2))'
+    y = f'max(0\\,min(ih-oh\\,({cy0:.8f}+({cy1-cy0:.8f})*({movement}))*ih-oh*{target_y:.8f}))'
+    return (f"[{base}]scale=w='{sw}':h='{sh}':eval=frame,crop={rw}:{rh}:x='{x}':y='{y}',"
+            f'setsar=1[v{idx}]')
+
+
 def _graphics_split_parts(base, seg, iw, ih, rw, rh, index):
     regions = [r for r in seg.get('graphics_regions', []) if r.get('persistent') and .4 < r.get('y_start', 0) < r.get('y_end', 0) <= 1]
     if not regions:
@@ -127,10 +164,19 @@ def _graphics_split_parts(base, seg, iw, ih, rw, rh, index):
     for name, center, height in zip(('a', 'b'), centers, (half, other)):
         cw, ch, x, y = _crop_for(iw, panel_source_h, rw / height, center)
         parts.append(f'[{base}{name}]crop={iw}:{panel_source_h}:0:0,crop={cw}:{ch}:{x}:{y},scale={rw}:{height},setsar=1[{base}{name}panel]')
-    parts.append(f'[{base}gc]crop={iw}:{strip_h}:0:{strip_y},scale={rw}:{reserved}:force_original_aspect_ratio=decrease,'
-                 f'pad={rw}:{reserved}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1[{base}strip]')
+    parts.extend(_graphics_strip_parts(base, iw, strip_y, strip_h, rw, reserved))
     parts.append(f'[{base}apanel][{base}bpanel][{base}strip]vstack=inputs=3[v{index}]')
     return parts
+
+
+def _graphics_strip_parts(base, iw, strip_y, strip_h, rw, reserved):
+    """Keep one readable source strip over a soft fill, without black padding."""
+    radius = max(0, min(8, reserved//2-1, rw//2-1))
+    return [f'[{base}gc]crop={iw}:{strip_h}:0:{strip_y},split=2[{base}stripbg][{base}stripfg]',
+        f'[{base}stripbg]scale={rw}:{reserved}:force_original_aspect_ratio=increase,'
+        f'crop={rw}:{reserved},boxblur={radius}:1,setsar=1[{base}stripfill]',
+        f'[{base}stripfg]scale={rw}:{reserved}:force_original_aspect_ratio=decrease,setsar=1[{base}striptext]',
+        f'[{base}stripfill][{base}striptext]overlay=(W-w)/2:(H-h)/2[{base}strip]']
 
 
 def _graphics_crop_parts(base, seg, iw, ih, rw, rh, index):
@@ -151,10 +197,52 @@ def _graphics_crop_parts(base, seg, iw, ih, rw, rh, index):
              f'[{base}subject]crop={iw}:{source_height}:0:0[{base}clean]']
     subject_filter = _motion_crop_filter(base+'clean', subject, iw, source_height, rw, subject_height, index)
     parts.append(subject_filter.replace(f'[v{index}]', f'[{base}panel]'))
-    parts.append(f'[{base}gc]crop={iw}:{strip_h}:0:{strip_y},scale={rw}:{reserved}:force_original_aspect_ratio=decrease,'
-                 f'pad={rw}:{reserved}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1[{base}strip]')
+    parts.extend(_graphics_strip_parts(base, iw, strip_y, strip_h, rw, reserved))
     parts.append(f'[{base}panel][{base}strip]vstack=inputs=2[v{index}]')
     return parts
+
+def _focus_transition_parts(base, seg, previous, following, iw, ih, rw, rh, index):
+    """Same-frame composition blend; never overlaps or retimes source segments."""
+    import math
+    enter = float(seg.get('focus_transition_in',0.))
+    leave = float(seg.get('focus_transition_out',0.))
+    duration = float(seg['end'])-float(seg['start'])
+    if (not all(math.isfinite(v) for v in (enter,leave,duration)) or
+            min(enter,leave) < 0 or max(enter,leave) > .45 or enter+leave > duration):
+        raise ValueError('Invalid bounded camera focus transition')
+    if not enter and not leave:
+        return None
+    if (not seg.get('motion_follow') or seg.get('graphics_regions') or
+            seg.get('graphics_policy') == 'single_copy_source_strip'):
+        raise ValueError('Camera focus transition requires a plain measured portrait crop')
+    for amount, neighbor in ((enter,previous),(leave,following)):
+        if not amount:
+            continue
+        if (not neighbor or neighbor.get('mode') != 'full_frame_blur' or not seg.get('source_shot_id')
+                or neighbor.get('source_shot_id') != seg['source_shot_id']
+                or any(r.get('persistent') and r.get('y_start',0) > .4
+                       for r in neighbor.get('graphics_regions') or [])):
+            raise ValueError('Camera focus transition cannot cross a source cut or a different composition')
+    parts = [f'[{base}]split=3[{base}focuscrop][{base}focusbg][{base}focusfg]']
+    crop = _motion_crop_filter(base+'focuscrop',seg,iw,ih,rw,rh,index)
+    parts.append(crop.replace(f'[v{index}]',f'[{base}focusportrait]'))
+    parts.extend([
+        f'[{base}focusbg]scale={rw}:{rh}:force_original_aspect_ratio=increase,'
+        f'crop={rw}:{rh},boxblur=18:1,setsar=1[{base}focusfill]',
+        f'[{base}focusfg]scale={rw}:{rh}:force_original_aspect_ratio=decrease,setsar=1[{base}focusforeground]',
+        f'[{base}focusfill][{base}focusforeground]overlay=(W-w)/2:(H-h)/2[{base}focussource]'])
+    def eased(fraction):
+        return f'pow(({fraction})\\,2)*(3-2*({fraction}))'
+    weights = []
+    if enter:
+        weights.append(eased(f'max(0\\,min(1\\,T/{enter:.6f}))'))
+    if leave:
+        weights.append(eased(f'max(0\\,min(1\\,({duration:.6f}-T)/{leave:.6f}))'))
+    weight = weights[0] if len(weights) == 1 else f'min(({weights[0]})\\,({weights[1]}))'
+    parts.append(f"[{base}focusportrait][{base}focussource]blend=all_expr='A*({weight})+B*(1-({weight}))':"
+                 f'shortest=1:repeatlast=0[v{index}]')
+    return parts
+
 
 def _adaptive_camera_parts(cam, iw, ih, rw, rh, duration):
     segs = [dict(s) for s in (cam.get('segments') or []) if float(s.get('end', 0)) > float(s.get('start', 0))]
@@ -185,6 +273,13 @@ def _adaptive_camera_parts(cam, iw, ih, rw, rh, duration):
         mode = seg.get('mode') or 'full_frame_blur'
 
         if mode == 'crop':
+            if 'focus_transition_in' in seg or 'focus_transition_out' in seg:
+                transition_parts = _focus_transition_parts(base,seg,segs[i-1] if i else None,
+                    segs[i+1] if i+1 < len(segs) else None,iw,ih,rw,rh,i)
+                if transition_parts:
+                    parts.extend(transition_parts)
+                    out_labels.append(f'[v{i}]')
+                    continue
             graphics_parts = _graphics_crop_parts(base, seg, iw, ih, rw, rh, i) if seg.get('graphics_policy') == 'single_copy_source_strip' else None
             if graphics_parts:
                 parts.extend(graphics_parts)
@@ -274,8 +369,13 @@ def _static_camera_parts(cam, iw, ih, rw, rh):
 
 
 def _finish_video_parts(parts, base_label, assp, title_index, title_duration, fade_in=0.12, fade_out=0.18):
-    # Spoken captions first.
-    parts.append(f"{base_label}subtitles='{assp}'[vsub]")
+    # Accurate input seeking can leave the first decoded frame a fraction of a
+    # frame after zero. The encoder presents that frame at output time zero, so
+    # libass must use the same clock rather than burning future colors early.
+    # This preserves the selected source frames, camera composition and audio.
+    # Use AVTB precision before rebasing. The measured ASS word offsets are
+    # relative to the first encoded frame, not to the input seek timestamp.
+    parts.append(f"{base_label}settb=AVTB,setpts=PTS-STARTPTS,subtitles='{assp}'[vsub]")
     if title_index is None or title_duration <= 0:
         return parts, '[vsub]'
 
@@ -329,7 +429,10 @@ def _base_cmd(bundle, clip, video, out, ass, title_card, cfg, preview, encoder):
         cmd += ['-preset', 'p6', '-cq', '21']
     else:
         cmd += ['-preset', 'medium', '-crf', '20']
-    cmd += ['-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-movflags', '+faststart', '-shortest', str(out)]
+    # The editorial -t already bounds both streams and the looped title input.
+    # -shortest can truncate buffered AAC when an adaptive video graph reaches
+    # EOF first, even though it encodes exactly the same source frames.
+    cmd += ['-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-movflags', '+faststart', str(out)]
     return cmd, rw, rh
 
 
@@ -349,15 +452,29 @@ def render_clip(bundle, clip, video: Path, out_dir: Path, cfg, preview=True, log
 def _render_clip(bundle, clip, video: Path, out_dir: Path, cfg, preview=True, log=print, progress=None):
     if not video.exists():
         raise FileNotFoundError(video)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    ass = write_subtitles(bundle, clip, out_dir, cfg, preview=preview)
-    title_card = create_title_card(clip, out_dir, cfg, preview=preview)
     name = f"{clip['clip_id']}_{'PREVIEW' if preview else 'FINAL'}.mp4"
     out = out_dir / name
+    # A render retry must use a fresh directory. Even an interrupted MP4 is
+    # evidence, and checking before subtitle/title generation protects assets.
+    if out.exists() or any(out_dir.glob('*.render.json')):
+        raise FileExistsError('Render existente preservado; use uma nova pasta de revisão: ' + str(out))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    if any(out_dir.iterdir()):
+        raise FileExistsError('Assets anteriores preservados; use uma nova pasta de revisão: ' + str(out_dir))
+    # Permanent attempt receipt prevents concurrent writers and preserves failed
+    # attempts. Never remove this marker to retry in the same historical folder.
+    with (out_dir / 'RENDER_ATTEMPT.json').open('x', encoding='utf-8') as receipt:
+        json.dump({'clip_id': clip['clip_id'], 'output': name, 'approved': False}, receipt)
+    ass = write_subtitles(bundle, clip, out_dir, cfg, preview=preview)
+    title_card = create_title_card(clip, out_dir, cfg, preview=preview)
     encoders = ['h264_nvenc', 'libx264'] if cfg['render'].get('prefer_nvenc', True) and ffmpeg_has_nvenc() else ['libx264']
     last = None
     for encoder in encoders:
-        cmd, rw, rh = _base_cmd(bundle, clip, video, out, ass, title_card, cfg, preview, encoder)
+        # An interrupted attempt has its own name and is retained for inspection.
+        # FFmpeg never receives the final historical output as a writable target.
+        pending = out_dir / ('ENCODING_' + uuid4().hex + '_' + name)
+        cmd, rw, rh = _base_cmd(bundle, clip, video, pending, ass, title_card, cfg, preview, encoder)
+        cmd = ['-n' if arg == '-y' else arg for arg in cmd]
         cam = clip.get('camera_plan', {})
         detail = f"{cam.get('mode')} / {len(cam.get('segments') or [])} decisões / motion={cam.get('motion_segments',0)}" if cam.get('mode') == 'adaptive_timeline' else str(cam.get('mode'))
         log(f"Render {'preview' if preview else 'final'}: {clip['clip_id']} via {encoder} / câmera={detail} / título=card PNG branco")
@@ -367,7 +484,11 @@ def _render_clip(bundle, clip, video: Path, out_dir: Path, cfg, preview=True, lo
         if rc == 0:
             if progress:
                 progress(0.98, 'validando arquivo')
-            validate_output(out, rw, rh)
+            validate_output(pending, rw, rh)
+            # Hard-link publication is atomic and refuses an existing destination
+            # on Windows and POSIX, including concurrent render attempts.
+            os.link(pending, out)
+            pending.unlink()
             # Record what FFmpeg actually used, including a runtime NVENC fallback.
             from .approval import file_hash
             from .utils import write_json

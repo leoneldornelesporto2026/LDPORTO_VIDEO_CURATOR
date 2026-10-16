@@ -1,19 +1,18 @@
-"""Concrete cleanup preview with optional original source selection and confirmation."""
+"""Preview registered scratch files while preserving originals and user outputs."""
 from pathlib import Path
 from .storage import cleanup_preview, execute_cleanup
 
 
 def show_cleanup(parent, folder, source=None):
     import tkinter as tk
-    from tkinter import ttk, filedialog, messagebox
+    from tkinter import ttk, messagebox
     window=tk.Toplevel(parent)
     window.title('Preview — LIMPAR ARQUIVOS PESADOS')
     window.geometry('780x480')
     window.transient(parent)
-    include=tk.BooleanVar(value=False)
     source_path=Path(source) if source and Path(source).is_file() else None
     summary=tk.StringVar()
-    source_label=tk.StringVar(value=str(source_path) if source_path else 'Fonte original: não selecionada')
+    source_label=tk.StringVar(value=f'Fonte original preservada: {source_path}' if source_path else 'Fontes originais são sempre preservadas.')
     plan=None
     result=None
     ttk.Label(window,textvariable=summary,padding=12).pack(anchor='w')
@@ -22,23 +21,20 @@ def show_cleanup(parent, folder, source=None):
     text.pack(fill='both',expand=True,padx=12,pady=8)
     def refresh():
         nonlocal plan
-        plan=cleanup_preview(folder,source_path,include_source=include.get())
+        plan=cleanup_preview(folder,source_path)
         gb=lambda n:f'{n/1e9:.2f} GB'
         summary.set(f'Espaço atual: {gb(plan["current_bytes"])}\nPode liberar: {gb(plan["reclaimable_bytes"])}\nSerá preservado: {gb(plan["preserved_bytes"])}')
         text.configure(state='normal')
         text.delete('1.0','end')
         for row in plan['removable']:
             text.insert('end',f'{row["bytes"]/1e6:.1f} MB  {row["path"]}\n')
-        text.insert('end','\nProtegidos: transcrição, JSONs, SRT, candidatos, câmera, pacotes, contact sheets, relatórios e renders finais. Arquivos em uso não são removidos.')
+        text.insert('end','\nProtegidos: output, .cache, source_cache, .venv, originais, projetos, revisões, aprovações, manifests, backups e evidências do Analyzer.\nSomente temporários com registro de origem e SHA256 podem ser listados para limpeza. Arquivos existentes sem comprovação são preservados.\n')
+        if plan['preserved_candidates']:
+            text.insert('end',f'\n{len(plan["preserved_candidates"])} possíveis temporários preservados para auditoria futura.\n')
+        if plan['skipped_links']:
+            text.insert('end',f'{len(plan["skipped_links"])} links/junctions preservados sem percorrer o destino.\n')
         text.configure(state='disabled')
         clean.configure(state='normal' if plan['removable'] else 'disabled')
-    def select_source():
-        nonlocal source_path
-        value=filedialog.askopenfilename(parent=window,title='Fonte original opcional para limpeza',filetypes=[('Vídeo original','*.mp4 *.mkv *.webm *.mov')])
-        if value:
-            source_path=Path(value)
-            source_label.set(value)
-            refresh()
     def remove():
         nonlocal result
         if messagebox.askyesno('Confirmar limpeza',f'Remover somente os {len(plan["removable"])} arquivos listados no preview?',parent=window):
@@ -47,8 +43,6 @@ def show_cleanup(parent, folder, source=None):
             window.destroy()
     controls=ttk.Frame(window)
     controls.pack(fill='x',padx=12,pady=8)
-    ttk.Button(controls,text='Selecionar fonte opcional',command=select_source).pack(side='left')
-    ttk.Checkbutton(controls,text='Incluir fonte original selecionada',variable=include,command=refresh).pack(side='left',padx=8)
     clean=ttk.Button(controls,text='Limpar lista',command=remove)
     clean.pack(side='right')
     ttk.Button(controls,text='Cancelar',command=window.destroy).pack(side='right',padx=8)

@@ -1,0 +1,10 @@
+{
+  "payload_files": 23,
+  "zip_bytes": 15755859,
+  "zip_sha256": "e49722b6e944b62fcb76604ede1554c6909b4a4e0a8b1980bf82a815ee120eda",
+  "zip_integrity": "verified",
+  "frozen_preview_signature": "verified",
+  "preexisting_changes_in_payload": false,
+  "protected_trees_in_payload": false,
+  "new_approvals": 0
+}

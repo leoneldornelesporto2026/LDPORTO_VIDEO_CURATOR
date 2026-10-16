@@ -1,0 +1,35 @@
+{
+  "literal_title": "DO PLANO DE VOO À ROTA — PARTE 2",
+  "lines": [
+    "DO PLANO DE VOO À",
+    "ROTA — PARTE 2"
+  ],
+  "font_size": 64,
+  "width": 1080,
+  "height": 1920,
+  "card_bounds": [
+    86,
+    249,
+    907,
+    420
+  ],
+  "text_bounds": [
+    [
+      180.0,
+      277,
+      813.0,
+      337
+    ],
+    [
+      242.5,
+      345,
+      750.5,
+      392
+    ]
+  ],
+  "safe_width": [
+    86,
+    907
+  ],
+  "status": "measured_layout_human_review_pending"
+}

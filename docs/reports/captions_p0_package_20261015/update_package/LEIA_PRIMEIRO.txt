@@ -1,0 +1,12 @@
+L.D.PORTO — correção de legendas P0
+
+Feche o Curator antes de atualizar. Extraia este ZIP em uma pasta separada.
+Confira o SHA256 do ZIP no arquivo SHA256 fornecido ao lado dele.
+Verificar sem alterações:
+powershell -NoProfile -ExecutionPolicy Bypass -File .\INSTALL_CAPTIONS_P0.ps1 -TargetRoot "C:\caminho\LDPORTO_VIDEO_CURATOR" -VerifyOnly
+Instalar: mesmo comando sem -VerifyOnly. Os hashes do baseline devem coincidir.
+Se o código já estiver atualizado, o instalador apenas confere os hashes.
+Rollback: use -Rollback "backups/captions_p0_<id>/TRANSACTION.json" com o mesmo -TargetRoot.
+O rollback recusa arquivos editados depois da instalação. Backups são preservados.
+Nenhuma mídia, cache, configuração local ou aprovação é instalada ou removida.
+O pacote contém pendências de revisão humana; não concede aprovação/publicação.

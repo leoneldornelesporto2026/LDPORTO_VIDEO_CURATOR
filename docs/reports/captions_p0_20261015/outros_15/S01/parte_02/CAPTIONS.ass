@@ -1,0 +1,76 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 540
+PlayResY: 960
+ScaledBorderAndShadow: yes
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H00101010,&HFF000000,-1,0,0,0,100,100,0,0,1,1.50,0.50,2,43,86,172,1
+Style: CaptionBlock,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H59000000,&H59000000,-1,0,0,0,100,100,0,0,3,1.50,0,2,43,86,172,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.20,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Às
+Dialogue: 0,0:00:00.20,0:00:00.72,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}2h05
+Dialogue: 0,0:00:00.72,0:00:01.02,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}da
+Dialogue: 0,0:00:01.02,0:00:01.42,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}tarde,
+Dialogue: 0,0:00:01.52,0:00:01.58,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}o
+Dialogue: 0,0:00:01.58,0:00:01.72,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Mike
+Dialogue: 0,0:00:01.72,0:00:01.98,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Kilo
+Dialogue: 0,0:00:01.98,0:00:02.38,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}decolou
+Dialogue: 0,0:00:02.38,0:00:02.48,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:02.48,0:00:03.06,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Brasília.
+Dialogue: 0,0:00:03.28,0:00:03.56,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}E
+Dialogue: 0,0:00:03.56,0:00:03.80,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}como
+Dialogue: 0,0:00:03.80,0:00:03.92,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}o
+Dialogue: 0,0:00:03.92,0:00:04.36,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}trecho
+Dialogue: 0,0:00:04.36,0:00:04.52,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}até
+Dialogue: 0,0:00:04.52,0:00:05.24,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Imperatriz,
+Dialogue: 0,0:00:05.28,0:00:05.44,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}no
+Dialogue: 0,0:00:05.44,0:00:05.92,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Maranhão,
+Dialogue: 0,0:00:05.92,0:00:06.42,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}possuía
+Dialogue: 0,0:00:06.42,0:00:06.62,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}uma
+Dialogue: 0,0:00:06.62,0:00:07.30,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}aerovia,
+Dialogue: 0,0:00:07.60,0:00:07.92,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}os
+Dialogue: 0,0:00:07.92,0:00:08.40,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}pilotos
+Dialogue: 0,0:00:08.40,0:00:08.78,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}olharam
+Dialogue: 0,0:00:08.78,0:00:08.84,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}a
+Dialogue: 0,0:00:08.84,0:00:09.10,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}carta
+Dialogue: 0,0:00:09.10,0:00:09.30,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:09.30,0:00:10.06,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}navegação
+Dialogue: 0,0:00:10.06,0:00:10.36,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}e
+Dialogue: 0,0:00:10.36,0:00:10.90,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}seguiram
+Dialogue: 0,0:00:10.90,0:00:10.92,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}a
+Dialogue: 0,0:00:10.92,0:00:11.50,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}indicação
+Dialogue: 0,0:00:11.50,0:00:11.76,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}que
+Dialogue: 0,0:00:11.76,0:00:11.96,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}estava
+Dialogue: 0,0:00:11.96,0:00:12.26,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}lá.
+Dialogue: 0,0:00:12.42,0:00:12.72,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Foram
+Dialogue: 0,0:00:12.72,0:00:13.22,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}46
+Dialogue: 0,0:00:13.22,0:00:13.58,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}minutos
+Dialogue: 0,0:00:13.58,0:00:14.02,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:14.02,0:00:14.38,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}voo
+Dialogue: 0,0:00:14.38,0:00:14.50,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:14.50,0:00:15.00,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Brasília
+Dialogue: 0,0:00:15.00,0:00:15.22,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}até
+Dialogue: 0,0:00:15.22,0:00:15.86,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Imperatriz.
+Dialogue: 0,0:00:15.86,0:00:16.40,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Alguns
+Dialogue: 0,0:00:16.40,0:00:16.98,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}passageiros
+Dialogue: 0,0:00:16.98,0:00:18.08,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}desembarcaram,
+Dialogue: 0,0:00:18.08,0:00:18.58,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}outros
+Dialogue: 0,0:00:18.58,0:00:19.82,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}embarcaram
+Dialogue: 0,0:00:19.82,0:00:19.92,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}e
+Dialogue: 0,0:00:19.92,0:00:20.06,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}às
+Dialogue: 0,0:00:20.06,0:00:21.28,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}16h35
+Dialogue: 0,0:00:21.28,0:00:22.02,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}o
+Dialogue: 0,0:00:22.02,0:00:22.26,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Boeing
+Dialogue: 0,0:00:22.26,0:00:22.82,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}737
+Dialogue: 0,0:00:22.82,0:00:23.70,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}decolou
+Dialogue: 0,0:00:23.70,0:00:23.82,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}na
+Dialogue: 0,0:00:23.82,0:00:24.26,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}direção
+Dialogue: 0,0:00:24.26,0:00:24.44,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:24.44,0:00:25.28,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Marabá,
+Dialogue: 0,0:00:25.30,0:00:25.58,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}no
+Dialogue: 0,0:00:25.58,0:00:26.06,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Pará.

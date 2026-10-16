@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "scenario": "apresentador",
+      "HD_PCM_identical_to_historical": true,
+      "HD_audio": {
+        "sha256_pcm_s16le_mono_48000": "0a07638ef5c7efb88521c98f600645232b7653e9a4b66938fbaac404649968da",
+        "samples": 1435648
+      }
+    },
+    {
+      "scenario": "mapa_rota",
+      "HD_PCM_identical_to_historical": true,
+      "HD_audio": {
+        "sha256_pcm_s16le_mono_48000": "fb2526c881e988b06851badca1db9c4814a037d9a78c3d5d7270ac9b0c22dcf2",
+        "samples": 1251328
+      }
+    }
+  ]
+}

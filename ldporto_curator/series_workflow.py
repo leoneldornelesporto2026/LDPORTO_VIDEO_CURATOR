@@ -5,11 +5,14 @@ from copy import deepcopy
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import queue
+import shutil
 import subprocess
 import threading
 from types import SimpleNamespace
+from uuid import uuid4
 
 from .approval import file_hash
 from .episode_approval import (episode_signature, record_episode_preview,
@@ -23,6 +26,131 @@ class OperationCancelled(RuntimeError):
 
 def _canonical_hash(data):
     return hashlib.sha256(json.dumps(data, sort_keys=True, ensure_ascii=False, allow_nan=False).encode()).hexdigest()
+
+
+def _transcript_fingerprint(evidence, episode):
+    start, end = episode['source_start'], episode['source_end']
+    rows = {}
+    for key in ('segments', 'captions', 'words'):
+        rows[key] = [row for row in evidence.get(key, [])
+                     if float(row.get('end', row.get('source_end', 0))) > start
+                     and float(row.get('start', row.get('source_start', 0))) < end]
+    return _canonical_hash({'source_sha256': evidence.get('source', {}).get('sha256'),
+                            'provenance': evidence.get('provenance', {}), 'transcript': rows})
+
+
+def _caption_editorial_inputs(episode):
+    runtime = {'state', 'status', 'preview', 'final', 'approval', 'human_approval',
+        'history', 'approval_history', 'artifact_history', 'caption_revision', 'caption_timeline',
+        'preview_duration', 'rendered_duration', 'duration_rendered', 'render_validation',
+        'duration_verified_by_ffprobe', 'encoding_tolerance_seconds', 'plan_hash'}
+    return {key: value for key, value in episode.items() if key not in runtime}
+
+
+def _inside_file(root, relative):
+    root = Path(root).resolve()
+    path = (root / relative).resolve()
+    if not path.is_relative_to(root) or not path.is_file() or path.is_symlink():
+        raise ValueError('Arquivo congelado ausente ou fora do projeto: ' + str(relative))
+    return path
+
+
+def _validate_episode_window(episode):
+    values = [episode.get(key) for key in ('source_start', 'source_end', 'duration')]
+    if any(isinstance(value, bool) or not isinstance(value, (int, float))
+           or not math.isfinite(value) for value in values):
+        raise ValueError('Janela e duração do episódio devem ser finitas')
+    start, end, duration = values
+    if start < 0 or end <= start or abs((end - start) - duration) > 1e-7:
+        raise ValueError('Duração diverge da janela original congelada')
+    is_story = str(episode.get('duration_preset', '')).startswith('story') or episode.get('duration_max_seconds') == 60
+    if is_story and duration > 60:
+        raise ValueError('Story excede 60 segundos; revise os limites sem cortar a fala automaticamente')
+
+
+def _verified_supplemental_words(manifest_path, evidence):
+    """Read existing, source-linked word records for entirely missing segments.
+
+    This is evidence recovery, never ASR, inference or timestamp interpolation.
+    Every declared file is rehashed before its selected records are accepted.
+    """
+    manifest_path = Path(manifest_path).resolve()
+    manifest = load_json(manifest_path, {})
+    expected_source = evidence.get('source', {}).get('sha256')
+    if (manifest.get('schema') != 'LDP_SUPPLEMENTAL_WORD_EVIDENCE_V1'
+            or manifest.get('source_sha256') != expected_source):
+        raise ValueError('Manifesto de palavras suplementares incompatível com o SHA256 da fonte')
+    documents, references = {}, {}
+    for name in ('word_file', 'transcript_segments_file', 'source_manifest_file', 'source_identity_file'):
+        reference = manifest.get(name) or {}
+        candidate = Path(reference.get('path', ''))
+        if not candidate.is_absolute():
+            candidate = manifest_path.parent / candidate
+        if candidate.is_symlink() or not candidate.is_file():
+            raise ValueError('Arquivo de evidência suplementar ausente ou link: ' + name)
+        path = candidate.resolve()
+        digest = file_hash(path)
+        if digest != reference.get('sha256'):
+            raise ValueError('SHA256 da evidência suplementar diverge: ' + name)
+        document = load_json(path)
+        if document is None:
+            raise ValueError('JSON de evidência suplementar inválido: ' + name)
+        documents[name] = document
+        references[name] = {'path': str(path), 'sha256': digest}
+    if documents['source_manifest_file'].get('video_sha256') != expected_source:
+        raise ValueError('Manifesto do Analyzer pertence a outra fonte')
+    cache = documents['source_identity_file']
+    if cache.get('source_hash') != expected_source:
+        raise ValueError('Cache ASR pertence a outra fonte SHA256')
+    if not {'words.json', 'transcript_segments.json'} <= set(documents['source_manifest_file'].get('files', [])):
+        raise ValueError('Manifesto do Analyzer não declara as evidências de palavras/segmentos')
+    raw = (cache.get('data') or {}).get('words')
+    original_words, original_segments = documents['word_file'], documents['transcript_segments_file']
+    if not all(isinstance(rows, list) for rows in (raw, original_words, original_segments)):
+        raise ValueError('Contrato de palavras suplementares inválido')
+    segment_ids = manifest.get('segment_ids')
+    if (not isinstance(segment_ids, list) or not segment_ids
+            or len(segment_ids) != len(set(segment_ids)) or not all(isinstance(sid, str) for sid in segment_ids)):
+        raise ValueError('Segmentos suplementares inválidos')
+    current_segments = evidence.get('segments') or evidence.get('captions') or []
+    existing = evidence.get('words') or []
+    existing_ids = {row.get('word_id') for row in existing}
+    selected = []
+    from .subtitle_presets import _align_words
+    for sid in segment_ids:
+        targets = [row for row in current_segments if row.get('segment_id', row.get('id')) == sid]
+        origins = [row for row in original_segments if row.get('segment_id', row.get('id')) == sid]
+        if len(targets) != 1 or len(origins) != 1:
+            raise ValueError('Segmento suplementar ausente ou ambíguo: ' + sid)
+        target, origin = targets[0], origins[0]
+        if any(target.get(key) != origin.get(key) for key in ('start', 'end', 'text')):
+            raise ValueError('Texto ou janela do segmento suplementar diverge do original: ' + sid)
+        if target.get('words') or any(row.get('segment_id') == sid or
+            (float(row.get('end', 0)) > target['start'] and float(row.get('start', 0)) < target['end'])
+            for row in existing):
+            raise ValueError('Suplementação permitida somente para segmento sem palavras: ' + sid)
+        words = [row for row in original_words if row.get('segment_id') == sid]
+        words.sort(key=lambda row: (row.get('start', 0), row.get('end', 0)))
+        ids = [row.get('word_id') for row in words]
+        if not words or ids != origin.get('word_ids') or len(ids) != len(set(ids)) or set(ids) & existing_ids:
+            raise ValueError('IDs suplementares não correspondem ao segmento original: ' + sid)
+        aligned, reason = _align_words(target, words)
+        if reason or len(aligned) != len(words):
+            raise ValueError('Alinhamento suplementar incompleto/inconsistente: ' + sid)
+        def raw_key(row):
+            return (row.get('word', row.get('text')), row.get('start'), row.get('end'), row.get('hypothesis_id'))
+        for word in words:
+            if sum(raw_key(row) == raw_key(word) for row in raw) != 1:
+                raise ValueError('Palavra suplementar sem correspondência exata no cache ASR: ' + str(word.get('word_id')))
+        selected.extend(deepcopy(words))
+        existing_ids.update(ids)
+    audit = {'schema': 'LDP_SUPPLEMENTAL_WORD_EVIDENCE_AUDIT_V1',
+        'manifest': {'path': str(manifest_path), 'sha256': file_hash(manifest_path)},
+        'source_sha256': expected_source, 'segment_ids': segment_ids, 'files': references,
+        'added_word_ids': [word['word_id'] for word in selected], 'new_asr_executed': False,
+        'literal_transcript_modified': False, 'timestamps_invented': False,
+        'audio_review_status': 'NEEDS_HUMAN_AUDIO_REVIEW'}
+    return selected, audit
 
 
 def conservative_camera(evidence, episode, cfg):
@@ -180,11 +308,220 @@ def validate_episode_media(path, width, height, expected_duration):
 class SeriesProject:
     def __init__(self, directory, cfg=None, log=print, progress=None, cancel=None):
         self.directory = Path(directory).resolve()
+        if (self.directory / 'CAMERA_REVISION_INCOMPLETE.json').exists():
+            raise ValueError('Revisão de câmera incompleta preservada; crie outra revisão a partir da origem')
         self.cfg, self.log = deepcopy(cfg or {}), log
         self.progress = progress or (lambda fraction, detail='': None)
         self.cancel = cancel
         self.plan = load_json(self.directory / 'series_index.json', {}) or {}
         self.evidence = load_json(self.directory / 'evidence.json', {}) or {}
+        if cfg is None and self.plan.get('caption_revision'):
+            self.cfg = deepcopy(self.plan['caption_revision']['render_settings'])
+
+    def derive_camera_revision(self, destination, *, micro_by_episode, episode_ids=None):
+        """Create an unapproved camera-only fork from existing visual evidence."""
+        from .camera_revision import derive_camera_revision
+        return derive_camera_revision(self, destination, micro_by_episode=micro_by_episode,
+                                      episode_ids=episode_ids)
+
+    def derive_caption_revision(self, destination, *, episode_ids=None, word_evidence=None,
+                                subtitle_preset=None, subtitle_overrides=None, _defer_save=False):
+        """Fork frozen captions without changing any file in the parent project.
+
+        IDs, editorial decisions and camera plans are copied literally. Historical
+        media stays in the parent; titles and thumbnail assets are copied by hash.
+        Optional caption styling is validated and applied only to the selected
+        copies before their inputs are frozen. Replacing a preset also replaces
+        its old overrides; overrides alone amend the existing selected style.
+        No transcription, curation, model call, encode or approval runs here.
+        """
+        destination = Path(destination).resolve()
+        if destination.exists() or destination.is_relative_to(self.directory):
+            raise ValueError('A revisão derivada exige uma nova pasta fora do projeto original')
+        parent_index = _inside_file(self.directory, 'series_index.json')
+        if load_json(parent_index) != self.plan:
+            raise ValueError('Plano em memória diverge da revisão persistida; recarregue o projeto')
+        selected = set(episode_ids) if episode_ids is not None else {e['episode_id'] for e in self.episodes()}
+        known = {e['episode_id'] for e in self.episodes()}
+        if not selected or not selected <= known:
+            raise ValueError('Seleção de episódios inválida para revisão de legendas')
+        styles = {}
+        if subtitle_preset is not None or subtitle_overrides is not None:
+            from .subtitle_presets import resolve_subtitle_preset
+            for episode in self.episodes():
+                if episode['episode_id'] not in selected:
+                    continue
+                preset = deepcopy(subtitle_preset if subtitle_preset is not None
+                                  else episode.get('subtitle_preset', 'LDP_CLEAN'))
+                overrides = ({} if subtitle_preset is not None
+                             else deepcopy(episode.get('subtitle_overrides') or {}))
+                overrides.update(deepcopy(subtitle_overrides or {}))
+                styles[episode['episode_id']] = {'preset': preset, 'overrides': overrides,
+                    'resolved': resolve_subtitle_preset(preset, overrides)}
+        parent_files = {name: file_hash(_inside_file(self.directory, name))
+                        for name in ('series_index.json', 'evidence.json', 'source_manifest.json')}
+        evidence_disk = load_json(self.directory / 'evidence.json')
+        if evidence_disk != self.evidence or self.plan.get('source_sha256') != self.evidence['source']['sha256']:
+            raise ValueError('Evidência ou identidade SHA256 diverge do plano persistido')
+        supplemental, enrichment = _verified_supplemental_words(word_evidence, self.evidence) if word_evidence else ([], None)
+        assets = {}
+        for episode in self.episodes():
+            if episode['episode_id'] not in selected:
+                continue
+            _validate_episode_window(episode)
+            if not episode.get('camera_plan'):
+                raise ValueError('A revisão de legendas exige o plano de câmera já congelado')
+            preview = episode.get('preview') or {}
+            if not preview.get('review_folder'):
+                raise ValueError('A revisão derivada exige uma prévia anterior com assets verificáveis')
+            review = _inside_file(self.directory, Path(preview['review_folder']) / 'PREVIEW_REVIEW_V5.json')
+            record = load_json(review, {})
+            if record.get('sha256') != preview.get('sha256') or record.get('plan_signature') != preview.get('plan_hash'):
+                raise ValueError('Registro da prévia histórica diverge do plano')
+            source_folder = review.parent
+            historical_media = _inside_file(source_folder, record.get('path', ''))
+            if file_hash(historical_media) != record.get('sha256'):
+                raise ValueError('SHA256 do MP4 histórico diverge do registro; original preservado')
+            approved_assets = {row['path']: row['sha256'] for row in record.get('assets', [])}
+            frozen = []
+            files = [path for path in source_folder.rglob('*') if path.is_file()
+                     and (path.relative_to(source_folder).parts[0] == 'thumbnails'
+                          or path.name in {'title_card_preview.png', 'TITLE_LAYOUT.json'})]
+            for path in sorted(files):
+                relative = path.relative_to(source_folder).as_posix()
+                digest = file_hash(_inside_file(source_folder, relative))
+                if approved_assets.get(relative) != digest:
+                    raise ValueError('Asset histórico sem hash válido: ' + relative)
+                frozen.append({'source_path': str(path), 'path': relative, 'sha256': digest})
+            if not frozen:
+                raise ValueError('Assets históricos ausentes; nenhuma revisão foi criada')
+            assets[episode['episode_id']] = {'files': frozen,
+                'thumbnail_choices': deepcopy(preview.get('thumbnail_choices')),
+                'parent_review_folder': str(source_folder), 'parent_preview_record_sha256': file_hash(review)}
+
+        derived = type(self)(destination, self.cfg, log=self.log, progress=self.progress, cancel=self.cancel)
+        derived.plan, derived.evidence = deepcopy(self.plan), deepcopy(self.evidence)
+        if supplemental:
+            derived.evidence.setdefault('words', []).extend(supplemental)
+            derived.evidence['words'].sort(key=lambda row: (float(row['start']), float(row['end']), row.get('word_id', '')))
+            derived.evidence.setdefault('provenance', {})['supplemental_word_evidence'] = deepcopy(enrichment)
+        revision_id = uuid4().hex
+        revision = {'schema': 'LDP_CAPTION_REVISION_V1', 'revision_id': revision_id,
+            'parent_project': str(self.directory), 'parent_files': parent_files,
+            'source_sha256': self.evidence['source']['sha256'], 'renderer_fingerprint': renderer_fingerprint(),
+            'render_settings': deepcopy(self.cfg), 'approval_required': True,
+            'audio_review_status': 'NEEDS_HUMAN_AUDIO_REVIEW', 'editorial_decisions_recomputed': False}
+        if enrichment:
+            revision['evidence_enrichment'] = enrichment
+        if styles:
+            revision['caption_styles'] = deepcopy(styles)
+        derived.plan['caption_revision'] = revision
+        derived.plan['parent_plan_id'] = self.plan.get('plan_id')
+        derived.plan['plan_id'] = str(self.plan.get('plan_id', 'PLAN')) + '_CAPTIONS_' + revision_id[:12]
+        for key in ('episodes', 'extras'):
+            derived.plan[key] = [episode for episode in derived.plan.get(key, []) if episode['episode_id'] in selected]
+        from .editing_history import invalidate_episode
+        for episode in derived.episodes():
+            identifier = episode['episode_id']
+            invalidate_episode(episode, reason='derived_word_aligned_caption_revision')
+            # A parent timeline belongs to its old frozen style/render engine.
+            # Its files and references remain intact in the parent snapshot.
+            episode.pop('caption_timeline', None)
+            if identifier in styles:
+                episode['subtitle_preset'] = deepcopy(styles[identifier]['preset'])
+                episode['subtitle_overrides'] = deepcopy(styles[identifier]['overrides'])
+            for row in episode.get('artifact_history', []):
+                row.setdefault('source_project', str(self.directory))
+            frozen = deepcopy(assets[identifier])
+            for item in frozen['files']:
+                item['project_path'] = (Path('caption_assets') / safe_name(identifier) / item['path']).as_posix()
+            episode['caption_revision'] = {'revision_id': revision_id, 'revision_of': identifier,
+                'parent_project': str(self.directory), 'parent_files': parent_files,
+                'transcript_sha256': _transcript_fingerprint(derived.evidence, episode),
+                'camera_plan_sha256': _canonical_hash(episode['camera_plan']), 'frozen_camera': True,
+                'frozen_assets': frozen, 'frozen_episode_sha256': _canonical_hash(_caption_editorial_inputs(episode))}
+            episode['caption_revision']['supplemental_word_ids'] = [word['word_id'] for word in supplemental
+                if word['end'] > episode['source_start'] and word['start'] < episode['source_end']]
+        derived.plan['status'], derived.plan['human_approval'] = 'REVIEW_REQUIRED', None
+        derived.plan.setdefault('audit_trail', []).append({'action': 'derive_caption_revision',
+            'revision_id': revision_id, 'parent_files': parent_files,
+            'episode_ids': [e['episode_id'] for e in derived.episodes()], 'automatic_approval': False})
+        # All source validation precedes destination creation. Parent files are read only.
+        destination.mkdir(parents=True, exist_ok=False)
+        if _defer_save:
+            write_json(destination / 'CAMERA_REVISION_INCOMPLETE.json',
+                       {'schema': 'LDP_CAMERA_REVISION_PENDING_V1', 'parent_project': str(self.directory)})
+        for name in parent_files:
+            target = destination / 'parent_snapshot' / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(self.directory / name, target)
+            if file_hash(target) != parent_files[name]:
+                raise ValueError('Hash divergente ao preservar snapshot original')
+        if (self.directory / 'editing_history').is_dir():
+            shutil.copytree(self.directory / 'editing_history', destination / 'editing_history')
+        for episode in derived.episodes():
+            for item in episode['caption_revision']['frozen_assets']['files']:
+                target = destination / item['project_path']
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(item['source_path'], target)
+                if file_hash(target) != item['sha256']:
+                    raise ValueError('Hash divergente ao preservar título/capa')
+        if not _defer_save:
+            derived.save()
+        return derived
+
+    def _verify_caption_revision(self, episode):
+        frozen = episode.get('caption_revision')
+        if not frozen:
+            return
+        revision = self.plan.get('caption_revision') or {}
+        if revision.get('renderer_fingerprint') != renderer_fingerprint():
+            raise ValueError('Motor mudou após congelar a revisão; crie outra revisão derivada')
+        if revision.get('render_settings') != self.cfg:
+            raise ValueError('Configuração diverge da revisão congelada')
+        if frozen.get('frozen_episode_sha256') != _canonical_hash(_caption_editorial_inputs(episode)):
+            raise ValueError('Decisão editorial ou câmera mudou após congelar a revisão')
+        if frozen.get('transcript_sha256') != _transcript_fingerprint(self.evidence, episode):
+            raise ValueError('Transcrição diverge da revisão congelada')
+        if frozen.get('caption_timeline_sha256'):
+            reference = episode.get('caption_timeline') or {}
+            if _canonical_hash(reference) != frozen['caption_timeline_sha256']:
+                raise ValueError('Timeline de legendas diverge da revisão de câmera congelada')
+            for key in ('ass', 'srt', 'sync_metadata'):
+                if file_hash(_inside_file(self.directory, reference[key])) != reference['hashes'][key]:
+                    raise ValueError('Legenda congelada mudou; revisão preservada')
+        if frozen.get('visual_metadata'):
+            reference = frozen['visual_metadata']
+            if file_hash(_inside_file(self.directory, reference['project_path'])) != reference['sha256']:
+                raise ValueError('Metadados visuais congelados mudaram; revisão preservada')
+        for item in frozen['frozen_assets']['files']:
+            if file_hash(_inside_file(self.directory, item['project_path'])) != item['sha256']:
+                raise ValueError('Asset congelado mudou; revisão preservada para inspeção')
+
+    def prepare_caption_timeline(self, episode_id):
+        """Materialize ASS/SRT plus one frozen canonical timeline, without encoding."""
+        from .subtitle_presets import write_episode_subtitles
+        episode = self.episode(episode_id)
+        _validate_episode_window(episode)
+        self._verify_caption_revision(episode)
+        reference = episode.get('caption_timeline')
+        if reference:
+            paths = {key: _inside_file(self.directory, reference[key]) for key in ('ass', 'srt', 'sync_metadata')}
+            if any(file_hash(paths[key]) != reference['hashes'][key] for key in paths):
+                raise ValueError('Timeline congelada mudou; crie outra revisão')
+            return {**{key: str(path) for key, path in paths.items()}, 'sync': load_json(paths['sync_metadata']),
+                    'preset': load_json(paths['sync_metadata'])['preset']}
+        directory = self.folder(episode) / self.signature(episode)[:16] / 'caption_plan'
+        if directory.exists():
+            raise ValueError('Pasta de timeline existente sem registro; preservada para inspeção')
+        result = write_episode_subtitles(self.evidence, episode, directory,
+            preset=episode.get('subtitle_preset', 'LDP_CLEAN'), overrides=episode.get('subtitle_overrides'), width=540, height=960)
+        episode['caption_timeline'] = {key: Path(result[key]).relative_to(self.directory).as_posix()
+                                       for key in ('ass', 'srt', 'sync_metadata')}
+        episode['caption_timeline']['hashes'] = {key: file_hash(Path(result[key])) for key in ('ass', 'srt', 'sync_metadata')}
+        episode['caption_timeline']['canonical_timeline_sha256'] = result['sync'].get('canonical_timeline_sha256')
+        self.save()
+        return result
 
     @classmethod
     def create(cls, evidence, output_root, cfg=None, duration_preset='auto_under_90', mode='SERIE_CRONOLOGICA', **kwargs):
@@ -223,6 +560,10 @@ class SeriesProject:
                 raise ValueError('Projeto de Stories existente diverge das evidências; nenhum dado foi substituído')
         else:
             project.evidence, project.plan = evidence, plan
+            # New projects adopt the established Reel look. Reopening an
+            # existing Stories project above preserves every saved decision.
+            for episode in project.episodes():
+                episode['subtitle_preset'] = 'LDP_REELS_KARAOKE'
             project.save()
         return project
 
@@ -401,7 +742,9 @@ class SeriesProject:
         return path.resolve()
 
     def signature(self, episode):
-        return episode_signature(episode, self.evidence['source']['sha256'], self.cfg)
+        self._verify_caption_revision(episode)
+        return episode_signature(episode, self.evidence['source']['sha256'], self.cfg,
+            transcript_fingerprint=_transcript_fingerprint(self.evidence, episode))
 
     def render(self, episode_id, source_path, *, preview=True):
         from .subtitle_presets import write_episode_subtitles
@@ -413,6 +756,8 @@ class SeriesProject:
             raise OperationCancelled('Operação cancelada')
         media = self._media(source_path)
         episode = self.episode(episode_id)
+        _validate_episode_window(episode)
+        self._verify_caption_revision(episode)
         if episode.get('state') == 'REJECTED' or episode.get('status') == 'REJECTED':
             raise ValueError('Episódio rejeitado')
         approval_folder = episode.get('preview', {}).get('review_folder')
@@ -423,7 +768,7 @@ class SeriesProject:
             if episode.get('duration_within_target') is False and not approved.get('duration_deviation_accepted'):
                 raise ValueError('Desvio de duração exige aceitação explícita')
         # Camera is a rendering input. Resolve it before signing the preview.
-        if preview:
+        if preview and not episode.get('camera_plan'):
             episode['camera_plan'] = conservative_camera(self.evidence, episode, self.cfg)
         signature = self.signature(episode)
         directory = self.folder(episode) / signature[:16] / ('preview' if preview else 'final')
@@ -437,10 +782,26 @@ class SeriesProject:
             validate_episode_media(output, 540 if preview else 1080, 960 if preview else 1920, episode['duration'])
             self.log('MP4 existente revalidado e preservado.')
             return output
+        if any(directory.iterdir()):
+            raise ValueError('Tentativa anterior incompleta preservada; crie uma nova revisão do episódio')
+        with (directory / 'RENDER_ATTEMPT.json').open('x', encoding='utf-8') as receipt:
+            json.dump({'episode_id': episode_id, 'plan_signature': signature, 'approved': False}, receipt)
         width, height = (540, 960) if preview else (1080, 1920)
+        canonical = None
+        if preview and episode.get('caption_revision'):
+            canonical = self.prepare_caption_timeline(episode_id)['sync']
+        elif not preview:
+            canonical = load_json(_inside_file(self.directory,
+                Path(approval_folder) / 'SUBTITLE_SYNC.json'), {})
+            if not canonical.get('canonical_timeline_sha256'):
+                raise ValueError('Prévia sem timeline canônica; gere e revise outra prévia')
         subtitle = write_episode_subtitles(self.evidence, episode, directory,
             preset={'documentary':'LDP_DOCUMENTARIO'}.get(episode.get('subtitle_preset'), episode.get('subtitle_preset', 'LDP_KARAOKE_VERDE')),
-            overrides=episode.get('subtitle_overrides'), width=width, height=height)
+            overrides=episode.get('subtitle_overrides'), width=width, height=height, canonical_timeline=canonical)
+        if subtitle['sync'].get('renderable') is False:
+            raise ValueError('Legenda não cabe na área segura; timeline preservada para revisão humana')
+        if canonical and subtitle['sync'].get('canonical_timeline_sha256') != canonical.get('canonical_timeline_sha256'):
+            raise ValueError('Timeline de legenda diverge da prévia/revisão congelada')
         if subtitle['sync'].get('needs_human_review'):
             self.log('Legenda exige revisão: ' + str(subtitle['sync'].get('diagnostics')))
         settings = deepcopy(self.cfg)
@@ -451,20 +812,38 @@ class SeriesProject:
             title = title.get('text') or title.get('title') or ''
         clip = {**episode, 'clip_id': episode_id, 'title_text': title}
         clip.setdefault('title_duration', 5.0)
-        card = create_episode_title_card(clip, directory, settings, preview=preview)
+        frozen_assets = (episode.get('caption_revision') or {}).get('frozen_assets')
+        if preview and frozen_assets:
+            for item in frozen_assets['files']:
+                target = directory / item['path']
+                target.parent.mkdir(parents=True, exist_ok=True)
+                if target.exists() and file_hash(target) != item['sha256']:
+                    raise ValueError('Asset existente diverge da revisão congelada')
+                if not target.exists():
+                    shutil.copy2(_inside_file(self.directory, item['project_path']), target)
+            title_asset = directory / 'title_card_preview.png'
+            card = title_asset if title_asset.is_file() else None
+        else:
+            card = create_episode_title_card(clip, directory, settings, preview=preview)
         # Thumbnails are materialized without changing the signed editorial plan.
         thumbnail_options = dict(episode.get('thumbnail_overrides') or {})
         if 'frame_count' not in thumbnail_options:
             legacy_count = len(thumbnail_options.get('frame_times') or thumbnail_options.get('layouts') or [])
             thumbnail_options['frame_count'] = 3 if legacy_count == 3 else 5
-        thumbnails = generate_thumbnail_choices(media, clip, directory / 'thumbnails',
-            evidence=self.evidence, source_sha256=self.evidence['source']['sha256'],
-            titles=[episode.get('thumbnail_title') or title],
-            overrides=thumbnail_options) if preview else None
+        if preview and frozen_assets:
+            thumbnails = deepcopy(frozen_assets['thumbnail_choices'])
+            if thumbnails:
+                thumbnails['manifest'] = str(directory / 'thumbnails' / 'THUMBNAIL_CHOICES.json')
+        else:
+            thumbnails = generate_thumbnail_choices(media, clip, directory / 'thumbnails',
+                evidence=self.evidence, source_sha256=self.evidence['source']['sha256'],
+                titles=[episode.get('thumbnail_title') or title],
+                overrides=thumbnail_options) if preview else None
         encoders = ['h264_nvenc', 'libx264'] if settings['render'].get('prefer_nvenc', True) and ffmpeg_has_nvenc() else ['libx264']
-        partial = directory / ('ENCODING_' + name)
         for encoder in encoders:
+            partial = directory / ('ENCODING_' + uuid4().hex + '_' + name)
             cmd, _, _ = _base_cmd(None, clip, media, partial, Path(subtitle['ass']), card, settings, preview, encoder)
+            cmd = ['-n' if arg == '-y' else arg for arg in cmd]
             cmd = extend_render_command(cmd, episode, width, height, episode['duration'], directory)
             cmd[-1:-1] = ['-threads', '2', '-filter_complex_threads', '2']
             self.log(f'{episode_id}: {encoder}; fonte SHA256 validada; câmera {clip["camera_plan"]["mode"]}')
@@ -479,7 +858,9 @@ class SeriesProject:
         else:
             raise RuntimeError('FFmpeg falhou: ' + error[-2000:])
         validation = validate_episode_media(partial, width, height, episode['duration'])
-        partial.replace(output)
+        # Exclusive publication: never replace a concurrent or historical MP4.
+        os.link(partial, output)
+        partial.unlink()
         write_json(directory / 'RENDER_VALIDATION.json', validation)
         write_json(directory / 'camera_plan.json', episode['camera_plan'])
         write_json(directory / 'episode.json', episode)
@@ -487,6 +868,7 @@ class SeriesProject:
                     'review_folder': directory.relative_to(self.directory).as_posix(), 'plan_hash': signature,
                     'rendered_duration': validation['duration'], 'thumbnail_choices': thumbnails,
                     'subtitle_alignment': subtitle['sync']['alignment'],
+                    'canonical_timeline_sha256': subtitle['sync'].get('canonical_timeline_sha256'),
                     'subtitle_needs_review': subtitle['sync'].get('needs_human_review',False),
                     'subtitle_diagnostics': subtitle['sync'].get('diagnostics',[])}
         if preview:
@@ -509,7 +891,6 @@ class SeriesProject:
             selected = episode.get('thumbnail_selection') or 'CAPA_01'
             choice = next((c for c in choices if c['choice_id'] == selected), None)
             if choice:
-                import shutil
                 cover = self.directory / approval_folder / 'thumbnails' / choice['file']
                 if file_hash(cover) != choice['sha256']:
                     raise ValueError('Capa selecionada mudou depois da revisão')

@@ -1,0 +1,29 @@
+{
+  "schema": "LDP_CAMERA_TRANSITION_BACKUP_V1",
+  "files": [
+    {
+      "path": "ldporto_curator/render.py",
+      "sha256": "6d97c2cc068e1d5451dc25009c3181217fbb1932d0dced04d50b019e886070c7",
+      "backup": "docs\\reports\\camera_final_20261015\\transition_before\\ldporto_curator\\render.py"
+    },
+    {
+      "path": "ldporto_curator/smart_composition.py",
+      "sha256": "8196b1868f3469629ee0a11a855b15696f91ea26e78ee06c544c10372809ba3b",
+      "backup": "docs\\reports\\camera_final_20261015\\transition_before\\ldporto_curator\\smart_composition.py"
+    },
+    {
+      "path": "ldporto_curator/director_config.py",
+      "sha256": "202bc1cdeccf34739bb0a7feea191c48798040cdf348c172a49e6caee75a1a42",
+      "backup": "docs\\reports\\camera_final_20261015\\transition_before\\ldporto_curator\\director_config.py"
+    },
+    {
+      "path": "ldporto_curator/persisted_plan.py",
+      "sha256": "6496491a8d62d65da4cc59dd71ae7a33bdf42155068ddb0d9cf13dae95759192",
+      "backup": "docs\\reports\\camera_final_20261015\\transition_before\\ldporto_curator\\persisted_plan.py"
+    }
+  ],
+  "new_files": [
+    "tests/test_camera_transitions.py"
+  ],
+  "user_media_modified": false
+}

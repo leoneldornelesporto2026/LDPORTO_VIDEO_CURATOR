@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256_before": "ee6b5ed9e71e5d170ca1adbfe77ca53163e5ef96ac21ab33f6b15cfa853cc2e8",
+      "sha256_after": "cad196487bfb35a5700aa5b32d27d1c70cc230f384a1b1cb3c06bf077cd77351",
+      "unchanged": false
+    },
+    {
+      "path": "ldporto_curator/episode_approval.py",
+      "sha256_before": "cb4331d8cc97809d6c2ed15d232f3cea15ca38e9a83d2c5acf74464e3c0eae53",
+      "sha256_after": "cb4331d8cc97809d6c2ed15d232f3cea15ca38e9a83d2c5acf74464e3c0eae53",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/final_camera.py",
+      "sha256_before": "3f2bd7a485f24df56b62b79a265866cd241fc1082ffbd23f4e998a292259bdc1",
+      "sha256_after": "5c148a9d886aec57ea93cf68da7e3fadf6c8a2213f608ded54323e6c73cfb0cd",
+      "unchanged": false
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "sha256_before": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e",
+      "sha256_after": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "sha256_before": "27f0fb3bb8aec9e9c5668be345069da57e8a659f7c2c29dd3013749f58941359",
+      "sha256_after": "764e6c1042d74697acc201adcf00b454850e81af08e2570441b7f471689bc552",
+      "unchanged": false
+    },
+    {
+      "path": "ldporto_curator/series_review.py",
+      "sha256_before": "41aaae4ec41a2ef8591cabf65ec60f7b260ea9380a35318e55846b292436dede",
+      "sha256_after": "41aaae4ec41a2ef8591cabf65ec60f7b260ea9380a35318e55846b292436dede",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "sha256_before": "6c02fba2e37e757ee20ad83d31a7ff27a81159ef3224e74821a3b48cf04fdc5e",
+      "sha256_after": "2611c62cd5a167de3c163c447b971ff51c219bffd3a6bc9907e1342f0c93ad44",
+      "unchanged": false
+    },
+    {
+      "path": "ldporto_curator/story_import.py",
+      "sha256_before": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395",
+      "sha256_after": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "sha256_before": "805930072e8641e31d957db223cac3cc0af041edd1fe6408892785129e94f7c2",
+      "sha256_after": "805930072e8641e31d957db223cac3cc0af041edd1fe6408892785129e94f7c2",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/subtitles.py",
+      "sha256_before": "fa2f52d487728999d4730412304f436687f4a15a5abfcd740c818c28a57c6f60",
+      "sha256_after": "fa2f52d487728999d4730412304f436687f4a15a5abfcd740c818c28a57c6f60",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_p0_gui.py",
+      "sha256_before": "c8004a657d639be2d2117aa6fa21514360f008bc72d033b7cf10ca070813c24c",
+      "sha256_after": "c8004a657d639be2d2117aa6fa21514360f008bc72d033b7cf10ca070813c24c",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_p0_legacy_recovery.py",
+      "sha256_before": "8905f153130b9f2faaa2f033681516de6709d62bd0d9ef0e7e11be86e95c47e9",
+      "sha256_after": "8905f153130b9f2faaa2f033681516de6709d62bd0d9ef0e7e11be86e95c47e9",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_subtitle_readability.py",
+      "sha256_before": "a1c327da98cb8627245bfe220fd67609ada4496a67f2aad692906a291d952a12",
+      "sha256_after": "a1c327da98cb8627245bfe220fd67609ada4496a67f2aad692906a291d952a12",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_subtitle_word_alignment.py",
+      "sha256_before": "382f4b6c3522d65c2a98d5d2467132f8c8efab411c3ac08a12b9407fb41e3649",
+      "sha256_after": "382f4b6c3522d65c2a98d5d2467132f8c8efab411c3ac08a12b9407fb41e3649",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_windows_gui_workflows.py",
+      "sha256_before": "991f14939a5d19fe922566cfad553b063a558a97f864bc3e9aeda94451da6efb",
+      "sha256_after": "991f14939a5d19fe922566cfad553b063a558a97f864bc3e9aeda94451da6efb",
+      "unchanged": true
+    }
+  ]
+}

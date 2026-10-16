@@ -1,0 +1,48 @@
+{
+  "scope": "Seven preexisting modified/untracked user files; independent SHA256 after P0 implementation",
+  "all_unchanged": true,
+  "files": [
+    {
+      "path": "ldporto_curator/final_camera.py",
+      "before_sha256": "3f2bd7a485f24df56b62b79a265866cd241fc1082ffbd23f4e998a292259bdc1",
+      "after_sha256": "3f2bd7a485f24df56b62b79a265866cd241fc1082ffbd23f4e998a292259bdc1",
+      "matches": true
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "before_sha256": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e",
+      "after_sha256": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e",
+      "matches": true
+    },
+    {
+      "path": "ldporto_curator/story_import.py",
+      "before_sha256": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395",
+      "after_sha256": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395",
+      "matches": true
+    },
+    {
+      "path": "ldporto_curator/combined_batch.py",
+      "before_sha256": "4dc6bfad6ecacdef1bb267f13a58eee246bc65939a2b565aa2bb9508b46940f1",
+      "after_sha256": "4dc6bfad6ecacdef1bb267f13a58eee246bc65939a2b565aa2bb9508b46940f1",
+      "matches": true
+    },
+    {
+      "path": "ldporto_curator/smart_composition.py",
+      "before_sha256": "2b7214fc0a8a972e428615adcba90b06bc35504da84bad3a03b03891708c85be",
+      "after_sha256": "2b7214fc0a8a972e428615adcba90b06bc35504da84bad3a03b03891708c85be",
+      "matches": true
+    },
+    {
+      "path": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+      "before_sha256": "2bc4ee159f3e62efc8af45d1fdb87223df09d01a19c37e49f1db59f21cf21aaa",
+      "after_sha256": "2bc4ee159f3e62efc8af45d1fdb87223df09d01a19c37e49f1db59f21cf21aaa",
+      "matches": true
+    },
+    {
+      "path": "tests/test_smart_composition.py",
+      "before_sha256": "d4546145b8f91abad50406ca43d0af75afa624abfb23bfb87a51f742d3dddfcb",
+      "after_sha256": "d4546145b8f91abad50406ca43d0af75afa624abfb23bfb87a51f742d3dddfcb",
+      "matches": true
+    }
+  ]
+}

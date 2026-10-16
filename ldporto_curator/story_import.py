@@ -124,7 +124,7 @@ def plan_reviewed_stories(evidence, document):
                 episode['title_kind'] = 'proposed_needs_editorial_review'
                 episode['title_duration'] = 5.0
                 episode['subtitle_preset'] = 'LDP_CLEAN'
-                episode['camera_mode'] = 'SOURCE_PRESERVE'
+                episode['camera_mode'] = 'AUTO_CONSERVADOR'
                 episode['story_original_part'] = part.get('part')
                 episode['story_original_candidate_id'] = candidate_id
                 episode['narrative_link_confirmed'] = False

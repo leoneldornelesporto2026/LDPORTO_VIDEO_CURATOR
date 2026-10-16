@@ -1,0 +1,672 @@
+{
+  "created_at_utc": "2026-10-15T19:34:41.750396+00:00",
+  "parent_project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2",
+  "derived_project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_reel_karaoke_20261015",
+  "preview": "docs\\reports\\stories_reel_karaoke_20261015\\story_parte_1\\PREVIEW_540x960.mp4",
+  "checks": {
+    "canonical_blocks": 15,
+    "word_ids": 71,
+    "ordered_lossless_unique": true,
+    "block_word_count_distribution": {
+      "6": 5,
+      "5": 3,
+      "4": 5,
+      "3": 2
+    },
+    "max_lines": 2,
+    "all_within_safe_box": true,
+    "full_phrase_before_future_word_onsets": true,
+    "cumulative_white_no_end_reset": true,
+    "absolute_measured_color_transitions": [
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000836",
+        "text": "Ali,",
+        "analyzer_source_onset": 358.54,
+        "clip_onset": 0.0,
+        "ass_absolute_onset": 0.0,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000837",
+        "text": "a",
+        "analyzer_source_onset": 358.94,
+        "clip_onset": 0.39999999999997726,
+        "ass_absolute_onset": 0.4,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000838",
+        "text": "tripulação",
+        "analyzer_source_onset": 359.14,
+        "clip_onset": 0.5999999999999659,
+        "ass_absolute_onset": 0.6,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000839",
+        "text": "do",
+        "analyzer_source_onset": 359.76,
+        "clip_onset": 1.2199999999999704,
+        "ass_absolute_onset": 1.22,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000840",
+        "text": "comandante",
+        "analyzer_source_onset": 359.86,
+        "clip_onset": 1.3199999999999932,
+        "ass_absolute_onset": 1.32,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00001",
+        "word_id": "WORD_0000841",
+        "text": "Genaro",
+        "analyzer_source_onset": 360.26,
+        "clip_onset": 1.7199999999999704,
+        "ass_absolute_onset": 1.72,
+        "white_until_block_end": 2.259999999999991
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000842",
+        "text": "passou",
+        "analyzer_source_onset": 360.8,
+        "clip_onset": 2.259999999999991,
+        "ass_absolute_onset": 2.26,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000843",
+        "text": "o",
+        "analyzer_source_onset": 361.34000000000003,
+        "clip_onset": 2.8000000000000114,
+        "ass_absolute_onset": 2.8,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000844",
+        "text": "avião",
+        "analyzer_source_onset": 361.58,
+        "clip_onset": 3.0399999999999636,
+        "ass_absolute_onset": 3.04,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000845",
+        "text": "para",
+        "analyzer_source_onset": 362.3,
+        "clip_onset": 3.759999999999991,
+        "ass_absolute_onset": 3.76,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000846",
+        "text": "a",
+        "analyzer_source_onset": 362.64,
+        "clip_onset": 4.099999999999966,
+        "ass_absolute_onset": 4.1,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "word_id": "WORD_0000847",
+        "text": "equipe",
+        "analyzer_source_onset": 362.76,
+        "clip_onset": 4.21999999999997,
+        "ass_absolute_onset": 4.22,
+        "white_until_block_end": 4.599999999999966
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000848",
+        "text": "do",
+        "analyzer_source_onset": 363.14,
+        "clip_onset": 4.599999999999966,
+        "ass_absolute_onset": 4.6,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000849",
+        "text": "comandante",
+        "analyzer_source_onset": 363.22,
+        "clip_onset": 4.680000000000007,
+        "ass_absolute_onset": 4.68,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000850",
+        "text": "César",
+        "analyzer_source_onset": 363.74,
+        "clip_onset": 5.199999999999989,
+        "ass_absolute_onset": 5.199999999999999,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000851",
+        "text": "Garcês,",
+        "analyzer_source_onset": 364.3,
+        "clip_onset": 5.759999999999991,
+        "ass_absolute_onset": 5.76,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000852",
+        "text": "que",
+        "analyzer_source_onset": 365.12,
+        "clip_onset": 6.579999999999984,
+        "ass_absolute_onset": 6.58,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "word_id": "WORD_0000853",
+        "text": "faria",
+        "analyzer_source_onset": 365.24,
+        "clip_onset": 6.699999999999989,
+        "ass_absolute_onset": 6.699999999999999,
+        "white_until_block_end": 6.939999999999998
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "word_id": "WORD_0000854",
+        "text": "os",
+        "analyzer_source_onset": 365.48,
+        "clip_onset": 6.939999999999998,
+        "ass_absolute_onset": 6.94,
+        "white_until_block_end": 9.199999999999989
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "word_id": "WORD_0000855",
+        "text": "trechos",
+        "analyzer_source_onset": 365.58000000000004,
+        "clip_onset": 7.0400000000000205,
+        "ass_absolute_onset": 7.04,
+        "white_until_block_end": 9.199999999999989
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "word_id": "WORD_0000856",
+        "text": "finais",
+        "analyzer_source_onset": 365.91999999999996,
+        "clip_onset": 7.379999999999939,
+        "ass_absolute_onset": 7.380000000000001,
+        "white_until_block_end": 9.199999999999989
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "word_id": "WORD_0000857",
+        "text": "do",
+        "analyzer_source_onset": 366.52,
+        "clip_onset": 7.979999999999961,
+        "ass_absolute_onset": 7.98,
+        "white_until_block_end": 9.199999999999989
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "word_id": "WORD_0000858",
+        "text": "RG254.",
+        "analyzer_source_onset": 366.65999999999997,
+        "clip_onset": 8.119999999999948,
+        "ass_absolute_onset": 8.120000000000001,
+        "white_until_block_end": 9.199999999999989
+      },
+      {
+        "event_id": "CAPTION_00005",
+        "word_id": "WORD_0000859",
+        "text": "No",
+        "analyzer_source_onset": 367.74,
+        "clip_onset": 9.199999999999989,
+        "ass_absolute_onset": 9.2,
+        "white_until_block_end": 10.159999999999968
+      },
+      {
+        "event_id": "CAPTION_00005",
+        "word_id": "WORD_0000860",
+        "text": "dia",
+        "analyzer_source_onset": 368.03999999999996,
+        "clip_onset": 9.499999999999943,
+        "ass_absolute_onset": 9.5,
+        "white_until_block_end": 10.159999999999968
+      },
+      {
+        "event_id": "CAPTION_00005",
+        "word_id": "WORD_0000861",
+        "text": "do",
+        "analyzer_source_onset": 368.18,
+        "clip_onset": 9.639999999999986,
+        "ass_absolute_onset": 9.639999999999999,
+        "white_until_block_end": 10.159999999999968
+      },
+      {
+        "event_id": "CAPTION_00005",
+        "word_id": "WORD_0000862",
+        "text": "voo,",
+        "analyzer_source_onset": 368.34000000000003,
+        "clip_onset": 9.800000000000011,
+        "ass_absolute_onset": 9.799999999999999,
+        "white_until_block_end": 10.159999999999968
+      },
+      {
+        "event_id": "CAPTION_00006",
+        "word_id": "WORD_0000863",
+        "text": "ele",
+        "analyzer_source_onset": 368.72,
+        "clip_onset": 10.180000000000007,
+        "ass_absolute_onset": 10.18,
+        "white_until_block_end": 11.579999999999984
+      },
+      {
+        "event_id": "CAPTION_00006",
+        "word_id": "WORD_0000864",
+        "text": "tinha",
+        "analyzer_source_onset": 368.8,
+        "clip_onset": 10.259999999999991,
+        "ass_absolute_onset": 10.26,
+        "white_until_block_end": 11.579999999999984
+      },
+      {
+        "event_id": "CAPTION_00006",
+        "word_id": "WORD_0000865",
+        "text": "32",
+        "analyzer_source_onset": 369.06,
+        "clip_onset": 10.519999999999982,
+        "ass_absolute_onset": 10.52,
+        "white_until_block_end": 11.579999999999984
+      },
+      {
+        "event_id": "CAPTION_00006",
+        "word_id": "WORD_0000866",
+        "text": "anos",
+        "analyzer_source_onset": 369.64,
+        "clip_onset": 11.099999999999966,
+        "ass_absolute_onset": 11.1,
+        "white_until_block_end": 11.579999999999984
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000867",
+        "text": "de",
+        "analyzer_source_onset": 370.12,
+        "clip_onset": 11.579999999999984,
+        "ass_absolute_onset": 11.58,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000868",
+        "text": "idade",
+        "analyzer_source_onset": 370.26,
+        "clip_onset": 11.71999999999997,
+        "ass_absolute_onset": 11.72,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000869",
+        "text": "e",
+        "analyzer_source_onset": 370.62,
+        "clip_onset": 12.079999999999984,
+        "ass_absolute_onset": 12.08,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000870",
+        "text": "voava",
+        "analyzer_source_onset": 370.72,
+        "clip_onset": 12.180000000000007,
+        "ass_absolute_onset": 12.18,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000871",
+        "text": "desde",
+        "analyzer_source_onset": 370.98,
+        "clip_onset": 12.439999999999998,
+        "ass_absolute_onset": 12.44,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "word_id": "WORD_0000872",
+        "text": "1976,",
+        "analyzer_source_onset": 371.28,
+        "clip_onset": 12.739999999999952,
+        "ass_absolute_onset": 12.74,
+        "white_until_block_end": 13.499999999999943
+      },
+      {
+        "event_id": "CAPTION_00008",
+        "word_id": "WORD_0000873",
+        "text": "13",
+        "analyzer_source_onset": 372.96000000000004,
+        "clip_onset": 14.420000000000016,
+        "ass_absolute_onset": 14.42,
+        "white_until_block_end": 15.639999999999986
+      },
+      {
+        "event_id": "CAPTION_00008",
+        "word_id": "WORD_0000874",
+        "text": "anos",
+        "analyzer_source_onset": 373.3,
+        "clip_onset": 14.759999999999991,
+        "ass_absolute_onset": 14.76,
+        "white_until_block_end": 15.639999999999986
+      },
+      {
+        "event_id": "CAPTION_00008",
+        "word_id": "WORD_0000875",
+        "text": "antes.",
+        "analyzer_source_onset": 373.76,
+        "clip_onset": 15.21999999999997,
+        "ass_absolute_onset": 15.22,
+        "white_until_block_end": 15.639999999999986
+      },
+      {
+        "event_id": "CAPTION_00009",
+        "word_id": "WORD_0000876",
+        "text": "Ele",
+        "analyzer_source_onset": 374.26,
+        "clip_onset": 15.71999999999997,
+        "ass_absolute_onset": 15.72,
+        "white_until_block_end": 16.739999999999952
+      },
+      {
+        "event_id": "CAPTION_00009",
+        "word_id": "WORD_0000877",
+        "text": "se",
+        "analyzer_source_onset": 374.36,
+        "clip_onset": 15.819999999999993,
+        "ass_absolute_onset": 15.82,
+        "white_until_block_end": 16.739999999999952
+      },
+      {
+        "event_id": "CAPTION_00009",
+        "word_id": "WORD_0000878",
+        "text": "tornou",
+        "analyzer_source_onset": 374.5,
+        "clip_onset": 15.95999999999998,
+        "ass_absolute_onset": 15.96,
+        "white_until_block_end": 16.739999999999952
+      },
+      {
+        "event_id": "CAPTION_00009",
+        "word_id": "WORD_0000879",
+        "text": "piloto",
+        "analyzer_source_onset": 374.86,
+        "clip_onset": 16.319999999999993,
+        "ass_absolute_onset": 16.32,
+        "white_until_block_end": 16.739999999999952
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "word_id": "WORD_0000880",
+        "text": "de",
+        "analyzer_source_onset": 375.28,
+        "clip_onset": 16.739999999999952,
+        "ass_absolute_onset": 16.74,
+        "white_until_block_end": 18.079999999999984
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "word_id": "WORD_0000881",
+        "text": "linha",
+        "analyzer_source_onset": 375.4,
+        "clip_onset": 16.859999999999957,
+        "ass_absolute_onset": 16.86,
+        "white_until_block_end": 18.079999999999984
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "word_id": "WORD_0000882",
+        "text": "aérea",
+        "analyzer_source_onset": 375.56,
+        "clip_onset": 17.019999999999982,
+        "ass_absolute_onset": 17.02,
+        "white_until_block_end": 18.079999999999984
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "word_id": "WORD_0000883",
+        "text": "em",
+        "analyzer_source_onset": 375.91999999999996,
+        "clip_onset": 17.37999999999994,
+        "ass_absolute_onset": 17.38,
+        "white_until_block_end": 18.079999999999984
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "word_id": "WORD_0000884",
+        "text": "1982.",
+        "analyzer_source_onset": 376.03999999999996,
+        "clip_onset": 17.499999999999943,
+        "ass_absolute_onset": 17.5,
+        "white_until_block_end": 18.079999999999984
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000885",
+        "text": "E",
+        "analyzer_source_onset": 377.44,
+        "clip_onset": 18.899999999999977,
+        "ass_absolute_onset": 18.9,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000886",
+        "text": "antes",
+        "analyzer_source_onset": 377.56,
+        "clip_onset": 19.019999999999982,
+        "ass_absolute_onset": 19.02,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000887",
+        "text": "de",
+        "analyzer_source_onset": 377.74,
+        "clip_onset": 19.19999999999999,
+        "ass_absolute_onset": 19.2,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000888",
+        "text": "pilotar",
+        "analyzer_source_onset": 377.86,
+        "clip_onset": 19.319999999999993,
+        "ass_absolute_onset": 19.32,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000889",
+        "text": "o",
+        "analyzer_source_onset": 378.34000000000003,
+        "clip_onset": 19.80000000000001,
+        "ass_absolute_onset": 19.799999999999997,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "word_id": "WORD_0000890",
+        "text": "737,",
+        "analyzer_source_onset": 378.44,
+        "clip_onset": 19.899999999999977,
+        "ass_absolute_onset": 19.9,
+        "white_until_block_end": 20.439999999999998
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "word_id": "WORD_0000891",
+        "text": "ele",
+        "analyzer_source_onset": 379.38,
+        "clip_onset": 20.839999999999975,
+        "ass_absolute_onset": 20.84,
+        "white_until_block_end": 22.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "word_id": "WORD_0000892",
+        "text": "ainda",
+        "analyzer_source_onset": 379.48,
+        "clip_onset": 20.939999999999998,
+        "ass_absolute_onset": 20.94,
+        "white_until_block_end": 22.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "word_id": "WORD_0000893",
+        "text": "havia",
+        "analyzer_source_onset": 379.65999999999997,
+        "clip_onset": 21.119999999999948,
+        "ass_absolute_onset": 21.12,
+        "white_until_block_end": 22.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "word_id": "WORD_0000894",
+        "text": "sido",
+        "analyzer_source_onset": 379.8,
+        "clip_onset": 21.25999999999999,
+        "ass_absolute_onset": 21.26,
+        "white_until_block_end": 22.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "word_id": "WORD_0000895",
+        "text": "piloto",
+        "analyzer_source_onset": 380.06,
+        "clip_onset": 21.519999999999982,
+        "ass_absolute_onset": 21.52,
+        "white_until_block_end": 22.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00013",
+        "word_id": "WORD_0000896",
+        "text": "do",
+        "analyzer_source_onset": 380.6,
+        "clip_onset": 22.060000000000002,
+        "ass_absolute_onset": 22.06,
+        "white_until_block_end": 23.239999999999952
+      },
+      {
+        "event_id": "CAPTION_00013",
+        "word_id": "WORD_0000897",
+        "text": "Boeing",
+        "analyzer_source_onset": 380.74,
+        "clip_onset": 22.19999999999999,
+        "ass_absolute_onset": 22.2,
+        "white_until_block_end": 23.239999999999952
+      },
+      {
+        "event_id": "CAPTION_00013",
+        "word_id": "WORD_0000898",
+        "text": "727",
+        "analyzer_source_onset": 381.0,
+        "clip_onset": 22.45999999999998,
+        "ass_absolute_onset": 22.459999999999997,
+        "white_until_block_end": 23.239999999999952
+      },
+      {
+        "event_id": "CAPTION_00014",
+        "word_id": "WORD_0000899",
+        "text": "e",
+        "analyzer_source_onset": 381.78,
+        "clip_onset": 23.239999999999952,
+        "ass_absolute_onset": 23.24,
+        "white_until_block_end": 25.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00014",
+        "word_id": "WORD_0000900",
+        "text": "do",
+        "analyzer_source_onset": 382.4,
+        "clip_onset": 23.859999999999957,
+        "ass_absolute_onset": 23.86,
+        "white_until_block_end": 25.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00014",
+        "word_id": "WORD_0000901",
+        "text": "Lockheed",
+        "analyzer_source_onset": 382.52,
+        "clip_onset": 23.97999999999996,
+        "ass_absolute_onset": 23.979999999999997,
+        "white_until_block_end": 25.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00014",
+        "word_id": "WORD_0000902",
+        "text": "Electra,",
+        "analyzer_source_onset": 382.91999999999996,
+        "clip_onset": 24.37999999999994,
+        "ass_absolute_onset": 24.38,
+        "white_until_block_end": 25.060000000000002
+      },
+      {
+        "event_id": "CAPTION_00015",
+        "word_id": "WORD_0000903",
+        "text": "além",
+        "analyzer_source_onset": 383.72,
+        "clip_onset": 25.180000000000007,
+        "ass_absolute_onset": 25.18,
+        "white_until_block_end": 26.21999999999997
+      },
+      {
+        "event_id": "CAPTION_00015",
+        "word_id": "WORD_0000904",
+        "text": "de",
+        "analyzer_source_onset": 384.08000000000004,
+        "clip_onset": 25.54000000000002,
+        "ass_absolute_onset": 25.54,
+        "white_until_block_end": 26.21999999999997
+      },
+      {
+        "event_id": "CAPTION_00015",
+        "word_id": "WORD_0000905",
+        "text": "aviões",
+        "analyzer_source_onset": 384.26,
+        "clip_onset": 25.71999999999997,
+        "ass_absolute_onset": 25.72,
+        "white_until_block_end": 26.21999999999997
+      },
+      {
+        "event_id": "CAPTION_00015",
+        "word_id": "WORD_0000906",
+        "text": "militares.",
+        "analyzer_source_onset": 384.5,
+        "clip_onset": 25.95999999999998,
+        "ass_absolute_onset": 25.96,
+        "white_until_block_end": 26.21999999999997
+      }
+    ],
+    "ass_no_color_anticipation": true,
+    "srt_text_and_block_times_equivalent": true,
+    "style_equivalent_to_current_reels": true,
+    "human_audio_review": "PENDING"
+  },
+  "rendered_story_count": 1,
+  "other_story_count_untouched": 15,
+  "new_human_approvals": 0,
+  "new_final_renders": 0,
+  "curation_runs": 0,
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f"
+}

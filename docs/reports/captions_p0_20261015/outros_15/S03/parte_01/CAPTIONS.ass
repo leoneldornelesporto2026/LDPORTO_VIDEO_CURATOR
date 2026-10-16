@@ -1,0 +1,37 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 540
+PlayResY: 960
+ScaledBorderAndShadow: yes
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H00101010,&HFF000000,-1,0,0,0,100,100,0,0,1,1.50,0.50,2,43,86,172,1
+Style: CaptionBlock,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H59000000,&H59000000,-1,0,0,0,100,100,0,0,3,1.50,0,2,43,86,172,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.16,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Os
+Dialogue: 0,0:00:00.16,0:00:00.58,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}pilotos
+Dialogue: 0,0:00:00.58,0:00:00.72,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}então
+Dialogue: 0,0:00:00.72,0:00:01.80,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}sintonizaram
+Dialogue: 0,0:00:01.80,0:00:01.98,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}os
+Dialogue: 0,0:00:01.98,0:00:02.44,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}rádios
+Dialogue: 0,0:00:02.44,0:00:03.06,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}navegadores
+Dialogue: 0,0:00:03.06,0:00:03.22,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}do
+Dialogue: 0,0:00:03.22,0:00:03.52,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}avião
+Dialogue: 0,0:00:03.52,0:00:03.66,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}nas
+Dialogue: 0,0:00:03.66,0:00:04.16,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}frequências
+Dialogue: 0,0:00:04.16,0:00:04.34,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:04.34,0:00:04.98,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Carajás,
+Dialogue: 0,0:00:05.14,0:00:05.74,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}370,
+Dialogue: 0,0:00:06.26,0:00:06.70,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}e
+Dialogue: 0,0:00:06.70,0:00:07.26,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Marabá,
+Dialogue: 0,0:00:07.38,0:00:08.02,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}320
+Dialogue: 0,0:00:08.02,0:00:09.12,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}kHz,
+Dialogue: 0,0:00:09.22,0:00:09.52,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}e
+Dialogue: 0,0:00:09.52,0:00:10.08,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}decidiram
+Dialogue: 0,0:00:10.08,0:00:10.56,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}voar
+Dialogue: 0,0:00:10.56,0:00:10.86,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}naquela
+Dialogue: 0,0:00:10.86,0:00:11.40,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}direção.

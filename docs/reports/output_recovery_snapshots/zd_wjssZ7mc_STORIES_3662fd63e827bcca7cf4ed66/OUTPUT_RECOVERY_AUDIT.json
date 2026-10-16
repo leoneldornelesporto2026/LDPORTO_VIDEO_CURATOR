@@ -1,0 +1,63 @@
+{
+  "schema": "LDP_OUTPUT_RECONSTRUCTION_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "source_package": {
+    "kind": "verified_import_cache",
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\.cache\\imported_second_curation\\bb41aa652a3225715311d8694b1b1a4900b5439a6fcdfbb6849597168ed3f251",
+    "manifest_sha256": "99e30139c794311b6a269fec2b8ac71ceb44bfecb06dc45b6d2731d4986628f5"
+  },
+  "supplemental_evidence": {
+    "schema": "LDP_SUPPLEMENTAL_WORD_EVIDENCE_AUDIT_V1",
+    "manifest": {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\WORD_EVIDENCE_SEG00163.json",
+      "sha256": "325df4f84e8453b1160d633dc04d9d36b309609a077cce02b550fcbfd86766bd"
+    },
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "segment_ids": [
+      "SEG_00163"
+    ],
+    "files": {
+      "word_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\words.json",
+        "sha256": "1db36020a6b8fde0cf90e863ac5bfe16ff59e00d37efaf345441e8a73f25b5c1"
+      },
+      "transcript_segments_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcript_segments.json",
+        "sha256": "efa89f7ddfb917fdb664ffb2bc8f0ccd9baf43083f039fcf6c931ea9037b4e86"
+      },
+      "source_manifest_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\manifest.json",
+        "sha256": "0905423dec4b3cee3f0cc202e23f8a906a273ea0f1237b47f88c5739277a44cd"
+      },
+      "source_identity_file": {
+        "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00004.json",
+        "sha256": "8283f5743cac491446773dafaef0d00162ed9c7c648884eb2ae145a6566df894"
+      }
+    },
+    "added_word_ids": [
+      "WORD_0002445",
+      "WORD_0002446",
+      "WORD_0002447",
+      "WORD_0002448",
+      "WORD_0002449",
+      "WORD_0002450",
+      "WORD_0002451",
+      "WORD_0002452",
+      "WORD_0002453",
+      "WORD_0002454",
+      "WORD_0002455",
+      "WORD_0002456"
+    ],
+    "new_asr_executed": false,
+    "literal_transcript_modified": false,
+    "timestamps_invented": false,
+    "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW"
+  },
+  "editorial_plan_id": "STORIES_3662fd63e827bcca7cf4ed66",
+  "episodes": 16,
+  "recreated_from_verifiable_inputs": true,
+  "historical_previews_recovered": false,
+  "historical_final_renders_recovered": false,
+  "historical_approvals_recovered": false,
+  "publication_ready": false
+}

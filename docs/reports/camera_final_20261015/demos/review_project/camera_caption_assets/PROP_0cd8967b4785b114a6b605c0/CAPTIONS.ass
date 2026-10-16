@@ -1,0 +1,28 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 540
+PlayResY: 960
+ScaledBorderAndShadow: yes
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Segoe UI,30.00,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,3.00,1.00,2,65,65,160,1
+Style: CaptionBlock,Segoe UI,30.00,&H00FFFFFF,&H0000D7FF,&H59000000,&H59000000,-1,0,0,0,100,100,0,0,3,3.00,0,2,65,65,144,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.42,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}Às{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(200,200,\1c&HFFFFFF&)}2h05{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(720,720,\1c&HFFFFFF&)}da{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1020,1020,\1c&HFFFFFF&)}tarde,
+Dialogue: 0,0:00:01.52,0:00:03.06,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}o{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(60,60,\1c&HFFFFFF&)}Mike{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(200,200,\1c&HFFFFFF&)}Kilo{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(460,460,\1c&HFFFFFF&)}decolou{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(860,860,\1c&HFFFFFF&)}de{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(960,960,\1c&HFFFFFF&)}Brasília.
+Dialogue: 0,0:00:03.28,0:00:05.24,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}E{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(280,280,\1c&HFFFFFF&)}como{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(520,520,\1c&HFFFFFF&)}o{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(640,640,\1c&HFFFFFF&)}trecho{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1080,1080,\1c&HFFFFFF&)}até{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(1240,1240,\1c&HFFFFFF&)}Imperatriz,
+Dialogue: 0,0:00:05.28,0:00:07.30,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}no{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(160,160,\1c&HFFFFFF&)}Maranhão,{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(640,640,\1c&HFFFFFF&)}possuía{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1140,1140,\1c&HFFFFFF&)}uma{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(1340,1340,\1c&HFFFFFF&)}aerovia,
+Dialogue: 0,0:00:07.60,0:00:08.78,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}os{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(320,320,\1c&HFFFFFF&)}pilotos{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(800,800,\1c&HFFFFFF&)}olharam
+Dialogue: 0,0:00:08.78,0:00:10.90,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}a{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(60,60,\1c&HFFFFFF&)}carta{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(320,320,\1c&HFFFFFF&)}de{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(520,520,\1c&HFFFFFF&)}navegação{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1280,1280,\1c&HFFFFFF&)}e{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(1580,1580,\1c&HFFFFFF&)}seguiram
+Dialogue: 0,0:00:10.90,0:00:12.26,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}a{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(20,20,\1c&HFFFFFF&)}indicação{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(600,600,\1c&HFFFFFF&)}que{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(860,860,\1c&HFFFFFF&)}estava{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1060,1060,\1c&HFFFFFF&)}lá.
+Dialogue: 0,0:00:12.42,0:00:13.58,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}Foram{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(300,300,\1c&HFFFFFF&)}46{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(800,800,\1c&HFFFFFF&)}minutos
+Dialogue: 0,0:00:13.58,0:00:15.86,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}de{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(440,440,\1c&HFFFFFF&)}voo{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(800,800,\1c&HFFFFFF&)}de{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(920,920,\1c&HFFFFFF&)}Brasília{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1420,1420,\1c&HFFFFFF&)}até{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(1640,1640,\1c&HFFFFFF&)}Imperatriz.
+Dialogue: 0,0:00:15.86,0:00:18.08,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}Alguns{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(540,540,\1c&HFFFFFF&)}passageiros{\1c&H00D7FF&} \N{\1c&H00D7FF&}{\t(1120,1120,\1c&HFFFFFF&)}desembarcaram,
+Dialogue: 0,0:00:18.08,0:00:20.06,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}outros{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(500,500,\1c&HFFFFFF&)}embarcaram{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1740,1740,\1c&HFFFFFF&)}e{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1840,1840,\1c&HFFFFFF&)}às
+Dialogue: 0,0:00:20.06,0:00:22.26,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}16h35{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1220,1220,\1c&HFFFFFF&)}o{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1960,1960,\1c&HFFFFFF&)}Boeing
+Dialogue: 0,0:00:22.26,0:00:24.26,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}737{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(560,560,\1c&HFFFFFF&)}decolou{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1440,1440,\1c&HFFFFFF&)}na{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1560,1560,\1c&HFFFFFF&)}direção
+Dialogue: 0,0:00:24.26,0:00:26.06,Sub,,0,0,0,,{\an2\q2\pos(270.00,800.00)\fs30.00}{\1c&H00D7FF&}{\1c&HFFFFFF&}de{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(180,180,\1c&HFFFFFF&)}Marabá,{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1040,1040,\1c&HFFFFFF&)}no{\1c&H00D7FF&} {\1c&H00D7FF&}{\t(1320,1320,\1c&HFFFFFF&)}Pará.

@@ -1,0 +1,13 @@
+{
+  "encoder": "h264_nvenc",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "source_start": 358.54,
+  "source_end": 384.76,
+  "duration": 26.21999999999997,
+  "width": 540,
+  "height": 960,
+  "camera_mode": "full_frame_blur",
+  "renderer_fingerprint": "17339dec0b38a41c277f86f9c12c0bd7e0601f75705294ff7f0d82cbc9e46434",
+  "output": "PREVIEW_540x960.mp4",
+  "preview": true
+}

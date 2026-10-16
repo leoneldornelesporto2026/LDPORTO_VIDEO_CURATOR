@@ -1,0 +1,2845 @@
+[
+  {
+    "scene_id": "SCENE_00000",
+    "start": 0,
+    "end": 16.032683,
+    "duration": 16.032683,
+    "keyframe": "thumbnails/SCENE_00000_0.000.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_002",
+      "PERSON_003",
+      "PERSON_004",
+      "PERSON_005",
+      "PERSON_006",
+      "PERSON_007",
+      "PERSON_008",
+      "PERSON_009"
+    ],
+    "predominant_person": "PERSON_001",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00001",
+    "start": 16.032683,
+    "end": 17.76775,
+    "duration": 1.7350670000000008,
+    "keyframe": "thumbnails/SCENE_00001_16.099.jpg",
+    "visible_people": [
+      "PERSON_010",
+      "PERSON_011",
+      "PERSON_012",
+      "PERSON_013",
+      "PERSON_014"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00002",
+    "start": 17.76775,
+    "end": 18.56855,
+    "duration": 0.8007999999999988,
+    "keyframe": "thumbnails/SCENE_00002_17.901.jpg",
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00003",
+    "start": 18.56855,
+    "end": 31.398033,
+    "duration": 12.829483000000003,
+    "keyframe": "thumbnails/SCENE_00003_18.652.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_016",
+      "PERSON_017",
+      "PERSON_018",
+      "PERSON_019"
+    ],
+    "predominant_person": "PERSON_001",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00004",
+    "start": 31.398033,
+    "end": 33.800433,
+    "duration": 2.4023999999999965,
+    "keyframe": "thumbnails/SCENE_00004_31.465.jpg",
+    "visible_people": [
+      "PERSON_010",
+      "PERSON_020"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00005",
+    "start": 33.800433,
+    "end": 34.5345,
+    "duration": 0.7340670000000031,
+    "keyframe": "thumbnails/SCENE_00005_33.867.jpg",
+    "visible_people": [
+      "PERSON_001"
+    ],
+    "predominant_person": "PERSON_001",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00006",
+    "start": 34.5345,
+    "end": 35.6356,
+    "duration": 1.1010999999999953,
+    "keyframe": "thumbnails/SCENE_00006_34.618.jpg",
+    "visible_people": [
+      "PERSON_010"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00007",
+    "start": 35.6356,
+    "end": 63.7637,
+    "duration": 28.128100000000003,
+    "keyframe": "thumbnails/SCENE_00007_35.669.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_021",
+      "PERSON_022",
+      "PERSON_023",
+      "PERSON_024",
+      "PERSON_025",
+      "PERSON_026",
+      "PERSON_027",
+      "PERSON_028",
+      "PERSON_029"
+    ],
+    "predominant_person": "PERSON_001",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00008",
+    "start": 63.7637,
+    "end": 64.397667,
+    "duration": 0.6339669999999984,
+    "keyframe": "thumbnails/SCENE_00008_63.897.jpg",
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00009",
+    "start": 64.397667,
+    "end": 68.01795,
+    "duration": 3.6202830000000006,
+    "keyframe": "thumbnails/SCENE_00009_64.498.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_030",
+      "PERSON_031"
+    ],
+    "predominant_person": "PERSON_001",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00010",
+    "start": 68.01795,
+    "end": 76.9769,
+    "duration": 8.958950000000002,
+    "keyframe": "thumbnails/SCENE_00010_68.135.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_032",
+      "PERSON_033",
+      "PERSON_034"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00011",
+    "start": 76.9769,
+    "end": 85.4854,
+    "duration": 8.508499999999998,
+    "keyframe": "thumbnails/SCENE_00011_77.010.jpg",
+    "visible_people": [
+      "PERSON_034",
+      "PERSON_035",
+      "PERSON_036",
+      "PERSON_037",
+      "PERSON_038"
+    ],
+    "predominant_person": "PERSON_034",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00012",
+    "start": 85.4854,
+    "end": 87.1871,
+    "duration": 1.7017000000000024,
+    "keyframe": "thumbnails/SCENE_00012_85.485.jpg",
+    "visible_people": [
+      "PERSON_001",
+      "PERSON_032",
+      "PERSON_039",
+      "PERSON_040",
+      "PERSON_041",
+      "PERSON_042"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00013",
+    "start": 87.1871,
+    "end": 87.821067,
+    "duration": 0.6339669999999984,
+    "keyframe": "thumbnails/SCENE_00013_87.287.jpg",
+    "visible_people": [
+      "PERSON_010",
+      "PERSON_043"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00014",
+    "start": 87.821067,
+    "end": 88.8888,
+    "duration": 1.067733000000004,
+    "keyframe": "thumbnails/SCENE_00014_87.888.jpg",
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_044",
+      "PERSON_045"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00015",
+    "start": 88.8888,
+    "end": 98.064633,
+    "duration": 9.175832999999997,
+    "keyframe": "thumbnails/SCENE_00015_88.939.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_047",
+      "PERSON_048",
+      "PERSON_049",
+      "PERSON_050"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00016",
+    "start": 98.064633,
+    "end": 99.182417,
+    "duration": 1.1177840000000003,
+    "keyframe": "thumbnails/SCENE_00016_98.098.jpg",
+    "visible_people": [
+      "PERSON_010"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00017",
+    "start": 99.182417,
+    "end": 102.285517,
+    "duration": 3.1030999999999977,
+    "keyframe": "thumbnails/SCENE_00017_99.299.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_051",
+      "PERSON_052"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00018",
+    "start": 102.285517,
+    "end": 107.0069,
+    "duration": 4.721383000000003,
+    "keyframe": "thumbnails/SCENE_00018_102.302.jpg",
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "close_up",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00019",
+    "start": 107.0069,
+    "end": 108.141367,
+    "duration": 1.1344670000000008,
+    "keyframe": "thumbnails/SCENE_00019_107.107.jpg",
+    "visible_people": [
+      "PERSON_053"
+    ],
+    "predominant_person": "PERSON_053",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00020",
+    "start": 108.141367,
+    "end": 109.3092,
+    "duration": 1.1678330000000017,
+    "keyframe": "thumbnails/SCENE_00020_108.158.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_054"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00021",
+    "start": 109.3092,
+    "end": 111.878433,
+    "duration": 2.569232999999997,
+    "keyframe": "thumbnails/SCENE_00021_109.359.jpg",
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00022",
+    "start": 111.878433,
+    "end": 113.2131,
+    "duration": 1.334666999999996,
+    "keyframe": "thumbnails/SCENE_00022_111.912.jpg",
+    "visible_people": [
+      "PERSON_010"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00023",
+    "start": 113.2131,
+    "end": 118.384933,
+    "duration": 5.171833000000007,
+    "keyframe": "thumbnails/SCENE_00023_113.263.jpg",
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_055"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00024",
+    "start": 118.384933,
+    "end": 122.67255,
+    "duration": 4.287616999999997,
+    "keyframe": "thumbnails/SCENE_00024_118.435.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_056"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00025",
+    "start": 122.67255,
+    "end": 123.606817,
+    "duration": 0.9342670000000055,
+    "keyframe": "thumbnails/SCENE_00025_122.706.jpg",
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "close_up",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00026",
+    "start": 123.606817,
+    "end": 127.310517,
+    "duration": 3.7036999999999978,
+    "keyframe": "thumbnails/SCENE_00026_123.640.jpg",
+    "visible_people": [
+      "PERSON_010",
+      "PERSON_057"
+    ],
+    "predominant_person": "PERSON_010",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00027",
+    "start": 127.310517,
+    "end": 129.77965,
+    "duration": 2.4691329999999994,
+    "keyframe": "thumbnails/SCENE_00027_127.427.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_058"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00028",
+    "start": 129.77965,
+    "end": 133.716917,
+    "duration": 3.9372669999999914,
+    "keyframe": "thumbnails/SCENE_00028_129.863.jpg",
+    "visible_people": [
+      "PERSON_032",
+      "PERSON_059",
+      "PERSON_060",
+      "PERSON_061",
+      "PERSON_062",
+      "PERSON_063",
+      "PERSON_064",
+      "PERSON_065",
+      "PERSON_066"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00029",
+    "start": 133.716917,
+    "end": 145.7456,
+    "duration": 12.028683000000001,
+    "keyframe": "thumbnails/SCENE_00029_133.767.jpg",
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_067"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00030",
+    "start": 145.7456,
+    "end": 146.613133,
+    "duration": 0.8675330000000088,
+    "keyframe": "thumbnails/SCENE_00030_145.812.jpg",
+    "visible_people": [
+      "PERSON_046",
+      "PERSON_068"
+    ],
+    "predominant_person": "PERSON_046",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00031",
+    "start": 146.613133,
+    "end": 149.082267,
+    "duration": 2.469133999999997,
+    "keyframe": "thumbnails/SCENE_00031_146.713.jpg",
+    "visible_people": [
+      "PERSON_069",
+      "PERSON_070"
+    ],
+    "predominant_person": "PERSON_069",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00032",
+    "start": 149.082267,
+    "end": 149.716233,
+    "duration": 0.6339659999999867,
+    "keyframe": "thumbnails/SCENE_00032_149.149.jpg",
+    "visible_people": [
+      "PERSON_071",
+      "PERSON_072"
+    ],
+    "predominant_person": "PERSON_071",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00033",
+    "start": 149.716233,
+    "end": 153.520033,
+    "duration": 3.803800000000024,
+    "keyframe": "thumbnails/SCENE_00033_149.750.jpg",
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_073"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00034",
+    "start": 153.520033,
+    "end": 155.922433,
+    "duration": 2.4024,
+    "keyframe": "thumbnails/SCENE_00034_153.570.jpg",
+    "visible_people": [
+      "PERSON_074",
+      "PERSON_075",
+      "PERSON_076"
+    ],
+    "predominant_person": "PERSON_074",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00035",
+    "start": 155.922433,
+    "end": 156.589767,
+    "duration": 0.6673339999999826,
+    "keyframe": "thumbnails/SCENE_00035_156.223.jpg",
+    "visible_people": [
+      "PERSON_071"
+    ],
+    "predominant_person": "PERSON_071",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00036",
+    "start": 156.589767,
+    "end": 157.340517,
+    "duration": 0.7507500000000107,
+    "keyframe": "thumbnails/SCENE_00036_156.673.jpg",
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00037",
+    "start": 157.340517,
+    "end": 159.70955,
+    "duration": 2.3690330000000017,
+    "keyframe": "thumbnails/SCENE_00037_157.424.jpg",
+    "visible_people": [
+      "PERSON_077"
+    ],
+    "predominant_person": "PERSON_077",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00038",
+    "start": 159.70955,
+    "end": 197.814283,
+    "duration": 38.10473299999998,
+    "keyframe": "thumbnails/SCENE_00038_159.776.jpg",
+    "visible_people": [
+      "PERSON_078",
+      "PERSON_079",
+      "PERSON_080",
+      "PERSON_081",
+      "PERSON_082",
+      "PERSON_083",
+      "PERSON_084",
+      "PERSON_085",
+      "PERSON_086",
+      "PERSON_087",
+      "PERSON_088",
+      "PERSON_089",
+      "PERSON_090",
+      "PERSON_091",
+      "PERSON_092",
+      "PERSON_093",
+      "PERSON_094",
+      "PERSON_095",
+      "PERSON_096"
+    ],
+    "predominant_person": "PERSON_078",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00039",
+    "start": 197.814283,
+    "end": 203.987117,
+    "duration": 6.172834000000023,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_097",
+      "PERSON_098",
+      "PERSON_099",
+      "PERSON_100"
+    ],
+    "predominant_person": "PERSON_097",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00040",
+    "start": 203.987117,
+    "end": 211.9117,
+    "duration": 7.924582999999984,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_101",
+      "PERSON_102",
+      "PERSON_103",
+      "PERSON_104",
+      "PERSON_105",
+      "PERSON_106",
+      "PERSON_107",
+      "PERSON_108",
+      "PERSON_109"
+    ],
+    "predominant_person": "PERSON_101",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00041",
+    "start": 211.9117,
+    "end": 215.56535,
+    "duration": 3.653649999999999,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_110",
+      "PERSON_111",
+      "PERSON_112"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00042",
+    "start": 215.56535,
+    "end": 216.950067,
+    "duration": 1.3847169999999949,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_113",
+      "PERSON_114",
+      "PERSON_115"
+    ],
+    "predominant_person": "PERSON_113",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00043",
+    "start": 216.950067,
+    "end": 221.537983,
+    "duration": 4.587916000000007,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_032",
+      "PERSON_116",
+      "PERSON_117",
+      "PERSON_118",
+      "PERSON_119",
+      "PERSON_120",
+      "PERSON_121"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00044",
+    "start": 221.537983,
+    "end": 222.555667,
+    "duration": 1.0176840000000027,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_122"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00045",
+    "start": 222.555667,
+    "end": 225.408517,
+    "duration": 2.8528499999999894,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_123",
+      "PERSON_124",
+      "PERSON_125"
+    ],
+    "predominant_person": "PERSON_123",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00046",
+    "start": 225.408517,
+    "end": 226.87665,
+    "duration": 1.468133000000023,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_126",
+      "PERSON_127",
+      "PERSON_128"
+    ],
+    "predominant_person": "PERSON_126",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00047",
+    "start": 226.87665,
+    "end": 228.211317,
+    "duration": 1.334666999999996,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_129"
+    ],
+    "predominant_person": "PERSON_129",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00048",
+    "start": 228.211317,
+    "end": 240.306733,
+    "duration": 12.095416,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_098",
+      "PERSON_130",
+      "PERSON_131",
+      "PERSON_132",
+      "PERSON_133",
+      "PERSON_134",
+      "PERSON_135",
+      "PERSON_136",
+      "PERSON_137",
+      "PERSON_138",
+      "PERSON_139",
+      "PERSON_140",
+      "PERSON_141"
+    ],
+    "predominant_person": "PERSON_130",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00049",
+    "start": 240.306733,
+    "end": 243.776867,
+    "duration": 3.4701340000000016,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_142",
+      "PERSON_143",
+      "PERSON_144",
+      "PERSON_145"
+    ],
+    "predominant_person": "PERSON_142",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00050",
+    "start": 243.776867,
+    "end": 252.135217,
+    "duration": 8.358350000000002,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_146",
+      "PERSON_147"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00051",
+    "start": 252.135217,
+    "end": 290.623667,
+    "duration": 38.48845,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_147",
+      "PERSON_148",
+      "PERSON_149",
+      "PERSON_150",
+      "PERSON_151",
+      "PERSON_152",
+      "PERSON_153",
+      "PERSON_154",
+      "PERSON_155",
+      "PERSON_156",
+      "PERSON_157",
+      "PERSON_158",
+      "PERSON_159",
+      "PERSON_160",
+      "PERSON_161",
+      "PERSON_162",
+      "PERSON_163",
+      "PERSON_164",
+      "PERSON_165",
+      "PERSON_166",
+      "PERSON_167",
+      "PERSON_168",
+      "PERSON_169"
+    ],
+    "predominant_person": "PERSON_147",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00052",
+    "start": 290.623667,
+    "end": 292.825867,
+    "duration": 2.202200000000005,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_170"
+    ],
+    "predominant_person": "PERSON_170",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00053",
+    "start": 292.825867,
+    "end": 308.091117,
+    "duration": 15.26524999999998,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_171",
+      "PERSON_172",
+      "PERSON_173",
+      "PERSON_174",
+      "PERSON_175",
+      "PERSON_176",
+      "PERSON_177",
+      "PERSON_178",
+      "PERSON_179",
+      "PERSON_180",
+      "PERSON_181",
+      "PERSON_182"
+    ],
+    "predominant_person": "PERSON_171",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00054",
+    "start": 308.091117,
+    "end": 309.892917,
+    "duration": 1.8018000000000143,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_183",
+      "PERSON_184"
+    ],
+    "predominant_person": "PERSON_183",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00055",
+    "start": 309.892917,
+    "end": 330.496833,
+    "duration": 20.60391599999997,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_185",
+      "PERSON_186",
+      "PERSON_187",
+      "PERSON_188",
+      "PERSON_189"
+    ],
+    "predominant_person": "PERSON_185",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00056",
+    "start": 330.496833,
+    "end": 331.297633,
+    "duration": 0.8008000000000379,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00057",
+    "start": 331.297633,
+    "end": 338.104433,
+    "duration": 6.806799999999953,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_190",
+      "PERSON_191",
+      "PERSON_192",
+      "PERSON_193",
+      "PERSON_194",
+      "PERSON_195"
+    ],
+    "predominant_person": "PERSON_190",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00058",
+    "start": 338.104433,
+    "end": 339.68935,
+    "duration": 1.5849170000000186,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_196"
+    ],
+    "predominant_person": "PERSON_196",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00059",
+    "start": 339.68935,
+    "end": 343.09275,
+    "duration": 3.4034000000000333,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_197",
+      "PERSON_198",
+      "PERSON_199",
+      "PERSON_200",
+      "PERSON_201",
+      "PERSON_202"
+    ],
+    "predominant_person": "PERSON_199",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00060",
+    "start": 343.09275,
+    "end": 353.60325,
+    "duration": 10.510499999999979,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_203",
+      "PERSON_204",
+      "PERSON_205",
+      "PERSON_206"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00061",
+    "start": 353.60325,
+    "end": 359.492467,
+    "duration": 5.889216999999974,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_207",
+      "PERSON_208",
+      "PERSON_209"
+    ],
+    "predominant_person": "PERSON_207",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00062",
+    "start": 359.492467,
+    "end": 362.2619,
+    "duration": 2.769433000000049,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00063",
+    "start": 362.2619,
+    "end": 374.390683,
+    "duration": 12.128782999999999,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_032",
+      "PERSON_210",
+      "PERSON_211",
+      "PERSON_212",
+      "PERSON_213",
+      "PERSON_214",
+      "PERSON_215",
+      "PERSON_216",
+      "PERSON_217",
+      "PERSON_218",
+      "PERSON_219",
+      "PERSON_220"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00064",
+    "start": 374.390683,
+    "end": 382.33195,
+    "duration": 7.941266999999982,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_221",
+      "PERSON_222",
+      "PERSON_223"
+    ],
+    "predominant_person": "PERSON_221",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00065",
+    "start": 382.33195,
+    "end": 383.23285,
+    "duration": 0.9008999999999787,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_224"
+    ],
+    "predominant_person": "PERSON_224",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00066",
+    "start": 383.23285,
+    "end": 393.059333,
+    "duration": 9.826482999999996,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_225",
+      "PERSON_226",
+      "PERSON_227",
+      "PERSON_228",
+      "PERSON_229",
+      "PERSON_230",
+      "PERSON_231",
+      "PERSON_232",
+      "PERSON_233"
+    ],
+    "predominant_person": "PERSON_225",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00067",
+    "start": 393.059333,
+    "end": 394.060333,
+    "duration": 1.0010000000000332,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_234",
+      "PERSON_235"
+    ],
+    "predominant_person": "PERSON_234",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00068",
+    "start": 394.060333,
+    "end": 398.6983,
+    "duration": 4.637967000000003,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_236",
+      "PERSON_237",
+      "PERSON_238",
+      "PERSON_239",
+      "PERSON_240"
+    ],
+    "predominant_person": "PERSON_236",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00069",
+    "start": 398.6983,
+    "end": 399.766033,
+    "duration": 1.0677329999999756,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_241"
+    ],
+    "predominant_person": "PERSON_241",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00070",
+    "start": 399.766033,
+    "end": 424.791033,
+    "duration": 25.025000000000034,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_242",
+      "PERSON_243",
+      "PERSON_244",
+      "PERSON_245",
+      "PERSON_246",
+      "PERSON_247",
+      "PERSON_248",
+      "PERSON_249",
+      "PERSON_250",
+      "PERSON_251",
+      "PERSON_252",
+      "PERSON_253",
+      "PERSON_254",
+      "PERSON_255",
+      "PERSON_256",
+      "PERSON_257",
+      "PERSON_258",
+      "PERSON_259",
+      "PERSON_260",
+      "PERSON_261",
+      "PERSON_262",
+      "PERSON_263"
+    ],
+    "predominant_person": "PERSON_242",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00071",
+    "start": 424.791033,
+    "end": 426.159067,
+    "duration": 1.368033999999966,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_264"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00072",
+    "start": 426.159067,
+    "end": 444.977867,
+    "duration": 18.81880000000001,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_265",
+      "PERSON_266",
+      "PERSON_267",
+      "PERSON_268",
+      "PERSON_269",
+      "PERSON_270",
+      "PERSON_271",
+      "PERSON_272",
+      "PERSON_273",
+      "PERSON_274"
+    ],
+    "predominant_person": "PERSON_265",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00073",
+    "start": 444.977867,
+    "end": 451.634517,
+    "duration": 6.656650000000013,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_032",
+      "PERSON_275",
+      "PERSON_276",
+      "PERSON_277",
+      "PERSON_278",
+      "PERSON_279"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00074",
+    "start": 451.634517,
+    "end": 463.1627,
+    "duration": 11.528182999999956,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_280",
+      "PERSON_281",
+      "PERSON_282",
+      "PERSON_283",
+      "PERSON_284",
+      "PERSON_285",
+      "PERSON_286",
+      "PERSON_287"
+    ],
+    "predominant_person": "PERSON_280",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00075",
+    "start": 463.1627,
+    "end": 467.3669,
+    "duration": 4.204200000000014,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_288",
+      "PERSON_289"
+    ],
+    "predominant_person": "PERSON_288",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00076",
+    "start": 467.3669,
+    "end": 505.838667,
+    "duration": 38.471767,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_290",
+      "PERSON_291",
+      "PERSON_292",
+      "PERSON_293",
+      "PERSON_294",
+      "PERSON_295",
+      "PERSON_296",
+      "PERSON_297",
+      "PERSON_298",
+      "PERSON_299",
+      "PERSON_300",
+      "PERSON_301"
+    ],
+    "predominant_person": "PERSON_290",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00077",
+    "start": 505.838667,
+    "end": 506.95645,
+    "duration": 1.1177830000000313,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00078",
+    "start": 506.95645,
+    "end": 519.252067,
+    "duration": 12.295616999999993,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_302",
+      "PERSON_303",
+      "PERSON_304",
+      "PERSON_305",
+      "PERSON_306",
+      "PERSON_307",
+      "PERSON_308",
+      "PERSON_309",
+      "PERSON_310"
+    ],
+    "predominant_person": "PERSON_302",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00079",
+    "start": 519.252067,
+    "end": 520.403217,
+    "duration": 1.1511500000000296,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_311"
+    ],
+    "predominant_person": "PERSON_311",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00080",
+    "start": 520.403217,
+    "end": 528.711517,
+    "duration": 8.308299999999917,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_312",
+      "PERSON_313",
+      "PERSON_314",
+      "PERSON_315",
+      "PERSON_316",
+      "PERSON_317",
+      "PERSON_318"
+    ],
+    "predominant_person": "PERSON_312",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00081",
+    "start": 528.711517,
+    "end": 536.1356,
+    "duration": 7.424082999999996,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_032",
+      "PERSON_319",
+      "PERSON_320",
+      "PERSON_321",
+      "PERSON_322",
+      "PERSON_323"
+    ],
+    "predominant_person": "PERSON_032",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00082",
+    "start": 536.1356,
+    "end": 536.969767,
+    "duration": 0.8341670000000931,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_324",
+      "PERSON_325",
+      "PERSON_326"
+    ],
+    "predominant_person": "PERSON_324",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00083",
+    "start": 536.969767,
+    "end": 543.8433,
+    "duration": 6.873532999999952,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_327",
+      "PERSON_328",
+      "PERSON_329"
+    ],
+    "predominant_person": "PERSON_327",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00084",
+    "start": 543.8433,
+    "end": 545.361483,
+    "duration": 1.5181830000000218,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_330"
+    ],
+    "predominant_person": "PERSON_330",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00085",
+    "start": 545.361483,
+    "end": 547.4469,
+    "duration": 2.0854170000000067,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_331",
+      "PERSON_332"
+    ],
+    "predominant_person": "PERSON_331",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00086",
+    "start": 547.4469,
+    "end": 551.634417,
+    "duration": 4.187516999999957,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_333",
+      "PERSON_334",
+      "PERSON_335"
+    ],
+    "predominant_person": "PERSON_333",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00087",
+    "start": 551.634417,
+    "end": 552.90235,
+    "duration": 1.2679329999999709,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_336",
+      "PERSON_337",
+      "PERSON_338"
+    ],
+    "predominant_person": "PERSON_336",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00088",
+    "start": 552.90235,
+    "end": 554.9544,
+    "duration": 2.0520500000000084,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "close_up",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00089",
+    "start": 554.9544,
+    "end": 564.430533,
+    "duration": 9.476133000000004,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_339",
+      "PERSON_340",
+      "PERSON_341"
+    ],
+    "predominant_person": "PERSON_339",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00090",
+    "start": 564.430533,
+    "end": 566.899667,
+    "duration": 2.4691340000000537,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_342",
+      "PERSON_343",
+      "PERSON_344"
+    ],
+    "predominant_person": "PERSON_342",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00091",
+    "start": 566.899667,
+    "end": 570.0695,
+    "duration": 3.169832999999926,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_345",
+      "PERSON_346"
+    ],
+    "predominant_person": "PERSON_345",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00092",
+    "start": 570.0695,
+    "end": 571.687783,
+    "duration": 1.6182830000000195,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_347",
+      "PERSON_348",
+      "PERSON_349"
+    ],
+    "predominant_person": "PERSON_347",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00093",
+    "start": 571.687783,
+    "end": 614.330383,
+    "duration": 42.642600000000016,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_032",
+      "PERSON_211",
+      "PERSON_350",
+      "PERSON_351",
+      "PERSON_352",
+      "PERSON_353",
+      "PERSON_354",
+      "PERSON_355",
+      "PERSON_356",
+      "PERSON_357",
+      "PERSON_358",
+      "PERSON_359",
+      "PERSON_360",
+      "PERSON_361",
+      "PERSON_362",
+      "PERSON_363",
+      "PERSON_364",
+      "PERSON_365",
+      "PERSON_366",
+      "PERSON_367",
+      "PERSON_368",
+      "PERSON_369",
+      "PERSON_370",
+      "PERSON_371",
+      "PERSON_372",
+      "PERSON_373",
+      "PERSON_374",
+      "PERSON_375",
+      "PERSON_376",
+      "PERSON_377",
+      "PERSON_378"
+    ],
+    "predominant_person": "PERSON_350",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00094",
+    "start": 614.330383,
+    "end": 618.250967,
+    "duration": 3.9205839999999625,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_379",
+      "PERSON_380",
+      "PERSON_381",
+      "PERSON_382"
+    ],
+    "predominant_person": "PERSON_379",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00095",
+    "start": 618.250967,
+    "end": 619.16855,
+    "duration": 0.917583000000036,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_383",
+      "PERSON_384"
+    ],
+    "predominant_person": "PERSON_383",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00096",
+    "start": 619.16855,
+    "end": 624.807517,
+    "duration": 5.63896699999998,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_385",
+      "PERSON_386",
+      "PERSON_387",
+      "PERSON_388"
+    ],
+    "predominant_person": "PERSON_385",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00097",
+    "start": 624.807517,
+    "end": 630.162867,
+    "duration": 5.355350000000044,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_389",
+      "PERSON_390",
+      "PERSON_391"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00098",
+    "start": 630.162867,
+    "end": 631.347383,
+    "duration": 1.1845160000000305,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_392",
+      "PERSON_393"
+    ],
+    "predominant_person": "PERSON_392",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00099",
+    "start": 631.347383,
+    "end": 637.670367,
+    "duration": 6.3229840000000195,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_394",
+      "PERSON_395"
+    ],
+    "predominant_person": "PERSON_015",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00100",
+    "start": 637.670367,
+    "end": 642.475167,
+    "duration": 4.8048,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_396",
+      "PERSON_397",
+      "PERSON_398",
+      "PERSON_399",
+      "PERSON_400",
+      "PERSON_401"
+    ],
+    "predominant_person": "PERSON_396",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00101",
+    "start": 642.475167,
+    "end": 647.063083,
+    "duration": 4.58791599999995,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_400",
+      "PERSON_402",
+      "PERSON_403",
+      "PERSON_404",
+      "PERSON_405",
+      "PERSON_406"
+    ],
+    "predominant_person": "PERSON_400",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00102",
+    "start": 647.063083,
+    "end": 657.20655,
+    "duration": 10.143466999999987,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_407",
+      "PERSON_408",
+      "PERSON_409",
+      "PERSON_410",
+      "PERSON_411",
+      "PERSON_412",
+      "PERSON_413"
+    ],
+    "predominant_person": "PERSON_407",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00103",
+    "start": 657.20655,
+    "end": 659.0584,
+    "duration": 1.851850000000013,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_414",
+      "PERSON_415",
+      "PERSON_416",
+      "PERSON_417",
+      "PERSON_418"
+    ],
+    "predominant_person": "PERSON_414",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00104",
+    "start": 659.0584,
+    "end": 671.704367,
+    "duration": 12.645967000000041,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_419",
+      "PERSON_420",
+      "PERSON_421",
+      "PERSON_422",
+      "PERSON_423",
+      "PERSON_424",
+      "PERSON_425",
+      "PERSON_426",
+      "PERSON_427",
+      "PERSON_428"
+    ],
+    "predominant_person": "PERSON_419",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00105",
+    "start": 671.704367,
+    "end": 673.4728,
+    "duration": 1.768432999999959,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_429"
+    ],
+    "predominant_person": "PERSON_429",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00106",
+    "start": 673.4728,
+    "end": 691.557533,
+    "duration": 18.08473300000003,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_430",
+      "PERSON_431",
+      "PERSON_432",
+      "PERSON_433",
+      "PERSON_434",
+      "PERSON_435",
+      "PERSON_436",
+      "PERSON_437",
+      "PERSON_438",
+      "PERSON_439"
+    ],
+    "predominant_person": "PERSON_430",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00107",
+    "start": 691.557533,
+    "end": 696.1955,
+    "duration": 4.637967000000003,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_440",
+      "PERSON_441",
+      "PERSON_442",
+      "PERSON_443",
+      "PERSON_444",
+      "PERSON_445",
+      "PERSON_446",
+      "PERSON_447",
+      "PERSON_448",
+      "PERSON_449"
+    ],
+    "predominant_person": "PERSON_444",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00108",
+    "start": 696.1955,
+    "end": 698.764733,
+    "duration": 2.56923299999994,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_450"
+    ],
+    "predominant_person": "PERSON_450",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00109",
+    "start": 698.764733,
+    "end": 702.1014,
+    "duration": 3.336667000000034,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_451",
+      "PERSON_452",
+      "PERSON_453",
+      "PERSON_454",
+      "PERSON_455"
+    ],
+    "predominant_person": "PERSON_451",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00110",
+    "start": 702.1014,
+    "end": 729.962567,
+    "duration": 27.861167000000023,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_456",
+      "PERSON_457",
+      "PERSON_458",
+      "PERSON_459",
+      "PERSON_460",
+      "PERSON_461",
+      "PERSON_462",
+      "PERSON_463",
+      "PERSON_464",
+      "PERSON_465",
+      "PERSON_466",
+      "PERSON_467",
+      "PERSON_468",
+      "PERSON_469"
+    ],
+    "predominant_person": "PERSON_456",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00111",
+    "start": 729.962567,
+    "end": 733.28255,
+    "duration": 3.3199829999999793,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_098",
+      "PERSON_470",
+      "PERSON_471",
+      "PERSON_472",
+      "PERSON_473",
+      "PERSON_474",
+      "PERSON_475"
+    ],
+    "predominant_person": "PERSON_098",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00112",
+    "start": 733.28255,
+    "end": 735.58485,
+    "duration": 2.3022999999999456,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_476",
+      "PERSON_477"
+    ],
+    "predominant_person": "PERSON_476",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00113",
+    "start": 735.58485,
+    "end": 745.19445,
+    "duration": 9.6096,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_442",
+      "PERSON_478",
+      "PERSON_479",
+      "PERSON_480",
+      "PERSON_481",
+      "PERSON_482",
+      "PERSON_483",
+      "PERSON_484",
+      "PERSON_485"
+    ],
+    "predominant_person": "PERSON_478",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00114",
+    "start": 745.19445,
+    "end": 780.93015,
+    "duration": 35.735700000000065,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_486",
+      "PERSON_487",
+      "PERSON_488",
+      "PERSON_489",
+      "PERSON_490",
+      "PERSON_491",
+      "PERSON_492",
+      "PERSON_493",
+      "PERSON_494",
+      "PERSON_495",
+      "PERSON_496",
+      "PERSON_497",
+      "PERSON_498",
+      "PERSON_499",
+      "PERSON_500",
+      "PERSON_501",
+      "PERSON_502",
+      "PERSON_503",
+      "PERSON_504",
+      "PERSON_505",
+      "PERSON_506",
+      "PERSON_507",
+      "PERSON_508",
+      "PERSON_509"
+    ],
+    "predominant_person": "PERSON_494",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00115",
+    "start": 780.93015,
+    "end": 784.93415,
+    "duration": 4.004000000000019,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_015",
+      "PERSON_510",
+      "PERSON_511",
+      "PERSON_512"
+    ],
+    "predominant_person": "PERSON_510",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00116",
+    "start": 784.93415,
+    "end": 786.53575,
+    "duration": 1.6015999999999622,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_513"
+    ],
+    "predominant_person": "PERSON_513",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00117",
+    "start": 786.53575,
+    "end": 790.606483,
+    "duration": 4.070733000000018,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_514",
+      "PERSON_515"
+    ],
+    "predominant_person": "PERSON_514",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00118",
+    "start": 790.606483,
+    "end": 791.207083,
+    "duration": 0.6005999999999858,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_516"
+    ],
+    "predominant_person": "PERSON_516",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00119",
+    "start": 791.207083,
+    "end": 796.929467,
+    "duration": 5.722384000000034,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_517"
+    ],
+    "predominant_person": "PERSON_517",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00120",
+    "start": 796.929467,
+    "end": 798.84805,
+    "duration": 1.9185829999998987,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_518"
+    ],
+    "predominant_person": "PERSON_518",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00121",
+    "start": 798.84805,
+    "end": 840.856683,
+    "duration": 42.00863300000003,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_519",
+      "PERSON_520",
+      "PERSON_521",
+      "PERSON_522",
+      "PERSON_523",
+      "PERSON_524",
+      "PERSON_525",
+      "PERSON_526",
+      "PERSON_527",
+      "PERSON_528",
+      "PERSON_529",
+      "PERSON_530"
+    ],
+    "predominant_person": "PERSON_519",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00122",
+    "start": 840.856683,
+    "end": 848.430917,
+    "duration": 7.574234000000047,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_474",
+      "PERSON_531",
+      "PERSON_532",
+      "PERSON_533",
+      "PERSON_534",
+      "PERSON_535",
+      "PERSON_536",
+      "PERSON_537",
+      "PERSON_538",
+      "PERSON_539"
+    ],
+    "predominant_person": "PERSON_531",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00123",
+    "start": 848.430917,
+    "end": 850.316133,
+    "duration": 1.885216000000014,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_540",
+      "PERSON_541",
+      "PERSON_542",
+      "PERSON_543"
+    ],
+    "predominant_person": "PERSON_540",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00124",
+    "start": 850.316133,
+    "end": 855.771583,
+    "duration": 5.455449999999928,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_544",
+      "PERSON_545"
+    ],
+    "predominant_person": "PERSON_544",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00125",
+    "start": 855.771583,
+    "end": 857.20635,
+    "duration": 1.434767000000079,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_546",
+      "PERSON_547"
+    ],
+    "predominant_person": "PERSON_546",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00126",
+    "start": 857.20635,
+    "end": 885.9851,
+    "duration": 28.778749999999945,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_482",
+      "PERSON_548",
+      "PERSON_549",
+      "PERSON_550",
+      "PERSON_551",
+      "PERSON_552",
+      "PERSON_553",
+      "PERSON_554",
+      "PERSON_555",
+      "PERSON_556",
+      "PERSON_557",
+      "PERSON_558",
+      "PERSON_559",
+      "PERSON_560",
+      "PERSON_561",
+      "PERSON_562",
+      "PERSON_563",
+      "PERSON_564",
+      "PERSON_565",
+      "PERSON_566",
+      "PERSON_567",
+      "PERSON_568",
+      "PERSON_569",
+      "PERSON_570",
+      "PERSON_571",
+      "PERSON_572",
+      "PERSON_573",
+      "PERSON_574",
+      "PERSON_575",
+      "PERSON_576",
+      "PERSON_577"
+    ],
+    "predominant_person": "PERSON_549",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00127",
+    "start": 885.9851,
+    "end": 887.03615,
+    "duration": 1.051050000000032,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_578",
+      "PERSON_579"
+    ],
+    "predominant_person": "PERSON_578",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00128",
+    "start": 887.03615,
+    "end": 889.505283,
+    "duration": 2.4691329999999425,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_580"
+    ],
+    "predominant_person": "PERSON_580",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00129",
+    "start": 889.505283,
+    "end": 900.215983,
+    "duration": 10.710700000000088,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_581",
+      "PERSON_582",
+      "PERSON_583",
+      "PERSON_584",
+      "PERSON_585"
+    ],
+    "predominant_person": "PERSON_581",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00130",
+    "start": 900.215983,
+    "end": 913.729483,
+    "duration": 13.513499999999908,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_586",
+      "PERSON_587",
+      "PERSON_588",
+      "PERSON_589",
+      "PERSON_590",
+      "PERSON_591",
+      "PERSON_592",
+      "PERSON_593",
+      "PERSON_594",
+      "PERSON_595",
+      "PERSON_596",
+      "PERSON_597",
+      "PERSON_598",
+      "PERSON_599",
+      "PERSON_600",
+      "PERSON_601"
+    ],
+    "predominant_person": "PERSON_586",
+    "scene_type": "group",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00131",
+    "start": 913.729483,
+    "end": 918.484233,
+    "duration": 4.754750000000058,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_602",
+      "PERSON_603",
+      "PERSON_604"
+    ],
+    "predominant_person": "PERSON_602",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00132",
+    "start": 918.484233,
+    "end": 920.56965,
+    "duration": 2.0854170000000067,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_605",
+      "PERSON_606",
+      "PERSON_607"
+    ],
+    "predominant_person": "PERSON_605",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00133",
+    "start": 920.56965,
+    "end": 922.037783,
+    "duration": 1.4681329999999662,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00134",
+    "start": 922.037783,
+    "end": 923.455867,
+    "duration": 1.4180840000000217,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00135",
+    "start": 923.455867,
+    "end": 925.491233,
+    "duration": 2.0353659999999536,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_608"
+    ],
+    "predominant_person": "PERSON_608",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00136",
+    "start": 925.491233,
+    "end": 927.5266,
+    "duration": 2.0353670000000648,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_609",
+      "PERSON_610"
+    ],
+    "predominant_person": "PERSON_609",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00137",
+    "start": 927.5266,
+    "end": 929.111517,
+    "duration": 1.5849170000000186,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00138",
+    "start": 929.111517,
+    "end": 930.362767,
+    "duration": 1.2512499999999136,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00139",
+    "start": 930.362767,
+    "end": 931.78085,
+    "duration": 1.4180830000000242,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_611",
+      "PERSON_612"
+    ],
+    "predominant_person": "PERSON_611",
+    "scene_type": "two_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00140",
+    "start": 931.78085,
+    "end": 933.165567,
+    "duration": 1.3847170000000233,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_613"
+    ],
+    "predominant_person": "PERSON_613",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00141",
+    "start": 933.165567,
+    "end": 935.401133,
+    "duration": 2.235565999999949,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_614",
+      "PERSON_615",
+      "PERSON_616"
+    ],
+    "predominant_person": "PERSON_614",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  },
+  {
+    "scene_id": "SCENE_00142",
+    "start": 935.401133,
+    "end": 938.78785,
+    "duration": 3.3867170000000897,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00143",
+    "start": 938.78785,
+    "end": 940.122517,
+    "duration": 1.3346669999999676,
+    "keyframe": null,
+    "visible_people": [],
+    "predominant_person": null,
+    "scene_type": "unknown",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "unknown",
+    "shot_type_inference": false
+  },
+  {
+    "scene_id": "SCENE_00144",
+    "start": 940.122517,
+    "end": 945.754,
+    "duration": 5.631483000000003,
+    "keyframe": null,
+    "visible_people": [
+      "PERSON_617"
+    ],
+    "predominant_person": "PERSON_617",
+    "scene_type": "medium_shot",
+    "detected": true,
+    "method": "content_detector",
+    "shot_type_method": "sampled_geometry",
+    "shot_type_inference": true
+  }
+]

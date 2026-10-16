@@ -4,6 +4,8 @@ from copy import deepcopy
 
 SMART_ZOOM_DEFAULTS = {
     'enabled': True, 'profile': 'natural', 'max_zoom_factor': 1.2,
+    'micro_zoom_factor': 1.035, 'micro_zoom_duration': 6.0,
+    'micro_zoom_min_hold_seconds': 3.0,
     'max_upscale_ratio': 2.0, 'min_zoom_duration': 6.0,
     'min_hold_duration': 7.0, 'transition_duration': 6.0,
     'min_face_size': .08, 'max_face_size': .42,
@@ -37,6 +39,8 @@ def resolve_smart_zoom(raw=None):
                 raise ValueError('smart_zoom.' + key + ' deve ser positivo finito')
     if not 1 <= cfg['max_zoom_factor'] <= 1.4 or not 1 <= cfg['max_upscale_ratio'] <= 3:
         raise ValueError('Smart zoom/upscale fora dos limites de seguranca')
+    if not 1 <= cfg['micro_zoom_factor'] <= 1.05 or not 3 <= cfg['micro_zoom_duration'] <= 30 or not 1 <= cfg['micro_zoom_min_hold_seconds'] <= 30:
+        raise ValueError('Micro zoom deve respeitar fator [1,1.05] e duracoes seguras')
     if not 0 < cfg['min_confidence'] <= 1 or not 0 < cfg['min_face_size'] < cfg['max_face_size'] <= .8:
         raise ValueError('Smart zoom confidence/face size invalido')
     for low, high in (('medium_face_min', 'medium_face_max'), ('close_face_min', 'close_face_max')):
@@ -49,6 +53,7 @@ def resolve_smart_zoom(raw=None):
     return cfg
 
 DEFAULTS = {
+    'focus_transition_seconds': .35,
     'dominant_face_fallback': False, 'minimum_face_duration': 2., 'minimum_dominance_margin': .35,
     'minimum_target_confidence': .85, 'minimum_face_visibility': .8, 'maximum_center_velocity': .10,
     'smart_zoom': deepcopy(SMART_ZOOM_DEFAULTS),
@@ -156,4 +161,6 @@ def resolve_config(raw=None):
         raise ValueError('Deadzone não pode exceder .3 do frame')
     if cfg['headroom'] > .2 or cfg['lead_room'] > .2:
         raise ValueError('Headroom/lead_room não podem exceder .2 do frame')
+    if cfg['focus_transition_seconds'] > .45:
+        raise ValueError('focus_transition_seconds deve estar entre 0 e .45')
     return cfg

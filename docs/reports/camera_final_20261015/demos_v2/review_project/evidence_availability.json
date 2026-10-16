@@ -1,0 +1,216 @@
+{
+  "segments": {
+    "status": "partial",
+    "count": 383,
+    "sources": [
+      "transcript/relevant_segments.jsonl"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": "0c842f3acbb67046817abe6bdcd0c90a422504e2327dcc2978dee56765eaa3c7"
+  },
+  "words": {
+    "status": "partial",
+    "count": 5189,
+    "sources": [
+      "transcript/relevant_words.jsonl"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": "80c98ad797083b2b8d8b3995264767ab84b07c79cec988947919143885df9365"
+  },
+  "scenes": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "timeline": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "chapters": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "qa": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "candidates": {
+    "status": "available",
+    "count": 69,
+    "sources": [
+      "editorial/candidate_catalog.json"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "791d8577839c94aed430e061f31931d857ae173cf5cf20a04dbbc72acb7fd065"
+  },
+  "shortlist": {
+    "status": "available",
+    "count": 0,
+    "sources": [
+      "editorial/default_shortlist.json"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "928bb4b28586413ca65988e4753a10fd5723f9f90df1a3e435a05544cca033ba"
+  },
+  "review_queue": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "story_arcs": {
+    "status": "available",
+    "count": 56,
+    "sources": [
+      "editorial/story_arcs.json"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "977cc8c7b9dd9ca1f75e269a76c0d3318cc0b27f502bad862d9a5c36506c5c9e"
+  },
+  "program_sections": {
+    "status": "available",
+    "count": 100,
+    "sources": [
+      "editorial/program_sections.json"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "3ba4f09d6db1322056df7e5ea61657c2f5c6b3edcaac092509aa8974a84350bf"
+  },
+  "speakers": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "participants": {
+    "status": "available",
+    "count": 5,
+    "sources": [
+      "people/participants.json"
+    ],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "available_inventory_only",
+    "artifact_sha256": "a4a604ea7f9113ed4f33ea98e93169fc1f531aa29b7484353a42c5c64ba0ae53"
+  },
+  "speaker_person_mapping": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "people_observations": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "frame_samples": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "camera_timeline": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "ocr": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "graphics": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "visual_refs": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "silences": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "excluded_intervals": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "quality": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "blockers": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  },
+  "decisions": {
+    "status": "missing",
+    "count": 0,
+    "sources": [],
+    "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+    "completeness_claim": "not_complete",
+    "artifact_sha256": null
+  }
+}

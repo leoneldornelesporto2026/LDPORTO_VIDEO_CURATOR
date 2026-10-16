@@ -1,0 +1,2439 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\active_speaker.json",
+      "bytes": 89812693,
+      "sha256": "a2a895870786cab247726fd37dab4b33bc0ae4ba086f7850b029a535b652c1b3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\active_speaker_evidence.json",
+      "bytes": 3167127,
+      "sha256": "21ca6649e94b43d657a3bfc3970c0a621937b8c445827b6c35c0b90c24180d02"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\analysis.json",
+      "bytes": 64952083,
+      "sha256": "6672dc5b14ea215a89127df86f72783bef183fd5d7b331390cf461e873dd91a1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\analysis_quality.json",
+      "bytes": 486808,
+      "sha256": "bc610901c9d288713eb0f47dc1e6de07c5915e5d0b0e538c4e5ed54323535b5a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\analysis_summary.json",
+      "bytes": 1100309,
+      "sha256": "c2b36eee5f587c418dc7179ea7f9f7453e8157b776d24c14c9d7d8fb4e8e5d49"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\artifact_metrics.json",
+      "bytes": 3494,
+      "sha256": "fc6522399ab4a879e55f5a8263123cd36b759139eb108638c03bca4350406b5c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\audio_analysis.json",
+      "bytes": 74340,
+      "sha256": "2ebed74ec1a29321bf8c9b3adc0b16a02f034443e5bdb102ad9a1ae0c7ce8c9d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\broadcast_graphics.json",
+      "bytes": 3343,
+      "sha256": "8f0b21854db014df7481392700bddc347ae23398415b157bfcba1c6b2ef09f5e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_director_debug.json",
+      "bytes": 1260259,
+      "sha256": "9fcf579b0c8542e5d00f791dd94895fde6a12728c6d79dbfda0fc71dd96c13c9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_director_timeline.json",
+      "bytes": 1866385,
+      "sha256": "984ffbc4905187a29fa459b9b34cbff6045185663638951c740343a9b58eefdb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_plan.compact.json",
+      "bytes": 199289,
+      "sha256": "c6562e6e36e3b24552a6e9943551b06f4099150e22712612d447889fbe8b1b41"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_plan.json",
+      "bytes": 15473021,
+      "sha256": "b4d3ca22e2c7d517c1c9423f4ed8771c5acb37648929b2f25ea9977a07119224"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_timeline.compact.json",
+      "bytes": 1917658,
+      "sha256": "9bf9d83bb42801af08b1da2865af741a53f2ec705b5335d1ad876e946824a46d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\camera_timeline.json",
+      "bytes": 36711138,
+      "sha256": "8a18be506d649174fe0f3a48c4a82aa66bfa83966c34b19347a413b5741c083f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\caption_segments.json",
+      "bytes": 1694493,
+      "sha256": "96d6615f9fc4f8b41d89ad5abd46498c6b1e8c6bb92d41f72949919d51eedc93"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\caption_style_recommendations.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\CHATGPT_ANALYSIS_HANDOFF.compact.json",
+      "bytes": 997114,
+      "sha256": "08329d3ea4bca6a9997c4f674bcd1507d3c602d865bdd15257b467535cfa62ad"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\CHATGPT_ANALYSIS_HANDOFF.json",
+      "bytes": 2852272,
+      "sha256": "ee4476cc65ddaada8a912581a65b5591eb10ebc2e4c729ef05f912b319add7b4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\commercial_blocks_s8.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\commercial_visual_s8.json",
+      "bytes": 440901,
+      "sha256": "264eac8bdbda2f327ce4b9a6bf4dacb1e676fa6d0e1674b961958d36a62d6384"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\diagnostic_dashboard.json",
+      "bytes": 123208,
+      "sha256": "fa4005938b5135f9aa39056cb9cd1fc29d27b76bb1e26bff4399f466a7735d6a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\editorial_moments.json",
+      "bytes": 26437855,
+      "sha256": "03bf5ccd9b523eddf78da1ca32aff43aa41d51abab81a7e901cc1b163e483722"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\editorial_result.json",
+      "bytes": 3970,
+      "sha256": "4bd853ef9f61542bb406aad82fca97c9f4ad6923bc95a33923ec492e61cfbbae"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\entities.json",
+      "bytes": 7604,
+      "sha256": "7a5451bdbf44c76ecf3a5089894332234c77ef0e771a0c33e2c0279e8243c93e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\inference_smoke_20261015T013909981352Z.json",
+      "bytes": 8535,
+      "sha256": "24fed375d841daa148cf8de21c64b8bb2c3c1860a34ce1a4488e4985b56cfa7c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\llm_insights.json",
+      "bytes": 207391900,
+      "sha256": "ca735d390afa2beaa4813fe13c87021b222105c02be6cfa77df2360248211cae"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\low_confidence_words.json",
+      "bytes": 36549,
+      "sha256": "61a194f973045b7a13d5a2a71145777d91100e695ed687a9dba305cd9b5f27f6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\main_moments.json",
+      "bytes": 2606930,
+      "sha256": "eeabca0f36d8f7cb3746e0d0c66a28985346535d626f9693fa754423cbfbeb3d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\manifest.json",
+      "bytes": 183796,
+      "sha256": "0905423dec4b3cee3f0cc202e23f8a906a273ea0f1237b47f88c5739277a44cd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\master_timeline.compact.json",
+      "bytes": 19879,
+      "sha256": "8484be622cafeced3794f11897cdae7f1d96ffbca8e1f7522e34552175c0a7ac"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\master_timeline.json",
+      "bytes": 37159735,
+      "sha256": "2f06a057efa508bc3f09a8103e16c5f1a200503a7684177cce06b9bc0937ba75"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\moment_frames.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\ocr_execution.json",
+      "bytes": 494,
+      "sha256": "44397559fc301a354a6082b7cca71f9d2efd1b120c08f02a49886da9883fe3b7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\ocr_text.json",
+      "bytes": 13002,
+      "sha256": "cb816cc216439cb789d56e1c7a8032af1a6c0e996d8ca4017b694e2210f9307f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\ollama_editorial_review.json",
+      "bytes": 31308,
+      "sha256": "df6ed45609d6ff29d13f78415098464d9e5ff923a1671c3e0c55aa2fffec379f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\original_import_segments.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\participants.json",
+      "bytes": 4332,
+      "sha256": "a4a604ea7f9113ed4f33ea98e93169fc1f531aa29b7484353a42c5c64ba0ae53"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\participant_catalog.json",
+      "bytes": 46820,
+      "sha256": "424e4066c2be2d510ff243c9c59704fe53bad9c9914c6ac18db1129582accd37"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\participant_metrics.json",
+      "bytes": 94,
+      "sha256": "721d47360ab778ecdf056c16c72787f7049a98c5bdb7105763e09ca7b9619460"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\people.json",
+      "bytes": 277272,
+      "sha256": "9cf0d1ffe2e48897657840980b5297bc46d0aa5400f3e5c632c774ce509a5c00"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\people_observations.json",
+      "bytes": 35600556,
+      "sha256": "a0afbe730b8b36087d5e9be63bf5595133b95bb07c9d8038bb32a7ad9bf4c3e1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\people_summary.json",
+      "bytes": 18976,
+      "sha256": "d7fff1c92df93c33cb6e938e9d33567e07ac87a3daf93e1f17887fce4292c554"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\person_identities.json",
+      "bytes": 277272,
+      "sha256": "9cf0d1ffe2e48897657840980b5297bc46d0aa5400f3e5c632c774ce509a5c00"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\person_motion.json",
+      "bytes": 9056618,
+      "sha256": "8b2bad84c6daf7c68ca3fd10766a3339d2df3493438e306d828a91f7d6ac18c1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\preview_canaries.json",
+      "bytes": 74126,
+      "sha256": "8c4c8889be66471d9db49f5f55e09808ac1c9d5519cbff05b2b4dfbb2f9eb3b5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\preview_validation.json",
+      "bytes": 120,
+      "sha256": "6689761bea5304497865411e739457d5c4df76251e7b79c87887fb4e00abd984"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\program_sections.json",
+      "bytes": 49540,
+      "sha256": "3ba4f09d6db1322056df7e5ea61657c2f5c6b3edcaac092509aa8974a84350bf"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\progress.jsonl",
+      "bytes": 2778847,
+      "sha256": "f72aae28ed014b294f5839cb38dad23c9c0b68aef0ed615bde146d1a73317c77"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\qa_audit.json",
+      "bytes": 53620,
+      "sha256": "e40405c08eae8d99e176b8d5cc517c3e4ae4e220d39c44fba86acb5ec5281779"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\qa_summary.json",
+      "bytes": 282,
+      "sha256": "9c13369a07da0109b3ab01576673ec50f045d804e7151e8aec60fd6805560262"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\quality_gate.json",
+      "bytes": 10188,
+      "sha256": "3b95485190d4719b9bfc2f81e0e2fab21e798b834b5a7dbf5278523d005218eb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\quality_issues.json",
+      "bytes": 3916,
+      "sha256": "1f22877e1fa5f3e230b447d99d7ee03177d94b115b93dc4a0a8243b10124f757"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\questions_answers.json",
+      "bytes": 36984,
+      "sha256": "a0c6746f96ab0df7f36d0b0491d345dcd801325d1dbb4c099f2ba8200b75829c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\question_answer_pairs.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\question_candidates.json",
+      "bytes": 31898,
+      "sha256": "4ae1242bac50c93550a279c1594cac933f46c4affa11af7bb4f38a2e9bf13ba3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\raw_people.json",
+      "bytes": 115186,
+      "sha256": "058ab1a779dd8919848ab36bd23ee86b176a599ab4cef65a53dc124aa1d37809"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\raw_tracks.json",
+      "bytes": 276512,
+      "sha256": "311348e5e502fd4cd57afaabd61f8c8aecdb97fb988c09564ad54a40092a2192"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\reid_merge_decisions.json",
+      "bytes": 4715012,
+      "sha256": "7a5c3342effbe3a39aa0dcb72cb9188340e31efdafefd9f11ac9c99c919c0922"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\report_execution_receipt.json",
+      "bytes": 13863,
+      "sha256": "48d017637a20fd376f4f38b869b1391efe99aa9f3dc0e32ab1e71f5b0886eee1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\run_manifest.json",
+      "bytes": 64773,
+      "sha256": "0e6850dff55ad11f81cb2a376890e5a3ee83dfc8bc8503dbbd38a053a074e51a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\scenes.json",
+      "bytes": 135997,
+      "sha256": "979dfa1fd67d0469dcde2c2d3afb5b0c9a492730bbf8b71293f9d36fa5843ac3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\second_curation_export.json",
+      "bytes": 138498,
+      "sha256": "ebef5bcb3005595ce6c7b8ec1fd11b08f6d990d99b763eb983d4fb39fc71b9bc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\second_curation_package.json",
+      "bytes": 4708048,
+      "sha256": "0ee8e2784030b3549d423e05b91c2db7e402f12e785836ef842eca1966ba8d51"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\semantic_chunk_profile.json",
+      "bytes": 27645,
+      "sha256": "c20145fa5aea1eadf2a98e1cc561813ed959726c021e1d229bf6854f3d6cb4e3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\shots.json",
+      "bytes": 526943,
+      "sha256": "2d4bcd13e7312a36bd67640e9a43cb7d53d93de8e1b822fe1f0933133b4c4cc1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\social_render_profiles.json",
+      "bytes": 2374,
+      "sha256": "379c32ccb42a1346cd640eedc69f2ab40afd18796e7444576fe1624b5d4597a2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\source_audio_review.json",
+      "bytes": 494004,
+      "sha256": "6f8caa93dff6177f9b2674afbeeba03ae87ac40db73b5947cfcdbdd8053d3ca5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speakers.json",
+      "bytes": 788,
+      "sha256": "fb57d57ef37f3c19d1c26f19d9f3480967d2934d27ba531e38ec83d86ae33eab"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speaker_person_affinity.json",
+      "bytes": 3335,
+      "sha256": "4de202301fdda7010ae07efca04bd335800976fbd1f60c207b35f97e33477390"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speaker_person_diagnostics.json",
+      "bytes": 83800,
+      "sha256": "073056acae0b5441af303c37fa469de8beb71f5af79d0ccf6fe9a4f951860fbd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speaker_person_mapping.json",
+      "bytes": 93953635,
+      "sha256": "8ae278c2167f8c140da162b8fad580a3037d7f62e292c5f16a4a3e9819476269"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speaker_person_summary.json",
+      "bytes": 6952,
+      "sha256": "51d4892f3267898850fcdfce8e5e053fea1fed1c502e3a7c9dcb6caf0a2248c7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speaker_turns.json",
+      "bytes": 17486,
+      "sha256": "b067ef87e9427536321c685b297d96896eeffc2952780a01d8cb5e68d0dd3da0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\speech_overlaps.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\stories_candidates.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\stories_manifest.json",
+      "bytes": 31838,
+      "sha256": "761f830df92959e8681d6a89e535f87cd09f56d323f1d04bb39fde9c1c615524"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\story_arcs.json",
+      "bytes": 161409,
+      "sha256": "977cc8c7b9dd9ca1f75e269a76c0d3318cc0b27f502bad862d9a5c36506c5c9e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\subtitle_review_s7.json",
+      "bytes": 990983,
+      "sha256": "14ad06fdab777ca0bda01049d3d9a14a0cde14c800d6eb0db0bb31d4462990a6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\targeted_asr_repair.json",
+      "bytes": 494942,
+      "sha256": "b6123e22eaf9605b90909430ddb5d76daa26f5357db78a7080370911cae68cff"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\targeted_manual_review.json",
+      "bytes": 343,
+      "sha256": "c58abc1d30d289f0d58a06b8e79f95c60ff43e312538cc5a49819bce61026a3b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\thumbnail_candidates.json",
+      "bytes": 38745,
+      "sha256": "a72c43e827a0fb6c53a9a743a013084c2ca53b787ec6797516d22bfce02a2d2c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\timeline.json",
+      "bytes": 44197245,
+      "sha256": "41a057cc40f68ac0a9e41f7dd238b44a942ec2d5590c45bd893b6a364ecc2b95"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\title_suggestions.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\topics.json",
+      "bytes": 99369,
+      "sha256": "b616e6ad8830433d8544e6e2b149309d13c50d73f0df7f2874c23ece14675b13"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\tracklet_observations.json",
+      "bytes": 34832516,
+      "sha256": "b05e490a4250640ffb6e9324771df2024809f6b65fd862e11940be071c5188bf"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcript.srt",
+      "bytes": 84291,
+      "sha256": "93fa1e5919cfea7881493894a698179a4dc72b32837a178a930a5240e2dcec73"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcription_alternatives.json",
+      "bytes": 204634,
+      "sha256": "d09d826d8e317648307c5f9230400f4458d695e64552a4aa34f76e044e8545be"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcription_hypothesis_comparison.json",
+      "bytes": 751,
+      "sha256": "93397baaf6a1f26c65d894bb45a9bf2563a2f5368abbaf0ac28b3b842e1471e1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcription_language_hypotheses.json",
+      "bytes": 31573,
+      "sha256": "16296895a5c6040209b2fb3aa727eb76c93647bbf0bc9610921dc2916c905f53"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcription_provenance.json",
+      "bytes": 93645,
+      "sha256": "cfd4e05ca62cb68bf2952be66ee8301559efbfc8ce4430ad32ff05dd7a7d0ea8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcript_segments.json",
+      "bytes": 309769,
+      "sha256": "efa89f7ddfb917fdb664ffb2bc8f0ccd9baf43083f039fcf6c931ea9037b4e86"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\translations.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\understanding_contract_diagnostics.json",
+      "bytes": 313,
+      "sha256": "576e70eda2ae877ce331cdedf59150a8c8a068c6d9d0ff16a9ad2ab418b33fc9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\video_analysis.json",
+      "bytes": 46755041,
+      "sha256": "9a8e4123942c19ae3bd6e0dd5a85b802fe285a7cc187b7a2b077a756692cb18b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\video_summary.json",
+      "bytes": 775984,
+      "sha256": "fb785e3c7c8dc75549a909cfc17717bda6b37194d77a94fb66148faf3062125c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\video_understanding.json",
+      "bytes": 613846,
+      "sha256": "dabac4b0beacb1b804fd1a87a13ad4fafd061b3f87ffd9f1cb87972902ab3854"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\words.json",
+      "bytes": 5603714,
+      "sha256": "1db36020a6b8fde0cf90e863ac5bfe16ff59e00d37efaf345441e8a73f25b5c1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\01_metadata.json",
+      "bytes": 2880,
+      "sha256": "63442e47575dc86a13113caa25cc2c674b1b426980e00f9d22d61ea2b9f65298"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\02_audio.json",
+      "bytes": 4626,
+      "sha256": "f27c8ea697cdb338c8126fb6d57bd6f424b75bdb67258ed2d78b25783f22f686"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\03_audio_quality.json",
+      "bytes": 63090,
+      "sha256": "b6fd6a7f9f3e0e3d22159e18d8dc21023daf2c2b2414601e3f132d341c81e391"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\04_transcription.json",
+      "bytes": 5632515,
+      "sha256": "688bb1dd528dd4164479d37f8b1703e81d0d0161722daee82d5c262de256f96f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\05_diarization.json",
+      "bytes": 38100,
+      "sha256": "349bf55b946b5c5769dee3726cd2e4d29ec1074e5450056c1824ae8dd51a5fcc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\06_scenes.json",
+      "bytes": 100746,
+      "sha256": "93daaa4aef7e3e78e69c906b15eebe6722bfa4db9802f6d8adff694ce2798879"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\07_people_tracking.json",
+      "bytes": 81360143,
+      "sha256": "d224b6ad5774db04035736b14cd5314ec6a9468ad2b6e586b535b86a4fdacdf7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\08_person_reid.json",
+      "bytes": 5340117,
+      "sha256": "f6aa012c5cd3f374fbfb06c9f54b1fd78998ec8c1eefb2d351c6ac826df44686"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\09_person_motion.json",
+      "bytes": 9059406,
+      "sha256": "8437c1c448fe4ed404a79b03a88d23fc1513a5ec378906b025bc4c6117a3ed60"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\10_active_speaker.json",
+      "bytes": 97222070,
+      "sha256": "f924a02685bf29b987b8afd7ac6258ce9a169790b84d783ea37424ced7fa3228"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\11_shots.json",
+      "bytes": 530501,
+      "sha256": "e0524270d2f8631981b8019b8f2f86d492ad9069c9b034a4a289529206d6503c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\12_camera_timeline.json",
+      "bytes": 36715052,
+      "sha256": "e2cf28f2fb69473a8fef150ae2b1f733fa28181b7d043cb84a0161b213165f80"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\13_ocr.json",
+      "bytes": 16220,
+      "sha256": "d2486dc6cf3616c1afeef07bc081b4282eb752fb1a28bec9dfe1e2bc511035ed"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\14_audio_events.json",
+      "bytes": 2945,
+      "sha256": "4f61f3c3076bc678d32656cafe235b752ef0abeb3aca71c7e0ed1f3e216ea5a1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\15_semantic.json",
+      "bytes": 620488,
+      "sha256": "90db1fa4af2b84fbb12b9a9cb2bfe879942813e87b36b0cc3d9ba8b5ddcd85f9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\16_understanding.json",
+      "bytes": 2443837,
+      "sha256": "4726f4876b488e24670ab845f2aa528c6ca85a0545ee940478a3c8bd3d45a5f0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\17b_broadcast_graphics.json",
+      "bytes": 5878,
+      "sha256": "18065ac9510de18da8fb1a63667c63c47421806033cc7c7efc77696033af9aae"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\17c_commercial_visual.json",
+      "bytes": 443848,
+      "sha256": "b42c05f8c485522ace5dba804d4ccf8e60d5d44c22b4dbb623f06db5ea996691"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\17d_targeted_asr.json",
+      "bytes": 499956,
+      "sha256": "142ad3f69b54bc80ce3764c8352134121327b18c307c3d57569f6de6b4813788"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\17e_subtitle_review_s7.json",
+      "bytes": 995167,
+      "sha256": "d83577abd83a3b04cd31c5f07aa5a60c917b2522d437a091441cb0d184365d4b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\17_master_timeline.json",
+      "bytes": 32104534,
+      "sha256": "21f67df22de499298d9fa3a95aeb8d8b05cf35483e46ded250badf3f0d705afe"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\18b_global_camera_planner.json",
+      "bytes": 15476894,
+      "sha256": "4b5eae1362b3cc7dd09392973503b99a930dd710ae4c3a35b39d042c93dc01eb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\18_analysis_quality.json",
+      "bytes": 86874,
+      "sha256": "d25cce8c5d33d4f2274000ac7c07f94515387ea7e3ab08698e652a63ee873e61"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\19b_preview_verifier.json",
+      "bytes": 79875,
+      "sha256": "0628d74db463653477836205ae2086061542efc20ab783f3497ccdb4c2726bf5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\19_camera_director.json",
+      "bytes": 61370645,
+      "sha256": "0f54c7f01a18b65b1203dbb73fd9093cc43e9063c9b239986d523eaecc08026f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\20_handoff.json",
+      "bytes": 5064,
+      "sha256": "19e0e63829321bf43fe827b4e3f3267f78daff1ae2f30fcd06d16a8d44093948"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\21_second_curation_handoff.json",
+      "bytes": 143365,
+      "sha256": "2e8390ef04d1e649a556f605f1d02668ae274b8766279da30582f341dd753743"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00000.json",
+      "bytes": 611631,
+      "sha256": "ffa9c2e9b32d37fa75b1fe9ecea9c48614c15d89609cef5d5e63b984abc4d294"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00001.json",
+      "bytes": 711108,
+      "sha256": "9dcc883dbc7ab276f777105535bff46b01bb63c2e557edc26da99c18c401eb28"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00002.json",
+      "bytes": 745995,
+      "sha256": "bdcd5c2e5274d722ec450d932d2299e6d32fffa39b0f467e2d213947b9c5630b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00003.json",
+      "bytes": 736277,
+      "sha256": "c01e8a6151989334eafddfda1ab2fd6e8b63a2a173c176102cca530ad9e3041b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00004.json",
+      "bytes": 703375,
+      "sha256": "8283f5743cac491446773dafaef0d00162ed9c7c648884eb2ae145a6566df894"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00005.json",
+      "bytes": 753717,
+      "sha256": "89f4405e2a3238d0a53313e5cce8bad58b66a24d602371c433cf4ad24bd7004e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00006.json",
+      "bytes": 778593,
+      "sha256": "04a1e98a011d6ee9771667865587a35d68adf08b6309778422b40be569d3f579"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00007.json",
+      "bytes": 555701,
+      "sha256": "2c117e46d7e8f128c9dca9278167ed893a55fbda87c54e637cccb4762ec28c32"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00008.json",
+      "bytes": 763223,
+      "sha256": "d34572354b9ce60e09b9f25f746229d92a48363df9b5a8df2985e539793c862a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00009.json",
+      "bytes": 283378,
+      "sha256": "e4a5f5263f63ae00cbdd93d51effc2f0c0e8f29aada438d829b25b87ebb7fad6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\global_review\\8719776d69ae0e3dbc1e54a8.json",
+      "bytes": 32580,
+      "sha256": "b13c6d22b42f2c878f76a8ff6bd18638fdb903345221207b344414d81c68c91c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\0e953cb1e4721af26de13830.json",
+      "bytes": 7300,
+      "sha256": "04eac31827f6b6d3e90e394019117f92b1482946ae6af297f4970966e81ceabd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\2e287e4dc4c45d34c87fdffe.json",
+      "bytes": 8143,
+      "sha256": "5246342c5760210b1c1421b810936bd13c960d39cf058467e8ecba4e42173ea7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\300d3640656ae6f82eb74abb.json",
+      "bytes": 6098,
+      "sha256": "413814975e5d90bdb8e436c38f326f8922c737e909b2d067946cf59ca17415fc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\33aa7fe11600133b30abc512.json",
+      "bytes": 6356,
+      "sha256": "c76c5bc8f506e8b036ba239d91ac8c77f3efb22ec9a959cd23caa2ef68715660"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\49344cda1bd3af0c610167d5.json",
+      "bytes": 8298,
+      "sha256": "cb836fdc0d33ed9b89a70ec60aa30228e2f9b399cdd8ed573eb059f676a37c06"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\4d05a65e4f252415a9d06acf.json",
+      "bytes": 3850,
+      "sha256": "cd1ff6c0e777445663e818af11265c35d2a7fd08697d74f2ca926f015603354c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\5563d995dba8aec89d13f39b.json",
+      "bytes": 14897,
+      "sha256": "54a959f516cf5f3390df402687b3b4bd915c410ea7ad368605e43b4ddd96f1ff"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\9391692593a3d22bb4d514f5.json",
+      "bytes": 4693,
+      "sha256": "368c7f34cd87abfd5305ffa10f3ae1eb9920e53a1266b2ac2fc7b38e29dd8d53"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\93f6fc49cdee22c582e48417.json",
+      "bytes": 7111,
+      "sha256": "9e50505270fae1f67a2b716009f300b81117cd1cdca2e5857fd1cb20e5ede607"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\96b4b74c33f6a21bdf75275d.json",
+      "bytes": 5844,
+      "sha256": "ab6aeea1d963c1bdb39353664d4f29614a341df9e3e9167e8e240fbb31d8f9d5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\b9a795776b018d22c4765ac9.json",
+      "bytes": 6838,
+      "sha256": "0eab65030ca68376bd72af3d146e43971e1cd8efc79618c97badc2e39f37bbf8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\cee930732a3213c2ca211bae.json",
+      "bytes": 6171,
+      "sha256": "f5ecfd8d649bf0954c99c92d76e90b0473591f912be35e145f660d9c9a6dcf12"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\semantic_chunks\\eadbe93c2199e880fea258bf.json",
+      "bytes": 5932,
+      "sha256": "d7a1183451ccf9aaf7c1a1fe4d84bc199318ca63824091a980b9ea7f5608123c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000000.json",
+      "bytes": 1486729,
+      "sha256": "b22e12be0e32ca6c8d87955a42231bed78bd787a42ba49ab381fb972c6048cf0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000001.json",
+      "bytes": 917670,
+      "sha256": "ab381f02afb548d9545ffb3c1e0bc18dd86298d6b949efea82cc4eeb5d2126de"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000002.json",
+      "bytes": 1248026,
+      "sha256": "c2b6d1791f2e1b6a3e2e3ff9be054fb233403ae8bf5d531c306cd0a634f332b2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000003.json",
+      "bytes": 1137613,
+      "sha256": "f66504fabd1d50f3ccfc7bd4ec3024129f0233d4a0eed14622d10b9b119cd8b2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000004.json",
+      "bytes": 1316794,
+      "sha256": "688e217de2e2e9e1e704bd82703ce70b1af59523336dc41c06c86c568794d1d1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000005.json",
+      "bytes": 1408678,
+      "sha256": "d17396e96e8c8fafdd1e6036704a0ed6444b06d5467a83e67eff2f96902544db"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000006.json",
+      "bytes": 1127005,
+      "sha256": "6ffdec498d4e5bd7ae4fcc51947389f7db6fb473c815253917e23776b3a58d19"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000007.json",
+      "bytes": 1196780,
+      "sha256": "c963d7ebb7aa2bf1419a8763aa57944c7229b891df402f6c63cf44d405310710"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000008.json",
+      "bytes": 1260406,
+      "sha256": "19dca93a45724f386f5c0fcd6d183c52b3d4057ab688309ef2988090fe56e132"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000009.json",
+      "bytes": 2746765,
+      "sha256": "c44ba9bc0bca7064dce0cf7d823d34f6e190820960e98fd52cfa4ba359e4b189"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000010.json",
+      "bytes": 909080,
+      "sha256": "0449847155311c0f6e61362512e5df50befa4ebbfe7c4ab2ea08a2a220452953"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000011.json",
+      "bytes": 1340823,
+      "sha256": "ea0e580c2e45294f2b6e40f2f2d7c1976b9555322d0e7ef7ca5a4339a2a6f441"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000012.json",
+      "bytes": 799277,
+      "sha256": "750d607a8dc5b2b35f694a20fc966c18028affd5445778d7ff90af08a3717dce"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000013.json",
+      "bytes": 1226811,
+      "sha256": "46df772f7d611ac52b14efc7182f04538b17588627430f7c0e18ce0713d4483d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000014.json",
+      "bytes": 1080378,
+      "sha256": "74bf381dab81c3e297473d0d762d5fc8221e8e386e9795041e33e3e7fbbc1cd0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000015.json",
+      "bytes": 1053699,
+      "sha256": "dfe25274958223897ec3eb5bbb53779b75f6efa656f35bf865e0499ad3ecc309"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000016.json",
+      "bytes": 1377754,
+      "sha256": "e536301a8c4c39091b659184a548ad325bdf8f6392a28d1b0ebd5b7d8f547683"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000017.json",
+      "bytes": 1070624,
+      "sha256": "c9cbb687e724e6bf0178d4dc263643daeaf547977ca1db5b87900886c3ec86da"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000018.json",
+      "bytes": 1113475,
+      "sha256": "9d1842d11f8909a3826091910d02497d811781175caa469e5ad7a32b0407ed96"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000019.json",
+      "bytes": 1409944,
+      "sha256": "bb39334a6775425868909779267047152a9e95e0afd24eac7f59fe147769ac48"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000020.json",
+      "bytes": 1950567,
+      "sha256": "0b7cf84f85db13a0ffbb4ed5a371a76109d0150e7b33cf0c186ac71ed7462edf"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000021.json",
+      "bytes": 1321217,
+      "sha256": "c2af1fa3d06a10e056d9f701bd392f7b33de5b4fece0a8e13ab0f1d47de9e8aa"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000022.json",
+      "bytes": 1365654,
+      "sha256": "7dc69590b5b3cabe111e647ef5be5ac835ce454eb91c38290b22f891c35e6c75"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000023.json",
+      "bytes": 1151290,
+      "sha256": "b4a159f7550279a0d7afb04f177ebd8434541b8343fb77df2b4178bb5153db5b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000024.json",
+      "bytes": 1506056,
+      "sha256": "91f596fb147aa1d38917d49dfdbfc92687cd27c5ae071e6035d1c6c86e935e77"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000025.json",
+      "bytes": 1380691,
+      "sha256": "395ee8091a542ab4e479fc2606f75bbade64e3aa0630bdd16e98bd2f8046276f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000026.json",
+      "bytes": 1515250,
+      "sha256": "fafd1fa42d12fe16eba21635c0e2eb6e71001e670d73565e96c4fba09bc548a8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000027.json",
+      "bytes": 1267468,
+      "sha256": "01f792bddf3b35f5c69ab26144cc5d6bf169ceadeb8531d36ae6c82b3f9e8bef"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000028.json",
+      "bytes": 1363184,
+      "sha256": "2d166c89ff3fb53fb218393a2548a6b8eceae733de6b0e2635a194287b54b878"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000029.json",
+      "bytes": 1568968,
+      "sha256": "38f6270724c5c0860ab3ad943a2722bef0671c75b53084d6f8d7d04568666f16"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000030.json",
+      "bytes": 1293395,
+      "sha256": "29e2bccd2494728ede305d01f3962a860bfe91f918e74bed4b314d6e7f786f3a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000031.json",
+      "bytes": 1544862,
+      "sha256": "f13f983a5a1287a02096c4df34ab0fe40b7fbe7e0bf35155332f9b9ce8f82a30"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000032.json",
+      "bytes": 1704582,
+      "sha256": "3b8a0b1d51eb8a1077fac4011c7ae649683e8d96e91c03a5a8f168f74efc6432"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000033.json",
+      "bytes": 1497540,
+      "sha256": "912c48586ead4e542186ef6dd28a7718f1b3f46359a9ef46ff5c82683649485d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000034.json",
+      "bytes": 1423709,
+      "sha256": "55c5202d7a672383dd7a88a19523cc584e30e1f6e3a2e2d5b8a6a7df114bf97c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000035.json",
+      "bytes": 1628544,
+      "sha256": "33a966c0264ac536cf9d982de1a54f428eb72af61215fe972955a0e32b71ffbf"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000036.json",
+      "bytes": 1534442,
+      "sha256": "0dc0d5617b6c3d11871c97ed0d445d870e80594cf8f1b62fdcc17b9299687ff8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000037.json",
+      "bytes": 1507723,
+      "sha256": "de0f79a1439ef47f608d118fcfc7eaa814e831ef8fd8fa47790783041704746c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000038.json",
+      "bytes": 1544073,
+      "sha256": "fda1be96122c7416f28e6e6a9cf26ea9f5e22179ac3290cbb31e88f24ea806fa"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000039.json",
+      "bytes": 1495872,
+      "sha256": "74ecf4ee68d190f592b0a45aaa207da5c8d2be9ddf067cab45717153c4032f6c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000040.json",
+      "bytes": 1586329,
+      "sha256": "e221f2cc6a973641769acfff2c8543b88a3a6c382682db1e5d0a00b949bddd98"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000041.json",
+      "bytes": 1818088,
+      "sha256": "fe3dbe7d1aeb77ae3fe1a951e5c7caccbe56018af61ceb2dc5632e7b4b9156ef"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000042.json",
+      "bytes": 1618043,
+      "sha256": "05d47022f215e082cac2e2299b460aebabdde6fac32b57cdcf4c8c1d596cd4e2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000043.json",
+      "bytes": 1771465,
+      "sha256": "45e8ed9035c37ecc7fd0eda656cdc3f26b12ba0407eaee31cb5dcd2745ddbc05"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000044.json",
+      "bytes": 1510355,
+      "sha256": "41fc92120416953182d2ad0bd01f854cb8bcdae1a655d6699b474b92b85a2fed"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000045.json",
+      "bytes": 1770056,
+      "sha256": "7a03923c50709f9cded5a359d3c8d4fcaa1d0851f53f5954950354d6f894719e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000046.json",
+      "bytes": 1673317,
+      "sha256": "d6510599da5b1f9b6b00e565d648557cb1951d9e66b2dbdef72d9aa72990e7d6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000047.json",
+      "bytes": 1652500,
+      "sha256": "531bf95bab80b3573947ddf058c75d680cb093e24e5db7ab7fc25b7681859dba"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000048.json",
+      "bytes": 1808660,
+      "sha256": "09d9816a564a8b67ccc216d639e2bcd2624506c08c229990ce67aec0725cb8b8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000049.json",
+      "bytes": 2053317,
+      "sha256": "b0185d19efec0f5664cc78ea50f1223e4f8091898d7548a265f967bf046cc33b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000050.json",
+      "bytes": 1839024,
+      "sha256": "b2db582673704dc989f7fd07f25a82ad8a8077c705a3e2d1713e2aa22bc0ff85"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000051.json",
+      "bytes": 1854042,
+      "sha256": "977faf853101c08b94f74fed651fd74d430bc757ed2b09392cc490a305e80e2e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000052.json",
+      "bytes": 2001657,
+      "sha256": "753fb0c9c41a8ec87c2afff8fdfe42eba70c549dcf8e700d0a6fc026cfd6d888"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000053.json",
+      "bytes": 1930050,
+      "sha256": "051b48e0ff89906a12db4e16cac78edbdc9400040fbfed824ad47b924f45cd12"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000054.json",
+      "bytes": 1733382,
+      "sha256": "250dabc849463335acde6cc093901e540974a295c8d7d3a73e7f9cc7c7d4e717"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000055.json",
+      "bytes": 1870251,
+      "sha256": "00d4b06045660e20b69ec5fe52749f4879b6287ce96e698132ee3f6c4aec2f21"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000056.json",
+      "bytes": 1971361,
+      "sha256": "936be9ba1c1d4af65514011f4f28f2861bce8216e9e19d4fe214c31085e89bf2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000057.json",
+      "bytes": 1071022,
+      "sha256": "76430fb4f234d173f78c2f5de716e504eebab857ce1c53a3d31a4de4b6d399c4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000058.json",
+      "bytes": 1583610,
+      "sha256": "77b5fc5e29bd4b7b8a011bdd7c7e14860dc4e43afafe5bc87af4cbd7ef7c3670"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000059.json",
+      "bytes": 1628102,
+      "sha256": "bb968469267300bf5b067730187a086781119f72f7a20e1ccc386a8d6830d518"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000060.json",
+      "bytes": 1488581,
+      "sha256": "adc10e7cba3210a70fe5de911a0ba106ae849f316ff82475c16cc4f0484eab62"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000061.json",
+      "bytes": 2030063,
+      "sha256": "41aadcb87ed2eb610c18b6a07163527dfd9c3f94f10734e9b580d34fb723a337"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000062.json",
+      "bytes": 1808922,
+      "sha256": "2e4448223b4973d362de778a9fc5b38b07b360e76c4cf51d8ecaab1f27768458"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000063.json",
+      "bytes": 2057353,
+      "sha256": "0c6ebb67721695a1cb2643bac25dee0f4d2063c2720e050c894e255e691a334b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000064.json",
+      "bytes": 2028401,
+      "sha256": "8fbcfea6cc24f677e7dced12fb038bb105e201a1f7cdb62023a31ec5969d6c9a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000065.json",
+      "bytes": 2134832,
+      "sha256": "06bfaa384ce905bb8c75964cc49863701b3c006e34f303c41468ec13a69e0988"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000066.json",
+      "bytes": 2096579,
+      "sha256": "cf34669703306748453047c6f05254994280bbe8601788ea4bf91954c63a93c1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000067.json",
+      "bytes": 2218379,
+      "sha256": "2572ed84a9661b40cc0ee483b97240b5e48484214ed5b3664cb7ca4226b81e4e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000068.json",
+      "bytes": 2068818,
+      "sha256": "221ed4137cc6af9b2992381155312e67a66d8630cba50f8e06c6ef43295d4324"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000069.json",
+      "bytes": 2119889,
+      "sha256": "72cf72e16fe4f11eaf2d900736204a98abf2b6aa2e183f58dd04907b05ebd716"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000070.json",
+      "bytes": 2166981,
+      "sha256": "a7d735f7536d1d4b8fc266f4481f74931d222159812d12f6200e54b46a69713e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000071.json",
+      "bytes": 2057806,
+      "sha256": "fbeeb9f8cae343bf725c1d88a79818996c4632184c61de0053064f057bb91585"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000072.json",
+      "bytes": 2219687,
+      "sha256": "5d8863a1b4c0d50fd976afcbb63677c61646be366d0b7d1db1b53214f66a2ace"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000073.json",
+      "bytes": 2143066,
+      "sha256": "16043abfaac53dcccf7558464b3eef42a3686c857e69b2ac6fe8397f7f7f0036"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\vision_chunks\\chunk_000074.json",
+      "bytes": 1274623,
+      "sha256": "aa52c54e135792eb69b4bdda4689060a1b3940d39af72d7d94eed2bcb0c71682"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\execution_inputs\\20_handoff\\639fd0c9f958f268a88b4cdb4240f487a69d982dcaba01527404ddbfe1b908e8.json",
+      "bytes": 563035650,
+      "sha256": "31871fe0eaaa44e44e7c2c700d7e2434dd264f2d621b560319d5d2949c1fc3cb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00000.json",
+      "bytes": 206140,
+      "sha256": "d3b8079c2966da4a3891f94c89af5d01a07c80c1408f5f10a4508d7139eed135"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00001.json",
+      "bytes": 204190,
+      "sha256": "4a03c5fc205d5d1a3e4264e33288cbf7bc6ff2abac8005f0a3a32d59948d1893"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00002.json",
+      "bytes": 210149,
+      "sha256": "6462d14deacc082f3c337bd9b27e75ce5fb9cc1164da9cc8b2513a67afcdf94b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00003.json",
+      "bytes": 206351,
+      "sha256": "71babe3618462faa3dd3953ada974e35efc5a8c7b4d08023944d64a79d5ca85c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00004.json",
+      "bytes": 211125,
+      "sha256": "7d746f255da9218eb1f1ee1e6ecabb925224420252fcd23739d99390416a5813"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00005.json",
+      "bytes": 209365,
+      "sha256": "788f924ccc4f886936803fcf6bff3a12c28a2cdd1320207435a5ef21a95b88b5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00006.json",
+      "bytes": 207311,
+      "sha256": "deb6022d0aac83894718856031b97f5a67703ef917304149ba71615f50eabf21"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00007.json",
+      "bytes": 206898,
+      "sha256": "5979ef4f014bd3dc60ad06a17ffa512605c1693373752e23e8c78da557aa24bb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00008.json",
+      "bytes": 208926,
+      "sha256": "2e976051b523686e711b79c880f20b9c058c9b4f97ea72ab190c89dd5b479a90"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00009.json",
+      "bytes": 208709,
+      "sha256": "87f0ef2516dd27fd5b4366e235f58328561c43390fb8363ca286a6ea16e8163f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00010.json",
+      "bytes": 207592,
+      "sha256": "a1d34230afe76fceb7f1cf054b3610eff4338dd633786b58959bce7aabd49a35"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00011.json",
+      "bytes": 224101,
+      "sha256": "269dc148d746d3e81b2e1184946066171b4382bc0f4a745198e013d580e9251f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00012.json",
+      "bytes": 205247,
+      "sha256": "1e2a5268ed360f80c01ad559cd6f5944c362ae44dbc0b06969b7225bc8e4fbc1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00013.json",
+      "bytes": 205570,
+      "sha256": "b0cd425449010fb52c1bc023041113da7d4f44ebb15edb0aed6b6e4cb8afa225"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00014.json",
+      "bytes": 207549,
+      "sha256": "8a963d522b7a466062718ae17455c9efea35e88ae5c9035c870c1c8393eeba22"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00015.json",
+      "bytes": 200922,
+      "sha256": "1a86a2c9133d662f9b3a8108f9d5eac29805104b9db1e2e03a90ccbb3c591c2a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00016.json",
+      "bytes": 206433,
+      "sha256": "b514d470d382613cd4cf07df687409a1bf785b642a03ff7998cbc3f25986a563"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00017.json",
+      "bytes": 203482,
+      "sha256": "7bb31a940c1c7b7617fee769571eb684882e06824b65ac6219efcb1650fb2113"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00018.json",
+      "bytes": 205049,
+      "sha256": "1bda9a317e1c6bb90974840856a24217b1c45b6a2c0ffaf68140eaf2ae325e6b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00019.json",
+      "bytes": 206775,
+      "sha256": "cf57cac3257abd51ec7959fedccad6f608743a8905ffc763b8af496cebb88106"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00020.json",
+      "bytes": 209260,
+      "sha256": "4ed19dd5953a0df00da534e498bf227541172371d45943ee3426aaf73b678c4e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00021.json",
+      "bytes": 203410,
+      "sha256": "267a03ccb6b75c1a32f5ddc60101a0bd9be49bed0c7de4b51addcbe59e80d667"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00022.json",
+      "bytes": 199803,
+      "sha256": "7f431ae65091a2cf0cd8256558566e456f5ff53fe9ddb825458c80fb6e59c18a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00023.json",
+      "bytes": 205250,
+      "sha256": "0e3e6c326d647e2a540e5307789eb253af4af08678167bdd5f3f582b8b8280d6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00024.json",
+      "bytes": 207604,
+      "sha256": "5750563b1aaf618be7bd7feebf4cdeffe786420dc762b361e974afea9ce4cb05"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00025.json",
+      "bytes": 214341,
+      "sha256": "16c237cdbe5740fc9c6338da2b4f4e95f95e1d7057500af815a74b6e83f8f919"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00026.json",
+      "bytes": 206733,
+      "sha256": "277c2b88745252fc9d01f6e3d115f6acd517146247ff853223dd7a8ede5ca8bb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00027.json",
+      "bytes": 210708,
+      "sha256": "30f9b01f8df7e524827128feb484f810d8d242e272151ffef33f96fe298f6cbd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00028.json",
+      "bytes": 205604,
+      "sha256": "925ec2b00431c6486de11b5038694155aa425333312d6243b20f5838421e8954"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00029.json",
+      "bytes": 201559,
+      "sha256": "417b4ab3318b3a76cc00be4bac6af4e104f395ac146438e85e7532c9eb53cdb4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00030.json",
+      "bytes": 209684,
+      "sha256": "33c875f12833358fb1090b5217b54dc16100ac70e66c598372c1b807f288451c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00031.json",
+      "bytes": 206704,
+      "sha256": "ab8474bca01605a69511344053d2b489e9f0ea545e54574cf987ff17cb35b05a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00032.json",
+      "bytes": 206902,
+      "sha256": "9aa138e2ac50d1ba3f88857c2e74e92941c5b743b23a23695382452f34456a18"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00033.json",
+      "bytes": 206441,
+      "sha256": "de8186d70ae29fd9ada67463adb9fdc9df044b9831f8fd7050c56dba8edb0a78"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00034.json",
+      "bytes": 206779,
+      "sha256": "0a2d15317dc839f0d09016275b1228a34647287800afa71936242a437e73c460"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00035.json",
+      "bytes": 206037,
+      "sha256": "eacf9d532b106273338afb321dc25c277389a2e0ab53b6d8c27a36f25975a3b9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00036.json",
+      "bytes": 207858,
+      "sha256": "2dd69333db4649c1bbadc53ba3397408e8f934c5637b099ea9c4a9220dd08fc0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00037.json",
+      "bytes": 209435,
+      "sha256": "c097b021059537ce680108578d47155f086a65d80a4a4cfd63082a458b791c9a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00038.json",
+      "bytes": 207851,
+      "sha256": "7c3370deff413e73c7c01bd251ab3bccdd2bc1f50c0a8df3077d561efe15fd77"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00039.json",
+      "bytes": 204963,
+      "sha256": "083313f03aa9895f50efe2ebe6803df6f93eb26641a185a62aa74795de0baaf8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00040.json",
+      "bytes": 209094,
+      "sha256": "de395d7803c9098212f13572f5e2d56334f8a79f052b6a4b7b53d09450201d9f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00041.json",
+      "bytes": 208580,
+      "sha256": "c7e13b8f2a090c14458301e09418a144d1e8dc2c6237fb65abc48dc82e54305e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00042.json",
+      "bytes": 206874,
+      "sha256": "506c49da6a3da24a08d025df6b80990c33fdbaf15fbf1d96904ae1b635fb4d43"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00043.json",
+      "bytes": 205877,
+      "sha256": "a8c2fbcd6d66e7f5be7bf0b07e70578f7c804e962056d1ad4ab85c473e89fb89"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00044.json",
+      "bytes": 210356,
+      "sha256": "49dcb578d48d9e0c89a191a29c7e0dea781ab31de1441c76ba4242297db687d5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00045.json",
+      "bytes": 208399,
+      "sha256": "99c2c6703b94018dbd05acb14b5bc21407929db20dfc297368f39f6cd58a78ff"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00046.json",
+      "bytes": 208479,
+      "sha256": "7405039335dda135cc571f1d797fbc3c9eae0b380532d188fb7cc6aa8a57cbfb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00047.json",
+      "bytes": 208187,
+      "sha256": "71842cd412493bea4c29aefb420f55139453cd431f9792c770d61b3adc5e47ab"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00048.json",
+      "bytes": 208605,
+      "sha256": "782915328afe3c6b04d3283970fa9dd8cd064ad527f074e36ec3d007fa4dbc66"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00049.json",
+      "bytes": 206824,
+      "sha256": "e115e35509fbfd420b7a6945a24ad2ffa3c16058a0932a03e2e39c3564d2bdb7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00050.json",
+      "bytes": 207350,
+      "sha256": "7855250af7f504af1157dd001b0f8ea26fb694c0efd9d83718f606cf5a1c6cd0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00051.json",
+      "bytes": 207657,
+      "sha256": "4ed763476f90bf75c80210ef2fd5b1232a1a28f8adac821befcfbe7685c25dc7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00052.json",
+      "bytes": 208918,
+      "sha256": "f05551fc6d68e91616e91eab15271fd5e38940fbee766d34aa58a72121f54add"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00053.json",
+      "bytes": 207676,
+      "sha256": "9ec649b2fe57b55c42c659c0d2e1bc60e71b2a524cd4f0a901e1f1662c423787"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00054.json",
+      "bytes": 209784,
+      "sha256": "60270ef963be899d4c4b64b7752605ca66df10763d4a32ead7a9bcc46c04c380"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00055.json",
+      "bytes": 208497,
+      "sha256": "fc6e534b792043aceebc8155f8e5a18942477cdee5de3b4b822f1c157aa822ea"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00056.json",
+      "bytes": 209040,
+      "sha256": "ee088a5cd0e6d937414d82f886f32a0da82bc1819d859320bb6a7bc614bf89b4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00057.json",
+      "bytes": 211516,
+      "sha256": "1c64d11b4ad26ad60a378d9e15372d45407d8c4601162a6c68cbcf667ee138e6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00058.json",
+      "bytes": 207693,
+      "sha256": "832501510c00736e288760b28ed73d67b288a589c28b36d2c9c08f99daf41b1d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00059.json",
+      "bytes": 206709,
+      "sha256": "5cf1d7785aa3cb9ba504d4895a9f9f31f7cd665ef8f78f6bbd9f6edd8778b551"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00060.json",
+      "bytes": 208791,
+      "sha256": "d6e46a809690ffdea7c81b4b05ca2bad8885f477158f3fa81cb78d31610bda6f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00061.json",
+      "bytes": 210701,
+      "sha256": "11cb2b8a07507da6e1226542c4bebd05fbaf5490b5fdb7d6af5e1af4121b85c9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00062.json",
+      "bytes": 212952,
+      "sha256": "84af662765e78572b350cbce96c7c22fcac8ba5f22258292fc574796aa42e944"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00063.json",
+      "bytes": 208210,
+      "sha256": "c9776dadd1275a3df69153c63819f79ff89fa05a059ff23a7941fe6f8ba5f4da"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00064.json",
+      "bytes": 208590,
+      "sha256": "dd997c53b9104105a8f315f984935d7f445ffe330335e3e5bad19efd73dea943"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00065.json",
+      "bytes": 210125,
+      "sha256": "e543f8e70c36db33af2f86932005bd68c45ca0b9f0ce18270df592dda75571b9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00066.json",
+      "bytes": 211356,
+      "sha256": "5e6605e9373a953376ea39783fbebbf1be86e87c4e86d7a1a288de84e01ebd47"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00067.json",
+      "bytes": 210956,
+      "sha256": "0b68cc90ab7f36627649ac6dac10e100d97419d03aab9ed49749b55829a75656"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00068.json",
+      "bytes": 210177,
+      "sha256": "f4a616c20b1d82f2f685f56e9697393133f89eca8efa0e5564bf89bc8f4293bb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00069.json",
+      "bytes": 207407,
+      "sha256": "1e98d0f8e77019c2ffb8eafbdb44707d268f1333da83907b395131f18bb3f032"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00070.json",
+      "bytes": 208581,
+      "sha256": "8846bf9cc8abad70a4df5a77f1fad6c7846436e8f15467ac50ee8c24dd9a0246"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00071.json",
+      "bytes": 208940,
+      "sha256": "04794bc224e33788f82630365f605fd06155e9e41065b13658395dcb3d9ac32e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00072.json",
+      "bytes": 204030,
+      "sha256": "bef3e4d207d8e718dc390d11247473d7a7ff8f6bb7c7c33b306c70651d2e8034"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00073.json",
+      "bytes": 209603,
+      "sha256": "3352361ba39cdef606c22aec750972a92b3b6f1bd4c20fc34101eba689ff491d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00074.json",
+      "bytes": 207723,
+      "sha256": "e98ad4660ea7c5a3d252bf0d2b760f0647549066d1a2b366fb384ab72db6c1f5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00075.json",
+      "bytes": 207984,
+      "sha256": "c476b5a2fe637bee1666a2986191737140f2943b85357550ac237fecc7b1f9e8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00076.json",
+      "bytes": 208604,
+      "sha256": "17e12c6c30f6d88b1e359e60065e6a2cf30ba212f32e19113e9d4889fc840688"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00077.json",
+      "bytes": 207948,
+      "sha256": "86c9f0ccbf6160f96001813bd184753f53ef51f703913d68ea81968eacf5a52a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00078.json",
+      "bytes": 211867,
+      "sha256": "fae16560bdbcbb02ad3a71ae2a8ab927a8613cebb8d6a469a9c54ed2ffa189d7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00079.json",
+      "bytes": 212044,
+      "sha256": "4317316faff9e824f3e9f5d13306810297288c6a215fea132eb6a9d5feb1ae9f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00080.json",
+      "bytes": 209511,
+      "sha256": "852ee3323b0c4dfeccf045273172563b81d8bbc26dbe8171779ee33522d48df1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00081.json",
+      "bytes": 210670,
+      "sha256": "7e8a150d316829df58230f41e186835b047ccc94572febb39704e5c40d53d682"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00082.json",
+      "bytes": 211911,
+      "sha256": "fa148d503eefa7d266d32017c8a05c42975456f7f4f13ed1befd5bea9d28cae0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00083.json",
+      "bytes": 210384,
+      "sha256": "8340e81e37230b9dd1d485eb02b0933824d4386a8df47ccb58efb2a76376d647"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00084.json",
+      "bytes": 209086,
+      "sha256": "a2d2c8aaf671a4abd8fd66e757add40ef35c6ee04e6e20b49d468b13e27d867b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00085.json",
+      "bytes": 210376,
+      "sha256": "5ee0a08b5cf50b41101a08e721ebd8c95eb49b5c1b580a2f98041e4f65bc72b7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00086.json",
+      "bytes": 209113,
+      "sha256": "1115723d1dae8b5691365d65f119a6cf18e7c88362ecd85876758cc54fffe8e1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00087.json",
+      "bytes": 209438,
+      "sha256": "ad580f4ec16dc9e5999c7f96ebb7ba2ff495b3fb4cf878d15f67d6ceca611253"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00088.json",
+      "bytes": 209489,
+      "sha256": "08de5c01378510f8f57a148dc4558367d0c562bd4e38ed2ebd913d38b65cbf32"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00089.json",
+      "bytes": 209602,
+      "sha256": "03762bf65e2becb0d53bfede00a6369b6cbde623ea0ad6c6e306f303abfe710b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00090.json",
+      "bytes": 210401,
+      "sha256": "871b1d21ea78916137de910fd2b32c743ffecae271cc669642ff7e3685a6fa73"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00091.json",
+      "bytes": 207088,
+      "sha256": "81f3412936dc3bd2817e9e8663b48dacd880ab4456bfe8c91b58ac0060296753"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\camera_timeline_00092.json",
+      "bytes": 5461,
+      "sha256": "ea6d677dbe50d038781c51b410893d8004517a783b453b809620b1bec184c5bd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00000.json",
+      "bytes": 341032,
+      "sha256": "27d59f7fb7a5dcd2368e4740de16a915c1fdcc269428881c1c90236758f746d9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00001.json",
+      "bytes": 336549,
+      "sha256": "cf46017e527af993ddd89b106fdd7056643d4f1901746f94806bf2b63b5f7b70"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00002.json",
+      "bytes": 343328,
+      "sha256": "05422fdebbfe25c4297102b242edf2f9e1154a4f284910f07103070bc25f634d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00003.json",
+      "bytes": 342335,
+      "sha256": "91a5268da4c7fe6a3eec21e64771dce8b8a1905e8ce08662f49318b3a2ac0931"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00004.json",
+      "bytes": 348272,
+      "sha256": "3c2f6ad0519b81b00b251633e9990e4c776f5f8dc1077a5cb465b5b91df238e6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00005.json",
+      "bytes": 348385,
+      "sha256": "637ba9f15f035849fa7f30ec73c4dece7929672ccc869a5a73fa664b13e5690f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00006.json",
+      "bytes": 346326,
+      "sha256": "daf04a2652b5bef77c240adcbceb792d9d37b4f66775b746d2d2b596fdaee905"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00007.json",
+      "bytes": 340687,
+      "sha256": "96227f9652d2fe7e7d826bda706802c210510132575624f1a60c98723b394f59"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00008.json",
+      "bytes": 342994,
+      "sha256": "9f2f427f2f1f39713755e1bdf6a4333b6c4cae19aac3d4387f511ac9f2c12de0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00009.json",
+      "bytes": 345651,
+      "sha256": "f4b47295e28b0ee8f38a9bebdaf3c3d6f5305735b7abb307af0eec8845ca4d21"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00010.json",
+      "bytes": 345632,
+      "sha256": "61532c6fb35e7e0d8668a43286fd2064f143c6c782cd31ce053f4b60f90461d7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00011.json",
+      "bytes": 343250,
+      "sha256": "7d4a841425e1bfb555e07b1b0a68b5a9055d851fe638d92bd54a52a086e41d57"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00012.json",
+      "bytes": 344274,
+      "sha256": "f6795388848e8b8457be1fff3dfd4e023037873d56da1fd9889ca0d08b905c90"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00013.json",
+      "bytes": 346782,
+      "sha256": "b83b0bf3863641df25a09557aafab9b8370005a85bf6012efb9227ac05394bff"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00014.json",
+      "bytes": 346295,
+      "sha256": "48851f23239216f61804d1b9f014bd3b8a50c3a6a0dc62337425f89ac7377ea1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00015.json",
+      "bytes": 344624,
+      "sha256": "27f7cdee85600e8e8e323045c8193d48aad78ed90ed50eb03877dbe438db185f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00016.json",
+      "bytes": 344533,
+      "sha256": "e39222556352f4d21b732abb1599735a7207dae06a4681346fec5c8baf954935"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00017.json",
+      "bytes": 344803,
+      "sha256": "07d61ea113ed52fa63e62a3c77a64cb2b618523e7a2321b5df53e01049b81872"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00018.json",
+      "bytes": 346073,
+      "sha256": "449f69699c1e95d870159b3afd2b0189d1d56b0c05c04185969ca545f58c3181"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00019.json",
+      "bytes": 345695,
+      "sha256": "928fa8882a13301ca0a0a6a64387d48e6c20d825ef6c230a31ed4345367aa2c9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00020.json",
+      "bytes": 351984,
+      "sha256": "5eb439792f4e8e3c1d03b00f927b3ae463ae65a9b5adba51b7509a9571fbefa0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00021.json",
+      "bytes": 348282,
+      "sha256": "ec2cc9f5a10766f0bf5a0cdb478b5c350dba569b3a6b2a3561037a04fb9b7746"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00022.json",
+      "bytes": 344063,
+      "sha256": "37e40b113409f1c3dbfe26c9d203b3dcf5b72ddcaea008ef58526f7fa0f59c2d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00023.json",
+      "bytes": 342484,
+      "sha256": "7e7b6dc02ceee7fc43dff5ecde3dee512e7d213d4a33a8370185cd6b92f2f2e6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00024.json",
+      "bytes": 346128,
+      "sha256": "26a5a3768509563b5fc7935418c50d6943313e2bdd005b5d7021983d76e26d73"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00025.json",
+      "bytes": 346166,
+      "sha256": "eeebc279bbfc63a1cb69a0836ac27c9f4244482959383dc20ae04b8a6572a51b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00026.json",
+      "bytes": 340260,
+      "sha256": "7b9c37e28f207578a9d4a43d70b88dc12a7f07e403549d8534d0af773f12a28d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00027.json",
+      "bytes": 343477,
+      "sha256": "7beb5b263916e0e4a52392b53ac74f09b8d838d72e3aedeb967a5aeef6102cbc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00028.json",
+      "bytes": 344029,
+      "sha256": "7ad22f4cdb06dcad2ca5ca9b6dcc71ebe20553ad24e9f9af93909a33560f7adf"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00029.json",
+      "bytes": 343941,
+      "sha256": "3264f60b88acbc260e1942029c47e216750c5f641560b25e0bfbec9dfb47961d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00030.json",
+      "bytes": 351397,
+      "sha256": "fd7fccdd59cc144d6036e1bcd98291fec2a64af2407cb1f721a05963a952f8a0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00031.json",
+      "bytes": 349844,
+      "sha256": "f429d272c0df6199e13abe86eb256d47b049024c3961f9a52e87f442ebe83a63"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00032.json",
+      "bytes": 351122,
+      "sha256": "06fa94f7691ec169071f3772f8a22ce0da7e7ef13089e105d3cd93df44f098e6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00033.json",
+      "bytes": 348166,
+      "sha256": "42e0650698db15823c0b8fededa85ea8ee828f6a75ed226aba5ce9e4baa2152c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00034.json",
+      "bytes": 350224,
+      "sha256": "b64b42022ed21f5763df6fb6c6e96e075af6a9d25b98992e9ca5b4aef46a5aa4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00035.json",
+      "bytes": 351757,
+      "sha256": "2029d2683f2c3daf25537e0eb28e050790a03629f5a30d7cae79e260d0acfa9c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00036.json",
+      "bytes": 350263,
+      "sha256": "eaa2a8466bf442a2406de6c604861db01e1b17937a787c49a351af9ebb5a7a4c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00037.json",
+      "bytes": 350853,
+      "sha256": "64dca7d4800921622bfd6a35cbf1ae56ac6405ee06cc82dcda8b70c7b4d86ebe"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00038.json",
+      "bytes": 352491,
+      "sha256": "d6528da2789072f99eb49569e37ff28ce97b6e099f238e45d06e9947ce331fd5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00039.json",
+      "bytes": 351175,
+      "sha256": "f2a3800c6c2d42391b46ccf515150690a5181d9be0ec0f4c1d3827f08bba11f4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00040.json",
+      "bytes": 351559,
+      "sha256": "e94d979ff32711ff0867c2561e117d7db5a8cc70f79e90159640a30a767e4137"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00041.json",
+      "bytes": 350106,
+      "sha256": "65685f160cef0fd2433fb1f5aa6bd64222065ae9bbaf96e62254115607e0130a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00042.json",
+      "bytes": 348671,
+      "sha256": "0ab8165b3491842c0870a0b2d3d118d7425b8d8b61a3e263dbab0ea99a341769"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00043.json",
+      "bytes": 346716,
+      "sha256": "5db82a2c6d88e37b83fa8afa35ed9996aa08c4d6238bab9c118a4a42e28866af"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00044.json",
+      "bytes": 347038,
+      "sha256": "4637d51107fa57423f707a3d8e92a91e1de675ec4b1c78a5060e33233c6efda0"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00045.json",
+      "bytes": 348943,
+      "sha256": "cd45b1859ad4f113584be3c4e91ce8c20a4a0d4aed8560cc3fb7d9b31239bab5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00046.json",
+      "bytes": 348126,
+      "sha256": "6923512e5977f0bd765aa2dc162f86c1cef4aa95a1ba872d23ad115ddfa6c58f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00047.json",
+      "bytes": 349763,
+      "sha256": "806f51891b937d1c9777cbbd9ee5c8ecf3ee706e188b01d59b82b0d64ed53719"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00048.json",
+      "bytes": 349247,
+      "sha256": "3e68c19ba7c7e8871e771dd28831f6b9c8926fe3a5ce556f679b6206ddda7891"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00049.json",
+      "bytes": 347251,
+      "sha256": "467c957ba8587bf3bd622533504fb4afc14ef9f31eb0a31f960372b1e9cd046a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00050.json",
+      "bytes": 347110,
+      "sha256": "7fc317eafa6deb3a5247e9f403dd0c90f2b5cdc31e5a663ffcf7709817fd7232"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00051.json",
+      "bytes": 349921,
+      "sha256": "a88516b90ee0d471e5fbba10e8fe8d0e910d49478845ff653f4d263530a39e19"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00052.json",
+      "bytes": 347807,
+      "sha256": "80e32eca9bdca3d75d50a1da731a168269807cf0cc7e09dc5e2b78fa56625407"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00053.json",
+      "bytes": 344342,
+      "sha256": "156df640077bb6f14d09347018dad123c57d0aa8f0abda95bf20148714f7b2ce"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00054.json",
+      "bytes": 347074,
+      "sha256": "a375253b6279a3772318f37e3daeaa7129c33ece0da3a1041596b9a18fdad477"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00055.json",
+      "bytes": 344320,
+      "sha256": "1a507e20a0e819b5e644c92e42061504eaa10469a723379289eb82fab88d6c0e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00056.json",
+      "bytes": 348307,
+      "sha256": "b0b3d3b19053fc87886a3a7ce855316498e1a32d41d87f05262610b53cafdc6a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00057.json",
+      "bytes": 349537,
+      "sha256": "7adc6bdaad5ce1094d0e94b0a63e0939d8bc6f55b238d4bad073d90e3640cdfc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00058.json",
+      "bytes": 344536,
+      "sha256": "acf51896180862fc185f152add12292b35f11c423d0fd30bd4ef2fe31cff30f7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00059.json",
+      "bytes": 345252,
+      "sha256": "7cde5703f63caec13a05644648ee1eafa7f7f9f2679332aa2f6e2ccb0768afd3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00060.json",
+      "bytes": 348581,
+      "sha256": "100f97d9671a7e1366a785a65d917c63b286774fdb7bb341bb57c857f833941d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00061.json",
+      "bytes": 345960,
+      "sha256": "5c0e0194f09b69199e34f10f7068804aaee88c49b126baf12313037ee480aaab"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00062.json",
+      "bytes": 350743,
+      "sha256": "e455beb756fd74a5be84c2ebc88cee14e12a889b41734b2077e4b309193979fc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00063.json",
+      "bytes": 351458,
+      "sha256": "f234b4ef9ada620ba3e97fcf0c1a07052957fa4298b397a9a27b8d9865f3263c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00064.json",
+      "bytes": 348309,
+      "sha256": "63f28e0ff03c952de97757b4197e222df72e9d0c926baca73c33e05faa04afe8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00065.json",
+      "bytes": 348987,
+      "sha256": "7477a2de72d0e9af0e2b7b8a0ac6f082bd649005921361c564d44dc7ed0232b4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00066.json",
+      "bytes": 348332,
+      "sha256": "1ca92ce7e562f76e848a6b4244667c9e7d6644a0ce1a51978de438f8bd6cd61d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00067.json",
+      "bytes": 345512,
+      "sha256": "289b3c467a5ce4bfed9421446eae6fb76a7e2e7ceedd97c6b56d59d925ff6834"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00068.json",
+      "bytes": 344416,
+      "sha256": "48d044664fad439d5597e871acaf1a56f7faacccf0b88ae0734e285fbcf0e6a3"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00069.json",
+      "bytes": 341747,
+      "sha256": "0618c0b7de60a68d5ddce2e019f4f5f9a69b93a4a6995f7f4df9e754d0a36b75"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00070.json",
+      "bytes": 343147,
+      "sha256": "c8f2045d040754ed964665b77b44c9218364803a9aa3adb80d812eb6976b29ed"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00071.json",
+      "bytes": 343983,
+      "sha256": "b49589de28b7b71c1231a84c90194f13baeb53d1d9fa1b1f984e4bd9d0e70a7e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00072.json",
+      "bytes": 328853,
+      "sha256": "44e4681f371fb7c6c72ddf56e77134e3aba748eeacad7fa81b1ce0ac257e0b56"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00073.json",
+      "bytes": 339517,
+      "sha256": "d2059b2234f9ba5fac554b0f32abcea950cf8434c470b8754c3d1ede76110e61"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00074.json",
+      "bytes": 345955,
+      "sha256": "6485f16634cc8e2fe26646d0e41710ac66ca519139b88d4dc35bce1b5049b345"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00075.json",
+      "bytes": 347973,
+      "sha256": "b524962730e1f447a8c806beb43bd91337530f0b747c1ec81243f593a209c9b8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00076.json",
+      "bytes": 349979,
+      "sha256": "44f9835907161acae15ff08a1af84203600df6100ac785434772882b067931ab"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00077.json",
+      "bytes": 348332,
+      "sha256": "deb0fe1196715a7b4eb0bb0bb316ad476e340991cbd1281ecc6364d498a4475d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00078.json",
+      "bytes": 346133,
+      "sha256": "ceda23ab03e7bfe8b420bd9a1ea2110166c5eccdd160964392dbe9b804b775be"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00079.json",
+      "bytes": 344680,
+      "sha256": "324b32e862c5f6f586005992432cd096ff4d34ee128a766e442366393d7a4244"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00080.json",
+      "bytes": 348899,
+      "sha256": "a43206cad45dba9ac8dd14ed8501e76a550dc544ed78561eea7c4845897caf3f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00081.json",
+      "bytes": 346386,
+      "sha256": "86614124a5175512d4c271bba03811cfa6e34f8ac523d89282da4733f6ac9ecb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00082.json",
+      "bytes": 345490,
+      "sha256": "d2e75d35e991490889f2eb58f88cc40fbf0b61a7c7958b29832622138230d580"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00083.json",
+      "bytes": 346170,
+      "sha256": "0732cbb146e478fa385399c4cdcd38195b4b1e51002f675a7688b16201b3606f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00084.json",
+      "bytes": 344765,
+      "sha256": "679d30cc9c2ea259e5a555ce638335d1f898c712bb9de5dad101bcd10b0eb1e5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00085.json",
+      "bytes": 348837,
+      "sha256": "edf81b70f065ec357a27905fcd55be0eafc661c99b9192ef041806d0ba97d101"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00086.json",
+      "bytes": 347310,
+      "sha256": "bee1e3e21e7206b2283c52bce2fc91ed8357db9ad43ba823a8c3521bd9ee2927"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00087.json",
+      "bytes": 343323,
+      "sha256": "61efea3c73d4bf9a5207d4ead14ef7209f8a6d11e1bc49e3e14f5a943af38668"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00088.json",
+      "bytes": 342706,
+      "sha256": "24c030f7c223226b8f0dc983547bd586c12397f719416e496512cbe728148d0d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00089.json",
+      "bytes": 349997,
+      "sha256": "6f08509b4aebbb608595991aa353c9b4038883b5fa22c9b86fb86aace8225968"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00090.json",
+      "bytes": 352379,
+      "sha256": "10e142e2538f3a64dc727ae896830f5c6063eceee6423c06e288f79e799f159d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00091.json",
+      "bytes": 347080,
+      "sha256": "de148da7f3f32a6a83505f4aafdd6cf4f7221d548bba2ee1ae2dcaefe2b23e22"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\master_timeline_00092.json",
+      "bytes": 8898,
+      "sha256": "627ad0def453b92ed02c43ccc2147813486d754d5c765891c9802e3fe2f55829"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00000.json",
+      "bytes": 340087,
+      "sha256": "e2c556cf79c475faa8cfb83887652522e1d2cd7d0a60b273fd8211237ea9424d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00001.json",
+      "bytes": 343276,
+      "sha256": "52e5e57846893a0c9ba161c919272fa1715f68f5f8858dbfda4cebdb0a09b6b9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00002.json",
+      "bytes": 332755,
+      "sha256": "a02afe2fc1531511c0335efee52ac7caa60efd3094be758350a1209968f488b5"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00003.json",
+      "bytes": 327159,
+      "sha256": "0b9046e76d07a0f31a25fe1e7afd555f4745c01de372d30ba93bb9c8c3b73200"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00004.json",
+      "bytes": 342174,
+      "sha256": "3f3c450915e022f7ae22af1b4ab086101a23956acb6bc9ae7edfa32ec411ebcc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00005.json",
+      "bytes": 343672,
+      "sha256": "6f7fcb45146306ce07da5cc5578b613013a2088da6da84f59b961353ae8bda37"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00006.json",
+      "bytes": 333248,
+      "sha256": "363b665f657de2cf9d34ee86d1b0f406f00fc66519b5b612c312c20485916241"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00007.json",
+      "bytes": 341435,
+      "sha256": "cde37f68cd4dd8c2ff5d95d131e1ef44000157f041c6adc782bf4f0092d5dfd9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00008.json",
+      "bytes": 343786,
+      "sha256": "fdb3431a7cc5b838de2b4e940ef14a7345db23c7d7c0a8dca9aeecf8bb2cd5fb"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00009.json",
+      "bytes": 343952,
+      "sha256": "03a672ad27f76279cd55f572025be507e26e9973d1e7b58f8b050ab6e824e749"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00010.json",
+      "bytes": 343572,
+      "sha256": "7b6c13fd2d3baa1ae2e62007c50ba0cdfdd058c7dca3951a6aaf6a296a9996e9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00011.json",
+      "bytes": 344171,
+      "sha256": "de6ca2a482cf9c16e21936af6cffc5691fc42b990c777cdd6589928c7671fe9a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00012.json",
+      "bytes": 344172,
+      "sha256": "9e4ea3bee4e23fac400d87ea319ebdb20b75c944b0ff3b3b31e62149d13b8956"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00013.json",
+      "bytes": 343596,
+      "sha256": "53abc71e9784db691036c4cef621ac2863c1c710f0c4b5a549798d38fce46231"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00014.json",
+      "bytes": 316762,
+      "sha256": "fb9c70a671eab31d04a945064e4de60669d1fed3fb36662d19dec867aeabe146"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00015.json",
+      "bytes": 335778,
+      "sha256": "ef6715ecfc8045aa03083b4a326f29fb25bca8473b1fa0778dabfc2b70be5f8d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00016.json",
+      "bytes": 344602,
+      "sha256": "dd0114a39ea1ba1a869f3ad903ece5ec2ea7b5b23345ad7ac5ca7b8ea1ed56c8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00017.json",
+      "bytes": 325476,
+      "sha256": "605e3821ef44cf94a76eba5ffcea691dfb913901483a46d577e634966bfbe604"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00018.json",
+      "bytes": 324870,
+      "sha256": "a6da287175c533674ae50d67c4fd7be837f4e6fcaefdcda3d882e8c4a6b16584"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00019.json",
+      "bytes": 344393,
+      "sha256": "477abffd1b0951d603b366cfdfb90c312f634bd9d8ee5e7cb09541175315e69c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00020.json",
+      "bytes": 344530,
+      "sha256": "254634c10877f208d272352e082544e4a2d61d7cab1ad577cd89d42e3ac57f23"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00021.json",
+      "bytes": 344563,
+      "sha256": "bb54f8d7e976d3c5ed3c03685449b17dee10314289c2e0d5c9f866c70164d09e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\people_observations_00022.json",
+      "bytes": 165117,
+      "sha256": "f29831bb91e92352d848035e99453ff18a1f555968d044443845b262f14c5e4e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00000.json",
+      "bytes": 208235,
+      "sha256": "3529bcf3eccf66f15df025be22148e3af2a0172cc096d2862d23eb805c49231e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00001.json",
+      "bytes": 209856,
+      "sha256": "85d97fa12b093c0c5156ad9b3daa08fe8cef5e66a5e38fa5e54db0d6b04ad0c6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00002.json",
+      "bytes": 208507,
+      "sha256": "ed80e2f4060376c438759308c885dec631cdc2cec8b8059e2c19c28bc4272d3e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00003.json",
+      "bytes": 210298,
+      "sha256": "e12a04037b84292c680483a6f1bef0787eb3d6ee9c658ede1928622fc5d03e3d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00004.json",
+      "bytes": 208511,
+      "sha256": "3319c21c4d819ced396e09496562cc96937995ffb7e716cf2588009a0d47272f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00005.json",
+      "bytes": 209990,
+      "sha256": "f56a4fd57579523b4aa9d8653f975a42e4c3fae0ca0ca9a71bb949510d204cb1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00006.json",
+      "bytes": 208561,
+      "sha256": "2373b98ac5f1ad0f202c7919e77e4d88dc067e8f72551918da3c9b2ee1360167"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00007.json",
+      "bytes": 209669,
+      "sha256": "a6879a9376b0c55db139b0404831977fd63f2a1cdb0b637b3ae638245a23e6f1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00008.json",
+      "bytes": 209184,
+      "sha256": "b355e133e1a48c5016b43c061151fbc33db9873868f32c483821b92ea3106997"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00009.json",
+      "bytes": 207801,
+      "sha256": "f145c22a35fb5d28e761d54c73b873dab191eff052148a0b05da96325bd173d4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00010.json",
+      "bytes": 207950,
+      "sha256": "f0ac12597e34fc3503cc4a5394a462a6778817ba8c838f764ce09af9a62027a1"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00011.json",
+      "bytes": 208506,
+      "sha256": "46deb3946c7c2bbbbe4e80c1182f1fdb0398ffae470f5ae8173019bc6eef62f8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00012.json",
+      "bytes": 209977,
+      "sha256": "e8f440b9c37b01b979ae64efd1891ff1a56b24f8b27cdd5ccb2e8bcf3bad030e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00013.json",
+      "bytes": 209766,
+      "sha256": "24c24563ce0597240d30292f197961b052287117dc3c22b4f226c8e28a7bb206"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00014.json",
+      "bytes": 209546,
+      "sha256": "44282860736388ff4159f62811c91562b8597255d359988c4724b0f0027800e2"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00015.json",
+      "bytes": 208759,
+      "sha256": "554e6a5020283ebd3ce7dfb5d09b5224cc90155ca2f8076539b34e780e3a6658"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00016.json",
+      "bytes": 209281,
+      "sha256": "a7e6e0661775a8472f11dc0a0cfee5d4197f2eb030a37b272163b5e6297ca902"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00017.json",
+      "bytes": 209671,
+      "sha256": "8a0cef2ac8a824cad7bf075135ef2255b513f987e906133d7aaed982d2390ffc"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00018.json",
+      "bytes": 210105,
+      "sha256": "b509438b7c0508829d978e00f6ec805cbf8dd29be30441dba10fbb63718664dd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00019.json",
+      "bytes": 205773,
+      "sha256": "ca17985150823122c0bcf3b5fe213920fd56ed650fe7dbf4c6589c9a4ec78770"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00020.json",
+      "bytes": 193773,
+      "sha256": "326738686bb1db7e331162fc4d4d5213b250126d58e7b4735ae549f1434613d9"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00021.json",
+      "bytes": 185745,
+      "sha256": "1fc1b8e8967b72e289665d6fa9d107cb1fe8f5435a5a1dff836fed09e5a30313"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\person_motion_00022.json",
+      "bytes": 93323,
+      "sha256": "dafb83c36302698f649160c97d47f67ad0f50bce49b9dac58b98e961dcb2c161"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00000.json",
+      "bytes": 227781,
+      "sha256": "8917ab9534771e60408a9591b7f1ad8bcd0a1f24f91fc74d3535e73da05159cd"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00001.json",
+      "bytes": 231780,
+      "sha256": "ed5a81b650930f3fc7a3cb4bc7ef63847ccdb871135e56c9c0cdac45a69b076f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00002.json",
+      "bytes": 233576,
+      "sha256": "688c4f930538dcf34280f12d4c2c481ea1bb4f1ec46e2b89586e3c263ff928f6"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00003.json",
+      "bytes": 238136,
+      "sha256": "477c1ccb42baa3867b00b658250efa8efe441408720c4cdc2be0c4203166b342"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00004.json",
+      "bytes": 232687,
+      "sha256": "060336a127393897b4cb985f360c3b792e584f5825fc67355c378a88deb31e6a"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00005.json",
+      "bytes": 229929,
+      "sha256": "18bff87e20521497f256230b70c4d4a922814528cbb68445e8a5c70039deb60e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00006.json",
+      "bytes": 226888,
+      "sha256": "d1fbfe4e5043a1fe5e7b19b087630d2e023b30a6a353c9a3a753a422d5da0b06"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00007.json",
+      "bytes": 234481,
+      "sha256": "6dc7c3bb7938ce5df43b74f78580a052a7ccf44d0cda2ed1b5003e2676601b3d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00008.json",
+      "bytes": 233087,
+      "sha256": "9706cc4b7ee801bb973a2307fdb5f21bd690e10ab5d71de84d17e7cb0867bf40"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00009.json",
+      "bytes": 233095,
+      "sha256": "99d0886cce8dd4178225ba750d99be1ba0051e70aab788d3426f75668a4f6875"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00010.json",
+      "bytes": 232792,
+      "sha256": "3845f88517de509c3bf9eb345f020c882f995cefea8f7afa3f832284df5d8a86"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00011.json",
+      "bytes": 234286,
+      "sha256": "a52d2fd63aaa9bf3cb39aa859412bbd570dcadb1f76e9f3e7a07cbf879b03bb4"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00012.json",
+      "bytes": 233312,
+      "sha256": "955474fcea2674a736b3951b224ef0c1ad7af27dfafc7165b3191365c4c032ce"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00013.json",
+      "bytes": 234279,
+      "sha256": "86473b0f0e8cd0d0aa6e109d459fedf7a9cb596dbc779f3d0e5ae6d88723a527"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00014.json",
+      "bytes": 231425,
+      "sha256": "1781837e86cefcd7848fe8a769d039628b0eb843743cf9cd5cf7c90c9ee6876f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00015.json",
+      "bytes": 234253,
+      "sha256": "f1a7a599b40e00fb9d8201cdf424e8a626913802d098d00ba6a563503d579b47"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00016.json",
+      "bytes": 235290,
+      "sha256": "65ae90a14b5a1c09bcb6c7540bfe2fcea7ca7a3b0f49546ab3d29ce872b3d4c7"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00017.json",
+      "bytes": 230664,
+      "sha256": "be2294eb904267057d161ced650d2994cfce510c5c78fdbe2bf0505c2408a37e"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00018.json",
+      "bytes": 236979,
+      "sha256": "5efeac76adfa56402ffa1d6835af68da8e049b776b81aa376132d18b03549a4b"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00019.json",
+      "bytes": 235564,
+      "sha256": "434342704c72edc6c5b1851758537b50b74ab9d874173fadab42d02b49f73b9d"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00020.json",
+      "bytes": 234565,
+      "sha256": "9eb6460d9cf8070de90c8fb36c1dabea6635d8bbab99cd5a515fd9831dd2d396"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00021.json",
+      "bytes": 231175,
+      "sha256": "f6a91e659fce3e29a01e6d053f6ac32f37112b34b6d043af9eeb8ed8222747af"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00022.json",
+      "bytes": 237793,
+      "sha256": "2ed14a8538f4f645058540167d26b5e153eb04c393ec5b6835c3a91bbe87fdad"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00023.json",
+      "bytes": 236629,
+      "sha256": "18710e37177bca94a0f9d798f53d9de96214ae1b933c39aa199aad0e9fdffeac"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00024.json",
+      "bytes": 236869,
+      "sha256": "5f4ac71e8b7d63e12924544a97114ff937d58a689c371d3cae76e39927f03af8"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00025.json",
+      "bytes": 237102,
+      "sha256": "37f72551a1b6d6900acea3c6afe83a87a612b8a425f3834d3d71a6ea31aa949f"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\review_evidence\\video_analysis_00026.json",
+      "bytes": 220994,
+      "sha256": "2a4fa97d2b43f311aaba3abe0951de657a206a628ca52cb393f00694d8be3e22"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\STORIES_PACKAGE\\stories_manifest.json",
+      "bytes": 31838,
+      "sha256": "761f830df92959e8681d6a89e535f87cd09f56d323f1d04bb39fde9c1c615524"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\subtitle_review_s7\\subtitle_human_review.csv",
+      "bytes": 184,
+      "sha256": "506bc513a20501326fb0712d19ac1f8ca57bc68dc26c5b1685f3c00dcba8f66c"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\subtitle_review_s7\\subtitle_review_s7.json",
+      "bytes": 1932691,
+      "sha256": "f62f7ffa9d7c6fef6213dc963b1e336ff1e6d1e3e08e842473135123a51ff9ac"
+    },
+    {
+      "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\subtitle_review_s7\\targeted_manual_review.json",
+      "bytes": 526,
+      "sha256": "57ff6ba1f25035363782870ed8cb9bd5ac37e5fa8a3c62c67e85225c7c60a700"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+paths:
+  analysis_root: ../LDPORTO_VIDEO_ANALYZER/analysis
+  output_root: ./output
+  source_cache: ./source_cache
+curation:
+  min_duration: 30
+  max_duration: 120
+  max_approved_clips: 12
+  use_human_overrides: true
+  context_seconds: 25
+  overlap_threshold: 0.72
+ollama:
+  enabled: true
+  base_url: http://127.0.0.1:11434
+  model: qwen3:14b
+  timeout_seconds: 600
+  num_ctx: 32768
+  num_predict: 4096
+  temperature: 0
+  top_k: 40
+  top_p: 0.9
+  repeat_penalty: 1.05
+  seed: 42
+  keep_alive: 15m
+render:
+  preview_width: 540
+  preview_height: 960
+  final_width: 1080
+  final_height: 1920
+  quality: QUALITY
+  prefer_nvenc: true
+  fps_mode: source
+  audio_lufs: -14
+  audio_true_peak: -1.5
+subtitles:
+  font: Segoe UI
+  font_size_final: 72
+  font_size_preview: 36
+  max_lines: 2
+  margin_v_final: 320
+  outline_final: 6
+  shadow_final: 2
+  highlight_current_word: true
+title:
+  duration: 3.2
+  font_size_final: 64
+  font_size_min_final: 48
+  top_margin_final: 92
+  card_max_width_ratio: 0.84
+  card_padding_x: 34
+  card_padding_y: 20
+  card_radius: 28
+  card_shadow_offset: 6
+  line_spacing: 9
+  fade_ms: 180
+camera:
+  strategy: speaker_aware_conservative
+  min_decision_seconds: 0.85
+  adaptive_timeline: true
+  speaker_aware: true
+  observation_window_seconds: 0.90
+  observation_min_coverage: 0.45
+  lip_min_samples: 3
+  lip_min_activity: 0.035
+  lip_activity_margin: 1.35
+  question_focus_heuristic: true
+  question_focus_lookahead_seconds: 9.0
+  question_focus_match_x: 0.16
+  uncertain_two_faces: split_screen
+  group_fallback: full_frame_blur
+  motion_follow: true
+  motion_keyframe_seconds: 0.90
+  motion_ema_alpha: 0.42
+  motion_deadzone_x: 0.012
+  motion_deadzone_y: 0.015
+  max_pan_speed_per_second: 0.18
+  max_tilt_speed_per_second: 0.12
+  motion_simplify_x: 0.010
+  motion_simplify_y: 0.012
+  motion_simplify_zoom: 0.007
+  subject_screen_y: 0.38
+  smart_zoom: true
+  min_zoom: 1.00
+  max_zoom: 1.13
+  zoom_face_height_small: 0.10
+  zoom_face_height_large: 0.30
+  zoom_speaker_bonus: 0.012
+  zoom_lip_threshold: 0.20
+  zoom_lip_bonus: 0.008
+  zoom_motion_speed_threshold: 0.10
+  zoom_motion_widening: 0.025
+  zoom_max_step: 0.012
+  enable_split_screen: true
+thumbnail:
+  candidate_count: 9
+  jpeg_quality: 95
+safety:
+  require_first_test_approval_before_batch: true

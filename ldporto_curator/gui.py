@@ -516,8 +516,11 @@ class App(tk.Tk):
                     doc = p.revise_plan(source_input, render_config=cfg_snapshot)
                     write('CONFIGURAÇÕES APLICADAS À REVISÃO ' + str(doc['plan_revision']) + '. Gere e aprove um novo preview.')
                 elif kind == 'all':
-                    p.render_all(source_input, preview=False)
-                    write('LOTE FINAL CONCLUÍDO.')
+                    from .combined_batch import render_combined_batch
+                    result = render_combined_batch(p, source_input)
+                    write('REELS + STORIES: lote organizado; ' + str(result['finals']) +
+                          ' Stories finais revisados, ' + str(result['previews_pending']) +
+                          ' Stories em prévia para aprovação. Ver LOTE_STORIES_EM_ORDEM.json.')
             except Exception as e:
                 from .source_video import SourceUnavailable
                 if isinstance(e, SourceUnavailable):

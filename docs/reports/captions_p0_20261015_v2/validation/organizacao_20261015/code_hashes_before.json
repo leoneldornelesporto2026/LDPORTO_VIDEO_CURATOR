@@ -1,0 +1,739 @@
+{
+  "files": [
+    {
+      "path": "ldporto_curator/__init__.py",
+      "bytes": 22,
+      "mtime_ns": 1791320234590019300,
+      "protected": false,
+      "sha256": "179996d3ba52c86aea0cd636121afe5290f3a41b4df85b185344066567fa3c91"
+    },
+    {
+      "path": "ldporto_curator/analysis_loader.py",
+      "bytes": 3485,
+      "mtime_ns": 1791330755514172300,
+      "protected": false,
+      "sha256": "b4399ab9676a1f9e5f360e779f031a150b468ac5a63019ccc358bd7a543eb8fb"
+    },
+    {
+      "path": "ldporto_curator/approval.py",
+      "bytes": 3057,
+      "mtime_ns": 1791950212803674100,
+      "protected": false,
+      "sha256": "4a7b23788c752dae97dc2354564647407f50a0aa5c244038025991715691e8f4"
+    },
+    {
+      "path": "ldporto_curator/broadcast_graphics.py",
+      "bytes": 4819,
+      "mtime_ns": 1791329676899416100,
+      "protected": false,
+      "sha256": "7f9c9bff1eff73a95ca9fb0573381c2b900eed679f3d0dff15927131fcacea3e"
+    },
+    {
+      "path": "ldporto_curator/camera.py",
+      "bytes": 37433,
+      "mtime_ns": 1791320234551566500,
+      "protected": false,
+      "sha256": "9f08ce040c1b79fc7cb10ea6f7814b102ef6e4449479dd05617aa84e584ec917"
+    },
+    {
+      "path": "ldporto_curator/camera_evidence.py",
+      "bytes": 3117,
+      "mtime_ns": 1791329551313321800,
+      "protected": false,
+      "sha256": "66b7f22836f5b8618972cdbfd22261cc6420511fd31fc8080ba290921f5c0874"
+    },
+    {
+      "path": "ldporto_curator/camera_geometry.py",
+      "bytes": 4549,
+      "mtime_ns": 1791288967378254000,
+      "protected": false,
+      "sha256": "bb1f9d336324ef57a98a488e758f12c6642654e9505f79a969fda5798da7a0bc"
+    },
+    {
+      "path": "ldporto_curator/camera_motion.py",
+      "bytes": 9100,
+      "mtime_ns": 1791288967349744100,
+      "protected": false,
+      "sha256": "ea46a014f0d7bb65e72ee7513be190841cea40ce234252844a98dcd44b78b4ce"
+    },
+    {
+      "path": "ldporto_curator/camera_refinement.py",
+      "bytes": 14733,
+      "mtime_ns": 1791333526153825500,
+      "protected": false,
+      "sha256": "e068f34abbab44a12c1e7273eef8ac469abcda9170f0c4125261370ea228a6be"
+    },
+    {
+      "path": "ldporto_curator/camera_verifier.py",
+      "bytes": 2853,
+      "mtime_ns": 1791331694896699200,
+      "protected": false,
+      "sha256": "971a5429896812877ddcc61b27312edb1acd00b13caa07badbe6039fa844c8fe"
+    },
+    {
+      "path": "ldporto_curator/combined_batch.py",
+      "bytes": 12090,
+      "mtime_ns": 1792099518000000000,
+      "protected": false,
+      "sha256": "4dc6bfad6ecacdef1bb267f13a58eee246bc65939a2b565aa2bb9508b46940f1"
+    },
+    {
+      "path": "ldporto_curator/config.py",
+      "bytes": 437,
+      "mtime_ns": 1791320234555565800,
+      "protected": false,
+      "sha256": "8bc0f83d1ddd6e53c922c109cc806431b2ff066a2d8b82dbfd8d73c2a431d113"
+    },
+    {
+      "path": "ldporto_curator/crop_editor.py",
+      "bytes": 25226,
+      "mtime_ns": 1791938132470255800,
+      "protected": false,
+      "sha256": "f9391127b816d96021c6054b81bcfecbc90f13aca8b2e3d63052e4a9f73a6796"
+    },
+    {
+      "path": "ldporto_curator/curator.py",
+      "bytes": 7660,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "4a4c61021eaab53aef516e7653ade07b27155317ac365d3fb818a1b10aa76eb2"
+    },
+    {
+      "path": "ldporto_curator/director_config.py",
+      "bytes": 9455,
+      "mtime_ns": 1791329215729949700,
+      "protected": false,
+      "sha256": "21d8f3df9ad891058f5b2f49756ead2e6648fad528f80aff83db5c66a876b06a"
+    },
+    {
+      "path": "ldporto_curator/duration_presets.py",
+      "bytes": 3333,
+      "mtime_ns": 1792079344000000000,
+      "protected": false,
+      "sha256": "86d3c2012433eb18dfda614ff1fadfc88f23e6d498863a10c38834b25b5d2ac6"
+    },
+    {
+      "path": "ldporto_curator/editing_history.py",
+      "bytes": 8889,
+      "mtime_ns": 1791937745111930000,
+      "protected": false,
+      "sha256": "d26723ed217569d7477c0c552fa01a8da0ba868b1ce2c4a39a79aef75560beb6"
+    },
+    {
+      "path": "ldporto_curator/editorial_copy.py",
+      "bytes": 12530,
+      "mtime_ns": 1791938050267218900,
+      "protected": false,
+      "sha256": "93a71ad96f070ac8f12a42889152f713f5bc3c15ededb75b2ed7e941391a581f"
+    },
+    {
+      "path": "ldporto_curator/episode_approval.py",
+      "bytes": 4443,
+      "mtime_ns": 1791935228963967100,
+      "protected": false,
+      "sha256": "02aa459c24ae980fe7df010e13c6abf80c6696249728822f76f5939155863584"
+    },
+    {
+      "path": "ldporto_curator/eta.py",
+      "bytes": 3878,
+      "mtime_ns": 1791334171487518800,
+      "protected": false,
+      "sha256": "5dce7c63a6456e6049643bd807e418b828a1b24aa76798b1ea2e0917ce824e31"
+    },
+    {
+      "path": "ldporto_curator/evidence_source.py",
+      "bytes": 28138,
+      "mtime_ns": 1791934162178260300,
+      "protected": false,
+      "sha256": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f"
+    },
+    {
+      "path": "ldporto_curator/feedback.py",
+      "bytes": 3339,
+      "mtime_ns": 1791333785502216400,
+      "protected": false,
+      "sha256": "707fbdfc7950630a4f32ae6586afd1612f87fd010f5f7d64794db1f091b69d19"
+    },
+    {
+      "path": "ldporto_curator/final_camera.py",
+      "bytes": 4203,
+      "mtime_ns": 1792080662000000000,
+      "protected": false,
+      "sha256": "3f2bd7a485f24df56b62b79a265866cd241fc1082ffbd23f4e998a292259bdc1"
+    },
+    {
+      "path": "ldporto_curator/full_handoff.py",
+      "bytes": 21651,
+      "mtime_ns": 1791934872374231700,
+      "protected": false,
+      "sha256": "9c3e8737ed6cabcfe03e9814af2df8f9d569be663d921622e5840d0137d19231"
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "bytes": 29952,
+      "mtime_ns": 1792099518000000000,
+      "protected": false,
+      "sha256": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e"
+    },
+    {
+      "path": "ldporto_curator/import_smoke.py",
+      "bytes": 2496,
+      "mtime_ns": 1791937271072995100,
+      "protected": false,
+      "sha256": "2181578ff95feb5e84a5039fe32ed9712b55a0d7ddcff05e98db4eca5e0618cf"
+    },
+    {
+      "path": "ldporto_curator/interview_layout.py",
+      "bytes": 1040,
+      "mtime_ns": 1791329215727950500,
+      "protected": false,
+      "sha256": "067c397975797c5edf4bae04c5fba94dec9f691418a7667bb5428c30bf748c55"
+    },
+    {
+      "path": "ldporto_curator/local_player.py",
+      "bytes": 4397,
+      "mtime_ns": 1791934283956662800,
+      "protected": false,
+      "sha256": "ae56b96cdeae3ad2db2328a30de9ba0bc3d7b96220282cc14ea28984990a5987"
+    },
+    {
+      "path": "ldporto_curator/media_effects.py",
+      "bytes": 10035,
+      "mtime_ns": 1791934262398529800,
+      "protected": false,
+      "sha256": "01577b0cd45194bd64a7e9105b033e9d8164d587ed06f6a07d0025927d9f6448"
+    },
+    {
+      "path": "ldporto_curator/micro_perception.py",
+      "bytes": 8372,
+      "mtime_ns": 1791337301172146200,
+      "protected": false,
+      "sha256": "dc2dc3897564d233080ffce0b242eec7703fad6cef04814336fdc3b318d0d5ed"
+    },
+    {
+      "path": "ldporto_curator/ollama_client.py",
+      "bytes": 3935,
+      "mtime_ns": 1791950677388819300,
+      "protected": false,
+      "sha256": "801daaf673611cdabb2f29bf97d6b5e34685ebe30d3baee2a554664610b1889d"
+    },
+    {
+      "path": "ldporto_curator/persisted_plan.py",
+      "bytes": 21344,
+      "mtime_ns": 1791950288072083000,
+      "protected": false,
+      "sha256": "ee567af11581a0231aae2915466f404922d5df60c833ee1b02e6d2ce84e7f497"
+    },
+    {
+      "path": "ldporto_curator/pipeline.py",
+      "bytes": 32636,
+      "mtime_ns": 1791951582387936700,
+      "protected": false,
+      "sha256": "b20bc425653c9810b836015c9c7869d9ce9b728908be5c00e5a3ff771615577c"
+    },
+    {
+      "path": "ldporto_curator/pipeline_recovery.py",
+      "bytes": 4186,
+      "mtime_ns": 1791950947576028700,
+      "protected": false,
+      "sha256": "99cefe3018da001c3c3c63bddc79408a8bdb6209202324fff67f25dff004c92f"
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "bytes": 19368,
+      "mtime_ns": 1791950526160727300,
+      "protected": false,
+      "sha256": "34645ad935d5a8b2ffb8bbc7e90f42f95cc21e32fc383a5b577275c4782c0c45"
+    },
+    {
+      "path": "ldporto_curator/review.py",
+      "bytes": 4091,
+      "mtime_ns": 1791950733385930100,
+      "protected": false,
+      "sha256": "624b4fd996a3edc7baca5e8d2cc9ed8e6f98a550ed258af9b118420ca68c950a"
+    },
+    {
+      "path": "ldporto_curator/second_curation_decisions.py",
+      "bytes": 7213,
+      "mtime_ns": 1791331903382162700,
+      "protected": false,
+      "sha256": "b7e10f1ff08a76f34c8ecca3bebda581b438fcf0cd6caeef7899785620ad7fce"
+    },
+    {
+      "path": "ldporto_curator/second_curation_import.py",
+      "bytes": 8367,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "caf614244e922cbc4d621182ef5cb1f86d13cd0f43898e5e4b671461d4fd79d1"
+    },
+    {
+      "path": "ldporto_curator/series_planner.py",
+      "bytes": 57283,
+      "mtime_ns": 1791938099286617500,
+      "protected": false,
+      "sha256": "2603aea28d2647446996057b97ed8ac13e31df44e75d84adc9d2febd84154db0"
+    },
+    {
+      "path": "ldporto_curator/series_review.py",
+      "bytes": 38293,
+      "mtime_ns": 1792079344000000000,
+      "protected": false,
+      "sha256": "c46191b1f1344949cc8abe01a67afe61f2f328b677e8445df61ad38a308290bf"
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "bytes": 32085,
+      "mtime_ns": 1792079136000000000,
+      "protected": false,
+      "sha256": "d64efe5574dfc70f31cae7281c3c0904ba657c839d600aac96a8846ac3f89b01"
+    },
+    {
+      "path": "ldporto_curator/smart_composition.py",
+      "bytes": 9553,
+      "mtime_ns": 1792080330000000000,
+      "protected": false,
+      "sha256": "2b7214fc0a8a972e428615adcba90b06bc35504da84bad3a03b03891708c85be"
+    },
+    {
+      "path": "ldporto_curator/source_video.py",
+      "bytes": 2317,
+      "mtime_ns": 1791331694897698700,
+      "protected": false,
+      "sha256": "5251db6683e15d9c14d4ae28fe56aa4cf2528b9e0234afd3b9fb5a5da5070351"
+    },
+    {
+      "path": "ldporto_curator/storage.py",
+      "bytes": 4824,
+      "mtime_ns": 1791333515307765200,
+      "protected": false,
+      "sha256": "1d343bcd3ca2b060b2bc6e6be7d99624022f942547a3771dfa2fee1bc1a161fa"
+    },
+    {
+      "path": "ldporto_curator/storage_dialog.py",
+      "bytes": 3087,
+      "mtime_ns": 1791333049848875200,
+      "protected": false,
+      "sha256": "10df8cebc5b5046d57094b90a8ccbd62eb4ad47ce92e1cb543d10cf6e771eb4a"
+    },
+    {
+      "path": "ldporto_curator/story_import.py",
+      "bytes": 10707,
+      "mtime_ns": 1792099518000000000,
+      "protected": false,
+      "sha256": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395"
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "bytes": 25432,
+      "mtime_ns": 1791934537439935800,
+      "protected": false,
+      "sha256": "bee209a3be54bfdf5807e0c846a1b712335dcfa7fca22fc9e80f3b6c8f11b496"
+    },
+    {
+      "path": "ldporto_curator/subtitles.py",
+      "bytes": 9465,
+      "mtime_ns": 1792078812000000000,
+      "protected": false,
+      "sha256": "8f62d70e042685ae62fba7bfb09149f2bb7171d9bfe64ac1e815a9c4014a7977"
+    },
+    {
+      "path": "ldporto_curator/temporal.py",
+      "bytes": 3034,
+      "mtime_ns": 1791288967395255800,
+      "protected": false,
+      "sha256": "f1c637e879eadd8878edee530f93b980f8d699f2f26f76753841340651d29ca5"
+    },
+    {
+      "path": "ldporto_curator/thumbnail_presets.py",
+      "bytes": 13341,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "56bdcf100316de92382c393437eb1ff405290d82bea62a6d43a5c368769b84ed"
+    },
+    {
+      "path": "ldporto_curator/thumbnails.py",
+      "bytes": 2772,
+      "mtime_ns": 1791320234607017500,
+      "protected": false,
+      "sha256": "12376087615586b318d8d6a4325b6fef7a48e13e916273ef1d176821e8a483f2"
+    },
+    {
+      "path": "ldporto_curator/timeline_editor.py",
+      "bytes": 9183,
+      "mtime_ns": 1791937583339339400,
+      "protected": false,
+      "sha256": "a3df9749a9919bd742e8705407c81335b1d39a82f58eed9281722e2ed3f4eb95"
+    },
+    {
+      "path": "ldporto_curator/title_card.py",
+      "bytes": 5518,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "5d574ab63c878ad2dbc6bd12bbefa6b983a35d420282053a03d80287c68b5ddc"
+    },
+    {
+      "path": "ldporto_curator/title_presets.py",
+      "bytes": 2696,
+      "mtime_ns": 1791935228962463800,
+      "protected": false,
+      "sha256": "4f39e379df77026ce7a762c991acccc254c89186af061025a950e1b80a1760c1"
+    },
+    {
+      "path": "ldporto_curator/utils.py",
+      "bytes": 1798,
+      "mtime_ns": 1791330380038052600,
+      "protected": false,
+      "sha256": "97e0abc5cf9f9a40eb67be14355054a22acb52558c62c5bc1900a71554881604"
+    },
+    {
+      "path": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+      "bytes": 5084,
+      "mtime_ns": 1792080844000000000,
+      "protected": false,
+      "sha256": "2bc4ee159f3e62efc8af45d1fdb87223df09d01a19c37e49f1db59f21cf21aaa"
+    },
+    {
+      "path": "scripts/capture_render_p0_ui.py",
+      "bytes": 10216,
+      "mtime_ns": 1791951101888994600,
+      "protected": false,
+      "sha256": "194cef18b5d2f3e6d296bcb4a81b6c4e1918c96072c4a193b6b2f4dee426c280"
+    },
+    {
+      "path": "scripts/capture_v5_ui.py",
+      "bytes": 1960,
+      "mtime_ns": 1791934771316347400,
+      "protected": false,
+      "sha256": "166193e277195aebbb7e72786cf9ed5cdcf474853e393c845f7037198efd65e5"
+    },
+    {
+      "path": "scripts/demo_curator_v5.py",
+      "bytes": 9162,
+      "mtime_ns": 1791935101332481600,
+      "protected": false,
+      "sha256": "82d93f6cd0a4fc88cef6291667ba2484dc403fbe44da19e52b7ea49383eb728c"
+    },
+    {
+      "path": "scripts/demo_speech.ps1",
+      "bytes": 1030,
+      "mtime_ns": 1791933992381165800,
+      "protected": false,
+      "sha256": "b2d36cf8af5ddc5ba83e338aa0474db0eb094493bd4d47a141b3fdc165ed34f7"
+    },
+    {
+      "path": "scripts/validate_curator_v5.py",
+      "bytes": 7156,
+      "mtime_ns": 1791935311901542000,
+      "protected": false,
+      "sha256": "93543d5366313d0e9a358015a085eeefe4986bc36b9697c8802610001dbb6149"
+    },
+    {
+      "path": "scripts/validate_render_p0.py",
+      "bytes": 15425,
+      "mtime_ns": 1791950489643815900,
+      "protected": false,
+      "sha256": "b36fcb33c2a69c60c1b06d124a36f08bb102610dadd5746f944e6f5f0a7b5ffe"
+    },
+    {
+      "path": "scripts/validate_v44_promoted_preview.py",
+      "bytes": 983,
+      "mtime_ns": 1791331790241923500,
+      "protected": false,
+      "sha256": "75362d0d609a3aaf71aadbd809a27117eaba412f2aef9401a6806564a3a55eac"
+    },
+    {
+      "path": "scripts/validate_v44_real_clips.py",
+      "bytes": 2889,
+      "mtime_ns": 1791331422354505000,
+      "protected": false,
+      "sha256": "eb837109e43e85bac45460a6d4f061e44f1c9524a53934adf7e64c3488eeb870"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/analysis.json",
+      "bytes": 186151,
+      "mtime_ns": 1791320234771534400,
+      "protected": false,
+      "sha256": "65c019cc98204c6f9943a770286e9e21d96adc3f19e79e57207210c0a0d5ef66"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/caption_segments.json",
+      "bytes": 927435,
+      "mtime_ns": 1791320234776535300,
+      "protected": false,
+      "sha256": "ad15adba73a4797164b0442f3fcefdbcae61155390319717e26013007723a078"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/editorial_moments.json",
+      "bytes": 510081,
+      "mtime_ns": 1791320234781040400,
+      "protected": false,
+      "sha256": "bc6d582800a4744b42cd4da2392076a7aaf247d88055250e88f5ffc020ac6880"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/ollama_editorial_review.json",
+      "bytes": 4416,
+      "mtime_ns": 1791320234785040300,
+      "protected": false,
+      "sha256": "3c028b0fa7bdf752b6aa90635403847f90a174ccd059df42ea7fe0eae6e074c4"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/scenes.json",
+      "bytes": 71839,
+      "mtime_ns": 1791320234788040300,
+      "protected": false,
+      "sha256": "a60ddf1e8f2dc630521c62b71b9b5ba452f5b30f27afab4220a35d0af7fba202"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/timeline.json",
+      "bytes": 1128314,
+      "mtime_ns": 1791320234795041700,
+      "protected": false,
+      "sha256": "03bd8307c086ea46046d61b17f7a4ca5102e420389a9cc321f74aeeacdd1ece4"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/video_analysis.json",
+      "bytes": 2230939,
+      "mtime_ns": 1791320234804042200,
+      "protected": false,
+      "sha256": "03f3153a4752e441f4d02995ad47b317ff323d61d40571732a60ea8b79788abb"
+    },
+    {
+      "path": "tests/fixture/video_87cfcb5f5347/words.json",
+      "bytes": 1513960,
+      "mtime_ns": 1791320234810041300,
+      "protected": false,
+      "sha256": "a908b8e8518d3781ea32e904c573258faa96d34d37d9fdab5501e04b6953aca1"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 9275,
+      "mtime_ns": 1791320234767535000,
+      "protected": false,
+      "sha256": "1733a84eba8b2134110501c9f3d921527450daf3dfe910774c6384fe8f05ea8f"
+    },
+    {
+      "path": "tests/test_episode_approval.py",
+      "bytes": 8906,
+      "mtime_ns": 1791934285138941800,
+      "protected": false,
+      "sha256": "67cdc757f2ffc5de45325bef37a23ddaa1ab9f7143c1bef094c3bf52d3d823e3"
+    },
+    {
+      "path": "tests/test_evidence_source.py",
+      "bytes": 9267,
+      "mtime_ns": 1791934062676814900,
+      "protected": false,
+      "sha256": "d052fb55c2e2c85134ff3abba133fada4827c58c07770edbcc611a4824ff325d"
+    },
+    {
+      "path": "tests/test_full_handoff.py",
+      "bytes": 9234,
+      "mtime_ns": 1791933985392533500,
+      "protected": false,
+      "sha256": "7f94b197bf54b4d6c4ef1dd33a9a17351274ddd41eea6789aefc94888af6edc0"
+    },
+    {
+      "path": "tests/test_handoff_media_privacy.py",
+      "bytes": 1334,
+      "mtime_ns": 1791934833436366900,
+      "protected": false,
+      "sha256": "18771304a96d2b304aa2a026c2e3434bae251c592e0d134e152687854691a484"
+    },
+    {
+      "path": "tests/test_media_effects.py",
+      "bytes": 7075,
+      "mtime_ns": 1791934235034003400,
+      "protected": false,
+      "sha256": "f3ff0ed9fc07c9f6f108b283bbcd8b52d6eb3a08efa59fec1db9845ee56e8794"
+    },
+    {
+      "path": "tests/test_p0_editorial_response.py",
+      "bytes": 3320,
+      "mtime_ns": 1791950800521425400,
+      "protected": false,
+      "sha256": "8155f13b2677c1b74c24fd528036878bc26aebdf6e0fc0f78449b00003135a63"
+    },
+    {
+      "path": "tests/test_p0_gui.py",
+      "bytes": 16445,
+      "mtime_ns": 1792077234000000000,
+      "protected": false,
+      "sha256": "5bae37dbb79c2ac8c816ef1177a3158c8f8f11f3eb36c3d7a64d7c3c046f7633"
+    },
+    {
+      "path": "tests/test_p0_legacy_recovery.py",
+      "bytes": 4841,
+      "mtime_ns": 1791950947585533600,
+      "protected": false,
+      "sha256": "b8f5d892fad984a834bc6b82a599869b7b572d297fdaca5c16397a69ae54066f"
+    },
+    {
+      "path": "tests/test_p0_pipeline.py",
+      "bytes": 26923,
+      "mtime_ns": 1791951241164927300,
+      "protected": false,
+      "sha256": "46c1fcc245e78f1bfea7b74f5dd061779c185aec1c89fec7f13658374de8f739"
+    },
+    {
+      "path": "tests/test_p0_plan_store.py",
+      "bytes": 17929,
+      "mtime_ns": 1791950339896409400,
+      "protected": false,
+      "sha256": "f6a7bf3a58ac7a7e4af31bbbbb0feca4626e2e6df041bdd35472ba3754f1fd2c"
+    },
+    {
+      "path": "tests/test_progress.py",
+      "bytes": 742,
+      "mtime_ns": 1791320166394696700,
+      "protected": false,
+      "sha256": "b64980c13b701e513d18eb10f5be9195fac986ce79418138849f5c949b14a856"
+    },
+    {
+      "path": "tests/test_safe_camera_maps.py",
+      "bytes": 4414,
+      "mtime_ns": 1791933963855140400,
+      "protected": false,
+      "sha256": "cacb6b0cfeeaf210a5183a7c60a38c0d55ce4d6a9443cdef12dab08eb40a23e9"
+    },
+    {
+      "path": "tests/test_semantic_split.py",
+      "bytes": 5934,
+      "mtime_ns": 1791934635277985400,
+      "protected": false,
+      "sha256": "ad080735d5674ac54f66ce6465acd3e5e37e44532bae74f36d3ee21fc461977f"
+    },
+    {
+      "path": "tests/test_series_workflow.py",
+      "bytes": 5700,
+      "mtime_ns": 1792044892000000000,
+      "protected": false,
+      "sha256": "67e0fe7a29f3fb2e71094b039ff54c81ce38c334b4f7eae597ff5defa3864187"
+    },
+    {
+      "path": "tests/test_smart_composition.py",
+      "bytes": 6691,
+      "mtime_ns": 1792080516000000000,
+      "protected": false,
+      "sha256": "d4546145b8f91abad50406ca43d0af75afa624abfb23bfb87a51f742d3dddfcb"
+    },
+    {
+      "path": "tests/test_stories_60s_import.py",
+      "bytes": 3576,
+      "mtime_ns": 1792079300000000000,
+      "protected": false,
+      "sha256": "d93258fcc4e5e8d779bbabd986a0d0a2708be022629ac6bdc8b8a987643b7d1d"
+    },
+    {
+      "path": "tests/test_subtitle_readability.py",
+      "bytes": 8123,
+      "mtime_ns": 1791934561178926300,
+      "protected": false,
+      "sha256": "7ceee1a8bb338bab5c605fa19b44f8df3d8a4c6231041fc48e4fcd9afb7b650c"
+    },
+    {
+      "path": "tests/test_subtitle_word_alignment.py",
+      "bytes": 8120,
+      "mtime_ns": 1791933801420461600,
+      "protected": false,
+      "sha256": "78ab39e7211fcdf05a5813a5631f5548a5096afd8a5d349f40d24177127c45e0"
+    },
+    {
+      "path": "tests/test_thumbnail_presets.py",
+      "bytes": 5354,
+      "mtime_ns": 1792044796000000000,
+      "protected": false,
+      "sha256": "88490ff31ec3842f407834419eff6352e8adc0ebdf9dcbd2af16d87f0cd87482"
+    },
+    {
+      "path": "tests/test_title_presets.py",
+      "bytes": 1484,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "fa820b44579bf8b41e7ce46c377a9d939e0053287c80bef6172e54a045f3162b"
+    },
+    {
+      "path": "tests/test_v44_approval.py",
+      "bytes": 1877,
+      "mtime_ns": 1791332119574478400,
+      "protected": false,
+      "sha256": "37e196845f79915226d8f378af42518b76eabcaf7471728c6f16d06585c42560"
+    },
+    {
+      "path": "tests/test_v44_feedback.py",
+      "bytes": 896,
+      "mtime_ns": 1791333772790428600,
+      "protected": false,
+      "sha256": "4d48e8d59adf791fd94ab41f82505d60991dcaa8933ada4114bbb23ae2f1b2a9"
+    },
+    {
+      "path": "tests/test_v44_ingestion.py",
+      "bytes": 3937,
+      "mtime_ns": 1792044772000000000,
+      "protected": false,
+      "sha256": "a3c8a63a9a344cdd58aad3d47b63c387a711eb7f9328767955cc641e409f2539"
+    },
+    {
+      "path": "tests/test_v44_micro_camera.py",
+      "bytes": 7378,
+      "mtime_ns": 1791337264972098700,
+      "protected": false,
+      "sha256": "a4c7f6821d60ee8f5c204b963c290af5cc00a11395641ab766904dd42714454a"
+    },
+    {
+      "path": "tests/test_v44_ops.py",
+      "bytes": 1889,
+      "mtime_ns": 1791334161112864800,
+      "protected": false,
+      "sha256": "b4b28e251be283f9e4c1a50a9192ed2b3ee1441095211a34b583ba8c796273fe"
+    },
+    {
+      "path": "tests/test_v44_render_graphics.py",
+      "bytes": 2205,
+      "mtime_ns": 1791331482040456000,
+      "protected": false,
+      "sha256": "38f849a6389a73f75fc65dbaf7caf80bf5549b383203eaf71f0a994a6ca49bd1"
+    },
+    {
+      "path": "tests/test_v52_history.py",
+      "bytes": 16639,
+      "mtime_ns": 1791937803332648700,
+      "protected": false,
+      "sha256": "310d3b1d3e2610a93914e5ff6e7a8bd953e7224617e68ab317fcc41a59c29912"
+    },
+    {
+      "path": "tests/test_v52_import_smoke.py",
+      "bytes": 2605,
+      "mtime_ns": 1791937271072995100,
+      "protected": false,
+      "sha256": "6bf3d619d284e8f9135123c2180d948ef14ba0da976c4c1d019aaeba66dadfff"
+    },
+    {
+      "path": "tests/test_v52_timeline.py",
+      "bytes": 1610,
+      "mtime_ns": 1791937432361999100,
+      "protected": false,
+      "sha256": "df00e52ec66bb8c50f2c863ff0bdb3f60271a53eb1b5e7bbe941bc1c82d68cfd"
+    },
+    {
+      "path": "tests/test_v52_visual_callbacks.py",
+      "bytes": 2011,
+      "mtime_ns": 1791937673895008800,
+      "protected": false,
+      "sha256": "965e18be11bb84fd432339678fdbe9455a24738f58af3bc99c3938dc55544818"
+    },
+    {
+      "path": "tests/test_v5_series_planner.py",
+      "bytes": 17989,
+      "mtime_ns": 1791934017823565600,
+      "protected": false,
+      "sha256": "7337f405b9ab5c9e30b7bdf244e6773b792ca319bf04ff58e2c6adaf9462da16"
+    },
+    {
+      "path": "tests/test_windows_gui_workflows.py",
+      "bytes": 16874,
+      "mtime_ns": 1791934681715025100,
+      "protected": false,
+      "sha256": "1954fcd4d6a85a47a2081bc5fbe4f5c561c79bd0b31af0f180d9d72a06382e61"
+    }
+  ]
+}

@@ -24,13 +24,12 @@ def test_word_events_preserve_real_gap_and_source_and_relative_timestamps(tmp_pa
     assert sync["alignment"] == "word"
     assert [(event["start"], event["end"], event["active_word_ids"]) for event in sync["events"]] == [
         (pytest.approx(.2), pytest.approx(.7), ["w1"]),
-        (pytest.approx(.7), pytest.approx(.8), []),
         (pytest.approx(.8), pytest.approx(1.8), ["w2"])]
     ass = Path(result["ass"]).read_text(encoding="utf-8-sig")
-    assert "0:00:00.70,0:00:00.80" in ass
+    assert "0:00:00.70,0:00:00.80" not in ass
     assert "\\k" not in ass
     assert "Olá," in ass and "avião!" in ass
-    assert "Olá, avião!" in Path(result["srt"]).read_text(encoding="utf-8")
+    assert all(word["word"] in Path(result["srt"]).read_text(encoding="utf-8") for word in evidence()["words"])
 
 
 def test_clip_edges_clamp_word_events_without_fabricating_timestamps(tmp_path):
@@ -41,7 +40,8 @@ def test_clip_edges_clamp_word_events_without_fabricating_timestamps(tmp_path):
     assert words[0]["start"] == 0
     assert words[1]["end"] == pytest.approx(.8)
     assert all(0 <= event["start"] < event["end"] <= .8+1e-9 for event in result["sync"]["events"])
-    assert "00:00:00,000 --> 00:00:00,800" in Path(result["srt"]).read_text()
+    assert "00:00:00,000 --> 00:00:00,300" in Path(result["srt"]).read_text()
+    assert "00:00:00,400 --> 00:00:00,800" in Path(result["srt"]).read_text()
 
 
 def test_words_outside_cut_do_not_appear_in_rendered_caption(tmp_path):
@@ -72,7 +72,11 @@ def test_overlapping_word_intervals_remain_explicit(tmp_path):
     data=evidence()
     data["words"][1]["start"]=10.6
     result=write_episode_subtitles(data,{"source_start":10,"source_end":12},tmp_path)
-    assert any(event["active_word_ids"] == ["w1","w2"] for event in result["sync"]["events"])
+    sync = result["sync"]
+    assert sync["alignment"] == "segment" and sync["needs_human_review"]
+    assert sync["events"][0]["fallback_reason"] == "overlapping_word_timestamps"
+    assert sync["events"][0]["word_ids"] == ["w1", "w2"]
+    assert sync["events"][0]["active_word_ids"] == []
 
 
 def test_literal_ass_characters_and_uppercase_remain_separate_from_transcript(tmp_path):
@@ -113,7 +117,7 @@ def test_no_subtitles_is_explicit_choice_with_transcript_still_exported(tmp_path
     result=write_episode_subtitles(evidence(),{"source_start":10,"source_end":12},tmp_path,preset="SEM_LEGENDA")
     assert result["sync"]["enabled"] is False
     assert "Dialogue:" not in Path(result["ass"]).read_text(encoding="utf-8-sig")
-    assert "Olá, avião!" in Path(result["srt"]).read_text(encoding="utf-8")
+    assert all(word["word"] in Path(result["srt"]).read_text(encoding="utf-8") for word in evidence()["words"])
 
 
 def test_ass_centisecond_rounding_handles_minute_rollover(tmp_path):

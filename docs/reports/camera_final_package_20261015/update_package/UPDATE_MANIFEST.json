@@ -1,0 +1,224 @@
+{
+  "schema": "LDP_CAMERA_PATCH_V1",
+  "created_at_utc": "2026-10-16T01:16:02.827180+00:00",
+  "baseline": "docs/reports/camera_final_20261015/code_before.json",
+  "baseline_sha256": "8e96c979e4803c9346f80c25d0f3ae735ce55d05c5a8e650c88e313f5ca57e10",
+  "files": [
+    {
+      "path": "docs/architecture/CAMERA_VERTICAL_SEGURA.md",
+      "sha256": "d7a7a44bef74a4f6f58a02f3cdeeeddd355a29b023c38da7d9e7f65b9f68cacb",
+      "before_sha256": null,
+      "bytes": 3669
+    },
+    {
+      "path": "docs/reports/camera_final_20261015/AUDITORIA_ORGANIZACAO.md",
+      "sha256": "b638434f0c6e26b4d0771f92cd08e29416c684b4fef5ee6d272952e0679916fb",
+      "before_sha256": null,
+      "bytes": 5907
+    },
+    {
+      "path": "docs/reports/camera_final_20261015/ENTREGA.md",
+      "sha256": "f56cc1252c640056b7ae0848f0b12f2f8f3248685ec600e4fd1dbf4988ca075e",
+      "before_sha256": null,
+      "bytes": 9695
+    },
+    {
+      "path": "docs/reports/camera_final_20261015/INSTALLER_VALIDATION.md",
+      "sha256": "6540110f8bbf7a55bf6e0872cd196e672553cee5c0c509ef3c194f5ba3088443",
+      "before_sha256": null,
+      "bytes": 2951
+    },
+    {
+      "path": "docs/reports/camera_final_20261015/PROTECAO_OUTPUT.md",
+      "sha256": "7b99faff135dd566e039d403f682a7466618a464f089b14d528a8badcdfa24fc",
+      "before_sha256": null,
+      "bytes": 8256
+    },
+    {
+      "path": "ldporto_curator/camera_evidence.py",
+      "sha256": "192e7a3384bc5b7b8399341128b3d5253567922c38b9f3bcee9f960fe36940ee",
+      "before_sha256": "66b7f22836f5b8618972cdbfd22261cc6420511fd31fc8080ba290921f5c0874",
+      "bytes": 3663
+    },
+    {
+      "path": "ldporto_curator/camera_geometry.py",
+      "sha256": "b857caa22c80b6ea17875aabfb888217754540876f09371861a353ebdc123e61",
+      "before_sha256": "bb1f9d336324ef57a98a488e758f12c6642654e9505f79a969fda5798da7a0bc",
+      "bytes": 5379
+    },
+    {
+      "path": "ldporto_curator/camera_metadata.py",
+      "sha256": "0f086c31455371a69a49b3752bcea663022d6f271856042bff51301795449fa6",
+      "before_sha256": null,
+      "bytes": 8344
+    },
+    {
+      "path": "ldporto_curator/camera_refinement.py",
+      "sha256": "06b89668e672015122f1a206bd0de276b63b346e6eb24a18d8248ae74e60f3a6",
+      "before_sha256": "e068f34abbab44a12c1e7273eef8ac469abcda9170f0c4125261370ea228a6be",
+      "bytes": 14759
+    },
+    {
+      "path": "ldporto_curator/camera_revision.py",
+      "sha256": "5f56a66950463c4dda86ecd0817af8ed6d3749c7b918853f92bda84ce72de743",
+      "before_sha256": null,
+      "bytes": 7763
+    },
+    {
+      "path": "ldporto_curator/director_config.py",
+      "sha256": "22f36cbcbfe0c3ea7e0a0f85bfca165a9124cc25bf2e3c053bfc395021985e8a",
+      "before_sha256": "21d8f3df9ad891058f5b2f49756ead2e6648fad528f80aff83db5c66a876b06a",
+      "bytes": 9959
+    },
+    {
+      "path": "ldporto_curator/final_camera.py",
+      "sha256": "5c148a9d886aec57ea93cf68da7e3fadf6c8a2213f608ded54323e6c73cfb0cd",
+      "before_sha256": "3f2bd7a485f24df56b62b79a265866cd241fc1082ffbd23f4e998a292259bdc1",
+      "bytes": 8608
+    },
+    {
+      "path": "ldporto_curator/persisted_plan.py",
+      "sha256": "0c8a5485aead7badcbc0eab5ae0571ca576afb1f7dcc8547b6f8d02a890a063d",
+      "before_sha256": "ee567af11581a0231aae2915466f404922d5df60c833ee1b02e6d2ce84e7f497",
+      "bytes": 21493
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "sha256": "764e6c1042d74697acc201adcf00b454850e81af08e2570441b7f471689bc552",
+      "before_sha256": "27f0fb3bb8aec9e9c5668be345069da57e8a659f7c2c29dd3013749f58941359",
+      "bytes": 26728
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "sha256": "2611c62cd5a167de3c163c447b971ff51c219bffd3a6bc9907e1342f0c93ad44",
+      "before_sha256": "6c02fba2e37e757ee20ad83d31a7ff27a81159ef3224e74821a3b48cf04fdc5e",
+      "bytes": 57483
+    },
+    {
+      "path": "ldporto_curator/smart_composition.py",
+      "sha256": "9d72e94a3386aa12e59562fd17fef77b1c7a3ef12565aa49a87abc1b63ba7052",
+      "before_sha256": "2b7214fc0a8a972e428615adcba90b06bc35504da84bad3a03b03891708c85be",
+      "bytes": 19081
+    },
+    {
+      "path": "ldporto_curator/storage.py",
+      "sha256": "0c51705f96dbad38de1293588a70c3eac2b981436d6f54eae3896f4776e30cca",
+      "before_sha256": "1d343bcd3ca2b060b2bc6e6be7d99624022f942547a3771dfa2fee1bc1a161fa",
+      "bytes": 10592
+    },
+    {
+      "path": "ldporto_curator/storage_dialog.py",
+      "sha256": "b57a285feb89b7eba2597bc88167e744d71d4b92a64e50e8ae7ecab231f72d5a",
+      "before_sha256": "10df8cebc5b5046d57094b90a8ccbd62eb4ad47ce92e1cb543d10cf6e771eb4a",
+      "bytes": 2944
+    },
+    {
+      "path": "README.md",
+      "sha256": "cad196487bfb35a5700aa5b32d27d1c70cc230f384a1b1cb3c06bf077cd77351",
+      "before_sha256": "ee6b5ed9e71e5d170ca1adbfe77ca53163e5ef96ac21ab33f6b15cfa853cc2e8",
+      "bytes": 5462
+    },
+    {
+      "path": "scripts/build_camera_update.py",
+      "sha256": "a2584c873066a2cbb11b39abad11e2456859c8a41ce537cc2ece7dd9a0ed0a5f",
+      "before_sha256": null,
+      "bytes": 8405
+    },
+    {
+      "path": "scripts/INSTALL_CAMERA_FINAL.ps1",
+      "sha256": "70d4a92050827837982009b9aecfc5811045ff7311386b26a2c3b968f5febea1",
+      "before_sha256": null,
+      "bytes": 12227
+    },
+    {
+      "path": "scripts/REFINAR_CAMERA_EXISTENTE.py",
+      "sha256": "04d04a925a0491e20ce717a8752f710c7a900f6dd2e62c306c3e2f0ae7fdc434",
+      "before_sha256": null,
+      "bytes": 2946
+    },
+    {
+      "path": "scripts/render_camera_demos_hd.py",
+      "sha256": "2aaf94b1baccff7973f17b1878f553d8085e396bc776cd359fde5e06a1d9e147",
+      "before_sha256": null,
+      "bytes": 3876
+    },
+    {
+      "path": "scripts/REVISAR_CAMERA_SEM_QWEN.py",
+      "sha256": "f9b432aa17b84d1ebd9ce0d12c7b705377c67e08b91d20b385077ff8803bbc5b",
+      "before_sha256": "2bc4ee159f3e62efc8af45d1fdb87223df09d01a19c37e49f1db59f21cf21aaa",
+      "bytes": 7054
+    },
+    {
+      "path": "scripts/validate_camera_final_real.py",
+      "sha256": "e879934bcc240a053c19a7280d468a25fdb272018143dc1ea406db1bfa5612e3",
+      "before_sha256": null,
+      "bytes": 7855
+    },
+    {
+      "path": "tests/test_camera_final_refinement.py",
+      "sha256": "ae75886df2bcf4cda0f21089f02ab3c6734223a925db703ad36b8e2e47461c36",
+      "before_sha256": null,
+      "bytes": 15424
+    },
+    {
+      "path": "tests/test_camera_metadata.py",
+      "sha256": "17c0ab1e2ee7bc52dfff8d8340a1c30b2559767a74926a48d27f69c257c8f991",
+      "before_sha256": null,
+      "bytes": 6488
+    },
+    {
+      "path": "tests/test_camera_only_revision.py",
+      "sha256": "d2b1c8f4d584afb5bebff0054f5edf8d416d12cccbbc2f15c76003c5482e0e27",
+      "before_sha256": null,
+      "bytes": 6969
+    },
+    {
+      "path": "tests/test_camera_transitions.py",
+      "sha256": "dc592776fe47ccebb59d0445512f511bbb71dc909598ed401afb9daf3221d1e6",
+      "before_sha256": null,
+      "bytes": 6269
+    },
+    {
+      "path": "tests/test_camera_update_package.py",
+      "sha256": "cd698f1ae72d781907c5683dd071994a8b01ef8e9d0394f9bcbb719626636b52",
+      "before_sha256": null,
+      "bytes": 18665
+    },
+    {
+      "path": "tests/test_karaoke_media_clock.py",
+      "sha256": "d475e23450cca5f213abd5991cee69ffb10a7a712c51e84f0fe4f260a2728371",
+      "before_sha256": "b939f0fda07c30aa9b34beb0f629aff6e06f283d95127c634829e3722e586a34",
+      "bytes": 4929
+    },
+    {
+      "path": "tests/test_output_protection.py",
+      "sha256": "c820b35dea29657a19db86e97d37e61f40278f25c403e890eaf07f8369a31008",
+      "before_sha256": null,
+      "bytes": 11371
+    },
+    {
+      "path": "tests/test_render_output_protection.py",
+      "sha256": "4053b406251411206b471e1baf1a7db7a1d141d33c41adb8ca363c32c51f1121",
+      "before_sha256": null,
+      "bytes": 10413
+    }
+  ],
+  "approval_granted": false,
+  "automatic_batch_render": false,
+  "preserved": [
+    ".cache",
+    ".git",
+    ".venv",
+    "approvals",
+    "backup_before",
+    "backups",
+    "historico",
+    "history",
+    "original_media",
+    "output",
+    "revisions",
+    "source",
+    "source_cache",
+    "config.yaml"
+  ]
+}

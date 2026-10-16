@@ -1,0 +1,4 @@
+{
+  "superseded_by": "../captions_p0_20261015_v2",
+  "reason": "Engine 5.2.2 supports original contiguous ASR fragments and verified recovery of missing original word evidence. Earlier render and all files retained unchanged."
+}

@@ -1,0 +1,325 @@
+{
+  "modules": [
+    {
+      "path": "ldporto_curator/__init__.py",
+      "bytes": 22,
+      "sha256": "179996d3ba52c86aea0cd636121afe5290f3a41b4df85b185344066567fa3c91"
+    },
+    {
+      "path": "ldporto_curator/analysis_loader.py",
+      "bytes": 3485,
+      "sha256": "b4399ab9676a1f9e5f360e779f031a150b468ac5a63019ccc358bd7a543eb8fb"
+    },
+    {
+      "path": "ldporto_curator/approval.py",
+      "bytes": 3057,
+      "sha256": "4a7b23788c752dae97dc2354564647407f50a0aa5c244038025991715691e8f4"
+    },
+    {
+      "path": "ldporto_curator/broadcast_graphics.py",
+      "bytes": 4819,
+      "sha256": "7f9c9bff1eff73a95ca9fb0573381c2b900eed679f3d0dff15927131fcacea3e"
+    },
+    {
+      "path": "ldporto_curator/camera.py",
+      "bytes": 37433,
+      "sha256": "9f08ce040c1b79fc7cb10ea6f7814b102ef6e4449479dd05617aa84e584ec917"
+    },
+    {
+      "path": "ldporto_curator/camera_evidence.py",
+      "bytes": 3663,
+      "sha256": "192e7a3384bc5b7b8399341128b3d5253567922c38b9f3bcee9f960fe36940ee"
+    },
+    {
+      "path": "ldporto_curator/camera_geometry.py",
+      "bytes": 5345,
+      "sha256": "8c24918cc943568bcb053d120753e0ceaa8b7768c097cb2e7cebc75f7cea3aec"
+    },
+    {
+      "path": "ldporto_curator/camera_motion.py",
+      "bytes": 9100,
+      "sha256": "ea46a014f0d7bb65e72ee7513be190841cea40ce234252844a98dcd44b78b4ce"
+    },
+    {
+      "path": "ldporto_curator/camera_refinement.py",
+      "bytes": 14733,
+      "sha256": "e068f34abbab44a12c1e7273eef8ac469abcda9170f0c4125261370ea228a6be"
+    },
+    {
+      "path": "ldporto_curator/camera_revision.py",
+      "bytes": 5678,
+      "sha256": "8943af05051e5c1d4f94d10a788dd615121b840606b603b232f01544e35a4b76"
+    },
+    {
+      "path": "ldporto_curator/camera_verifier.py",
+      "bytes": 2853,
+      "sha256": "971a5429896812877ddcc61b27312edb1acd00b13caa07badbe6039fa844c8fe"
+    },
+    {
+      "path": "ldporto_curator/combined_batch.py",
+      "bytes": 20035,
+      "sha256": "a16906df71e11823d5b17ab3a444d9756224ff6bc9ce5690bc1e1cd4fd050a9d"
+    },
+    {
+      "path": "ldporto_curator/config.py",
+      "bytes": 437,
+      "sha256": "8bc0f83d1ddd6e53c922c109cc806431b2ff066a2d8b82dbfd8d73c2a431d113"
+    },
+    {
+      "path": "ldporto_curator/crop_editor.py",
+      "bytes": 25226,
+      "sha256": "f9391127b816d96021c6054b81bcfecbc90f13aca8b2e3d63052e4a9f73a6796"
+    },
+    {
+      "path": "ldporto_curator/curator.py",
+      "bytes": 7660,
+      "sha256": "4a4c61021eaab53aef516e7653ade07b27155317ac365d3fb818a1b10aa76eb2"
+    },
+    {
+      "path": "ldporto_curator/director_config.py",
+      "bytes": 9795,
+      "sha256": "202bc1cdeccf34739bb0a7feea191c48798040cdf348c172a49e6caee75a1a42"
+    },
+    {
+      "path": "ldporto_curator/duration_presets.py",
+      "bytes": 3333,
+      "sha256": "86d3c2012433eb18dfda614ff1fadfc88f23e6d498863a10c38834b25b5d2ac6"
+    },
+    {
+      "path": "ldporto_curator/editing_history.py",
+      "bytes": 8889,
+      "sha256": "d26723ed217569d7477c0c552fa01a8da0ba868b1ce2c4a39a79aef75560beb6"
+    },
+    {
+      "path": "ldporto_curator/editorial_copy.py",
+      "bytes": 12530,
+      "sha256": "93a71ad96f070ac8f12a42889152f713f5bc3c15ededb75b2ed7e941391a581f"
+    },
+    {
+      "path": "ldporto_curator/episode_approval.py",
+      "bytes": 4569,
+      "sha256": "cb4331d8cc97809d6c2ed15d232f3cea15ca38e9a83d2c5acf74464e3c0eae53"
+    },
+    {
+      "path": "ldporto_curator/eta.py",
+      "bytes": 3878,
+      "sha256": "5dce7c63a6456e6049643bd807e418b828a1b24aa76798b1ea2e0917ce824e31"
+    },
+    {
+      "path": "ldporto_curator/evidence_source.py",
+      "bytes": 28138,
+      "sha256": "1f2345a2d5eb13dc98178c545a00ef315c2582f09c3aa79227154cf8a524c86f"
+    },
+    {
+      "path": "ldporto_curator/feedback.py",
+      "bytes": 3339,
+      "sha256": "707fbdfc7950630a4f32ae6586afd1612f87fd010f5f7d64794db1f091b69d19"
+    },
+    {
+      "path": "ldporto_curator/final_camera.py",
+      "bytes": 7006,
+      "sha256": "3d63f110edfd8b48774323e259442a339620e7456e9991ec44d4ec8f94dc601f"
+    },
+    {
+      "path": "ldporto_curator/full_handoff.py",
+      "bytes": 21651,
+      "sha256": "9c3e8737ed6cabcfe03e9814af2df8f9d569be663d921622e5840d0137d19231"
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "bytes": 29952,
+      "sha256": "690191729f5a14c8473c887416cc6ea54eabccef08e414025ba599568769396e"
+    },
+    {
+      "path": "ldporto_curator/import_smoke.py",
+      "bytes": 2496,
+      "sha256": "2181578ff95feb5e84a5039fe32ed9712b55a0d7ddcff05e98db4eca5e0618cf"
+    },
+    {
+      "path": "ldporto_curator/interview_layout.py",
+      "bytes": 1040,
+      "sha256": "067c397975797c5edf4bae04c5fba94dec9f691418a7667bb5428c30bf748c55"
+    },
+    {
+      "path": "ldporto_curator/local_player.py",
+      "bytes": 4397,
+      "sha256": "ae56b96cdeae3ad2db2328a30de9ba0bc3d7b96220282cc14ea28984990a5987"
+    },
+    {
+      "path": "ldporto_curator/media_effects.py",
+      "bytes": 10035,
+      "sha256": "01577b0cd45194bd64a7e9105b033e9d8164d587ed06f6a07d0025927d9f6448"
+    },
+    {
+      "path": "ldporto_curator/micro_perception.py",
+      "bytes": 8372,
+      "sha256": "dc2dc3897564d233080ffce0b242eec7703fad6cef04814336fdc3b318d0d5ed"
+    },
+    {
+      "path": "ldporto_curator/ollama_client.py",
+      "bytes": 3935,
+      "sha256": "801daaf673611cdabb2f29bf97d6b5e34685ebe30d3baee2a554664610b1889d"
+    },
+    {
+      "path": "ldporto_curator/persisted_plan.py",
+      "bytes": 21442,
+      "sha256": "6496491a8d62d65da4cc59dd71ae7a33bdf42155068ddb0d9cf13dae95759192"
+    },
+    {
+      "path": "ldporto_curator/pipeline.py",
+      "bytes": 32636,
+      "sha256": "b20bc425653c9810b836015c9c7869d9ce9b728908be5c00e5a3ff771615577c"
+    },
+    {
+      "path": "ldporto_curator/pipeline_recovery.py",
+      "bytes": 4186,
+      "sha256": "99cefe3018da001c3c3c63bddc79408a8bdb6209202324fff67f25dff004c92f"
+    },
+    {
+      "path": "ldporto_curator/render.py",
+      "bytes": 22689,
+      "sha256": "ab88376c96e3d635a5ba59923880e7d226a0a0ffb2d2b096e0c4f3de89af4672"
+    },
+    {
+      "path": "ldporto_curator/review.py",
+      "bytes": 4091,
+      "sha256": "624b4fd996a3edc7baca5e8d2cc9ed8e6f98a550ed258af9b118420ca68c950a"
+    },
+    {
+      "path": "ldporto_curator/second_curation_decisions.py",
+      "bytes": 7213,
+      "sha256": "b7e10f1ff08a76f34c8ecca3bebda581b438fcf0cd6caeef7899785620ad7fce"
+    },
+    {
+      "path": "ldporto_curator/second_curation_import.py",
+      "bytes": 8367,
+      "sha256": "caf614244e922cbc4d621182ef5cb1f86d13cd0f43898e5e4b671461d4fd79d1"
+    },
+    {
+      "path": "ldporto_curator/series_planner.py",
+      "bytes": 57283,
+      "sha256": "2603aea28d2647446996057b97ed8ac13e31df44e75d84adc9d2febd84154db0"
+    },
+    {
+      "path": "ldporto_curator/series_review.py",
+      "bytes": 38313,
+      "sha256": "41aaae4ec41a2ef8591cabf65ec60f7b260ea9380a35318e55846b292436dede"
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "bytes": 55667,
+      "sha256": "219ee4331dd4bf806d06e8db981232cc325c1526ef3eac7a6d37818d129771ee"
+    },
+    {
+      "path": "ldporto_curator/smart_composition.py",
+      "bytes": 14992,
+      "sha256": "9cdee4639fe5003cd86e84100cc49084bc31fb37753dbd1a744e416e191186a1"
+    },
+    {
+      "path": "ldporto_curator/source_video.py",
+      "bytes": 2317,
+      "sha256": "5251db6683e15d9c14d4ae28fe56aa4cf2528b9e0234afd3b9fb5a5da5070351"
+    },
+    {
+      "path": "ldporto_curator/storage.py",
+      "bytes": 10434,
+      "sha256": "99beb882929b88fb934ed3027b5bc67e1a00391ba54b10e52b3d522f7def1f52"
+    },
+    {
+      "path": "ldporto_curator/storage_dialog.py",
+      "bytes": 2944,
+      "sha256": "b57a285feb89b7eba2597bc88167e744d71d4b92a64e50e8ae7ecab231f72d5a"
+    },
+    {
+      "path": "ldporto_curator/story_import.py",
+      "bytes": 10707,
+      "sha256": "35a08ff36d9924ec95a94afa2bd03c6504f9302aad6969415ef918e47fdd4395"
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "bytes": 47240,
+      "sha256": "805930072e8641e31d957db223cac3cc0af041edd1fe6408892785129e94f7c2"
+    },
+    {
+      "path": "ldporto_curator/subtitles.py",
+      "bytes": 11641,
+      "sha256": "fa2f52d487728999d4730412304f436687f4a15a5abfcd740c818c28a57c6f60"
+    },
+    {
+      "path": "ldporto_curator/temporal.py",
+      "bytes": 3034,
+      "sha256": "f1c637e879eadd8878edee530f93b980f8d699f2f26f76753841340651d29ca5"
+    },
+    {
+      "path": "ldporto_curator/thumbnail_presets.py",
+      "bytes": 13341,
+      "sha256": "56bdcf100316de92382c393437eb1ff405290d82bea62a6d43a5c368769b84ed"
+    },
+    {
+      "path": "ldporto_curator/thumbnails.py",
+      "bytes": 2772,
+      "sha256": "12376087615586b318d8d6a4325b6fef7a48e13e916273ef1d176821e8a483f2"
+    },
+    {
+      "path": "ldporto_curator/timeline_editor.py",
+      "bytes": 9183,
+      "sha256": "a3df9749a9919bd742e8705407c81335b1d39a82f58eed9281722e2ed3f4eb95"
+    },
+    {
+      "path": "ldporto_curator/title_card.py",
+      "bytes": 5518,
+      "sha256": "5d574ab63c878ad2dbc6bd12bbefa6b983a35d420282053a03d80287c68b5ddc"
+    },
+    {
+      "path": "ldporto_curator/title_presets.py",
+      "bytes": 2696,
+      "sha256": "4f39e379df77026ce7a762c991acccc254c89186af061025a950e1b80a1760c1"
+    },
+    {
+      "path": "ldporto_curator/utils.py",
+      "bytes": 1798,
+      "sha256": "97e0abc5cf9f9a40eb67be14355054a22acb52558c62c5bc1900a71554881604"
+    }
+  ],
+  "exact_duplicates": [],
+  "absolute_import_roots": [
+    "PIL",
+    "__future__",
+    "abc",
+    "base64",
+    "bisect",
+    "collections",
+    "contextlib",
+    "copy",
+    "ctypes",
+    "cv2",
+    "dataclasses",
+    "datetime",
+    "functools",
+    "hashlib",
+    "html",
+    "json",
+    "jsonschema",
+    "math",
+    "numpy",
+    "os",
+    "pathlib",
+    "platform",
+    "queue",
+    "re",
+    "requests",
+    "shutil",
+    "stat",
+    "statistics",
+    "subprocess",
+    "threading",
+    "time",
+    "tkinter",
+    "types",
+    "urllib",
+    "uuid",
+    "yaml",
+    "zipfile"
+  ],
+  "dependencies_removed": []
+}

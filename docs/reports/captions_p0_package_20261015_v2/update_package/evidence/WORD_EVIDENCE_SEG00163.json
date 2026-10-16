@@ -1,0 +1,23 @@
+{
+  "schema": "LDP_SUPPLEMENTAL_WORD_EVIDENCE_V1",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "segment_ids": [
+    "SEG_00163"
+  ],
+  "word_file": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\words.json",
+    "sha256": "1db36020a6b8fde0cf90e863ac5bfe16ff59e00d37efaf345441e8a73f25b5c1"
+  },
+  "transcript_segments_file": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\transcript_segments.json",
+    "sha256": "efa89f7ddfb917fdb664ffb2bc8f0ccd9baf43083f039fcf6c931ea9037b4e86"
+  },
+  "source_manifest_file": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\manifest.json",
+    "sha256": "0905423dec4b3cee3f0cc202e23f8a906a273ea0f1237b47f88c5739277a44cd"
+  },
+  "source_identity_file": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis\\video_5198fcdaef38\\cache\\b2958122415980a8\\asr_chunks\\b310c0cf6f6c7cf0_00004.json",
+    "sha256": "8283f5743cac491446773dafaef0d00162ed9c7c648884eb2ae145a6566df894"
+  }
+}

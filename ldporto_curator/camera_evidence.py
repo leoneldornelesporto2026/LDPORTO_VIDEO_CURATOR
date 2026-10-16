@@ -19,10 +19,17 @@ class VisualTargetEvidence:
             center = (face['x'] + face['width'] / 2, face['y'] + face['height'] / 2)
             prior = self.tracks.get(person)
             if prior is None or prior['key'] != key or time - prior['last'] > cfg['max_observation_gap_seconds'] * 2:
-                prior = {'key': key, 'first': time, 'last': time, 'samples': 0, 'center': center, 'max_velocity': 0., 'visible_seconds': 0.}
+                prior = {'key': key, 'first': time, 'last': time, 'samples': 0, 'center': center,
+                         'max_velocity': 0., 'visible_seconds': 0., 'centers': [(time, center)]}
             dt = time - prior['last']
             if dt > 0:
-                prior['max_velocity'] = max(prior['max_velocity'], math.dist(center, prior['center']) / dt)
+                # A single noisy detection must not disable a real stable host
+                # for the rest of a long shot. Measure net motion over a rolling
+                # visual window; geometry still checks every delivered crop.
+                prior['centers'] = [(t, c) for t, c in prior['centers'] if time-t <= 1.]
+                reference_time, reference_center = (prior['centers'] or [(prior['last'], prior['center'])])[0]
+                prior['max_velocity'] = math.dist(center, reference_center)/max(time-reference_time, 1e-9)
+                prior['centers'].append((time, center))
                 prior['samples'] += 1
                 prior['visible_seconds'] += min(dt, cfg['max_observation_gap_seconds'])
             prior.update(last=time, center=center)

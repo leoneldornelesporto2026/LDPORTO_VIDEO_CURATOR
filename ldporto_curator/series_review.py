@@ -138,10 +138,10 @@ class SeriesReview(tk.Toplevel):
         style = ttk.Frame(edit_tab)
         style.pack(fill='x', pady=6)
         self.episode_duration = tk.StringVar(value=PRESET_LABELS[0])
-        self.subtitle_preset = tk.StringVar(value='LDP_KARAOKE_VERDE')
+        self.subtitle_preset = tk.StringVar(value='LDP_REELS_KARAOKE')
         self.camera_mode = tk.StringVar(value='SOURCE_PRESERVE')
         for label, var, values in [('Faixa individual',self.episode_duration,PRESET_LABELS),
-            ('Legenda',self.subtitle_preset,('LDP_KARAOKE_VERDE','LDP_IMPACTO_AMARELO','LDP_CLEAN','LDP_DOCUMENTARIO','LDP_PALAVRA_CHAVE','SEM_LEGENDA')),
+            ('Legenda',self.subtitle_preset,('LDP_REELS_KARAOKE','LDP_KARAOKE_VERDE','LDP_IMPACTO_AMARELO','LDP_CLEAN','LDP_DOCUMENTARIO','LDP_PALAVRA_CHAVE','SEM_LEGENDA')),
             ('Câmera',self.camera_mode,('SOURCE_PRESERVE','AUTO_CONSERVADOR','FOCO_PESSOA','DOIS_PARTICIPANTES','MANUAL_KEYFRAMES'))]:
             ttk.Label(style, text=label).pack(side='left')
             ttk.Combobox(style, textvariable=var, values=values, state='readonly', width=21).pack(side='left', padx=3)

@@ -1,0 +1,2997 @@
+{
+  "schema_version": "4.4.0",
+  "status": "measured",
+  "observations": [
+    {
+      "face_bbox": {
+        "x": 0.3788730303446452,
+        "y": 0.13603298045970774,
+        "width": 0.1525008996327718,
+        "height": 0.35697219283492476
+      },
+      "detection_confidence": 0.9380747079849243,
+      "time": 422.547125,
+      "track_id": "MICRO_TRACK_00001",
+      "person_id": "LOCAL_MICRO_TRACK_00001",
+      "shot_id": "MICRO_SHOT_0000",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4551234801610311,
+        "y": 0.3145190768771701
+      },
+      "head_center": {
+        "x": 0.4551234801610311,
+        "y": 0.3145190768771701
+      },
+      "sharpness": 310.7024208054141,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4309624354044596,
+        "y": 0.1257033595332393,
+        "width": 0.11859720547993978,
+        "height": 0.2724683125813802
+      },
+      "detection_confidence": 0.9397863745689392,
+      "time": 438.7299583333334,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4902610381444295,
+        "y": 0.26193751582392943
+      },
+      "head_center": {
+        "x": 0.4902610381444295,
+        "y": 0.26193751582392943
+      },
+      "sharpness": 219.71492069763107,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4302673657735189,
+        "y": 0.11189483360007957,
+        "width": 0.11765514214833578,
+        "height": 0.26546509354202835
+      },
+      "detection_confidence": 0.9320496916770935,
+      "time": 438.8967916666667,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4890949368476868,
+        "y": 0.24462738037109374
+      },
+      "head_center": {
+        "x": 0.4890949368476868,
+        "y": 0.24462738037109374
+      },
+      "sharpness": 201.30182581559302,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.42276639938354493,
+        "y": 0.1173249845151548,
+        "width": 0.11635744571685791,
+        "height": 0.2580857736093027
+      },
+      "detection_confidence": 0.9350530505180359,
+      "time": 439.063625,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4809451222419739,
+        "y": 0.24636787131980614
+      },
+      "head_center": {
+        "x": 0.4809451222419739,
+        "y": 0.24636787131980614
+      },
+      "sharpness": 204.61275206774457,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41119747161865233,
+        "y": 0.12357991536458333,
+        "width": 0.11910817623138428,
+        "height": 0.2629955715603299
+      },
+      "detection_confidence": 0.9352297782897949,
+      "time": 439.23045833333333,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47075155973434446,
+        "y": 0.25507770114474826
+      },
+      "head_center": {
+        "x": 0.47075155973434446,
+        "y": 0.25507770114474826
+      },
+      "sharpness": 211.87637316912472,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.39789117177327477,
+        "y": 0.1278331332736545,
+        "width": 0.11990327835083008,
+        "height": 0.2777889675564236
+      },
+      "detection_confidence": 0.9408251643180847,
+      "time": 439.39729166666666,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4578428109486898,
+        "y": 0.2667276170518663
+      },
+      "head_center": {
+        "x": 0.4578428109486898,
+        "y": 0.2667276170518663
+      },
+      "sharpness": 232.28328283458845,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.38761609395345054,
+        "y": 0.13647370515046298,
+        "width": 0.12069621086120605,
+        "height": 0.2751116717303241
+      },
+      "detection_confidence": 0.9422584176063538,
+      "time": 439.564125,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4479641993840536,
+        "y": 0.27402954101562504
+      },
+      "head_center": {
+        "x": 0.4479641993840536,
+        "y": 0.27402954101562504
+      },
+      "sharpness": 323.50702519999226,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.38371432622273766,
+        "y": 0.13750333432798031,
+        "width": 0.120305864016215,
+        "height": 0.2775430749963831
+      },
+      "detection_confidence": 0.9388710260391235,
+      "time": 439.7309583333333,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.44386725823084516,
+        "y": 0.27627487182617183
+      },
+      "head_center": {
+        "x": 0.44386725823084516,
+        "y": 0.27627487182617183
+      },
+      "sharpness": 333.73144345809703,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.38207693099975587,
+        "y": 0.1410033897117332,
+        "width": 0.1205236037572225,
+        "height": 0.27917565239800346
+      },
+      "detection_confidence": 0.9386827945709229,
+      "time": 439.89779166666665,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4423387328783671,
+        "y": 0.28059121591073494
+      },
+      "head_center": {
+        "x": 0.4423387328783671,
+        "y": 0.28059121591073494
+      },
+      "sharpness": 374.3314426443388,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.37813291549682615,
+        "y": 0.14314323707863136,
+        "width": 0.12028059164683023,
+        "height": 0.2828552811234086
+      },
+      "detection_confidence": 0.9350446462631226,
+      "time": 440.064625,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4382732113202413,
+        "y": 0.2845708776403356
+      },
+      "head_center": {
+        "x": 0.4382732113202413,
+        "y": 0.2845708776403356
+      },
+      "sharpness": 364.4542653646292,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.36870094935099285,
+        "y": 0.1479776735658999,
+        "width": 0.12117835680643717,
+        "height": 0.2834557427300347
+      },
+      "detection_confidence": 0.9339807033538818,
+      "time": 440.2314583333333,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.42929012775421144,
+        "y": 0.28970554493091727
+      },
+      "head_center": {
+        "x": 0.42929012775421144,
+        "y": 0.28970554493091727
+      },
+      "sharpness": 314.0796804886203,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.3637737274169922,
+        "y": 0.16997602957266347,
+        "width": 0.12131165663401286,
+        "height": 0.270051602964048
+      },
+      "detection_confidence": 0.9343999624252319,
+      "time": 440.39829166666664,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.42442955573399865,
+        "y": 0.3050018310546875
+      },
+      "head_center": {
+        "x": 0.42442955573399865,
+        "y": 0.3050018310546875
+      },
+      "sharpness": 222.8052708476648,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.3696054140726725,
+        "y": 0.17080795853226274,
+        "width": 0.11998371283213298,
+        "height": 0.2658294677734375
+      },
+      "detection_confidence": 0.93239426612854,
+      "time": 440.56512499999997,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.42959727048873897,
+        "y": 0.30372269241898153
+      },
+      "head_center": {
+        "x": 0.42959727048873897,
+        "y": 0.30372269241898153
+      },
+      "sharpness": 199.8159377671338,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.39081649780273436,
+        "y": 0.12643970913357205,
+        "width": 0.11805291175842285,
+        "height": 0.274858969229239
+      },
+      "detection_confidence": 0.9385821223258972,
+      "time": 440.7319583333333,
+      "track_id": "MICRO_TRACK_00002",
+      "person_id": "LOCAL_MICRO_TRACK_00002",
+      "shot_id": "MICRO_SHOT_0001",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.44984295368194577,
+        "y": 0.26386919374819157
+      },
+      "head_center": {
+        "x": 0.44984295368194577,
+        "y": 0.26386919374819157
+      },
+      "sharpness": 56.377141572240475,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.42008514404296876,
+        "y": 0.11436616403085215,
+        "width": 0.14340195655822754,
+        "height": 0.34426594486942996
+      },
+      "detection_confidence": 0.9428540468215942,
+      "time": 440.8987916666666,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4917861223220825,
+        "y": 0.28649913646556713
+      },
+      "head_center": {
+        "x": 0.4917861223220825,
+        "y": 0.28649913646556713
+      },
+      "sharpness": 150.81450451402446,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4319544474283854,
+        "y": 0.12266623885543258,
+        "width": 0.1448999087015788,
+        "height": 0.33104691682038484
+      },
+      "detection_confidence": 0.9488149285316467,
+      "time": 441.065625,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5044044017791748,
+        "y": 0.288189697265625
+      },
+      "head_center": {
+        "x": 0.5044044017791748,
+        "y": 0.288189697265625
+      },
+      "sharpness": 189.16105777604528,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.43037506739298503,
+        "y": 0.13237903736255788,
+        "width": 0.15090638796488445,
+        "height": 0.36212892885561343
+      },
+      "detection_confidence": 0.947680652141571,
+      "time": 441.23245833333334,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5058282613754272,
+        "y": 0.3134435017903646
+      },
+      "head_center": {
+        "x": 0.5058282613754272,
+        "y": 0.3134435017903646
+      },
+      "sharpness": 235.93019378444671,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4269622166951497,
+        "y": 0.14213988692672164,
+        "width": 0.1537229061126709,
+        "height": 0.3669894183123553
+      },
+      "detection_confidence": 0.9509817361831665,
+      "time": 441.39929166666667,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5038236697514852,
+        "y": 0.3256345960828993
+      },
+      "head_center": {
+        "x": 0.5038236697514852,
+        "y": 0.3256345960828993
+      },
+      "sharpness": 312.47423302681545,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4321783701578776,
+        "y": 0.1469217088487413,
+        "width": 0.15203735033671062,
+        "height": 0.35436553955078126
+      },
+      "detection_confidence": 0.9467528462409973,
+      "time": 441.566125,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5081970453262329,
+        "y": 0.32410447862413194
+      },
+      "head_center": {
+        "x": 0.5081970453262329,
+        "y": 0.32410447862413194
+      },
+      "sharpness": 269.39274635278645,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4429806073506673,
+        "y": 0.1505904303656684,
+        "width": 0.15088149706522624,
+        "height": 0.3483972054940683
+      },
+      "detection_confidence": 0.9446147680282593,
+      "time": 441.73295833333333,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5184213558832804,
+        "y": 0.3247890331127026
+      },
+      "head_center": {
+        "x": 0.5184213558832804,
+        "y": 0.3247890331127026
+      },
+      "sharpness": 236.49465272054815,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.45906492869059246,
+        "y": 0.16935084307635273,
+        "width": 0.1480743408203125,
+        "height": 0.34907766271520546
+      },
+      "detection_confidence": 0.9489127993583679,
+      "time": 441.89979166666666,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5331020991007487,
+        "y": 0.34388967443395546
+      },
+      "head_center": {
+        "x": 0.5331020991007487,
+        "y": 0.34388967443395546
+      },
+      "sharpness": 225.3634073784196,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.474226188659668,
+        "y": 0.17171967117874712,
+        "width": 0.14851655960083007,
+        "height": 0.34282910382306137
+      },
+      "detection_confidence": 0.9410201907157898,
+      "time": 442.066625,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.548484468460083,
+        "y": 0.3431342230902778
+      },
+      "head_center": {
+        "x": 0.548484468460083,
+        "y": 0.3431342230902778
+      },
+      "sharpness": 256.79954255166075,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4758103370666504,
+        "y": 0.17351517853913484,
+        "width": 0.14784846305847169,
+        "height": 0.3411484894929109
+      },
+      "detection_confidence": 0.9437462091445923,
+      "time": 442.2334583333333,
+      "track_id": "MICRO_TRACK_00003",
+      "person_id": "LOCAL_MICRO_TRACK_00003",
+      "shot_id": "MICRO_SHOT_0002",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5497345685958862,
+        "y": 0.3440894232855903
+      },
+      "head_center": {
+        "x": 0.5497345685958862,
+        "y": 0.3440894232855903
+      },
+      "sharpness": 321.99558780892477,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4547355016072591,
+        "y": 0.1091843499077691,
+        "width": 0.11397899786631266,
+        "height": 0.25391972859700523
+      },
+      "detection_confidence": 0.9380742311477661,
+      "time": 442.40029166666665,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.5117250005404155,
+        "y": 0.2361442142062717
+      },
+      "head_center": {
+        "x": 0.5117250005404155,
+        "y": 0.2361442142062717
+      },
+      "sharpness": 340.29475536131685,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4435940424601237,
+        "y": 0.10060659337926794,
+        "width": 0.10956993103027343,
+        "height": 0.25152457908347803
+      },
+      "detection_confidence": 0.9313361644744873,
+      "time": 442.567125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4983790079752604,
+        "y": 0.22636888292100696
+      },
+      "head_center": {
+        "x": 0.4983790079752604,
+        "y": 0.22636888292100696
+      },
+      "sharpness": 224.8940345101509,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.43569793701171877,
+        "y": 0.10486989904333044,
+        "width": 0.11437228520711264,
+        "height": 0.25653330485026044
+      },
+      "detection_confidence": 0.9329407811164856,
+      "time": 442.7339583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4928840796152751,
+        "y": 0.23313655146846066
+      },
+      "head_center": {
+        "x": 0.4928840796152751,
+        "y": 0.23313655146846066
+      },
+      "sharpness": 292.3452330804362,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4302427927652995,
+        "y": 0.10904079013400608,
+        "width": 0.11678184668223063,
+        "height": 0.25711452342845775
+      },
+      "detection_confidence": 0.9388504028320312,
+      "time": 442.90079166666663,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4886337161064148,
+        "y": 0.23759805184823496
+      },
+      "head_center": {
+        "x": 0.4886337161064148,
+        "y": 0.23759805184823496
+      },
+      "sharpness": 253.38680983665202,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.427510674794515,
+        "y": 0.11658688297978154,
+        "width": 0.11485818227132162,
+        "height": 0.27053298950195315
+      },
+      "detection_confidence": 0.9405770897865295,
+      "time": 443.06762499999996,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4849397659301758,
+        "y": 0.2518533777307581
+      },
+      "head_center": {
+        "x": 0.4849397659301758,
+        "y": 0.2518533777307581
+      },
+      "sharpness": 290.0314535457181,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41960439682006834,
+        "y": 0.13398523683901187,
+        "width": 0.11863677501678467,
+        "height": 0.27571498729564525
+      },
+      "detection_confidence": 0.9448930621147156,
+      "time": 443.2344583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4789227843284607,
+        "y": 0.2718427304868345
+      },
+      "head_center": {
+        "x": 0.4789227843284607,
+        "y": 0.2718427304868345
+      },
+      "sharpness": 394.01660181040756,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4158686637878418,
+        "y": 0.1261350984926577,
+        "width": 0.11991507212320963,
+        "height": 0.2745378564905237
+      },
+      "detection_confidence": 0.9417822360992432,
+      "time": 443.4012916666667,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47582619984944663,
+        "y": 0.2634040267379195
+      },
+      "head_center": {
+        "x": 0.47582619984944663,
+        "y": 0.2634040267379195
+      },
+      "sharpness": 408.9071225357325,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4133479436238607,
+        "y": 0.12477041173864294,
+        "width": 0.12101751963297526,
+        "height": 0.2704828332971643
+      },
+      "detection_confidence": 0.9384617209434509,
+      "time": 443.568125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4738567034403483,
+        "y": 0.2600118283872251
+      },
+      "head_center": {
+        "x": 0.4738567034403483,
+        "y": 0.2600118283872251
+      },
+      "sharpness": 373.13665194081966,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4150074323018392,
+        "y": 0.1266525833695023,
+        "width": 0.12119924227396647,
+        "height": 0.28030322039568867
+      },
+      "detection_confidence": 0.942484438419342,
+      "time": 443.73495833333334,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4756070534388224,
+        "y": 0.26680419356734664
+      },
+      "head_center": {
+        "x": 0.4756070534388224,
+        "y": 0.26680419356734664
+      },
+      "sharpness": 403.63404322116276,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41487127939860025,
+        "y": 0.12397356386537906,
+        "width": 0.12151524225870768,
+        "height": 0.27940238670066553
+      },
+      "detection_confidence": 0.9381822943687439,
+      "time": 443.90179166666667,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4756289005279541,
+        "y": 0.2636747572157118
+      },
+      "head_center": {
+        "x": 0.4756289005279541,
+        "y": 0.2636747572157118
+      },
+      "sharpness": 421.4878018158558,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4143744150797526,
+        "y": 0.12434778566713686,
+        "width": 0.12037363052368164,
+        "height": 0.27513221458152487
+      },
+      "detection_confidence": 0.938402533531189,
+      "time": 444.068625,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4745612303415934,
+        "y": 0.2619138929578993
+      },
+      "head_center": {
+        "x": 0.4745612303415934,
+        "y": 0.2619138929578993
+      },
+      "sharpness": 434.44981383674326,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41402587890625,
+        "y": 0.12630092479564525,
+        "width": 0.11987624168395997,
+        "height": 0.270657800745081
+      },
+      "detection_confidence": 0.9359009265899658,
+      "time": 444.2354583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47396399974822995,
+        "y": 0.2616298251681858
+      },
+      "head_center": {
+        "x": 0.47396399974822995,
+        "y": 0.2616298251681858
+      },
+      "sharpness": 339.2344335680112,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4124930381774902,
+        "y": 0.12857921741626882,
+        "width": 0.12248768806457519,
+        "height": 0.27532085842556425
+      },
+      "detection_confidence": 0.9362010359764099,
+      "time": 444.40229166666666,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47373688220977783,
+        "y": 0.266239646629051
+      },
+      "head_center": {
+        "x": 0.47373688220977783,
+        "y": 0.266239646629051
+      },
+      "sharpness": 388.40546261215513,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4129549344380697,
+        "y": 0.12782129358362268,
+        "width": 0.12146600087483723,
+        "height": 0.2713936134620949
+      },
+      "detection_confidence": 0.9387120008468628,
+      "time": 444.569125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4736879348754883,
+        "y": 0.26351810031467016
+      },
+      "head_center": {
+        "x": 0.4736879348754883,
+        "y": 0.26351810031467016
+      },
+      "sharpness": 374.9546066672542,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41402015686035154,
+        "y": 0.1244577478479456,
+        "width": 0.12139964898427327,
+        "height": 0.2723665025499132
+      },
+      "detection_confidence": 0.9400748014450073,
+      "time": 444.7359583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47471998135248816,
+        "y": 0.2606409991229022
+      },
+      "head_center": {
+        "x": 0.47471998135248816,
+        "y": 0.2606409991229022
+      },
+      "sharpness": 386.6987941110689,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41668024063110354,
+        "y": 0.12442309061686198,
+        "width": 0.11953717072804769,
+        "height": 0.2660901387532552
+      },
+      "detection_confidence": 0.9397091269493103,
+      "time": 444.90279166666664,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4764488259951274,
+        "y": 0.2574681599934896
+      },
+      "head_center": {
+        "x": 0.4764488259951274,
+        "y": 0.2574681599934896
+      },
+      "sharpness": 436.4758747565297,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4165863355000814,
+        "y": 0.12322278905797887,
+        "width": 0.11975744565327963,
+        "height": 0.2656924494990596
+      },
+      "detection_confidence": 0.9419055581092834,
+      "time": 445.069625,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4764650583267212,
+        "y": 0.2560690138075087
+      },
+      "head_center": {
+        "x": 0.4764650583267212,
+        "y": 0.2560690138075087
+      },
+      "sharpness": 445.96869646899574,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4139468510945638,
+        "y": 0.12232253463179976,
+        "width": 0.12048889795939127,
+        "height": 0.2696815208152488
+      },
+      "detection_confidence": 0.9410070776939392,
+      "time": 445.2364583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47419130007425947,
+        "y": 0.25716329503942414
+      },
+      "head_center": {
+        "x": 0.47419130007425947,
+        "y": 0.25716329503942414
+      },
+      "sharpness": 436.5910832611084,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4124604860941569,
+        "y": 0.12286170676902489,
+        "width": 0.1208344300587972,
+        "height": 0.2702101530852141
+      },
+      "detection_confidence": 0.936058521270752,
+      "time": 445.40329166666663,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47287770112355554,
+        "y": 0.2579667833116319
+      },
+      "head_center": {
+        "x": 0.47287770112355554,
+        "y": 0.2579667833116319
+      },
+      "sharpness": 440.88379247199,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41075140635172525,
+        "y": 0.1238032164397063,
+        "width": 0.12161741256713868,
+        "height": 0.2675245214391638
+      },
+      "detection_confidence": 0.9346988201141357,
+      "time": 445.57012499999996,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47156011263529457,
+        "y": 0.2575654771592882
+      },
+      "head_center": {
+        "x": 0.47156011263529457,
+        "y": 0.2575654771592882
+      },
+      "sharpness": 445.6303477948089,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4121167500813802,
+        "y": 0.13028286121509694,
+        "width": 0.120334259668986,
+        "height": 0.2771618595829716
+      },
+      "detection_confidence": 0.940802812576294,
+      "time": 445.7369583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47228387991587323,
+        "y": 0.26886379100658275
+      },
+      "head_center": {
+        "x": 0.47228387991587323,
+        "y": 0.26886379100658275
+      },
+      "sharpness": 320.5560491346281,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41134878794352214,
+        "y": 0.13177839208532263,
+        "width": 0.11976617177327474,
+        "height": 0.274701182047526
+      },
+      "detection_confidence": 0.9372676014900208,
+      "time": 445.9037916666667,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4712318738301595,
+        "y": 0.2691289831090856
+      },
+      "head_center": {
+        "x": 0.4712318738301595,
+        "y": 0.2691289831090856
+      },
+      "sharpness": 390.27181601171503,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4052683194478353,
+        "y": 0.13577923244900172,
+        "width": 0.12361588478088378,
+        "height": 0.2767811527958623
+      },
+      "detection_confidence": 0.9356192350387573,
+      "time": 446.070625,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4670762618382772,
+        "y": 0.27416980884693287
+      },
+      "head_center": {
+        "x": 0.4670762618382772,
+        "y": 0.27416980884693287
+      },
+      "sharpness": 429.2162655597515,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.40587104161580406,
+        "y": 0.1338849244294343,
+        "width": 0.12024795214335124,
+        "height": 0.2706047623245804
+      },
+      "detection_confidence": 0.9391178488731384,
+      "time": 446.23745833333334,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4659950176874797,
+        "y": 0.26918730559172455
+      },
+      "head_center": {
+        "x": 0.4659950176874797,
+        "y": 0.26918730559172455
+      },
+      "sharpness": 400.65887104379067,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.40339749654134116,
+        "y": 0.13034492775245948,
+        "width": 0.12134657700856527,
+        "height": 0.27039704499421297
+      },
+      "detection_confidence": 0.9381293654441833,
+      "time": 446.40429166666667,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4640707850456238,
+        "y": 0.26554345024956594
+      },
+      "head_center": {
+        "x": 0.4640707850456238,
+        "y": 0.26554345024956594
+      },
+      "sharpness": 443.6823151348465,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4038028399149577,
+        "y": 0.12813521491156685,
+        "width": 0.11774779160817464,
+        "height": 0.2715807596842448
+      },
+      "detection_confidence": 0.9422188401222229,
+      "time": 446.571125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.462676735719045,
+        "y": 0.26392559475368926
+      },
+      "head_center": {
+        "x": 0.462676735719045,
+        "y": 0.26392559475368926
+      },
+      "sharpness": 415.1352084893277,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.402622922261556,
+        "y": 0.13899890758373118,
+        "width": 0.11729873816172282,
+        "height": 0.2676344977484809
+      },
+      "detection_confidence": 0.940849244594574,
+      "time": 446.7379583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.46127229134241743,
+        "y": 0.27281615645797164
+      },
+      "head_center": {
+        "x": 0.46127229134241743,
+        "y": 0.27281615645797164
+      },
+      "sharpness": 305.6842609844782,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.40331970850626625,
+        "y": 0.1370711573848018,
+        "width": 0.11827475229899088,
+        "height": 0.27686849523473667
+      },
+      "detection_confidence": 0.9380441308021545,
+      "time": 446.90479166666665,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4624570846557617,
+        "y": 0.27550540500217013
+      },
+      "head_center": {
+        "x": 0.4624570846557617,
+        "y": 0.27550540500217013
+      },
+      "sharpness": 304.9490890207855,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.40340700149536135,
+        "y": 0.14061772381817852,
+        "width": 0.12502061525980632,
+        "height": 0.2827160588017216
+      },
+      "detection_confidence": 0.9269236922264099,
+      "time": 447.071625,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4659173091252645,
+        "y": 0.28197575321903934
+      },
+      "head_center": {
+        "x": 0.4659173091252645,
+        "y": 0.28197575321903934
+      },
+      "sharpness": 395.04152384113894,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.41210079193115234,
+        "y": 0.15087880735044126,
+        "width": 0.11844939390818278,
+        "height": 0.2766685485839844
+      },
+      "detection_confidence": 0.9353234767913818,
+      "time": 447.2384583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4713254888852437,
+        "y": 0.2892130816424334
+      },
+      "head_center": {
+        "x": 0.4713254888852437,
+        "y": 0.2892130816424334
+      },
+      "sharpness": 316.00394985244145,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4214082400004069,
+        "y": 0.1474346019603588,
+        "width": 0.11645489533742269,
+        "height": 0.27676628960503474
+      },
+      "detection_confidence": 0.9464259743690491,
+      "time": 447.40529166666664,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.47963568766911824,
+        "y": 0.2858177467628762
+      },
+      "head_center": {
+        "x": 0.47963568766911824,
+        "y": 0.2858177467628762
+      },
+      "sharpness": 264.0348406994048,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4260660489400228,
+        "y": 0.14263085259331598,
+        "width": 0.11751134395599365,
+        "height": 0.2871076795789931
+      },
+      "detection_confidence": 0.9387997984886169,
+      "time": 447.572125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4848217209180196,
+        "y": 0.2861846923828125
+      },
+      "head_center": {
+        "x": 0.4848217209180196,
+        "y": 0.2861846923828125
+      },
+      "sharpness": 326.41362125111493,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4298667589823405,
+        "y": 0.1395122386791088,
+        "width": 0.11582105954488119,
+        "height": 0.28825417977792245
+      },
+      "detection_confidence": 0.9430837035179138,
+      "time": 447.7389583333333,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4877772887547811,
+        "y": 0.28363932856807006
+      },
+      "head_center": {
+        "x": 0.4877772887547811,
+        "y": 0.28363932856807006
+      },
+      "sharpness": 367.698471999575,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4323012669881185,
+        "y": 0.1376313809995298,
+        "width": 0.1141508420308431,
+        "height": 0.2797683433250145
+      },
+      "detection_confidence": 0.9421750903129578,
+      "time": 447.90579166666663,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.48937668800354006,
+        "y": 0.27751555266203703
+      },
+      "head_center": {
+        "x": 0.48937668800354006,
+        "y": 0.27751555266203703
+      },
+      "sharpness": 322.18607009016773,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.43116642634073893,
+        "y": 0.14648756804289642,
+        "width": 0.1158204952875773,
+        "height": 0.2826911078559028
+      },
+      "detection_confidence": 0.9393823146820068,
+      "time": 448.07262499999996,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4890766739845276,
+        "y": 0.2878331219708478
+      },
+      "head_center": {
+        "x": 0.4890766739845276,
+        "y": 0.2878331219708478
+      },
+      "sharpness": 227.12965591036448,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.43007888793945315,
+        "y": 0.13163422478569878,
+        "width": 0.11772623062133789,
+        "height": 0.27964282565646703
+      },
+      "detection_confidence": 0.9390659928321838,
+      "time": 448.23945833333335,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.4889420032501221,
+        "y": 0.2714556376139323
+      },
+      "head_center": {
+        "x": 0.4889420032501221,
+        "y": 0.2714556376139323
+      },
+      "sharpness": 299.2327467326192,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.42932074864705405,
+        "y": 0.13206285547327112,
+        "width": 0.11565986474355062,
+        "height": 0.28275855735496236
+      },
+      "detection_confidence": 0.9451828598976135,
+      "time": 448.4062916666667,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.48715068101882936,
+        "y": 0.2734421341507523
+      },
+      "head_center": {
+        "x": 0.48715068101882936,
+        "y": 0.2734421341507523
+      },
+      "sharpness": 366.8739097968951,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    },
+    {
+      "face_bbox": {
+        "x": 0.4301410992940267,
+        "y": 0.13199115329318575,
+        "width": 0.11462789376576742,
+        "height": 0.28038414849175347
+      },
+      "detection_confidence": 0.9455979466438293,
+      "time": 448.573125,
+      "track_id": "MICRO_TRACK_00004",
+      "person_id": "LOCAL_MICRO_TRACK_00004",
+      "shot_id": "MICRO_SHOT_0003",
+      "face_visible": true,
+      "safe_crop_possible": true,
+      "body_visible": false,
+      "bbox_kind": "face",
+      "center": {
+        "x": 0.48745504617691043,
+        "y": 0.2721832275390625
+      },
+      "head_center": {
+        "x": 0.48745504617691043,
+        "y": 0.2721832275390625
+      },
+      "sharpness": 369.5601801610123,
+      "speaker_identity_confirmed": false,
+      "person_detection_kind": "FACE_ONLY_PERSON"
+    }
+  ],
+  "frames": [
+    {
+      "time": 422.547125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 1,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 422.7139583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.26991176470588235
+    },
+    {
+      "time": 422.88079166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 1.2799564270152507e-05
+    },
+    {
+      "time": 423.047625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00012690631808278866
+    },
+    {
+      "time": 423.2144583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 423.38129166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 2.1241830065359477e-05
+    },
+    {
+      "time": 423.5481249999999,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 423.7149583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 423.88179166666663,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 424.04862499999996,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 7.579883805374e-05
+    },
+    {
+      "time": 424.21545833333334,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 7.262164124909223e-07
+    },
+    {
+      "time": 424.3822916666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 424.549125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 424.71595833333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 424.88279166666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 425.049625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 425.2164583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 425.38329166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 1.8155410312273056e-07
+    },
+    {
+      "time": 425.550125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0062313907044299205
+    },
+    {
+      "time": 425.7169583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0167180464778504
+    },
+    {
+      "time": 425.88379166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03268391430646333
+    },
+    {
+      "time": 426.05062499999997,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.040672476397966596
+    },
+    {
+      "time": 426.2174583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04537545388525781
+    },
+    {
+      "time": 426.3842916666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04762427378358751
+    },
+    {
+      "time": 426.551125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04905246913580247
+    },
+    {
+      "time": 426.7179583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05014288307915759
+    },
+    {
+      "time": 426.8847916666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.050966503267973855
+    },
+    {
+      "time": 427.051625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05092274872912128
+    },
+    {
+      "time": 427.21845833333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05135003631082062
+    },
+    {
+      "time": 427.38529166666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.051484658678286124
+    },
+    {
+      "time": 427.552125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05165359477124183
+    },
+    {
+      "time": 427.7189583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05246278140885984
+    },
+    {
+      "time": 427.88579166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05197067901234568
+    },
+    {
+      "time": 428.052625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05152723311546841
+    },
+    {
+      "time": 428.2194583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0506689360929557
+    },
+    {
+      "time": 428.38629166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.05046831880900508
+    },
+    {
+      "time": 428.55312499999997,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.050388707334785766
+    },
+    {
+      "time": 428.7199583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.049931554103122736
+    },
+    {
+      "time": 428.8867916666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.049685820624546115
+    },
+    {
+      "time": 429.053625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04937418300653595
+    },
+    {
+      "time": 429.22045833333334,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04834513435003631
+    },
+    {
+      "time": 429.38729166666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0465810639070443
+    },
+    {
+      "time": 429.554125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0456054829339143
+    },
+    {
+      "time": 429.72095833333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04543173565722586
+    },
+    {
+      "time": 429.88779166666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.044859658678286125
+    },
+    {
+      "time": 430.054625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04455519244734931
+    },
+    {
+      "time": 430.2214583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.044656136528685546
+    },
+    {
+      "time": 430.38829166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04508569353667393
+    },
+    {
+      "time": 430.555125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04431635802469135
+    },
+    {
+      "time": 430.7219583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.043032770515613654
+    },
+    {
+      "time": 430.88879166666663,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04174827523602034
+    },
+    {
+      "time": 431.05562499999996,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.04038562091503268
+    },
+    {
+      "time": 431.2224583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.039295206971677564
+    },
+    {
+      "time": 431.3892916666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03830219680464778
+    },
+    {
+      "time": 431.556125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03713471314451707
+    },
+    {
+      "time": 431.72295833333334,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03605038126361655
+    },
+    {
+      "time": 431.88979166666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0352843137254902
+    },
+    {
+      "time": 432.056625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0349161220043573
+    },
+    {
+      "time": 432.2234583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03435893246187364
+    },
+    {
+      "time": 432.39029166666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03355564633260712
+    },
+    {
+      "time": 432.557125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03352696078431373
+    },
+    {
+      "time": 432.7239583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0330183369644154
+    },
+    {
+      "time": 432.89079166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0326968954248366
+    },
+    {
+      "time": 433.057625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03274037763253449
+    },
+    {
+      "time": 433.2244583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03237844952795933
+    },
+    {
+      "time": 433.39129166666663,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.031667211328976035
+    },
+    {
+      "time": 433.55812499999996,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.03053340595497458
+    },
+    {
+      "time": 433.7249583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.02925826071169208
+    },
+    {
+      "time": 433.8917916666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.02806980755265069
+    },
+    {
+      "time": 434.058625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.026443718228031956
+    },
+    {
+      "time": 434.22545833333334,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.024841594045025416
+    },
+    {
+      "time": 434.39229166666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.02295733478576616
+    },
+    {
+      "time": 434.559125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.014259894698620188
+    },
+    {
+      "time": 434.7259583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00024319172113289761
+    },
+    {
+      "time": 434.89279166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0004149419026870007
+    },
+    {
+      "time": 435.059625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00041793754538852574
+    },
+    {
+      "time": 435.2264583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00030682643427741465
+    },
+    {
+      "time": 435.39329166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0004265613652868555
+    },
+    {
+      "time": 435.560125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005237835875090776
+    },
+    {
+      "time": 435.7269583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0006132897603485838
+    },
+    {
+      "time": 435.89379166666663,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005400326797385621
+    },
+    {
+      "time": 436.06062499999996,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0006313543936092955
+    },
+    {
+      "time": 436.22745833333335,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005937726942628903
+    },
+    {
+      "time": 436.3942916666667,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005571895424836601
+    },
+    {
+      "time": 436.561125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005166122004357298
+    },
+    {
+      "time": 436.72795833333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0005204248366013072
+    },
+    {
+      "time": 436.89479166666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0004802106027596224
+    },
+    {
+      "time": 437.061625,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00037164124909222946
+    },
+    {
+      "time": 437.2284583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.00032706971677559914
+    },
+    {
+      "time": 437.39529166666665,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0015917755991285403
+    },
+    {
+      "time": 437.562125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 4.901960784313726e-06
+    },
+    {
+      "time": 437.7289583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 4.901960784313726e-06
+    },
+    {
+      "time": 437.89579166666664,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 438.06262499999997,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 438.2294583333333,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 438.3962916666666,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 8.986928104575164e-06
+    },
+    {
+      "time": 438.563125,
+      "shot_id": "MICRO_SHOT_0000",
+      "face_count": 0,
+      "source_motion_proxy": 0.0
+    },
+    {
+      "time": 438.7299583333334,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.2130847857661583
+    },
+    {
+      "time": 438.8967916666667,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.04157806826434277
+    },
+    {
+      "time": 439.063625,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.04205292302106028
+    },
+    {
+      "time": 439.23045833333333,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.023379448075526506
+    },
+    {
+      "time": 439.39729166666666,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.02828267973856209
+    },
+    {
+      "time": 439.564125,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.01994753086419753
+    },
+    {
+      "time": 439.7309583333333,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.021767519970951343
+    },
+    {
+      "time": 439.89779166666665,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.014197803195352215
+    },
+    {
+      "time": 440.064625,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.01513498547567175
+    },
+    {
+      "time": 440.2314583333333,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.01852187726942629
+    },
+    {
+      "time": 440.39829166666664,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.01999863834422658
+    },
+    {
+      "time": 440.56512499999997,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.02090087145969499
+    },
+    {
+      "time": 440.7319583333333,
+      "shot_id": "MICRO_SHOT_0001",
+      "face_count": 1,
+      "source_motion_proxy": 0.03425562817719681
+    },
+    {
+      "time": 440.8987916666666,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.19004856572258533
+    },
+    {
+      "time": 441.065625,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.046639887436456064
+    },
+    {
+      "time": 441.23245833333334,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.03539832970225127
+    },
+    {
+      "time": 441.39929166666667,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.03271141975308642
+    },
+    {
+      "time": 441.566125,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.026045297748729122
+    },
+    {
+      "time": 441.73295833333333,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.02769208424110385
+    },
+    {
+      "time": 441.89979166666666,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.03792737835875091
+    },
+    {
+      "time": 442.066625,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.023241830065359476
+    },
+    {
+      "time": 442.2334583333333,
+      "shot_id": "MICRO_SHOT_0002",
+      "face_count": 1,
+      "source_motion_proxy": 0.0078117283950617285
+    },
+    {
+      "time": 442.40029166666665,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.19544090413943355
+    },
+    {
+      "time": 442.567125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.024229302832244008
+    },
+    {
+      "time": 442.7339583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.026273420479302832
+    },
+    {
+      "time": 442.90079166666663,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.025498366013071896
+    },
+    {
+      "time": 443.06762499999996,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.020643790849673205
+    },
+    {
+      "time": 443.2344583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.037001089324618736
+    },
+    {
+      "time": 443.4012916666667,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.01881172839506173
+    },
+    {
+      "time": 443.568125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.014151053013798112
+    },
+    {
+      "time": 443.73495833333334,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.008901688453159041
+    },
+    {
+      "time": 443.90179166666667,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.010530047204066813
+    },
+    {
+      "time": 444.068625,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.005997004357298475
+    },
+    {
+      "time": 444.2354583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.010410403050108933
+    },
+    {
+      "time": 444.40229166666666,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.033559458968772694
+    },
+    {
+      "time": 444.569125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.01225535584604212
+    },
+    {
+      "time": 444.7359583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.02074673202614379
+    },
+    {
+      "time": 444.90279166666664,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.017968954248366014
+    },
+    {
+      "time": 445.069625,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.007224854756717502
+    },
+    {
+      "time": 445.2364583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.007641067538126362
+    },
+    {
+      "time": 445.40329166666663,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.009344862018881626
+    },
+    {
+      "time": 445.57012499999996,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.006318173565722585
+    },
+    {
+      "time": 445.7369583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.00859840232389252
+    },
+    {
+      "time": 445.9037916666667,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.011479121278140885
+    },
+    {
+      "time": 446.070625,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.007820079883805373
+    },
+    {
+      "time": 446.23745833333334,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.009642338416848221
+    },
+    {
+      "time": 446.40429166666667,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.018299564270152505
+    },
+    {
+      "time": 446.571125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.02489932824981845
+    },
+    {
+      "time": 446.7379583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.0204468954248366
+    },
+    {
+      "time": 446.90479166666665,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.014007806826434278
+    },
+    {
+      "time": 447.071625,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.018176379811183734
+    },
+    {
+      "time": 447.2384583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.027115922294843865
+    },
+    {
+      "time": 447.40529166666664,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.026552196804647786
+    },
+    {
+      "time": 447.572125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.015201978939724038
+    },
+    {
+      "time": 447.7389583333333,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.016918572984749455
+    },
+    {
+      "time": 447.90579166666663,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.021729847494553377
+    },
+    {
+      "time": 448.07262499999996,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.017378812636165576
+    },
+    {
+      "time": 448.23945833333335,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.019188543936092955
+    },
+    {
+      "time": 448.4062916666667,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.03364133986928104
+    },
+    {
+      "time": 448.573125,
+      "shot_id": "MICRO_SHOT_0003",
+      "face_count": 1,
+      "source_motion_proxy": 0.01718155410312273
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "MICRO_SHOT_0000",
+      "start": 422.53999999999996,
+      "end": 438.7299583333334,
+      "cut_difference": 0.2130847857661583
+    },
+    {
+      "shot_id": "MICRO_SHOT_0001",
+      "start": 438.7299583333334,
+      "end": 440.8987916666666,
+      "cut_difference": 0.19004856572258533
+    },
+    {
+      "shot_id": "MICRO_SHOT_0002",
+      "start": 440.8987916666666,
+      "end": 442.40029166666665,
+      "cut_difference": 0.19544090413943355
+    },
+    {
+      "shot_id": "MICRO_SHOT_0003",
+      "start": 442.40029166666665,
+      "end": 448.6
+    }
+  ],
+  "broadcast_graphics": {
+    "intervals": [
+      {
+        "start": 422.53999999999996,
+        "end": 427.885625,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.9555555555555556,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.04599609375,
+              "horizontal_coverage": 0.75,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9222141852432897,
+              "sample_count": 32,
+              "observed_seconds": 5.345625000000041
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.08333333333333333,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.03854166666666667,
+              "horizontal_coverage": 0.75,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9361652898850217,
+              "sample_count": 32,
+              "observed_seconds": 5.345625000000041
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      },
+      {
+        "start": 433.22429166666666,
+        "end": 438.5629583333333,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.9555555555555556,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.122705078125,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9782529520742931,
+              "sample_count": 32,
+              "observed_seconds": 5.338666666666654
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.0,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.11225961538461539,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9810259289105796,
+              "sample_count": 32,
+              "observed_seconds": 5.338666666666654
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      },
+      {
+        "start": 438.7299583333334,
+        "end": 440.8987916666666,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.9555555555555556,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.048486328125,
+              "horizontal_coverage": 0.5,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9362342522206963,
+              "sample_count": 13,
+              "observed_seconds": 2.1688333333332253
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.0,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.09102564102564102,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9857472262927297,
+              "sample_count": 13,
+              "observed_seconds": 2.1688333333332253
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      },
+      {
+        "start": 440.8987916666666,
+        "end": 442.40029166666665,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.95,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.04861111111111111,
+              "horizontal_coverage": 0.5,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9378013090004551,
+              "sample_count": 9,
+              "observed_seconds": 1.5015000000000214
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.044444444444444446,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.0751008064516129,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.981857859867462,
+              "sample_count": 9,
+              "observed_seconds": 1.5015000000000214
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      },
+      {
+        "start": 442.40029166666665,
+        "end": 447.7387916666667,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.9555555555555556,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.0474609375,
+              "horizontal_coverage": 0.5,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9424706160497409,
+              "sample_count": 32,
+              "observed_seconds": 5.338500000000067
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.0,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.08629807692307692,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9893020978799194,
+              "sample_count": 32,
+              "observed_seconds": 5.338500000000067
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      },
+      {
+        "start": 447.7387916666667,
+        "end": 448.6,
+        "schema_version": "1.0",
+        "regions": [
+          {
+            "kind": "lower_third",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.6,
+            "y_end": 0.9555555555555556,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.05546875,
+              "horizontal_coverage": 0.75,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.952852814697705,
+              "sample_count": 6,
+              "observed_seconds": 0.8612083333333089
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          },
+          {
+            "kind": "banner",
+            "x_start": 0.0,
+            "x_end": 1.0,
+            "y_start": 0.0,
+            "y_end": 0.21666666666666667,
+            "persistent": true,
+            "confidence": 0.75,
+            "needs_review": true,
+            "evidence": {
+              "edge_density": 0.09022435897435897,
+              "horizontal_coverage": 1.0,
+              "fixed_coordinate_persistence": 0.75,
+              "color_stability_proxy": 0.9968882489315727,
+              "sample_count": 6,
+              "observed_seconds": 0.8612083333333089
+            },
+            "ocr_text": [],
+            "measurement": "graphic_candidate_not_text_recognition"
+          }
+        ],
+        "status": "measured",
+        "ocr_required": false
+      }
+    ],
+    "status": "measured"
+  },
+  "cache_hit": false,
+  "sampled_start": 422.547125,
+  "sampled_end": 448.573125,
+  "sample_count": 157,
+  "sample_fps": 6.0,
+  "raw_tracklets": 4,
+  "speaker_identity_method": "not_inferred_from_local_faces",
+  "face_model_fingerprint": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "metadata_provenance": {
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\curation\\zd_wjssZ7mc\\planning\\848dac2adad14c7898fc97221b1c34bb\\clips\\SECOND_LDP26_REEL_05_01\\clip_micro_perception.json",
+    "sha256": "aebb34898127d31feeba5906f9a28a0a7ecf7903a98f445f46b47a28458b52a3",
+    "source_plan_path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\curation\\zd_wjssZ7mc\\EDIT_DECISIONS.json",
+    "source_plan_sha256": "95a178757436079a17a8c6e340cc12ed8251045974f2e251a76b8231170bfa28"
+  }
+}

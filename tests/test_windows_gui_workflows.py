@@ -109,11 +109,11 @@ def dialogs(monkeypatch, answers):
     return asked, errors
 
 
-def test_gui_duration_labels_and_keys_have_all_eight_exact_options():
+def test_gui_duration_labels_and_keys_preserve_eight_options_and_add_stories():
     assert series_review.PRESET_LABELS == ("Auto (<90s)", "<30s", "30s~59s", "60s~89s",
-                                           "90s~3m", "3m~5m", "5m~10m", "10m~15m")
+                                           "90s~3m", "3m~5m", "5m~10m", "10m~15m", "Stories (até 60s)")
     assert series_review.PRESET_KEYS == ("auto_under_90", "under_30", "from_30_to_59", "from_60_to_89",
-                                         "from_90_to_180", "from_180_to_300", "from_300_to_600", "from_600_to_900")
+                                         "from_90_to_180", "from_180_to_300", "from_300_to_600", "from_600_to_900", "story_upto_60")
 
 
 def test_save_schedules_and_executes_valid_controller_edit(monkeypatch):

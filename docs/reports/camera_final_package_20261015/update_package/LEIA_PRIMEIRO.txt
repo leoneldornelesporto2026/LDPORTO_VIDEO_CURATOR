@@ -1,0 +1,10 @@
+L.D.PORTO - refinamento incremental de camera
+
+Feche o Curator. Extraia o ZIP em uma pasta separada e confira o SHA256 externo.
+Verificar: powershell -NoProfile -ExecutionPolicy Bypass -File .\INSTALL_CAMERA_FINAL.ps1 -TargetRoot "C:\caminho\LDPORTO_VIDEO_CURATOR" -VerifyOnly
+Instalar: mesmo comando sem -VerifyOnly. Versoes locais divergentes sao recusadas.
+Rollback: acrescente -Rollback "backups/camera_final_<id>/TRANSACTION.json".
+Use rollback tambem apos interrupcao; o journal reconhece arquivos antes/depois.
+Rollback interrompido pode ser repetido. Edicoes locais posteriores sao preservadas por recusa.
+Backups e journal sao preservados. Nao instala midia, cache, configuracao ou aprovacoes.
+Nao executa analise, renderizacao, aprovacao editorial ou publicacao.

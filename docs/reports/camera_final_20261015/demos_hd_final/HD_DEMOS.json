@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "apresentador",
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\camera_final_20261015\\demos_hd_final\\apresentador\\DEMO_APRESENTADOR_1080x1920.mp4",
+    "sha256": "211eecad4049e8743665f7abda76189ae1e79e10cfba13ed5bd1f8dc6ba4e709",
+    "source_start": 2015.1,
+    "source_end": 2045.0,
+    "canonical_timeline_sha256": "ac09697dc99e166e8ab8112a85e3c1c86ce96bf635d53a9f54111d974315de6f",
+    "validation": {
+      "status": "validated",
+      "duration": 29.9,
+      "expected_duration": 29.90000000000009,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "samples": [
+        {
+          "time": 2.990000000000009,
+          "mean_brightness": 146.10728266460904,
+          "decodable": true
+        },
+        {
+          "time": 14.950000000000045,
+          "mean_brightness": 133.25556246784978,
+          "decodable": true
+        },
+        {
+          "time": 26.910000000000082,
+          "mean_brightness": 128.6916722929527,
+          "decodable": true
+        }
+      ],
+      "visual_human_review": "pending",
+      "audio_human_review": "pending"
+    },
+    "approved": false,
+    "technical_demo_only": true
+  },
+  {
+    "scenario": "mapa_rota",
+    "path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\docs\\reports\\camera_final_20261015\\demos_hd_final\\mapa_rota\\DEMO_MAPA_ROTA_1080x1920.mp4",
+    "sha256": "15995d7501d065a4e6ddad475724ca71dfb889e654b69ee2deae8f5fcc5f7a07",
+    "source_start": 422.53999999999996,
+    "source_end": 448.6,
+    "canonical_timeline_sha256": "409b2d03b17be7766196c7b67206e2a1f44cbe8be5a65c98c2b3b627ef43abc0",
+    "validation": {
+      "status": "validated",
+      "duration": 26.067708,
+      "expected_duration": 26.06000000000006,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "samples": [
+        {
+          "time": 2.606000000000006,
+          "mean_brightness": 129.50931729038066,
+          "decodable": true
+        },
+        {
+          "time": 13.03000000000003,
+          "mean_brightness": 98.18068367412552,
+          "decodable": true
+        },
+        {
+          "time": 23.454000000000054,
+          "mean_brightness": 128.71817483281893,
+          "decodable": true
+        }
+      ],
+      "visual_human_review": "pending",
+      "audio_human_review": "pending"
+    },
+    "approved": false,
+    "technical_demo_only": true
+  }
+]

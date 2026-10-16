@@ -1,0 +1,103 @@
+{
+  "schema": "LDP_CURRENT_REELS_CAPTION_REFERENCE_V1",
+  "reference_read_only": true,
+  "approved_media_modified": false,
+  "actual_reels": [
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_01_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "a7fd0c9bdfd510c1881a027c1459f5d0e4c423f90e161ad08eb795a6b8298b2d",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 17,
+      "max_lines": 2,
+      "min_words": 1,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k52}Bom, {\\k58}depois {\\k26}que\\N{\\k14}eles {\\k62}insistiram {\\k26}muito"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_02_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "f8fc987c94cc70a7602674a6c929552df2aa69b7ae9763808191f6c6d409d0be",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 21,
+      "max_lines": 2,
+      "min_words": 2,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k14}O {\\k64}problema {\\k38}é {\\k10}que\\N{\\k18}era {\\k52}comum {\\k64}as"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_03_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "27b1bede74883c2d4e7332244dda8f858f948f6011c4aea37b5ed11b65e28724",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 20,
+      "max_lines": 2,
+      "min_words": 1,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k30}Sendo {\\k18}que {\\k26}nesta\\N{\\k64}etapa {\\k38}o {\\k48}Zili {\\k28}estava"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_04_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "b6a5b7ebf3c7d6fa4fc2ba70fcbbdff5f773de44463c0caf0ed6e55b9ab2193d",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 16,
+      "max_lines": 2,
+      "min_words": 1,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k44}Na {\\k52}aviação {\\k24}existe\\N{\\k42}checklist {\\k44}de {\\k48}tudo,"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_05_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "7dff4ba432ea0f3a11738b9e7493c4c6b3d1367e0b11ef0c513432e116707b82",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 13,
+      "max_lines": 2,
+      "min_words": 2,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k20}Às {\\k52}2h05 {\\k30}da {\\k50}tarde,\\N{\\k6}o {\\k14}Mike {\\k26}Kilo"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_06_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "8551c6aa7ae7e3ce67268b85e9cc0c7bfe3601430638f78ebc1f970b624ab638",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 13,
+      "max_lines": 2,
+      "min_words": 2,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k40}Ali, {\\k20}a {\\k62}tripulação {\\k10}do\\N{\\k40}comandante {\\k54}Genaro"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_07_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "b3050a76250b021b8422c9503a75934879249eb5d0ae561a44dd47127ef8db6d",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 15,
+      "max_lines": 2,
+      "min_words": 1,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k18}No {\\k18}fim {\\k12}das {\\k58}contas, {\\k28}os {\\k58}pilotos"
+    },
+    {
+      "path": "output/renders/zd_wjssZ7mc/revisions/55bf1ca6c93243e1865879065f379598/SECOND_LDP26_REEL_08_01/batches/988aaf8d4e7440ff8620be399b559858/subtitles.ass",
+      "sha256": "614339f98d7e97453fe95e5a4b6f1939e94db6fe97c7fcb89481a8b5fed56bd5",
+      "style": "Style: Sub,Segoe UI,60,&H00FFFFFF,&H0000D7FF,&H00101010,&H60000000,-1,0,0,0,100,100,0,0,1,6,2,2,130,130,320,1",
+      "dialogue_count": 28,
+      "max_lines": 2,
+      "min_words": 1,
+      "max_words": 7,
+      "first_dialogue": "{\\fs60}{\\k66}Belém,"
+    }
+  ],
+  "equivalent_profile": {
+    "font": "Segoe UI",
+    "bold": true,
+    "font_size_1080": 60,
+    "color_before_word": "#FFD700",
+    "color_after_word_start": "#FFFFFF",
+    "outline_color": "#101010",
+    "outline_1080": 6,
+    "shadow_1080": 2,
+    "alignment_ass": 2,
+    "margin_left_1080": 130,
+    "margin_right_1080": 130,
+    "margin_bottom_1920": 320,
+    "wrap_style": 2
+  },
+  "legacy_timing_note": "The visible full-block cumulative karaoke is the reference. The legacy k tags sum durations; the new shared engine must use measured absolute starts to avoid drift."
+}

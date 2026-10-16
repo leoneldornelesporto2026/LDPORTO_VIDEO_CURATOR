@@ -1,0 +1,327 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "compile": {
+    "files": 99,
+    "errors": [],
+    "method": "compile(bytes, path, exec), no pycache writes"
+  },
+  "imports": [
+    {
+      "module": "ldporto_curator.__init__",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.analysis_loader",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.approval",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.broadcast_graphics",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera_evidence",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera_geometry",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera_motion",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera_refinement",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.camera_verifier",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.combined_batch",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.config",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.crop_editor",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.curator",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.director_config",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.duration_presets",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.editing_history",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.editorial_copy",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.episode_approval",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.eta",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.evidence_source",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.feedback",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.final_camera",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.full_handoff",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.gui",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.import_smoke",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.interview_layout",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.local_player",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.media_effects",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.micro_perception",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.ollama_client",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.persisted_plan",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.pipeline",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.pipeline_recovery",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.render",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.review",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.second_curation_decisions",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.second_curation_import",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.series_planner",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.series_review",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.series_workflow",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.smart_composition",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.source_video",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.storage",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.storage_dialog",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.story_import",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.subtitle_presets",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.subtitles",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.temporal",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.thumbnail_presets",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.thumbnails",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.timeline_editor",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.title_card",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.title_presets",
+      "ok": true
+    },
+    {
+      "module": "ldporto_curator.utils",
+      "ok": true
+    }
+  ],
+  "paths": {
+    "analysis_root": {
+      "resolved": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\analysis",
+      "exists": true,
+      "is_dir": true
+    },
+    "output_root": {
+      "resolved": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output",
+      "exists": true,
+      "is_dir": true
+    },
+    "source_cache": {
+      "resolved": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\source_cache",
+      "exists": true,
+      "is_dir": true
+    }
+  },
+  "projects": [
+    {
+      "path": "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/series_index.json",
+      "episodes": 16,
+      "series": 3,
+      "revisions": 16,
+      "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f"
+    }
+  ],
+  "gui_smoke": {
+    "ok": true,
+    "title": "L.D.PORTO VIDEO CURATOR",
+    "action_buttons": 6,
+    "width": 868,
+    "height": 916,
+    "session_restore_disabled_for_read_only_smoke": true
+  },
+  "cli_help": {
+    "exit_code": 0
+  },
+  "pip_check": {
+    "exit_code": 0,
+    "output": "No broken requirements found."
+  },
+  "pytest_before": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -p no:cacheprovider -q",
+    "passed": 478,
+    "skipped": 1,
+    "failed": 3,
+    "seconds": 43.34,
+    "failures": [
+      {
+        "id": "tests/test_p0_gui.py::test_worker_uses_main_thread_snapshot_and_duplicate_click_is_ignored[all]",
+        "reason": "New combined_batch route does not enter legacy mocked Pipeline; enter.wait(5) fails."
+      },
+      {
+        "id": "tests/test_p0_legacy_recovery.py::test_local_legacy_recovery_is_non_destructive_and_missing_source_cannot_be_approved",
+        "reason": "Historical output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json is absent at root; a revision-scoped copy exists."
+      },
+      {
+        "id": "tests/test_windows_gui_workflows.py::test_gui_duration_labels_and_keys_have_all_eight_exact_options",
+        "reason": "Test expects eight presets; current code includes ninth Stories preset."
+      }
+    ]
+  },
+  "pytest_after_stage00": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -p no:cacheprovider -q",
+    "passed": 478,
+    "skipped": 1,
+    "failed": 3,
+    "seconds": 45.76,
+    "failures": [
+      {
+        "id": "tests/test_p0_gui.py::test_worker_uses_main_thread_snapshot_and_duplicate_click_is_ignored[all]",
+        "reason": "New combined_batch route does not enter legacy mocked Pipeline; enter.wait(5) fails."
+      },
+      {
+        "id": "tests/test_p0_legacy_recovery.py::test_local_legacy_recovery_is_non_destructive_and_missing_source_cannot_be_approved",
+        "reason": "Historical output/curation/zd_wjssZ7mc/CHATGPT_HANDOFF.json is absent at root; a revision-scoped copy exists."
+      },
+      {
+        "id": "tests/test_windows_gui_workflows.py::test_gui_duration_labels_and_keys_have_all_eight_exact_options",
+        "reason": "Test expects eight presets; current code includes ninth Stories preset."
+      }
+    ],
+    "junit": "pytest_after_stage00.xml",
+    "note": "Same 478 passed / 1 skipped / 3 pre-existing failures; run launched before production edits."
+  },
+  "pytest_after_test_setup_repairs": {
+    "scope": [
+      "tests/test_p0_gui.py",
+      "tests/test_windows_gui_workflows.py",
+      "tests/test_p0_legacy_recovery.py"
+    ],
+    "passed": 61,
+    "skipped": 2,
+    "failed": 0,
+    "seconds": 1.95,
+    "note": "P0 continuation after stage00 clearance; production unchanged by test repairs. Historical checks requiring missing original files skip explicitly; archived signature test still runs."
+  }
+}

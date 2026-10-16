@@ -1,0 +1,47 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 540
+PlayResY: 960
+ScaledBorderAndShadow: yes
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H00101010,&HFF000000,-1,0,0,0,100,100,0,0,1,1.50,0.50,2,43,86,172,1
+Style: CaptionBlock,Segoe UI,30.00,&H00FFFFFF,&H0035FFC5,&H59000000,&H59000000,-1,0,0,0,100,100,0,0,3,1.50,0,2,43,86,172,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.52,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Naquela
+Dialogue: 0,0:00:00.52,0:00:00.94,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}hora,
+Dialogue: 0,0:00:01.02,0:00:01.10,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}os
+Dialogue: 0,0:00:01.10,0:00:01.82,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}satélites
+Dialogue: 0,0:00:01.82,0:00:02.04,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}do
+Dialogue: 0,0:00:02.04,0:00:02.38,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}INPE
+Dialogue: 0,0:00:02.38,0:00:03.04,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}começaram
+Dialogue: 0,0:00:03.04,0:00:03.16,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}a
+Dialogue: 0,0:00:03.16,0:00:03.40,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}receber
+Dialogue: 0,0:00:03.40,0:00:04.22,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}sinais
+Dialogue: 0,0:00:04.22,0:00:04.86,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}vindos
+Dialogue: 0,0:00:04.86,0:00:05.02,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}do
+Dialogue: 0,0:00:05.02,0:00:05.34,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}norte
+Dialogue: 0,0:00:05.34,0:00:05.60,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}do
+Dialogue: 0,0:00:05.60,0:00:05.80,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Mato
+Dialogue: 0,0:00:05.80,0:00:06.20,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Grosso.
+Dialogue: 0,0:00:06.36,0:00:06.48,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}E
+Dialogue: 0,0:00:06.48,0:00:06.62,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}as
+Dialogue: 0,0:00:06.62,0:00:07.14,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}buscas
+Dialogue: 0,0:00:07.14,0:00:07.28,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}que
+Dialogue: 0,0:00:07.28,0:00:07.48,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}estavam
+Dialogue: 0,0:00:07.48,0:00:07.74,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}mais
+Dialogue: 0,0:00:07.74,0:00:08.22,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}focadas
+Dialogue: 0,0:00:08.22,0:00:08.42,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}na
+Dialogue: 0,0:00:08.42,0:00:08.68,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}região
+Dialogue: 0,0:00:08.68,0:00:08.90,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}lá
+Dialogue: 0,0:00:08.90,0:00:09.08,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}de
+Dialogue: 0,0:00:09.08,0:00:09.66,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}Carajás
+Dialogue: 0,0:00:09.66,0:00:10.04,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}foram
+Dialogue: 0,0:00:10.04,0:00:10.86,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}enviadas
+Dialogue: 0,0:00:10.86,0:00:11.10,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}para
+Dialogue: 0,0:00:11.10,0:00:11.38,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}aquela
+Dialogue: 0,0:00:11.38,0:00:11.76,Sub,,0,0,0,,{\an2\q2\pos(248.40,729.60)\fs40.50}área.

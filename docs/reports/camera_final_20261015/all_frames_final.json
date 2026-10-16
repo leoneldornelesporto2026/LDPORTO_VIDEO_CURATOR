@@ -1,0 +1,60 @@
+{
+  "cases": [
+    {
+      "scenario": "apresentador",
+      "frames_decoded": 716,
+      "dimensions": [
+        [
+          540,
+          960
+        ]
+      ],
+      "uniform_black_edge_frames": []
+    },
+    {
+      "scenario": "mapa_rota",
+      "frames_decoded": 625,
+      "dimensions": [
+        [
+          540,
+          960
+        ]
+      ],
+      "uniform_black_edge_frames": []
+    },
+    {
+      "scenario": "alternancia",
+      "frames_decoded": 1071,
+      "dimensions": [
+        [
+          540,
+          960
+        ]
+      ],
+      "uniform_black_edge_frames": []
+    },
+    {
+      "scenario": "gestos",
+      "frames_decoded": 891,
+      "dimensions": [
+        [
+          540,
+          960
+        ]
+      ],
+      "uniform_black_edge_frames": []
+    },
+    {
+      "scenario": "baixa_confianca",
+      "frames_decoded": 629,
+      "dimensions": [
+        [
+          540,
+          960
+        ]
+      ],
+      "uniform_black_edge_frames": []
+    }
+  ],
+  "meaning": "All decoded frames checked for uniform near-black four-pixel output bands; does not certify every semantic crop or human review."
+}

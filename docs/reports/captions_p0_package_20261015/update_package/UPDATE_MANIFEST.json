@@ -1,0 +1,150 @@
+{
+  "schema": "LDP_CAPTION_PATCH_V1",
+  "created_at_utc": "2026-10-15T19:16:54.458228+00:00",
+  "baseline": "ETAPA00_20261015",
+  "files": [
+    {
+      "path": "ldporto_curator/episode_approval.py",
+      "sha256": "cb4331d8cc97809d6c2ed15d232f3cea15ca38e9a83d2c5acf74464e3c0eae53",
+      "before_sha256": "02aa459c24ae980fe7df010e13c6abf80c6696249728822f76f5939155863584",
+      "bytes": 4569
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "sha256": "029ad1baed906c3fb206f3677306f2e88af7edfe71d0eafa5dd67018842b3fbb",
+      "before_sha256": "d64efe5574dfc70f31cae7281c3c0904ba657c839d600aac96a8846ac3f89b01",
+      "bytes": 53366
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "sha256": "85767552be99144119faff0dc826f2534ba4d6f6f7d9bc7b927257a80f6a5198",
+      "before_sha256": "bee209a3be54bfdf5807e0c846a1b712335dcfa7fca22fc9e80f3b6c8f11b496",
+      "bytes": 43249
+    },
+    {
+      "path": "tests/fixture/story_caption_fragment_records.json",
+      "sha256": "2afb6963702588b9ce7af63ea6e09f3b76cce73f5291e805d630b1e3d41b4ced",
+      "before_sha256": null,
+      "bytes": 63277
+    },
+    {
+      "path": "tests/fixture/story_caption_fragment_segments.jsonl",
+      "sha256": "2ace1caf5df53d4b7d49f6fed80ac22af33c1e815d0225cf22b33c375209b579",
+      "before_sha256": null,
+      "bytes": 2701
+    },
+    {
+      "path": "tests/fixture/story_caption_fragment_words.jsonl",
+      "sha256": "08abccbae81e59f9702a3a818ca0bde6db7d2f575268d5bbc752e160aec8db73",
+      "before_sha256": null,
+      "bytes": 42480
+    },
+    {
+      "path": "tests/fixture/story_prop_f654d728d26180f2fb0e5816.json",
+      "sha256": "e9ae15a98a2474c8b72a758916e1818402f16d43c27659498e92896f5caa7cd1",
+      "before_sha256": null,
+      "bytes": 59325
+    },
+    {
+      "path": "tests/test_caption_installer.py",
+      "sha256": "d362daf808a63b158d1dff8d8c25ace5d1b919e87f5aca45c31db6c9611a7268",
+      "before_sha256": null,
+      "bytes": 9531
+    },
+    {
+      "path": "tests/test_caption_revision.py",
+      "sha256": "2db9c9c80baed3a568326f48a809e26d32a1806017a9c7952b156fa4e215d1a8",
+      "before_sha256": null,
+      "bytes": 14766
+    },
+    {
+      "path": "tests/test_caption_update_package.py",
+      "sha256": "c28792bc678858999d94160a65ce383db89bd25469a01551e2b671a3d5b6e762",
+      "before_sha256": null,
+      "bytes": 7136
+    },
+    {
+      "path": "tests/test_p0_gui.py",
+      "sha256": "c8004a657d639be2d2117aa6fa21514360f008bc72d033b7cf10ca070813c24c",
+      "before_sha256": "5bae37dbb79c2ac8c816ef1177a3158c8f8f11f3eb36c3d7a64d7c3c046f7633",
+      "bytes": 16778
+    },
+    {
+      "path": "tests/test_p0_legacy_recovery.py",
+      "sha256": "8905f153130b9f2faaa2f033681516de6709d62bd0d9ef0e7e11be86e95c47e9",
+      "before_sha256": "b8f5d892fad984a834bc6b82a599869b7b572d297fdaca5c16397a69ae54066f",
+      "bytes": 5239
+    },
+    {
+      "path": "tests/test_story_caption_canonical.py",
+      "sha256": "f20f064cb65a0b4a4b7310d39f7430ea0bdb4ffe36d577bed32688b883e1e5d4",
+      "before_sha256": null,
+      "bytes": 15231
+    },
+    {
+      "path": "tests/test_subtitle_readability.py",
+      "sha256": "a1c327da98cb8627245bfe220fd67609ada4496a67f2aad692906a291d952a12",
+      "before_sha256": "7ceee1a8bb338bab5c605fa19b44f8df3d8a4c6231041fc48e4fcd9afb7b650c",
+      "bytes": 8011
+    },
+    {
+      "path": "tests/test_subtitle_word_alignment.py",
+      "sha256": "382f4b6c3522d65c2a98d5d2467132f8c8efab411c3ac08a12b9407fb41e3649",
+      "before_sha256": "78ab39e7211fcdf05a5813a5631f5548a5096afd8a5d349f40d24177127c45e0",
+      "bytes": 8581
+    },
+    {
+      "path": "tests/test_windows_gui_workflows.py",
+      "sha256": "991f14939a5d19fe922566cfad553b063a558a97f864bc3e9aeda94451da6efb",
+      "before_sha256": "1954fcd4d6a85a47a2081bc5fbe4f5c561c79bd0b31af0f180d9d72a06382e61",
+      "bytes": 16923
+    },
+    {
+      "path": "scripts/build_caption_update.py",
+      "sha256": "a179333c143c0f43c0c67b1976ecd80f14134e45e9793d119154be425e60b4a7",
+      "before_sha256": null,
+      "bytes": 6996
+    },
+    {
+      "path": "scripts/INSTALL_CAPTIONS_P0.ps1",
+      "sha256": "db93f768ba3862fdeb5be46ba6e0bba6e80f16040d3fe3c8f697446fee523556",
+      "before_sha256": null,
+      "bytes": 7688
+    },
+    {
+      "path": "scripts/validate_story_captions_p0.py",
+      "sha256": "6d4840a2e157f1a4b4914a9655ab632cb16b183b85190a6fa8bf4b2f6ac039b6",
+      "before_sha256": null,
+      "bytes": 14562
+    },
+    {
+      "path": "scripts/verify_caption_protected_hashes.py",
+      "sha256": "e4e08afafa04d731d4f4ed3f3812d9f5c2c534f09bd56479a24fd03c13efc1b9",
+      "before_sha256": null,
+      "bytes": 5675
+    },
+    {
+      "path": "README.md",
+      "sha256": "e710166fc9fe8c325ecb04230f7acf4007ed2379f72fe26109cfaec2e99a0aff",
+      "before_sha256": "e711cde4fb751e6634230776f393c53e508f1d4759e94f176d786276a2022b1e",
+      "bytes": 5164
+    },
+    {
+      "path": "docs/architecture/LEGENDAS_WORD_ALIGNED.md",
+      "sha256": "ed27909dd9b913d6192dd8edd4d8ec498dae2e4a1faf12d098f2780a444911f7",
+      "before_sha256": null,
+      "bytes": 4346
+    }
+  ],
+  "preserved": [
+    "output",
+    ".cache",
+    ".venv",
+    "source_cache",
+    "config.yaml",
+    "approvals",
+    "original_media"
+  ],
+  "approval_granted": false,
+  "automatic_batch_render": false
+}

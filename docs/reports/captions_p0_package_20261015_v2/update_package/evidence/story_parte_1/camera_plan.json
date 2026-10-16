@@ -1,0 +1,16 @@
+{
+  "mode": "full_frame_blur",
+  "visual_source": "fallback",
+  "requested_mode": "AUTO_CONSERVADOR",
+  "reason": "Preservar composição original; foco seguro não comprovado",
+  "speaker_identity": "unverified",
+  "crop_safe": false,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 26.21999999999997,
+      "mode": "full_frame_blur",
+      "confidence_source": "fallback"
+    }
+  ]
+}

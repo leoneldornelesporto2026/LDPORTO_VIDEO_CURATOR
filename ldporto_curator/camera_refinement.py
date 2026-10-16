@@ -165,6 +165,7 @@ def refine_camera_plan(micro, metadata, start, end, cfg=None, suggested_layout=N
             if not geo['safe']:
                 mode, focus, pair, current_geo = 'full_frame_blur', None, (), None
                 controller = CameraMotion()
+                since = t
                 transition, reason, evidence = 'safety_cut', 'UNSAFE_MOTION_OR_MISSING_FACE', 'SOURCE_PRESERVE'
                 unsafe += 1
             after = controller.snapshot(until)

@@ -1,0 +1,48 @@
+{
+  "changed": [
+    {
+      "path": "output/curation/zd_wjssZ7mc/EDIT_DECISIONS.json",
+      "before": "5b57e8dfee62d75d40f27edfa074d3e31956bba5dc088c3c62d926a032add2ad",
+      "after": "95a178757436079a17a8c6e340cc12ed8251045974f2e251a76b8231170bfa28",
+      "mtime": "2026-10-16T00:48:12.381905+00:00"
+    },
+    {
+      "path": "output/curation/zd_wjssZ7mc/revisions/067465a6db384c699ecb0cbe9f3bbc73/CHATGPT_HANDOFF.json",
+      "before": "1789416a9635a22291214057fa517b4a953993d8ea32730ec295c8d397c398f5",
+      "after": "be2a451228400bbaf02720adf37cc71447193543d5c15144022a3fa84c33baf8",
+      "mtime": "2026-10-16T00:48:09.855692+00:00"
+    },
+    {
+      "path": "output/curation/zd_wjssZ7mc/revisions/067465a6db384c699ecb0cbe9f3bbc73/CURATION_BOARD.html",
+      "before": "fc941cab6bf4840431a26200b97ad31f6e9eac6e0ac6199d45b2319a9a35e609",
+      "after": "bc9f65506644c831bd534fb60b024b34ff32476fabdffcb65036b9a7921d012d",
+      "mtime": "2026-10-16T00:48:09.850178+00:00"
+    },
+    {
+      "path": "output/curation/zd_wjssZ7mc/revisions/067465a6db384c699ecb0cbe9f3bbc73/CURATION_BOARD.png",
+      "before": "4f97e66cbf956b5aa09b7e4753d2756d731ea30743bd6f85e75957ac60cf7bd6",
+      "after": "9414a2d6d79bb2c5ea65b6da1c0766d7eb48fd0b08477e7f3e437261b695d88b",
+      "mtime": "2026-10-16T00:48:09.849178+00:00"
+    },
+    {
+      "path": "output/curation/zd_wjssZ7mc/revisions/067465a6db384c699ecb0cbe9f3bbc73/STATE.json",
+      "before": "5b57e8dfee62d75d40f27edfa074d3e31956bba5dc088c3c62d926a032add2ad",
+      "after": "95a178757436079a17a8c6e340cc12ed8251045974f2e251a76b8231170bfa28",
+      "mtime": "2026-10-16T00:48:12.371391+00:00"
+    },
+    {
+      "path": "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/series_index.json",
+      "before": "1b958c5de8ee989c50d88ee1784a3cfd1748a3f32c771cc011a08c3bf4f46ac4",
+      "after": "e84b4857df44286bcda02fa230a19519135253c761701be50387f7c57a1c41f5",
+      "mtime": "2026-10-16T00:50:16.585628+00:00"
+    },
+    {
+      "path": "output/projects/zd_wjssZ7mc/stories_30af3ad6a05923e2/SERIES_PLAYLIST_ORDER.m3u",
+      "before": "9f4293cb5def6c355a225aff2dc06e23cbd730349b9fe71f667e8e98169e1e7f",
+      "after": "df7ef85d5a823915d1016a632d18340be4a0d4c32df6c7ba13082e2c46368426",
+      "mtime": "2026-10-16T00:50:17.927807+00:00"
+    }
+  ],
+  "missing": [],
+  "checked": 1016
+}

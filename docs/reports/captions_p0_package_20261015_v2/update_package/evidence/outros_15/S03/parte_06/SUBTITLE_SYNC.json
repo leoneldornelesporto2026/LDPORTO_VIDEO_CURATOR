@@ -1,0 +1,3608 @@
+{
+  "schema": "LDP_SUBTITLE_SYNC_V5.2_WORD_ALIGNED",
+  "engine_version": "5.2.2",
+  "episode_id": "PROP_7945d8231636c7684fdaedbe",
+  "source_start": 1974.2,
+  "source_end": 1985.96,
+  "duration": 11.759999999999991,
+  "preset": {
+    "font": "Segoe UI",
+    "font_size_final": 60.0,
+    "bold": true,
+    "color": "#FFFFFF",
+    "highlight_color": "#C5FF35",
+    "outline_color": "#101010",
+    "box_color": "#000000",
+    "outline": 3.0,
+    "shadow": 1.0,
+    "box_opacity": 0.0,
+    "position_y": 0.76,
+    "safe_zone": {
+      "left": 0.08,
+      "right": 0.16,
+      "top": 0.12,
+      "bottom": 0.18
+    },
+    "uppercase": false,
+    "animation": "none",
+    "max_words": 12,
+    "max_chars": 28,
+    "max_lines": 2,
+    "highlight_words": [],
+    "word_highlight": false,
+    "reveal_mode": "word",
+    "block_min_seconds": 0.8,
+    "block_max_seconds": 2.2,
+    "pause_threshold_seconds": 0.25,
+    "name": "LDP_CLEAN"
+  },
+  "transcript_reference": {
+    "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+    "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+    "scope": "literal_source_segments_and_word_evidence",
+    "immutable": true
+  },
+  "literal_transcript_unchanged": true,
+  "visual_case_transform": "none",
+  "time_precision": {
+    "srt_seconds": 0.001,
+    "ass_seconds": 0.01,
+    "canonical": "unrounded_original_seconds",
+    "maximum_ass_rounding_error_seconds": 0.005,
+    "maximum_srt_rounding_error_seconds": 0.0005
+  },
+  "enabled": true,
+  "segments": [
+    {
+      "segment_id": "SEG_00349",
+      "source_start": 1974.2,
+      "source_end": 1980.4,
+      "start": 0.0,
+      "end": 6.2000000000000455,
+      "literal_text": "Naquela hora, os satélites do INPE começaram a receber sinais vindos do norte do Mato Grosso.",
+      "clip_literal_text": "Naquela hora, os satélites do INPE começaram a receber sinais vindos do norte do Mato Grosso.",
+      "speaker": "SPEAKER_00",
+      "alignment": "word",
+      "fallback_reason": null,
+      "clipped": false,
+      "words": [
+        {
+          "word_id": "WORD_0004906",
+          "source_start": 1974.2,
+          "source_end": 1974.72,
+          "text": "Naquela",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 0.0,
+          "end": 0.5199999999999818,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004907",
+          "source_start": 1974.72,
+          "source_end": 1975.14,
+          "text": "hora,",
+          "char_start": 8,
+          "char_end": 13,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 0.5199999999999818,
+          "end": 0.9400000000000546,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004908",
+          "source_start": 1975.22,
+          "source_end": 1975.3,
+          "text": "os",
+          "char_start": 14,
+          "char_end": 16,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 1.0199999999999818,
+          "end": 1.099999999999909,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004909",
+          "source_start": 1975.3,
+          "source_end": 1976.02,
+          "text": "satélites",
+          "char_start": 17,
+          "char_end": 26,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 1.099999999999909,
+          "end": 1.8199999999999363,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004910",
+          "source_start": 1976.02,
+          "source_end": 1976.24,
+          "text": "do",
+          "char_start": 27,
+          "char_end": 29,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 1.8199999999999363,
+          "end": 2.0399999999999636,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004911",
+          "source_start": 1976.24,
+          "source_end": 1976.58,
+          "text": "INPE",
+          "char_start": 30,
+          "char_end": 34,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 2.0399999999999636,
+          "end": 2.3799999999998818,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004912",
+          "source_start": 1976.58,
+          "source_end": 1977.24,
+          "text": "começaram",
+          "char_start": 35,
+          "char_end": 44,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 2.3799999999998818,
+          "end": 3.0399999999999636,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004913",
+          "source_start": 1977.24,
+          "source_end": 1977.36,
+          "text": "a",
+          "char_start": 45,
+          "char_end": 46,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 3.0399999999999636,
+          "end": 3.1599999999998545,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004914",
+          "source_start": 1977.36,
+          "source_end": 1977.6,
+          "text": "receber",
+          "char_start": 47,
+          "char_end": 54,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 3.1599999999998545,
+          "end": 3.3999999999998636,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004915",
+          "source_start": 1977.6,
+          "source_end": 1978.42,
+          "text": "sinais",
+          "char_start": 55,
+          "char_end": 61,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 3.3999999999998636,
+          "end": 4.220000000000027,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004916",
+          "source_start": 1978.42,
+          "source_end": 1979.06,
+          "text": "vindos",
+          "char_start": 62,
+          "char_end": 68,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 4.220000000000027,
+          "end": 4.8599999999999,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004917",
+          "source_start": 1979.06,
+          "source_end": 1979.22,
+          "text": "do",
+          "char_start": 69,
+          "char_end": 71,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 4.8599999999999,
+          "end": 5.019999999999982,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004918",
+          "source_start": 1979.22,
+          "source_end": 1979.54,
+          "text": "norte",
+          "char_start": 72,
+          "char_end": 77,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 5.019999999999982,
+          "end": 5.339999999999918,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004919",
+          "source_start": 1979.54,
+          "source_end": 1979.8,
+          "text": "do",
+          "char_start": 78,
+          "char_end": 80,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 5.339999999999918,
+          "end": 5.599999999999909,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004920",
+          "source_start": 1979.8,
+          "source_end": 1980.0,
+          "text": "Mato",
+          "char_start": 81,
+          "char_end": 85,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 5.599999999999909,
+          "end": 5.7999999999999545,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004921",
+          "source_start": 1980.0,
+          "source_end": 1980.4,
+          "text": "Grosso.",
+          "char_start": 86,
+          "char_end": 93,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 5.7999999999999545,
+          "end": 6.2000000000000455,
+          "clipped": false
+        }
+      ],
+      "original_word_ids": [
+        "WORD_0004906",
+        "WORD_0004907",
+        "WORD_0004908",
+        "WORD_0004909",
+        "WORD_0004910",
+        "WORD_0004911",
+        "WORD_0004912",
+        "WORD_0004913",
+        "WORD_0004914",
+        "WORD_0004915",
+        "WORD_0004916",
+        "WORD_0004917",
+        "WORD_0004918",
+        "WORD_0004919",
+        "WORD_0004920",
+        "WORD_0004921"
+      ]
+    },
+    {
+      "segment_id": "SEG_00350",
+      "source_start": 1980.56,
+      "source_end": 1985.96,
+      "start": 6.3599999999999,
+      "end": 11.759999999999991,
+      "literal_text": "E as buscas que estavam mais focadas na região lá de Carajás foram enviadas para aquela área.",
+      "clip_literal_text": "E as buscas que estavam mais focadas na região lá de Carajás foram enviadas para aquela área.",
+      "speaker": "SPEAKER_00",
+      "alignment": "word",
+      "fallback_reason": null,
+      "clipped": false,
+      "words": [
+        {
+          "word_id": "WORD_0004922",
+          "source_start": 1980.56,
+          "source_end": 1980.68,
+          "text": "E",
+          "char_start": 0,
+          "char_end": 1,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 6.3599999999999,
+          "end": 6.480000000000018,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004923",
+          "source_start": 1980.68,
+          "source_end": 1980.82,
+          "text": "as",
+          "char_start": 2,
+          "char_end": 4,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 6.480000000000018,
+          "end": 6.619999999999891,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004924",
+          "source_start": 1980.82,
+          "source_end": 1981.34,
+          "text": "buscas",
+          "char_start": 5,
+          "char_end": 11,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 6.619999999999891,
+          "end": 7.139999999999873,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004925",
+          "source_start": 1981.34,
+          "source_end": 1981.48,
+          "text": "que",
+          "char_start": 12,
+          "char_end": 15,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 7.139999999999873,
+          "end": 7.279999999999973,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004926",
+          "source_start": 1981.48,
+          "source_end": 1981.68,
+          "text": "estavam",
+          "char_start": 16,
+          "char_end": 23,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 7.279999999999973,
+          "end": 7.480000000000018,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004927",
+          "source_start": 1981.68,
+          "source_end": 1981.94,
+          "text": "mais",
+          "char_start": 24,
+          "char_end": 28,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 7.480000000000018,
+          "end": 7.740000000000009,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004928",
+          "source_start": 1981.94,
+          "source_end": 1982.42,
+          "text": "focadas",
+          "char_start": 29,
+          "char_end": 36,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 7.740000000000009,
+          "end": 8.220000000000027,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004929",
+          "source_start": 1982.42,
+          "source_end": 1982.62,
+          "text": "na",
+          "char_start": 37,
+          "char_end": 39,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 8.220000000000027,
+          "end": 8.419999999999845,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004930",
+          "source_start": 1982.62,
+          "source_end": 1982.88,
+          "text": "região",
+          "char_start": 40,
+          "char_end": 46,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 8.419999999999845,
+          "end": 8.680000000000064,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004931",
+          "source_start": 1982.88,
+          "source_end": 1983.1,
+          "text": "lá",
+          "char_start": 47,
+          "char_end": 49,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 8.680000000000064,
+          "end": 8.899999999999864,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004932",
+          "source_start": 1983.1,
+          "source_end": 1983.28,
+          "text": "de",
+          "char_start": 50,
+          "char_end": 52,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 8.899999999999864,
+          "end": 9.079999999999927,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004933",
+          "source_start": 1983.28,
+          "source_end": 1983.86,
+          "text": "Carajás",
+          "char_start": 53,
+          "char_end": 60,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 9.079999999999927,
+          "end": 9.659999999999854,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004934",
+          "source_start": 1983.86,
+          "source_end": 1984.24,
+          "text": "foram",
+          "char_start": 61,
+          "char_end": 66,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 9.659999999999854,
+          "end": 10.039999999999964,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004935",
+          "source_start": 1984.24,
+          "source_end": 1985.06,
+          "text": "enviadas",
+          "char_start": 67,
+          "char_end": 75,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 10.039999999999964,
+          "end": 10.8599999999999,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004936",
+          "source_start": 1985.06,
+          "source_end": 1985.3,
+          "text": "para",
+          "char_start": 76,
+          "char_end": 80,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 10.8599999999999,
+          "end": 11.099999999999909,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004937",
+          "source_start": 1985.3,
+          "source_end": 1985.58,
+          "text": "aquela",
+          "char_start": 81,
+          "char_end": 87,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 11.099999999999909,
+          "end": 11.379999999999882,
+          "clipped": false
+        },
+        {
+          "word_id": "WORD_0004938",
+          "source_start": 1985.58,
+          "source_end": 1985.96,
+          "text": "área.",
+          "char_start": 88,
+          "char_end": 93,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": [],
+          "start": 11.379999999999882,
+          "end": 11.759999999999991,
+          "clipped": false
+        }
+      ],
+      "original_word_ids": [
+        "WORD_0004922",
+        "WORD_0004923",
+        "WORD_0004924",
+        "WORD_0004925",
+        "WORD_0004926",
+        "WORD_0004927",
+        "WORD_0004928",
+        "WORD_0004929",
+        "WORD_0004930",
+        "WORD_0004931",
+        "WORD_0004932",
+        "WORD_0004933",
+        "WORD_0004934",
+        "WORD_0004935",
+        "WORD_0004936",
+        "WORD_0004937",
+        "WORD_0004938"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "CAPTION_00001",
+      "start": 0.0,
+      "end": 0.5199999999999818,
+      "source_start": 1974.2,
+      "source_end": 1974.72,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "Naquela",
+      "literal_prefix": "",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004906"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004906",
+          "source_start": 1974.2,
+          "source_end": 1974.72,
+          "text": "Naquela",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "Naquela"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 187.14999999999998,
+          "right": 309.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00002",
+      "start": 0.5199999999999818,
+      "end": 0.9400000000000546,
+      "source_start": 1974.72,
+      "source_end": 1975.14,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "hora,",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004907"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004907",
+          "source_start": 1974.72,
+          "source_end": 1975.14,
+          "text": "hora,",
+          "char_start": 0,
+          "char_end": 5,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "hora,"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 209.14999999999998,
+          "right": 287.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00003",
+      "start": 1.0199999999999818,
+      "end": 1.099999999999909,
+      "source_start": 1975.22,
+      "source_end": 1975.3,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "os",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004908"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004908",
+          "source_start": 1975.22,
+          "source_end": 1975.3,
+          "text": "os",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "os"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 229.64999999999998,
+          "right": 267.15,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00004",
+      "start": 1.099999999999909,
+      "end": 1.8199999999999363,
+      "source_start": 1975.3,
+      "source_end": 1976.02,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "satélites",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004909"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004909",
+          "source_start": 1975.3,
+          "source_end": 1976.02,
+          "text": "satélites",
+          "char_start": 0,
+          "char_end": 9,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "satélites"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 188.39999999999998,
+          "right": 308.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00005",
+      "start": 1.8199999999999363,
+      "end": 2.0399999999999636,
+      "source_start": 1976.02,
+      "source_end": 1976.24,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "do",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004910"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004910",
+          "source_start": 1976.02,
+          "source_end": 1976.24,
+          "text": "do",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "do"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 226.89999999999998,
+          "right": 269.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00006",
+      "start": 2.0399999999999636,
+      "end": 2.3799999999998818,
+      "source_start": 1976.24,
+      "source_end": 1976.58,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "INPE",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004911"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004911",
+          "source_start": 1976.24,
+          "source_end": 1976.58,
+          "text": "INPE",
+          "char_start": 0,
+          "char_end": 4,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "INPE"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 211.64999999999998,
+          "right": 285.15,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00007",
+      "start": 2.3799999999998818,
+      "end": 3.0399999999999636,
+      "source_start": 1976.58,
+      "source_end": 1977.24,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "começaram",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004912"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004912",
+          "source_start": 1976.58,
+          "source_end": 1977.24,
+          "text": "começaram",
+          "char_start": 0,
+          "char_end": 9,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "começaram"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 164.14999999999998,
+          "right": 332.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00008",
+      "start": 3.0399999999999636,
+      "end": 3.1599999999998545,
+      "source_start": 1977.24,
+      "source_end": 1977.36,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "a",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004913"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004913",
+          "source_start": 1977.24,
+          "source_end": 1977.36,
+          "text": "a",
+          "char_start": 0,
+          "char_end": 1,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "a"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 237.39999999999998,
+          "right": 259.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00009",
+      "start": 3.1599999999998545,
+      "end": 3.3999999999998636,
+      "source_start": 1977.36,
+      "source_end": 1977.6,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "receber",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004914"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004914",
+          "source_start": 1977.36,
+          "source_end": 1977.6,
+          "text": "receber",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "receber"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 192.89999999999998,
+          "right": 303.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00010",
+      "start": 3.3999999999998636,
+      "end": 4.220000000000027,
+      "source_start": 1977.6,
+      "source_end": 1978.42,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "sinais",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004915"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004915",
+          "source_start": 1977.6,
+          "source_end": 1978.42,
+          "text": "sinais",
+          "char_start": 0,
+          "char_end": 6,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "sinais"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 206.89999999999998,
+          "right": 289.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00011",
+      "start": 4.220000000000027,
+      "end": 4.8599999999999,
+      "source_start": 1978.42,
+      "source_end": 1979.06,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "vindos",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004916"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004916",
+          "source_start": 1978.42,
+          "source_end": 1979.06,
+          "text": "vindos",
+          "char_start": 0,
+          "char_end": 6,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "vindos"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 198.89999999999998,
+          "right": 297.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00012",
+      "start": 4.8599999999999,
+      "end": 5.019999999999982,
+      "source_start": 1979.06,
+      "source_end": 1979.22,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "do",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004917"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004917",
+          "source_start": 1979.06,
+          "source_end": 1979.22,
+          "text": "do",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "do"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 226.89999999999998,
+          "right": 269.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00013",
+      "start": 5.019999999999982,
+      "end": 5.339999999999918,
+      "source_start": 1979.22,
+      "source_end": 1979.54,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "norte",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004918"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004918",
+          "source_start": 1979.22,
+          "source_end": 1979.54,
+          "text": "norte",
+          "char_start": 0,
+          "char_end": 5,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "norte"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 207.39999999999998,
+          "right": 289.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00014",
+      "start": 5.339999999999918,
+      "end": 5.599999999999909,
+      "source_start": 1979.54,
+      "source_end": 1979.8,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "do",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004919"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004919",
+          "source_start": 1979.54,
+          "source_end": 1979.8,
+          "text": "do",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "do"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 226.89999999999998,
+          "right": 269.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00015",
+      "start": 5.599999999999909,
+      "end": 5.7999999999999545,
+      "source_start": 1979.8,
+      "source_end": 1980.0,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "Mato",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004920"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004920",
+          "source_start": 1979.8,
+          "source_end": 1980.0,
+          "text": "Mato",
+          "char_start": 0,
+          "char_end": 4,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "Mato"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 208.14999999999998,
+          "right": 288.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00016",
+      "start": 5.7999999999999545,
+      "end": 6.2000000000000455,
+      "source_start": 1980.0,
+      "source_end": 1980.4,
+      "segment_id": "SEG_00349",
+      "method": "word",
+      "literal_text": "Grosso.",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004921"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004921",
+          "source_start": 1980.0,
+          "source_end": 1980.4,
+          "text": "Grosso.",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "Grosso."
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 193.14999999999998,
+          "right": 303.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00017",
+      "start": 6.3599999999999,
+      "end": 6.480000000000018,
+      "source_start": 1980.56,
+      "source_end": 1980.68,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "E",
+      "literal_prefix": "",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004922"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004922",
+          "source_start": 1980.56,
+          "source_end": 1980.68,
+          "text": "E",
+          "char_start": 0,
+          "char_end": 1,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "E"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 237.39999999999998,
+          "right": 259.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00018",
+      "start": 6.480000000000018,
+      "end": 6.619999999999891,
+      "source_start": 1980.68,
+      "source_end": 1980.82,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "as",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004923"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004923",
+          "source_start": 1980.68,
+          "source_end": 1980.82,
+          "text": "as",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "as"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 230.89999999999998,
+          "right": 265.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00019",
+      "start": 6.619999999999891,
+      "end": 7.139999999999873,
+      "source_start": 1980.82,
+      "source_end": 1981.34,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "buscas",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004924"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004924",
+          "source_start": 1980.82,
+          "source_end": 1981.34,
+          "text": "buscas",
+          "char_start": 0,
+          "char_end": 6,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "buscas"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 198.89999999999998,
+          "right": 297.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00020",
+      "start": 7.139999999999873,
+      "end": 7.279999999999973,
+      "source_start": 1981.34,
+      "source_end": 1981.48,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "que",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004925"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004925",
+          "source_start": 1981.34,
+          "source_end": 1981.48,
+          "text": "que",
+          "char_start": 0,
+          "char_end": 3,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "que"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 219.14999999999998,
+          "right": 277.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00021",
+      "start": 7.279999999999973,
+      "end": 7.480000000000018,
+      "source_start": 1981.48,
+      "source_end": 1981.68,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "estavam",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004926"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004926",
+          "source_start": 1981.48,
+          "source_end": 1981.68,
+          "text": "estavam",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "estavam"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 187.14999999999998,
+          "right": 309.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00022",
+      "start": 7.480000000000018,
+      "end": 7.740000000000009,
+      "source_start": 1981.68,
+      "source_end": 1981.94,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "mais",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004927"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004927",
+          "source_start": 1981.68,
+          "source_end": 1981.94,
+          "text": "mais",
+          "char_start": 0,
+          "char_end": 4,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "mais"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 212.89999999999998,
+          "right": 283.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00023",
+      "start": 7.740000000000009,
+      "end": 8.220000000000027,
+      "source_start": 1981.94,
+      "source_end": 1982.42,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "focadas",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004928"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004928",
+          "source_start": 1981.94,
+          "source_end": 1982.42,
+          "text": "focadas",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "focadas"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 191.39999999999998,
+          "right": 305.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00024",
+      "start": 8.220000000000027,
+      "end": 8.419999999999845,
+      "source_start": 1982.42,
+      "source_end": 1982.62,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "na",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004929"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004929",
+          "source_start": 1982.42,
+          "source_end": 1982.62,
+          "text": "na",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "na"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 228.39999999999998,
+          "right": 268.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00025",
+      "start": 8.419999999999845,
+      "end": 8.680000000000064,
+      "source_start": 1982.62,
+      "source_end": 1982.88,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "região",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004930"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004930",
+          "source_start": 1982.62,
+          "source_end": 1982.88,
+          "text": "região",
+          "char_start": 0,
+          "char_end": 6,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "região"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 200.64999999999998,
+          "right": 296.15,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00026",
+      "start": 8.680000000000064,
+      "end": 8.899999999999864,
+      "source_start": 1982.88,
+      "source_end": 1983.1,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "lá",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004931"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004931",
+          "source_start": 1982.88,
+          "source_end": 1983.1,
+          "text": "lá",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "lá"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 233.14999999999998,
+          "right": 263.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00027",
+      "start": 8.899999999999864,
+      "end": 9.079999999999927,
+      "source_start": 1983.1,
+      "source_end": 1983.28,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "de",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004932"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004932",
+          "source_start": 1983.1,
+          "source_end": 1983.28,
+          "text": "de",
+          "char_start": 0,
+          "char_end": 2,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "de"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 228.14999999999998,
+          "right": 268.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00028",
+      "start": 9.079999999999927,
+      "end": 9.659999999999854,
+      "source_start": 1983.28,
+      "source_end": 1983.86,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "Carajás",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004933"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004933",
+          "source_start": 1983.28,
+          "source_end": 1983.86,
+          "text": "Carajás",
+          "char_start": 0,
+          "char_end": 7,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "Carajás"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 195.39999999999998,
+          "right": 301.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00029",
+      "start": 9.659999999999854,
+      "end": 10.039999999999964,
+      "source_start": 1983.86,
+      "source_end": 1984.24,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "foram",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004934"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004934",
+          "source_start": 1983.86,
+          "source_end": 1984.24,
+          "text": "foram",
+          "char_start": 0,
+          "char_end": 5,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "foram"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 202.64999999999998,
+          "right": 294.15,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00030",
+      "start": 10.039999999999964,
+      "end": 10.8599999999999,
+      "source_start": 1984.24,
+      "source_end": 1985.06,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "enviadas",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004935"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004935",
+          "source_start": 1984.24,
+          "source_end": 1985.06,
+          "text": "enviadas",
+          "char_start": 0,
+          "char_end": 8,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "enviadas"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 184.14999999999998,
+          "right": 312.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00031",
+      "start": 10.8599999999999,
+      "end": 11.099999999999909,
+      "source_start": 1985.06,
+      "source_end": 1985.3,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "para",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004936"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004936",
+          "source_start": 1985.06,
+          "source_end": 1985.3,
+          "text": "para",
+          "char_start": 0,
+          "char_end": 4,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "para"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 214.14999999999998,
+          "right": 282.65,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00032",
+      "start": 11.099999999999909,
+      "end": 11.379999999999882,
+      "source_start": 1985.3,
+      "source_end": 1985.58,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "aquela",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004937"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004937",
+          "source_start": 1985.3,
+          "source_end": 1985.58,
+          "text": "aquela",
+          "char_start": 0,
+          "char_end": 6,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "aquela"
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 198.89999999999998,
+          "right": 297.9,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    },
+    {
+      "event_id": "CAPTION_00033",
+      "start": 11.379999999999882,
+      "end": 11.759999999999991,
+      "source_start": 1985.58,
+      "source_end": 1985.96,
+      "segment_id": "SEG_00350",
+      "method": "word",
+      "literal_text": "área.",
+      "literal_prefix": " ",
+      "literal_suffix": "",
+      "word_ids": [
+        "WORD_0004938"
+      ],
+      "words": [
+        {
+          "word_id": "WORD_0004938",
+          "source_start": 1985.58,
+          "source_end": 1985.96,
+          "text": "área.",
+          "char_start": 0,
+          "char_end": 5,
+          "alignment_origin": "provided_word_timestamps",
+          "source": "original",
+          "hypothesis_id": "ASR_3f10b45d9ba045a47d4ac3b7",
+          "timestamp_precision_seconds": null,
+          "needs_review": false,
+          "review_reasons": []
+        }
+      ],
+      "transcript_reference": {
+        "version": "sha256:e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "sha256": "e011911a2b25d9365f599e942041245aeccba885d52d0330d4b670165a1a4476",
+        "scope": "literal_source_segments_and_word_evidence",
+        "immutable": true
+      },
+      "alignment_origin": [
+        "provided_word_timestamps"
+      ],
+      "alignment_precision": {
+        "unit": "seconds",
+        "timestamps": "original_unrounded",
+        "accuracy": "not_independently_calibrated",
+        "timing_evidence_validated": true,
+        "audio_verified": false
+      },
+      "review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "clipped": false,
+      "fallback_reason": null,
+      "layout": {
+        "font_size": 30.0,
+        "font_size_final": 60.0,
+        "ass_font_size": 40.5,
+        "ass_font_normalization": "Pillow ascent plus descent matches libass font-size metrics",
+        "requested_font_size": 30.0,
+        "readable_minimum_final": 40,
+        "visual_break_char_offsets": [],
+        "visual_lines": [
+          "área."
+        ],
+        "required_line_count": 1,
+        "max_lines": 2,
+        "line_height": 40.5,
+        "bounds": {
+          "left": 211.39999999999998,
+          "right": 285.4,
+          "top": 686.1,
+          "bottom": 732.6
+        },
+        "safe_bounds": {
+          "left": 43.2,
+          "right": 453.59999999999997,
+          "top": 115.19999999999999,
+          "bottom": 787.2
+        },
+        "fits_safe_box": true,
+        "x": 248.39999999999998,
+        "y": 729.6,
+        "mode": "inline",
+        "padding_evidence": null,
+        "source_foreground_end": null,
+        "needs_human_review": false,
+        "readable_minimum_applied": false
+      },
+      "ass_event_written": true,
+      "srt_event_written": true,
+      "active_word_ids": []
+    }
+  ],
+  "diagnostics": [],
+  "alignment": "word",
+  "font_resolution": {
+    "requested_family": "Segoe UI",
+    "resolved_family": "Segoe UI",
+    "resolved_style": "Bold",
+    "font_file": "segoeuib.ttf",
+    "fallback": false,
+    "measurement": "Pillow local font bounding boxes and metrics"
+  },
+  "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+  "audiovisual_sync_homologated": false,
+  "renderable": true,
+  "no_word_anticipation": true,
+  "canonical_timeline_sha256": "3d6a5e08a8a091e92fd1becd3c131416d5d3dad92423f26154c9a38b5fd21128",
+  "frozen_timeline_reused": false,
+  "needs_human_review": false
+}

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "series_index.json": "387affffaae0386c41981ede30c3e42696ae6c8ad1b73db86a623f7fdd199d12",
+    "evidence.json": "921a6ea635da5073c79f3f1007c6431caa7160b7213a7769f3dbba3a88ab26de",
+    "source_manifest.json": "88d1c499865b3b7bd04015a5a251a966346392cd2c005f4b4661c641271a46d8",
+    "OUTPUT_RECOVERY_AUDIT.json": "62ffe0ae3443dcf8c1ca0d0ee11f5245645ede34ef1a77b37551dfafcb270799"
+  },
+  "media_restored": false,
+  "approval_restored": false,
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f"
+}

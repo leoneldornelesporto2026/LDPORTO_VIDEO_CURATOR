@@ -1,0 +1,978 @@
+{
+  "created_at_utc": "2026-10-15T19:13:00.503403+00:00",
+  "parent_project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\stories_30af3ad6a05923e2",
+  "derived_project": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\captions_p0_20261015_v2",
+  "source_path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_ANALYZER\\input\\youtube\\zd_wjssZ7mc\\zd_wjssZ7mc.mp4",
+  "source_sha256": "b2958122415980a8afff4f77c23ead3c31c00345e5df0ab460995eb731efb00f",
+  "preview": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\projects\\zd_wjssZ7mc\\captions_p0_20261015_v2\\serie_s01\\001_PROP_f654d728d26180f2fb0e5816\\529414cf02a0293b\\preview\\PREVIEW_540x960.mp4",
+  "checks": {
+    "canonical_events": 71,
+    "word_ids": 71,
+    "ordered_lossless_unique": true,
+    "max_lines": 1,
+    "all_within_clip": true,
+    "ass_srt_event_count_equivalent": true,
+    "literal_transcript_unchanged": true,
+    "exact_evidence_windows": true,
+    "ass_srt_times_and_text_equivalent": true,
+    "serialized_events": [
+      {
+        "event_id": "CAPTION_00001",
+        "ass_start": 0.0,
+        "ass_end": 0.26,
+        "srt_start": 0.0,
+        "srt_end": 0.26,
+        "word_ids": [
+          "WORD_0000836"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00002",
+        "ass_start": 0.4,
+        "ass_end": 0.6,
+        "srt_start": 0.4,
+        "srt_end": 0.6,
+        "word_ids": [
+          "WORD_0000837"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00003",
+        "ass_start": 0.6,
+        "ass_end": 1.22,
+        "srt_start": 0.6,
+        "srt_end": 1.22,
+        "word_ids": [
+          "WORD_0000838"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00004",
+        "ass_start": 1.22,
+        "ass_end": 1.32,
+        "srt_start": 1.22,
+        "srt_end": 1.32,
+        "word_ids": [
+          "WORD_0000839"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00005",
+        "ass_start": 1.32,
+        "ass_end": 1.72,
+        "srt_start": 1.32,
+        "srt_end": 1.72,
+        "word_ids": [
+          "WORD_0000840"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00006",
+        "ass_start": 1.72,
+        "ass_end": 2.26,
+        "srt_start": 1.72,
+        "srt_end": 2.26,
+        "word_ids": [
+          "WORD_0000841"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00007",
+        "ass_start": 2.26,
+        "ass_end": 2.8,
+        "srt_start": 2.26,
+        "srt_end": 2.8,
+        "word_ids": [
+          "WORD_0000842"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00008",
+        "ass_start": 2.8,
+        "ass_end": 3.04,
+        "srt_start": 2.8,
+        "srt_end": 3.04,
+        "word_ids": [
+          "WORD_0000843"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00009",
+        "ass_start": 3.04,
+        "ass_end": 3.76,
+        "srt_start": 3.04,
+        "srt_end": 3.76,
+        "word_ids": [
+          "WORD_0000844"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00010",
+        "ass_start": 3.76,
+        "ass_end": 4.1,
+        "srt_start": 3.76,
+        "srt_end": 4.1,
+        "word_ids": [
+          "WORD_0000845"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00011",
+        "ass_start": 4.1,
+        "ass_end": 4.22,
+        "srt_start": 4.1,
+        "srt_end": 4.22,
+        "word_ids": [
+          "WORD_0000846"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00012",
+        "ass_start": 4.22,
+        "ass_end": 4.6,
+        "srt_start": 4.22,
+        "srt_end": 4.6,
+        "word_ids": [
+          "WORD_0000847"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00013",
+        "ass_start": 4.6,
+        "ass_end": 4.68,
+        "srt_start": 4.6,
+        "srt_end": 4.68,
+        "word_ids": [
+          "WORD_0000848"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00014",
+        "ass_start": 4.68,
+        "ass_end": 5.2,
+        "srt_start": 4.68,
+        "srt_end": 5.2,
+        "word_ids": [
+          "WORD_0000849"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00015",
+        "ass_start": 5.2,
+        "ass_end": 5.76,
+        "srt_start": 5.2,
+        "srt_end": 5.76,
+        "word_ids": [
+          "WORD_0000850"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00016",
+        "ass_start": 5.76,
+        "ass_end": 6.4,
+        "srt_start": 5.76,
+        "srt_end": 6.4,
+        "word_ids": [
+          "WORD_0000851"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00017",
+        "ass_start": 6.58,
+        "ass_end": 6.7,
+        "srt_start": 6.58,
+        "srt_end": 6.7,
+        "word_ids": [
+          "WORD_0000852"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00018",
+        "ass_start": 6.7,
+        "ass_end": 6.94,
+        "srt_start": 6.7,
+        "srt_end": 6.94,
+        "word_ids": [
+          "WORD_0000853"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00019",
+        "ass_start": 6.94,
+        "ass_end": 7.04,
+        "srt_start": 6.94,
+        "srt_end": 7.04,
+        "word_ids": [
+          "WORD_0000854"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00020",
+        "ass_start": 7.04,
+        "ass_end": 7.38,
+        "srt_start": 7.04,
+        "srt_end": 7.38,
+        "word_ids": [
+          "WORD_0000855"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00021",
+        "ass_start": 7.38,
+        "ass_end": 7.98,
+        "srt_start": 7.38,
+        "srt_end": 7.98,
+        "word_ids": [
+          "WORD_0000856"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00022",
+        "ass_start": 7.98,
+        "ass_end": 8.12,
+        "srt_start": 7.98,
+        "srt_end": 8.12,
+        "word_ids": [
+          "WORD_0000857"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00023",
+        "ass_start": 8.12,
+        "ass_end": 9.2,
+        "srt_start": 8.12,
+        "srt_end": 9.2,
+        "word_ids": [
+          "WORD_0000858"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00024",
+        "ass_start": 9.2,
+        "ass_end": 9.5,
+        "srt_start": 9.2,
+        "srt_end": 9.5,
+        "word_ids": [
+          "WORD_0000859"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00025",
+        "ass_start": 9.5,
+        "ass_end": 9.64,
+        "srt_start": 9.5,
+        "srt_end": 9.64,
+        "word_ids": [
+          "WORD_0000860"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00026",
+        "ass_start": 9.64,
+        "ass_end": 9.8,
+        "srt_start": 9.64,
+        "srt_end": 9.8,
+        "word_ids": [
+          "WORD_0000861"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00027",
+        "ass_start": 9.8,
+        "ass_end": 10.16,
+        "srt_start": 9.8,
+        "srt_end": 10.16,
+        "word_ids": [
+          "WORD_0000862"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00028",
+        "ass_start": 10.18,
+        "ass_end": 10.26,
+        "srt_start": 10.18,
+        "srt_end": 10.26,
+        "word_ids": [
+          "WORD_0000863"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00029",
+        "ass_start": 10.26,
+        "ass_end": 10.52,
+        "srt_start": 10.26,
+        "srt_end": 10.52,
+        "word_ids": [
+          "WORD_0000864"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00030",
+        "ass_start": 10.52,
+        "ass_end": 11.1,
+        "srt_start": 10.52,
+        "srt_end": 11.1,
+        "word_ids": [
+          "WORD_0000865"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00031",
+        "ass_start": 11.1,
+        "ass_end": 11.58,
+        "srt_start": 11.1,
+        "srt_end": 11.58,
+        "word_ids": [
+          "WORD_0000866"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00032",
+        "ass_start": 11.58,
+        "ass_end": 11.72,
+        "srt_start": 11.58,
+        "srt_end": 11.72,
+        "word_ids": [
+          "WORD_0000867"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00033",
+        "ass_start": 11.72,
+        "ass_end": 12.08,
+        "srt_start": 11.72,
+        "srt_end": 12.08,
+        "word_ids": [
+          "WORD_0000868"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00034",
+        "ass_start": 12.08,
+        "ass_end": 12.18,
+        "srt_start": 12.08,
+        "srt_end": 12.18,
+        "word_ids": [
+          "WORD_0000869"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00035",
+        "ass_start": 12.18,
+        "ass_end": 12.44,
+        "srt_start": 12.18,
+        "srt_end": 12.44,
+        "word_ids": [
+          "WORD_0000870"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00036",
+        "ass_start": 12.44,
+        "ass_end": 12.74,
+        "srt_start": 12.44,
+        "srt_end": 12.74,
+        "word_ids": [
+          "WORD_0000871"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00037",
+        "ass_start": 12.74,
+        "ass_end": 13.5,
+        "srt_start": 12.74,
+        "srt_end": 13.5,
+        "word_ids": [
+          "WORD_0000872"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00038",
+        "ass_start": 14.42,
+        "ass_end": 14.76,
+        "srt_start": 14.42,
+        "srt_end": 14.76,
+        "word_ids": [
+          "WORD_0000873"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00039",
+        "ass_start": 14.76,
+        "ass_end": 15.22,
+        "srt_start": 14.76,
+        "srt_end": 15.22,
+        "word_ids": [
+          "WORD_0000874"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00040",
+        "ass_start": 15.22,
+        "ass_end": 15.64,
+        "srt_start": 15.22,
+        "srt_end": 15.64,
+        "word_ids": [
+          "WORD_0000875"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00041",
+        "ass_start": 15.72,
+        "ass_end": 15.82,
+        "srt_start": 15.72,
+        "srt_end": 15.82,
+        "word_ids": [
+          "WORD_0000876"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00042",
+        "ass_start": 15.82,
+        "ass_end": 15.96,
+        "srt_start": 15.82,
+        "srt_end": 15.96,
+        "word_ids": [
+          "WORD_0000877"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00043",
+        "ass_start": 15.96,
+        "ass_end": 16.32,
+        "srt_start": 15.96,
+        "srt_end": 16.32,
+        "word_ids": [
+          "WORD_0000878"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00044",
+        "ass_start": 16.32,
+        "ass_end": 16.74,
+        "srt_start": 16.32,
+        "srt_end": 16.74,
+        "word_ids": [
+          "WORD_0000879"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00045",
+        "ass_start": 16.74,
+        "ass_end": 16.86,
+        "srt_start": 16.74,
+        "srt_end": 16.86,
+        "word_ids": [
+          "WORD_0000880"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00046",
+        "ass_start": 16.86,
+        "ass_end": 17.02,
+        "srt_start": 16.86,
+        "srt_end": 17.02,
+        "word_ids": [
+          "WORD_0000881"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00047",
+        "ass_start": 17.02,
+        "ass_end": 17.38,
+        "srt_start": 17.02,
+        "srt_end": 17.38,
+        "word_ids": [
+          "WORD_0000882"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00048",
+        "ass_start": 17.38,
+        "ass_end": 17.5,
+        "srt_start": 17.38,
+        "srt_end": 17.5,
+        "word_ids": [
+          "WORD_0000883"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00049",
+        "ass_start": 17.5,
+        "ass_end": 18.08,
+        "srt_start": 17.5,
+        "srt_end": 18.08,
+        "word_ids": [
+          "WORD_0000884"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00050",
+        "ass_start": 18.9,
+        "ass_end": 19.02,
+        "srt_start": 18.9,
+        "srt_end": 19.02,
+        "word_ids": [
+          "WORD_0000885"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00051",
+        "ass_start": 19.02,
+        "ass_end": 19.2,
+        "srt_start": 19.02,
+        "srt_end": 19.2,
+        "word_ids": [
+          "WORD_0000886"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00052",
+        "ass_start": 19.2,
+        "ass_end": 19.32,
+        "srt_start": 19.2,
+        "srt_end": 19.32,
+        "word_ids": [
+          "WORD_0000887"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00053",
+        "ass_start": 19.32,
+        "ass_end": 19.8,
+        "srt_start": 19.32,
+        "srt_end": 19.8,
+        "word_ids": [
+          "WORD_0000888"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00054",
+        "ass_start": 19.8,
+        "ass_end": 19.9,
+        "srt_start": 19.8,
+        "srt_end": 19.9,
+        "word_ids": [
+          "WORD_0000889"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00055",
+        "ass_start": 19.9,
+        "ass_end": 20.44,
+        "srt_start": 19.9,
+        "srt_end": 20.44,
+        "word_ids": [
+          "WORD_0000890"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00056",
+        "ass_start": 20.84,
+        "ass_end": 20.94,
+        "srt_start": 20.84,
+        "srt_end": 20.94,
+        "word_ids": [
+          "WORD_0000891"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00057",
+        "ass_start": 20.94,
+        "ass_end": 21.12,
+        "srt_start": 20.94,
+        "srt_end": 21.12,
+        "word_ids": [
+          "WORD_0000892"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00058",
+        "ass_start": 21.12,
+        "ass_end": 21.26,
+        "srt_start": 21.12,
+        "srt_end": 21.26,
+        "word_ids": [
+          "WORD_0000893"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00059",
+        "ass_start": 21.26,
+        "ass_end": 21.52,
+        "srt_start": 21.26,
+        "srt_end": 21.52,
+        "word_ids": [
+          "WORD_0000894"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00060",
+        "ass_start": 21.52,
+        "ass_end": 22.06,
+        "srt_start": 21.52,
+        "srt_end": 22.06,
+        "word_ids": [
+          "WORD_0000895"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00061",
+        "ass_start": 22.06,
+        "ass_end": 22.2,
+        "srt_start": 22.06,
+        "srt_end": 22.2,
+        "word_ids": [
+          "WORD_0000896"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00062",
+        "ass_start": 22.2,
+        "ass_end": 22.46,
+        "srt_start": 22.2,
+        "srt_end": 22.46,
+        "word_ids": [
+          "WORD_0000897"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00063",
+        "ass_start": 22.46,
+        "ass_end": 23.24,
+        "srt_start": 22.46,
+        "srt_end": 23.24,
+        "word_ids": [
+          "WORD_0000898"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00064",
+        "ass_start": 23.24,
+        "ass_end": 23.86,
+        "srt_start": 23.24,
+        "srt_end": 23.86,
+        "word_ids": [
+          "WORD_0000899"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00065",
+        "ass_start": 23.86,
+        "ass_end": 23.98,
+        "srt_start": 23.86,
+        "srt_end": 23.98,
+        "word_ids": [
+          "WORD_0000900"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00066",
+        "ass_start": 23.98,
+        "ass_end": 24.38,
+        "srt_start": 23.98,
+        "srt_end": 24.38,
+        "word_ids": [
+          "WORD_0000901"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00067",
+        "ass_start": 24.38,
+        "ass_end": 25.06,
+        "srt_start": 24.38,
+        "srt_end": 25.06,
+        "word_ids": [
+          "WORD_0000902"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00068",
+        "ass_start": 25.18,
+        "ass_end": 25.54,
+        "srt_start": 25.18,
+        "srt_end": 25.54,
+        "word_ids": [
+          "WORD_0000903"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00069",
+        "ass_start": 25.54,
+        "ass_end": 25.72,
+        "srt_start": 25.54,
+        "srt_end": 25.72,
+        "word_ids": [
+          "WORD_0000904"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00070",
+        "ass_start": 25.72,
+        "ass_end": 25.96,
+        "srt_start": 25.72,
+        "srt_end": 25.96,
+        "word_ids": [
+          "WORD_0000905"
+        ]
+      },
+      {
+        "event_id": "CAPTION_00071",
+        "ass_start": 25.96,
+        "ass_end": 26.22,
+        "srt_start": 25.96,
+        "srt_end": 26.22,
+        "word_ids": [
+          "WORD_0000906"
+        ]
+      }
+    ],
+    "review_status": "NEEDS_HUMAN_AUDIO_REVIEW"
+  },
+  "audio_review": {
+    "status": "NEEDS_HUMAN_AUDIO_REVIEW",
+    "spoken_word_audio_verification": "not_performed",
+    "method": "normalized PCM FFT cross correlation, mono 8kHz, +/-500ms search",
+    "preview_relative_to_source_lag_seconds": 0.0,
+    "source_preview_waveform_correlation": 0.9998346168031425,
+    "original_clip_source_start": 358.54,
+    "clip_duration": 26.21999999999997,
+    "limitation": "Confere continuidade/defasagem global do áudio; não prova que cada palavra ASR corresponde à fala nem homologa timestamps individuais.",
+    "publication_approved": false
+  },
+  "other_episodes": [
+    {
+      "episode_id": "PROP_0cd8967b4785b114a6b605c0",
+      "series_id": "S01",
+      "part": 2,
+      "events": 62,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "43e2aa71497620e415ee8ebe02a09e0e509d1a9fee5b25e79514e04f26199258",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S01/parte_02"
+    },
+    {
+      "episode_id": "PROP_812c2557222a7626d29648e5",
+      "series_id": "S01",
+      "part": 3,
+      "events": 94,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "500b5f8b15b357a138b816529b1879ec82878b905bc6b7d5667bc409364a408e",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S01/parte_03"
+    },
+    {
+      "episode_id": "PROP_820da3ee0287202220af0541",
+      "series_id": "S02",
+      "part": 1,
+      "events": 113,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "f5a72581935e54efc10fee76df97f43a6ca0469db5404e705d23ab663d8a1969",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S02/parte_01"
+    },
+    {
+      "episode_id": "PROP_8c4d75f845814355a102e570",
+      "series_id": "S02",
+      "part": 2,
+      "events": 79,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "1acd9c1b8cb22e5ab31312853d7022e87b05fa226ba8261609111a4c36032c23",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S02/parte_02"
+    },
+    {
+      "episode_id": "PROP_f5106b486d19e3c2e8be43ca",
+      "series_id": "S02",
+      "part": 3,
+      "events": 102,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "24d5518b9f30de79a511fd0971073afeefbd8cfc7b6bcef4b1715052aeabb4a6",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S02/parte_03"
+    },
+    {
+      "episode_id": "PROP_c5d036c5bb3221b93dc74e80",
+      "series_id": "S02",
+      "part": 4,
+      "events": 158,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "79901e519d3d44318acae810c3655cb9ae8609f2db8e95a4bd0b691fe3392528",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S02/parte_04"
+    },
+    {
+      "episode_id": "PROP_357a5b428e187549af18d145",
+      "series_id": "S02",
+      "part": 5,
+      "events": 45,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "2362bd4545e9c945c3a524a67b767e0db4c28c36941011a96692c21a9b5a0479",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S02/parte_05"
+    },
+    {
+      "episode_id": "PROP_25dc70b2dc7d735acde2e530",
+      "series_id": "S03",
+      "part": 1,
+      "events": 23,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "e6b47538f95a706f16c2480994ef28c48cdaeebeb2e93ecea50aaf802675b907",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_01"
+    },
+    {
+      "episode_id": "PROP_3fc57f8ea450b03956ec1a52",
+      "series_id": "S03",
+      "part": 2,
+      "events": 24,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "9507ba8903ad6a65ac1a62f950a7ecd931600f1c445ca4875201a237f7edb3de",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_02"
+    },
+    {
+      "episode_id": "PROP_7d2a4a4e4b06aa96eeb267f3",
+      "series_id": "S03",
+      "part": 3,
+      "events": 96,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "c8c566032e186398b11953cad1d8a771029d68090aa0f6a6b26fa6542396561c",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_03"
+    },
+    {
+      "episode_id": "PROP_7accaf6623ef8d9ca9f74e89",
+      "series_id": "S03",
+      "part": 4,
+      "events": 79,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "9795596bb604234adb2a0de24f9484f3d4a7cc3e92c91b03a73be3952df48d38",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_04"
+    },
+    {
+      "episode_id": "PROP_ffbc72dbd1f751a8ab4ec7b5",
+      "series_id": "S03",
+      "part": 5,
+      "events": 113,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "506fcf9837bec1c6adea767010aebe589972e05d8638ef7c63f1bbcc21584430",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_05"
+    },
+    {
+      "episode_id": "PROP_7945d8231636c7684fdaedbe",
+      "series_id": "S03",
+      "part": 6,
+      "events": 33,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "3d6a5e08a8a091e92fd1becd3c131416d5d3dad92423f26154c9a38b5fd21128",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_06"
+    },
+    {
+      "episode_id": "PROP_0ebe2d28febbe714d8a86c0e",
+      "series_id": "S03",
+      "part": 7,
+      "events": 65,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "601a59809a4b7c44d1762b8e683c7578dc81a3883df46812bb2b23254e39682e",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_07"
+    },
+    {
+      "episode_id": "PROP_f47b1a26cfc3a496c457c437",
+      "series_id": "S03",
+      "part": 8,
+      "events": 89,
+      "alignment": "word",
+      "renderable": true,
+      "needs_alignment_review": false,
+      "audio_review_status": "NEEDS_HUMAN_AUDIO_REVIEW",
+      "diagnostics": [],
+      "canonical_timeline_sha256": "7cb4fc81c65545e5e5e2f74244af4db512d2216b0d18b73ab052257a64d4c9c7",
+      "rendered": false,
+      "approved": false,
+      "folder": "outros_15/S03/parte_08"
+    }
+  ],
+  "rendered_story_count": 1,
+  "new_human_approvals": 0,
+  "new_final_renders": 0,
+  "series_counts": {
+    "S01": 3,
+    "S02": 5,
+    "S03": 8
+  }
+}

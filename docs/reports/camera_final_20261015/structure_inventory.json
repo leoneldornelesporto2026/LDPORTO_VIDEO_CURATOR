@@ -1,0 +1,192 @@
+{
+  "folders": [
+    {
+      "path": ".cache",
+      "files": 502,
+      "bytes": 94732284,
+      "purpose": "existing analysis/import/media evidence"
+    },
+    {
+      "path": ".gitignore",
+      "files": 1,
+      "bytes": 6290,
+      "purpose": "preserved"
+    },
+    {
+      "path": ".pytest_cache",
+      "files": 5,
+      "bytes": 63737,
+      "purpose": "preserved"
+    },
+    {
+      "path": ".venv",
+      "files": 6758,
+      "bytes": 252923608,
+      "purpose": "existing Python environment"
+    },
+    {
+      "path": "ABRIR_CURADOR.bat",
+      "files": 1,
+      "bytes": 689,
+      "purpose": "preserved"
+    },
+    {
+      "path": "DIAGNOSTICO.bat",
+      "files": 1,
+      "bytes": 184,
+      "purpose": "preserved"
+    },
+    {
+      "path": "DIAGNOSTICO.py",
+      "files": 1,
+      "bytes": 359,
+      "purpose": "preserved"
+    },
+    {
+      "path": "INSTALAR.bat",
+      "files": 1,
+      "bytes": 791,
+      "purpose": "preserved"
+    },
+    {
+      "path": "LEIA_PATCH.txt",
+      "files": 1,
+      "bytes": 690,
+      "purpose": "preserved"
+    },
+    {
+      "path": "PROGRESS_UI_V2_NOTES.md",
+      "files": 1,
+      "bytes": 1414,
+      "purpose": "preserved"
+    },
+    {
+      "path": "QUICK_START.txt",
+      "files": 1,
+      "bytes": 492,
+      "purpose": "preserved"
+    },
+    {
+      "path": "README.md",
+      "files": 1,
+      "bytes": 5462,
+      "purpose": "preserved"
+    },
+    {
+      "path": "README_SEGUNDA_CURADORIA.txt",
+      "files": 1,
+      "bytes": 832,
+      "purpose": "preserved"
+    },
+    {
+      "path": "SECOND_CURATION_PACKAGE_MANIFEST.json",
+      "files": 1,
+      "bytes": 579,
+      "purpose": "preserved"
+    },
+    {
+      "path": "TESTAR_1_CORTE.bat",
+      "files": 1,
+      "bytes": 325,
+      "purpose": "preserved"
+    },
+    {
+      "path": "VALIDATION_REPORT.txt",
+      "files": 1,
+      "bytes": 1331,
+      "purpose": "preserved"
+    },
+    {
+      "path": "__pycache__",
+      "files": 4,
+      "bytes": 10061,
+      "purpose": "preserved"
+    },
+    {
+      "path": "app.py",
+      "files": 1,
+      "bytes": 131,
+      "purpose": "preserved"
+    },
+    {
+      "path": "cli.py",
+      "files": 1,
+      "bytes": 4010,
+      "purpose": "preserved"
+    },
+    {
+      "path": "config.yaml",
+      "files": 1,
+      "bytes": 2277,
+      "purpose": "preserved"
+    },
+    {
+      "path": "curation_overrides.json",
+      "files": 1,
+      "bytes": 5802,
+      "purpose": "preserved"
+    },
+    {
+      "path": "docs",
+      "files": 2909,
+      "bytes": 288280624,
+      "purpose": "technical documentation and development reports"
+    },
+    {
+      "path": "examples",
+      "files": 1,
+      "bytes": 44844,
+      "purpose": "preserved"
+    },
+    {
+      "path": "ldporto_curator",
+      "files": 126,
+      "bytes": 2034367,
+      "purpose": "production modules"
+    },
+    {
+      "path": "output",
+      "files": 1138,
+      "bytes": 656176985,
+      "purpose": "user projects, revisions and rendered media"
+    },
+    {
+      "path": "pytest.ini",
+      "files": 1,
+      "bytes": 27,
+      "purpose": "preserved"
+    },
+    {
+      "path": "requirements.txt",
+      "files": 1,
+      "bytes": 134,
+      "purpose": "preserved"
+    },
+    {
+      "path": "schemas",
+      "files": 3,
+      "bytes": 8687,
+      "purpose": "preserved"
+    },
+    {
+      "path": "scripts",
+      "files": 35,
+      "bytes": 438854,
+      "purpose": "operational and historical validation scripts"
+    },
+    {
+      "path": "source_cache",
+      "files": 1,
+      "bytes": 1200651212,
+      "purpose": "existing cached source media; preserved, not empty"
+    },
+    {
+      "path": "tests",
+      "files": 121,
+      "bytes": 8950513,
+      "purpose": "isolated regression tests"
+    }
+  ],
+  "moved": [],
+  "deleted": []
+}

@@ -107,18 +107,54 @@ def _fitted_text(tokens, requested_size, min_size, max_width, font_name):
     return None
 
 
-def _karaoke_chunk(tokens, timings, split, start, end):
-    parts=[]
-    for i, token in enumerate(tokens):
-        current = max(start, float(timings[i]['start']))
-        nxt = max(float(timings[i]['end']), float(timings[i+1]['start'])) if i+1<len(tokens) else end
-        duration = max(0.01, min(end,nxt)-current)
-        if i == split:
+def measured_karaoke_body(literal, words, event_start, *, break_offsets=(),
+                          initial_color='#FFD700', spoken_color='#FFFFFF', uppercase=False):
+    """One stable phrase, with permanent color steps at measured word onsets.
+
+    Both Reels and Stories call this serializer. ``event_start`` is the absolute
+    source time represented by the serialized ASS Dialogue start, not its
+    unrounded canonical time. Absolute onsets preserve real pauses and avoid the
+    drift introduced by adding rounded word durations. Rounding a color step up
+    to a millisecond ensures that a word cannot turn white before its onset.
+    """
+    def color(value):
+        value = value.lstrip('#')
+        return '&H' + value[4:6] + value[2:4] + value[0:2] + '&'
+
+    yellow, white = color(initial_color), color(spoken_color)
+    breaks = set(break_offsets)
+    edges = sorted({0, len(literal), *breaks,
+                    *[word[key] for word in words for key in ('char_start', 'char_end')]})
+    parts = []
+    for left, right in zip(edges, edges[1:]):
+        if left in breaks:
             parts.append('\\N')
-        elif i:
-            parts.append(' ')
-        parts.append('{\\k' + str(max(1, int(round(duration*100)))) + '}' + esc_ass(token))
+        # A reset before every fragment prevents a preceding word's transform
+        # from leaking into future words or literal separator characters.
+        parts.append('{\\1c' + yellow + '}')
+        word = next((word for word in words if word['char_start'] <= left < word['char_end']), None)
+        if word is not None:
+            onset = float(word.get('source_start', word.get('start')))
+            offset_ms = max(0, math.ceil((onset - event_start)*1000 - 1e-7))
+            if offset_ms == 0:
+                # libass treats t(0,0,...) as a duration-long transform.
+                parts.append('{\\1c' + white + '}')
+            else:
+                parts.append(f'{{\\t({offset_ms},{offset_ms},\\1c{white})}}')
+        text = literal[left:right]
+        parts.append(esc_ass(text.upper() if uppercase else text))
     return ''.join(parts)
+
+
+def _karaoke_chunk(tokens, timings, split, start, end, *, ass_start=None):
+    literal = ' '.join(tokens)
+    words, cursor = [], 0
+    for token, timing in zip(tokens, timings):
+        words.append(dict(timing, char_start=cursor, char_end=cursor+len(token)))
+        cursor += len(token)+1
+    breaks = [words[split]['char_start']] if split is not None else []
+    return measured_karaoke_body(literal, words, start if ass_start is None else ass_start,
+                                 break_offsets=breaks)
 
 
 def write_subtitles(bundle, clip, out_dir: Path, cfg, preview=False):
@@ -182,7 +218,10 @@ def write_subtitles(bundle, clip, out_dir: Path, cfg, preview=False):
                     continue
                 used_fs,display,split=fitted
                 phrase=' '.join(r['text'] for r in group)
-                body=_karaoke_chunk([r['text'] for r in group],group,split,ga,gb)
+                # Color onsets are relative to the serialized centisecond start.
+                h,m,s=ass_time(ga-st).split(':')
+                serialized_start=st+int(h)*3600+int(m)*60+float(s)
+                body=_karaoke_chunk([r['text'] for r in group],group,split,ga,gb,ass_start=serialized_start)
                 # Fonts are measured before writing and a per-event override is safe.
                 ass_txt=f'{{\\fs{used_fs}}}'+body
                 lines.append(f"Dialogue: 0,{ass_time(ga-st)},{ass_time(gb-st)},Sub,,0,0,0,,{ass_txt}\n")

@@ -25,15 +25,17 @@ def renderer_fingerprint():
     return hashlib.sha256((''.join(file_hash(root / name) for name in names) + _ffmpeg_version()).encode()).hexdigest()
 
 
-def episode_signature(episode, source_sha256, cfg=None):
+def episode_signature(episode, source_sha256, cfg=None, *, transcript_fingerprint=None):
     # Bind every editorial/visual input, including currently unsupported extensions.
     excluded = {'state', 'status', 'preview', 'approval', 'human_approval', 'final', 'history',
                 'rendered_duration', 'preview_duration', 'duration_rendered', 'render_validation', 'plan_hash',
-                'duration_verified_by_ffprobe', 'encoding_tolerance_seconds', 'approval_history'}
+                'duration_verified_by_ffprobe', 'encoding_tolerance_seconds', 'approval_history',
+                'caption_timeline'}
     payload = {k: v for k, v in episode.items() if k not in excluded}
     from .media_effects import effect_input_fingerprints
     return hashlib.sha256(json.dumps({'episode': payload, 'source_sha256': source_sha256,
-        'settings': cfg or {}, 'effect_inputs': effect_input_fingerprints(episode), 'renderer_fingerprint': renderer_fingerprint()},
+        'settings': cfg or {}, 'transcript_fingerprint': transcript_fingerprint,
+        'effect_inputs': effect_input_fingerprints(episode), 'renderer_fingerprint': renderer_fingerprint()},
         sort_keys=True, ensure_ascii=False, allow_nan=False).encode()).hexdigest()
 
 

@@ -1,0 +1,5 @@
+Pacote de desenvolvimento substituído. Não instalar esta versão.
+
+Use ../captions_p0_package_20261015_v2/UPDATE_LEGENDAS_STORIES_P0.zip.
+O instalador final corrige a resolução do caminho padrão ao executar PowerShell -File.
+Esta versão anterior foi preservada; nenhum projeto, mídia ou aprovação foi alterado.

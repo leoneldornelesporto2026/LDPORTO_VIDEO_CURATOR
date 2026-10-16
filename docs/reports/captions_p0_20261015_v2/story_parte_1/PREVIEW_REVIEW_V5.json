@@ -1,0 +1,128 @@
+{
+  "plan_signature": "529414cf02a0293bcac37f1c29c5b5fa5721e6f8bdadeb37c518f371b9cbbff0",
+  "path": "PREVIEW_540x960.mp4",
+  "sha256": "a770cb684344779b33acc2c4c183cc282c09a25e4436c945f65691483c32f4e5",
+  "assets": [
+    {
+      "path": "PREVIEW_540x960.mp4",
+      "sha256": "a770cb684344779b33acc2c4c183cc282c09a25e4436c945f65691483c32f4e5"
+    },
+    {
+      "path": "CAPTIONS.ass",
+      "sha256": "6a088561f26c183a214e18602092c1bd0ac06d551713d202726ef1017db98c07"
+    },
+    {
+      "path": "CAPTIONS.srt",
+      "sha256": "439207a0767403e4d5b7a1db810f9701cc7bcbfce24df8b24ca4de9fd4e1a275"
+    },
+    {
+      "path": "SUBTITLE_SYNC.json",
+      "sha256": "da71e58ee91f01c19c3b6482bf9a89c39598bc99a673bd0e50bef34dadaf4586"
+    },
+    {
+      "path": "camera_plan.json",
+      "sha256": "aebbcdc2b026868d83e175c23b947c1925acb45816418c212a92ac972a3efffb"
+    },
+    {
+      "path": "title_card_preview.png",
+      "sha256": "88b76b1d0d084b659453af373477be35dd48fc0e347a16fab780a7f26f1d1c61"
+    },
+    {
+      "path": "TITLE_LAYOUT.json",
+      "sha256": "bd3de8110b3444e150c66115eb38476622c5d38dcac3fbc3721d4ff30e389d33"
+    },
+    {
+      "path": "thumbnails/CAPA_01_IMPACTO.png",
+      "sha256": "e6acef32abeee14ee46f9f2ec5eec208e2026f8a39cc32ce72e18758e1e00754"
+    },
+    {
+      "path": "thumbnails/CAPA_02_DOCUMENTAL.png",
+      "sha256": "dc160311794c9031d622e820df1b68bfc136b613d7e1416e3ade9b9ef5deffc6"
+    },
+    {
+      "path": "thumbnails/CAPA_03_MINIMALISTA.png",
+      "sha256": "d94de92ae667ad631ec61de6d0f763c17f0183a0e9ce63470a9a89904e649f09"
+    },
+    {
+      "path": "thumbnails/CAPA_04_MISTERIO.png",
+      "sha256": "68a7cd84a74122fa1874ec79e010f7ed5c8d5f7ec528148fda50d5be77c82e23"
+    },
+    {
+      "path": "thumbnails/CAPA_05_IMPACTO.png",
+      "sha256": "84bd563d7217b721f518b9656f7312a569151a4908228831febca466dea57729"
+    },
+    {
+      "path": "thumbnails/frames/frame_01.png",
+      "sha256": "4ce07a36c08004cf937a705504d4ea02e44a0052fd929059d888327f43256908"
+    },
+    {
+      "path": "thumbnails/frames/frame_02.png",
+      "sha256": "5f30465449a4eea4b3cf583c1033f161c7dd23fe53ec135e2c02114567601c96"
+    },
+    {
+      "path": "thumbnails/frames/frame_03.png",
+      "sha256": "70bac003c615e4a751dfdfc36e3afd337f10fa9075124e6a35f534e9844e7254"
+    },
+    {
+      "path": "thumbnails/frames/frame_04.png",
+      "sha256": "33d05decacba50c3586cbb402b3e0c88191d8465c9f0d7ff274f52d13f0e3572"
+    },
+    {
+      "path": "thumbnails/frames/frame_05.png",
+      "sha256": "7245d9bdff1f8a73f5dbb93838e60314ca3289323fae124ea89b255065df0840"
+    },
+    {
+      "path": "thumbnails/CAPA_01_IMPACTO.json",
+      "sha256": "00f85ccec4202f884fa9316b8f958bc348fdd1bab43da01bd74b499393c67360"
+    },
+    {
+      "path": "thumbnails/CAPA_02_DOCUMENTAL.json",
+      "sha256": "3480e83a95b83d789ed55b165120742add9f758a02d4463a78c6027ab10c5170"
+    },
+    {
+      "path": "thumbnails/CAPA_03_MINIMALISTA.json",
+      "sha256": "8808860f00612faa38dcf570196b5627582d1de9ffadac08a846b6081a6a62b8"
+    },
+    {
+      "path": "thumbnails/CAPA_04_MISTERIO.json",
+      "sha256": "6626b96019a646dc535965bdfa2d4ee7dd7a65b7d866290933f15894e878b716"
+    },
+    {
+      "path": "thumbnails/CAPA_05_IMPACTO.json",
+      "sha256": "a1273d612da564041ecc0d07fea265002bcf9397c5b4b02973da9f37506de26d"
+    },
+    {
+      "path": "thumbnails/THUMBNAIL_CHOICES.json",
+      "sha256": "00b4bbeb72fba16bda37d81237de026fbefd1a6907b726ce9b5f1c7763eb0974"
+    }
+  ],
+  "validation": {
+    "status": "validated",
+    "duration": 26.22,
+    "expected_duration": 26.21999999999997,
+    "width": 540,
+    "height": 960,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "samples": [
+      {
+        "time": 2.621999999999997,
+        "mean_brightness": 143.6500083590535,
+        "decodable": true
+      },
+      {
+        "time": 13.109999999999985,
+        "mean_brightness": 136.47216435185186,
+        "decodable": true
+      },
+      {
+        "time": 23.597999999999974,
+        "mean_brightness": 125.7517271090535,
+        "decodable": true
+      }
+    ],
+    "visual_human_review": "pending",
+    "audio_human_review": "pending"
+  },
+  "preview_approved_by_human": false
+}

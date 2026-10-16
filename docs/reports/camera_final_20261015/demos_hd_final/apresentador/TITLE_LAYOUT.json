@@ -1,0 +1,42 @@
+{
+  "literal_title": "A EMERGÊNCIA E AS CONSEQUÊNCIAS — PARTE 8",
+  "lines": [
+    "A EMERGÊNCIA E AS",
+    "CONSEQUÊNCIAS —",
+    "PARTE 8"
+  ],
+  "font_size": 64,
+  "width": 1080,
+  "height": 1920,
+  "card_bounds": [
+    86,
+    249,
+    907,
+    493
+  ],
+  "text_bounds": [
+    [
+      195.5,
+      277,
+      797.5,
+      337
+    ],
+    [
+      197.0,
+      345,
+      796.0,
+      410
+    ],
+    [
+      375.5,
+      418,
+      617.5,
+      465
+    ]
+  ],
+  "safe_width": [
+    86,
+    907
+  ],
+  "status": "measured_layout_human_review_pending"
+}

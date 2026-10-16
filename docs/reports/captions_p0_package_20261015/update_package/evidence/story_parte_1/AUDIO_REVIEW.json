@@ -1,0 +1,11 @@
+{
+  "status": "NEEDS_HUMAN_AUDIO_REVIEW",
+  "spoken_word_audio_verification": "not_performed",
+  "method": "normalized PCM FFT cross correlation, mono 8kHz, +/-500ms search",
+  "preview_relative_to_source_lag_seconds": 0.0,
+  "source_preview_waveform_correlation": 0.9998346168031425,
+  "original_clip_source_start": 358.54,
+  "clip_duration": 26.21999999999997,
+  "limitation": "Confere continuidade/defasagem global do áudio; não prova que cada palavra ASR corresponde à fala nem homologa timestamps individuais.",
+  "publication_approved": false
+}

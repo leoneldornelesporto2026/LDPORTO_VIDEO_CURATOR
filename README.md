@@ -1,6 +1,10 @@
 # L.D.PORTO VIDEO CURATOR & RENDERER — Fase 2
 
+O refinamento incremental de câmera, sem nova análise e com revisões separadas, está documentado em [Câmera vertical segura](docs/architecture/CAMERA_VERTICAL_SEGURA.md). A auditoria e as demonstrações ficam em `docs/reports/camera_final_20261015/`.
+
 Consome os resultados do **L.D.PORTO VIDEO ANALYZER** e gera curadoria, câmera conservadora, legendas ASS, frames de thumbnail e renders verticais.
+
+A legenda dos Stories usa [o mesmo karaokê amarelo → branco dos Reels](docs/architecture/LEGENDAS_WORD_ALIGNED.md), com tempos individuais do Analyzer e revisões derivadas. Consulte também a [auditoria de organização e preservação](docs/reports/ORGANIZACAO_PROJETO.md).
 
 ## Fluxo V5.1 aditivo
 
