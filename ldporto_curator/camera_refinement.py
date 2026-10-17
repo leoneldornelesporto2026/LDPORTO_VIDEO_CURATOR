@@ -20,6 +20,10 @@ def use_analyzer_director(director, start, end, minimum_coverage=.8):
                 and r.get('camera_evidence_role') in {'CONFIRMED_SPEAKER','PROBABLE_SPEAKER','DOMINANT_FACE'}
                 and all(math.isfinite(float(cam.get(key, 1))) and 1 <= float(cam.get(key, 1)) <= 1.35
                         for key in ('zoom_start', 'zoom_end'))
+                # The existing animated renderer supports a bounded 1.05
+                # envelope. Do not silently flatten a larger measured motion.
+                and (cam.get('zoom_start', 1) == cam.get('zoom_end', 1)
+                     or max(cam.get('zoom_start', 1), cam.get('zoom_end', 1)) <= 1.05)
                 and all(len(center)==2 and all(math.isfinite(float(x)) and 0<=x<=1 for x in center) for center in centers))
         except (KeyError,TypeError,ValueError):
             return False
@@ -46,13 +50,24 @@ def use_analyzer_director(director, start, end, minimum_coverage=.8):
             eased = fraction * fraction * (3 - 2 * fraction)
             return [x + (y - x) * eased for x,y in zip(cam['center_start'], cam['center_end'])]
         first, last = center_at(a), center_at(b)
-        rows.append({'start': a - start, 'end': b - start, 'mode': 'crop', 'person_id': r['focus_person'],
+        def zoom_at(time):
+            fraction = (time - r['start']) / (r['end'] - r['start'])
+            eased = fraction * fraction * (3 - 2 * fraction)
+            return cam.get('zoom_start', 1) + (cam.get('zoom_end', 1) - cam.get('zoom_start', 1)) * eased
+        z0, z1 = zoom_at(a), zoom_at(b)
+        row = {'start': a - start, 'end': b - start, 'mode': 'crop', 'person_id': r['focus_person'],
                      'center_x': first[0], 'center_x_start': first[0], 'center_x_end': last[0],
                      'center_y_start': first[1], 'center_y_end': last[1],
-                     'zoom': min(cam.get('zoom_start', 1), cam.get('zoom_end', 1)), 'motion_follow': True, 'motion_easing': 'smoothstep',
+                     'zoom': min(z0, z1), 'motion_follow': True, 'motion_easing': 'smoothstep',
                      'subject_screen_y': .5,
                      'evidence_role': r['camera_evidence_role'], 'speaker_identity_confirmed': r.get('speaker_identity_confirmed', False),
-                     'source_shot_id': r['source_shot_id'], 'reason': 'ANALYZER_SAFE_TARGET', 'crop_safe': True})
+                     'source_shot_id': r['source_shot_id'], 'reason': 'ANALYZER_SAFE_TARGET', 'crop_safe': True,
+                     'source_director_start': r['start'], 'source_director_end': r['end']}
+        if abs(z1-z0) > 1e-9:
+            row.update(zoom_start=z0, zoom_end=z1, zoom_transition_start=0.,
+                       zoom_transition_duration=b-a,
+                       zoom_interpolation='smoothstep_between_certified_endpoints')
+        rows.append(row)
         previous = b
     if previous < end:
         rows.append({'start': previous - start, 'end': end - start, 'mode': 'full_frame_blur', 'reason': 'SOURCE_PRESERVE'})

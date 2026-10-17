@@ -1,0 +1,313 @@
+{
+  "schema_version": "LDP_SHOW_REELS_REVIEW_V1",
+  "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+  "review_only": true,
+  "count": 11,
+  "reels": [
+    {
+      "rank": 1,
+      "candidate_id": "MOMENT_00015_0000",
+      "original_rank": 2,
+      "start": 4163.79,
+      "end": 4186.4,
+      "duration": 22.61,
+      "title": "UM CONVIDADO QUE FEZ HISTÓRIA",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00287",
+        "SEG_00288",
+        "SEG_00289",
+        "SEG_00290",
+        "SEG_00291"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00015_0000/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Fala ao microfone convocando convidado; corte vertical só com sujeito visualmente confirmado.",
+      "boundary_risks": []
+    },
+    {
+      "rank": 2,
+      "candidate_id": "MOMENT_00010_0000",
+      "original_rank": 8,
+      "start": 3061.26,
+      "end": 3094.85,
+      "duration": 33.59,
+      "title": "UMA HOMENAGEM A CHORÃO E AOS IRMÃOS",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00153",
+        "SEG_00154",
+        "SEG_00155",
+        "SEG_00156",
+        "SEG_00157",
+        "SEG_00158",
+        "SEG_00159",
+        "SEG_00160",
+        "SEG_00161",
+        "SEG_00162"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00010_0000/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Homenagem citada na fala; verificar áudio, identidade visual e emoção antes de publicar.",
+      "boundary_risks": [
+        "topic_boundary_crossed"
+      ]
+    },
+    {
+      "rank": 3,
+      "candidate_id": "MOMENT_00013_0004",
+      "original_rank": 22,
+      "start": 3795.22,
+      "end": 3809.22,
+      "duration": 14.0,
+      "title": "É UMA HONRA ESTAR AQUI",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00249",
+        "SEG_00250",
+        "SEG_00251"
+      ],
+      "visual_refs": [],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Mensagem à plateia; foco no apresentador somente com detecção estável.",
+      "boundary_risks": []
+    },
+    {
+      "rank": 4,
+      "candidate_id": "MOMENT_00020_0000",
+      "original_rank": 7,
+      "start": 5460.61,
+      "end": 5523.98,
+      "duration": 63.37,
+      "title": "OBRIGADO, JOÃO ROCK!",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00355",
+        "SEG_00356",
+        "SEG_00357",
+        "SEG_00358",
+        "SEG_00359",
+        "SEG_00360",
+        "SEG_00361",
+        "SEG_00362",
+        "SEG_00363",
+        "SEG_00364",
+        "SEG_00365",
+        "SEG_00366",
+        "SEG_00367",
+        "SEG_00368",
+        "SEG_00369",
+        "SEG_00370",
+        "SEG_00371",
+        "SEG_00372",
+        "SEG_00373",
+        "SEG_00374",
+        "SEG_00375",
+        "SEG_00376",
+        "SEG_00377",
+        "SEG_00378",
+        "SEG_00379",
+        "SEG_00380",
+        "SEG_00381"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00020_0000/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Agradecimentos e anúncio da saideira; evitar cortar introdução e chegada da música.",
+      "boundary_risks": [
+        "context_gap_requires_review"
+      ]
+    },
+    {
+      "rank": 5,
+      "candidate_id": "MOMENT_00013_0002",
+      "original_rank": 3,
+      "start": 3759.57,
+      "end": 3777.38,
+      "duration": 17.81,
+      "title": "OBRIGADO, RIBEIRÃO PRETO!",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00241",
+        "SEG_00242",
+        "SEG_00243"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00013_0002/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Fim musical e agradecimento; preservar música original.",
+      "boundary_risks": []
+    },
+    {
+      "rank": 6,
+      "candidate_id": "MOMENT_00007_0001",
+      "original_rank": 43,
+      "start": 2423.42,
+      "end": 2430.66,
+      "duration": 7.24,
+      "title": "A CONVIDADA QUE AJUDOU A BANDA",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00096",
+        "SEG_00097",
+        "SEG_00098",
+        "SEG_00099"
+      ],
+      "visual_refs": [],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Anúncio parcial; revisar o contexto anterior para não sugerir identificação errada.",
+      "boundary_risks": []
+    },
+    {
+      "rank": 7,
+      "candidate_id": "MOMENT_00012_0002",
+      "original_rank": 27,
+      "start": 3579.42,
+      "end": 3597.55,
+      "duration": 18.13,
+      "title": "LEVANTA A MÃO, GALERA!",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00199",
+        "SEG_00200",
+        "SEG_00201",
+        "SEG_00202"
+      ],
+      "visual_refs": [],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Energia com o público; alternar palco/crowd apenas se aparecerem no vídeo.",
+      "boundary_risks": [
+        "context_gap_requires_review",
+        "topic_boundary_crossed"
+      ]
+    },
+    {
+      "rank": 8,
+      "candidate_id": "MOMENT_00018_0002",
+      "original_rank": 29,
+      "start": 5116.05,
+      "end": 5137.71,
+      "duration": 21.66,
+      "title": "SÓ OS LOUCOS SABEM — AO VIVO",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00325",
+        "SEG_00326",
+        "SEG_00327",
+        "SEG_00328",
+        "SEG_00329",
+        "SEG_00330",
+        "SEG_00331"
+      ],
+      "visual_refs": [],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Performance; não substituir áudio original nem tentar identificar cantor por voz ASR.",
+      "boundary_risks": [
+        "topic_boundary_crossed"
+      ]
+    },
+    {
+      "rank": 9,
+      "candidate_id": "MOMENT_00005_0000",
+      "original_rank": 14,
+      "start": 1583.67,
+      "end": 1660.53,
+      "duration": 76.86,
+      "title": "UMA MENSAGEM EM CIMA DO PALCO",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00055",
+        "SEG_00056",
+        "SEG_00057",
+        "SEG_00058"
+      ],
+      "visual_refs": [],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Início da performance e mensagem; transcrição exige conferência.",
+      "boundary_risks": [
+        "context_gap_requires_review",
+        "topic_boundary_crossed"
+      ]
+    },
+    {
+      "rank": 10,
+      "candidate_id": "MOMENT_00012_0003",
+      "original_rank": 1,
+      "start": 3597.55,
+      "end": 3652.75,
+      "duration": 55.2,
+      "title": "A ENERGIA DE UM CLÁSSICO AO VIVO",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00203",
+        "SEG_00204",
+        "SEG_00205",
+        "SEG_00206",
+        "SEG_00207",
+        "SEG_00208",
+        "SEG_00209",
+        "SEG_00210",
+        "SEG_00211",
+        "SEG_00212",
+        "SEG_00213",
+        "SEG_00214",
+        "SEG_00215"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00012_0003/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Performance musical; não presumir que as letras do ASR estão exatas.",
+      "boundary_risks": []
+    },
+    {
+      "rank": 11,
+      "candidate_id": "MOMENT_00017_0000",
+      "original_rank": 5,
+      "start": 4683.15,
+      "end": 4688.14,
+      "duration": 4.99,
+      "title": "MARCELO NOVA É APRESENTADO",
+      "kind": "editorial_content",
+      "segment_ids": [
+        "SEG_00302",
+        "SEG_00303",
+        "SEG_00304"
+      ],
+      "visual_refs": [
+        "visuals/MOMENT_00017_0000/contact_sheet.jpg"
+      ],
+      "human_audio_review_required": true,
+      "human_visual_review_required": true,
+      "published": false,
+      "notes": "Curtíssimo: usar como contexto ou thumbnail; evitar Reel isolado.",
+      "boundary_risks": []
+    }
+  ]
+}

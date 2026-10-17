@@ -1,0 +1,127 @@
+{
+  "schema_version": "4.4.0",
+  "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+  "input_package_sha256": "f5a167a7fe39da50417c765a9ff3e21d22a8dea9c0e3fa808022d49df05bffb1",
+  "provider": "manual_json",
+  "notes": [
+    "PROPOSTA DE TRIAGEM, NAO APROVACAO DE PUBLICACAO.",
+    "Analise P1_DEGRADED, shortlist original 1, 67 candidatos em fila humana.",
+    "Nao afirmar vocalista, Marcao, Thiago ou convidado no quadro sem confirmacao visual.",
+    "Palco e musica: manter audio original; evitar misturar faixa instrumental em cima de performance.",
+    "Nao ignorar as validacoes de commercial/quality; revisar titulos e tempos manualmente."
+  ],
+  "actions": [
+    {
+      "decision_id": "SHOW_01_MOMENT_00015_0000",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00015_0000"
+      ],
+      "rank": 1,
+      "title": "UM CONVIDADO QUE FEZ HISTÓRIA",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Fala ao microfone convocando convidado; corte vertical só com sujeito visualmente confirmado.",
+      "suggested_layout": "single_speaker"
+    },
+    {
+      "decision_id": "SHOW_02_MOMENT_00010_0000",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00010_0000"
+      ],
+      "rank": 2,
+      "title": "UMA HOMENAGEM A CHORÃO E AOS IRMÃOS",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Homenagem citada na fala; verificar áudio, identidade visual e emoção antes de publicar."
+    },
+    {
+      "decision_id": "SHOW_03_MOMENT_00013_0004",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00013_0004"
+      ],
+      "rank": 3,
+      "title": "É UMA HONRA ESTAR AQUI",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Mensagem à plateia; foco no apresentador somente com detecção estável.",
+      "suggested_layout": "single_speaker"
+    },
+    {
+      "decision_id": "SHOW_04_MOMENT_00020_0000",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00020_0000"
+      ],
+      "rank": 4,
+      "title": "OBRIGADO, JOÃO ROCK!",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Agradecimentos e anúncio da saideira; evitar cortar introdução e chegada da música."
+    },
+    {
+      "decision_id": "SHOW_05_MOMENT_00013_0002",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00013_0002"
+      ],
+      "rank": 5,
+      "title": "OBRIGADO, RIBEIRÃO PRETO!",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Fim musical e agradecimento; preservar música original."
+    },
+    {
+      "decision_id": "SHOW_06_MOMENT_00007_0001",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00007_0001"
+      ],
+      "rank": 6,
+      "title": "A CONVIDADA QUE AJUDOU A BANDA",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Anúncio parcial; revisar o contexto anterior para não sugerir identificação errada."
+    },
+    {
+      "decision_id": "SHOW_07_MOMENT_00012_0002",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00012_0002"
+      ],
+      "rank": 7,
+      "title": "LEVANTA A MÃO, GALERA!",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Energia com o público; alternar palco/crowd apenas se aparecerem no vídeo."
+    },
+    {
+      "decision_id": "SHOW_08_MOMENT_00018_0002",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00018_0002"
+      ],
+      "rank": 8,
+      "title": "SÓ OS LOUCOS SABEM — AO VIVO",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Performance; não substituir áudio original nem tentar identificar cantor por voz ASR."
+    },
+    {
+      "decision_id": "SHOW_09_MOMENT_00005_0000",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00005_0000"
+      ],
+      "rank": 9,
+      "title": "UMA MENSAGEM EM CIMA DO PALCO",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Início da performance e mensagem; transcrição exige conferência."
+    },
+    {
+      "decision_id": "SHOW_10_MOMENT_00012_0003",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00012_0003"
+      ],
+      "rank": 10,
+      "title": "A ENERGIA DE UM CLÁSSICO AO VIVO",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Performance musical; não presumir que as letras do ASR estão exatas."
+    },
+    {
+      "decision_id": "SHOW_11_MOMENT_00017_0000",
+      "action": "promote",
+      "candidate_ids": [
+        "MOMENT_00017_0000"
+      ],
+      "rank": 11,
+      "title": "MARCELO NOVA É APRESENTADO",
+      "reason": "Proposta para triagem humana com suporte no candidato do Analyzer; Curtíssimo: usar como contexto ou thumbnail; evitar Reel isolado."
+    }
+  ]
+}

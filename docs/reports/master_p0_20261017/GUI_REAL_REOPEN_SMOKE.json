@@ -1,0 +1,44 @@
+{
+  "schema": "LDP_REAL_PRODUCTION_GUI_SMOKE_V1",
+  "project_path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\Projeto_audiovisual__5d089e1825b3\\revisions\\15cbff3ae70a2e5f64a0",
+  "source_path": "C:\\Users\\leone\\Videos\\LDPORTO_MEDIA_LIBRARY\\9UCGZia2p1k\\original.mp4",
+  "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+  "source_verified_before_decode": true,
+  "gui_hidden": true,
+  "models_executed": false,
+  "render_executed": false,
+  "imported_episodes": 157,
+  "table_page_rows": 100,
+  "selected_episode": "REEL_MOMENT_00012_0003",
+  "kind": "REEL",
+  "camera_rows": 34,
+  "source_and_relative_times_separate": true,
+  "frame": {
+    "source_timestamp": 3598.041,
+    "relative_time": 0.49099999999998545,
+    "episode_id": "REEL_MOMENT_00012_0003",
+    "source_start": 3597.55,
+    "width": 1920,
+    "height": 1080,
+    "pts_status": "posição informada pelo OpenCV; PTS do frame não homologado",
+    "observation": "supplied_decoded_rgb_frame"
+  },
+  "static_proposal_displayed": true,
+  "load_seconds": 4.417117500008317,
+  "frame_worker_seconds": 1.7083379000250716,
+  "summary_displayed": "Projeto audiovisual | mídia localizada e verificada pelo importador\nReels: 70 · Stories / partes: 87 · Séries: 50 · Formato: ANALYZER_NATIVE · Bloqueados: 129 · Legendas: {\"ALIGNMENT_REVIEW_REQUIRED\": 69, \"AUDIO_REVIEW_REQUIRED\": 2, \"BLOCKED\": 58, \"ALIGNED_WORD\": 28} · Revisão: 15cbff3ae70a2e5f64a0\nSHA256: 5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea\nImportação técnica não aprova prévias nem publicação. Consulte as pendências por candidato.",
+  "approval_unchanged": true,
+  "hashes_before": {
+    "series_index.json": "0c25fb00b6a50f999beffb9961f9bced1ebd71ae8b4b1e6bc4bf076d33c10e89",
+    "evidence.json": "538dc3fc3a0e81bbe05d021dc0b9859eeda10c7ebc61be42123b0c18734f10a9",
+    "visual_evidence_index.json": "36bc30267054f83ae63d14778168355e3aa6831f3dafb848e0b4d79189cb7fc6",
+    "source_manifest.json": "858c673d20ef2c77b9d5a47a4eb7e4a8f7cd9a8389e50058d210bc8560d343fc"
+  },
+  "hashes_after": {
+    "series_index.json": "0c25fb00b6a50f999beffb9961f9bced1ebd71ae8b4b1e6bc4bf076d33c10e89",
+    "evidence.json": "538dc3fc3a0e81bbe05d021dc0b9859eeda10c7ebc61be42123b0c18734f10a9",
+    "visual_evidence_index.json": "36bc30267054f83ae63d14778168355e3aa6831f3dafb848e0b4d79189cb7fc6",
+    "source_manifest.json": "858c673d20ef2c77b9d5a47a4eb7e4a8f7cd9a8389e50058d210bc8560d343fc"
+  },
+  "project_files_unchanged": true
+}

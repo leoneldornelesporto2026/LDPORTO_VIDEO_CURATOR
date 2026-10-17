@@ -1,0 +1,91 @@
+{
+  "schema": "LDP_PRODUCTION_GUI_IMPLEMENTATION_VALIDATION_V1",
+  "modified_by_agent": [
+    {
+      "path": "ldporto_curator/gui.py",
+      "before_sha256": "2a756d2e691163923401bde2e9a3eeacfd38e0d0c4f63b3f9c6f99e1424f5733",
+      "after_sha256": "e02900c0760501517d083356adba9886703bc7a75446c899bdb7e618d5bb94e4",
+      "bytes": 30581,
+      "syntax": "OK"
+    },
+    {
+      "path": "ldporto_curator/series_review.py",
+      "before_sha256": "fc1a4fe4d360705cd4eed4d64246665fb01d75bcc39b2372d4b6953971ad2c6c",
+      "after_sha256": "3c0bc1b98f04e52348a449be1e82e6eb869387108c31abd96da983f4b486bcaa",
+      "bytes": 71254,
+      "syntax": "OK"
+    },
+    {
+      "path": "tests/test_production_gui.py",
+      "before_sha256": null,
+      "after_sha256": "883ff6570250bfd4263c2c13fa1e9a809a69f6f66946f81aef9ef9e1099f1755",
+      "bytes": 19002,
+      "syntax": "OK"
+    }
+  ],
+  "hashed_renderer_modules": [
+    {
+      "path": "ldporto_curator/render.py",
+      "sha256": "764e6c1042d74697acc201adcf00b454850e81af08e2570441b7f471689bc552",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/title_card.py",
+      "sha256": "5d574ab63c878ad2dbc6bd12bbefa6b983a35d420282053a03d80287c68b5ddc",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/subtitles.py",
+      "sha256": "fa2f52d487728999d4730412304f436687f4a15a5abfcd740c818c28a57c6f60",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/series_workflow.py",
+      "sha256": "2611c62cd5a167de3c163c447b971ff51c219bffd3a6bc9907e1342f0c93ad44",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/subtitle_presets.py",
+      "sha256": "805930072e8641e31d957db223cac3cc0af041edd1fe6408892785129e94f7c2",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/title_presets.py",
+      "sha256": "4f39e379df77026ce7a762c991acccc254c89186af061025a950e1b80a1760c1",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/thumbnail_presets.py",
+      "sha256": "56bdcf100316de92382c393437eb1ff405290d82bea62a6d43a5c368769b84ed",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/media_effects.py",
+      "sha256": "01577b0cd45194bd64a7e9105b033e9d8164d587ed06f6a07d0025927d9f6448",
+      "unchanged": true
+    },
+    {
+      "path": "ldporto_curator/episode_approval.py",
+      "sha256": "cb4331d8cc97809d6c2ed15d232f3cea15ca38e9a83d2c5acf74464e3c0eae53",
+      "unchanged": true
+    }
+  ],
+  "all_renderer_sources_unchanged": true,
+  "tests": {
+    "latest_report": "GUI_TEST_RESULTS_VERIFIED.xml",
+    "passed": 95,
+    "failed": 0,
+    "skipped": 0,
+    "isolated_tmp": true
+  },
+  "real_gui_smoke": "GUI_REAL_REOPEN_SMOKE.json",
+  "new_models_executed": false,
+  "legacy_outputs_moved": false,
+  "automatic_approvals": false,
+  "limitations": [
+    "Proposta est?tica ? refer?ncia; movimento/sincronismo dependem do MP4.",
+    "Timestamp do frame ? posi??o reportada por OpenCV, sem homologa??o de PTS.",
+    "Geometria ausente mant?m fallback e revis?o.",
+    "Editor existente n?o possui edi??o contextual de posi??o de t?tulo nem sele??o nominal de alvo; esses campos n?o foram inventados."
+  ]
+}

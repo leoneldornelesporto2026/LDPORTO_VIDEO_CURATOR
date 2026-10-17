@@ -1,0 +1,40 @@
+{
+  "format": "ANALYZER_NATIVE",
+  "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+  "title": "Projeto audiovisual",
+  "declared_video_id": null,
+  "package_sha256": "5e5af9a17897eb424972c4d722a818ce29ca1d75dfff5e2e96b525932872f0cb",
+  "revision_id": "63114d7dd8af829e4a40",
+  "project_path": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\Projeto_audiovisual__5d089e1825b3\\revisions\\63114d7dd8af829e4a40",
+  "source_path": "C:\\Users\\leone\\Videos\\LDPORTO_MEDIA_LIBRARY\\9UCGZia2p1k\\original.mp4",
+  "media_state": "HASH_AND_TECHNICAL_VERIFIED",
+  "counts": {
+    "reels": 70,
+    "stories": 87,
+    "series": 49
+  },
+  "caption_states": {
+    "ALIGNMENT_REVIEW_REQUIRED": 69,
+    "AUDIO_REVIEW_REQUIRED": 35,
+    "BLOCKED": 53
+  },
+  "visual": {
+    "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+    "reels": 70,
+    "story_parts": 86,
+    "story_series": 49,
+    "standalone_stories": 1,
+    "words": 2614,
+    "observations": 63989,
+    "director_intervals": 4042,
+    "tracks": 10458,
+    "frame_samples": 72,
+    "visual_assets": 24,
+    "invalid_geometry_boxes": 0,
+    "hands_evidence_status": "unknown",
+    "instrument_evidence_status": "unknown",
+    "human_approved": false
+  },
+  "blocked": 157,
+  "approval_state": "HUMAN_REVIEW_REQUIRED"
+}

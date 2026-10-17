@@ -1,0 +1,225 @@
+{
+  "schema_version": "LDP_STORIES_REVIEW_V1",
+  "source_sha256": "5d089e1825b396dafd6b5918274f3a785eb2d8be2f622497cb7d06fdd7b3b7ea",
+  "narrative_automated_complete_count": 0,
+  "state": "PROPOSED_NOT_APPROVED",
+  "series": [
+    {
+      "series_id": "S01",
+      "title": "FÃS E LEGADO NO JOÃO ROCK",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00008_0000",
+          "start": 2732.23,
+          "end": 2743.38,
+          "duration": 11.150000000000091,
+          "topic": "Reflexão pessoal e gratidão",
+          "source_segment_ids": [
+            "SEG_00132",
+            "SEG_00133",
+            "SEG_00134",
+            "SEG_00135",
+            "SEG_00136"
+          ],
+          "title_proposal": "UMA HISTÓRIA DE GRATIDÃO NO PALCO",
+          "literal_excerpt": "parte da minha história, sou muito grata Gratidão a todos os momentos que vivemos juntos Feliz era, anos 2000 Chorão vive, campeão vive",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00013_0004",
+          "start": 3795.22,
+          "end": 3809.22,
+          "duration": 14.0,
+          "topic": "Honra e conexão com a música",
+          "source_segment_ids": [
+            "SEG_00249",
+            "SEG_00250",
+            "SEG_00251"
+          ],
+          "title_proposal": "A HONRA DE ESTAR NO PALCO",
+          "literal_excerpt": "Demais, demais Pô, eu queria aproveitar e falar pra vocês Que pra mim é uma honra imensa estar aqui em cima desse palco Representando todos os fãs de Charlie Brown Assim como eu também nasci e ouvi Charlie Brown Jr. a vida inteira, tá ligado? Então sintam-se representados por mim em cima desse palco",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        }
+      ],
+      "state": "REVIEW_REQUIRED",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    },
+    {
+      "series_id": "S02",
+      "title": "CONVIDADOS E HISTÓRIAS DO PALCO",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00007_0001",
+          "start": 2423.42,
+          "end": 2430.66,
+          "duration": 7.239999999999782,
+          "topic": "Agradecimento e reconhecimento",
+          "source_segment_ids": [
+            "SEG_00096",
+            "SEG_00097",
+            "SEG_00098",
+            "SEG_00099"
+          ],
+          "title_proposal": "A CONVIDADA QUE AJUDOU A BANDA",
+          "literal_excerpt": "mulher maravilhosa Que ajudou a gente A crescer com seu talento Com",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00015_0000",
+          "start": 4163.79,
+          "end": 4186.4,
+          "duration": 22.609999999999673,
+          "topic": "Apresentação de um convidado especial",
+          "source_segment_ids": [
+            "SEG_00287",
+            "SEG_00288",
+            "SEG_00289",
+            "SEG_00290",
+            "SEG_00291"
+          ],
+          "title_proposal": "UM CONVIDADO DA HISTÓRIA DA BANDA",
+          "literal_excerpt": "Senhoras e senhores Eu quero convocar aqui nesse palco agora Um cara incrível Que faz parte da nossa história Que nós éramos fãs Desde a época lá dos anos 80 Uma banda, cara de uma banda Que nos inspirou muito a querer montar uma banda Por favor, façam muito barulho para o reverendo Marcelo Nova!",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 3,
+          "candidate_id": "MOMENT_00017_0000",
+          "start": 4683.15,
+          "end": 4688.14,
+          "duration": 4.990000000000691,
+          "topic": "Apresentação formal",
+          "source_segment_ids": [
+            "SEG_00302",
+            "SEG_00303",
+            "SEG_00304"
+          ],
+          "title_proposal": "MARCELO NOVA É ANUNCIADO",
+          "literal_excerpt": "Marcelo Nova, senhoras senhores. Honra máxima.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        }
+      ],
+      "state": "REVIEW_REQUIRED",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    },
+    {
+      "series_id": "S03",
+      "title": "CANÇÕES E VOZES DO SHOW",
+      "parts": [
+        {
+          "part": 1,
+          "candidate_id": "MOMENT_00018_0002",
+          "start": 5116.05,
+          "end": 5137.71,
+          "duration": 21.659999999999854,
+          "topic": "Reflexão pessoal e emoções durante um evento",
+          "source_segment_ids": [
+            "SEG_00325",
+            "SEG_00326",
+            "SEG_00327",
+            "SEG_00328",
+            "SEG_00329",
+            "SEG_00330",
+            "SEG_00331"
+          ],
+          "title_proposal": "SÓ OS LOUCOS SABEM — AO VIVO",
+          "literal_excerpt": "quem tem pensamento forte e impulsivo é só questão de opinião Diz-se os loucos sabem E diz-se os loucos sabem Só os loucos sabem Diz-se os loucos sabem Todo mundo com a mão pra cima, ei!",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        },
+        {
+          "part": 2,
+          "candidate_id": "MOMENT_00021_0000",
+          "start": 5674.16,
+          "end": 5687.34,
+          "duration": 13.180000000000291,
+          "topic": "Conversa entre participantes",
+          "source_segment_ids": [
+            "SEG_00382",
+            "SEG_00383",
+            "SEG_00384"
+          ],
+          "title_proposal": "UMA CONVERSA NO MEIO DO SHOW",
+          "literal_excerpt": "podia ficar. Eu posso te ligar a qualquer hora.",
+          "source_presentation_order": true,
+          "narrative_link_confirmed": false,
+          "needs_context_and_audio_review": true,
+          "editorial_blockers": [
+            "P1_DEGRADED",
+            "speaker_person_mapping_unresolved",
+            "human_audio_review_pending",
+            "narrative_continuity_not_confirmed"
+          ],
+          "render_approved": false
+        }
+      ],
+      "state": "REVIEW_REQUIRED",
+      "historical_chronology_confirmed": false,
+      "source_presentation_order_only": true,
+      "missing_link_review_required": true,
+      "publication_ready": false
+    }
+  ]
+}

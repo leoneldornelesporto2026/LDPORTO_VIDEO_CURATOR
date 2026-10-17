@@ -102,6 +102,9 @@ class App(tk.Tk):
         series_button = ttk.Button(f, text='V5.1 · Séries, estilos e dossiê ChatGPT', command=self.open_series_review)
         series_button.pack(anchor='w', pady=4)
         self.mutating_widgets.append(series_button)
+        production_button = ttk.Button(f, text='IMPORTAR PACOTE DE PRODUÇÃO', command=self.open_production_review)
+        production_button.pack(anchor='w', pady=4)
+        self.mutating_widgets.append(production_button)
         media_row = ttk.Frame(f)
         media_row.pack(fill='x', pady=4)
         media_button = ttk.Button(media_row, text='Selecionar mídia original', command=self.select_media)
@@ -551,6 +554,14 @@ class App(tk.Tk):
         self._sync()
         from .series_review import SeriesReview
         SeriesReview(self, self.rootp, self.cfg)
+
+    def open_production_review(self):
+        if self.busy:
+            return
+        self._sync()
+        from .series_review import SeriesReview
+        review = SeriesReview(self, self.rootp, self.cfg)
+        review.after(0, review._import_production)
 
     def select_media(self):
         if self.busy:
