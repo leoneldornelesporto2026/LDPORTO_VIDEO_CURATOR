@@ -432,6 +432,17 @@ def _piece(files, folder, kind, metadata, evidence, series=None, order=None):
             _fail('Camera source dimensions mismatch: ' + key)
     camera = _camera(timeline, duration, docs.get('camera_keyframes', {'keyframes': []}))
     _regions(docs['safe_areas'])
+    overlay = docs['title_overlay']
+    if not isinstance(overlay, dict) or set(overlay) - {'text', 'enabled', 'duration', 'position_y'}:
+        _fail('Title overlay contains controls unsupported by the installed renderer')
+    if 'text' in overlay and (not isinstance(overlay['text'], str) or len(overlay['text']) > 240):
+        _fail('Title overlay requires literal text up to 240 characters')
+    if 'enabled' in overlay and not isinstance(overlay['enabled'], bool):
+        _fail('Title overlay enabled must be boolean')
+    if 'duration' in overlay:
+        _number(overlay['duration'], 'title duration', .001, duration)
+    if 'position_y' in overlay and abs(_number(overlay['position_y'], 'title position', 0, 1) - .13) > 1e-9:
+        _fail('Installed title renderer supports only position_y=0.13; no overlay was silently relocated')
     caption = docs['caption_plan']
     if not isinstance(caption, dict):
         _fail('Caption plan must be an object')

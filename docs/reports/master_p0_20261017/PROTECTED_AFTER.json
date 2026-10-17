@@ -1,0 +1,26 @@
+{
+  "schema": "LDP_MASTER_P0_PROTECTED_AFTER_V1",
+  "baseline": "docs\\reports\\master_p0_20261017\\PROTECTED_BEFORE.json",
+  "checked_existing_files": 6327,
+  "missing": [],
+  "changed": [
+    {
+      "path": "ldporto_curator/camera_refinement.py",
+      "before": "06b89668e672015122f1a206bd0de276b63b346e6eb24a18d8248ae74e60f3a6",
+      "after": "508c9f8f80e597bee8c581847a4bc75fb6cd9376e0d24daac5cab09956aad68a"
+    },
+    {
+      "path": "ldporto_curator/gui.py",
+      "before": "2a756d2e691163923401bde2e9a3eeacfd38e0d0c4f63b3f9c6f99e1424f5733",
+      "after": "e02900c0760501517d083356adba9886703bc7a75446c899bdb7e618d5bb94e4"
+    },
+    {
+      "path": "ldporto_curator/series_review.py",
+      "before": "fc1a4fe4d360705cd4eed4d64246665fb01d75bcc39b2372d4b6953971ad2c6c",
+      "after": "9e71e244ee6ef904141ab0b56fb44abd4d15900b4eeff56809311e7a0664954f"
+    }
+  ],
+  "protected_artifacts_changed": [],
+  "inputs_checked": 1774,
+  "inputs_changed": []
+}

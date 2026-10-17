@@ -1,0 +1,70 @@
+{
+  "protected_files_rechecked": 805,
+  "protected_changes": [],
+  "new_heavy_files_in_docs": [],
+  "code_delivery": {
+    "ldporto_curator/production_contract.py": {
+      "sha256": "1406295a0f6996731732ccc78e8d96585f9e2e269242e9344170f90023efd6c8",
+      "bytes": 33032
+    },
+    "ldporto_curator/production_dossier.py": {
+      "sha256": "e1c020836a333f49228003f70168b039f9ccfdf59356b2cbbd51c05831ecd5ea",
+      "bytes": 16090
+    },
+    "ldporto_curator/production_evidence.py": {
+      "sha256": "3247b436e311a98dcd6b14bd5ade5507db4bd3f7b2ed863b9a5b8fdaf8506083",
+      "bytes": 30592
+    },
+    "ldporto_curator/production_package.py": {
+      "sha256": "c21319880328fb316c9a0016730b0bd796eb7c855a53a069f78a1d35584566d4",
+      "bytes": 35664
+    },
+    "ldporto_curator/camera_refinement.py": {
+      "sha256": "508c9f8f80e597bee8c581847a4bc75fb6cd9376e0d24daac5cab09956aad68a",
+      "bytes": 15683
+    },
+    "ldporto_curator/gui.py": {
+      "sha256": "e02900c0760501517d083356adba9886703bc7a75446c899bdb7e618d5bb94e4",
+      "bytes": 30581
+    },
+    "ldporto_curator/series_review.py": {
+      "sha256": "9e71e244ee6ef904141ab0b56fb44abd4d15900b4eeff56809311e7a0664954f",
+      "bytes": 71701
+    },
+    "schemas/curator_ready_v1.schema.json": {
+      "sha256": "62142a6dec8640599c2e01a3b8767c3a2f7d1e4d31ad7af1fa953e32d9f4a436",
+      "bytes": 1424
+    },
+    "scripts/validate_production_camera.py": {
+      "sha256": "5b02668ccb3f000137df46dc74087b576d535c08e67eded69b144b30c51633ac",
+      "bytes": 17384
+    },
+    "tests/test_production_contract.py": {
+      "sha256": "ea43329508ce3a6c3f323fdd56f128dabe208261ded8a185fe93e7a9dc977522",
+      "bytes": 12147
+    },
+    "tests/test_production_dossier.py": {
+      "sha256": "5fb15c8386bacdf1c68107322d0cac18d3301a3de504e7ff583911cb2f7afedd",
+      "bytes": 5973
+    },
+    "tests/test_production_gui.py": {
+      "sha256": "ba4751a2e5d4191efe8d3fe764ac4c4869b5a200a0fca42790fd0a2ebfaeb7af",
+      "bytes": 19953
+    },
+    "tests/test_production_package.py": {
+      "sha256": "1ab1d000fb1f2ea2571d9ac1ce40fab3622ea48f9d4d62a49ea870ba781d5576",
+      "bytes": 14843
+    },
+    "tests/test_production_visual_evidence.py": {
+      "sha256": "2685321721641dccb6230dccc81527916292c7bb6ee109494cbe067912f972f8",
+      "bytes": 14590
+    }
+  },
+  "tests": {
+    "passed": 895,
+    "skipped": 5,
+    "failures": 0,
+    "errors": 0
+  },
+  "agent_commit_or_push_executed": false
+}

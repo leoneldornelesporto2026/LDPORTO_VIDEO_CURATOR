@@ -1,0 +1,29 @@
+{
+  "project": "C:\\Users\\leone\\Videos\\LDPORTO_VIDEO_CURATOR\\Projeto_audiovisual__5d089e1825b3\\revisions\\63114d7dd8af829e4a40",
+  "source": "C:\\Users\\leone\\Videos\\LDPORTO_MEDIA_LIBRARY\\9UCGZia2p1k\\original.mp4",
+  "episodes": 157,
+  "visible_rows": 100,
+  "camera_segments_first": 34,
+  "frame_shape": [
+    1080,
+    1920,
+    3
+  ],
+  "frame_source_time": 3598.041,
+  "pts_status": "posição informada pelo OpenCV; PTS do frame não homologado",
+  "pinned_settings_restored": true,
+  "hashes_before": {
+    "series_index.json": "373a1a77b536da660682a7354f8d9fe58b5cef10c4333089bdafb412ef20c7f1",
+    "evidence.json": "baf88ac3ab3874994ba6600facc349480d2a697d71fcc79a0ec36f80aa17d106",
+    "source_manifest.json": "858c673d20ef2c77b9d5a47a4eb7e4a8f7cd9a8389e50058d210bc8560d343fc",
+    "visual_evidence_index.json": "a561ac5c18415c00c2b268ac267ab5b3a5da1cf02c40158ae3b5774ca116dca3"
+  },
+  "hashes_after": {
+    "series_index.json": "373a1a77b536da660682a7354f8d9fe58b5cef10c4333089bdafb412ef20c7f1",
+    "evidence.json": "baf88ac3ab3874994ba6600facc349480d2a697d71fcc79a0ec36f80aa17d106",
+    "source_manifest.json": "858c673d20ef2c77b9d5a47a4eb7e4a8f7cd9a8389e50058d210bc8560d343fc",
+    "visual_evidence_index.json": "a561ac5c18415c00c2b268ac267ab5b3a5da1cf02c40158ae3b5774ca116dca3"
+  },
+  "new_preview_generated": false,
+  "approval_changed": false
+}

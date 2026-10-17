@@ -33,6 +33,7 @@ def test_external_transaction_pins_inputs_reopens_and_preserves_legacy(tmp_path)
     assert isinstance(project, SeriesProject)
     assert result['source_path'] is None and result['summary']['media_state'] == 'MEDIA_SELECTION_REQUIRED'
     assert not project.episode('R1')['production_caption_gate']['renderable']
+    assert project.episode('R1')['title_text'] == 'Fala original'
     assert result['summary']['approval_state'] == 'HUMAN_REVIEW_REQUIRED'
     assert not list(project.directory.rglob('*.mp4'))
     reopened = production.load_production_project(project.directory)
@@ -42,10 +43,11 @@ def test_external_transaction_pins_inputs_reopens_and_preserves_legacy(tmp_path)
     assert again['project'].directory == project.directory
 
 
-def test_repository_destination_rejected_before_staging(tmp_path):
+@pytest.mark.parametrize('destination', ['output/unsafe-production', 'docs', 'docs/reports/previews', '.cache/unsafe-production'])
+def test_repository_destination_rejected_before_staging(tmp_path, destination):
     path = package(tmp_path)
     with pytest.raises(ValueError, match='fora do repositório'):
-        production.import_production_package(path, output_root=Path(__file__).parent.parent / 'output/unsafe-production')
+        production.import_production_package(path, output_root=Path(__file__).parent.parent / destination)
 
 
 def test_failed_staging_keeps_previous_revision_and_audit(tmp_path, monkeypatch):
@@ -154,7 +156,8 @@ def test_tampered_visual_index_cannot_reopen(tmp_path):
         production.load_production_project(project.directory)
 
 
-def test_positive_instrumental_uses_existing_renderer_with_empty_captions(tmp_path):
+@pytest.mark.parametrize('classification', ['INSTRUMENTAL', 'NO_SPEECH'])
+def test_positive_instrumental_uses_existing_renderer_with_empty_captions(tmp_path, classification):
     """Generated sine-only fixture proves empty ASS works without fake words."""
     media = tmp_path / 'original.mp4'
     subprocess.run(['ffmpeg', '-v', 'error', '-n', '-f', 'lavfi', '-i', 'testsrc2=size=640x360:rate=24:duration=4',
@@ -167,10 +170,10 @@ def test_positive_instrumental_uses_existing_renderer_with_empty_captions(tmp_pa
     files['media_reference.json'] = encode({'source_sha256': source_hash, 'duration': 4., 'width': 640, 'height': 360, 'fps': 24.})
     files['evidence/evidence.json'] = encode({'source': {'sha256': source_hash, 'duration': 4., 'width': 640, 'height': 360, 'fps': 24.}, 'segments': [], 'words': [],
         'candidates': [], 'audio_events': [{'event_id': 'SYNTHETIC_SINE_ONLY', 'source_sha256': source_hash,
-            'start': 1., 'end': 3., 'confidence': 1., 'no_speech': True, 'category': 'instrumental'}]})
+            'start': 1., 'end': 3., 'confidence': 1., 'no_speech': True, 'category': 'instrumental' if classification == 'INSTRUMENTAL' else 'no_speech'}]})
     files[folder + '/editorial.json'] = encode({'piece_id': 'R1', 'title_text': ''})
     files[folder + '/source_segments.json'] = encode({'segments': [{'start': 1., 'end': 3.}]})
-    files[folder + '/caption_plan.json'] = encode({'state': 'INSTRUMENTAL', 'word_ids': []})
+    files[folder + '/caption_plan.json'] = encode({'state': classification, 'word_ids': []})
     files[folder + '/title_overlay.json'] = encode({'enabled': False})
     files[folder + '/camera_timeline.json'] = encode({'timebase': 'clip_relative', 'segments': [
         {'start': 0., 'end': 2., 'mode': 'SOURCE_PRESERVE'}]})
@@ -189,3 +192,47 @@ def test_positive_instrumental_uses_existing_renderer_with_empty_captions(tmp_pa
     project.evidence['audio_events'][0]['confidence'] = .1
     with pytest.raises(ValueError, match='Evidência positiva'):
         project.signature(episode)
+
+
+def test_word_phrase_and_blocked_caption_states_remain_distinct():
+    evidence = {'source': {'sha256': SOURCE, 'duration': 5.},
+        'segments': [{'segment_id': 'S1', 'start': 1., 'end': 3., 'text': 'Fala original.'}],
+        'words': [{'word_id': 'W1', 'segment_id': 'S1', 'start': 1., 'end': 1.9, 'word': 'Fala'},
+                  {'word_id': 'W2', 'segment_id': 'S1', 'start': 2., 'end': 3., 'word': 'original.'}]}
+    episode = {'episode_id': 'TEST', 'source_start': 1., 'source_end': 3., 'subtitle_preset': 'LDP_REELS_KARAOKE'}
+    assert production.caption_preflight(episode, evidence)['state'] == 'ALIGNED_WORD'
+    phrase = deepcopy(episode)
+    phrase.update(subtitle_preset='LDP_CLEAN', caption_plan={'allow_phrase': True})
+    evidence['words'] = []
+    conservative = production.caption_preflight(phrase, evidence)
+    assert conservative['state'] == 'PHRASE_ONLY' and conservative['renderable']
+    phrase['caption_plan'] = {'state': 'AUDIO_REVIEW_REQUIRED', 'allow_phrase': True}
+    blocked = production.caption_preflight(phrase, evidence)
+    assert blocked['state'] == 'AUDIO_REVIEW_REQUIRED' and not blocked['renderable']
+
+
+def test_ready_critical_region_is_never_cropped_despite_proposed_close(tmp_path):
+    from test_production_contract import encode
+    files, manifest, folder = ready_files()
+    files[folder + '/safe_areas.json'] = encode({'regions': [
+        {'label': 'instrument', 'x_start': .1, 'x_end': .9, 'y_start': .3, 'y_end': .8}]})
+    files[folder + '/title_overlay.json'] = encode({'text': 'Texto de abertura', 'enabled': False})
+    files[folder + '/thumbnail_plan.json'] = encode({'title_text': 'Capa proposta', 'frame_count': 3})
+    path = archive(tmp_path / 'protected.zip', finalize(files, manifest))
+    p = production.import_production_package(path, output_root=tmp_path / 'production', media_library=tmp_path / 'missing')['project']
+    e = p.episode('R1')
+    assert e['camera_plan']['segments'][0]['mode'] == 'full_frame_blur'
+    assert e['camera_plan']['segments'][0]['reason'] == 'IMPORTED_PROTECTED_REGION_REQUIRES_SOURCE_PRESERVATION'
+    assert e['imported_documents']['camera_timeline']['segments'][0]['mode'] == 'FULL_VERTICAL_9X16'
+    assert e['title_text'] == 'Texto de abertura' and e['title_enabled'] is False
+    assert e['thumbnail_title'] == 'Capa proposta' and e['thumbnail_overrides']['frame_count'] == 3
+
+
+def test_unsupported_title_position_is_rejected_instead_of_ignored(tmp_path):
+    from test_production_contract import encode
+    files, manifest, folder = ready_files()
+    files[folder + '/title_overlay.json'] = encode({'text': 'Titulo', 'position_y': .8})
+    path = archive(tmp_path / 'unsupported.zip', finalize(files, manifest))
+    with pytest.raises(ValueError, match='position_y=0.13'):
+        production.import_production_package(path, output_root=tmp_path / 'production')
+    assert not (tmp_path / 'production').exists()

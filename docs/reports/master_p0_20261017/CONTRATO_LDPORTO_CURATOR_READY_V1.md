@@ -130,7 +130,13 @@ Zoom estático fica entre `1` e `1.13`. Envelope animado `zoom_start`/`zoom_end`
 
 ## Títulos, áudio, miniaturas e assets
 
-`title_overlay.json` guarda a proposta de título. `thumbnail_plan.json` guarda a proposta de miniatura. Assets indicados por `asset_path`, `asset_ref`, `image_path`, `font_path`, `music_path`, `file_ref`, `asset_refs` e `file_refs` precisam apontar a membros declarados do pacote; não podem apontar ao disco externo. `visual_evidence_refs.json` usa `{"refs":["VISUAL_EVIDENCE/frame_001.jpg"]}` ou objetos `{"path":"..."}`.
+`title_overlay.json` aceita `text`, `enabled`, `duration` e `position_y`. Texto precisa ser literal e ter até 240 caracteres; enabled é booleano; duração é positiva e não excede a peça. O gerador instalado executa somente `position_y: 0.13`; posições diferentes e controles não implementados são recusados, sem reposicionamento silencioso. `text/enabled/duration` são aplicados ao episódio. `thumbnail_plan.json` preserva a proposta e aplica `title_text`/`text` e opções compatíveis `frame_times/layouts/brand/show_part/layout_overrides/frame_count` ao gerador existente.
+
+Assets indicados por `asset_path`, `asset_ref`, `image_path`, `font_path`, `music_path`, `file_ref`, `asset_refs` e `file_refs` precisam apontar a membros declarados do pacote; não podem apontar ao disco externo. A existência de um asset não significa que qualquer composição arbitrária esteja implementada. `visual_evidence_refs.json` usa `{"refs":["VISUAL_EVIDENCE/frame_001.jpg"]}` ou objetos `{"path":"..."}`.
+
+Regiões protegidas são confrontadas com os limites físicos do crop e seus extremos de movimento. Um crop incompatível ou geometria protegida desconhecida recebe `full_frame_blur` com motivo explícito `IMPORTED_PROTECTED_REGION_REQUIRES_SOURCE_PRESERVATION`; a proposta original permanece no plano/documentos para revisão.
+
+Para `NO_SPEECH` ou `INSTRUMENTAL`, o estado sozinho não libera render. `evidence/evidence.json.audio_events` precisa fornecer cobertura contínua de toda a janela com `event_id` único, SHA256 da fonte, start/end originais dentro da duração, confidence entre 0,95 e 1, `no_speech: true` e categoria `no_speech` ou `instrumental`, respectivamente. Texto ou palavras sobrepostos impedem essa modalidade. A timeline canônica vazia é validada pelo serializer existente, sem palavras inventadas, e o preview continua sem aprovação. Sem evidência positiva, a peça fica bloqueada.
 
 `audio_plan.json` aceita `{"mode":"original"}` (padrão) ou `{"mode":"normalize"}`. Referência de música exige asset existente; isso não concede direitos nem transforma automaticamente a proposta em configuração executável. A API de leitura não altera áudio. O fluxo de projeto usa os recursos já existentes de áudio/legendas/título e preserva o áudio original quando essa é a escolha do plano.
 

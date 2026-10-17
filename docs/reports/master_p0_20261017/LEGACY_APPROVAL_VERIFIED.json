@@ -1,0 +1,20 @@
+{
+  "legacy_preview_valid": true,
+  "preview_path": "C:\\Users\\leone\\Documentos\\Meus Projetos\\LDPORTO_VIDEO_CURATOR\\output\\renders\\9UCGZia2p1k\\revisions\\3ecd06d3e4b848d0a004dace195a8472\\SECOND_SHOW_01_MOMENT_00015_0000_01\\previews\\70779df44d94455e988d9f2eaaa80d01\\SECOND_SHOW_01_MOMENT_00015_0000_01_PREVIEW.mp4",
+  "preview_sha256": "82507671ea7b4fa156749e88b27d1810608f2513ac9047c9ff560b99c4260491",
+  "plan_revision": "3ecd06d3e4b848d0a004dace195a8472",
+  "approval_state": "TEST_APPROVED",
+  "pointer_unchanged": true,
+  "renderer_fingerprint": "93dee24827dae9c710dc7d5fc1e0305b0de8ca7277b4ebf92c7abcf9f9da20d6",
+  "renderer_files_unchanged": {
+    "render.py": true,
+    "title_card.py": true,
+    "subtitles.py": true,
+    "series_workflow.py": true,
+    "subtitle_presets.py": true,
+    "title_presets.py": true,
+    "thumbnail_presets.py": true,
+    "media_effects.py": true,
+    "episode_approval.py": true
+  }
+}

@@ -123,7 +123,7 @@ def _piece(row, kind, identity, duration, **ordering):
     return {'episode_id': identity, 'piece_kind': kind, 'raw_candidate_id': row.get('candidate_id'),
         'candidate_id': row.get('candidate_id'), 'source_start': start, 'source_end': end,
         'duration': end - start, 'source_intervals': intervals, 'camera_mode': 'AUTO_CONSERVADOR',
-        'title': row.get('title'), 'title_data': {k: deepcopy(v) for k, v in row.items() if 'title' in k},
+        'title': row.get('title_text', row.get('title')), 'title_data': {k: deepcopy(v) for k, v in row.items() if 'title' in k},
         'segment_ids': deepcopy(row.get('segment_ids') or row.get('source_segment_ids') or []),
         'word_ids': deepcopy(row.get('word_ids') or []), 'caption_preflight': deepcopy(row.get('caption_preflight') or {}),
         'risk_flags': deepcopy(row.get('risk_flags') or []), 'raw_proposal': deepcopy(row),
@@ -411,7 +411,7 @@ def build_piece_camera(evidence_index, piece, source_metadata, cfg=None):
     if piece.get('camera_plan_origin') == 'verified_curator_ready':
         plan = deepcopy(piece['camera_plan'])
         plan.update(needs_review=True, human_approved=False, visual_source='verified_curator_ready_proposal')
-        return plan
+        return protect_imported_regions(plan, piece, metadata)
     director = evidence_index.get('director') or []
     protected = [row for row in evidence_index.get('scenes', [])
                  if row.get('critical_content') is True or row.get('critical_text') is True or row.get('crop_risk') in {'high', 'critical'}]
@@ -444,3 +444,45 @@ def build_piece_camera(evidence_index, piece, source_metadata, cfg=None):
             'instrument_evidence_status': evidence_index.get('instrument_evidence_status', 'unknown'),
             'hands_evidence_status': evidence_index.get('hands_evidence_status', 'unknown'),
             'new_inference_executed': False, 'micro_perception_skipped': True}}
+
+
+def protect_imported_regions(plan, piece, metadata):
+    """Validate supplied critical regions using existing source/crop geometry.
+
+    A declared safe area never authorizes clipping it. Unknown geometry or an
+    incompatible crop gets an explicit wide fallback; the original proposal is
+    retained in imported_documents. Conservative extrema bound smooth motion.
+    """
+    from .crop_editor import protected_regions
+    from .render import _crop_dims_for_zoom
+    document = (piece.get('imported_documents') or {}).get('safe_areas') or {}
+    records = document.get('regions', []) if isinstance(document, dict) else document
+    if not records:
+        return plan
+    duration = piece['source_end'] - piece['source_start']
+    regions, unknown = protected_regions({'protected_regions': records},
+        {'source_start': 0., 'source_end': duration}, metadata['width'], metadata['height'])
+    revised = deepcopy(plan)
+    for segment in revised.get('segments', []):
+        if segment.get('mode') == 'full_frame_blur':
+            continue
+        fits = not unknown and segment.get('mode') == 'crop'
+        if fits:
+            zoom = max(segment.get('zoom', 1.), segment.get('zoom_start', 1.), segment.get('zoom_end', 1.))
+            width, height = _crop_dims_for_zoom(metadata['width'], metadata['height'], 9 / 16, zoom)
+            target_y = segment.get('subject_screen_y', .5 if 'zoom_start' in segment else .38)
+            xs = [segment.get('center_x_start', segment.get('center_x', .5)), segment.get('center_x_end', segment.get('center_x_start', segment.get('center_x', .5)))]
+            ys = [segment.get('center_y_start', .5 if 'zoom_start' in segment else .42), segment.get('center_y_end', segment.get('center_y_start', .5 if 'zoom_start' in segment else .42))]
+            for x in xs:
+                for y in ys:
+                    left = max(0., min(metadata['width'] - width, x * metadata['width'] - width / 2))
+                    top = max(0., min(metadata['height'] - height, y * metadata['height'] - height * target_y))
+                    fits = fits and all(left <= r['x'] and top <= r['y'] and
+                        left + width >= r['x'] + r['width'] and top + height >= r['y'] + r['height'] for r in regions)
+        if not fits:
+            original = deepcopy(segment)
+            segment.clear()
+            segment.update(start=original['start'], end=original['end'], mode='full_frame_blur',
+                reason='IMPORTED_PROTECTED_REGION_REQUIRES_SOURCE_PRESERVATION', crop_safe=False,
+                rejected_proposal=original, protected_region_count=len(regions), unknown_geometry=unknown)
+    return revised

@@ -21,7 +21,7 @@ from uuid import uuid4
 from .episode_approval import file_hash, renderer_fingerprint
 from .persisted_plan import project_lock
 from .production_contract import read_production_archive, read_editorial_handoff
-from .production_evidence import normalise_production_evidence, build_piece_camera
+from .production_evidence import normalise_production_evidence, build_piece_camera, protect_imported_regions
 from .series_workflow import SeriesProject, OperationCancelled
 from .utils import load_json, write_json, safe_name
 
@@ -319,7 +319,19 @@ def import_production_package(path, *, cfg=None, output_root=None, media_library
                     human_approval=None, duration_preset='auto_under_90',
                     production_origin_id=piece['episode_id'])
                 episode['duration'] = episode['source_end'] - episode['source_start']
-                episode['camera_plan'] = piece.get('camera_plan') or build_piece_camera(normalized['visual_index'], piece, package['metadata'], settings)
+                episode['camera_plan'] = build_piece_camera(normalized['visual_index'], piece, package['metadata'], settings)
+                documents = piece.get('imported_documents') or {}
+                overlay = documents.get('title_overlay') or {}
+                if overlay:
+                    episode['title_text'] = overlay.get('text', episode['title_text'])
+                    episode['title_enabled'] = overlay.get('enabled', True)
+                    if 'duration' in overlay:
+                        episode['title_duration'] = overlay['duration']
+                thumbnail = documents.get('thumbnail_plan') or {}
+                if thumbnail:
+                    episode['thumbnail_title'] = thumbnail.get('title_text', thumbnail.get('text', episode['title_text']))
+                    episode['thumbnail_overrides'] = {k: deepcopy(v) for k, v in thumbnail.items() if k in
+                        {'frame_times', 'layouts', 'brand', 'show_part', 'layout_overrides', 'frame_count'}}
                 gate = caption_preflight(episode, project.evidence)
                 if episode['piece_kind'] != 'REEL' and episode['duration'] > 59.5:
                     gate = {'state': 'BLOCKED', 'renderable': False, 'reason': 'STORY_EXCEEDS_59_5_SECONDS'}
@@ -429,7 +441,13 @@ class ProductionProject(SeriesProject):
 
     def render(self, episode_id, source_path, *, preview=True):
         with self._operation():
-            self._gate(self.episode(episode_id))
+            episode = self.episode(episode_id)
+            self._gate(episode)
+            if preview and episode.get('imported_documents'):
+                from .series_workflow import conservative_camera
+                proposed = episode.get('camera_plan') or conservative_camera(self.evidence, episode, self.cfg)
+                episode['camera_plan'] = protect_imported_regions(proposed, episode,
+                    self.plan['production_import']['source_metadata'])
             return super().render(episode_id, source_path, preview=preview)
 
     def approve(self, episode_id, **kwargs):
@@ -445,7 +463,7 @@ class ProductionProject(SeriesProject):
                 # A merge/split must never discard a blocked upstream origin.
                 episode['production_caption_gate'] = {'state': 'BLOCKED', 'renderable': False, 'reason': 'DERIVED_ASSEMBLY_REQUIRES_REVIEW'}
                 continue
-            for field in ('production_origin_id', 'piece_kind', 'caption_preflight', 'caption_plan', 'raw_proposal', 'source_intervals', 'assembly_disclosure_required'):
+            for field in ('production_origin_id', 'piece_kind', 'caption_preflight', 'caption_plan', 'raw_proposal', 'source_intervals', 'assembly_disclosure_required', 'imported_documents'):
                 if field in parent:
                     episode[field] = deepcopy(parent[field])
             same_window = all(episode.get(k) == parent.get(k) for k in ('source_start', 'source_end'))
