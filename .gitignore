@@ -1,5 +1,5 @@
 # ============================================================
-# L.D.PORTO VIDEO ANALYZER
+# L.D.PORTO VIDEO CURATOR
 # .gitignore
 # ============================================================
 
@@ -294,3 +294,26 @@ profiling_raw/
 # README*.md
 # DELIVERY_MANIFEST*.json
 # ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# Curator: snapshots locais e mídias de trabalho
+# Essas regras impedem novos commits; arquivos já rastreados
+# precisam de revisão específica antes de sair do índice Git.
+# ------------------------------------------------------------
+.backups/
+source_cache/
+local_backups/
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.zst
+
+# Evidências volumosas geradas automaticamente por curadorias.
+# Preservar fixtures oficiais em tests/ e docs escritos à mão.
+docs/reports/output_recovery_snapshots/
+docs/reports/**/review_project/evidence.json
+docs/reports/**/review_project/parent_snapshot/evidence.json
+docs/reports/**/backup_before/
+docs/reports/**/before_final_validation/
