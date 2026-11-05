@@ -49,3 +49,7 @@ python -m ldporto_studio adopt-project --source "C:\Users\leone\Videos\LDPORTO_C
 ```
 
 Não exclua a cópia de origem antes de validar que todos os vídeos renderizados e relatórios abrem na cópia. A importação recusa nomes já existentes.
+
+## Download já salvo e SHA256 diferente
+
+Quando o YouTube entrega outra codificação, o botão **BAIXAR VÍDEO DO YOUTUBE** verifica se já existe uma cópia íntegra do mesmo vídeo dentro de `output/projects/<projeto>/downloads/attempts/`, validando o manifesto e o hash real. **Não baixa novamente** quando encontra arquivo válido. Com o mesmo ID e duração compatível, a interface oferece vincular a fonte para **prévia de revisão**, mediante sua confirmação. O SHA256 original do Analyzer permanece inalterado. Mesmo ID e duração não provam sincronização; revise cada corte antes de aprovar o final. Se a duração divergir, é necessária reanálise do MP4.

@@ -95,6 +95,28 @@ class FakeDownloadTests(unittest.TestCase):
         self.assertEqual(project.state['youtube_url'],f'https://www.youtube.com/watch?v={VIDEO}')
         self.assertTrue(any(item['phase']=='concluído' for item in seen))
 
+    def test_second_download_reuses_existing_media_without_network(self):
+        project=self.project()
+        with patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media)}):
+            first=download_from_youtube(project,f'https://youtu.be/{VIDEO}')
+        before=len(project.state['download_history'])
+        with patch.dict(sys.modules,{'yt_dlp':None}):
+            again=download_from_youtube(project,f'https://www.youtube.com/watch?v={VIDEO}')
+        self.assertTrue(again['reused_existing'])
+        self.assertEqual(first['path'],again['path'])
+        self.assertEqual(len(project.state['download_history']),before)
+        self.assertEqual(len(list((project.dir/'downloads'/'attempts').iterdir())),1)
+
+    def test_second_download_does_not_reuse_changed_media(self):
+        project=self.project()
+        with patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media)}):
+            first=download_from_youtube(project,f'https://youtu.be/{VIDEO}')
+        Path(first['path']).write_bytes(b'alterado')
+        with patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media)}):
+            second=download_from_youtube(project,f'https://youtu.be/{VIDEO}')
+        self.assertNotEqual(first['path'],second['path'])
+        self.assertFalse(second.get('reused_existing',False))
+
     def test_different_valid_video_saved_but_never_attached(self):
         project=self.project()
         other=self.root/'other_video.mp4'

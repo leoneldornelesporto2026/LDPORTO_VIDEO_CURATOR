@@ -42,6 +42,7 @@ class CuratorApp(tk.Tk):
         self.cancel=threading.Event()
         self.preview_photo=None
         self.selected=None
+        self.review_after_download=False
         self._build()
         self.after(90,self._poll)
         if self.example and self.example.is_file():
@@ -215,17 +216,39 @@ class CuratorApp(tk.Tk):
                 elif action=='log':
                     self.log_message(payload)
                 elif action=='download_report':
-                    self.log_message(payload['message']+' Arquivo: '+payload['path'])
-                    if not payload['linked']:
-                        messagebox.showwarning('Download salvo — revisão da fonte necessária',
-                            payload['message']+'\n\nArquivo: '+payload['path']+
-                            '\n\nUse USAR DOWNLOAD NAS PRÉVIAS (REVISÃO), se compatível.')
+                    reuse=bool(payload.get('reused_existing'))
+                    self.log_message(('Vídeo já estava salvo; download repetido evitado. ' if reuse
+                                      else 'Vídeo baixado e verificado. ') +
+                                     'Arquivo: '+payload['path'])
+                    if payload['linked']:
+                        self.log_message('Fonte exata do Analyzer vinculada. Gere uma prévia.')
+                    elif payload.get('duration_compatible'):
+                        self.review_after_download=messagebox.askyesno(
+                            'Vídeo pronto para prévias — revisão necessária',
+                            ('O MP4 já estava no projeto.' if reuse else 'O MP4 foi baixado com sucesso.')+
+                            '\n\nÉ o mesmo ID do YouTube, e a duração é compatível com a R57. '
+                            'O SHA256 mudou, possivelmente por outra codificação.\n\n'
+                            'Isso NÃO garante que o áudio, as cenas e os timestamps coincidam. '
+                            'Você precisará assistir e conferir CADA prévia antes do final.\n\n'
+                            'Vincular este arquivo para GERAR PRÉVIAS agora?'
+                        )
+                        if not self.review_after_download:
+                            self.log_message('Download preservado; revisão de fonte não autorizada.')
+                    else:
+                        messagebox.showwarning('Duração incompatível com a R57',
+                            'Vídeo salvo, mas duração incompatível com a análise. '
+                            'Os intervalos dos cortes não podem ser reaproveitados com segurança. '
+                            'É necessário refazer a análise desse MP4.')
                 elif action=='done':
                     self.busy=False
                     self.progress['value']=100
                     self.log_message('Concluído: '+str(payload))
                     self.refresh_table()
                     if self.selected:self.show_details(self.selected)
+                    if self.review_after_download:
+                        self.review_after_download=False
+                        self._task('Vinculando MP4 existente para prévias de revisão...',
+                            lambda:self.project.review_download_for_previews(confirm_timeline=True))
                 elif action=='error':
                     self.busy=False
                     self.log_message('ERRO: '+payload)
@@ -300,8 +323,11 @@ class CuratorApp(tk.Tk):
             self.tree.selection_set(self.tree.get_children()[0]);self.selected=self.tree.get_children()[0]
         mode=self.project.state.get('media_mode','')
         descriptor=' [FONTE ALTERNATIVA: SINCRONIA A REVISAR]' if mode=='ALTERNATE_REVIEW_SOURCE' else ''
+        latest=next((r for r in reversed(self.project.state.get('download_history',[]))
+            if isinstance(r,dict) and r.get('status')=='SOURCE_REVIEW_REQUIRED'),None)
+        pending='DOWNLOAD SALVO — clique BAIXAR para reaproveitar e liberar prévias de revisão' if latest else 'AUSENTE — baixe o vídeo do YouTube'
         self.source_status.set('Curadoria: '+str(len(self.project.package.clips))+' cortes | MP4: '+
-            (self.project.state['media_path'] or 'AUSENTE — importe ou revise o download')+descriptor)
+            (self.project.state['media_path'] or pending)+descriptor)
         if self.selected:self.show_details(self.selected)
 
     def on_select(self,event=None):
@@ -359,17 +385,20 @@ class CuratorApp(tk.Tk):
             parse_youtube_url(url)
         except ValueError as error:
             return messagebox.showerror('Link inválido',str(error))
-        if not messagebox.askyesno('Confirmar download',
-             'Baixar somente conteúdo para o qual você tem autorização de uso.\n\n'
-             'O aplicativo verificará o SHA256: uma cópia diferente do vídeo analisado '
-             'será guardada, mas NÃO será vinculada para renderização. Continuar?'):
+        if not messagebox.askyesno('Usar vídeo do YouTube',
+             'O Studio vai REAPROVEITAR um MP4 já salvo e íntegro, se existir. '
+             'Só fará novo download quando não houver uma cópia válida.\n\n'
+             'Baixe apenas conteúdo para o qual tenha autorização de uso.\n\n'
+             'Se a codificação divergir da análise, você poderá confirmar o uso '
+             'para PRÉVIAS (não finais aprovados). Continuar?'):
             return
+        self.review_after_download=False
         def work():
             result=download_from_youtube(self.project,url,cancel=self.cancel,
                 progress=lambda event:self.q.put(('progress',event.get('fraction'))))
             self.q.put(('download_report',result))
             return result['status']+' — '+result['path']
-        self._task('Baixando vídeo do YouTube com yt-dlp e FFmpeg...',work)
+        self._task('Procurando MP4 já salvo; baixando somente se necessário...',work)
 
     def review_download(self):
         if self.busy:return

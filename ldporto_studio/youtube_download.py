@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 from uuid import uuid4
 
-from .core import VIDEO_EXT, atomic_write, now, sha256_file
+from .core import VIDEO_EXT, atomic_write, now, sha256_file, read_json
 
 _VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 _ALLOWED_HOSTS = frozenset({
@@ -69,6 +69,42 @@ def suggested_youtube_url(package) -> str:
     return f'https://www.youtube.com/watch?v={video_id}' if video_id else ''
 
 
+def existing_youtube_download(project, url: str) -> dict | None:
+    """Reuse only the latest recorded, unchanged download of the SAME video.
+
+    No new network call, no duplicate project state and no weakening source checks.
+    A stale, missing or modified file cannot be reused.
+    """
+    video_id, canonical = parse_youtube_url(url)
+    rows = project.state.get('download_history', [])
+    for record in reversed(rows):
+        if not isinstance(record, dict) or record.get('video_id') != video_id:
+            continue
+        if record.get('url') != canonical:
+            continue
+        if record.get('expected_sha256') != project.package.source_sha:
+            continue
+        if record.get('status') not in ('SOURCE_REVIEW_REQUIRED', 'VERIFIED_AND_LINKED'):
+            continue
+        raw_path = record.get('path')
+        if not raw_path or not isinstance(raw_path, str):
+            continue
+        source = Path(raw_path).expanduser().resolve()
+        if (not source.is_relative_to((project.dir / 'downloads' / 'attempts').resolve())
+            or not source.is_file() or source.suffix.lower() not in VIDEO_EXT):
+            continue
+        receipt = read_json(source.parent / 'download_report.json', {}) or {}
+        if receipt != record:
+            continue
+        if abs(float(record.get('duration_seconds', -1)) -
+               project.package.source_duration) > 3:
+            continue
+        if sha256_file(source) != record.get('sha256'):
+            continue
+        return {**record, 'reused_existing': True}
+    return None
+
+
 def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> dict:
     """Download to a new project-local attempt and check source identity.
 
@@ -83,6 +119,12 @@ def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> d
         cancel = threading.Event()
     if cancel.is_set():
         raise RuntimeError('Download cancelado antes de iniciar')
+    existing = existing_youtube_download(project, canonical)
+    if existing:
+        if progress:
+            progress({'phase':'arquivo local reutilizado', 'fraction':1.0,
+                      'detail':'Download existente validado pelo SHA256'})
+        return existing
     try:
         import yt_dlp
     except ImportError as error:
@@ -160,9 +202,10 @@ def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> d
             'status': 'VERIFIED_AND_LINKED' if matched else 'SOURCE_REVIEW_REQUIRED',
             'linked': matched,
             'message': ('MP4 original verificado e vinculado ao projeto.' if matched else
-                        'Arquivo baixado, mas a origem NÃO corresponde exatamente ao SHA256 da análise. '
-                        'O render permanece bloqueado até revisão explícita. ' 
-                        'Use a opção de prévias se a duração for compatível, ou refaça a análise.'),
+                        'Download concluído e íntegro. O SHA256 é diferente da fonte do Analyzer, '
+                        'como pode ocorrer em outra codificação do mesmo vídeo. '
+                        'Se ID e duração forem compatíveis, você pode revisar essa mídia nas prévias. '
+                        'Isso NÃO comprova a sincronização dos cortes.'),
         }
         atomic_write(attempt / 'download_report.json', record)
         project.state.setdefault('download_history', []).append(record)
