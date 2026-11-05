@@ -12,7 +12,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
 from .core import Project
-from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,binaries
+from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,generate_premium_covers,binaries
 from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
 from .workspace import project_output_root, import_existing_project
 
@@ -134,9 +134,9 @@ class CuratorApp(tk.Tk):
         self.edit_start=tk.StringVar();ttk.Entry(a,textvariable=self.edit_start,width=10).pack(fill='x')
         ttk.Label(b,text='Saída (segundos)').pack(anchor='w',pady=(8,2))
         self.edit_end=tk.StringVar();ttk.Entry(b,textvariable=self.edit_end,width=10).pack(fill='x')
-        ttk.Label(cf,text='Enquadramento (crop só após inspeção)').pack(anchor='w',pady=(8,2))
+        ttk.Label(cf,text='Enquadramento (automático com fallback 16:9)').pack(anchor='w',pady=(8,2))
         self.layout=tk.StringVar(value='preserve')
-        self.layout_select=ttk.Combobox(cf,textvariable=self.layout,values=('preserve','center_crop'),state='readonly')
+        self.layout_select=ttk.Combobox(cf,textvariable=self.layout,values=('preserve','center_crop','solo_fit','smart_zoom'),state='readonly')
         self.layout_select.pack(fill='x')
         ttk.Label(cf,text='Centro crop: 0 esquerda — 1 direita').pack(anchor='w',pady=(8,1))
         self.center_var=tk.DoubleVar(value=.5)
@@ -170,6 +170,8 @@ class CuratorApp(tk.Tk):
                          ('Finais aprovados',self.batch_final),
                          ('Gerar capa do MP4',self.make_cover)]:
             ttk.Button(tools,text=label,command=fn).pack(side='left',padx=(0,4))
+        ttk.Button(right,text='APLICAR SMART ZOOM AOS 12 REELS',command=self.apply_smart_preset).pack(fill='x',pady=(6,2))
+        ttk.Button(right,text='GERAR 72 CAPAS PREMIUM DO MP4',command=self.batch_premium_covers).pack(fill='x',pady=2)
         ttk.Button(right,text='CANCELAR PROCESSAMENTO ATUAL',command=self.cancel_active).pack(anchor='w',pady=(4,0))
         ttk.Label(container,text='EXECUÇÃO • original preservado • revisão humana antes dos finais • sem publicação automática',
                   foreground='#94a8bd').pack(anchor='w',pady=(10,4))
@@ -348,10 +350,18 @@ class CuratorApp(tk.Tk):
         self.cover_label.config(image='',text='Carregando capa...')
         try:
             from PIL import Image,ImageTk
-            with Image.open(BytesIO(self.project.package.data(c.thumbnail))) as original:
-                image=original.convert('RGB')
-                image.thumbnail((205,365))
-                self.preview_photo=ImageTk.PhotoImage(image)
+            record=self.project.preview_record(cid)
+            upgraded=(self.project.dir/record['relative_path']).parent/'CAPA_PREMIUM.png' if record else None
+            if upgraded and upgraded.is_file():
+                with Image.open(upgraded) as current:
+                    image=current.convert('RGB')
+                    image.thumbnail((205,365))
+                    self.preview_photo=ImageTk.PhotoImage(image)
+            else:
+                with Image.open(BytesIO(self.project.package.data(c.thumbnail))) as original:
+                    image=original.convert('RGB')
+                    image.thumbnail((205,365))
+                    self.preview_photo=ImageTk.PhotoImage(image)
             self.cover_label.configure(image=self.preview_photo,text='')
         except Exception:
             self.cover_label.configure(text='CAPA PNG disponível\nno pacote de curadoria',image='')
@@ -523,14 +533,49 @@ class CuratorApp(tk.Tk):
             return self.project.export_manifest()['generated_at']+' • manifest salvo'
         self._task('Render final dos cortes aprovados...',run)
 
+    def apply_smart_preset(self):
+        if self.busy or not self.project:return
+        if not messagebox.askyesno('Aplicar enquadramento automático',
+             'Alterar os 12 Reels para smart_zoom? O detector inspeciona quadros reais; '
+             'se não identificar um corpo inteiro sozinho com confiança, preserva o 16:9. '
+             'Aprovações/prévias anteriores ficam desatualizadas para esses Reels. '
+             'Stories não serão alterados. Continuar?'):
+            return
+        def work():
+            rows=self.project.package.items('reels')
+            for c in rows:
+                self.project.update(c.id,layout='smart_zoom')
+            return f'{len(rows)} Reels configurados para smart_zoom. Gere e revise as prévias.'
+        self._task('Aplicando padrão smart_zoom apenas nos Reels...',work)
+
+    def batch_premium_covers(self):
+        if self.busy or not self.project:return
+        if not messagebox.askyesno('Gerar capas premium',
+             'Extrair quadros do MP4 associado e gerar capas brancas/amarelas '
+             'para os 12 Reels + 60 Stories? Os PNGs ficam SOMENTE em output/, '
+             'sem substituir as capas R57. Pode demorar. Continuar?'):
+            return
+        def work():
+            folder,count=generate_premium_covers(self.project,'all',cancel=self.cancel,
+                progress=lambda p,c:self.q.put(('progress',p)))
+            return f'{count} capas premium geradas/reutilizadas em {folder}'
+        self._task('Gerando capas premium a partir do MP4 verificado...',work)
+
     def make_cover(self):
         if self.busy:return
         if not self.project or not self.selected:return
         try:self._save()
         except Exception as e:return messagebox.showerror('Revise a edição',str(e))
         cid=self.selected
-        dest=self.project.dir/'exports'/'covers_from_verified_media'/cid/(cid+'_CAPA_ORIGINAL.png')
-        self._task('Criando capa alternativa a partir do MP4 original...',
+        from .core import sha256_bytes
+        c=self.project.package.clips[cid]
+        s=self.project.settings(cid)
+        key=sha256_bytes((cid+s['title']+self.project.active_media_sha()).encode('utf-8'))[:12]
+        dest=self.project.dir/'exports'/'covers_premium'/c.kind/cid/key/'CAPA_PREMIUM.png'
+        if dest.exists():
+            self.log_message('Capa premium existente: '+str(dest))
+            return open_file(dest)
+        self._task('Criando capa premium a partir do MP4...',
                    lambda:create_cover_from_frame(self.project,cid,dest))
 
 

@@ -269,7 +269,7 @@ class Project:
             raise ValueError('Entrada/saída fora da duração do vídeo')
         if clip.kind=='stories' and (abs(a-clip.start)>0.001 or abs(b-clip.end)>0.001):
             raise ValueError('Stories preservam intervalo original contínuo. Edite apenas os Reels.')
-        if settings['layout'] not in {'preserve','center_crop'}:
+        if settings['layout'] not in {'preserve','center_crop','solo_fit','smart_zoom'}:
             raise ValueError('Layout desconhecido')
         x=float(settings['center_x'])
         if not 0<=x<=1: raise ValueError('Centro da câmera deve ser entre 0 e 1')

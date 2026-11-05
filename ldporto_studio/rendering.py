@@ -29,7 +29,11 @@ def binaries():
 
 
 def render_code_signature():
-    return sha256_file(Path(__file__))
+    # Template and camera changes invalidate old preview approvals.
+    from . import smart_camera, visual_style
+    hashes=(sha256_file(Path(__file__)),sha256_file(Path(smart_camera.__file__)),
+            sha256_file(Path(visual_style.__file__)))
+    return sha256_bytes(''.join(hashes).encode('ascii'))
 
 
 def probe_media(path):
@@ -82,72 +86,66 @@ def _lines(draw,text,font,max_width,max_lines=3):
 
 
 def title_overlay(out:Path,title:str,width:int,height:int,kind:str):
-    """Transparent safe-area title stripe, no copyrighted font assets bundled."""
-    from PIL import Image,ImageDraw
-    im=Image.new('RGBA',(width,height),(0,0,0,0))
-    d=ImageDraw.Draw(im)
-    z=width/1080
-    x=int(width*.085)
-    top=int(height*.095)
-    size=max(16,int(63*z))
-    max_width=int(width*.79)
-    for _ in range(15):
-        ft=_font(size)
-        lines=_lines(d,title,ft,max_width,3)
-        if all(d.textbbox((0,0),ln,font=ft)[2]<=max_width for ln in lines):break
-        size=max(14,size-3)
-    height_line=int(size*1.23)
-    h=max(int(118*z),int(len(lines)*height_line+62*z))
-    d.rounded_rectangle((x,top,width-x,top+h),radius=max(9,int(24*z)),fill=(255,255,255,233))
-    d.rounded_rectangle((x,top,x+int(15*z),top+h),radius=max(5,int(7*z)),fill=(255,205,0,255))
-    y=top+int(31*z)
-    for line in lines:
-        d.text((x+int(40*z),y),line,font=ft,fill=(16,16,20,255),stroke_width=0)
-        y+=height_line
-    # Small chapter label away from platform UI overlays
-    if kind=='stories':
-        pass
-    im.save(out)
+    """Use the approved L.D.PORTO white/yellow live card."""
+    from .visual_style import save_title_overlay
+    return save_title_overlay(out,title,width,height,kind)
 
 
 def create_cover_from_frame(project,cid,destination:Path):
-    """Optional alternative cover from the *verified* source; original package cover is preserved."""
-    from PIL import Image,ImageDraw,ImageOps,ImageFilter
+    """Render premium cover from the verified video, without altering the R57 ZIP."""
+    from PIL import Image
+    from .visual_style import premium_cover
     ffmpeg,_=binaries()
     c=project.package.clips[cid]
     s=project.settings(cid)
     source=project.verified_media()
     t=(float(s['source_start'])+float(s['source_end']))/2
+    destination=Path(destination)
     destination.parent.mkdir(parents=True,exist_ok=True)
+    if destination.exists():
+        raise FileExistsError('A capa existente não será sobrescrita: '+str(destination))
     tmp=destination.with_name('captured_'+uuid4().hex+'.png')
     try:
-        result=subprocess.run([ffmpeg,'-hide_banner','-loglevel','error','-nostdin','-ss',f'{t:.3f}','-i',str(source),
-          '-frames:v','1','-y',str(tmp)],capture_output=True,text=True,timeout=180)
+        result=subprocess.run([ffmpeg,'-hide_banner','-loglevel','error','-nostdin',
+          '-ss',f'{t:.3f}','-i',str(source),'-frames:v','1','-y',str(tmp)],
+          capture_output=True,text=True,timeout=180)
         if result.returncode or not tmp.is_file():
             raise RuntimeError('Não foi possível extrair quadro do vídeo: '+result.stderr[-600:])
-        with Image.open(tmp) as raw: src=raw.convert('RGB')
-        bg=ImageOps.fit(src,(1080,1920),centering=(float(s['center_x']),0.5)).filter(ImageFilter.GaussianBlur(38))
-        fg=ImageOps.contain(src,(1080,1150),Image.Resampling.LANCZOS)
-        bg.paste(fg,((1080-fg.width)//2,(1920-fg.height)//2))
-        d=ImageDraw.Draw(bg,'RGBA')
-        d.rectangle((0,0,1080,380),fill=(0,0,0,155))
-        d.rectangle((0,1550,1080,1920),fill=(0,0,0,160))
-        size=79
-        for _ in range(25):
-            f=_font(size)
-            lines=_lines(d,s['title'],f,900,3)
-            if all(d.textbbox((0,0),l,font=f)[2]<900 for l in lines):break
-            size=max(34,size-3)
-        y=1650
-        for line in lines:
-            box=d.textbbox((0,0),line,font=f)
-            d.text(((1080-(box[2]-box[0]))/2,y),line,font=f,fill=(255,255,255,255),stroke_width=2,stroke_fill=(0,0,0,255))
-            y+=int(size*1.18)
-        d.text((74,145),'L.D.PORTO · VIDEO CURATOR',font=_font(35),fill=(255,212,30,255))
-        bg.convert('RGB').save(destination,quality=94)
+        with Image.open(tmp) as raw:
+            cover=premium_cover(raw,s['title'],c.kind)
+        cover.save(destination,'PNG')
         return destination
     finally:
         tmp.unlink(missing_ok=True)
+
+
+def generate_premium_covers(project,kind='all',progress=None,cancel=None):
+    """Batch-export actual frame-based covers for selected Reels/Stories.
+
+    File destinations are versioned by title+media hash; never overwrite old edits.
+    """
+    clips=project.package.items(kind)
+    root=project.dir/'exports'/'covers_premium'
+    rows=[]
+    for i,c in enumerate(clips):
+        if cancel is not None and cancel.is_set():
+            raise RuntimeError('Geração de capas cancelada; arquivos anteriores preservados')
+        s=project.settings(c.id)
+        key=sha256_bytes((c.id+s['title']+project.active_media_sha()+
+             str(s['source_start'])+str(s['source_end'])).encode('utf-8'))[:12]
+        dest=root/c.kind/c.id/key/'CAPA_PREMIUM.png'
+        if not dest.exists():
+            create_cover_from_frame(project,c.id,dest)
+        rows.append({'id':c.id,'kind':c.kind,'title':s['title'],
+                     'relative_path':dest.relative_to(project.dir).as_posix(),
+                     'sha256':sha256_file(dest)})
+        if progress:progress((i+1)/max(1,len(clips)),c.id)
+    atomic_write(root/'COVERS_MANIFEST.json',{
+        'status':'PREVIEW_ASSETS_REQUIRE_EDITORIAL_REVIEW',
+        'media_sha256':project.active_media_sha(),
+        'source_analyzer_sha256':project.package.source_sha,
+        'template':'LDPORTO_WHITE_LIVE_V1','items':rows})
+    return root,len(rows)
 
 
 def extract_editorial_assets(project,kind='all',destination=None):
@@ -198,9 +196,30 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     root.mkdir(parents=True,exist_ok=False)
     movie=root/('PREVIEW_540x960.mp4' if preview else 'FINAL_1080x1920.mp4')
     pending=root/'ENCODING.part.mp4'
-    # Always preserve the original working thumbnail. Never claim it was sampled at an exact PTS.
+    # Never overwrite the R57 package thumbnail.
     (root/'CAPA_PROPOSTA.png').write_bytes(project.package.data(clip.thumbnail))
+    from .smart_camera import analyze_camera, crop_x_expression
+    camera={'requested':s['layout'],'decision':'preserve' if s['layout']=='preserve' else 'crop',
+            'reason':'Modo manual de enquadramento','camera_points':[]}
+    if s['layout'] in ('solo_fit','smart_zoom'):
+        if preview:
+            camera=analyze_camera(source,start,end,s['layout'])
+        else:
+            verified_preview=project.preview_record(cid)
+            if not verified_preview:
+                raise ValueError('Plano inteligente exige prévia aprovada')
+            camera=verified_preview['report'].get('camera_plan') or {}
+            if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop'):
+                raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
+        atomic_write(root/'CAMERA_PLAN.json',camera)
     use_title=bool(s['title_overlay'])
+    # Premium cover uses a real frame of the source, not a fabricated thumbnail.
+    cover_error=None
+    try:
+        create_cover_from_frame(project,cid,root/'CAPA_PREMIUM.png')
+    except (OSError,RuntimeError,ValueError) as error:
+        cover_error=str(error)
+
     cmd=[ffmpeg,'-hide_banner','-nostdin','-loglevel','error','-ss',f'{start:.3f}',
          '-i',str(source)]
     if use_title:
@@ -209,7 +228,7 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     if s['subtitles']:
         (root/'captions.ass').write_bytes(project.caption_payload(cid))
     filters=[f'[0:v]fps=30,trim=duration={duration:.3f},setpts=PTS-STARTPTS']
-    if s['layout']=='preserve':
+    if s['layout']=='preserve' or camera['decision']=='preserve':
         filters[0] += ',split=2[bg][fg]'
         filters.append(f'[bg]scale={width}:{height}:force_original_aspect_ratio=increase:force_divisible_by=2,'
                        f'crop={width}:{height},boxblur=luma_radius=20:luma_power=1[back]')
@@ -217,8 +236,13 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
                        'setsar=1[front]')
         filters.append('[back][front]overlay=(W-w)/2:(H-h)/2:shortest=1,format=yuv420p[base]')
     else:
+        if s['layout'] in ('solo_fit','smart_zoom'):
+            x=crop_x_expression(camera['camera_points'])
+            x=f"'(iw-ow)*({x})'"
+        else:
+            x=f'(iw-ow)*{s["center_x"]:.4f}'
         filters[0]+=(f',scale={width}:{height}:force_original_aspect_ratio=increase:force_divisible_by=2,'
-                      f'crop={width}:{height}:(iw-ow)*{s["center_x"]:.4f}:(ih-oh)/2,setsar=1,format=yuv420p[base]')
+                      f'crop={width}:{height}:{x}:(ih-oh)/2,setsar=1,format=yuv420p[base]')
     current='base'
     if use_title:
         filters.append(f'[{current}][1:v]overlay=0:0:shortest=1:format=auto:enable=\'lt(t,3.2)\'[titled]')
@@ -276,7 +300,9 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
                 'media_mode':project.state.get('media_mode','EXACT_ANALYZER_SOURCE'),
                 'time_alignment':'NOT_AUTOMATICALLY_VERIFIED' if project.active_media_sha()!=project.package.source_sha else 'EXACT_SOURCE_BYTES',
                 'package_sha256':project.package.digest,
-                'clip':cid,'preview':preview,'mode':s['layout'],'captions_included':s['subtitles'],
+                'clip':cid,'preview':preview,'mode':s['layout'],
+                'camera_plan':camera,'cover_error':cover_error,
+                'captions_included':s['subtitles'],
                 'camera_verified_by_human':s['camera_reviewed'],
                 'captions_verified_by_human':s['captions_verified'],
                 'media':technical,'source_start':start,'source_end':end,

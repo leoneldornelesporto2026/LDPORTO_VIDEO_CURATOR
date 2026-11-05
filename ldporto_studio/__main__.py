@@ -37,6 +37,14 @@ def main(argv=None):
     a=sub.add_parser('download',help='Baixar URL autorizada do YouTube e validar SHA256 do original')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--url',required=True,help='URL HTTPS de um único vídeo do YouTube')
+    a=sub.add_parser('covers-premium',help='Gerar capas com card viral a partir do MP4')
+    a.add_argument('--workdir',required=True,type=Path)
+    a.add_argument('--kind',choices=('all','reels','stories'),default='all')
+    a=sub.add_parser('smart-preset',help='Aplicar novo enquadramento de revisão, sem mexer no ZIP')
+    a.add_argument('--workdir',required=True,type=Path)
+    a.add_argument('--kind',choices=('reels','stories'),default='reels')
+    a.add_argument('--mode',choices=('solo_fit','smart_zoom','preserve'),default='smart_zoom')
+    a.add_argument('--confirm',action='store_true',help='Confirmar invalidação de prévias/aprovações anteriores')
     args=p.parse_args(argv)
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
@@ -64,6 +72,20 @@ def main(argv=None):
             progress=lambda e: print(f"{e['phase']}: {e.get('detail','')}",flush=True) if e.get('phase')!='baixando' else None)
         print(json.dumps(record,ensure_ascii=False,indent=2))
         return 0 if record['linked'] else 3
+    if args.cmd=='covers-premium':
+        from .rendering import generate_premium_covers
+        folder,count=generate_premium_covers(project,args.kind)
+        print(json.dumps({'covers':count,'folder':str(folder)},ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='smart-preset':
+        if not args.confirm:
+            raise ValueError('Informe --confirm; mudar layouts invalida aprovações anteriores')
+        rows=project.package.items(args.kind)
+        for clip in rows:
+            project.update(clip.id,layout=args.mode)
+        print(json.dumps({'status':'REVIEW_REQUIRED','mode':args.mode,
+                          'updated_clips':len(rows)},ensure_ascii=False,indent=2))
+        return 0
     if args.cmd=='associate':
         print(json.dumps(project.set_media(args.media),indent=2))
     elif args.cmd=='list':

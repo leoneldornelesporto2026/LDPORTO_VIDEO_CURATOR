@@ -4,7 +4,7 @@
 
 - Windows 10/11, Python 3.11 ou mais recente com Tkinter disponível.
 - FFmpeg e FFprobe no PATH. Confira no CMD: `ffmpeg -version` e `ffprobe -version`.
-- Pillow e yt-dlp (`INSTALAR_WINDOWS.bat`). O yt-dlp pode precisar ser atualizado quando o YouTube alterar os formatos; falhas de acesso não são contornadas automaticamente.
+- Pillow, yt-dlp e OpenCV headless (`INSTALAR_WINDOWS.bat`). O yt-dlp pode precisar ser atualizado quando o YouTube alterar os formatos; falhas de acesso não são contornadas automaticamente.
 - Espaço livre suficiente para prévias e finais: vídeo 1080×1920 pode consumir centenas de MB.
 
 Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.FFmpeg -e`. Feche/reabra o terminal após instalar para atualizar o PATH. Não use a opção de associar mídia diferente da fonte analisada: mesmo vídeo reencodificado tem outro hash e precisa ser reanalisado/retificado na origem.
@@ -53,3 +53,11 @@ Não exclua a cópia de origem antes de validar que todos os vídeos renderizado
 ## Download já salvo e SHA256 diferente
 
 Quando o YouTube entrega outra codificação, o botão **BAIXAR VÍDEO DO YOUTUBE** verifica se já existe uma cópia íntegra do mesmo vídeo dentro de `output/projects/<projeto>/downloads/attempts/`, validando o manifesto e o hash real. **Não baixa novamente** quando encontra arquivo válido. Com o mesmo ID e duração compatível, a interface oferece vincular a fonte para **prévia de revisão**, mediante sua confirmação. O SHA256 original do Analyzer permanece inalterado. Mesmo ID e duração não provam sincronização; revise cada corte antes de aprovar o final. Se a duração divergir, é necessária reanálise do MP4.
+
+## Visual R58 e enquadramento conservador
+
+Use o seletor **Enquadramento**: `preserve`, `center_crop`, `solo_fit` ou `smart_zoom`. Os modos automáticos inspecionam amostras de quadros com OpenCV e geram `CAMERA_PLAN.json` dentro de cada prévia. Uma pessoa de corpo inteiro com margem lateral permite crop; cenas com banda, mais de um rosto, cortes bruscos ou baixa confiança caem para composição 16:9 completa (fundo desfocado). Esse detector clássico é limitado: nenhum enquadramento é declarado aprovado sem a inspeção visual de uma pessoa.
+
+O botão **APLICAR SMART ZOOM AOS 12 REELS** altera somente configurações locais de edição (não o ZIP), podendo invalidar prévias e aprovações anteriores. **GERAR 72 CAPAS PREMIUM DO MP4** usa quadros da mídia associada e escreve em `output/projects/<id>/exports/covers_premium`, ignorado pelo Git. As capas originais R57 são preservadas.
+
+Reinstale dependências com `python -m pip install -r .\requirements.txt` na mesma `.venv` que executa o programa. Testes: `python -m unittest discover -s tests -v`. A compatibilidade com os momentos reais do show e a validade das legendas ainda exigem inspeção no Windows.

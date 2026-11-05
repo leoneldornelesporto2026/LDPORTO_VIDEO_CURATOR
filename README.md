@@ -23,8 +23,8 @@
 - **Modo de prévia com fonte alternativa:** confirma identidade e duração, nunca troca o SHA da análise e exige revisão de áudio/contexto por corte; ao mudar mídia, invalida aprovações.
 - Entrada imutável, projetos salvos em `Vídeos/LDPORTO_CURATOR_STUDIO_PROJECTS`, com histórico de tentativas.
 - Prévia e final usando FFmpeg/H.264 AAC; todas as saídas passam por FFprobe.
-- Formato 9:16 com 16:9 integral preservado e fundo desfocado, ou crop central manual.
-- Tarja de título branca profissional criada com Pillow, durante até 3,2 segundos.
+- Formato 9:16 com 16:9 integral preservado e fundo desfocado, crop manual, **solo_fit** (pessoa única inteira) ou **smart_zoom** (acompanhamento horizontal suave, com fallback 16:9 quando não há detecção segura).
+- Card branco arredondado **L.D.PORTO.OFICIAL / AO VIVO**, título preto viral, detalhe amarelo e rodapé, exibido nos primeiros 3,2 segundos.
 - Legenda em ASS estilo amarelo/branco só quando explicitamente revisada.
 - Capas originais do R57 exportáveis e geração opcional de nova capa baseada no MP4 verificado.
 - Aprovação por *hash da prévia + plano de edição + fonte + versão do renderer*; editar vídeo invalida autorização anterior.
@@ -76,3 +76,25 @@ python -m ldporto_studio adopt-project --source "C:\Users\leone\Videos\LDPORTO_C
 ```
 
 Depois, basta abrir o exemplo R57: a GUI encontrará o projeto existente em `output/projects/`. Caso já exista um projeto com esse nome, a cópia é recusada, **sem sobrescrever**. Confira o espaço livre antes de importar arquivos de vídeo grandes.
+
+## Padrão viral R58 — câmera + capas do vídeo real
+
+Os novos modos de edição são:
+- **preserve**: fonte 16:9 inteira no centro de um canvas 9:16, com fundo desfocado. Ideal para palco aberto, banda ou câmera não confiável.
+- **solo_fit**: procura pessoa única *de corpo inteiro* nas amostras; só recorta se ela couber na janela vertical com margens. Caso contrário preserva o 16:9.
+- **smart_zoom**: usa OpenCV (HOG corporal + verificação de múltiplos rostos) para acompanhar horizontalmente uma pessoa inteira com suavização. Em grupo, ambiguidade ou detecção inconsistente, preserva o 16:9. **Não é rastreamento perfeito de pessoas:** iluminação, movimento de câmera, instrumentos e multidões dificultam a detecção. Revisão humana é indispensável.
+- **center_crop**: recorte central manual já existente.
+
+A tela oferece **APLICAR SMART ZOOM AOS 12 REELS** (não altera os Stories) e **GERAR 72 CAPAS PREMIUM DO MP4**. O card dos títulos e das capas segue a referência aprovada: caixa branca com borda amarela, `L.D.PORTO.OFICIAL`, indicador `AO VIVO`, título preto em caixa alta, sublinhado dourado e gênero no rodapé.
+
+As novas capas usam quadros reais da mídia associada e são salvas em `output/projects/<projeto>/exports/covers_premium/` com versionamento por conteúdo. Cada prévia também cria uma `CAPA_PREMIUM.png` e, ao usar modo inteligente, um `CAMERA_PLAN.json`. O plano de câmera aprovado na prévia é reutilizado no final correspondente; troca de modo ou implementação invalida aprovações antigas.
+
+**CLI PowerShell (depois de associar o MP4):**
+
+```powershell
+python -m ldporto_studio smart-preset --workdir ".\output\projects\CURADORIA_R57_69769168cf" --kind reels --mode smart_zoom --confirm
+python -m ldporto_studio preview --workdir ".\output\projects\CURADORIA_R57_69769168cf" --id REEL_01
+python -m ldporto_studio covers-premium --workdir ".\output\projects\CURADORIA_R57_69769168cf" --kind all
+```
+
+O ZIP R57 original, os vídeos anteriores e os projetos locais são preservados. Não há aprovação editorial ou publicação automática.
