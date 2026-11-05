@@ -1,74 +1,61 @@
-# L.D.PORTO VIDEO CURATOR
+# L.D.PORTO — Video Curator Studio 1.0
 
-**Curadoria, revisão e renderização vertical** a partir das análises do [L.D.PORTO VIDEO ANALYZER](https://github.com/leoneldornelesporto2026/LDPORTO_VIDEO_ANALYZER).
+**Programa novo e independente**, desenvolvido para consumir o pacote editorial de execução R57 do Charlie Brown Jr. — Planeta Atlântida 2012. Não altera o `LDPORTO_VIDEO_CURATOR` antigo, nem requer GitHub, Qwen ou Ollama.
 
-O Curator transforma uma análise concluída em propostas de cortes, planos de câmera, legendas, capas, prévias e renders para revisão humana. A decisão de publicar ou renderizar em lote **não é automática**.
+## Iniciar no Windows
 
-> **Escopo deste repositório:** este README documenta o código disponível na branch atual. Os relatórios históricos descrevem entregas específicas; não são prova de que dependências locais, modelos, mídias ou testes estejam disponíveis na sua máquina.
+1. Instale **Python 3.11+** (com Tkinter) e **FFmpeg + FFprobe** no PATH do Windows.
+2. Execute `INSTALAR_WINDOWS.bat` (instala Pillow).
+3. Execute `INICIAR_WINDOWS.bat`.
+4. O exemplo `example/CURADORIA_R57.zip` será carregado e verificado. Se preferir, use **CARREGAR CURADORIA ZIP**.
+5. **VINCULAR MP4 ORIGINAL**: selecione a mídia correspondente ao SHA256 da análise. O programa rejeitará qualquer outra versão.
+6. Escolha um Reel ou Story, revise início/fim, título, crop e legendas. O padrão usa **fonte horizontal preservada em canvas vertical com fundo desfocado**. Legendas ASR estão desligadas até conferência humana.
+7. Gere a prévia em **540×960**, abra e assista, confirme revisão de áudio e câmera e clique **APROVAR PRÉVIA**.
+8. Gere o MP4 final em **1080×1920**. Use **EXPORTAR CAPAS + PLANOS** para extrair as 72 capas, arquivos ASS/SRT e metadados.
 
-## Início rápido — Windows
+**Importante:** o ZIP R57 contém 12 Reels, 60 Stories, 72 capas e rascunhos de legendas. Não contém o vídeo original; nada é publicado automaticamente. Os 60 Stories preservam os intervalos cronológicos contínuos, mas cortes de minuto podem cair no meio de fala/música — revise cada um antes de aprovar. Direitos de imagem/áudio permanecem por verificar.
 
-1. Instale **Python 3.11** e **FFmpeg/FFprobe** (no PATH).
-2. Execute `INSTALAR.bat` para criar `.venv` e instalar `requirements.txt`.
-3. Ajuste `paths.analysis_root` em `config.yaml` para o diretório de análises do Analyzer.
-4. Execute **`ABRIR_CURADOR.bat`** para abrir a interface.
-5. Informe a URL de um vídeo **já analisado**, clique em **CURAR** e depois em **TESTAR 1 CORTE**.
-6. Assista à prévia, **APROVAR TESTE** e só então **RENDERIZAR TODOS**.
+## Recursos
 
-O bloqueio de renderização em lote é configurado em `safety.require_first_test_approval_before_batch`. O projeto pode precisar de outras ferramentas locais (por exemplo, Ollama), conforme a operação e a configuração escolhida.
+- Verificação integral de SHA256 de todos os membros do ZIP e da mídia original.
+- Entrada imutável, projetos salvos em `Vídeos/LDPORTO_CURATOR_STUDIO_PROJECTS`, com histórico de tentativas.
+- Prévia e final usando FFmpeg/H.264 AAC; todas as saídas passam por FFprobe.
+- Formato 9:16 com 16:9 integral preservado e fundo desfocado, ou crop central manual.
+- Tarja de título branca profissional criada com Pillow, durante até 3,2 segundos.
+- Legenda em ASS estilo amarelo/branco só quando explicitamente revisada.
+- Capas originais do R57 exportáveis e geração opcional de nova capa baseada no MP4 verificado.
+- Aprovação por *hash da prévia + plano de edição + fonte + versão do renderer*; editar vídeo invalida autorização anterior.
+- Reels com normalização de áudio e fades muito curtos; Stories sem fade para preservar a continuidade.
+- Finais somente após a aprovação da prévia. Relatório de origem e `EXPORT_MANIFEST.json`; nunca presume autorização de publicação.
 
-**Guia completo:** [Instalação e comandos Windows](docs/guides/WINDOWS.md).
+O estado `FINAL_READY_REVIEW_RIGHTS` significa que o MP4 final está gerado, **não** que o conteúdo esteja liberado para postar.
 
-## Comandos de referência
+## Arquitetura
 
-```powershell
-# Abrir GUI
-.\ABRIR_CURADOR.bat
+- `ldporto_studio/core.py` — contrato R57, segurança, integridade, edições, revisão, histórico e aprovações.
+- `ldporto_studio/rendering.py` — FFmpeg/FFprobe, composição, títulos, legendas e capas.
+- `ldporto_studio/gui.py` — interface desktop Tkinter.
+- `ldporto_studio/__main__.py` — automação CLI opcional.
+- `example/CURADORIA_R57.zip` — pacote editorial original, sem alterações.
+- `tests/` — testes com vídeo sintético + validação real do pacote R57.
+- `docs/INSTALACAO_WINDOWS.md` — requisitos, limitações e solução de problemas.
 
-# Diagnóstico
-.\scripts\windows\DIAGNOSTICO.bat
+## Comandos CLI
 
-# Teste de um corte, após instalação e com análise disponível
-.\scripts\windows\TESTAR_1_CORTE.bat "https://www.youtube.com/watch?v=ID_DO_VIDEO" 1
-
-# CLI — ver opções sem processar mídia
-.\.venv\Scripts\python.exe cli.py --help
-
-# Testes automatizados (pytest precisa estar instalado)
-.\.venv\Scripts\python.exe -m pytest -q tests
+```bat
+py -3 -m ldporto_studio import --zip "example\CURADORIA_R57.zip" --workdir "C:\curator_projects\CBJR"
+py -3 -m ldporto_studio associate --workdir "C:\curator_projects\CBJR" --media "D:\Videos\CBJR_ORIGINAL.mp4"
+py -3 -m ldporto_studio list --workdir "C:\curator_projects\CBJR" --kind reels
+py -3 -m ldporto_studio preview --workdir "C:\curator_projects\CBJR" --id REEL_01
+py -3 -m ldporto_studio approve --workdir "C:\curator_projects\CBJR" --id REEL_01 --watched --audio-ok --camera-ok
+py -3 -m ldporto_studio final --workdir "C:\curator_projects\CBJR" --id REEL_01
+py -3 -m ldporto_studio assets --workdir "C:\curator_projects\CBJR"
 ```
 
-`cli.py` também possui fluxos para segunda curadoria, planejamento de séries, dossiês e aprovação de episódios. Leia [Operação e limites](docs/guides/WINDOWS.md) antes de executar alterações ou renders.
+A aprovação CLI só deve ser executada depois que **uma pessoa** realmente assistiu e revisou a prévia. `--watched` não substitui essa verificação.
 
-## Organização do repositório
+Teste com `py -3 -m unittest discover -s tests -v`.
 
-| Caminho | Finalidade |
-| --- | --- |
-| `app.py`, `cli.py` | Entrada GUI e CLI |
-| `ldporto_curator/` | Código da aplicação, pipeline, câmera, legendas e revisão |
-| `config.yaml`, `curation_overrides.json` | Configuração e decisões opcionais de curadoria |
-| `tests/`, `schemas/`, `examples/` | Testes, contratos e exemplos |
-| `scripts/` | Ferramentas auxiliares, instaladores e verificações |
-| `docs/` | Guias, arquitetura, documentação histórica e evidências |
-| `output/`, `source_cache/`, `.venv/` | Dados locais e ambientes; não devem ser publicados no Git |
+### Revisar ou substituir legendas
 
-**Somente dois lançadores essenciais permanecem na raiz:** `INSTALAR.bat` e `ABRIR_CURADOR.bat`. Os comandos auxiliares ficam em `scripts/windows/`.
-
-## Documentação
-
-- [Índice de documentação](docs/README.md)
-- [Estrutura e critérios de preservação](docs/architecture/PROJECT_STRUCTURE.md)
-- [Câmera vertical segura](docs/architecture/CAMERA_VERTICAL_SEGURA.md)
-- [Legendas alinhadas por palavra](docs/architecture/LEGENDAS_WORD_ALIGNED.md)
-- [Segunda curadoria](docs/second_curation/)
-- [Arquivo de notas e entregas históricas](docs/history/README.md)
-
-## Segurança e integridade
-
-- Não inclua tokens, credenciais, vídeos, modelos, caches ou `.venv` no repositório.
-- **Não apague `output/`, `source_cache/`, revisões ou evidências locais** sem backup e validação dos vínculos.
-- Algumas evidências e duplicações históricas em `docs/reports/` já estão rastreadas. O `.gitignore` evita novos arquivos correspondentes, **mas não retira automaticamente arquivos existentes do histórico**.
-- Mantenha testes, fixtures, schemas e os caminhos usados pelo aplicativo.
-- Desenvolvimento em `develop`; `release` e `main` não são promovidas automaticamente.
-
-Os atalhos e a documentação foram organizados sem alteração no código do motor de curadoria.
+A opção **VER SRT PARA REVISÃO** abre o rascunho de texto. Corrija e sincronize a legenda no editor da sua preferência, exporte em `.ass` UTF-8, e use **IMPORTAR ASS CORRIGIDA**. A nova legenda fica versionada fora do ZIP original e desativa a aprovação anterior; após conferir o áudio, marque **Conferi transcrição e áudio** e **Incluir karaokê ASS**, salve e gere nova prévia.

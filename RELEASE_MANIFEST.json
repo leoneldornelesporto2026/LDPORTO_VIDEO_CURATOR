@@ -1,0 +1,94 @@
+{
+  "name": "LDPORTO_VIDEO_CURATOR_STUDIO",
+  "version": "1.0.0",
+  "created": "2026-11-05",
+  "input_contract": "R57 original",
+  "included_reels": 12,
+  "included_stories": 60,
+  "included_covers": 72,
+  "test_evidence": "14/14 unittest PASS with synthetic MP4 audio/video + real R57 archive; GUI smoke PASS with Xvfb",
+  "not_verified": [
+    "Windows 11 app acceptance",
+    "CBJR full-original MP4 rendering",
+    "PyInstaller exe"
+  ],
+  "source_video_included": false,
+  "publication_approved": false,
+  "files": [
+    {
+      "path": "GERAR_EXE_WINDOWS.bat",
+      "size_bytes": 772,
+      "sha256": "be4ece04726cf5409f8938c0c91f666e8f2149c7442f53856f21bde55023050b"
+    },
+    {
+      "path": "INICIAR_WINDOWS.bat",
+      "size_bytes": 305,
+      "sha256": "d2c145bdb14005a368358cb967720288d1ce1744dee174223e6864e35f541fa4"
+    },
+    {
+      "path": "INSTALAR_WINDOWS.bat",
+      "size_bytes": 666,
+      "sha256": "b6864163bc7d4036765c0b067c9d5639b73a8eca9de6a625a449d255622a65f0"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4588,
+      "sha256": "04a3abcbf73dc92baca94c1f39ad5b2f62f75a2ffc0d2c7501f52b802764f51d"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "size_bytes": 1636,
+      "sha256": "ce20a8624c5ce616c089ec9efa85f026449bb62a1f551015a4a840405d9761df"
+    },
+    {
+      "path": "docs/INSTALACAO_WINDOWS.md",
+      "size_bytes": 3226,
+      "sha256": "4831ed5005423d2c094948e5b05b62a7e0b2faac1e49c6e3897831553a0e6054"
+    },
+    {
+      "path": "example/CURADORIA_R57.zip",
+      "size_bytes": 49808874,
+      "sha256": "69769168cf1468fb2de0525fe8186c6d1037dfb27fb2066f9186904e18e910b1"
+    },
+    {
+      "path": "launch_gui.py",
+      "size_bytes": 333,
+      "sha256": "2910868a71848dd0f4a4fe614bb281dce5107f9f6b3e9b22ec1d24a3bafda2f9"
+    },
+    {
+      "path": "ldporto_studio/__init__.py",
+      "size_bytes": 94,
+      "sha256": "f10c2acc277d25dcda8e7cb9b5cab56e0dc2af8924d70c47e13c0c27dfd7b2a7"
+    },
+    {
+      "path": "ldporto_studio/__main__.py",
+      "size_bytes": 4557,
+      "sha256": "eb3aa47d12f9c5f9316151687ac620a82c83f947cc168465cffabfb02fec36ff"
+    },
+    {
+      "path": "ldporto_studio/core.py",
+      "size_bytes": 22946,
+      "sha256": "f6be587d7608ff3c686d4e35bedc342100531596dbaaf9ac65551ba968d747e9"
+    },
+    {
+      "path": "ldporto_studio/gui.py",
+      "size_bytes": 23244,
+      "sha256": "cfbdfc38f7bf927428857726336e2b2acc3a0f549604be620eb226619e38c1c7"
+    },
+    {
+      "path": "ldporto_studio/rendering.py",
+      "size_bytes": 14628,
+      "sha256": "0099ec99b9d2220b18b7b3ce16284344bc7813841125890ef1ac2c58eae7dd13"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 17,
+      "sha256": "a6aa4945334d7e5c05151676e8dfca726780a9e4d154310a34df06f4137f1c92"
+    },
+    {
+      "path": "tests/test_studio.py",
+      "size_bytes": 10112,
+      "sha256": "83732eee7814d3b06ee852c0e90e0f8abd3b7ff56eaccad728bee134418edebb"
+    }
+  ]
+}
