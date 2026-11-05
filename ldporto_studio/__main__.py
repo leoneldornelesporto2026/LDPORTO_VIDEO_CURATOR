@@ -40,6 +40,9 @@ def main(argv=None):
     a=sub.add_parser('covers-premium',help='Gerar capas com card viral a partir do MP4')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--kind',choices=('all','reels','stories'),default='all')
+    a=sub.add_parser('catalog',help='Listar shows e curadorias realmente presentes em input/ e output/')
+    a.add_argument('--input',type=Path)
+    a.add_argument('--projects',type=Path)
     a=sub.add_parser('smart-preset',help='Aplicar novo enquadramento de revisão, sem mexer no ZIP')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--kind',choices=('reels','stories'),default='reels')
@@ -49,6 +52,11 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='catalog':
+        from .catalog import discover_catalog
+        rows=discover_catalog(args.input,args.projects)
+        print(json.dumps({'items':rows,'count':len(rows)},ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='adopt-project':
         destination=import_existing_project(args.source,args.destination_root)

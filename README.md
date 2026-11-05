@@ -115,3 +115,20 @@ O estado permanece `CURATOR_IMPORT_PENDING`, até existir um adaptador de conver
 validado separadamente. Não clicar `CARREGAR CURADORIA ZIP` com o ZIP do Analyzer.
 A segunda curadoria com ChatGPT produzirá depois um plano editorial executável,
 sem presumir aprovação ou publicar automaticamente.
+
+## Biblioteca de shows — entrada automática Analyzer → Curator
+
+Ao abrir, o Studio **não importa automaticamente o Charlie Brown Jr.**: oferece o seletor **VÍDEOS JÁ PROCESSADOS**, alimentado pelas pastas `input/` e `output/projects/`. O botão **ATUALIZAR INPUT** atualiza a lista sem reiniciar o Windows; **ABRIR / SELECIONAR CORTES** abre o show escolhido e revela os Reels e Stories existentes na tabela. Projetos antigos continuam acessíveis sem reimportar ou rebaixar MP4.
+
+- `output/projects/<projeto>/` → **PROJETO EM ANDAMENTO**: abre a curadoria atual preservando downloads, edições, câmera, capas e prévias.
+- `input/curadorias/<show>/<run_id>/*.zip` ou outro ZIP R57 reconhecido em `input/` → **CURADORIA PRONTA PARA IMPORTAR**: valida integralmente no momento da importação e cria/reabre projeto em `output/projects/`.
+- `input/analyzer/<video_id>/<run_id>/*.zip` → **ANALYZER R6 — AGUARDANDO SEGUNDA CURADORIA**: mostra título real, candidatos e run ID, mas **não** interpreta esse pacote como o formato editorial R57. É necessário produzir uma segunda curadoria compatível.
+- Arquivos MP4 sem evidências de análise não aparecem como programas processados. Um novo show, como CPM 22 ao vivo, aparecerá **somente após existir um pacote válido ou projeto real**, não há bandas inventadas no catálogo.
+
+Os dados de entrada ficam locais, em `input/`, agora no `.gitignore`. Todos os vídeos, renders, capas, planos de câmera e edições permanecem em `output/`, igualmente ignorado. O scanner lê apenas metadados JSON limitados dos ZIPs; não extrai nem executa arquivos recebidos. A importação R57 executa a validação SHA256 integral já existente. Os módulos `smart_camera.py`, `visual_style.py` e `rendering.py` continuam sendo o único motor dos modos `preserve`, `center_crop`, `solo_fit` e `smart_zoom`.
+
+Consultar catálogo sem abrir GUI:
+
+```powershell
+python -m ldporto_studio catalog
+```

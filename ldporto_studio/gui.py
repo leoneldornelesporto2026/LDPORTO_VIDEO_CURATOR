@@ -15,6 +15,7 @@ from .core import Project
 from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,generate_premium_covers,binaries
 from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
 from .workspace import project_output_root, import_existing_project
+from .catalog import discover_catalog, catalog_label, input_root
 
 
 def open_file(path):
@@ -43,10 +44,13 @@ class CuratorApp(tk.Tk):
         self.preview_photo=None
         self.selected=None
         self.review_after_download=False
+        self.catalog_entries=[]
+        self.catalog_by_label={}
         self._build()
         self.after(90,self._poll)
-        if self.example and self.example.is_file():
-            self.after(250,self.load_example)
+        # The user chooses a show; never automatically overwrite the active
+        # selection by silently opening the bundled Charlie Brown Jr. example.
+        self.after(350,self.scan_catalog)
 
     def _build(self):
         style=ttk.Style(self)
@@ -64,7 +68,24 @@ class CuratorApp(tk.Tk):
         top=ttk.Frame(container)
         top.pack(fill='x')
         ttk.Label(top,text='L.D.PORTO  /  VIDEO CURATOR STUDIO',font=('Segoe UI',20,'bold'),foreground='#f7d454').pack(side='left')
-        ttk.Label(top,text='R57 • 12 REELS + 60 STORIES • REVISÃO SEGURA',foreground='#a9b6ca').pack(side='right')
+        ttk.Label(top,text='BIBLIOTECA DE SHOWS • CORTES REVISÁVEIS',foreground='#a9b6ca').pack(side='right')
+
+        library=ttk.LabelFrame(container,text='VÍDEOS JÁ PROCESSADOS — input/ + output/projects/')
+        library.pack(fill='x',pady=(10,1))
+        library_row=ttk.Frame(library)
+        library_row.pack(fill='x',padx=8,pady=(5,3))
+        self.catalog_selection=tk.StringVar(value='')
+        self.catalog_dropdown=ttk.Combobox(library_row,textvariable=self.catalog_selection,
+                                           state='readonly',width=84)
+        self.catalog_dropdown.pack(side='left',fill='x',expand=True,padx=(0,8))
+        self.catalog_dropdown.bind('<<ComboboxSelected>>',self.on_catalog_selected)
+        ttk.Button(library_row,text='ATUALIZAR INPUT',command=self.scan_catalog).pack(side='left',padx=(0,6))
+        ttk.Button(library_row,text='ABRIR / SELECIONAR CORTES',
+                   command=self.open_catalog_selection).pack(side='left')
+        self.catalog_description=tk.StringVar(
+            value='Procurando shows analisados em input/ e projetos com cortes em output/projects/...')
+        ttk.Label(library,textvariable=self.catalog_description,foreground='#fbd68d',
+                  wraplength=1220).pack(anchor='w',padx=9,pady=(2,6))
         toolbar=ttk.Frame(container)
         toolbar.pack(fill='x',pady=(12,10))
         for label,fn in [
@@ -170,15 +191,15 @@ class CuratorApp(tk.Tk):
                          ('Finais aprovados',self.batch_final),
                          ('Gerar capa do MP4',self.make_cover)]:
             ttk.Button(tools,text=label,command=fn).pack(side='left',padx=(0,4))
-        ttk.Button(right,text='APLICAR SMART ZOOM AOS 12 REELS',command=self.apply_smart_preset).pack(fill='x',pady=(6,2))
-        ttk.Button(right,text='GERAR 72 CAPAS PREMIUM DO MP4',command=self.batch_premium_covers).pack(fill='x',pady=2)
+        ttk.Button(right,text='APLICAR SMART ZOOM AOS REELS',command=self.apply_smart_preset).pack(fill='x',pady=(6,2))
+        ttk.Button(right,text='GERAR CAPAS PREMIUM DO SHOW',command=self.batch_premium_covers).pack(fill='x',pady=2)
         ttk.Button(right,text='CANCELAR PROCESSAMENTO ATUAL',command=self.cancel_active).pack(anchor='w',pady=(4,0))
         ttk.Label(container,text='EXECUÇÃO • original preservado • revisão humana antes dos finais • sem publicação automática',
                   foreground='#94a8bd').pack(anchor='w',pady=(10,4))
         self.progress=ttk.Progressbar(container,mode='determinate',maximum=100);self.progress.pack(fill='x')
         self.log=tk.Text(container,height=5,bg='#090d13',fg='#cee3f4',insertbackground='white',font=('Consolas',9),wrap='word')
         self.log.pack(fill='x',pady=(5,0))
-        self.log_message('Programa independente. O conteúdo R57 é uma proposta editorial, não vídeos aprovados.')
+        self.log_message('Biblioteca de shows disponível. Selecione um projeto ou pacote processado; nada é aprovado automaticamente.')
 
     def log_message(self,message):
         self.log.insert('end',message+'\n');self.log.see('end')
@@ -210,6 +231,26 @@ class CuratorApp(tk.Tk):
                     if payload is not None:self.progress['value']=int(payload*100)
                 elif action=='youtube_url':
                     self.youtube_url.set(payload)
+                elif action=='catalog_entries':
+                    previous=self.catalog_by_label.get(self.catalog_selection.get())
+                    previous_id=previous['id'] if previous else None
+                    self.catalog_entries=payload
+                    labels=[]
+                    by_label={}
+                    for entry in payload:
+                        base=catalog_label(entry)
+                        label=base
+                        if label in by_label:
+                            label=base+' | ID '+entry['id'][:7]
+                        labels.append(label)
+                        by_label[label]=entry
+                    self.catalog_by_label=by_label
+                    self.catalog_dropdown['values']=labels
+                    chosen=next((label for label,entry in by_label.items()
+                                 if entry['id']==previous_id),None)
+                    self.catalog_selection.set(chosen or (labels[0] if labels else ''))
+                    self.on_catalog_selected()
+                    self.log_message(f'Biblioteca atualizada: {len(payload)} item(ns) real(is) encontrados.')
                 elif action=='open_project':
                     self.project=Project(payload)
                     self.youtube_url.set(self.project.state.get('youtube_url') or suggested_youtube_url(self.project.package))
@@ -258,6 +299,59 @@ class CuratorApp(tk.Tk):
         except queue.Empty: pass
         self.after(120,self._poll)
 
+    def scan_catalog(self):
+        if self.busy:
+            self.after(650,self.scan_catalog)
+            return
+        def run():
+            entries=discover_catalog()
+            self.q.put(('catalog_entries',entries))
+            return f'{len(entries)} itens encontrados em input/ e output/projects/'
+        self._task('Verificando pastas input/ e output/projects/ (somente leitura)...',run)
+
+    def on_catalog_selected(self,event=None):
+        entry=self.catalog_by_label.get(self.catalog_selection.get())
+        if entry is None:
+            self.catalog_description.set(
+                'Nenhum pacote analisado encontrado. Copie o ZIP do Analyzer para input/analyzer/<video_id>/<run_id>/ '
+                'ou selecione EXEMPLO R57. Vídeos sem análise não aparecem como curadorias.')
+            return
+        detail=(f'{entry["status"]}  |  {entry["reels"]} Reels / {entry["stories"]} Stories'
+                if entry['kind'] in ('project','curator_zip')
+                else f'{entry["status"]}  |  {entry["candidates"]} candidatos para segunda curadoria')
+        if entry['kind'] in ('invalid_zip','invalid_project'):
+            detail=entry['status']+' — não processar até corrigir a origem'
+        self.catalog_description.set(detail+'  |  '+entry['path'])
+
+    def open_catalog_selection(self):
+        if self.busy:return
+        entry=self.catalog_by_label.get(self.catalog_selection.get())
+        if entry is None:
+            return messagebox.showwarning('Nenhum vídeo processado',
+                'Coloque um ZIP validado do Analyzer em input/ ou use EXEMPLO R57.')
+        kind=entry['kind']
+        path=Path(entry['path'])
+        if kind=='project':
+            self._task('Abrindo show e seus Reels/Stories já processados...',
+                       lambda: self.q.put(('open_project',path)) or 'Projeto selecionado')
+        elif kind=='curator_zip':
+            self._load_archive(path)
+        elif kind=='analyzer_zip':
+            if messagebox.askyesno('Pacote Analyzer recebido — segunda curadoria pendente',
+                    f'Show: {entry["title"]}\n'
+                    f'Candidatos identificados: {entry["candidates"]}\n'
+                    f'Run ID: {entry["run_id"]}\n\n'
+                    'Este ZIP é o pacote de evidências R6 do Analyzer. O Curator Studio '
+                    'NÃO pode usá-lo diretamente como plano editorial R57.\n\n'
+                    'Faça a segunda curadoria, gere o pacote editorial compatível '
+                    'e coloque-o em input/. Nenhum corte será aprovado automaticamente.\n\n'
+                    'Abrir a pasta que contém o ZIP para facilitar a transferência?'):
+                open_file(path.parent)
+            self.log_message('Aguardando segunda curadoria (R6 não é pacote de render): '+str(path))
+        else:
+            messagebox.showerror('Pacote não importável',
+                                 entry['status']+'\n\nArquivo: '+str(path))
+
     def _project_location(self,archive):
         from .core import sha256_file
         digest=sha256_file(archive)
@@ -274,7 +368,7 @@ class CuratorApp(tk.Tk):
 
     def import_zip(self):
         if self.busy:return
-        path=filedialog.askopenfilename(title='Escolha curadoria R57',filetypes=[('Curadoria ZIP','*.zip')])
+        path=filedialog.askopenfilename(title='Escolha ZIP editorial compatível (R57)',filetypes=[('Curadoria ZIP','*.zip')])
         if path:self._load_archive(path)
 
     def load_example(self):
@@ -536,7 +630,7 @@ class CuratorApp(tk.Tk):
     def apply_smart_preset(self):
         if self.busy or not self.project:return
         if not messagebox.askyesno('Aplicar enquadramento automático',
-             'Alterar os 12 Reels para smart_zoom? O detector inspeciona quadros reais; '
+             'Alterar os Reels deste show para smart_zoom? O detector inspeciona quadros reais; '
              'se não identificar um corpo inteiro sozinho com confiança, preserva o 16:9. '
              'Aprovações/prévias anteriores ficam desatualizadas para esses Reels. '
              'Stories não serão alterados. Continuar?'):
@@ -552,7 +646,7 @@ class CuratorApp(tk.Tk):
         if self.busy or not self.project:return
         if not messagebox.askyesno('Gerar capas premium',
              'Extrair quadros do MP4 associado e gerar capas brancas/amarelas '
-             'para os 12 Reels + 60 Stories? Os PNGs ficam SOMENTE em output/, '
+             'para os cortes existentes deste projeto? Os PNGs ficam SOMENTE em output/, '
              'sem substituir as capas R57. Pode demorar. Continuar?'):
             return
         def work():

@@ -61,3 +61,11 @@ Use o seletor **Enquadramento**: `preserve`, `center_crop`, `solo_fit` ou `smart
 O botão **APLICAR SMART ZOOM AOS 12 REELS** altera somente configurações locais de edição (não o ZIP), podendo invalidar prévias e aprovações anteriores. **GERAR 72 CAPAS PREMIUM DO MP4** usa quadros da mídia associada e escreve em `output/projects/<id>/exports/covers_premium`, ignorado pelo Git. As capas originais R57 são preservadas.
 
 Reinstale dependências com `python -m pip install -r .\requirements.txt` na mesma `.venv` que executa o programa. Testes: `python -m unittest discover -s tests -v`. A compatibilidade com os momentos reais do show e a validade das legendas ainda exigem inspeção no Windows.
+
+## Selecionar shows processados em input/
+
+A GUI agora abre um seletor de shows detectados. Coloque os ZIPs do Analyzer em `input/analyzer/<video_id>/<run_id>/` e, quando a segunda curadoria estiver pronta, coloque o ZIP R57 compatível em qualquer subpasta de `input/`. A pasta é criada automaticamente e ignorada pelo Git. Clique **ATUALIZAR INPUT**, selecione o pacote/show e depois **ABRIR / SELECIONAR CORTES**.
+
+Quando a escolha for um projeto de `output/projects/`, o Studio abre os Reels/Stories já processados, mantendo todos os MP4s e aprovações de revisão anteriores. Quando for um ZIP do Analyzer R6, ele identifica o show e seus candidatos, mas não renderiza: depende da segunda curadoria compatível. Nenhum nome de banda é adicionado manualmente à lista.
+
+O catálogo somente examina metadados limitados em ZIPs e não os extrai. Execute `python -m ldporto_studio catalog` para diagnóstico. Não mova/deleta os projetos existentes ao organizar a biblioteca; `input/` e `output/` não são versionados.
