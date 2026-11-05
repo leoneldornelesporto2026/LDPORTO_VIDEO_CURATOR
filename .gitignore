@@ -9,3 +9,7 @@ build/
 media_downloads/
 downloads/
 .cache/
+
+# TODOS os projetos e artefatos locais do Video Curator Studio
+/output/
+/output*/

@@ -14,6 +14,7 @@ from tkinter import ttk, filedialog, messagebox
 from .core import Project
 from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,binaries
 from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
+from .workspace import project_output_root, import_existing_project
 
 
 def open_file(path):
@@ -35,7 +36,7 @@ class CuratorApp(tk.Tk):
         self.configure(bg='#14171d')
         self.project=None
         self.example=Path(example).resolve() if example else None
-        self.default_workspace=Path.home()/'Videos'/'LDPORTO_CURATOR_STUDIO_PROJECTS'
+        self.default_workspace=project_output_root()
         self.q=queue.Queue()
         self.busy=False
         self.cancel=threading.Event()
@@ -68,7 +69,8 @@ class CuratorApp(tk.Tk):
         for label,fn in [
           ('CARREGAR CURADORIA ZIP',self.import_zip),('ABRIR PROJETO',self.open_project),
           ('EXEMPLO R57',self.load_example),('VINCULAR MP4 ORIGINAL',self.select_media),
-          ('EXPORTAR CAPAS + PLANOS',self.export_assets)]:
+          ('EXPORTAR CAPAS + PLANOS',self.export_assets),
+          ('IMPORTAR PROJETO ANTIGO',self.import_old_project)]:
             ttk.Button(toolbar,text=label,command=fn).pack(side='left',padx=(0,7))
         download_row=ttk.Frame(container)
         download_row.pack(fill='x',pady=(0,9))
@@ -205,6 +207,11 @@ class CuratorApp(tk.Tk):
                     if payload is not None:self.progress['value']=int(payload*100)
                 elif action=='youtube_url':
                     self.youtube_url.set(payload)
+                elif action=='open_project':
+                    self.project=Project(payload)
+                    self.youtube_url.set(self.project.state.get('youtube_url') or suggested_youtube_url(self.project.package))
+                    self.refresh_table()
+                    self.log_message('Projeto adotado na pasta output: '+str(payload))
                 elif action=='log':
                     self.log_message(payload)
                 elif action=='download_report':
@@ -249,6 +256,23 @@ class CuratorApp(tk.Tk):
         if self.busy:return
         if self.example and self.example.is_file():self._load_archive(self.example)
         else: messagebox.showinfo('Exemplo não encontrado','Coloque CURADORIA_R57.zip na pasta example ou importe um ZIP na interface.')
+
+    def import_old_project(self):
+        if self.busy:return
+        folder=filedialog.askdirectory(
+            title='Selecione o projeto antigo (pasta que contém project.json)',
+            initialdir=str(Path.home()/'Videos'))
+        if not folder:return
+        if not messagebox.askyesno('Copiar projeto para output',
+             'O projeto antigo será COPIADO para output/projects dentro deste código. '
+             'Downloads, MP4s, capas e aprovações serão preservados. '
+             'Nada será removido da pasta original. Continuar?'):
+            return
+        def run():
+            target=import_existing_project(folder,self.default_workspace)
+            self.q.put(('open_project',target))
+            return 'Migração por cópia concluída: '+str(target)
+        self._task('Copiando projeto para output (sem apagar a origem)...',run)
 
     def open_project(self):
         if self.busy:return

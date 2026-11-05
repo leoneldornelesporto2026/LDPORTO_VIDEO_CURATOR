@@ -5,6 +5,7 @@ import json
 import sys
 from pathlib import Path
 from .core import Project
+from .workspace import import_existing_project,project_output_root
 
 
 def main(argv=None):
@@ -30,6 +31,9 @@ def main(argv=None):
     a=sub.add_parser('review-download',help='Vincular cópia baixada apenas para prévias revisáveis')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--confirm-preview-review',action='store_true')
+    a=sub.add_parser('adopt-project',help='Copiar projeto antigo para output/projects sem apagar origem')
+    a.add_argument('--source',required=True,type=Path)
+    a.add_argument('--destination-root',type=Path,default=None)
     a=sub.add_parser('download',help='Baixar URL autorizada do YouTube e validar SHA256 do original')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--url',required=True,help='URL HTTPS de um único vídeo do YouTube')
@@ -37,6 +41,11 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='adopt-project':
+        destination=import_existing_project(args.source,args.destination_root)
+        print(json.dumps({'status':'COPIED_TO_PROJECT_OUTPUT','project':str(destination),
+                          'source_preserved':str(args.source)},ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='import':
         project=Project.create(args.zip,args.workdir)

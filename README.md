@@ -6,7 +6,7 @@
 
 1. Instale **Python 3.11+** (com Tkinter) e **FFmpeg + FFprobe** no PATH do Windows.
 2. Execute `INSTALAR_WINDOWS.bat` (instala Pillow e yt-dlp).
-3. Execute `INICIAR_WINDOWS.bat`.
+3. Execute `INICIAR_WINDOWS.bat`. A instalação e a GUI usam o mesmo Python do ambiente virtual ativado ou da `.venv` local; no PowerShell use `\.\INSTALAR_WINDOWS.bat` e `\.\INICIAR_WINDOWS.bat`.
 4. O exemplo `example/CURADORIA_R57.zip` será carregado e verificado. Se preferir, use **CARREGAR CURADORIA ZIP**.
 5. **BAIXAR VÍDEO DO YOUTUBE**: cole a URL HTTPS do vídeo e clique para baixar via yt-dlp; o exemplo R57 já preenche a URL do show. Você também pode usar **VINCULAR MP4 ORIGINAL** para um arquivo local. Baixe somente conteúdo que você tem direito de utilizar.
 6. **SE O SHA256 DIVERGIR:** o download fica em `downloads/attempts/`. Clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**: com o mesmo ID, áudio/vídeo, duração compatível (±3 s) e confirmação explícita, permite prévias com o hash real da cópia baixada. **Isso não prova que o áudio e os timestamps coincidam.** Confira cada prévia; se o trecho estiver deslocado, refaça a análise para o MP4 baixado. O pacote R57 e o SHA original permanecem intactos.
@@ -64,3 +64,15 @@ Teste com `py -3 -m unittest discover -s tests -v`.
 ### Revisar ou substituir legendas
 
 A opção **VER SRT PARA REVISÃO** abre o rascunho de texto. Corrija e sincronize a legenda no editor da sua preferência, exporte em `.ass` UTF-8, e use **IMPORTAR ASS CORRIGIDA**. A nova legenda fica versionada fora do ZIP original e desativa a aprovação anterior; após conferir o áudio, marque **Conferi transcrição e áudio** e **Incluir karaokê ASS**, salve e gere nova prévia.
+
+## Saídas locais: tudo dentro do projeto original
+
+O código fica somente na pasta `LDPORTO_VIDEO_CURATOR`. A interface salva novos projetos em **`output/projects/<projeto>/`**; downloads do YouTube, previews, MP4s finais, capas exportadas, relatórios, revisões e históricos ficam dentro dessa árvore. A pasta `output/` está no `.gitignore`: o GitHub não recebe mídia nem renders.
+
+Projetos antigos de `C:\Users\leone\Videos\LDPORTO_CURATOR_STUDIO_PROJECTS` **não são movidos automaticamente**. Para preservar o Reel já gerado, clique **IMPORTAR PROJETO ANTIGO** e escolha a pasta com `project.json`. O Curator copia para `output/projects`, reconcilia os caminhos internos de downloads e mantém a pasta original como backup. Também é possível:
+
+```powershell
+python -m ldporto_studio adopt-project --source "C:\Users\leone\Videos\LDPORTO_CURATOR_STUDIO_PROJECTS\CURADORIA_R57_69769168cf"
+```
+
+Depois, basta abrir o exemplo R57: a GUI encontrará o projeto existente em `output/projects/`. Caso já exista um projeto com esse nome, a cópia é recusada, **sem sobrescrever**. Confira o espaço livre antes de importar arquivos de vídeo grandes.
