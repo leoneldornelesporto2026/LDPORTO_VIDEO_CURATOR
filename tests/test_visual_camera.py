@@ -10,7 +10,7 @@ from unittest.mock import patch
 from PIL import Image
 
 from ldporto_studio.smart_camera import BodyObservation, decide_framing, crop_x_expression
-from ldporto_studio.visual_style import editorial_card, premium_cover
+from ldporto_studio.visual_style import editorial_card, premium_cover, footer_for_project
 from ldporto_studio.core import Project
 from ldporto_studio.rendering import generate_premium_covers, render_item
 from test_studio import make_fixture
@@ -26,6 +26,14 @@ class VisualStyleTests(unittest.TestCase):
         self.assertGreater(center[0],230)
         self.assertGreater(center[1],230)
         self.assertGreater(center[2],220)
+
+    def test_future_show_does_not_inherit_cbjr_branding(self):
+        from types import SimpleNamespace
+        project=SimpleNamespace(package=SimpleNamespace(
+            source_sha='b'*64,plan={'source_artist':'CPM 22','genre':'Rock nacional'}))
+        self.assertEqual(footer_for_project(project,'reels'),'ROCK NACIONAL · CPM 22')
+        unknown=SimpleNamespace(package=SimpleNamespace(source_sha='c'*64,plan={}))
+        self.assertNotIn('CBJR',footer_for_project(unknown,'stories'))
 
     def test_premium_cover_keeps_horizontal_reference(self):
         sample=Image.new('RGB',(640,360),(30,80,90))

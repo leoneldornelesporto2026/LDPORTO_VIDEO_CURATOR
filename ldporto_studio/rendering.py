@@ -85,10 +85,10 @@ def _lines(draw,text,font,max_width,max_lines=3):
     return rows
 
 
-def title_overlay(out:Path,title:str,width:int,height:int,kind:str):
-    """Use the approved L.D.PORTO white/yellow live card."""
+def title_overlay(out:Path,title:str,width:int,height:int,kind:str,footer=None):
+    """Use the approved white/yellow live card, tailored to the selected show."""
     from .visual_style import save_title_overlay
-    return save_title_overlay(out,title,width,height,kind)
+    return save_title_overlay(out,title,width,height,kind,footer=footer)
 
 
 def create_cover_from_frame(project,cid,destination:Path):
@@ -111,8 +111,10 @@ def create_cover_from_frame(project,cid,destination:Path):
           capture_output=True,text=True,timeout=180)
         if result.returncode or not tmp.is_file():
             raise RuntimeError('Não foi possível extrair quadro do vídeo: '+result.stderr[-600:])
+        from .visual_style import footer_for_project
         with Image.open(tmp) as raw:
-            cover=premium_cover(raw,s['title'],c.kind)
+            cover=premium_cover(raw,s['title'],c.kind,
+                                footer=footer_for_project(project,c.kind))
         cover.save(destination,'PNG')
         return destination
     finally:
@@ -223,7 +225,9 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     cmd=[ffmpeg,'-hide_banner','-nostdin','-loglevel','error','-ss',f'{start:.3f}',
          '-i',str(source)]
     if use_title:
-        title_overlay(root/'TITLE_OVERLAY.png',s['title'],width,height,clip.kind)
+        from .visual_style import footer_for_project
+        title_overlay(root/'TITLE_OVERLAY.png',s['title'],width,height,clip.kind,
+                      footer=footer_for_project(project,clip.kind))
         cmd+=['-loop','1','-framerate','30','-i',str(root/'TITLE_OVERLAY.png')]
     if s['subtitles']:
         (root/'captions.ass').write_bytes(project.caption_payload(cid))

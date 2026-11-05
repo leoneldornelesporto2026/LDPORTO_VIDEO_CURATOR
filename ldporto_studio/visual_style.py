@@ -42,7 +42,22 @@ def _wrap(draw, text: str, font, available: int, limit: int = 3):
     return lines
 
 
-def editorial_card(title: str, width: int, height: int, *, footer: str = 'ROCK NACIONAL · CBJR'):
+def footer_for_project(project, kind: str) -> str:
+    """Only use a real artist name; never stamp 'CBJR' on a different show."""
+    known_cbjr='f8b424b9fc26c79141fb2288fee3354d5f02c1c773523f87f95b1191252283ea'
+    if project.package.source_sha == known_cbjr:
+        return 'ROCK NACIONAL · CBJR' if kind=='reels' else 'SHOW AO VIVO · CBJR'
+    plan=project.package.plan
+    artist=plan.get('source_artist') or plan.get('artist') or plan.get('band')
+    if isinstance(artist,str) and artist.strip():
+        artist=' '.join(artist.upper().split())[:28]
+        genre=plan.get('genre')
+        category='ROCK NACIONAL' if isinstance(genre,str) and 'ROCK' in genre.upper() else 'SHOW AO VIVO'
+        return f'{category} · {artist}'
+    return 'SHOW AO VIVO · L.D.PORTO'
+
+
+def editorial_card(title: str, width: int, height: int, *, footer: str = 'SHOW AO VIVO · L.D.PORTO'):
     """Return transparent RGBA overlay containing the requested viral title card."""
     from PIL import Image, ImageDraw
     image=Image.new('RGBA',(width,height),(0,0,0,0))
@@ -90,16 +105,17 @@ def editorial_card(title: str, width: int, height: int, *, footer: str = 'ROCK N
     return image
 
 
-def save_title_overlay(path: Path, title: str, width: int, height: int, kind: str):
-    footer = 'ROCK NACIONAL · CBJR' if kind=='reels' else 'SHOW AO VIVO · CBJR'
-    overlay=editorial_card(title,width,height,footer=footer)
+def save_title_overlay(path: Path, title: str, width: int, height: int, kind: str,
+                       *, footer: str | None=None):
+    overlay=editorial_card(title,width,height,
+                           footer=footer or 'SHOW AO VIVO · L.D.PORTO')
     path=Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
     overlay.save(path)
     return path
 
 
-def premium_cover(frame, title: str, kind: str):
+def premium_cover(frame, title: str, kind: str, *, footer: str | None=None):
     """Preserve complete horizontal shot over a softly blurred vertical canvas."""
     from PIL import Image, ImageOps, ImageFilter
     src=frame.convert('RGB')
@@ -109,6 +125,6 @@ def premium_cover(frame, title: str, kind: str):
     zone_y=round(h*.58)
     bg.paste(full,((w-full.width)//2,zone_y-full.height//2))
     bg=bg.convert('RGBA')
-    footer = 'ROCK NACIONAL · CBJR' if kind=='reels' else 'SHOW AO VIVO · CBJR'
-    bg.alpha_composite(editorial_card(title,w,h,footer=footer))
+    bg.alpha_composite(editorial_card(title,w,h,
+                       footer=footer or 'SHOW AO VIVO · L.D.PORTO'))
     return bg.convert('RGB')
