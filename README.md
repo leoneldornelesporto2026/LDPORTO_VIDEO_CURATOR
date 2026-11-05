@@ -98,3 +98,20 @@ python -m ldporto_studio covers-premium --workdir ".\output\projects\CURADORIA_R
 ```
 
 O ZIP R57 original, os vídeos anteriores e os projetos locais são preservados. Não há aprovação editorial ou publicação automática.
+
+## Inbox do Analyzer — evidências para segunda curadoria
+
+O Analyzer poderá entregar o ZIP nativo em `input/analyzer/<video_id>/<run_id>/`.
+O diretório `input/` é ignorado pelo Git e não altera os projetos ou renders existentes.
+Esse ZIP **não é** o formato editorial R57 importável pela interface atual.
+Para inspecionar integridade e recibo, sem importar, executar:
+
+```powershell
+python -m ldporto_studio.analyzer_inbox --path ".\input\analyzer\<video_id>\<run_id>"
+```
+
+O resultado `VALID` atesta somente a integridade da cópia e das referências examinadas.
+O estado permanece `CURATOR_IMPORT_PENDING`, até existir um adaptador de conversão
+validado separadamente. Não clicar `CARREGAR CURADORIA ZIP` com o ZIP do Analyzer.
+A segunda curadoria com ChatGPT produzirá depois um plano editorial executável,
+sem presumir aprovação ou publicar automaticamente.

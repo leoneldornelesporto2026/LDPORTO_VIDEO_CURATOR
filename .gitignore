@@ -13,3 +13,6 @@ downloads/
 # TODOS os projetos e artefatos locais do Video Curator Studio
 /output/
 /output*/
+
+# Pacotes recebidos do Analyzer: dados e ZIPs locais; nunca versionar
+/input/
