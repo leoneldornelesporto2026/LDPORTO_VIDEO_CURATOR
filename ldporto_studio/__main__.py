@@ -27,6 +27,9 @@ def main(argv=None):
             a.add_argument('--watched',action='store_true')
             a.add_argument('--audio-ok',action='store_true')
             a.add_argument('--camera-ok',action='store_true')
+    a=sub.add_parser('review-download',help='Vincular cópia baixada apenas para prévias revisáveis')
+    a.add_argument('--workdir',required=True,type=Path)
+    a.add_argument('--confirm-preview-review',action='store_true')
     a=sub.add_parser('download',help='Baixar URL autorizada do YouTube e validar SHA256 do original')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--url',required=True,help='URL HTTPS de um único vídeo do YouTube')
@@ -42,6 +45,10 @@ def main(argv=None):
             'stories':len(project.package.items('stories'))},indent=2))
         return 0
     project=Project(args.workdir)
+    if args.cmd=='review-download':
+        print(json.dumps(project.review_download_for_previews(
+            confirm_timeline=args.confirm_preview_review),ensure_ascii=False,indent=2))
+        return 0
     if args.cmd=='download':
         from .youtube_download import download_from_youtube
         record=download_from_youtube(project,args.url,

@@ -161,7 +161,8 @@ def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> d
             'linked': matched,
             'message': ('MP4 original verificado e vinculado ao projeto.' if matched else
                         'Arquivo baixado, mas a origem NÃO corresponde exatamente ao SHA256 da análise. '
-                        'O render permanece bloqueado. Obtenha a mesma fonte do Analyzer ou refaça a análise.'),
+                        'O render permanece bloqueado até revisão explícita. ' 
+                        'Use a opção de prévias se a duração for compatível, ou refaça a análise.'),
         }
         atomic_write(attempt / 'download_report.json', record)
         project.state.setdefault('download_history', []).append(record)

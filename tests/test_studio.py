@@ -42,7 +42,7 @@ def make_fixture(folder:Path):
         clips.append({'id':cid,'source_start':a,'source_end':b,'duration_seconds':round(b-a,3),
                       'title':'Teste de cinema do video', 'thumbnail':thumb,'caption_ass':sub,'caption_srt':srt})
     def js(name,value):assets[name]=json.dumps(value,ensure_ascii=False).encode('utf-8')
-    js('EXECUTION_PLAN.json',{'source_sha256':sha,'source_duration_seconds':4.,
+    js('EXECUTION_PLAN.json',{'source_sha256':sha,'source_video_id':'aUgESZsOGmY','source_duration_seconds':4.,
                               'reels':clips[:1],'stories':clips[1:]})
     js('REELS_EDIT_PLAN.json',{'source_sha256':sha,'clips':[{'id':'REEL_01'}]})
     js('STORIES_SEQUENCIAIS_REVISAR.json',{'source_sha256':sha})

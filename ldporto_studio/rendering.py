@@ -271,7 +271,11 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
         if source.stat().st_size!=initial_stat.st_size or source.stat().st_mtime_ns!=initial_stat.st_mtime_ns:
             raise RuntimeError('Arquivo de mídia mudou durante o render; saída não publicada')
         os.replace(pending,movie)
-        report={'source_sha256':project.package.source_sha,'package_sha256':project.package.digest,
+        report={'source_sha256':project.package.source_sha,
+                'render_media_sha256':project.active_media_sha(),
+                'media_mode':project.state.get('media_mode','EXACT_ANALYZER_SOURCE'),
+                'time_alignment':'NOT_AUTOMATICALLY_VERIFIED' if project.active_media_sha()!=project.package.source_sha else 'EXACT_SOURCE_BYTES',
+                'package_sha256':project.package.digest,
                 'clip':cid,'preview':preview,'mode':s['layout'],'captions_included':s['subtitles'],
                 'camera_verified_by_human':s['camera_reviewed'],
                 'captions_verified_by_human':s['captions_verified'],

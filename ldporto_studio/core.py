@@ -307,14 +307,81 @@ class Project:
         if abs(info['duration']-self.package.source_duration)>3:
             raise ValueError(f'Duração diverge da análise: {info["duration"]:.3f}s ≠ {self.package.source_duration:.3f}s')
         previous=self.state.get('media_path')
-        if previous and Path(previous).resolve()!=value:
+        if (previous and Path(previous).resolve()!=value) or self.active_media_sha()!=digest:
             for item in self.state['items'].values():
                 item['approval']=None
         st=value.stat()
-        self.state.update(media_path=str(value),media_stat={'size':st.st_size,'mtime_ns':st.st_mtime_ns})
+        self.state.update(media_path=str(value),media_sha256=digest,
+            media_mode='EXACT_ANALYZER_SOURCE',source_association=None,
+            media_stat={'size':st.st_size,'mtime_ns':st.st_mtime_ns})
         self._media_cache=(str(value),st.st_size,st.st_mtime_ns,digest)
         self.save()
         return info
+
+    def active_media_sha(self):
+        """SHA256 of bytes actually rendered, not necessarily Analyzer's input bytes."""
+        return self.state.get('media_sha256') or self.package.source_sha
+
+    def review_download_for_previews(self, *, confirm_timeline=False):
+        """Allow a downloaded recode only for preview review, with distinct provenance.
+
+        An identical YouTube ID and duration DO NOT prove matching edit timestamps.
+        Clips require human audio/context and camera review before rendering finals.
+        """
+        if not confirm_timeline:
+            raise ValueError('Revisão explícita da origem necessária: confira áudio e sincronização nas prévias')
+        record=next((r for r in reversed(self.state.get('download_history',[]))
+            if r.get('status')=='SOURCE_REVIEW_REQUIRED' and r.get('path')),None)
+        if record is None:
+            raise ValueError('Nenhum download divergente registrado neste projeto')
+        path=Path(record['path']).resolve()
+        root=(self.dir/'downloads'/'attempts').resolve()
+        if not path.is_relative_to(root) or not path.is_file() or path.suffix.lower() not in VIDEO_EXT:
+            raise ValueError('Vídeo baixado não está na pasta de tentativas deste projeto')
+        receipt=read_json(path.parent/'download_report.json',{}) or {}
+        if receipt!=record or receipt.get('expected_sha256')!=self.package.source_sha:
+            raise ValueError('Relatório do download ausente, alterado ou de outra análise')
+        from .youtube_download import source_video_id,parse_youtube_url
+        video_id,canonical=parse_youtube_url(record.get('url',''))
+        expected=source_video_id(self.package)
+        if not expected or video_id!=expected or record.get('video_id')!=expected or record.get('url')!=canonical:
+            raise ValueError('ID ou endereço do vídeo não corresponde à curadoria R57')
+        digest=sha256_file(path)
+        if digest!=record.get('sha256') or digest==self.package.source_sha:
+            raise ValueError('SHA256 do download não confere com seu relatório ou já é fonte original')
+        from .rendering import probe_media
+        info=probe_media(path)
+        if not info['has_video'] or not info['has_audio']:
+            raise ValueError('Download sem áudio ou vídeo válido')
+        if not math.isfinite(info['duration']) or abs(info['duration']-self.package.source_duration)>3:
+            raise ValueError(
+                f'Duração incompatível: download {info["duration"]:.3f}s, '
+                f'curadoria {self.package.source_duration:.3f}s. '
+                'Não reutilize timestamps: refaça a análise da mídia baixada.')
+        if any(float(self.settings(c.id)['source_end'])>info['duration']+0.01
+               for c in self.package.items()):
+            raise ValueError('Existe corte além da duração do download; reanálise obrigatória')
+        if (self.active_media_sha()!=digest or self.state.get('media_mode')!='ALTERNATE_REVIEW_SOURCE'):
+            for item in self.state['items'].values():
+                item['approval']=None
+        st=path.stat()
+        association={
+            'status':'HUMAN_ACCEPTED_FOR_PREVIEWS_ONLY','confirmed_at':now(),
+            'analyzer_source_sha256':self.package.source_sha,
+            'actual_media_sha256':digest,'youtube_video_id':video_id,
+            'download_report':str(path.parent/'download_report.json'),
+            'warning':'Same YouTube ID and similar duration DO NOT prove matching timestamps',
+        }
+        self.state.update(media_path=str(path),media_sha256=digest,
+            media_mode='ALTERNATE_REVIEW_SOURCE',source_association=association,
+            media_stat={'size':st.st_size,'mtime_ns':st.st_mtime_ns})
+        self._media_cache=None
+        self.state['history'].append({'at':now(),'event':'ALTERNATE_SOURCE_ENABLED_FOR_PREVIEWS',
+            'media_sha256':digest,'analyzer_sha256':self.package.source_sha})
+        self.save()
+        return {'status':'ALTERNATE_REVIEW_SOURCE','path':str(path),'actual_sha256':digest,
+                'analyzer_sha256':self.package.source_sha,'duration_seconds':info['duration'],
+                'warning':'Confira áudio, contexto e sincronização de CADA prévia antes de aprovar finais.'}
 
     def verified_media(self):
         path=self.state.get('media_path')
@@ -323,11 +390,27 @@ class Project:
         if not p.is_file(): raise FileNotFoundError('Mídia original foi movida: '+path)
         st=p.stat()
         identity=(str(p),st.st_size,st.st_mtime_ns)
-        if self._media_cache and self._media_cache[:3]==identity and self._media_cache[3]==self.package.source_sha:
+        digest=self.active_media_sha()
+        mode=self.state.get('media_mode','EXACT_ANALYZER_SOURCE')
+        if mode=='ALTERNATE_REVIEW_SOURCE':
+            assoc=self.state.get('source_association') or {}
+            report=read_json(p.parent/'download_report.json',{}) or {}
+            if (digest==self.package.source_sha
+                or assoc.get('status')!='HUMAN_ACCEPTED_FOR_PREVIEWS_ONLY'
+                or assoc.get('actual_media_sha256')!=digest
+                or assoc.get('analyzer_source_sha256')!=self.package.source_sha
+                or report.get('sha256')!=digest
+                or report.get('status')!='SOURCE_REVIEW_REQUIRED'
+                or not p.resolve().is_relative_to((self.dir/'downloads'/'attempts').resolve())):
+                raise ValueError('Vínculo de revisão da mídia alternativa inválido')
+        elif mode!='EXACT_ANALYZER_SOURCE' or digest!=self.package.source_sha:
+            raise ValueError('A origem declarada diverge do Analyzer')
+        if (mode=='EXACT_ANALYZER_SOURCE' and self._media_cache
+            and self._media_cache[:3]==identity and self._media_cache[3]==digest):
             return p
-        if sha256_file(p)!=self.package.source_sha:
-            raise ValueError('Mídia original foi alterada: SHA256 inválido')
-        self._media_cache=(*identity,self.package.source_sha)
+        if sha256_file(p)!=digest:
+            raise ValueError('Arquivo de mídia mudou: SHA256 da mídia vinculada diverge')
+        self._media_cache=(*identity,digest)
         return p
 
     def caption_payload(self,cid):
@@ -375,6 +458,8 @@ class Project:
         pixel_settings={k:settings[k] for k in
             ('title','source_start','source_end','layout','center_x','subtitles','title_overlay')}
         return fingerprint({'schema':'studio-v1','clip':cid,'source':self.package.source_sha,
+             'render_media_sha256':self.active_media_sha(),
+             'media_mode':self.state.get('media_mode','EXACT_ANALYZER_SOURCE'),
              'package':self.package.digest,'settings':pixel_settings,'preview':preview,
              'subtitle_sha':subtitle_sha,'code':render_code_signature()})
 
@@ -395,7 +480,7 @@ class Project:
         return bool(approval and preview and settings['audio_reviewed'] and settings['camera_reviewed']
                     and approval.get('preview_sha256')==preview['sha256']
                     and approval.get('binding')==preview['binding']
-                    and approval.get('media_sha256')==self.package.source_sha)
+                    and approval.get('media_sha256')==self.active_media_sha())
 
     def approve(self,cid,*,human_reviewed,verified_audio,verified_camera):
         preview=self.preview_record(cid)
@@ -409,7 +494,9 @@ class Project:
         self.update(cid,audio_reviewed=True,camera_reviewed=True)
         settings=self.settings(cid)
         approval={'at':now(),'preview_sha256':preview['sha256'],'binding':preview['binding'],
-                  'media_sha256':self.package.source_sha,'human_reviewed':True,
+                  'media_sha256':self.active_media_sha(),
+                  'media_mode':self.state.get('media_mode','EXACT_ANALYZER_SOURCE'),
+                  'human_reviewed':True,
                   'audio_reviewed':True,'camera_reviewed':True,
                   'rights_verified':settings['rights_verified']}
         self._item(cid)['approval']=approval
@@ -455,6 +542,8 @@ class Project:
                          'publication_ready':bool(final and self.approval_matches(c.id) and settings['rights_verified'])})
         result={'generated_at':now(),'program':'LDPORTO_CURATOR_STUDIO_1.0',
                 'source_sha256':self.package.source_sha,'package_sha256':self.package.digest,
+                 'render_media_sha256':self.active_media_sha(),
+                 'media_mode':self.state.get('media_mode','EXACT_ANALYZER_SOURCE'),
                 'warning':'Exportação local não implica autorização de publicação',
                 'items':rows}
         atomic_write(self.dir/'EXPORT_MANIFEST.json',result)

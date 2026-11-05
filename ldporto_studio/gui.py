@@ -76,6 +76,12 @@ class CuratorApp(tk.Tk):
         self.youtube_url=tk.StringVar(value='')
         ttk.Entry(download_row,textvariable=self.youtube_url,width=62).pack(side='left',fill='x',expand=True,padx=(0,8))
         ttk.Button(download_row,text='BAIXAR VÍDEO DO YOUTUBE',command=self.download_youtube).pack(side='left')
+        review_row=ttk.Frame(container)
+        review_row.pack(fill='x',pady=(0,8))
+        ttk.Button(review_row,text='USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)',
+                   command=self.review_download).pack(side='left')
+        ttk.Label(review_row,text='Revisão individual do áudio/câmera obrigatória.',
+                  foreground='#fbd68d').pack(side='left',padx=10)
         self.source_status=tk.StringVar(value='Selecione uma curadoria ZIP; o MP4 é verificado pelo SHA256 do Analyzer.')
         ttk.Label(container,textvariable=self.source_status,foreground='#fbd68d',wraplength=1240).pack(fill='x',pady=(0,9))
         split=ttk.PanedWindow(container,orient='horizontal');split.pack(fill='both',expand=True)
@@ -205,7 +211,8 @@ class CuratorApp(tk.Tk):
                     self.log_message(payload['message']+' Arquivo: '+payload['path'])
                     if not payload['linked']:
                         messagebox.showwarning('Download salvo — revisão da fonte necessária',
-                                               payload['message']+'\n\nArquivo: '+payload['path'])
+                            payload['message']+'\n\nArquivo: '+payload['path']+
+                            '\n\nUse USAR DOWNLOAD NAS PRÉVIAS (REVISÃO), se compatível.')
                 elif action=='done':
                     self.busy=False
                     self.progress['value']=100
@@ -267,8 +274,10 @@ class CuratorApp(tk.Tk):
         if selected in self.tree.get_children():self.tree.selection_set(selected)
         elif self.tree.get_children():
             self.tree.selection_set(self.tree.get_children()[0]);self.selected=self.tree.get_children()[0]
+        mode=self.project.state.get('media_mode','')
+        descriptor=' [FONTE ALTERNATIVA: SINCRONIA A REVISAR]' if mode=='ALTERNATE_REVIEW_SOURCE' else ''
         self.source_status.set('Curadoria: '+str(len(self.project.package.clips))+' cortes | MP4: '+
-            (self.project.state['media_path'] or 'AUSENTE — informe original para habilitar o render'))
+            (self.project.state['media_path'] or 'AUSENTE — importe ou revise o download')+descriptor)
         if self.selected:self.show_details(self.selected)
 
     def on_select(self,event=None):
@@ -338,6 +347,34 @@ class CuratorApp(tk.Tk):
             return result['status']+' — '+result['path']
         self._task('Baixando vídeo do YouTube com yt-dlp e FFmpeg...',work)
 
+    def review_download(self):
+        if self.busy:return
+        if not self.project:
+            return messagebox.showwarning('Importe primeiro','Carregue a curadoria R57.')
+        records=[r for r in self.project.state.get('download_history',[])
+                 if r.get('status')=='SOURCE_REVIEW_REQUIRED']
+        if not records:
+            return messagebox.showwarning('Sem download','Baixe o vídeo primeiro.')
+        record=records[-1]
+        try:
+            delta=float(record['duration_seconds'])-self.project.package.source_duration
+        except (KeyError,TypeError,ValueError):
+            return messagebox.showerror('Dados incompletos','Download sem duração verificável.')
+        if abs(delta)>3:
+            return messagebox.showerror('Duração incompatível',
+                f'O vídeo tem {record["duration_seconds"]:.2f}s e a curadoria espera '
+                f'{self.project.package.source_duration:.2f}s (diferença {delta:.2f}s). '
+                'Os timestamps podem estar deslocados. Refaça a análise desse MP4.')
+        if not messagebox.askyesno('Revisão de mídia baixada',
+            'O vídeo tem a mesma identificação e duração aproximada, mas SHA256 DIFERENTE.\n\n'
+            'Isso NÃO comprova que os momentos estejam sincronizados com a curadoria.\n'
+            'O vídeo será liberado apenas para PRÉVIAS. É obrigatório assistir e conferir '
+            'áudio, contexto e câmera em CADA corte, antes de aprovar finais.\n\n'
+            'Não altera o ZIP original nem os hashes da análise. Continuar?'):
+            return
+        self._task('Conferindo e vinculando fonte alternativa apenas para PRÉVIAS...',
+                   lambda:self.project.review_download_for_previews(confirm_timeline=True))
+
     def open_srt(self):
         if not self.project or not self.selected:return
         c=self.project.package.clips[self.selected]
@@ -400,7 +437,8 @@ class CuratorApp(tk.Tk):
         if self.busy:return
         if not self.project:return messagebox.showwarning('Importe primeiro','Importe a curadoria ZIP.')
         if not messagebox.askyesno('Gerar prévias','Renderizar prévias de todos os '+kind+'?\n'
-             'Original SHA256 obrigatório. Legendas ASR não conferidas permanecem desligadas.\n'
+             'Fonte exata ou vídeo alternativo revisado para prévias. ' 
+             'Legendas ASR não conferidas permanecem desligadas.\n'
              'O processamento pode ser demorado. Não haverá publicação automática.'):
             return
         rows=self.project.package.items(kind)

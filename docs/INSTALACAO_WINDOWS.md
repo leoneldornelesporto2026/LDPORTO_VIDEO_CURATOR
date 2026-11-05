@@ -14,7 +14,7 @@ Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.
 1. Extraia todo o ZIP deste programa em uma pasta sem `.venv` compartilhada com projetos antigos.
 2. Execute `INSTALAR_WINDOWS.bat` e depois `INICIAR_WINDOWS.bat`.
 3. Após importar o exemplo, cole a URL do YouTube no campo novo e clique **BAIXAR VÍDEO DO YOUTUBE** (somente vídeos de uso autorizado), ou use **VINCULAR MP4 ORIGINAL**.
-4. O arquivo baixado é guardado em `downloads/attempts/<id>` no diretório do projeto. Se o SHA256 for diferente do original analisado, ele **não é vinculado**: consulte `download_report.json`, obtenha o arquivo exato usado pelo Analyzer ou gere uma nova análise para esse vídeo.
+4. O download fica em `downloads/attempts/<id>`. Se o SHA256 for diferente, clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**. A verificação exige o mesmo ID e duração (±3 s), streams, hash real e confirmação explícita. **Não é prova de sincronização** e a fonte do Analyzer não é modificada. Gere PRÉVIAS e confira cada fala/câmera antes de aprovar; se os tempos divergirem, reanalise esse MP4.
 5. Revise Reels/Stories e execute as prévias individualmente ou em lote.
 6. Abra a prévia gerada, assista e confira contexto, narração, começo/fim, enquadramento, legenda e autorização dos direitos.
 7. Marque os dois campos de revisão e aprove aquela prévia. Só então renderize o final.

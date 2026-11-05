@@ -9,7 +9,7 @@
 3. Execute `INICIAR_WINDOWS.bat`.
 4. O exemplo `example/CURADORIA_R57.zip` será carregado e verificado. Se preferir, use **CARREGAR CURADORIA ZIP**.
 5. **BAIXAR VÍDEO DO YOUTUBE**: cole a URL HTTPS do vídeo e clique para baixar via yt-dlp; o exemplo R57 já preenche a URL do show. Você também pode usar **VINCULAR MP4 ORIGINAL** para um arquivo local. Baixe somente conteúdo que você tem direito de utilizar.
-6. **ATENÇÃO:** o download pode usar outro codec/qualidade e obter SHA256 diferente da análise do Analyzer. Nesse caso o vídeo fica salvo em `downloads/attempts/`, com relatório de divergência, mas **não libera renderização**. Use a fonte exata originalmente analisada ou gere nova análise/plano para o arquivo baixado.
+6. **SE O SHA256 DIVERGIR:** o download fica em `downloads/attempts/`. Clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**: com o mesmo ID, áudio/vídeo, duração compatível (±3 s) e confirmação explícita, permite prévias com o hash real da cópia baixada. **Isso não prova que o áudio e os timestamps coincidam.** Confira cada prévia; se o trecho estiver deslocado, refaça a análise para o MP4 baixado. O pacote R57 e o SHA original permanecem intactos.
 7. Escolha um Reel ou Story, revise início/fim, título, crop e legendas. O padrão usa **fonte horizontal preservada em canvas vertical com fundo desfocado**. Legendas ASR estão desligadas até conferência humana.
 8. Gere a prévia em **540×960**, abra e assista, confirme revisão de áudio e câmera e clique **APROVAR PRÉVIA**.
 9. Gere o MP4 final em **1080×1920**. Use **EXPORTAR CAPAS + PLANOS** para extrair as 72 capas, arquivos ASS/SRT e metadados.
@@ -19,7 +19,8 @@
 ## Recursos
 
 - Verificação integral de SHA256 de todos os membros do ZIP e da mídia original.
-- Download **manual** por campo URL, com yt-dlp, progresso, cancelamento, pasta isolada e relatório; sem contornar hash divergente.
+- Download **manual** por campo URL, com yt-dlp, progresso, cancelamento, pasta isolada e relatório.
+- **Modo de prévia com fonte alternativa:** confirma identidade e duração, nunca troca o SHA da análise e exige revisão de áudio/contexto por corte; ao mudar mídia, invalida aprovações.
 - Entrada imutável, projetos salvos em `Vídeos/LDPORTO_CURATOR_STUDIO_PROJECTS`, com histórico de tentativas.
 - Prévia e final usando FFmpeg/H.264 AAC; todas as saídas passam por FFprobe.
 - Formato 9:16 com 16:9 integral preservado e fundo desfocado, ou crop central manual.
@@ -47,6 +48,7 @@ O estado `FINAL_READY_REVIEW_RIGHTS` significa que o MP4 final está gerado, **n
 ```bat
 py -3 -m ldporto_studio import --zip "example\CURADORIA_R57.zip" --workdir "C:\curator_projects\CBJR"
 py -3 -m ldporto_studio download --workdir "C:\curator_projects\CBJR" --url "https://www.youtube.com/watch?v=aUgESZsOGmY"
+py -3 -m ldporto_studio review-download --workdir "C:\curator_projects\CBJR" --confirm-preview-review
 py -3 -m ldporto_studio associate --workdir "C:\curator_projects\CBJR" --media "D:\Videos\CBJR_ORIGINAL.mp4"
 py -3 -m ldporto_studio list --workdir "C:\curator_projects\CBJR" --kind reels
 py -3 -m ldporto_studio preview --workdir "C:\curator_projects\CBJR" --id REEL_01

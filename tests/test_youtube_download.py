@@ -112,7 +112,45 @@ class FakeDownloadTests(unittest.TestCase):
             project.verified_media()
         self.assertEqual(read_json(Path(row['path']).parent/'download_report.json')['linked'],False)
 
+    def test_downloaded_recode_requires_explicit_review_and_final_approval(self):
+        from ldporto_studio.rendering import render_item
+        import subprocess
+        project=self.project()
+        other=self.root/'different_encoding_for_review.mp4'
+        subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(self.media),
+            '-c:v','libx264','-crf','30','-c:a','copy','-y',str(other)],
+            capture_output=True,check=True,timeout=60)
+        with patch.dict(sys.modules,{'yt_dlp':self.fake_api(other)}):
+            download_from_youtube(project,f'https://youtu.be/{VIDEO}')
+        with self.assertRaisesRegex(ValueError,'Revisão explícita'):
+            project.review_download_for_previews()
+        row=project.review_download_for_previews(confirm_timeline=True)
+        self.assertEqual(row['status'],'ALTERNATE_REVIEW_SOURCE')
+        self.assertNotEqual(project.active_media_sha(),project.package.source_sha)
+        self.assertTrue(project.verified_media().is_file())
+        preview,report=render_item(project,'REEL_01',preview=True)
+        self.assertTrue(preview.is_file())
+        self.assertEqual(report['render_media_sha256'],row['actual_sha256'])
+        self.assertFalse(project.approval_matches('REEL_01'))
+        with self.assertRaisesRegex(ValueError,'Final bloqueado'):
+            render_item(project,'REEL_01',preview=False)
+        project.update('REEL_01',audio_reviewed=True,camera_reviewed=True)
+        approval=project.approve('REEL_01',human_reviewed=True,verified_audio=True,verified_camera=True)
+        self.assertEqual(approval['media_sha256'],row['actual_sha256'])
+        self.assertTrue(project.approval_matches('REEL_01'))
+        final,report=render_item(project,'REEL_01',preview=False)
+        self.assertTrue(final.is_file())
+        self.assertEqual(report['time_alignment'],'NOT_AUTOMATICALLY_VERIFIED')
+        # A second Project instance must preserve the media binding safely.
+        reloaded=Project(project.dir)
+        self.assertEqual(reloaded.active_media_sha(),row['actual_sha256'])
+        self.assertTrue(reloaded.verified_media().is_file())
+        Path(row['path']).write_bytes(b'tampered')
+        with self.assertRaisesRegex(ValueError,'SHA256'):
+            project.verified_media()
+
     def test_wrong_video_id_in_extractor_is_rejected(self):
+
         project=self.project()
         with patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media,id='ooooooooooo')}):
             with self.assertRaisesRegex(ValueError,'identidade diferente'):
