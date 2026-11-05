@@ -92,15 +92,22 @@ def videos_download_root() -> Path:
     return base.resolve() / 'LDPORTO_VIDEO_CURATOR'
 
 
+def download_input_root() -> Path:
+    """New downloads live with the Curator under input/videos/, never in Git."""
+    from .workspace import application_root
+    return (application_root() / 'input' / 'videos').resolve()
+
+
 def managed_download_path(project, path, video_id: str) -> bool:
-    """Allow old project-local and new Windows Videos copies; block arbitrary paths."""
+    """Accept current input/videos and verified legacy paths, never arbitrary files."""
     p=Path(path).resolve()
     if (not video_id or not _VIDEO_ID.fullmatch(video_id)
         or p.suffix.lower() not in VIDEO_EXT):
         return False
     old_root=(project.dir/'downloads'/'attempts').resolve()
-    video_root=(videos_download_root()/video_id/project.package.digest[:12]).resolve()
-    return p.is_relative_to(old_root) or p.is_relative_to(video_root)
+    legacy_windows_root=(videos_download_root()/video_id/project.package.digest[:12]).resolve()
+    current_root=(download_input_root()/video_id/project.package.digest[:12]).resolve()
+    return any(p.is_relative_to(root) for root in (old_root,legacy_windows_root,current_root))
 
 
 def existing_youtube_download(project, url: str) -> dict | None:
@@ -140,7 +147,7 @@ def existing_youtube_download(project, url: str) -> dict | None:
 
 
 def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> dict:
-    """Download into the Windows Videos folder and check source identity.
+    """Download into Curator input/videos/ and check source identity.
 
     A SHA mismatch is a completed DOWNLOAD, not a verified media association.
     The file remains isolated for manual analysis, with a machine-readable report.
@@ -165,7 +172,7 @@ def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> d
         raise RuntimeError('yt-dlp não instalado. Execute INSTALAR_WINDOWS.bat novamente.') from error
     from .rendering import binaries, probe_media
     binaries()  # FFmpeg/FFprobe must exist before any download/merge.
-    attempt = videos_download_root() / video_id / project.package.digest[:12] / uuid4().hex
+    attempt = download_input_root() / video_id / project.package.digest[:12] / uuid4().hex
     attempt.mkdir(parents=True, exist_ok=False)
 
     def report_progress(phase, percentage=None, detail=''):

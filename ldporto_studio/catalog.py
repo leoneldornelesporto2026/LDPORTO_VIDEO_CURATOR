@@ -186,6 +186,7 @@ def _input_zips(root: Path):
         current=Path(base)
         depth=len(current.relative_to(root).parts)
         dirs[:]=sorted(d for d in dirs if depth<5 and not d.startswith('.')
+                       and not (depth==0 and d=='videos')
                        and not (current/d).is_symlink())
         for filename in sorted(files):
             visited+=1

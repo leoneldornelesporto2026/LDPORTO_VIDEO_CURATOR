@@ -14,7 +14,7 @@ Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.
 1. Use a pasta original do código `LDPORTO_VIDEO_CURATOR`, branch `develop`. Não crie worktrees/clones adicionais.
 2. No PowerShell, execute `\.\INSTALAR_WINDOWS.bat` e `\.\INICIAR_WINDOWS.bat`. Os dois scripts escolhem o mesmo interpretador Python, dando prioridade ao ambiente virtual ativado ou `.venv` da raiz.
 3. Após importar o exemplo, cole a URL do YouTube no campo novo e clique **BAIXAR VÍDEO DO YOUTUBE** (somente vídeos de uso autorizado), ou use **VINCULAR MP4 ORIGINAL**.
-4. O download fica em `downloads/attempts/<id>`. Se o SHA256 for diferente, clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**. A verificação exige o mesmo ID e duração (±3 s), streams, hash real e confirmação explícita. **Não é prova de sincronização** e a fonte do Analyzer não é modificada. Gere PRÉVIAS e confira cada fala/câmera antes de aprovar; se os tempos divergirem, reanalise esse MP4.
+4. O download fica em `input/videos/<id_do_video>/<hash_pacote>/<tentativa>`. Se o SHA256 for diferente, clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**. A verificação exige o mesmo ID e duração (±3 s), streams, hash real e confirmação explícita. **Não é prova de sincronização** e a fonte do Analyzer não é modificada. Gere PRÉVIAS e confira cada fala/câmera antes de aprovar; se os tempos divergirem, reanalise esse MP4.
 5. Revise Reels/Stories e execute as prévias individualmente ou em lote.
 6. Abra a prévia gerada, assista e confira contexto, narração, começo/fim, enquadramento, legenda e autorização dos direitos.
 7. Marque os dois campos de revisão e aprove aquela prévia. Só então renderize o final.
@@ -26,7 +26,7 @@ Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.
 - **Legendas**: ASS/SRT do R57 são *rascunhos*; a revisão humana é obrigatória antes de embutir no vídeo. Um corte Reel cuja janela mudou exige novo alinhamento.
 - **Câmera**: fonte 16:9 é preservada integralmente com fundo desfocado por padrão; crop manual requer inspeção humana.
 - **Stories**: a ordem original é intocável em V1.0, evitando gaps artificiais, embora o início/fim por minuto possa precisar de revisão editorial futura.
-- **Saídas**: projetos, prévias, finais e capas ficam em `output/projects/` ignorado pelo Git; novos downloads ficam na pasta Vídeos do Windows e não são versionados. Cada execução usa uma pasta isolada; falhas preservam logs. O render final é bloqueado sem aprovação da prévia atual.
+- **Saídas**: projetos, prévias, finais e capas ficam em `output/projects/` ignorado pelo Git; novos downloads ficam em `input/videos/` e não são versionados. Cada execução usa uma pasta isolada; falhas preservam logs. O render final é bloqueado sem aprovação da prévia atual.
 - **Direitos**: aprovação do preview não comprova direitos; nenhum upload automático ou postagem está disponível.
 
 ## Limitações verificadas
@@ -52,7 +52,7 @@ Não exclua a cópia de origem antes de validar que todos os vídeos renderizado
 
 ## Download já salvo e SHA256 diferente
 
-Quando o YouTube entrega outra codificação, o botão **BAIXAR VÍDEO DO YOUTUBE** verifica se já existe uma cópia íntegra do mesmo vídeo dentro de `output/projects/<projeto>/downloads/attempts/`, validando o manifesto e o hash real. **Não baixa novamente** quando encontra arquivo válido. Com o mesmo ID e duração compatível, a interface oferece vincular a fonte para **prévia de revisão**, mediante sua confirmação. O SHA256 original do Analyzer permanece inalterado. Mesmo ID e duração não provam sincronização; revise cada corte antes de aprovar o final. Se a duração divergir, é necessária reanálise do MP4.
+Quando o YouTube entrega outra codificação, o botão **BAIXAR VÍDEO DO YOUTUBE** verifica se já existe uma cópia íntegra registrada no histórico do projeto, incluindo `input/videos/` ou diretórios antigos, validando o manifesto e o hash real. **Não baixa novamente** quando encontra arquivo válido. Com o mesmo ID e duração compatível, a interface oferece vincular a fonte para **prévia de revisão**, mediante sua confirmação. O SHA256 original do Analyzer permanece inalterado. Mesmo ID e duração não provam sincronização; revise cada corte antes de aprovar o final. Se a duração divergir, é necessária reanálise do MP4.
 
 ## Visual R58 e enquadramento conservador
 
@@ -72,6 +72,8 @@ O catálogo somente examina metadados limitados em ZIPs e não os extrai. Execut
 
 ## Roteiros compartilháveis e downloads no Windows
 
-Os downloads do YouTube vão para a pasta **Vídeos do Windows/LDPORTO_VIDEO_CURATOR**, respeitando a localização configurada do Windows. Projetos, previews e finais permanecem em `output/projects/`. Os downloads antigos no projeto são reutilizados quando SHA256 e recibo de integridade conferirem, sem mover arquivos automaticamente.
+Os downloads do YouTube agora vão para **`input/videos/<id_do_video>/<hash_pacote>/<tentativa>/`** dentro do projeto Curator, ignorado pelo Git. Projetos, previews e finais permanecem em `output/projects/`. Os downloads antigos no projeto são reutilizados quando SHA256 e recibo de integridade conferirem, sem mover arquivos automaticamente.
 
 `input/` e `output/` são diretórios visíveis no Git, mas seus pacotes ZIP, MP4s, imagens e estado local são ignorados. Somente **scripts editoriais** sob `input/scripts/` e `output/scripts/` podem ser commitados. Pressione **EXPORTAR ROTEIRO PARA GIT (SEM VÍDEO)** para registrar títulos, cortes, horários, legenda e camera plan sem mídia; no PowerShell execute `git add input/scripts output/scripts` e `python scripts/check_git_review_payload.py` antes de revisar e criar o commit manualmente.
+
+**Regra Git:** `input/videos/` inteiro é ignorado, incluindo MP4, `download_report.json` e tentativas parciais. Os scripts JSON revisáveis continuam em `input/scripts/` e `output/scripts/`. Downloads antigos que ficaram em Vídeos do Windows ou `output/projects/.../downloads/` são reconhecidos sem migração. Confirme com `git check-ignore -v input/videos/exemplo/source.mp4`.

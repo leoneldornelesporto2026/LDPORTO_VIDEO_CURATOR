@@ -1,4 +1,4 @@
-"""Keep all generated projects, videos and editorial exports under the application output/.
+"""Keep editable projects and renders in output/; downloaded media in input/videos/.
 
 Legacy external projects may be COPIED in safely; the source is never deleted.
 The R57 input ZIP and the Analyzer provenance SHA are never rewritten.

@@ -1,4 +1,4 @@
-"""Scripts in Git, MP4s in Windows Videos, no media bytes in editorial revision."""
+"""Scripts in Git; downloaded MP4s under ignored input/videos/; no media bytes in revisions."""
 from __future__ import annotations
 from pathlib import Path
 import json
@@ -25,6 +25,8 @@ class CommitLayoutTest(unittest.TestCase):
                 'output/README.md':False,
                 'input/analyzer/id/run/package.zip':True,
                 'input/curadorias/show/run/plano.zip':True,
+                'input/videos/aUgESZsOGmY/run/source.mp4':True,
+                'input/videos/aUgESZsOGmY/run/download_report.json':True,
                 'output/projects/show/project.json':True,
                 'output/projects/show/outputs/previews/REEL_01/a.mp4':True,
                 'output/scripts/cbjr/REVISION_abc123.json':False,
@@ -60,16 +62,21 @@ class CommitLayoutTest(unittest.TestCase):
             self.assertNotEqual(revised,target)
             self.assertTrue(target.is_file())
 
-    def test_legacy_downloads_and_new_videos_folder_are_permitted(self):
+    def test_legacy_downloads_and_new_input_videos_are_permitted(self):
         with tempfile.TemporaryDirectory(prefix='ldporto_media_path_') as tmp:
             root=Path(tmp)
             project=Project.create(DEMO,root/'project')
             legacy=project.dir/'downloads'/'attempts'/'abc'/'source.mp4'
             videos=root/'Videos'/'LDPORTO_VIDEO_CURATOR'
-            modern=videos/'aUgESZsOGmY'/project.package.digest[:12]/'abc'/'source.mp4'
+            repo_videos=root/'CuratorRepo'/'input'/'videos'
+            modern=repo_videos/'aUgESZsOGmY'/project.package.digest[:12]/'abc'/'source.mp4'
+            old_windows=videos/'aUgESZsOGmY'/project.package.digest[:12]/'abc'/'source.mp4'
             with patch('ldporto_studio.youtube_download.videos_download_root',
-                       return_value=videos):
+                       return_value=videos), patch(
+                       'ldporto_studio.youtube_download.download_input_root',
+                       return_value=repo_videos):
                 self.assertTrue(managed_download_path(project,legacy,'aUgESZsOGmY'))
+                self.assertTrue(managed_download_path(project,old_windows,'aUgESZsOGmY'))
                 self.assertTrue(managed_download_path(project,modern,'aUgESZsOGmY'))
                 self.assertFalse(managed_download_path(project,root/'elsewhere.mp4','aUgESZsOGmY'))
 

@@ -338,7 +338,7 @@ class Project:
         from .youtube_download import managed_download_path
         if (not managed_download_path(self,path,record.get('video_id'))
             or not path.is_file() or path.is_symlink()):
-            raise ValueError('Vídeo não está numa pasta gerenciada em Vídeos do Windows ou downloads antigos')
+            raise ValueError('Vídeo fora de input/videos ou dos locais antigos permitidos')
         receipt=read_json(path.parent/'download_report.json',{}) or {}
         if receipt!=record or receipt.get('expected_sha256')!=self.package.source_sha:
             raise ValueError('Relatório do download ausente, alterado ou de outra análise')

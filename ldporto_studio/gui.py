@@ -494,7 +494,7 @@ class CuratorApp(tk.Tk):
             return messagebox.showerror('Link inválido',str(error))
         if not messagebox.askyesno('Usar vídeo do YouTube',
              'O Studio vai REAPROVEITAR um MP4 já salvo e íntegro, se existir. '
-             'Novos downloads ficam na pasta VÍDEOS do Windows, fora do Git.\n\n'
+             'Novos downloads ficam em input/videos/ do Curator, ignorados pelo Git.\n\n'
              'Baixe apenas conteúdo para o qual tenha autorização de uso.\n\n'
              'Se a codificação divergir da análise, você poderá confirmar o uso '
              'para PRÉVIAS (não finais aprovados). Continuar?'):

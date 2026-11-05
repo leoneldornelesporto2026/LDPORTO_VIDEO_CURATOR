@@ -90,6 +90,18 @@ class ShowCatalogTests(unittest.TestCase):
         self.assertEqual(data['count'],1)
         self.assertEqual(data['items'][0]['kind'],'analyzer_zip')
 
+    def test_downloads_subtree_is_not_scanned_as_analyzer_inbox(self):
+        self.inbox.mkdir(parents=True,exist_ok=True)
+        source=self.inbox/'videos'/'aUgESZsOGmY'/'run01'
+        source.mkdir(parents=True)
+        # This file would be classified as a show outside of input/videos.
+        with ZipFile(source/'accidental_edition.zip','w') as z:
+            z.writestr('SECOND_CURATION_MANIFEST.json',json.dumps({
+                'run_id':'run01','source_hash':'a'*64}))
+            z.writestr('CURATION_INDEX.json',json.dumps({
+                'source':{'title':'Do not list media staging'},'candidate_count':1}))
+        self.assertEqual(discover_catalog(self.inbox,self.projects),[])
+
     def test_corrupted_zip_is_not_r57_ready(self):
         self.inbox.mkdir(parents=True,exist_ok=True)
         broken=self.inbox/'broken.zip'

@@ -50,6 +50,9 @@ cookies.txt
 !/input/README.md
 !/input/scripts/
 
+# Explicit protection even if future ignore rules expose other input subtrees.
+/input/videos/
+
 # Output tem projetos locais, render, capas e downloads operacionais.
 # Apenas scripts editoriais exportados têm histórico Git.
 /output/*

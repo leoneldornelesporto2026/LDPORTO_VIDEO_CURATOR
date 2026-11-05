@@ -61,10 +61,14 @@ class FakeDownloadTests(unittest.TestCase):
         cls.temp.cleanup()
 
     def setUp(self):
-        self._videos_patch=patch('ldporto_studio.youtube_download.videos_download_root',
-                                 return_value=self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR')
-        self._videos_patch.start()
-        self.addCleanup(self._videos_patch.stop)
+        self._input_videos_patch=patch('ldporto_studio.youtube_download.download_input_root',
+                                     return_value=self.root/'LocalRepo'/'input'/'videos')
+        self._input_videos_patch.start()
+        self.addCleanup(self._input_videos_patch.stop)
+        self._legacy_videos_patch=patch('ldporto_studio.youtube_download.videos_download_root',
+                                      return_value=self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR')
+        self._legacy_videos_patch.start()
+        self.addCleanup(self._legacy_videos_patch.stop)
 
     def project(self):
         import uuid
@@ -106,12 +110,28 @@ class FakeDownloadTests(unittest.TestCase):
         with patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media)}):
             first=download_from_youtube(project,f'https://youtu.be/{VIDEO}')
         before=len(project.state['download_history'])
+        self.assertTrue(Path(first['path']).is_relative_to(
+            self.root/'LocalRepo'/'input'/'videos'))
+        before_files=set(Path(first['path']).parent.parent.iterdir())
         with patch.dict(sys.modules,{'yt_dlp':None}):
             again=download_from_youtube(project,f'https://www.youtube.com/watch?v={VIDEO}')
         self.assertTrue(again['reused_existing'])
         self.assertEqual(first['path'],again['path'])
         self.assertEqual(len(project.state['download_history']),before)
-        self.assertEqual(len(list((self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR').rglob('source.mp4'))),1)
+        self.assertEqual(set(Path(first['path']).parent.parent.iterdir()),before_files)
+
+    def test_reuses_previously_saved_windows_videos_download(self):
+        project=self.project()
+        legacy=self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR'
+        with patch('ldporto_studio.youtube_download.download_input_root',
+                   return_value=legacy), patch.dict(sys.modules,{'yt_dlp':self.fake_api(self.media)}):
+            first=download_from_youtube(project,f'https://youtu.be/{VIDEO}')
+        self.assertTrue(Path(first['path']).is_relative_to(legacy))
+        with patch.dict(sys.modules,{'yt_dlp':None}):
+            again=download_from_youtube(project,f'https://www.youtube.com/watch?v={VIDEO}')
+        self.assertTrue(again['reused_existing'])
+        self.assertEqual(again['path'],first['path'])
+        self.assertEqual(project.verified_media(),Path(first['path']))
 
     def test_second_download_does_not_reuse_changed_media(self):
         project=self.project()
