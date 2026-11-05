@@ -17,6 +17,7 @@ from .youtube_download import download_from_youtube, suggested_youtube_url, pars
 from .workspace import project_output_root, import_existing_project
 from .catalog import discover_catalog, catalog_label, input_root
 from .editorial_script import export_project_script
+from .r6_review import read_analyzer_review
 
 
 def open_file(path):
@@ -254,6 +255,11 @@ class CuratorApp(tk.Tk):
                     self.catalog_selection.set(chosen or (labels[0] if labels else ''))
                     self.on_catalog_selected()
                     self.log_message(f'Biblioteca atualizada: {len(payload)} item(ns) real(is) encontrados.')
+                elif action=='r6_review':
+                    from .r6_review_gui import AnalyzerR6ReviewDialog
+                    AnalyzerR6ReviewDialog(
+                        self,payload,
+                        on_export=lambda path:self.log_message('Roteiro R6 exportado: '+str(path)))
                 elif action=='open_project':
                     self.project=Project(payload)
                     self.youtube_url.set(self.project.state.get('youtube_url') or suggested_youtube_url(self.project.package))
@@ -340,17 +346,13 @@ class CuratorApp(tk.Tk):
         elif kind=='curator_zip':
             self._load_archive(path)
         elif kind=='analyzer_zip':
-            if messagebox.askyesno('Pacote Analyzer recebido — segunda curadoria pendente',
-                    f'Show: {entry["title"]}\n'
-                    f'Candidatos identificados: {entry["candidates"]}\n'
-                    f'Run ID: {entry["run_id"]}\n\n'
-                    'Este ZIP é o pacote de evidências R6 do Analyzer. O Curator Studio '
-                    'NÃO pode usá-lo diretamente como plano editorial R57.\n\n'
-                    'Faça a segunda curadoria, gere o pacote editorial compatível '
-                    'e coloque-o em input/. Nenhum corte será aprovado automaticamente.\n\n'
-                    'Abrir a pasta que contém o ZIP para facilitar a transferência?'):
-                open_file(path.parent)
-            self.log_message('Aguardando segunda curadoria (R6 não é pacote de render): '+str(path))
+            def work():
+                review=read_analyzer_review(path.parent)
+                self.q.put(('r6_review',review))
+                return (f"Análise R6 verificada: {review['candidate_count']} candidatos reais, "
+                        f"{review['story_candidate_count']} Stories; "
+                        "selecione os trechos na janela de segunda curadoria.")
+            self._task('Validando ZIP R6, manifesto e abrindo candidatos sem renderizar...',work)
         else:
             messagebox.showerror('Pacote não importável',
                                  entry['status']+'\n\nArquivo: '+str(path))

@@ -14,3 +14,7 @@ git diff --cached --stat
 ```
 
 Somente com o resultado conferido faça commit/push. O roteiro contém títulos, timestamps, sequências, escolhas e planos de câmera, sem arquivo audiovisual ou caminho absoluto de Windows. Git permite recuperar/revisar versões do roteiro posteriormente, mas não armazena vídeos em memória do ChatGPT.
+
+## Scripts da segunda curadoria R6
+
+Uma seleção de candidatos do Analyzer gera `output/scripts/<show>_<sha>/R6_REVIEW_<digest>.json` com proveniência, tempos de corte, títulos e modo de câmera. Mesmo conteúdo não duplica revisão; alterações criam novo digest. O ZIP R57 existente, o estado de projetos, MP4, prévias e aprovações anteriores são preservados. Roteiros R6 continuam `CURATOR_IMPORT_PENDING` até haver um pacote renderizável validado.

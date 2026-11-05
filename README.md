@@ -155,3 +155,23 @@ O roteiro tem nome de revisão baseado no conteúdo; versões antigas não são 
 **Novos downloads de vídeo:** `input/videos/<youtube_video_id>/<hash_pacote>/<tentativa>/source.mp4`. Essa subpasta fica na pasta original `LDPORTO_VIDEO_CURATOR` e é explicitamente excluída pelo `.gitignore` como `/input/videos/`. Nunca executar `git add -f input/videos`.
 
 **Vídeos existentes:** downloads anteriores em `output/projects/.../downloads/` ou na pasta Vídeos do Windows continuam utilizáveis, desde que o histórico do projeto, o manifesto e o SHA256 sejam válidos. Nada é movido nem duplicado automaticamente. O botão de download reaproveita o arquivo verificado, sem refazer o download. `output/projects/` mantém prévias/renders locais; somente roteiros em `input/scripts/` e `output/scripts/` são versionáveis.
+
+## P1 — Segunda curadoria do ZIP R6 do Analyzer (seletor de candidatos)
+
+No catálogo do Curator, selecione **ANALYZER R6 — AGUARDANDO SEGUNDA CURADORIA** e clique **ABRIR / SELECIONAR CORTES**. O Studio agora confere recibo, SHA256, manifesto completo, índice de evidências e abre a janela **Segunda curadoria R6**, sem tocar nos projetos editoriais existentes. A janela apresenta **somente os candidatos realmente exportados** pelo Analyzer, com rank, tempos, transcrição, restrições de conteúdo, estados de legenda e pendências reais. Você escolhe os trechos (Ctrl/Shift), pode ajustar título e `preserve`/`solo_fit`/`smart_zoom`/`center_crop` individualmente e clica **EXPORTAR SELECIONADOS — SOMENTE ROTEIRO JSON**.
+
+O roteiro fica em `output/scripts/<show>_<sha>/R6_REVIEW_<hash>.json`, com revisões imutáveis por conteúdo. O script contém títulos, timestamps, vínculo com `candidate_id`, escolha de câmera, alertas editoriais e proveniência do ZIP. **Não contém MP4, áudio, imagem nem caminhos absolutos.** Nenhuma decisão é aprovada, não há mídia renderizada, e os 12 Reels/60 Stories R57 anteriores **não são sobrescritos**. Caso o Analyzer entregue zero Stories, o roteiro preserva esse zero; não fabrica uma sequência de 60.
+
+Para inspecionar os candidatos sem GUI:
+
+```powershell
+python -m ldporto_studio r6-review --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"
+```
+
+Para exportar **apenas IDs explicitamente escolhidos** (substitua IDs pelos listados acima):
+
+```powershell
+python -m ldporto_studio r6-draft --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791" --ids CANDIDATO_ID_1 CANDIDATO_ID_2 --mode preserve --confirm-review-draft
+```
+
+**Limitação técnica importante:** o roteiro R6 é uma *seleção para revisão*, não um ZIP de execução R57. O renderizador R57 exige assets de thumbnail, ASS/SRT revisados, Stories contínuos, manifestos e vinculação de mídia compatíveis. O próximo desenvolvimento é promover um roteiro selecionado a contrato renderizável, depois de validar esses insumos (sem inventá-los).

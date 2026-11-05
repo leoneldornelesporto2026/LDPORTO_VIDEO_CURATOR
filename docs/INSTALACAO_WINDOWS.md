@@ -77,3 +77,11 @@ Os downloads do YouTube agora vão para **`input/videos/<id_do_video>/<hash_paco
 `input/` e `output/` são diretórios visíveis no Git, mas seus pacotes ZIP, MP4s, imagens e estado local são ignorados. Somente **scripts editoriais** sob `input/scripts/` e `output/scripts/` podem ser commitados. Pressione **EXPORTAR ROTEIRO PARA GIT (SEM VÍDEO)** para registrar títulos, cortes, horários, legenda e camera plan sem mídia; no PowerShell execute `git add input/scripts output/scripts` e `python scripts/check_git_review_payload.py` antes de revisar e criar o commit manualmente.
 
 **Regra Git:** `input/videos/` inteiro é ignorado, incluindo MP4, `download_report.json` e tentativas parciais. Os scripts JSON revisáveis continuam em `input/scripts/` e `output/scripts/`. Downloads antigos que ficaram em Vídeos do Windows ou `output/projects/.../downloads/` são reconhecidos sem migração. Confirme com `git check-ignore -v input/videos/exemplo/source.mp4`.
+
+## P1 — Escolher os melhores cortes vindos do Analyzer
+
+Atualize a branch develop e abra `python .\launch_gui.py`. No catálogo selecione o show do Analyzer e clique **ABRIR / SELECIONAR CORTES**. O novo diálogo **Segunda curadoria R6** mostra candidatos reais, duração, rank, transcrição, situações de legenda e alertas. Seleção múltipla com Ctrl/Shift; editar título e enquadramento selecionando **um candidato por vez** e clicando **SALVAR TÍTULO / CÂMERA DE 1 CANDIDATO**. Depois selecione os trechos e use **EXPORTAR SELECIONADOS — SOMENTE ROTEIRO JSON**.
+
+O resultado fica em `output/scripts/`, único local versionável dos planos editoriais. Nenhum `project.json`, ZIP R57, vídeo, imagem, aprovação de prévia ou render é criado neste P1. O ZIP R6 parcial continua rastreado pelo hash e sempre exige revisão de áudio, câmera, legendas e elegibilidade.
+
+CLI: `python -m ldporto_studio r6-review --inbox ".\input\analyzer\<video_id>\<run_id>"`; para exportar IDs escolhidos, usar `r6-draft --inbox ... --ids <id1> <id2> --confirm-review-draft`. É necessário selecionar candidatos antes de gerar qualquer roteiro.
