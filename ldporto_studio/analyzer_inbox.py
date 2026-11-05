@@ -91,12 +91,44 @@ def inspect_delivery(directory):
         raise ValueError("index_candidate_count_mismatch")
     if manifest.get("preview_approved") is True or manifest.get("publication_ready") is True:
         raise ValueError("analyzer_package_must_not_claim_approval")
+    evidence_ref = receipt.get("evidence_index")
+    evidence_count = None
+    evidence_index_path = None
+    if evidence_ref is not None:
+        if (not isinstance(evidence_ref, dict) or
+            evidence_ref.get("name") != "VIDEO_EVIDENCE_INDEX.json"):
+            raise ValueError("invalid_evidence_index_ref")
+        evidence_file = root / "VIDEO_EVIDENCE_INDEX.json"
+        if (evidence_file.is_symlink() or not evidence_file.is_file()
+            or evidence_file.stat().st_size > 2 * 1024 * 1024
+            or _hash_file(evidence_file) != evidence_ref.get("sha256")):
+            raise ValueError("evidence_index_hash_mismatch")
+        evidence = json.loads(evidence_file.read_text(encoding="utf-8"))
+        if (not isinstance(evidence, dict) or
+            evidence.get("zip_sha256") != actual or
+            evidence.get("run_id") != receipt.get("run_id") or
+            evidence.get("source_sha256") != receipt.get("source_sha256") or
+            evidence.get("curator_import_status") != "CURATOR_IMPORT_PENDING" or
+            evidence.get("publication_ready") is not False or
+            evidence.get("video_file_included") is not False):
+            raise ValueError("evidence_index_identity_mismatch")
+        artifacts = evidence.get("artifacts")
+        if (not isinstance(artifacts, list) or
+            len(artifacts) != len(names) or
+            {row.get("path") for row in artifacts if isinstance(row, dict)} != set(names) or
+            evidence.get("artifact_count") != len(names) or
+            evidence_ref.get("artifact_count") != len(names)):
+            raise ValueError("evidence_index_file_list_mismatch")
+        evidence_count = len(names)
+        evidence_index_path = str(evidence_file)
     return {
         "inspection_status": "VALID",
         "curator_import_status": "CURATOR_IMPORT_PENDING",
         "package_path": str(package),
         "zip_sha256": actual,
         "reel_candidate_count": len(catalog.get("candidates") or []),
+        "evidence_file_count": evidence_count,
+        "evidence_index_path": evidence_index_path,
         "human_approval": False,
         "publication_ready": False,
         "next_step": "Manual second curation with ChatGPT; R57 import is NOT yet supported.",

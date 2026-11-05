@@ -7,3 +7,9 @@ A pasta `input/scripts/` é reservada para **roteiros editoriais em JSON/Markdow
 O seletor `VÍDEOS JÁ PROCESSADOS` lê arquivos existentes em `input/` mesmo quando são ignorados pelo Git.
 
 Novos vídeos baixados ficam em `input/videos/<youtube_id>/<package_sha>/<tentativa>/source.mp4`. A pasta inteira `input/videos/` é ignorada pelo Git. Vídeos antigos podem permanecer em Vídeos do Windows ou em `output/projects/`; eles são reaproveitados sem migração quando a integridade for comprovada.
+
+## Novo índice de evidências do Analyzer
+
+Quando o Analyzer entrega o ZIP validado em `input/analyzer/<video_id>/<run_id>/`, também pode incluir `VIDEO_EVIDENCE_INDEX.json`. Esse índice lista **todos os arquivos efetivamente presentes no ZIP**, categoria, tamanho, SHA256 e lacunas relevantes. O inspetor `python -m ldporto_studio.analyzer_inbox --path <diretorio>` confere ZIP, recibo e índice por hash. O formato anterior sem índice permanece legível para entregas já realizadas.
+
+O ZIP e o índice são **insumos de revisão**, não um pacote editorial R57 aprovado. A mídia fica separada em `input/videos/` e é ignorada pelo Git.
