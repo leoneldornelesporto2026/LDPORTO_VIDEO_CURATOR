@@ -5,19 +5,21 @@
 ## Iniciar no Windows
 
 1. Instale **Python 3.11+** (com Tkinter) e **FFmpeg + FFprobe** no PATH do Windows.
-2. Execute `INSTALAR_WINDOWS.bat` (instala Pillow).
+2. Execute `INSTALAR_WINDOWS.bat` (instala Pillow e yt-dlp).
 3. Execute `INICIAR_WINDOWS.bat`.
 4. O exemplo `example/CURADORIA_R57.zip` será carregado e verificado. Se preferir, use **CARREGAR CURADORIA ZIP**.
-5. **VINCULAR MP4 ORIGINAL**: selecione a mídia correspondente ao SHA256 da análise. O programa rejeitará qualquer outra versão.
-6. Escolha um Reel ou Story, revise início/fim, título, crop e legendas. O padrão usa **fonte horizontal preservada em canvas vertical com fundo desfocado**. Legendas ASR estão desligadas até conferência humana.
-7. Gere a prévia em **540×960**, abra e assista, confirme revisão de áudio e câmera e clique **APROVAR PRÉVIA**.
-8. Gere o MP4 final em **1080×1920**. Use **EXPORTAR CAPAS + PLANOS** para extrair as 72 capas, arquivos ASS/SRT e metadados.
+5. **BAIXAR VÍDEO DO YOUTUBE**: cole a URL HTTPS do vídeo e clique para baixar via yt-dlp; o exemplo R57 já preenche a URL do show. Você também pode usar **VINCULAR MP4 ORIGINAL** para um arquivo local. Baixe somente conteúdo que você tem direito de utilizar.
+6. **ATENÇÃO:** o download pode usar outro codec/qualidade e obter SHA256 diferente da análise do Analyzer. Nesse caso o vídeo fica salvo em `downloads/attempts/`, com relatório de divergência, mas **não libera renderização**. Use a fonte exata originalmente analisada ou gere nova análise/plano para o arquivo baixado.
+7. Escolha um Reel ou Story, revise início/fim, título, crop e legendas. O padrão usa **fonte horizontal preservada em canvas vertical com fundo desfocado**. Legendas ASR estão desligadas até conferência humana.
+8. Gere a prévia em **540×960**, abra e assista, confirme revisão de áudio e câmera e clique **APROVAR PRÉVIA**.
+9. Gere o MP4 final em **1080×1920**. Use **EXPORTAR CAPAS + PLANOS** para extrair as 72 capas, arquivos ASS/SRT e metadados.
 
 **Importante:** o ZIP R57 contém 12 Reels, 60 Stories, 72 capas e rascunhos de legendas. Não contém o vídeo original; nada é publicado automaticamente. Os 60 Stories preservam os intervalos cronológicos contínuos, mas cortes de minuto podem cair no meio de fala/música — revise cada um antes de aprovar. Direitos de imagem/áudio permanecem por verificar.
 
 ## Recursos
 
 - Verificação integral de SHA256 de todos os membros do ZIP e da mídia original.
+- Download **manual** por campo URL, com yt-dlp, progresso, cancelamento, pasta isolada e relatório; sem contornar hash divergente.
 - Entrada imutável, projetos salvos em `Vídeos/LDPORTO_CURATOR_STUDIO_PROJECTS`, com histórico de tentativas.
 - Prévia e final usando FFmpeg/H.264 AAC; todas as saídas passam por FFprobe.
 - Formato 9:16 com 16:9 integral preservado e fundo desfocado, ou crop central manual.
@@ -44,6 +46,7 @@ O estado `FINAL_READY_REVIEW_RIGHTS` significa que o MP4 final está gerado, **n
 
 ```bat
 py -3 -m ldporto_studio import --zip "example\CURADORIA_R57.zip" --workdir "C:\curator_projects\CBJR"
+py -3 -m ldporto_studio download --workdir "C:\curator_projects\CBJR" --url "https://www.youtube.com/watch?v=aUgESZsOGmY"
 py -3 -m ldporto_studio associate --workdir "C:\curator_projects\CBJR" --media "D:\Videos\CBJR_ORIGINAL.mp4"
 py -3 -m ldporto_studio list --workdir "C:\curator_projects\CBJR" --kind reels
 py -3 -m ldporto_studio preview --workdir "C:\curator_projects\CBJR" --id REEL_01

@@ -13,6 +13,7 @@ from tkinter import ttk, filedialog, messagebox
 
 from .core import Project
 from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,binaries
+from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
 
 
 def open_file(path):
@@ -69,6 +70,12 @@ class CuratorApp(tk.Tk):
           ('EXEMPLO R57',self.load_example),('VINCULAR MP4 ORIGINAL',self.select_media),
           ('EXPORTAR CAPAS + PLANOS',self.export_assets)]:
             ttk.Button(toolbar,text=label,command=fn).pack(side='left',padx=(0,7))
+        download_row=ttk.Frame(container)
+        download_row.pack(fill='x',pady=(0,9))
+        ttk.Label(download_row,text='URL do YouTube:').pack(side='left',padx=(0,8))
+        self.youtube_url=tk.StringVar(value='')
+        ttk.Entry(download_row,textvariable=self.youtube_url,width=62).pack(side='left',fill='x',expand=True,padx=(0,8))
+        ttk.Button(download_row,text='BAIXAR VÍDEO DO YOUTUBE',command=self.download_youtube).pack(side='left')
         self.source_status=tk.StringVar(value='Selecione uma curadoria ZIP; o MP4 é verificado pelo SHA256 do Analyzer.')
         ttk.Label(container,textvariable=self.source_status,foreground='#fbd68d',wraplength=1240).pack(fill='x',pady=(0,9))
         split=ttk.PanedWindow(container,orient='horizontal');split.pack(fill='both',expand=True)
@@ -189,9 +196,16 @@ class CuratorApp(tk.Tk):
             while True:
                 action,payload=self.q.get_nowait()
                 if action=='progress':
-                    self.progress['value']=int(payload*100)
+                    if payload is not None:self.progress['value']=int(payload*100)
+                elif action=='youtube_url':
+                    self.youtube_url.set(payload)
                 elif action=='log':
                     self.log_message(payload)
+                elif action=='download_report':
+                    self.log_message(payload['message']+' Arquivo: '+payload['path'])
+                    if not payload['linked']:
+                        messagebox.showwarning('Download salvo — revisão da fonte necessária',
+                                               payload['message']+'\n\nArquivo: '+payload['path'])
                 elif action=='done':
                     self.busy=False
                     self.progress['value']=100
@@ -214,6 +228,7 @@ class CuratorApp(tk.Tk):
         loc=self._project_location(archive)
         def run():
             self.project=Project.create(archive,loc)
+            self.q.put(('youtube_url',self.project.state.get('youtube_url') or suggested_youtube_url(self.project.package)))
             self.q.put(('log','Projeto importado com integridade: '+str(loc)))
             return f'{len(self.project.package.clips)} cortes carregados'
         self._task('Importando arquivo e validando todos os SHA256...',run)
@@ -232,7 +247,11 @@ class CuratorApp(tk.Tk):
         if self.busy:return
         folder=filedialog.askdirectory(title='Selecione a pasta com project.json',initialdir=str(self.default_workspace))
         if folder:
-            try:self.project=Project(folder);self.refresh_table();self.log_message('Projeto aberto: '+folder)
+            try:
+                self.project=Project(folder)
+                self.youtube_url.set(self.project.state.get('youtube_url') or suggested_youtube_url(self.project.package))
+                self.refresh_table()
+                self.log_message('Projeto aberto: '+folder)
             except Exception as e:messagebox.showerror('Não foi possível abrir projeto',str(e))
 
     def refresh_table(self):
@@ -297,6 +316,27 @@ class CuratorApp(tk.Tk):
         if self.busy:return
         path=filedialog.askopenfilename(title='MP4 original do Analyzer',filetypes=[('Mídia original','*.mp4 *.mkv *.webm *.mov *.m4v')])
         if path:self._task('Conferindo SHA256 do original e inspecionando streams...',lambda:self.project.set_media(path))
+
+    def download_youtube(self):
+        if self.busy:return
+        if not self.project:
+            return messagebox.showwarning('Importe primeiro','Carregue a curadoria ZIP antes do download.')
+        url=self.youtube_url.get().strip()
+        try:
+            parse_youtube_url(url)
+        except ValueError as error:
+            return messagebox.showerror('Link inválido',str(error))
+        if not messagebox.askyesno('Confirmar download',
+             'Baixar somente conteúdo para o qual você tem autorização de uso.\n\n'
+             'O aplicativo verificará o SHA256: uma cópia diferente do vídeo analisado '
+             'será guardada, mas NÃO será vinculada para renderização. Continuar?'):
+            return
+        def work():
+            result=download_from_youtube(self.project,url,cancel=self.cancel,
+                progress=lambda event:self.q.put(('progress',event.get('fraction'))))
+            self.q.put(('download_report',result))
+            return result['status']+' — '+result['path']
+        self._task('Baixando vídeo do YouTube com yt-dlp e FFmpeg...',work)
 
     def open_srt(self):
         if not self.project or not self.selected:return

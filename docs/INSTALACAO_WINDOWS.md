@@ -4,7 +4,7 @@
 
 - Windows 10/11, Python 3.11 ou mais recente com Tkinter disponível.
 - FFmpeg e FFprobe no PATH. Confira no CMD: `ffmpeg -version` e `ffprobe -version`.
-- Pillow (`INSTALAR_WINDOWS.bat`).
+- Pillow e yt-dlp (`INSTALAR_WINDOWS.bat`). O yt-dlp pode precisar ser atualizado quando o YouTube alterar os formatos; falhas de acesso não são contornadas automaticamente.
 - Espaço livre suficiente para prévias e finais: vídeo 1080×1920 pode consumir centenas de MB.
 
 Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.FFmpeg -e`. Feche/reabra o terminal após instalar para atualizar o PATH. Não use a opção de associar mídia diferente da fonte analisada: mesmo vídeo reencodificado tem outro hash e precisa ser reanalisado/retificado na origem.
@@ -13,15 +13,16 @@ Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.
 
 1. Extraia todo o ZIP deste programa em uma pasta sem `.venv` compartilhada com projetos antigos.
 2. Execute `INSTALAR_WINDOWS.bat` e depois `INICIAR_WINDOWS.bat`.
-3. Após importar o exemplo, clique **VINCULAR MP4 ORIGINAL** e selecione a fonte da análise.
-4. Revise Reels/Stories e execute as prévias individualmente ou em lote.
-5. Abra a prévia gerada, assista e confira contexto, narração, começo/fim, enquadramento, legenda e autorização dos direitos.
-6. Marque os dois campos de revisão e aprove aquela prévia. Só então renderize o final.
+3. Após importar o exemplo, cole a URL do YouTube no campo novo e clique **BAIXAR VÍDEO DO YOUTUBE** (somente vídeos de uso autorizado), ou use **VINCULAR MP4 ORIGINAL**.
+4. O arquivo baixado é guardado em `downloads/attempts/<id>` no diretório do projeto. Se o SHA256 for diferente do original analisado, ele **não é vinculado**: consulte `download_report.json`, obtenha o arquivo exato usado pelo Analyzer ou gere uma nova análise para esse vídeo.
+5. Revise Reels/Stories e execute as prévias individualmente ou em lote.
+6. Abra a prévia gerada, assista e confira contexto, narração, começo/fim, enquadramento, legenda e autorização dos direitos.
+7. Marque os dois campos de revisão e aprove aquela prévia. Só então renderize o final.
 
 ## Segurança e qualidade
 
 - **ZIP**: manifesto SHA256, tipos e caminhos permitidos, controle anti-zip-slip e tamanho limitado. A fonte nunca é extraída de forma arbitrária.
-- **Mídia**: SHA256 deve coincidir com o `source_sha256` do plano. Render não baixa vídeo automaticamente.
+- **Mídia**: SHA256 deve coincidir com o `source_sha256` do plano. O download acontece só após comando explícito, e não baixa durante o render; cópia recodificada/qualidade diferente pode ser rejeitada.
 - **Legendas**: ASS/SRT do R57 são *rascunhos*; a revisão humana é obrigatória antes de embutir no vídeo. Um corte Reel cuja janela mudou exige novo alinhamento.
 - **Câmera**: fonte 16:9 é preservada integralmente com fundo desfocado por padrão; crop manual requer inspeção humana.
 - **Stories**: a ordem original é intocável em V1.0, evitando gaps artificiais, embora o início/fim por minuto possa precisar de revisão editorial futura.

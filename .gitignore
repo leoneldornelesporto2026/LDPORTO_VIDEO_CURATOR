@@ -1,0 +1,11 @@
+# Ambientes e saídas locais
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.spec
+media_downloads/
+downloads/
+.cache/

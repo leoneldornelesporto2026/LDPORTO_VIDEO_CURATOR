@@ -27,6 +27,9 @@ def main(argv=None):
             a.add_argument('--watched',action='store_true')
             a.add_argument('--audio-ok',action='store_true')
             a.add_argument('--camera-ok',action='store_true')
+    a=sub.add_parser('download',help='Baixar URL autorizada do YouTube e validar SHA256 do original')
+    a.add_argument('--workdir',required=True,type=Path)
+    a.add_argument('--url',required=True,help='URL HTTPS de um único vídeo do YouTube')
     args=p.parse_args(argv)
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
@@ -39,6 +42,12 @@ def main(argv=None):
             'stories':len(project.package.items('stories'))},indent=2))
         return 0
     project=Project(args.workdir)
+    if args.cmd=='download':
+        from .youtube_download import download_from_youtube
+        record=download_from_youtube(project,args.url,
+            progress=lambda e: print(f"{e['phase']}: {e.get('detail','')}",flush=True) if e.get('phase')!='baixando' else None)
+        print(json.dumps(record,ensure_ascii=False,indent=2))
+        return 0 if record['linked'] else 3
     if args.cmd=='associate':
         print(json.dumps(project.set_media(args.media),indent=2))
     elif args.cmd=='list':
