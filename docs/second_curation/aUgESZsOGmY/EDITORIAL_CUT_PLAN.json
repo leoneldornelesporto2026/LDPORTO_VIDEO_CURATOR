@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "state": "PROVISIONAL_REVIEW_ONLY",
+  "source_title": "Charlie Brown Jr — Planeta Atlântida 2012 (Completo) HD",
+  "source_url": "https://www.youtube.com/watch?v=aUgESZsOGmY",
+  "source_sha256": "f8b424b9fc26c79141fb2288fee3354d5f02c1c773523f87f95b1191252283ea",
+  "input_package_sha256": "7dc84cf4f257578376c5aafb648139168cb94154475493222be8a22ef9605363",
+  "media_included": false,
+  "preview_approved": false,
+  "publication_ready": false,
+  "clips": [
+    {
+      "candidate_id": "MOMENT_00007_0001",
+      "priority": 1,
+      "title": "20 anos de banda — seguimos evoluindo",
+      "start": 1869.29,
+      "end": 1884.14,
+      "duration_seconds": 14.85,
+      "status": "PENDING_AUDIO_VISUAL_REVIEW",
+      "segment_ids": [
+        "SEG_00170",
+        "SEG_00171",
+        "SEG_00172",
+        "SEG_00173",
+        "SEG_00174",
+        "SEG_00175",
+        "SEG_00176"
+      ],
+      "risks": [],
+      "layout": "source_preserve",
+      "captions": "none_until_word_alignment_review",
+      "rendered": false
+    },
+    {
+      "candidate_id": "MOMENT_00005_0000",
+      "priority": 2,
+      "title": "A gratidão da banda ao público gaúcho",
+      "start": 1459.54,
+      "end": 1490.15,
+      "duration_seconds": 30.61,
+      "status": "PENDING_AUDIO_VISUAL_REVIEW",
+      "segment_ids": [
+        "SEG_00125",
+        "SEG_00126",
+        "SEG_00127",
+        "SEG_00128",
+        "SEG_00129",
+        "SEG_00130",
+        "SEG_00131"
+      ],
+      "risks": [
+        "context_gap_requires_review"
+      ],
+      "layout": "source_preserve",
+      "captions": "none_until_word_alignment_review",
+      "rendered": false
+    },
+    {
+      "candidate_id": "MOMENT_00009_0001",
+      "priority": 3,
+      "title": "A energia da família Charlie Brown",
+      "start": 2355.13,
+      "end": 2429.63,
+      "duration_seconds": 74.5,
+      "status": "PENDING_AUDIO_VISUAL_REVIEW",
+      "segment_ids": [
+        "SEG_00203",
+        "SEG_00204",
+        "SEG_00205",
+        "SEG_00206",
+        "SEG_00207",
+        "SEG_00208",
+        "SEG_00209",
+        "SEG_00210",
+        "SEG_00211",
+        "SEG_00212"
+      ],
+      "risks": [
+        "context_gap_requires_review"
+      ],
+      "layout": "source_preserve",
+      "captions": "none_until_word_alignment_review",
+      "rendered": false
+    }
+  ],
+  "alternates": [
+    {
+      "candidate_id": "MOMENT_PRESERVED_00008_0003",
+      "start": 2152.16,
+      "end": 2199.4,
+      "title": "Interação com a multidão",
+      "reason": "Rever transição de assunto e o áudio antes de editar"
+    },
+    {
+      "candidate_id": "MOMENT_00013_0001",
+      "start": 3141.42,
+      "end": 3157.75,
+      "title": "Homenagem aos integrantes",
+      "reason": "Início e fim incompletos; revisar contexto"
+    }
+  ],
+  "montage_idea": {
+    "status": "STORYBOARD_ONLY",
+    "sequence": [
+      "MOMENT_00007_0001",
+      "MOMENT_00005_0000"
+    ],
+    "rough_duration_seconds": 45.46,
+    "note": "Compilacao de momentos distintos; nao simular discurso continuo."
+  },
+  "required_gates": [
+    "Localizar video original e verificar hash",
+    "Ouvir trechos e verificar transcricao",
+    "Revisar contexto e cortes na musica",
+    "Validar enquadramento 9:16 em movimento",
+    "Renderizar previas e inspecionar com FFprobe",
+    "Aprovar previa e direitos antes de exportar/publicar"
+  ]
+}

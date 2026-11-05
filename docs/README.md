@@ -27,3 +27,5 @@ Use este índice como ponto de entrada. Documentação operacional atual fica em
 2. Saídas de renderização, mídias, modelos, credenciais e caches são locais e não devem entrar em commits.
 3. Evidências já versionadas precisam de análise de dependências e backup antes de serem retiradas do índice.
 4. Documentos de relatório/validação antigos são preservados para auditoria, não executados automaticamente.
+
+- [Curadoria revisável do show Charlie Brown Jr / Planeta Atlântida 2012](second_curation/aUgESZsOGmY/README.md) — corte proposto, sem vídeo renderizado ou aprovação.
