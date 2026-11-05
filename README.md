@@ -1,97 +1,74 @@
-# L.D.PORTO VIDEO CURATOR & RENDERER — Fase 2
+# L.D.PORTO VIDEO CURATOR
 
-O refinamento incremental de câmera, sem nova análise e com revisões separadas, está documentado em [Câmera vertical segura](docs/architecture/CAMERA_VERTICAL_SEGURA.md). A auditoria e as demonstrações ficam em `docs/reports/camera_final_20261015/`.
+**Curadoria, revisão e renderização vertical** a partir das análises do [L.D.PORTO VIDEO ANALYZER](https://github.com/leoneldornelesporto2026/LDPORTO_VIDEO_ANALYZER).
 
-Consome os resultados do **L.D.PORTO VIDEO ANALYZER** e gera curadoria, câmera conservadora, legendas ASS, frames de thumbnail e renders verticais.
+O Curator transforma uma análise concluída em propostas de cortes, planos de câmera, legendas, capas, prévias e renders para revisão humana. A decisão de publicar ou renderizar em lote **não é automática**.
 
-A legenda dos Stories usa [o mesmo karaokê amarelo → branco dos Reels](docs/architecture/LEGENDAS_WORD_ALIGNED.md), com tempos individuais do Analyzer e revisões derivadas. Consulte também a [auditoria de organização e preservação](docs/reports/ORGANIZACAO_PROJETO.md).
+> **Escopo deste repositório:** este README documenta o código disponível na branch atual. Os relatórios históricos descrevem entregas específicas; não são prova de que dependências locais, modelos, mídias ou testes estejam disponíveis na sua máquina.
 
-## Fluxo V5.1 aditivo
+## Início rápido — Windows
 
-Abra **V5.1 · Séries, estilos e dossiê ChatGPT** para importar um ZIP verificado, criar propostas cronológicas ou melhores momentos (inclusive com shortlist vazia), escolher as oito durações, revisar episódios e exportar evidências. O fluxo V4.4 abaixo continua disponível.
+1. Instale **Python 3.11** e **FFmpeg/FFprobe** (no PATH).
+2. Execute `INSTALAR.bat` para criar `.venv` e instalar `requirements.txt`.
+3. Ajuste `paths.analysis_root` em `config.yaml` para o diretório de análises do Analyzer.
+4. Execute **`ABRIR_CURADOR.bat`** para abrir a interface.
+5. Informe a URL de um vídeo **já analisado**, clique em **CURAR** e depois em **TESTAR 1 CORTE**.
+6. Assista à prévia, **APROVAR TESTE** e só então **RENDERIZAR TODOS**.
 
-Veja [primeiros passos no Windows](docs/reports/curator_v5/PRIMEIROS_PASSOS_WINDOWS.md), [diagnóstico e limitações](docs/reports/curator_v5/DIAGNOSTICO_ANTES_DEPOIS.md) e [checkpoint](docs/reports/curator_v5/CHECKPOINT.md).
+O bloqueio de renderização em lote é configurado em `safety.require_first_test_approval_before_batch`. O projeto pode precisar de outras ferramentas locais (por exemplo, Ollama), conforme a operação e a configuração escolhida.
+
+**Guia completo:** [Instalação e comandos Windows](docs/guides/WINDOWS.md).
+
+## Comandos de referência
 
 ```powershell
-.\.venv\Scripts\python.exe cli.py pacote.zip --plan-series --mode SERIE_CRONOLOGICA --duration-preset auto_under_90
-.\.venv\Scripts\python.exe cli.py pacote.zip --dossier-only
-.\.venv\Scripts\python.exe scripts/demo_curator_v5.py
+# Abrir GUI
+.\ABRIR_CURADOR.bat
+
+# Diagnóstico
+.\scripts\windows\DIAGNOSTICO.bat
+
+# Teste de um corte, após instalação e com análise disponível
+.\scripts\windows\TESTAR_1_CORTE.bat "https://www.youtube.com/watch?v=ID_DO_VIDEO" 1
+
+# CLI — ver opções sem processar mídia
+.\.venv\Scripts\python.exe cli.py --help
+
+# Testes automatizados (pytest precisa estar instalado)
+.\.venv\Scripts\python.exe -m pytest -q tests
 ```
 
-Nenhuma dessas ações executa modelos ou reanalisa a fonte. Diretórios devem estar concluídos; transcrição parcial permanece identificada. Preview e aprovação humana são etapas distintas. O dossiê textual inclui legendas/capas disponíveis e referências verificáveis dos MP4, sem embutir a mídia integral por padrão.
+`cli.py` também possui fluxos para segunda curadoria, planejamento de séries, dossiês e aprovação de episódios. Leia [Operação e limites](docs/guides/WINDOWS.md) antes de executar alterações ou renders.
 
-## Fluxo seguro recomendado
+## Organização do repositório
 
-1. Rode `INSTALAR.bat` uma vez.
-2. Ajuste `paths.analysis_root` em `config.yaml` para a pasta `analysis` do Analyzer.
-3. Rode `ABRIR_CURADOR.bat`.
-4. Cole a URL já analisada.
-5. Clique **CURAR**.
-6. Clique **TESTAR 1 CORTE** (rank 1 por padrão). Isto gera apenas um preview 540×960.
-7. Assista ao MP4. **Nada em lote é liberado ainda.**
-8. Se estiver bom, clique **APROVAR TESTE**.
-9. Só então clique **RENDERIZAR TODOS** para 1080×1920.
+| Caminho | Finalidade |
+| --- | --- |
+| `app.py`, `cli.py` | Entrada GUI e CLI |
+| `ldporto_curator/` | Código da aplicação, pipeline, câmera, legendas e revisão |
+| `config.yaml`, `curation_overrides.json` | Configuração e decisões opcionais de curadoria |
+| `tests/`, `schemas/`, `examples/` | Testes, contratos e exemplos |
+| `scripts/` | Ferramentas auxiliares, instaladores e verificações |
+| `docs/` | Guias, arquitetura, documentação histórica e evidências |
+| `output/`, `source_cache/`, `.venv/` | Dados locais e ambientes; não devem ser publicados no Git |
 
-O bloqueio do lote é intencional e controlado por `safety.require_first_test_approval_before_batch`.
+**Somente dois lançadores essenciais permanecem na raiz:** `INSTALAR.bat` e `ABRIR_CURADOR.bat`. Os comandos auxiliares ficam em `scripts/windows/`.
 
-## Primeiro teste desta análise
+## Documentação
 
-O arquivo `curation_overrides.json` contém uma curadoria humana opcional para o sample `wA1ipztt54c`, começando pelo corte sobre Rick peitar a gravadora pelo Charlie Brown Jr. Vídeos futuros usam a curadoria genérica quando não existir override.
+- [Índice de documentação](docs/README.md)
+- [Estrutura e critérios de preservação](docs/architecture/PROJECT_STRUCTURE.md)
+- [Câmera vertical segura](docs/architecture/CAMERA_VERTICAL_SEGURA.md)
+- [Legendas alinhadas por palavra](docs/architecture/LEGENDAS_WORD_ALIGNED.md)
+- [Segunda curadoria](docs/second_curation/)
+- [Arquivo de notas e entregas históricas](docs/history/README.md)
 
-## Saídas
+## Segurança e integridade
 
-- `output/curation/<video_id>/EDIT_DECISIONS.json`
-- `output/curation/<video_id>/CHATGPT_HANDOFF.json`
-- `output/curation/<video_id>/CURATION_BOARD.png`
-- `output/curation/<video_id>/clips/CLIP_xxx/thumbnails/*`
-- `output/renders/<video_id>/CLIP_xxx/CLIP_xxx_PREVIEW.mp4`
-- após aprovação: `CLIP_xxx_FINAL.mp4`
+- Não inclua tokens, credenciais, vídeos, modelos, caches ou `.venv` no repositório.
+- **Não apague `output/`, `source_cache/`, revisões ou evidências locais** sem backup e validação dos vínculos.
+- Algumas evidências e duplicações históricas em `docs/reports/` já estão rastreadas. O `.gitignore` evita novos arquivos correspondentes, **mas não retira automaticamente arquivos existentes do histórico**.
+- Mantenha testes, fixtures, schemas e os caminhos usados pelo aplicativo.
+- Desenvolvimento em `develop`; `release` e `main` não são promovidas automaticamente.
 
-## Observação sobre câmera
-
-A análise de referência não possui diarização/active-speaker confiável. Por isso esta versão usa **crop conservador** baseado em posições visuais observadas. Ela não inventa quem está falando. O plano fica registrado no JSON para revisão e evolução posterior.
-
-## FFmpeg/NVENC
-
-O programa detecta `h264_nvenc`; se não estiver disponível usa `libx264` e registra isso no log.
-
-
-## Progresso visual V2
-
-A interface agora mostra progresso estruturado durante CURAR, TESTAR 1 CORTE e RENDERIZAR TODOS:
-
-- barra geral da operação;
-- barra da etapa atual;
-- `Etapa X/Y` e quantas etapas ainda faltam;
-- fluxo visual `✓ concluído / ▶ atual / ○ pendente`;
-- tempo decorrido;
-- ETA adaptativo da etapa e do total;
-- progresso real do FFmpeg durante o encode do preview/final;
-- progresso de geração das miniaturas e do lote corte a corte.
-
-O ETA começa como `calculando...` e só passa a estimar depois que existe progresso suficiente.
-# V4.4 — atualização integrada
-
-Runtime oficial: Windows/Python 3.11.x; testes locais em 3.11.9.
-Use **IMPORTAR SEGUNDA CURADORIA** para carregar o core ZIP e depois
-`SECOND_CURATION_DECISIONS.json`. O catálogo completo fica disponível no cache;
-decisões explícitas mantêm seus limites e identificam FIRST_PASS,
-SECOND_CURATOR, MANUAL_OVERRIDE ou AI_SECOND_CURATOR.
-
-**TESTAR 1 CORTE** refina a câmera com evidência do Analyzer ou micropercepção
-local a 6 fps. Face dominante não identifica o locutor. Crop/split reservam
-uma cópia inteira do GC; o verifier registra amostras do MP4. Revise o preview
-e use **APROVAR TESTE** antes do lote. Alterações de plano/MP4 invalidam aprovação.
-
-Mídia ausente oferece baixar novamente, selecionar original ou cancelar;
-o SHA256 deve coincidir com a análise. A limpeza apresenta estimativa e exige
-confirmação, preservando dados editoriais, pacotes, contact sheets e renders.
-Os arquivos e flags existentes anteriores à V4.4 permanecem preservados.
-
-## Feedback opcional V4.4
-
-`schemas/performance_feedback.schema.json` descreve views, retenção, likes,
-comentários, shares, completion rate, CTR e rótulos manuais. O helper
-`ldporto_curator.feedback.record_observed_performance` registra somente valores
-explicitamente fornecidos, valida o SHA256 da fonte e preserva desconhecidos
-como null. Nenhuma coleta externa, treinamento ou aprovação de render é executada.
+Os atalhos e a documentação foram organizados sem alteração no código do motor de curadoria.
