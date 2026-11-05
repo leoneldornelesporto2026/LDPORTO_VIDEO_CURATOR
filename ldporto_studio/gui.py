@@ -16,6 +16,7 @@ from .rendering import render_item,extract_editorial_assets,create_cover_from_fr
 from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
 from .workspace import project_output_root, import_existing_project
 from .catalog import discover_catalog, catalog_label, input_root
+from .editorial_script import export_project_script
 
 
 def open_file(path):
@@ -193,6 +194,8 @@ class CuratorApp(tk.Tk):
             ttk.Button(tools,text=label,command=fn).pack(side='left',padx=(0,4))
         ttk.Button(right,text='APLICAR SMART ZOOM AOS REELS',command=self.apply_smart_preset).pack(fill='x',pady=(6,2))
         ttk.Button(right,text='GERAR CAPAS PREMIUM DO SHOW',command=self.batch_premium_covers).pack(fill='x',pady=2)
+        ttk.Button(right,text='EXPORTAR ROTEIRO PARA GIT (SEM VÍDEO)',
+                   command=self.export_script).pack(fill='x',pady=2)
         ttk.Button(right,text='CANCELAR PROCESSAMENTO ATUAL',command=self.cancel_active).pack(anchor='w',pady=(4,0))
         ttk.Label(container,text='EXECUÇÃO • original preservado • revisão humana antes dos finais • sem publicação automática',
                   foreground='#94a8bd').pack(anchor='w',pady=(10,4))
@@ -491,7 +494,7 @@ class CuratorApp(tk.Tk):
             return messagebox.showerror('Link inválido',str(error))
         if not messagebox.askyesno('Usar vídeo do YouTube',
              'O Studio vai REAPROVEITAR um MP4 já salvo e íntegro, se existir. '
-             'Só fará novo download quando não houver uma cópia válida.\n\n'
+             'Novos downloads ficam na pasta VÍDEOS do Windows, fora do Git.\n\n'
              'Baixe apenas conteúdo para o qual tenha autorização de uso.\n\n'
              'Se a codificação divergir da análise, você poderá confirmar o uso '
              'para PRÉVIAS (não finais aprovados). Continuar?'):
@@ -641,6 +644,16 @@ class CuratorApp(tk.Tk):
                 self.project.update(c.id,layout='smart_zoom')
             return f'{len(rows)} Reels configurados para smart_zoom. Gere e revise as prévias.'
         self._task('Aplicando padrão smart_zoom apenas nos Reels...',work)
+
+    def export_script(self):
+        if self.busy or not self.project:
+            return messagebox.showwarning('Selecione um show','Abra um projeto com cortes.')
+        try:
+            if self.selected:self._save()
+        except Exception as error:
+            return messagebox.showerror('Revise o roteiro',str(error))
+        self._task('Exportando roteiro editorial (somente texto, sem vídeo)...',
+                   lambda:export_project_script(self.project))
 
     def batch_premium_covers(self):
         if self.busy or not self.project:return

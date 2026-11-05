@@ -1,4 +1,4 @@
-# Ambientes e saídas locais
+# Configurações de desenvolvimento e artefatos temporários
 __pycache__/
 *.py[cod]
 .venv/
@@ -6,13 +6,52 @@ venv/
 dist/
 build/
 *.spec
-media_downloads/
-downloads/
+.pytest_cache/
 .cache/
+.mypy_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+cookies.txt
+*.sqlite
+*.db
+*.log
+*.part
+*.part.*
+*.crdownload
+*.ytdl
 
-# TODOS os projetos e artefatos locais do Video Curator Studio
-/output/
-/output*/
+# Nunca versionar vídeo, áudio, imagens ou ZIP bruto.
+*.mp4
+*.mkv
+*.mov
+*.webm
+*.avi
+*.m4v
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.aac
+*.opus
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.zip
 
-# Pacotes recebidos do Analyzer: dados e ZIPs locais; nunca versionar
-/input/
+# Input recebe pacotes locais (R6 e editoriais), mas o Git só registra ROTEIROS.
+# O scanner lê ZIPs ignorados normalmente; o projeto não depende de git add.
+/input/*
+!/input/README.md
+!/input/scripts/
+
+# Output tem projetos locais, render, capas e downloads operacionais.
+# Apenas scripts editoriais exportados têm histórico Git.
+/output/*
+!/output/README.md
+!/output/scripts/

@@ -16,9 +16,12 @@ class OutputPathsTest(unittest.TestCase):
         root = application_root()
         self.assertEqual(project_output_root(), root / 'output' / 'projects')
 
-    def test_gitignore_excludes_output_folder(self):
+    def test_gitignore_tracks_only_editorial_scripts(self):
         lines=(application_root()/'.gitignore').read_text(encoding='utf-8').splitlines()
-        self.assertIn('/output/',lines)
+        self.assertIn('/output/*',lines)
+        self.assertIn('!/output/scripts/',lines)
+        self.assertIn('/input/*',lines)
+        self.assertNotIn('/output/',lines)
 
 
 @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'FFmpeg needed')

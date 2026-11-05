@@ -26,7 +26,7 @@ Para instalar o FFmpeg via winget quando disponível: `winget install --id Gyan.
 - **Legendas**: ASS/SRT do R57 são *rascunhos*; a revisão humana é obrigatória antes de embutir no vídeo. Um corte Reel cuja janela mudou exige novo alinhamento.
 - **Câmera**: fonte 16:9 é preservada integralmente com fundo desfocado por padrão; crop manual requer inspeção humana.
 - **Stories**: a ordem original é intocável em V1.0, evitando gaps artificiais, embora o início/fim por minuto possa precisar de revisão editorial futura.
-- **Saídas**: todos os projetos, downloads, prévias, finais e capas ficam em `output/projects/` dentro da raiz do código, com `output/` ignorado pelo Git. Cada execução usa uma pasta isolada; falhas preservam logs. O render final é bloqueado sem aprovação da prévia atual.
+- **Saídas**: projetos, prévias, finais e capas ficam em `output/projects/` ignorado pelo Git; novos downloads ficam na pasta Vídeos do Windows e não são versionados. Cada execução usa uma pasta isolada; falhas preservam logs. O render final é bloqueado sem aprovação da prévia atual.
 - **Direitos**: aprovação do preview não comprova direitos; nenhum upload automático ou postagem está disponível.
 
 ## Limitações verificadas
@@ -58,14 +58,20 @@ Quando o YouTube entrega outra codificação, o botão **BAIXAR VÍDEO DO YOUTUB
 
 Use o seletor **Enquadramento**: `preserve`, `center_crop`, `solo_fit` ou `smart_zoom`. Os modos automáticos inspecionam amostras de quadros com OpenCV e geram `CAMERA_PLAN.json` dentro de cada prévia. Uma pessoa de corpo inteiro com margem lateral permite crop; cenas com banda, mais de um rosto, cortes bruscos ou baixa confiança caem para composição 16:9 completa (fundo desfocado). Esse detector clássico é limitado: nenhum enquadramento é declarado aprovado sem a inspeção visual de uma pessoa.
 
-O botão **APLICAR SMART ZOOM AOS 12 REELS** altera somente configurações locais de edição (não o ZIP), podendo invalidar prévias e aprovações anteriores. **GERAR 72 CAPAS PREMIUM DO MP4** usa quadros da mídia associada e escreve em `output/projects/<id>/exports/covers_premium`, ignorado pelo Git. As capas originais R57 são preservadas.
+O botão **APLICAR SMART ZOOM AOS 12 REELS** altera somente configurações locais de edição (não o ZIP), podendo invalidar prévias e aprovações anteriores. **GERAR 72 CAPAS PREMIUM DO MP4** usa quadros da mídia associada e escreve em `output/projects/<id>/exports/covers_premium`, preservado apenas no Windows. As capas originais R57 são preservadas.
 
 Reinstale dependências com `python -m pip install -r .\requirements.txt` na mesma `.venv` que executa o programa. Testes: `python -m unittest discover -s tests -v`. A compatibilidade com os momentos reais do show e a validade das legendas ainda exigem inspeção no Windows.
 
 ## Selecionar shows processados em input/
 
-A GUI agora abre um seletor de shows detectados. Coloque os ZIPs do Analyzer em `input/analyzer/<video_id>/<run_id>/` e, quando a segunda curadoria estiver pronta, coloque o ZIP R57 compatível em qualquer subpasta de `input/`. A pasta é criada automaticamente e ignorada pelo Git. Clique **ATUALIZAR INPUT**, selecione o pacote/show e depois **ABRIR / SELECIONAR CORTES**.
+A GUI agora abre um seletor de shows detectados. Coloque os ZIPs do Analyzer em `input/analyzer/<video_id>/<run_id>/` e, quando a segunda curadoria estiver pronta, coloque o ZIP R57 compatível em qualquer subpasta de `input/`. A pasta de entrada é criada automaticamente; ZIPs ficam locais, apenas roteiros em `input/scripts/` entram no Git. Clique **ATUALIZAR INPUT**, selecione o pacote/show e depois **ABRIR / SELECIONAR CORTES**.
 
 Quando a escolha for um projeto de `output/projects/`, o Studio abre os Reels/Stories já processados, mantendo todos os MP4s e aprovações de revisão anteriores. Quando for um ZIP do Analyzer R6, ele identifica o show e seus candidatos, mas não renderiza: depende da segunda curadoria compatível. Nenhum nome de banda é adicionado manualmente à lista.
 
-O catálogo somente examina metadados limitados em ZIPs e não os extrai. Execute `python -m ldporto_studio catalog` para diagnóstico. Não mova/deleta os projetos existentes ao organizar a biblioteca; `input/` e `output/` não são versionados.
+O catálogo somente examina metadados limitados em ZIPs e não os extrai. Execute `python -m ldporto_studio catalog` para diagnóstico. Não mova/deleta os projetos existentes ao organizar a biblioteca; os roteiros em `input/scripts/` e `output/scripts/` podem ser versionados, sem incluir vídeos nem ZIPs.
+
+## Roteiros compartilháveis e downloads no Windows
+
+Os downloads do YouTube vão para a pasta **Vídeos do Windows/LDPORTO_VIDEO_CURATOR**, respeitando a localização configurada do Windows. Projetos, previews e finais permanecem em `output/projects/`. Os downloads antigos no projeto são reutilizados quando SHA256 e recibo de integridade conferirem, sem mover arquivos automaticamente.
+
+`input/` e `output/` são diretórios visíveis no Git, mas seus pacotes ZIP, MP4s, imagens e estado local são ignorados. Somente **scripts editoriais** sob `input/scripts/` e `output/scripts/` podem ser commitados. Pressione **EXPORTAR ROTEIRO PARA GIT (SEM VÍDEO)** para registrar títulos, cortes, horários, legenda e camera plan sem mídia; no PowerShell execute `git add input/scripts output/scripts` e `python scripts/check_git_review_payload.py` antes de revisar e criar o commit manualmente.

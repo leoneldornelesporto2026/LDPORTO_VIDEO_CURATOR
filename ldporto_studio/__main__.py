@@ -40,6 +40,8 @@ def main(argv=None):
     a=sub.add_parser('covers-premium',help='Gerar capas com card viral a partir do MP4')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--kind',choices=('all','reels','stories'),default='all')
+    a=sub.add_parser('export-script',help='Exportar apenas roteiro/câmera/legendas para output/scripts (sem mídia)')
+    a.add_argument('--workdir',required=True,type=Path)
     a=sub.add_parser('catalog',help='Listar shows e curadorias realmente presentes em input/ e output/')
     a.add_argument('--input',type=Path)
     a.add_argument('--projects',type=Path)
@@ -80,6 +82,12 @@ def main(argv=None):
             progress=lambda e: print(f"{e['phase']}: {e.get('detail','')}",flush=True) if e.get('phase')!='baixando' else None)
         print(json.dumps(record,ensure_ascii=False,indent=2))
         return 0 if record['linked'] else 3
+    if args.cmd=='export-script':
+        from .editorial_script import export_project_script
+        path=export_project_script(project)
+        print(json.dumps({'status':'SCRIPT_EXPORTED','path':str(path),
+                          'contains_video':False},ensure_ascii=False,indent=2))
+        return 0
     if args.cmd=='covers-premium':
         from .rendering import generate_premium_covers
         folder,count=generate_premium_covers(project,args.kind)

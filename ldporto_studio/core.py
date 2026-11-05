@@ -335,9 +335,10 @@ class Project:
         if record is None:
             raise ValueError('Nenhum download divergente registrado neste projeto')
         path=Path(record['path']).resolve()
-        root=(self.dir/'downloads'/'attempts').resolve()
-        if not path.is_relative_to(root) or not path.is_file() or path.suffix.lower() not in VIDEO_EXT:
-            raise ValueError('Vídeo baixado não está na pasta de tentativas deste projeto')
+        from .youtube_download import managed_download_path
+        if (not managed_download_path(self,path,record.get('video_id'))
+            or not path.is_file() or path.is_symlink()):
+            raise ValueError('Vídeo não está numa pasta gerenciada em Vídeos do Windows ou downloads antigos')
         receipt=read_json(path.parent/'download_report.json',{}) or {}
         if receipt!=record or receipt.get('expected_sha256')!=self.package.source_sha:
             raise ValueError('Relatório do download ausente, alterado ou de outra análise')
@@ -393,15 +394,19 @@ class Project:
         digest=self.active_media_sha()
         mode=self.state.get('media_mode','EXACT_ANALYZER_SOURCE')
         if mode=='ALTERNATE_REVIEW_SOURCE':
+            from .youtube_download import managed_download_path
             assoc=self.state.get('source_association') or {}
             report=read_json(p.parent/'download_report.json',{}) or {}
+            video_id=assoc.get('youtube_video_id') or report.get('video_id')
             if (digest==self.package.source_sha
                 or assoc.get('status')!='HUMAN_ACCEPTED_FOR_PREVIEWS_ONLY'
                 or assoc.get('actual_media_sha256')!=digest
                 or assoc.get('analyzer_source_sha256')!=self.package.source_sha
                 or report.get('sha256')!=digest
                 or report.get('status')!='SOURCE_REVIEW_REQUIRED'
-                or not p.resolve().is_relative_to((self.dir/'downloads'/'attempts').resolve())):
+                or report.get('expected_sha256')!=self.package.source_sha
+                or (assoc.get('youtube_video_id') and report.get('video_id')!=assoc.get('youtube_video_id'))
+                or not managed_download_path(self,p,video_id)):
                 raise ValueError('Vínculo de revisão da mídia alternativa inválido')
         elif mode!='EXACT_ANALYZER_SOURCE' or digest!=self.package.source_sha:
             raise ValueError('A origem declarada diverge do Analyzer')

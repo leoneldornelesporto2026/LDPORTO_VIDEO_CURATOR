@@ -5,6 +5,7 @@ its R57 project only when the exact SHA256 of the analyzed source matches.
 """
 from __future__ import annotations
 
+import os
 import re
 import threading
 from pathlib import Path
@@ -69,6 +70,39 @@ def suggested_youtube_url(package) -> str:
     return f'https://www.youtube.com/watch?v={video_id}' if video_id else ''
 
 
+def videos_download_root() -> Path:
+    """Use the Windows Videos known folder, not the Git repository output/.
+
+    Files are not copied/moved automatically; earlier project-local attempts remain
+    supported and retain their original integrity receipts.
+    """
+    base=Path.home() / 'Videos'
+    if os.name == 'nt':
+        try:
+            import winreg
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                  r'Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders') as key:
+                configured,_=winreg.QueryValueEx(key,'My Video')
+                if isinstance(configured,str) and configured:
+                    expanded=os.path.expandvars(configured)
+                    if not re.search(r'%[A-Za-z_][A-Za-z_0-9]*%',expanded):
+                        base=Path(expanded).expanduser()
+        except (OSError,ImportError):
+            pass
+    return base.resolve() / 'LDPORTO_VIDEO_CURATOR'
+
+
+def managed_download_path(project, path, video_id: str) -> bool:
+    """Allow old project-local and new Windows Videos copies; block arbitrary paths."""
+    p=Path(path).resolve()
+    if (not video_id or not _VIDEO_ID.fullmatch(video_id)
+        or p.suffix.lower() not in VIDEO_EXT):
+        return False
+    old_root=(project.dir/'downloads'/'attempts').resolve()
+    video_root=(videos_download_root()/video_id/project.package.digest[:12]).resolve()
+    return p.is_relative_to(old_root) or p.is_relative_to(video_root)
+
+
 def existing_youtube_download(project, url: str) -> dict | None:
     """Reuse only the latest recorded, unchanged download of the SAME video.
 
@@ -90,8 +124,8 @@ def existing_youtube_download(project, url: str) -> dict | None:
         if not raw_path or not isinstance(raw_path, str):
             continue
         source = Path(raw_path).expanduser().resolve()
-        if (not source.is_relative_to((project.dir / 'downloads' / 'attempts').resolve())
-            or not source.is_file() or source.suffix.lower() not in VIDEO_EXT):
+        if (not managed_download_path(project,source,video_id)
+            or not source.is_file() or source.is_symlink()):
             continue
         receipt = read_json(source.parent / 'download_report.json', {}) or {}
         if receipt != record:
@@ -106,7 +140,7 @@ def existing_youtube_download(project, url: str) -> dict | None:
 
 
 def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> dict:
-    """Download to a new project-local attempt and check source identity.
+    """Download into the Windows Videos folder and check source identity.
 
     A SHA mismatch is a completed DOWNLOAD, not a verified media association.
     The file remains isolated for manual analysis, with a machine-readable report.
@@ -131,7 +165,7 @@ def download_from_youtube(project, url: str, *, progress=None, cancel=None) -> d
         raise RuntimeError('yt-dlp não instalado. Execute INSTALAR_WINDOWS.bat novamente.') from error
     from .rendering import binaries, probe_media
     binaries()  # FFmpeg/FFprobe must exist before any download/merge.
-    attempt = project.dir / 'downloads' / 'attempts' / uuid4().hex
+    attempt = videos_download_root() / video_id / project.package.digest[:12] / uuid4().hex
     attempt.mkdir(parents=True, exist_ok=False)
 
     def report_progress(phase, percentage=None, detail=''):

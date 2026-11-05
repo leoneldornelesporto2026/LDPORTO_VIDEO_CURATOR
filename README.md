@@ -9,7 +9,7 @@
 3. Execute `INICIAR_WINDOWS.bat`. A instalação e a GUI usam o mesmo Python do ambiente virtual ativado ou da `.venv` local; no PowerShell use `\.\INSTALAR_WINDOWS.bat` e `\.\INICIAR_WINDOWS.bat`.
 4. O exemplo `example/CURADORIA_R57.zip` será carregado e verificado. Se preferir, use **CARREGAR CURADORIA ZIP**.
 5. **BAIXAR VÍDEO DO YOUTUBE**: cole a URL HTTPS e clique. O Studio **reaproveita uma cópia já baixada e conferida**, evitando downloads repetidos. Se o SHA256 for diferente mas o ID/duração forem compatíveis, oferece imediatamente a opção de vincular para **gerar prévias de revisão**. Isso não aprova os cortes: cada um exige inspeção do áudio, contexto e câmera. Você também pode usar **VINCULAR MP4 ORIGINAL** para o arquivo exato da análise. Baixe somente conteúdo que você tem direito de utilizar.
-6. **SE O SHA256 DIVERGIR:** o download fica em `downloads/attempts/`. Clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**: com o mesmo ID, áudio/vídeo, duração compatível (±3 s) e confirmação explícita, permite prévias com o hash real da cópia baixada. **Isso não prova que o áudio e os timestamps coincidam.** Confira cada prévia; se o trecho estiver deslocado, refaça a análise para o MP4 baixado. O pacote R57 e o SHA original permanecem intactos.
+6. **SE O SHA256 DIVERGIR:** novos downloads ficam na pasta **Vídeos do Windows**, em `Videos/LDPORTO_VIDEO_CURATOR/<video_id>/`; arquivos antigos em `output/projects/<projeto>/downloads/` continuam aceitos. Clique **USAR DOWNLOAD NAS PRÉVIAS (REVISÃO)**: com o mesmo ID, áudio/vídeo, duração compatível (±3 s) e confirmação explícita, permite prévias com o hash real da cópia baixada. **Isso não prova que o áudio e os timestamps coincidam.** Confira cada prévia; se o trecho estiver deslocado, refaça a análise para o MP4 baixado. O pacote R57 e o SHA original permanecem intactos.
 7. Escolha um Reel ou Story, revise início/fim, título, crop e legendas. O padrão usa **fonte horizontal preservada em canvas vertical com fundo desfocado**. Legendas ASR estão desligadas até conferência humana.
 8. Gere a prévia em **540×960**, abra e assista, confirme revisão de áudio e câmera e clique **APROVAR PRÉVIA**.
 9. Gere o MP4 final em **1080×1920**. Use **EXPORTAR CAPAS + PLANOS** para extrair as 72 capas, arquivos ASS/SRT e metadados.
@@ -21,7 +21,7 @@
 - Verificação integral de SHA256 de todos os membros do ZIP e da mídia original.
 - Download **manual** por campo URL, com yt-dlp, progresso, cancelamento, pasta isolada e relatório.
 - **Modo de prévia com fonte alternativa:** confirma identidade e duração, nunca troca o SHA da análise e exige revisão de áudio/contexto por corte; ao mudar mídia, invalida aprovações.
-- Entrada imutável, projetos salvos em `Vídeos/LDPORTO_CURATOR_STUDIO_PROJECTS`, com histórico de tentativas.
+- Entrada imutável e projetos em `output/projects/`; vídeos baixados no diretório Vídeos do Windows, com recibos de integridade.
 - Prévia e final usando FFmpeg/H.264 AAC; todas as saídas passam por FFprobe.
 - Formato 9:16 com 16:9 integral preservado e fundo desfocado, crop manual, **solo_fit** (pessoa única inteira) ou **smart_zoom** (acompanhamento horizontal suave, com fallback 16:9 quando não há detecção segura).
 - Card branco arredondado **L.D.PORTO.OFICIAL / AO VIVO**, título preto viral, detalhe amarelo e rodapé, exibido nos primeiros 3,2 segundos.
@@ -67,7 +67,7 @@ A opção **VER SRT PARA REVISÃO** abre o rascunho de texto. Corrija e sincroni
 
 ## Saídas locais: tudo dentro do projeto original
 
-O código fica somente na pasta `LDPORTO_VIDEO_CURATOR`. A interface salva novos projetos em **`output/projects/<projeto>/`**; downloads do YouTube, previews, MP4s finais, capas exportadas, relatórios, revisões e históricos ficam dentro dessa árvore. A pasta `output/` está no `.gitignore`: o GitHub não recebe mídia nem renders.
+O código fica na pasta `LDPORTO_VIDEO_CURATOR`. Projetos e MP4s renderizados ficam em **`output/projects/<projeto>/`**, e vídeos baixados ficam em **Vídeos do Windows/LDPORTO_VIDEO_CURATOR/**. `input/` contém ZIPs de análise recebidos localmente. Só roteiros textuais em **`output/scripts/` ou `input/scripts/`** entram no Git; todo o restante é ignorado.
 
 Projetos antigos de `C:\Users\leone\Videos\LDPORTO_CURATOR_STUDIO_PROJECTS` **não são movidos automaticamente**. Para preservar o Reel já gerado, clique **IMPORTAR PROJETO ANTIGO** e escolha a pasta com `project.json`. O Curator copia para `output/projects`, reconcilia os caminhos internos de downloads e mantém a pasta original como backup. Também é possível:
 
@@ -102,7 +102,7 @@ O ZIP R57 original, os vídeos anteriores e os projetos locais são preservados.
 ## Inbox do Analyzer — evidências para segunda curadoria
 
 O Analyzer poderá entregar o ZIP nativo em `input/analyzer/<video_id>/<run_id>/`.
-O diretório `input/` é ignorado pelo Git e não altera os projetos ou renders existentes.
+O conteúdo de `input/analyzer/` é local e ignorado pelo Git; apenas `input/scripts/` é versionável.
 Esse ZIP **não é** o formato editorial R57 importável pela interface atual.
 Para inspecionar integridade e recibo, sem importar, executar:
 
@@ -125,10 +125,27 @@ Ao abrir, o Studio **não importa automaticamente o Charlie Brown Jr.**: oferece
 - `input/analyzer/<video_id>/<run_id>/*.zip` → **ANALYZER R6 — AGUARDANDO SEGUNDA CURADORIA**: mostra título real, candidatos e run ID, mas **não** interpreta esse pacote como o formato editorial R57. É necessário produzir uma segunda curadoria compatível.
 - Arquivos MP4 sem evidências de análise não aparecem como programas processados. Um novo show, como CPM 22 ao vivo, aparecerá **somente após existir um pacote válido ou projeto real**, não há bandas inventadas no catálogo.
 
-Os dados de entrada ficam locais, em `input/`, agora no `.gitignore`. Todos os vídeos, renders, capas, planos de câmera e edições permanecem em `output/`, igualmente ignorado. O scanner lê apenas metadados JSON limitados dos ZIPs; não extrai nem executa arquivos recebidos. A importação R57 executa a validação SHA256 integral já existente. Os módulos `smart_camera.py`, `visual_style.py` e `rendering.py` continuam sendo o único motor dos modos `preserve`, `center_crop`, `solo_fit` e `smart_zoom`.
+Os ZIPs de entrada ficam locais em `input/analyzer/`, ignorados pelo Git. Os renders, capas e estado operacional ficam em `output/projects/`, também ignorados. Somente scripts de edição em `input/scripts/` e `output/scripts/` são versionáveis. O scanner lê apenas metadados JSON limitados dos ZIPs; não extrai nem executa arquivos recebidos. A importação R57 executa a validação SHA256 integral já existente. Os módulos `smart_camera.py`, `visual_style.py` e `rendering.py` continuam sendo o único motor dos modos `preserve`, `center_crop`, `solo_fit` e `smart_zoom`.
 
 Consultar catálogo sem abrir GUI:
 
 ```powershell
 python -m ldporto_studio catalog
 ```
+
+## Contrato final — Vídeos do Windows + Git somente de roteiros
+
+O botão **BAIXAR VÍDEO DO YOUTUBE** salva novos arquivos na pasta **Vídeos do Windows**, sob `LDPORTO_VIDEO_CURATOR/<video_id>/<source_package_sha>/...`. Essa pasta respeita o local de Vídeos configurado no Windows. Downloads antigos guardados dentro de `output/projects/.../downloads/` continuam reconhecidos por SHA256, sem migração nem novo download obrigatório.
+
+O Curator mantém `input/analyzer/` como caixa de entrada de ZIPs e `output/projects/` como trabalho local. Apenas os roteiros sem mídia são registrados pelo Git em `output/scripts/` (ou `input/scripts/`): títulos, timestamps, layouts, `smart_zoom`, `solo_fit`, planos de câmera revisáveis e estados das legendas. Nada de vídeos, áudio, imagens, ZIPs ou o arquivo operacional `project.json`.
+
+Para exportar um roteiro pelo próprio Studio, clique **EXPORTAR ROTEIRO PARA GIT (SEM VÍDEO)** ou use:
+
+```powershell
+python -m ldporto_studio export-script --workdir ".\output\projects\CURADORIA_R57_69769168cf"
+git add output/scripts input/scripts
+python scripts/check_git_review_payload.py
+git diff --cached --stat
+```
+
+O roteiro tem nome de revisão baseado no conteúdo; versões antigas não são sobrescritas. Não ocorre commit ou push automático. O histórico Git pode ser consultado posteriormente para comparar escolhas editoriais; não é uma cópia dos arquivos de vídeo na memória do ChatGPT.

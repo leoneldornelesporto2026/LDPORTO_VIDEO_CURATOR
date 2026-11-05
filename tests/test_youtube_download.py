@@ -60,6 +60,12 @@ class FakeDownloadTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.temp.cleanup()
 
+    def setUp(self):
+        self._videos_patch=patch('ldporto_studio.youtube_download.videos_download_root',
+                                 return_value=self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR')
+        self._videos_patch.start()
+        self.addCleanup(self._videos_patch.stop)
+
     def project(self):
         import uuid
         return Project.create(self.archive, self.root / uuid.uuid4().hex)
@@ -105,7 +111,7 @@ class FakeDownloadTests(unittest.TestCase):
         self.assertTrue(again['reused_existing'])
         self.assertEqual(first['path'],again['path'])
         self.assertEqual(len(project.state['download_history']),before)
-        self.assertEqual(len(list((project.dir/'downloads'/'attempts').iterdir())),1)
+        self.assertEqual(len(list((self.root/'WindowsVideos'/'LDPORTO_VIDEO_CURATOR').rglob('source.mp4'))),1)
 
     def test_second_download_does_not_reuse_changed_media(self):
         project=self.project()
