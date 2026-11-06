@@ -148,6 +148,15 @@ class R57PreviewDraftTests(unittest.TestCase):
             main(args + ['--save'])
         self.assertFalse((self.folder/'output'/'projects').exists())
 
+    def test_gui_exposes_confirmed_preview_build_without_automatic_import(self):
+        source=(Path(__file__).resolve().parents[1] /
+                'ldporto_studio'/'r6_review_gui.py').read_text(encoding='utf-8')
+        self.assertIn('GERAR ZIP R57 (SÓ PRÉVIAS)',source)
+        self.assertIn('filedialog.askopenfilename(',source)
+        self.assertIn('filedialog.askdirectory(',source)
+        self.assertIn('confirm_preview_only=True',source)
+        self.assertNotIn('Project.create(',source)
+
     def test_asset_from_untrusted_path_is_refused(self):
         doc=json.loads(self.binding.read_text(encoding='utf-8'))
         doc['clips'][0]['assets']['thumbnail']='../outside.png'

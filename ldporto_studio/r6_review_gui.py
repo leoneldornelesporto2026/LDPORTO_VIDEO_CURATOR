@@ -6,7 +6,7 @@ or changes approvals. Saving produces a media-free review script.
 from __future__ import annotations
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 from .r6_review import export_editorial_draft, LAYOUTS
 from .r6_workflow import FILTERS, select_visible_candidates, summarize_review
 
@@ -115,6 +115,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                    command=self._propose_story_windows).pack(side='right')
         ttk.Button(story_actions,text='CHECKLIST ASSETS R57',
                    command=self._export_asset_template).pack(side='right',padx=(0,6))
+        ttk.Button(story_actions,text='GERAR ZIP R57 (SÓ PRÉVIAS)',
+                   command=self._build_preview_r57).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
                   text='Somente divisões técnicas da duração; confirme conteúdo e cortes depois.').pack(side='left')
         footer=ttk.Frame(outer)
@@ -292,6 +294,54 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         messagebox.showinfo('Template de assets salvo',
             f'Arquivo:\n{path}\n\n'
             'Preencha caminhos relativos dos arquivos reais e audite pela CLI.',
+            parent=self)
+
+    def _build_preview_r57(self):
+        if self.last_exported_path is None or self.last_story_proposal_path is None:
+            messagebox.showwarning(
+                'Roteiro R6 e proposta de Stories obrigatórios',
+                'Primeiro exporte os Reels selecionados e proponha os Stories.',
+                parent=self)
+            return
+        bindings = filedialog.askopenfilename(
+            parent=self,
+            title='Selecione o JSON de assets preenchido com caminhos reais',
+            filetypes=[('Arquivos JSON', '*.json')])
+        if not bindings:
+            return
+        assets_root = filedialog.askdirectory(
+            parent=self, title='Escolha a pasta que contém as capas e legendas reais')
+        if not assets_root:
+            return
+        if not messagebox.askyesno(
+                'Gerar R57 só para prévias?',
+                'O Studio irá validar capas, ASS e SRT e criar um ZIP R57 '
+                'importável somente para iniciar a revisão.\n'
+                'As divisões de Stories NÃO foram aprovadas. '
+                'Nenhum MP4 final ou publicação será executado.',
+                parent=self):
+            return
+        self.configure(cursor='watch')
+        self.update_idletasks()
+        try:
+            from .r6_r57_preview_package import build_preview_archive
+            result = build_preview_archive(
+                self.review['inbox_folder'],
+                self.last_exported_path,
+                self.last_story_proposal_path,
+                bindings, assets_root,
+                confirm_preview_only=True)
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('ZIP R57 não gerado', str(exc), parent=self)
+            return
+        finally:
+            self.configure(cursor='')
+        self.selection_status.set('R57 PARA PRÉVIAS: ' + result['zip_path'])
+        messagebox.showinfo(
+            'Pacote R57 para revisão criado',
+            f"ZIP validado: \n{result['zip_path']}\n\n"
+            'Agora importe no Studio, associe a fonte original por SHA256 '
+            'e revise as prévias antes de qualquer aprovação.',
             parent=self)
 
     def _prepare_r57_plan(self):

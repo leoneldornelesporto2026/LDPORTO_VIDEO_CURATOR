@@ -310,3 +310,8 @@ python -m ldporto_studio r6-r57-preview-package --inbox "<curator>/input/analyze
 Somente quando os arquivos reais existirem e estiverem íntegros, acrescentar \`--save --confirm-preview-only\`. O comando gera um ZIP idempotente em \`output/r6_bridge/<source-sha-prefix>/R57_PREVIEW_DRAFT_<fingerprint>.zip\`, com os **cinco JSONs de contrato** e \`REELS/<id>/\`/\`STORIES/<id>/\` contendo os assets fornecidos e \`LEGENDA_REVISAO.json\` (estado rascunho). O novo ZIP é validado pelo importador estrito \`CuradoriaPackage\` antes de ser publicado.
 
 Um R57 de prévias é **importável**, mas os Stories foram apenas divididos tecnicamente, e todas as revisões humanas de transcrição, enquadramento, áudio, direitos e prévia permanecem pendentes. Não há geração de finais, aprovação ou publicação. O Studio continua exigindo revisão/preview por corte e não permite finais sem confirmação própria. O novo ZIP fica fora de \`input/\` por padrão; a CLI existente \`python -m ldporto_studio import --zip <zip> --workdir <pasta_vazia>\` pode criar um projeto isolado quando o operador decidir. O projeto existente Charlie Brown Jr. não é modificado.
+
+
+### Botão na segunda curadoria
+
+Depois de salvar o roteiro de Reels, propor Stories e preencher o checklist com os arquivos locais reais, o botão **GERAR ZIP R57 (SÓ PRÉVIAS)** solicita o JSON de assets preenchido, sua pasta raiz e confirmação explícita. O resultado é um ZIP validado pelo `CuradoriaPackage` na pasta `output/r6_bridge/`, sem importar projetos, associar mídia nem gerar vídeos automaticamente. A criação do projeto e a associação SHA exata da fonte acontecem depois, no fluxo normal do Studio.
