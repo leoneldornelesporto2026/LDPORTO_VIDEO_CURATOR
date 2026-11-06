@@ -18,10 +18,11 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 from .core import CuradoriaPackage, fingerprint, json_bytes, sha256_bytes, sha256_file
 from .r6_asset_bindings import _verify_asset, audit_asset_bindings
 from .r6_r57_bridge import prepare_r57_bridge
+from .r6_review import read_analyzer_review
 from .workspace import application_root
 
 MAX_R57_FILES = 1500
-MAX_TOTAL_BYTES = 550 * 1024 * 1024
+MAX_TOTAL_BYTES = 256 * 1024 * 1024
 REQUIRED_PER_CLIP = ('thumbnail', 'caption_ass', 'caption_srt')
 REVIEW_STATUS = 'DRAFT_NOT_HUMAN_REVIEWED'
 
@@ -61,6 +62,15 @@ def prepare_preview_archive(inbox, draft, story_proposal, bindings, assets_root)
         raise ValueError('Seleção explícita de Reel e proposta de Stories obrigatórias')
     if len(reels) + len(stories) != len(report['clips']):
         raise ValueError('Contagem de cortes e assets divergente')
+    if (4 * len(report['clips']) + 5) > MAX_R57_FILES:
+        raise ValueError('Número de assets excede limite de entradas do Studio')
+    # Bound memory BEFORE reading real images/captions into the ZIP builder.
+    total_input_bytes = sum(
+        asset['bytes']
+        for row in report['clips'] for asset in row['assets'].values()
+        if asset is not None)
+    if total_input_bytes > MAX_TOTAL_BYTES - (8 * 1024 * 1024):
+        raise ValueError('Arquivos de assets excedem o limite de montagem da prévia')
 
     all_files = {}
     clip_rows = {'reels': [], 'stories': []}
@@ -105,7 +115,14 @@ def prepare_preview_archive(inbox, draft, story_proposal, bindings, assets_root)
     source = provenance['source_sha256']
     duration = provenance['source_duration_seconds']
     run_id = provenance['r6_run_id']
+    source_review = read_analyzer_review(inbox)
+    source_metadata = source_review['source']
+    if (source_metadata['run_id'] != run_id
+            or source_metadata['source_sha256'] != source):
+        raise ValueError('Identidade da fonte mudou durante a preparação do R57')
     all_files['EXECUTION_PLAN.json'] = json_bytes({
+        'source_title': source_metadata['title'],
+        'source_url': source_metadata.get('url', ''),
         'source_sha256': source,
         'source_duration_seconds': duration,
         'run_id': run_id,
