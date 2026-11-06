@@ -20,6 +20,7 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         self.current=None
         self.chosen_ids=set()
         self.last_exported_path=None
+        self.last_story_proposal_path=None
         self.rows={row['candidate_id']:row for row in review['candidates']}
         self.summary=summarize_review(review)
         source=review['source']
@@ -108,8 +109,14 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         self.evidence=tk.Text(right,height=14,wrap='word',state='disabled',
                               font=('Consolas',9))
         self.evidence.pack(fill='both',expand=True,pady=(3,5))
+        story_actions=ttk.Frame(outer)
+        story_actions.pack(fill='x',pady=(8,0))
+        ttk.Button(story_actions,text='PROPOR STORIES (SEM APROVAR)',
+                   command=self._propose_story_windows).pack(side='right')
+        ttk.Label(story_actions,
+                  text='Somente divisões técnicas da duração; confirme conteúdo e cortes depois.').pack(side='left')
         footer=ttk.Frame(outer)
-        footer.pack(fill='x',pady=(10,0))
+        footer.pack(fill='x',pady=(8,0))
         self.selection_status=tk.StringVar(value='Nenhum marcado para o roteiro.')
         ttk.Label(footer,textvariable=self.selection_status,wraplength=650).pack(side='left',fill='x',expand=True)
         ttk.Button(footer,text='EXPORTAR MARCADOS — ROTEIRO JSON',
@@ -235,6 +242,33 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         from .gui import open_file
         open_file(self.last_exported_path.parent)
 
+    def _propose_story_windows(self):
+        if self.last_exported_path is None:
+            messagebox.showwarning(
+                'Exporte a seleção R6',
+                'É necessário exportar um roteiro de candidatos antes de propor Stories.',
+                parent=self)
+            return
+        if not messagebox.askyesno(
+                'Divisão técnica para Stories',
+                'Criar uma proposta de janelas contínuas, cada uma com no máximo 60 segundos?\\n'
+                'NÃO são cenas identificadas, Stories aprovados ou conteúdo pronto.',
+                parent=self):
+            return
+        try:
+            from .r6_story_timeline import export_story_proposal
+            path=export_story_proposal(self.review['inbox_folder'],self.last_exported_path)
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Não foi possível propor Stories',str(exc),parent=self)
+            return
+        self.last_story_proposal_path=path
+        self.selection_status.set('PROPOSTA DE STORIES: '+str(path))
+        messagebox.showinfo(
+            'Timeline técnica proposta',
+            f'Proposta registrada em:\\n{path}\\n\\n'
+            'Divisões ainda precisam de revisão editorial; nenhum Story foi aprovado.',
+            parent=self)
+
     def _prepare_r57_plan(self):
         if self.last_exported_path is None:
             messagebox.showwarning(
@@ -251,7 +285,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         try:
             from .r6_r57_bridge import export_r57_bridge
             path=export_r57_bridge(
-                self.review['inbox_folder'],self.last_exported_path)
+                self.review['inbox_folder'],self.last_exported_path,
+                story_proposal_path=self.last_story_proposal_path)
         except (ValueError, OSError, TypeError, KeyError) as exc:
             messagebox.showerror('Plano R57 bloqueado',str(exc),parent=self)
             return
@@ -294,6 +329,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         except (ValueError,OSError,TypeError) as exc:
             messagebox.showerror('Não foi possível exportar',str(exc),parent=self)
             return
+        if self.last_exported_path != path:
+            self.last_story_proposal_path=None
         self.last_exported_path=path
         self.selection_status.set('ROTEIRO EXPORTADO: '+str(path))
         if self.on_export:

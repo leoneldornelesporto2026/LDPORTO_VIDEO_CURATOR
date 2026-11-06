@@ -271,3 +271,17 @@ Para a listagem integral, inclusive testes locais:
 python -m ldporto_studio catalog
 ```
 O resultado informa `count`, `total_discovered` e `hidden_from_view`. A consulta não modifica projetos, inbox nem Git. No piloto de 06/11/2026, a listagem integral continha 52 entradas: 1 projeto CBJR existente, 3 pacotes R6 reais (2 NASA, 1 CBJR) e 48 registros de testes/diagnósticos, preservados no disco.
+
+
+## P1.2 — Proposta de timeline Stories baseada somente na duração (sem aprovação)
+
+O novo `r6-story-propose` usa **somente** o SHA e a duração real de um R6 validado e a seleção editorial de Reels já exportada. Divide a fonte em janelas técnicas contínuas com no máximo 60 segundos, mas **não inventa Stories do Analyzer, eventos de cena ou legendas**. São sugestões para edição, não seleção/curadoria final. No vídeo NASA (158,654 segundos), a divisão técnica corresponde a **3 janelas** contíguas, cada uma com cerca de 52,9 segundos. `source_story_candidate_count=0` permanece zero.
+
+Após selecionar os cortes na GUI e exportar o roteiro R6, o botão **PROPOR STORIES (SEM APROVAR)** gera um JSON ignorado pelo Git em `output/r6_bridge/<sha-prefix>/R6_STORY_PROPOSAL_<hash>.json`, idempotente por conteúdo. O botão **PLANO R6 → R57 (PENDÊNCIAS)** pode vincular a proposta à lista de lacunas R57, sem torná-la importável.
+
+CLI somente leitura:
+```powershell
+python -m ldporto_studio r6-story-propose --inbox ".\input\analyzer\<video_id>\<run_id>" --draft ".\output\scripts\<show>\R6_REVIEW_<hash>.json"
+```
+
+Acrescente `--save` para persistir a proposta local. A revisão posterior pode ajustar os intervalos no JSON, mas `r6-r57-plan --story-proposal "caminho.json"` só aceita janelas ordenadas, não sobrepostas, cobrindo a fonte inteira, cada uma de até 60 segundos, e com proveniência SHA/runs correta. Flags de aprovação falsificadas são rejeitadas. Mesmo com a timeline proposta validada, continuam bloqueados os assets reais (capa/ASS/SRT), a verificação editorial das janelas e as aprovações de prévias/direitos; `r57_story_slots=[]`, `r57_import_ready=false` e nenhum ZIP executável é produzido.

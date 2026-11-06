@@ -18,7 +18,7 @@ from .workspace import application_root
 MAX_DRAFT_BYTES = 3 * 1024 * 1024
 
 
-def prepare_r57_bridge(inbox, draft_path, media_path=None) -> dict:
+def prepare_r57_bridge(inbox, draft_path, media_path=None, story_proposal_path=None) -> dict:
     """Revalidate the draft and map ONLY selected, real R6 intervals to R57 slots."""
     draft = Path(draft_path).expanduser().resolve(strict=True)
     if not draft.is_file() or draft.stat().st_size > MAX_DRAFT_BYTES:
@@ -76,12 +76,19 @@ def prepare_r57_bridge(inbox, draft_path, media_path=None) -> dict:
             'render_ready': False,
         })
 
-    # No Stories are fabricated even though R57 requires non-empty, contiguous
-    # coverage over the source. The next step needs an actual editorial timeline.
+    # Duration-only proposals may be carried as boundary suggestions, never
+    # as generated/approved Stories or assets in an executable R57 ZIP.
+    story_proposals = []
+    if story_proposal_path is not None:
+        from .r6_story_timeline import validate_story_proposal
+        story_proposals = validate_story_proposal(
+            story_proposal_path, preflight=preflight, review=review, draft_sha256=before)
+
     media = preflight['media_identity']
     media_status = media['status']
     blocking = [
-        'R57_STORIES_CONTIGUOUS_FULL_SOURCE_TIMELINE_NOT_PROVIDED',
+        ('R57_STORY_BOUNDARIES_NOT_EDITORIALLY_REVIEWED'
+         if story_proposals else 'R57_STORIES_CONTIGUOUS_FULL_SOURCE_TIMELINE_NOT_PROVIDED'),
         'R57_THUMBNAILS_NOT_SUPPLIED_OR_VERIFIED',
         'R57_CAPTIONS_ASS_SRT_NOT_SUPPLIED_OR_VERIFIED',
         'EDITORIAL_AUDIO_CAMERA_CAPTION_REVIEW_PENDING',
@@ -112,9 +119,11 @@ def prepare_r57_bridge(inbox, draft_path, media_path=None) -> dict:
             'story_policy': 'nonempty_contiguous_full_source_coverage_up_to_60_seconds_each',
             'reel_count': len(reels),
             'story_count_created': 0,
+            'proposed_story_boundaries': len(story_proposals),
         },
         'r57_reel_slots': reels,
-        'r57_story_slots': [],
+        'r57_story_slots': [],  # No approved or executable Stories.
+        'r57_story_boundary_proposals': story_proposals,
         'media_identity': {
             'status': media_status,
             'matches_analyzer': media.get('matches_analyzer'),
@@ -142,9 +151,11 @@ def prepare_r57_bridge(inbox, draft_path, media_path=None) -> dict:
     return result
 
 
-def export_r57_bridge(inbox, draft_path, media_path=None, destination_root=None) -> Path:
+def export_r57_bridge(inbox, draft_path, media_path=None, destination_root=None,
+                      story_proposal_path=None) -> Path:
     """Only an explicit call writes an immutable JSON plan, never media or ZIP."""
-    plan = prepare_r57_bridge(inbox, draft_path, media_path)
+    plan = prepare_r57_bridge(
+        inbox, draft_path, media_path, story_proposal_path=story_proposal_path)
     root = (Path(destination_root).expanduser().resolve() if destination_root
             else application_root() / 'output' / 'r6_bridge')
     folder = root / plan['provenance']['source_sha256'][:16]

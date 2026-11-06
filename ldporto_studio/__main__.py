@@ -52,10 +52,16 @@ def main(argv=None):
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-story-propose',help='Propor divisões técnicas de até 60s, sem aprovar Stories')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path,help='Seleção R6 explícita já exportada')
+    a.add_argument('--save',action='store_true',help='Salvar JSON de proposta em output/r6_bridge/')
     a=sub.add_parser('r6-r57-plan',help='Preparar checklist auditável R6 -> R57, sem criar ZIP/Stories/approvals')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path,help='Roteiro R6 exportado após seleção explícita')
     a.add_argument('--media',type=Path,default=None,help='Fonte opcional conferida por SHA256')
+    a.add_argument('--story-proposal',type=Path,default=None,
+                   help='Proposta técnica de Stories validada e não aprovada')
     a.add_argument('--save',action='store_true',help='Salvar somente JSON em output/r6_bridge/')
     a=sub.add_parser('r6-preview-smoke',help='Gerar prévia técnica pequena da fonte SHA exata, sem aprovação nem R57')
     a.add_argument('--inbox',required=True,type=Path)
@@ -89,17 +95,36 @@ def main(argv=None):
         from .gui import launch
         launch(getattr(args,'example',None))
         return 0
+    if args.cmd=='r6-story-propose':
+        from .r6_story_timeline import export_story_proposal, make_story_proposal
+        proposal=make_story_proposal(args.inbox,args.draft)
+        result={'status':proposal['status'],
+                'proposed_story_count':proposal['proposed_story_count'],
+                'story_boundaries':[
+                    {'id':r['id'],'start':r['source_start'],'end':r['source_end']}
+                    for r in proposal['story_slots']],
+                'source_sha256':proposal['provenance']['source_sha256'],
+                'r57_import_ready':False,'human_approved':False,'saved_proposal':None}
+        if args.save:
+            result['saved_proposal']=str(export_story_proposal(args.inbox,args.draft))
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
     if args.cmd=='r6-r57-plan':
         from .r6_r57_bridge import export_r57_bridge, prepare_r57_bridge
-        plan=prepare_r57_bridge(args.inbox,args.draft,args.media)
+        plan=prepare_r57_bridge(
+            args.inbox,args.draft,args.media,story_proposal_path=args.story_proposal)
         result={'status':plan['status'],'r57_import_ready':False,
                 'render_ready':False,'publication_ready':False,
                 'selected_reels':len(plan['r57_reel_slots']),
-                'story_slots':0,'blocking_reasons':plan['blocking_reasons'],
+                'story_slots':0,
+                'proposed_story_boundaries':len(plan['r57_story_boundary_proposals']),
+                'blocking_reasons':plan['blocking_reasons'],
                 'source_zip_sha256':plan['provenance']['source_zip_sha256'],
                 'saved_plan':None}
         if args.save:
-            result['saved_plan']=str(export_r57_bridge(args.inbox,args.draft,args.media))
+            result['saved_plan']=str(export_r57_bridge(
+                args.inbox,args.draft,args.media,
+                story_proposal_path=args.story_proposal))
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-preview-smoke':
