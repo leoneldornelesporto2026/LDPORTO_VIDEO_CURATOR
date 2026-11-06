@@ -198,3 +198,17 @@ python -m ldporto_studio r6-preflight --inbox ".\input\analyzer\aUgESZsOGmY\f8b4
 ```
 
 A pré-validação reabre o ZIP real, verifica SHA256/identidade do projeto, IDs selecionados, timestamps, alertas, intervalos duplicados/sobrepostos e aprovações indevidas. Com `--media <arquivo.mp4>` opcional, calcula o SHA256 real da mídia (sem copiá-la) e avisa quando **não coincide** com o vídeo que o Analyzer analisou. **Mesmo com SHA igual, o relatório nunca declara `render_ready=true` ou publicação aprovada.** A conversão do roteiro em pacote renderizável e a homologação de câmera/legendas permanecem tarefas separadas.
+
+## Teste automático R6 — sem digitar IDs e sem abrir a GUI
+
+Quando o Analyzer entrega os candidatos com a `shortlist_count=0` (ou todos pendentes), o Curator **não deve aprovar nem afirmar que escolheu os melhores cortes**. Para comprovar o fluxo sem perguntar IDs no PowerShell, use:
+
+```powershell
+python -m ldporto_studio r6-smoke --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"
+```
+
+O comando escolhe **2 candidatos reais apenas para teste técnico**, sem sobreposição de intervalo, preferindo trechos de 15–90 segundos, não comerciais e com menos alertas quando existirem. Ele gera um roteiro com `selection_origin=AUTOMATED_TECHNICAL_SMOKE_TEST_ONLY` em `output/r6_smoke/<source_sha>/<zip_sha>/SMOKE_R6_<hash>.json`; essa pasta é **ignorada pelo Git**. Em seguida executa automaticamente o preflight completo contra o ZIP e imprime `SMOKE_PASSED_WITH_PENDING_HUMAN_REVIEWS` com os IDs usados, caminho de arquivo e avisos.
+
+O roteiro de smoke **não é uma escolha editorial**, não é `R6_REVIEW_*.json`, não altera projetos existentes nem mídia, não produz prévias/finais e mantém `render_ready=false`. Para repetir o teste, executar o mesmo comando é idempotente, sem sobrescrever revisões anteriores. Testar de 1 a 5 intervalos com `--count 3` quando houver duração suficiente.
+
+**Atenção à execução em PowerShell 5.1:** erros `throw` lançados ao colar trechos separados podem deixar o console disponível para os comandos seguintes. Use um **bloco único** com checagem de `$LASTEXITCODE`; nunca executar preflight com `$draft` vazio. O `r6-smoke` já executa exportação e pré-validação no mesmo comando, eliminando essa fonte de erro.

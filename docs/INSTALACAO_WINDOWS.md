@@ -95,3 +95,9 @@ CLI: `python -m ldporto_studio r6-review --inbox ".\input\analyzer\<video_id>\<r
 5. No PowerShell execute `python -m unittest discover -s tests -p "test_r6_workflow.py" -v`. O comando `r6-preflight --inbox <pasta> --draft <roteiro.json>` valida origem, IDs, tempos e pendências sem tocar na mídia. `--media <mp4>` é opcional e computa SHA256 exato.
 
 **Segurança:** os R6 continuam somente evidência; o R57 antigo com seus cortes preservados não é reimportado nem alterado. ZIPs do Analyzer e MP4s em `input/videos/` continuam ignorados pelo Git. Apenas JSONs editoriais selecionados e scripts de código são versionáveis. Não aprovar nem renderizar finais por essa interface.
+
+## Diagnóstico R6 sem IDs
+
+Execute `python -m ldporto_studio r6-smoke --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"`. O comando **não solicita IDs**: escolhe duas entradas reais, não sobrepostas, como dados de **teste de integração**, salva em `output/r6_smoke/` (pasta ignorada) e executa preflight imediatamente. Resultado esperado: `SMOKE_PASSED_WITH_PENDING_HUMAN_REVIEWS`, `render_ready=false` e `human_approved=false`.
+
+Esse diagnóstico nunca escolhe "melhores cortes" para publicar, mesmo quando o Analyzer tem zero shortlist e 100% dos candidatos `publication_eligible_false`. Nenhum MP4, imagem ou pacote R57 é criado ou alterado.

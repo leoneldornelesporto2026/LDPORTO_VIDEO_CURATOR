@@ -52,6 +52,9 @@ def main(argv=None):
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-smoke',help='Teste técnico automático do R6: escolher IDs, gerar JSON isolado e pré-validar sem mídia')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--count',type=int,default=2,help='1 a 5 candidatos distintos, apenas para teste')
     a=sub.add_parser('r6-preflight',help='Conferir roteiro R6 escolhido contra o ZIP e SHA da fonte; sem render')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path)
@@ -69,6 +72,11 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='r6-smoke':
+        from .r6_smoke import run_r6_smoke
+        result=run_r6_smoke(args.inbox,args.count)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-preflight':
         from .r6_workflow import preflight_editorial_draft

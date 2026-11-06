@@ -24,3 +24,7 @@ Uma seleção de candidatos do Analyzer gera `output/scripts/<show>_<sha>/R6_REV
 `R6_REVIEW_*.json` só aparece em `output/scripts/<show>_<sha>/` após marcar candidatos e clicar **EXPORTAR MARCADOS — ROTEIRO JSON**. A abertura da GUI ou uma inspeção `r6-review` não gera roteiros. Os arquivos são idempotentes por conteúdo, sem duplicar MP4.
 
 Use `python -m ldporto_studio r6-preflight --inbox <entrega> --draft <roteiro>` para conferir integridade, IDs e tempos, além de alertas de duplicidade, câmera, áudio e legendas. A pré-validação preserva `render_ready=false`.
+
+## R6 smoke-test técnico automático
+
+`output/r6_smoke/` é **local e não versionado** (ignorado por `.gitignore`). Contém somente `SMOKE_R6_*.json` produzidos por `python -m ldporto_studio r6-smoke --inbox <entrega>`; cada arquivo é marcado como `AUTOMATED_TECHNICAL_SMOKE_TEST_ONLY` e não representa seleção editorial humana. O comando também inspeciona IDs, timestamps e bloqueios contra o ZIP original, sem usar mídia. Continue usando `output/scripts/R6_REVIEW_*.json` exclusivamente para roteiros selecionados de forma explícita na GUI ou CLI.
