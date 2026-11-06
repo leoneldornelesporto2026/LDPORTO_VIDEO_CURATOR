@@ -15,7 +15,7 @@ from .core import Project
 from .rendering import render_item,extract_editorial_assets,create_cover_from_frame,generate_premium_covers,binaries
 from .youtube_download import download_from_youtube, suggested_youtube_url, parse_youtube_url
 from .workspace import project_output_root, import_existing_project
-from .catalog import discover_catalog, catalog_label, input_root
+from .catalog import discover_catalog, reviewable_catalog, catalog_label, input_root
 from .editorial_script import export_project_script
 from .r6_review import read_analyzer_review
 
@@ -48,6 +48,7 @@ class CuratorApp(tk.Tk):
         self.review_after_download=False
         self.catalog_entries=[]
         self.catalog_by_label={}
+        self.catalog_show_all=tk.BooleanVar(value=False)
         self._build()
         self.after(90,self._poll)
         # The user chooses a show; never automatically overwrite the active
@@ -82,6 +83,9 @@ class CuratorApp(tk.Tk):
         self.catalog_dropdown.pack(side='left',fill='x',expand=True,padx=(0,8))
         self.catalog_dropdown.bind('<<ComboboxSelected>>',self.on_catalog_selected)
         ttk.Button(library_row,text='ATUALIZAR INPUT',command=self.scan_catalog).pack(side='left',padx=(0,6))
+        ttk.Checkbutton(library_row,text='Mostrar todos (inclui testes)',
+                        variable=self.catalog_show_all,
+                        command=self.scan_catalog).pack(side='left',padx=(0,6))
         ttk.Button(library_row,text='ABRIR / SELECIONAR CORTES',
                    command=self.open_catalog_selection).pack(side='left')
         self.catalog_description=tk.StringVar(
@@ -312,10 +316,17 @@ class CuratorApp(tk.Tk):
         if self.busy:
             self.after(650,self.scan_catalog)
             return
+        include_all=self.catalog_show_all.get()
         def run():
-            entries=discover_catalog()
+            all_entries=discover_catalog()
+            entries=all_entries if include_all else reviewable_catalog(all_entries)
             self.q.put(('catalog_entries',entries))
-            return f'{len(entries)} itens encontrados em input/ e output/projects/'
+            hidden=len(all_entries)-len(entries)
+            return (
+                f'{len(entries)} itens exibidos de {len(all_entries)} encontrados; '
+                f'{hidden} registros de diagnóstico/sem candidatos ocultos na visualização. '
+                'Nenhum arquivo foi modificado.'
+            )
         self._task('Verificando pastas input/ e output/projects/ (somente leitura)...',run)
 
     def on_catalog_selected(self,event=None):

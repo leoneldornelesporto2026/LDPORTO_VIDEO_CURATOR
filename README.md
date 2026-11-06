@@ -256,3 +256,18 @@ python -m ldporto_studio r6-r57-plan --inbox ".\input\analyzer\<video_id>\<run_i
 ```
 
 Para persistir o plano, acrescentar `--save`. Para confirmar a identidade da fonte audiovisual já existente, informar `--media "C:\...\original.mp4"`; SHA divergente ou ausente mantém o bloqueio. O comando nunca importa a curadoria para `Project`, nem trata o smoke automático como escolha editorial. Antes da futura conversão executável, faltam o roteiro de Stories definido por pessoa, assets de legenda/capa efetivamente revisados e validação formal do ZIP R57 com `CuradoriaPackage`.
+
+
+## Filtro da biblioteca: revisão vs. diagnóstico (06/11/2026)
+
+O catálogo completo permanece disponível e **nenhum arquivo local é excluído**. A GUI prioriza por padrão projetos R57 existentes e pacotes R6 com pelo menos um candidato e um SHA256 de origem plausível; ZIPs com zero candidatos, SHA ausente/obviamente sintético, e registros inválidos são ocultados **somente na seleção**. Marque **Mostrar todos (inclui testes)** para exibir os demais. O filtro é heurístico, não validação editorial, nem garantia de origem real: o Analyzer R6 só abre após `read_analyzer_review` verificar integralmente o ZIP/recibo.
+
+Para uma listagem reduzida via CLI:
+```powershell
+python -m ldporto_studio catalog --reviewable
+```
+Para a listagem integral, inclusive testes locais:
+```powershell
+python -m ldporto_studio catalog
+```
+O resultado informa `count`, `total_discovered` e `hidden_from_view`. A consulta não modifica projetos, inbox nem Git. No piloto de 06/11/2026, a listagem integral continha 52 entradas: 1 projeto CBJR existente, 3 pacotes R6 reais (2 NASA, 1 CBJR) e 48 registros de testes/diagnósticos, preservados no disco.

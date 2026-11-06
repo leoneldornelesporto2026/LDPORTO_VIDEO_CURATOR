@@ -74,9 +74,11 @@ def main(argv=None):
     a.add_argument('--draft',required=True,type=Path)
     a.add_argument('--media',type=Path,default=None,
                    help='MP4 opcional para comparação exata do SHA256; não altera/baixa mídia')
-    a=sub.add_parser('catalog',help='Listar shows e curadorias realmente presentes em input/ e output/')
+    a=sub.add_parser('catalog',help='Listar shows e curadorias presentes em input/ e output/')
     a.add_argument('--input',type=Path)
     a.add_argument('--projects',type=Path)
+    a.add_argument('--reviewable',action='store_true',
+                   help='Ocultar entradas de teste/sem candidatos (só na lista; sem apagar)')
     a=sub.add_parser('smart-preset',help='Aplicar novo enquadramento de revisão, sem mexer no ZIP')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--kind',choices=('reels','stories'),default='reels')
@@ -162,9 +164,16 @@ def main(argv=None):
             'output':str(path)},ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='catalog':
-        from .catalog import discover_catalog
-        rows=discover_catalog(args.input,args.projects)
-        print(json.dumps({'items':rows,'count':len(rows)},ensure_ascii=False,indent=2))
+        from .catalog import discover_catalog, reviewable_catalog
+        all_rows=discover_catalog(args.input,args.projects)
+        rows=reviewable_catalog(all_rows) if args.reviewable else all_rows
+        print(json.dumps({
+            'items':rows,'count':len(rows),
+            'total_discovered':len(all_rows),
+            'hidden_from_view':len(all_rows)-len(rows),
+            'view':'REVIEWABLE_ONLY' if args.reviewable else 'ALL',
+            'files_modified':False,
+        },ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='adopt-project':
         destination=import_existing_project(args.source,args.destination_root)

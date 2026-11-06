@@ -111,5 +111,55 @@ class ShowCatalogTests(unittest.TestCase):
         self.assertNotEqual(row['status'],'CURADORIA PRONTA PARA IMPORTAR')
 
 
+    def test_reviewable_filter_hides_synthetic_and_zero_candidate_entries_only(self):
+        from ldporto_studio.catalog import reviewable_catalog
+        real_sha='0123456789abcdef' * 4
+        rows=[
+            {'kind':'project','id':'project','source_sha256':'','candidates':0},
+            {'kind':'curator_zip','id':'r57','source_sha256':'','candidates':0},
+            {'kind':'analyzer_zip','id':'live','source_sha256':real_sha,'candidates':4},
+            {'kind':'analyzer_zip','id':'local','source_sha256':real_sha,'candidates':69,
+             'source_url':''},
+            {'kind':'analyzer_zip','id':'fixture','source_sha256':'a'*64,'candidates':1},
+            {'kind':'analyzer_zip','id':'no_candidates','source_sha256':real_sha,'candidates':0},
+            {'kind':'analyzer_zip','id':'missing_source','source_sha256':'','candidates':2},
+            {'kind':'invalid_zip','id':'broken','source_sha256':'','candidates':0},
+        ]
+        before=json.dumps(rows,sort_keys=True)
+        selected=reviewable_catalog(rows)
+        self.assertEqual([row['id'] for row in selected],['project','r57','live','local'])
+        self.assertEqual(json.dumps(rows,sort_keys=True),before)
+        self.assertEqual(len(rows),8)
+
+    def test_cli_reviewable_is_opt_in_and_does_not_hide_source_from_full_catalog(self):
+        from ldporto_studio.catalog import reviewable_catalog
+        self.analyzer_zip()
+        default_capture=StringIO()
+        with redirect_stdout(default_capture):
+            code=main(['catalog','--input',str(self.inbox),'--projects',str(self.projects)])
+        self.assertEqual(code,0)
+        full=json.loads(default_capture.getvalue())
+        self.assertEqual(full['count'],1)
+        self.assertEqual(full['view'],'ALL')
+        filtered_capture=StringIO()
+        with redirect_stdout(filtered_capture):
+            code=main(['catalog','--input',str(self.inbox),
+                       '--projects',str(self.projects),'--reviewable'])
+        self.assertEqual(code,0)
+        filtered=json.loads(filtered_capture.getvalue())
+        self.assertEqual(filtered['count'],0)  # Synthetic sha=aaaaaaaa...
+        self.assertEqual(filtered['hidden_from_view'],1)
+        self.assertFalse(filtered['files_modified'])
+        self.assertTrue((self.inbox/'analyzer'/'cpm22'/'run_001'/
+                         'CPM22_SEGUNDA_CURADORIA.zip').is_file())
+
+    def test_gui_provides_reversible_show_all_switch(self):
+        source=(Path(__file__).resolve().parents[1] /
+                'ldporto_studio'/'gui.py').read_text(encoding='utf-8')
+        self.assertIn('Mostrar todos (inclui testes)',source)
+        self.assertIn('all_entries if include_all else reviewable_catalog(all_entries)',source)
+        self.assertIn('Nenhum arquivo foi modificado.',source)
+
+
 if __name__=='__main__':
     unittest.main()

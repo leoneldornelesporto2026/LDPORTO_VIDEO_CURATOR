@@ -222,6 +222,37 @@ def discover_catalog(input_directory=None, projects_directory=None) -> list[dict
     return items
 
 
+def reviewable_catalog(items: list[dict]) -> list[dict]:
+    """Reversible VIEW-only filter; never deletes or mutates inbox entries.
+
+    Projects and existing R57 packages remain visible. For R6 packages, avoid
+    surfacing obvious synthetic/test identities and zero-candidate handoffs
+    in the default show selector. Local videos with no URL remain supported
+    when they have a plausible cryptographic source hash and real candidates.
+    This is NOT proof of safety: read_analyzer_review() still independently
+    checks the complete ZIP, receipt and SHA before editing.
+    """
+    visible = []
+    for item in items:
+        if item.get('kind') in ('project', 'curator_zip'):
+            visible.append(item)
+            continue
+        if item.get('kind') != 'analyzer_zip':
+            continue
+        source = item.get('source_sha256')
+        if not isinstance(source, str) or not re.fullmatch(r'[0-9a-fA-F]{64}', source):
+            continue
+        # A repeated single hex character is a common synthetic test marker,
+        # not evidence of a real cryptographic fingerprint.
+        if len(set(source.lower())) == 1:
+            continue
+        count = item.get('candidates')
+        if isinstance(count, bool) or not isinstance(count, int) or count <= 0:
+            continue
+        visible.append(item)
+    return visible
+
+
 def catalog_label(item: dict) -> str:
     kind=item['kind']
     counts=(f"{item['reels']} Reels + {item['stories']} Stories" if kind in ('project','curator_zip')
