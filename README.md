@@ -241,3 +241,18 @@ python -m ldporto_studio r6-preview-smoke --inbox ".\\input\\analyzer\\<video_id
 Esta saída é **somente uma prévia técnica de integração**: não aplica `smart_zoom`, não finge legendas/câmera revisadas, não é um Reel completo, não gera um pacote editorial R57, não aprova nem publica. O status será `TECHNICAL_PREVIEW_REVIEW_REQUIRED`; `render_ready=false`, `publication_ready=false`, `human_approved=false`. O arquivo tem recibo JSON SHA256, reexecução idempotente e recusa de arquivo já existente divergente.
 
 O próximo desenvolvimento P2 real continua sendo o adaptador R6 → plano/ativos R57, com verificação de áudio/câmera/transcrição, Stories apenas quando há evidência, prévias finais e aprovação humana explícita. Não confundir o piloto de vídeo com a homologação editorial.
+
+
+## Ponte editorial R6 → R57: plano de preparação (P1, somente JSON)
+
+O pacote Analyzer R6 **não** satisfaz diretamente o contrato de importação R57: o Curator exige um plano com pelo menos um Reel e Stories contínuos cobrindo a mídia inteira, além de thumbnails e legendas ASS/SRT reais e manifestos verificados. Quando o Analyzer entrega zero Stories (como no piloto NASA), **nenhum Story é fabricado**. A nova ponte valida o recibo/ZIP original, exige um roteiro R6 exportado após seleção explícita de candidatos, conserva IDs e timestamps e gera um checklist por Reel com a estrutura de assets esperada. Não cria ZIP R57, projeto, capa, legenda, render, aprovação ou publicação.
+
+Depois de exportar `R6_REVIEW_*.json` pela janela de Segunda curadoria, clique **PLANO R6 → R57 (PENDÊNCIAS)**. O plano fica em `output/r6_bridge/<sha-prefix>/R6_TO_R57_PLAN_<fingerprint>.json` (ignorado pelo Git), é idempotente por conteúdo e guarda hashes de proveniência, mas não caminhos locais absolutos.
+
+Para visualizar apenas as pendências (sem criar arquivo):
+
+```powershell
+python -m ldporto_studio r6-r57-plan --inbox ".\input\analyzer\<video_id>\<run_id>" --draft ".\output\scripts\<show>\R6_REVIEW_<hash>.json"
+```
+
+Para persistir o plano, acrescentar `--save`. Para confirmar a identidade da fonte audiovisual já existente, informar `--media "C:\...\original.mp4"`; SHA divergente ou ausente mantém o bloqueio. O comando nunca importa a curadoria para `Project`, nem trata o smoke automático como escolha editorial. Antes da futura conversão executável, faltam o roteiro de Stories definido por pessoa, assets de legenda/capa efetivamente revisados e validação formal do ZIP R57 com `CuradoriaPackage`.

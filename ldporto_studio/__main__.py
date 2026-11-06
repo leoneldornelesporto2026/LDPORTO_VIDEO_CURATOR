@@ -52,6 +52,11 @@ def main(argv=None):
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-r57-plan',help='Preparar checklist auditável R6 -> R57, sem criar ZIP/Stories/approvals')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path,help='Roteiro R6 exportado após seleção explícita')
+    a.add_argument('--media',type=Path,default=None,help='Fonte opcional conferida por SHA256')
+    a.add_argument('--save',action='store_true',help='Salvar somente JSON em output/r6_bridge/')
     a=sub.add_parser('r6-preview-smoke',help='Gerar prévia técnica pequena da fonte SHA exata, sem aprovação nem R57')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--media',required=True,type=Path)
@@ -81,6 +86,19 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='r6-r57-plan':
+        from .r6_r57_bridge import export_r57_bridge, prepare_r57_bridge
+        plan=prepare_r57_bridge(args.inbox,args.draft,args.media)
+        result={'status':plan['status'],'r57_import_ready':False,
+                'render_ready':False,'publication_ready':False,
+                'selected_reels':len(plan['r57_reel_slots']),
+                'story_slots':0,'blocking_reasons':plan['blocking_reasons'],
+                'source_zip_sha256':plan['provenance']['source_zip_sha256'],
+                'saved_plan':None}
+        if args.save:
+            result['saved_plan']=str(export_r57_bridge(args.inbox,args.draft,args.media))
+        print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-preview-smoke':
         from .r6_preview_smoke import render_r6_technical_preview

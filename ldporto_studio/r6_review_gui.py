@@ -114,6 +114,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         ttk.Label(footer,textvariable=self.selection_status,wraplength=650).pack(side='left',fill='x',expand=True)
         ttk.Button(footer,text='EXPORTAR MARCADOS — ROTEIRO JSON',
                    command=self._export).pack(side='right')
+        ttk.Button(footer,text='PLANO R6 → R57 (PENDÊNCIAS)',
+                   command=self._prepare_r57_plan).pack(side='right',padx=(0,6))
         ttk.Button(footer,text='ABRIR PASTA DO ROTEIRO',
                    command=self._open_export_folder).pack(side='right',padx=(0,6))
         ttk.Button(footer,text='FECHAR',command=self.destroy).pack(side='right',padx=(0,8))
@@ -232,6 +234,33 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                 'Primeiro MARQUE os candidatos e clique EXPORTAR MARCADOS.',parent=self)
         from .gui import open_file
         open_file(self.last_exported_path.parent)
+
+    def _prepare_r57_plan(self):
+        if self.last_exported_path is None:
+            messagebox.showwarning(
+                'Exporte um roteiro primeiro',
+                'Marque candidatos e exporte o roteiro R6 antes de preparar o plano R57.',
+                parent=self)
+            return
+        if not messagebox.askyesno(
+                'Plano de preparação R57',
+                'Gerar checklist JSON de lacunas a partir do último roteiro exportado?\n'
+                'NÃO cria ZIP R57, Stories, mídia ou aprovações.',
+                parent=self):
+            return
+        try:
+            from .r6_r57_bridge import export_r57_bridge
+            path=export_r57_bridge(
+                self.review['inbox_folder'],self.last_exported_path)
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Plano R57 bloqueado',str(exc),parent=self)
+            return
+        self.selection_status.set('PLANO R57 PENDENTE: '+str(path))
+        messagebox.showinfo(
+            'Plano de preparação exportado',
+            f'Salvo em:\n{path}\n\n'
+            'Importação R57 continua BLOQUEADA até Stories e assets revisados.',
+            parent=self)
 
     def _export(self):
         chosen=set(self.chosen_ids)
