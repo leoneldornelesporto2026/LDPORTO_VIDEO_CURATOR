@@ -45,12 +45,18 @@ def main(argv=None):
     a=sub.add_parser('r6-review',help='Inspecionar candidatos de um ZIP R6 recebido; sem gerar projeto')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--details',action='store_true',help='Incluir trechos de transcrição na saída')
+    a.add_argument('--summary',action='store_true',help='Mostrar somente contagens, alertas e 10 primeiros candidatos')
     a=sub.add_parser('r6-draft',help='Exportar roteiro de candidatos escolhidos manualmente, sem mídia')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--ids',nargs='+',required=True,help='IDs canônicos do Analyzer escolhidos para Reels')
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-preflight',help='Conferir roteiro R6 escolhido contra o ZIP e SHA da fonte; sem render')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--media',type=Path,default=None,
+                   help='MP4 opcional para comparação exata do SHA256; não altera/baixa mídia')
     a=sub.add_parser('catalog',help='Listar shows e curadorias realmente presentes em input/ e output/')
     a.add_argument('--input',type=Path)
     a.add_argument('--projects',type=Path)
@@ -64,10 +70,29 @@ def main(argv=None):
         from .gui import launch
         launch(getattr(args,'example',None))
         return 0
+    if args.cmd=='r6-preflight':
+        from .r6_workflow import preflight_editorial_draft
+        result=preflight_editorial_draft(args.draft,args.inbox,args.media)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
     if args.cmd in ('r6-review','r6-draft'):
         from .r6_review import read_analyzer_review, export_editorial_draft
         review=read_analyzer_review(args.inbox)
         if args.cmd=='r6-review':
+            if args.summary:
+                from .r6_workflow import summarize_review
+                rows=review['candidates'][:10]
+                print(json.dumps({
+                    'source':review['source'],
+                    'summary':summarize_review(review),
+                    'first_ten_candidates':[{
+                        'id':r['candidate_id'],'rank':r['rank'],'title':r['title_suggestion'],
+                        'start':r['start'],'end':r['end'],
+                        'blocker_count':len(r['blockers']),
+                    } for r in rows],
+                    'no_automatic_selection':True,
+                },ensure_ascii=False,indent=2))
+                return 0
             out=dict(review)
             out.pop('inbox_folder',None)
             if not args.details:

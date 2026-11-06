@@ -8,6 +8,7 @@ from __future__ import annotations
 import tkinter as tk
 from tkinter import ttk, messagebox
 from .r6_review import export_editorial_draft, LAYOUTS
+from .r6_workflow import FILTERS, select_visible_candidates, summarize_review
 
 
 class AnalyzerR6ReviewDialog(tk.Toplevel):
@@ -17,6 +18,10 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         self.on_export=on_export
         self.overrides={}
         self.current=None
+        self.chosen_ids=set()
+        self.last_exported_path=None
+        self.rows={row['candidate_id']:row for row in review['candidates']}
+        self.summary=summarize_review(review)
         source=review['source']
         self.title('Segunda curadoria R6 — '+source['title'])
         self.geometry('1150x760')
@@ -32,7 +37,30 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             "NENHUM aprovado. Selecione os trechos para criar roteiro de revisão."
         ),wraplength=1050).pack(anchor='w',pady=(3,9))
         ttk.Label(outer,text='R6 é evidência; o roteiro gerado ainda não é um ZIP R57 executável. '
-                            'Prévia, áudio, câmera, legenda e direitos exigem revisão.').pack(anchor='w',pady=(0,9))
+                            'Prévia, áudio, câmera, legenda e direitos exigem revisão.').pack(anchor='w',pady=(0,6))
+        ttk.Label(outer,text=(
+            f"{self.summary['unique_intervals']} intervalos distintos; "
+            f"{self.summary['same_interval_alternates']} alternativas com mesmo intervalo; "
+            f"{self.summary['titles_to_review']} títulos pendentes; "
+            f"{self.summary['publication_eligible_false']} sem elegibilidade de publicação."
+        ),wraplength=1050).pack(anchor='w',pady=(0,7))
+        filter_row=ttk.Frame(outer)
+        filter_row.pack(fill='x',pady=(0,8))
+        ttk.Label(filter_row,text='Buscar trecho / fala / ID:').pack(side='left',padx=(0,6))
+        self.search=tk.StringVar()
+        ttk.Entry(filter_row,textvariable=self.search,width=30).pack(side='left',padx=(0,10))
+        ttk.Label(filter_row,text='Filtro:').pack(side='left')
+        self.filter_mode=tk.StringVar(value=FILTERS['all'])
+        self.filter_box=ttk.Combobox(
+            filter_row,textvariable=self.filter_mode,state='readonly',width=33,
+            values=list(FILTERS.values()))
+        self.filter_box.pack(side='left',padx=(6,10))
+        self.filter_box.bind('<<ComboboxSelected>>',lambda event:self._populate())
+        self.collapse_duplicates=tk.BooleanVar(value=False)
+        ttk.Checkbutton(filter_row,text='Ocultar intervalos repetidos (só na tela)',
+                        variable=self.collapse_duplicates,
+                        command=self._populate).pack(side='left')
+        self.search.trace_add('write',lambda *args:self._populate())
         host=ttk.PanedWindow(outer,orient='horizontal')
         host.pack(fill='both',expand=True)
         left=ttk.Frame(host,padding=(0,6,8,6))
@@ -40,7 +68,7 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         host.add(left,weight=3);host.add(right,weight=2)
         self.tree=ttk.Treeview(left,columns=('rank','start','duration','state'),show='tree headings',
                                selectmode='extended')
-        self.tree.heading('#0',text='Candidato / título do Analyzer')
+        self.tree.heading('#0',text='✓ marcado / candidato / título')
         self.tree.column('#0',width=325,minwidth=230)
         for key,title,width in (
             ('rank','Rank',48),('start','Início (s)',75),
@@ -51,12 +79,17 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         scroll.pack(side='right',fill='y')
         self.tree.configure(yscrollcommand=scroll.set)
         self.tree.pack(fill='both',expand=True)
-        for row in review['candidates']:
-            self.tree.insert('', 'end',iid=row['candidate_id'],
-                             text=row['title_suggestion'][:52],
-                             values=(row['rank'],row['start'],
-                                     row['duration_seconds'],row['candidate_state'][:22]))
+        self.tree.tag_configure('chosen',background='#254436',foreground='#f0fff7')
+        self._populate()
         self.tree.bind('<<TreeviewSelect>>',self._on_select)
+        batch_row=ttk.Frame(left)
+        batch_row.pack(fill='x',pady=(7,2))
+        ttk.Button(batch_row,text='MARCAR SELECIONADOS',
+                   command=self._mark_selected).pack(side='left',padx=(0,5))
+        ttk.Button(batch_row,text='DESMARCAR SELECIONADOS',
+                   command=self._unmark_selected).pack(side='left',padx=(0,5))
+        ttk.Button(batch_row,text='LIMPAR MARCAÇÕES',
+                   command=self._clear_marked).pack(side='left')
         self.details_title=tk.StringVar(value='')
         self.details_layout=tk.StringVar(value='preserve')
         ttk.Label(right,text='Detalhes do candidato selecionado',
@@ -77,17 +110,74 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         self.evidence.pack(fill='both',expand=True,pady=(3,5))
         footer=ttk.Frame(outer)
         footer.pack(fill='x',pady=(10,0))
-        self.selection_status=tk.StringVar(value='Nenhum selecionado.')
-        ttk.Label(footer,textvariable=self.selection_status).pack(side='left',fill='x',expand=True)
-        ttk.Button(footer,text='EXPORTAR SELECIONADOS — SOMENTE ROTEIRO JSON',
+        self.selection_status=tk.StringVar(value='Nenhum marcado para o roteiro.')
+        ttk.Label(footer,textvariable=self.selection_status,wraplength=650).pack(side='left',fill='x',expand=True)
+        ttk.Button(footer,text='EXPORTAR MARCADOS — ROTEIRO JSON',
                    command=self._export).pack(side='right')
+        ttk.Button(footer,text='ABRIR PASTA DO ROTEIRO',
+                   command=self._open_export_folder).pack(side='right',padx=(0,6))
         ttk.Button(footer,text='FECHAR',command=self.destroy).pack(side='right',padx=(0,8))
+
+    def _populate(self):
+        if not hasattr(self,'tree'):
+            return
+        active=set(self.tree.selection())
+        key=next((name for name,label in FILTERS.items()
+                  if label==self.filter_mode.get()),'all')
+        rows=select_visible_candidates(
+            self.review,key,
+            self.search.get(),self.collapse_duplicates.get())
+        self.tree.delete(*self.tree.get_children())
+        for row in rows:
+            cid=row['candidate_id']
+            title=self.overrides.get(cid,{}).get('title',row['title_suggestion'])
+            self.tree.insert('', 'end',iid=cid,
+                             text=('✓ ' if cid in self.chosen_ids else '  ')+title[:51],
+                             values=(row['rank'],row['start'],
+                                     row['duration_seconds'],row['candidate_state'][:22]),
+                             tags=('chosen',) if cid in self.chosen_ids else ())
+        present=set(self.tree.get_children())
+        if active & present:
+            self.tree.selection_set(list(active & present))
+        self._selection_hint(len(rows))
+
+    def _selection_hint(self, visible=None):
+        if visible is None:
+            visible=len(self.tree.get_children())
+        # The first table population occurs before the footer is constructed.
+        if not hasattr(self,'selection_status'):
+            return
+        self.selection_status.set(
+            f'{visible}/{self.review["candidate_count"]} visíveis · '
+            f'{len(self.chosen_ids)} marcados para o roteiro. '
+            'Selecione com Ctrl/Shift e clique MARCAR SELECIONADOS.')
+
+    def _mark_selected(self):
+        ids=self.tree.selection()
+        if not ids:
+            messagebox.showwarning('Marque os candidatos',
+                'Selecione um ou mais candidatos (Ctrl/Shift) e clique MARCAR SELECIONADOS.',parent=self)
+            return
+        self.chosen_ids.update(ids)
+        self._populate()
+        self.tree.selection_set(ids)
+
+    def _unmark_selected(self):
+        self.chosen_ids.difference_update(self.tree.selection())
+        self._populate()
+
+    def _clear_marked(self):
+        if not self.chosen_ids:
+            return
+        if messagebox.askyesno('Limpar lista',
+            'Remover todas as marcações deste roteiro? Isso não altera o ZIP nem as edições salvas.',
+            parent=self):
+            self.chosen_ids.clear()
+            self._populate()
 
     def _on_select(self,event=None):
         selected=self.tree.selection()
-        self.selection_status.set(
-            f'{len(selected)} candidato(s) selecionado(s). '
-            'Use Ctrl/Shift para múltiplos; o botão de edição individual exige um.')
+        self._selection_hint()
         if len(selected)!=1:
             self.current=None
             return
@@ -133,21 +223,41 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             messagebox.showerror('Edição inválida','Título máximo 130, notas máximo 2000 e layout válido.',parent=self)
             return
         self.overrides[cid]={'title':title,'layout':layout,'notes':notes}
-        self.tree.item(cid,text=title[:52])
+        self.tree.item(cid,text=('✓ ' if cid in self.chosen_ids else '  ')+title[:51])
         self.selection_status.set(f'{cid}: título e câmera registrados para exportação.')
 
+    def _open_export_folder(self):
+        if self.last_exported_path is None:
+            return messagebox.showinfo('Sem roteiro exportado',
+                'Primeiro MARQUE os candidatos e clique EXPORTAR MARCADOS.',parent=self)
+        from .gui import open_file
+        open_file(self.last_exported_path.parent)
+
     def _export(self):
-        chosen=set(self.tree.selection())
+        chosen=set(self.chosen_ids)
         if not chosen:
-            messagebox.showwarning('Selecione os cortes','Escolha explicitamente um ou mais candidatos.',parent=self)
-            return
-        # Order follows the producer's first-pass catalog, not the order Tk emits IDs.
+            return messagebox.showwarning('Nenhum corte marcado',
+                'Selecione candidatos, clique MARCAR SELECIONADOS e depois EXPORTAR MARCADOS.',
+                parent=self)
+        if self.current in chosen and len(self.tree.selection())==1:
+            row=self.rows[self.current]
+            old=self.overrides.get(self.current,{})
+            if (self.details_title.get().strip()!=old.get('title',row['title_suggestion'])
+                or self.details_layout.get()!=old.get('layout','preserve')
+                or self.notes.get('1.0','end-1c')!=old.get('notes','')):
+                return messagebox.showwarning('Edição não salva',
+                    'Clique SALVAR TÍTULO / CÂMERA DE 1 CANDIDATO antes de exportar.',
+                    parent=self)
+        # Preserve first-pass ordering, but only for explicitly MARKED IDs.
         ids=[row['candidate_id'] for row in self.review['candidates']
              if row['candidate_id'] in chosen]
-        if not messagebox.askyesno('Exportar roteiro de revisão',
-             f'Exportar {len(ids)} candidatos selecionados como roteiro JSON sem mídia?\n'
-             'Nenhum corte será aprovado, renderizado ou publicado. '
-             'Edições do formulário ainda não salvas não serão incluídas.',
+        flagged=sum(bool(self.rows[cid].get('blockers')) for cid in ids)
+        repeated=len(ids)-len({(self.rows[cid]['start'],self.rows[cid]['end']) for cid in ids})
+        if not messagebox.askyesno('Exportar roteiro pendente',
+             f'{len(ids)} candidatos MARCADOS para roteiro de revisão.\n'
+             f'{flagged} candidatos com alertas. {repeated} alternativas de mesmo intervalo.\n\n'
+             'Somente JSON de edição: SEM MP4, SEM aprovação, SEM renderização.\n'
+             'Os alertas e a proveniência ficarão no roteiro. Continuar?',
              parent=self):
             return
         try:
@@ -155,7 +265,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         except (ValueError,OSError,TypeError) as exc:
             messagebox.showerror('Não foi possível exportar',str(exc),parent=self)
             return
-        self.selection_status.set('ROTEIRO SALVO: '+str(path))
+        self.last_exported_path=path
+        self.selection_status.set('ROTEIRO EXPORTADO: '+str(path))
         if self.on_export:
             self.on_export(path)
         messagebox.showinfo('Roteiro de revisão exportado',

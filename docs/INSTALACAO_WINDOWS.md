@@ -85,3 +85,13 @@ Atualize a branch develop e abra `python .\launch_gui.py`. No catálogo selecion
 O resultado fica em `output/scripts/`, único local versionável dos planos editoriais. Nenhum `project.json`, ZIP R57, vídeo, imagem, aprovação de prévia ou render é criado neste P1. O ZIP R6 parcial continua rastreado pelo hash e sempre exige revisão de áudio, câmera, legendas e elegibilidade.
 
 CLI: `python -m ldporto_studio r6-review --inbox ".\input\analyzer\<video_id>\<run_id>"`; para exportar IDs escolhidos, usar `r6-draft --inbox ... --ids <id1> <id2> --confirm-review-draft`. É necessário selecionar candidatos antes de gerar qualquer roteiro.
+
+## Operação P1.1 — localizar, marcar, exportar e pré-validar
+
+1. Abra o Curator, **ATUALIZAR INPUT**, selecione **ANALYZER R6 — AGUARDANDO SEGUNDA CURADORIA** do show e **ABRIR / SELECIONAR CORTES**.
+2. Pesquise por trecho, fala ou ID e filtre por título, duração, shortlist ou alertas. A opção para ocultar intervalos idênticos só modifica a visualização; não elimina nenhum candidato do ZIP.
+3. Selecione trechos com Ctrl/Shift, clique **MARCAR SELECIONADOS**. Reabra filtros à vontade; os IDs marcados permanecem. Para revisar título e câmera, selecione exatamente um candidato, edite e clique **SALVAR TÍTULO / CÂMERA DE 1 CANDIDATO**.
+4. Use **EXPORTAR MARCADOS — ROTEIRO JSON**. Confirme a pasta pelo botão **ABRIR PASTA DO ROTEIRO**. Sem marcação explícita não será criado nenhum arquivo.
+5. No PowerShell execute `python -m unittest discover -s tests -p "test_r6_workflow.py" -v`. O comando `r6-preflight --inbox <pasta> --draft <roteiro.json>` valida origem, IDs, tempos e pendências sem tocar na mídia. `--media <mp4>` é opcional e computa SHA256 exato.
+
+**Segurança:** os R6 continuam somente evidência; o R57 antigo com seus cortes preservados não é reimportado nem alterado. ZIPs do Analyzer e MP4s em `input/videos/` continuam ignorados pelo Git. Apenas JSONs editoriais selecionados e scripts de código são versionáveis. Não aprovar nem renderizar finais por essa interface.

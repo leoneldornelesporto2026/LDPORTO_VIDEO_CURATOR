@@ -18,3 +18,9 @@ Somente com o resultado conferido faça commit/push. O roteiro contém títulos,
 ## Scripts da segunda curadoria R6
 
 Uma seleção de candidatos do Analyzer gera `output/scripts/<show>_<sha>/R6_REVIEW_<digest>.json` com proveniência, tempos de corte, títulos e modo de câmera. Mesmo conteúdo não duplica revisão; alterações criam novo digest. O ZIP R57 existente, o estado de projetos, MP4, prévias e aprovações anteriores são preservados. Roteiros R6 continuam `CURATOR_IMPORT_PENDING` até haver um pacote renderizável validado.
+
+## Confirmação de exportação e inspeção
+
+`R6_REVIEW_*.json` só aparece em `output/scripts/<show>_<sha>/` após marcar candidatos e clicar **EXPORTAR MARCADOS — ROTEIRO JSON**. A abertura da GUI ou uma inspeção `r6-review` não gera roteiros. Os arquivos são idempotentes por conteúdo, sem duplicar MP4.
+
+Use `python -m ldporto_studio r6-preflight --inbox <entrega> --draft <roteiro>` para conferir integridade, IDs e tempos, além de alertas de duplicidade, câmera, áudio e legendas. A pré-validação preserva `render_ready=false`.

@@ -175,3 +175,26 @@ python -m ldporto_studio r6-draft --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9
 ```
 
 **Limitação técnica importante:** o roteiro R6 é uma *seleção para revisão*, não um ZIP de execução R57. O renderizador R57 exige assets de thumbnail, ASS/SRT revisados, Stories contínuos, manifestos e vinculação de mídia compatíveis. O próximo desenvolvimento é promover um roteiro selecionado a contrato renderizável, depois de validar esses insumos (sem inventá-los).
+
+## P1.1 — Filtro de cortes R6 e pré-validação sem render
+
+Com o show aberto na janela **Segunda curadoria R6**, use **Buscar trecho / fala / ID**, o filtro de candidatos e **Ocultar intervalos repetidos (só na tela)**. O aplicativo mantém o catálogo integral, com todos os IDs e advertências do Analyzer. Nenhum candidato é escolhido automaticamente. Use Ctrl/Shift para destacar na tabela e clique **MARCAR SELECIONADOS** para colocá-los no roteiro; trocas de filtro não perdem os marcados. Escolha um candidato isolado para editar título, `preserve`, `solo_fit`, `smart_zoom` ou `center_crop`, salve a alteração e exporte **EXPORTAR MARCADOS — ROTEIRO JSON**.
+
+O painel informa número de intervalos repetidos, títulos pendentes, candidatos não elegíveis e quantos realmente foram marcados. Há **ABRIR PASTA DO ROTEIRO** depois da exportação. Arquivos `R6_REVIEW_*.json` só são produzidos após seleção e confirmação explícitas: abrir/fechar a GUI sozinho não gera um roteiro.
+
+Para verificar o pacote sem imprimir centenas de linhas:
+
+```powershell
+python -m ldporto_studio r6-review --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791" --summary
+```
+
+Depois de exportar um roteiro, confirme suas referências usando:
+
+```powershell
+$draft = Get-ChildItem ".\output\scripts" -Recurse -File -Filter "R6_REVIEW_*.json" |
+    Sort-Object LastWriteTime -Descending | Select-Object -First 1
+if (-not $draft) { throw "Nenhum roteiro R6 exportado pela seleção." }
+python -m ldporto_studio r6-preflight --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791" --draft $draft.FullName
+```
+
+A pré-validação reabre o ZIP real, verifica SHA256/identidade do projeto, IDs selecionados, timestamps, alertas, intervalos duplicados/sobrepostos e aprovações indevidas. Com `--media <arquivo.mp4>` opcional, calcula o SHA256 real da mídia (sem copiá-la) e avisa quando **não coincide** com o vídeo que o Analyzer analisou. **Mesmo com SHA igual, o relatório nunca declara `render_ready=true` ou publicação aprovada.** A conversão do roteiro em pacote renderizável e a homologação de câmera/legendas permanecem tarefas separadas.
