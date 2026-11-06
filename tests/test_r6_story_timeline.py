@@ -89,8 +89,21 @@ class R6StoryProposalTests(unittest.TestCase):
         self.assertEqual(self.archive.read_bytes(),original)
 
     def test_gap_or_overlap_is_refused(self):
-        for value in (59.0,61.0):
-            path=self._edited(lambda doc: doc['story_slots'][1].update(source_start=value))
+        # Three 40-second windows leave room to test BOTH errors while
+        # staying inside the independent 60-second duration limit.
+        for value in (39.0,41.0):
+            def modify(doc):
+                template=doc['story_slots'][0]
+                doc['story_slots']=[]
+                for i,(start,end) in enumerate(((0,40),(40,80),(80,120)),1):
+                    row=dict(template)
+                    row.update(id=f'STORY_{i:02d}',source_start=float(start),
+                               source_end=float(end),duration_seconds=float(end-start))
+                    doc['story_slots'].append(row)
+                doc['story_slots'][1]['source_start']=value
+                doc['story_slots'][1]['duration_seconds']=80.0-value
+                doc['proposed_story_count']=3
+            path=self._edited(modify)
             with self.assertRaisesRegex(ValueError,'gap ou overlap'):
                 self._validated(path)
 

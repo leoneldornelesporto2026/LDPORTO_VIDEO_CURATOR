@@ -6,11 +6,9 @@ Never treats a duration split as an Analyzer Story or as publication approval.
 """
 from __future__ import annotations
 
-from hashlib import sha256
 import json
 import math
 from pathlib import Path
-import re
 
 from .core import atomic_write, fingerprint, sha256_file
 from .r6_review import read_analyzer_review
@@ -21,7 +19,6 @@ MAX_STORIES = 300
 MAX_PROPOSAL_BYTES = 512 * 1024
 PROPOSAL_TYPE = 'R6_STORY_BOUNDARY_PROPOSAL_NOT_EDITORIAL_APPROVAL'
 PROPOSAL_VERSION = 'ldporto-r6-story-boundary-proposal-1.0'
-SHA_PATTERN = re.compile(r'^[0-9a-f]{64}$')
 
 
 def technical_story_windows(duration_seconds):

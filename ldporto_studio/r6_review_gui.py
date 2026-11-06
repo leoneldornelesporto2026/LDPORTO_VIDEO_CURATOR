@@ -251,7 +251,7 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             return
         if not messagebox.askyesno(
                 'Divisão técnica para Stories',
-                'Criar uma proposta de janelas contínuas, cada uma com no máximo 60 segundos?\\n'
+                'Criar uma proposta de janelas contínuas, cada uma com no máximo 60 segundos?\n'
                 'NÃO são cenas identificadas, Stories aprovados ou conteúdo pronto.',
                 parent=self):
             return
@@ -265,7 +265,7 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         self.selection_status.set('PROPOSTA DE STORIES: '+str(path))
         messagebox.showinfo(
             'Timeline técnica proposta',
-            f'Proposta registrada em:\\n{path}\\n\\n'
+            f'Proposta registrada em:\n{path}\n\n'
             'Divisões ainda precisam de revisão editorial; nenhum Story foi aprovado.',
             parent=self)
 
