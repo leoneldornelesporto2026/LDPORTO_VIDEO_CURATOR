@@ -13,7 +13,7 @@ import json
 import os
 from pathlib import Path
 import tempfile
-from zipfile import ZIP_DEFLATED, ZipFile
+from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 from .core import CuradoriaPackage, fingerprint, json_bytes, sha256_bytes, sha256_file
 from .r6_asset_bindings import _verify_asset, audit_asset_bindings
@@ -207,7 +207,14 @@ def build_preview_archive(inbox, draft, story_proposal, bindings, assets_root, *
     try:
         with ZipFile(stage, 'w', compression=ZIP_DEFLATED, compresslevel=6) as archive:
             for name, content in sorted(files.items()):
-                archive.writestr(name, content)
+                # ZipFile.writestr(name, data) uses the current clock. Fix ZIP
+                # metadata so same verified inputs produce identical bytes.
+                info = ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+                info.create_system = 3
+                info.external_attr = 0o600 << 16
+                info.compress_type = ZIP_DEFLATED
+                archive.writestr(info, content, compress_type=ZIP_DEFLATED,
+                                 compresslevel=6)
         strict = CuradoriaPackage(stage)
         if (strict.source_sha != summary['source_sha256']
                 or len(strict.items('reels')) != summary['reels']
