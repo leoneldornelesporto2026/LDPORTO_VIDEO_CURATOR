@@ -69,7 +69,7 @@ class R57PreviewDraftTests(unittest.TestCase):
         self.assertEqual(summary['reels'],1)
         self.assertEqual(summary['technical_stories'],2)
         self.assertEqual(summary['asset_files'],9)
-        self.assertEqual(len(files),18)  # 3 cuts x 4 assets + 6 contract JSONs
+        self.assertEqual(len(files),17)  # 3 cuts x 4 entries + 5 R57 root JSONs
         self.assertFalse(summary['human_approved'])
         self.assertFalse(self.preview_root.exists())
         self.assertEqual(sha256_file(self.r6_zip),before)
@@ -128,6 +128,25 @@ class R57PreviewDraftTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self._assemble()
         self.assertFalse(self.preview_root.exists())
+
+    def test_cli_inspection_does_not_save_and_explicit_save_builds_preview_only(self):
+        from ldporto_studio.__main__ import main
+        output=StringIO()
+        args=['r6-r57-preview-package','--inbox',str(self.inbox),
+              '--draft',str(self.draft),'--story-proposal',str(self.proposal),
+              '--bindings',str(self.binding),'--assets-root',str(self.assets)]
+        with redirect_stdout(output):
+            code=main(args)
+        self.assertEqual(code,0)
+        report=json.loads(output.getvalue())
+        self.assertEqual(report['asset_files'],9)
+        self.assertFalse(report['human_approved'])
+        self.assertIsNone(report['zip_path'])
+        self.assertFalse(self.preview_root.exists())
+        # Explicit save and preview-only confirmation are mandatory for any ZIP.
+        with self.assertRaisesRegex(ValueError,'confirm-preview-only'):
+            main(args + ['--save'])
+        self.assertFalse((self.folder/'output'/'projects').exists())
 
     def test_asset_from_untrusted_path_is_refused(self):
         doc=json.loads(self.binding.read_text(encoding='utf-8'))

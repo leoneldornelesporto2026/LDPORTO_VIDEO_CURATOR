@@ -63,6 +63,17 @@ def main(argv=None):
     a.add_argument('--save-template',action='store_true')
     a.add_argument('--bindings',type=Path)
     a.add_argument('--assets-root',type=Path)
+    a=sub.add_parser('r6-r57-preview-package',
+                     help='Montar ZIP R57 válido só para importação/PRÉVIAS, sem finais ou aprovação')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--story-proposal',required=True,type=Path)
+    a.add_argument('--bindings',required=True,type=Path)
+    a.add_argument('--assets-root',required=True,type=Path)
+    a.add_argument('--save',action='store_true',
+                   help='Persistir ZIP em output/r6_bridge; sem este flag, só preflight')
+    a.add_argument('--confirm-preview-only',action='store_true',
+                   help='Confirmo que Stories são propostas e nada está aprovado')
     a=sub.add_parser('r6-r57-plan',help='Preparar checklist auditável R6 -> R57, sem criar ZIP/Stories/approvals')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path,help='Roteiro R6 exportado após seleção explícita')
@@ -130,6 +141,19 @@ def main(argv=None):
         if args.bindings is not None:
             result['audit']=audit_asset_bindings(
                 args.inbox,args.draft,args.story_proposal,args.bindings,args.assets_root)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='r6-r57-preview-package':
+        from .r6_r57_preview_package import prepare_preview_archive, build_preview_archive
+        if args.save:
+            result=build_preview_archive(
+                args.inbox,args.draft,args.story_proposal,args.bindings,args.assets_root,
+                confirm_preview_only=args.confirm_preview_only)
+        else:
+            _files, result=prepare_preview_archive(
+                args.inbox,args.draft,args.story_proposal,args.bindings,args.assets_root)
+            result={**result,'zip_path':None,'r57_importable_for_preview':False,
+                    'r57_imported':False,'render_executed':False}
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-r57-plan':

@@ -297,3 +297,16 @@ python -m ldporto_studio r6-assets --inbox "input/analyzer/<video_id>/<run_id>" 
 ```
 
 Para salvar o template, inclua `--save-template`. Depois de preenchê-lo, acrescente `--bindings <template_preenchido.json> --assets-root <pasta_dos_arquivos>` para a auditoria. Ela verifica caminho relativo seguro, ausência de junctions, imagem PNG/JPEG válida, ASS com eventos, SRT com timestamps, SHA256 e proveniência dos cortes. **Validade estrutural não significa sincronização de legendas, aprovação das cenas, dos direitos ou do render**. Nenhum ZIP ou MP4 é gerado.
+
+
+## P1.4 — Montar ZIP R57 real de PRÉVIAS a partir do R6 (sem aprovação)
+
+O montador \`r6-r57-preview-package\` exige o ZIP R6 intacto, um draft de Reels selecionados explicitamente, uma proposta de janelas de Stories ligada ao SHA do draft e um arquivo de vínculos que aponta para **capas PNG, ASS e SRT reais**. Não gera conteúdo fictício. A preparação retorna as contagens e verifica todos os bytes sem criar ZIP por padrão.
+
+\`\`\`powershell
+python -m ldporto_studio r6-r57-preview-package --inbox "<curator>/input/analyzer/<video>/<run>" --draft "<R6_REVIEW.json>" --story-proposal "<R6_STORY_PROPOSAL.json>" --bindings "<R6_ASSETS_EDITADO.json>" --assets-root "<pasta_de_assets>"
+\`\`\`
+
+Somente quando os arquivos reais existirem e estiverem íntegros, acrescentar \`--save --confirm-preview-only\`. O comando gera um ZIP idempotente em \`output/r6_bridge/<source-sha-prefix>/R57_PREVIEW_DRAFT_<fingerprint>.zip\`, com os **cinco JSONs de contrato** e \`REELS/<id>/\`/\`STORIES/<id>/\` contendo os assets fornecidos e \`LEGENDA_REVISAO.json\` (estado rascunho). O novo ZIP é validado pelo importador estrito \`CuradoriaPackage\` antes de ser publicado.
+
+Um R57 de prévias é **importável**, mas os Stories foram apenas divididos tecnicamente, e todas as revisões humanas de transcrição, enquadramento, áudio, direitos e prévia permanecem pendentes. Não há geração de finais, aprovação ou publicação. O Studio continua exigindo revisão/preview por corte e não permite finais sem confirmação própria. O novo ZIP fica fora de \`input/\` por padrão; a CLI existente \`python -m ldporto_studio import --zip <zip> --workdir <pasta_vazia>\` pode criar um projeto isolado quando o operador decidir. O projeto existente Charlie Brown Jr. não é modificado.

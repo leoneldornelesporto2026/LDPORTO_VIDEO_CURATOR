@@ -116,8 +116,12 @@ def inspect_zip(path: Path) -> dict | None:
                                    'PLANO R57 INCOMPLETO')
                 title = _source_title(explicit=plan.get('source_title') or plan.get('video_title') or '',
                                       source_sha=source_sha, path=path)
-                return _record('curator_zip', path, title, 'CURADORIA PRONTA PARA IMPORTAR',
+                preview_draft = plan.get('editorial_status') == 'DRAFT_NOT_HUMAN_REVIEWED'
+                status = ('R57 RASCUNHO — SÓ PRÉVIAS; REVISÃO OBRIGATÓRIA'
+                          if preview_draft else 'CURADORIA PRONTA PARA IMPORTAR')
+                return _record('curator_zip', path, title, status,
                                reels=len(reels), stories=len(stories),
+                               preview_only=preview_draft,
                                source_sha256=source_sha,
                                source_url=str(plan.get('source_url') or ''),
                                run_id=str(plan.get('run_id') or ''))
