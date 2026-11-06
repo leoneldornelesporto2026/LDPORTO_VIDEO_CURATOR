@@ -212,3 +212,20 @@ O comando escolhe **2 candidatos reais apenas para teste técnico**, sem sobrepo
 O roteiro de smoke **não é uma escolha editorial**, não é `R6_REVIEW_*.json`, não altera projetos existentes nem mídia, não produz prévias/finais e mantém `render_ready=false`. Para repetir o teste, executar o mesmo comando é idempotente, sem sobrescrever revisões anteriores. Testar de 1 a 5 intervalos com `--count 3` quando houver duração suficiente.
 
 **Atenção à execução em PowerShell 5.1:** erros `throw` lançados ao colar trechos separados podem deixar o console disponível para os comandos seguintes. Use um **bloco único** com checagem de `$LASTEXITCODE`; nunca executar preflight com `$draft` vazio. O `r6-smoke` já executa exportação e pré-validação no mesmo comando, eliminando essa fonte de erro.
+
+## P2 — localizar mídia já existente do Analyzer, sem redownload
+
+O pacote R6 do Analyzer preserva o SHA256 do arquivo audiovisual original. Um teste `r6-smoke` bem-sucedido **não significa que o vídeo original esteja associado**; a saída `media_identity: NOT_CHECKED` exige esta verificação antes das prévias.
+
+Execute sem digitar IDs ou baixar mídia:
+
+```powershell
+python -m ldporto_studio r6-media-audit --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"
+```
+
+O diagnóstico procura arquivos de vídeo **somente em diretórios locais conhecidos e com limites de varredura**, priorizando `input/videos/<video_id>/`, os downloads antigos `Vídeos/LDPORTO_VIDEO_CURATOR/<video_id>/` e pastas de tentativas dos projetos anteriores em `output/projects/<projeto>/downloads/attempts/`. Abre os candidatos localmente, calcula SHA256 e classifica:
+- `EXACT_SOURCE_FOUND`: pelo menos um arquivo tem os mesmos bytes (SHA256) da fonte analisada;
+- `ALTERNATE_MEDIA_ONLY_REVIEW_REQUIRED`: há vídeo local, mas **nenhum** corresponde ao SHA256 original. Mesmo vídeo/URL/duração não comprovam sincronismo; os timestamps R6 não são liberados para render automático;
+- `NO_MANAGED_MEDIA_FOUND`: não encontrou vídeo nos diretórios gerenciados; informe manualmente um arquivo conhecido com `--media "C:\...\original.mp4"`, sem mover/copiar.
+
+A busca é limitada a 12 arquivos verificados e reporta `scan_truncated` se atingir o limite. Não varre a unidade C inteira. Não altera recibos, aprovação, `project.json`, R57, arquivos de mídia nem o estado dos cortes. `render_ready` e `human_approved` permanecem **false** independentemente do resultado. A associação controlada do vídeo e uma prévia técnica isolada serão tratadas depois que esta auditoria identificar uma fonte segura.

@@ -52,6 +52,10 @@ def main(argv=None):
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-media-audit',help='Localizar vídeos já baixados e comparar SHA256 com Analyzer (sem download)')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--media',type=Path,default=None,help='Arquivo local opcional fora dos locais gerenciados')
+    a.add_argument('--max-files',type=int,default=12,help='Máximo de vídeos a verificar, de 1 a 12')
     a=sub.add_parser('r6-smoke',help='Teste técnico automático do R6: escolher IDs, gerar JSON isolado e pré-validar sem mídia')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--count',type=int,default=2,help='1 a 5 candidatos distintos, apenas para teste')
@@ -72,6 +76,12 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='r6-media-audit':
+        from .r6_media_audit import audit_r6_media
+        print(json.dumps(audit_r6_media(args.inbox,explicit_media=args.media,
+                                        max_files=args.max_files),
+                         ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-smoke':
         from .r6_smoke import run_r6_smoke

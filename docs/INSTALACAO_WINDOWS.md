@@ -101,3 +101,13 @@ CLI: `python -m ldporto_studio r6-review --inbox ".\input\analyzer\<video_id>\<r
 Execute `python -m ldporto_studio r6-smoke --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"`. O comando **não solicita IDs**: escolhe duas entradas reais, não sobrepostas, como dados de **teste de integração**, salva em `output/r6_smoke/` (pasta ignorada) e executa preflight imediatamente. Resultado esperado: `SMOKE_PASSED_WITH_PENDING_HUMAN_REVIEWS`, `render_ready=false` e `human_approved=false`.
 
 Esse diagnóstico nunca escolhe "melhores cortes" para publicar, mesmo quando o Analyzer tem zero shortlist e 100% dos candidatos `publication_eligible_false`. Nenhum MP4, imagem ou pacote R57 é criado ou alterado.
+
+## P2 — inventário read-only da mídia já baixada
+
+Na raiz `LDPORTO_VIDEO_CURATOR`, após validar o smoke:
+```powershell
+python -m unittest discover -s tests -p "test_r6_media_audit.py" -v
+python -m ldporto_studio r6-media-audit --inbox ".\input\analyzer\aUgESZsOGmY\f8b424b9fc26c791"
+```
+
+Nenhuma interação, digitação de IDs, download ou render é necessário. O Curator verifica arquivos somente nas pastas gerenciadas atuais e legadas, com limite de 12 hashes, e devolve caminhos, SHA256 e estado `EXACT_SOURCE_FOUND`, `ALTERNATE_MEDIA_ONLY_REVIEW_REQUIRED` ou `NO_MANAGED_MEDIA_FOUND`. Fonte de outro local: acrescentar `--media "C:\...\original.mp4"` para verificação explícita. O programa não aprova vídeos com SHA diferente só porque têm o mesmo YouTube ID/duração.

@@ -28,3 +28,7 @@ Use `python -m ldporto_studio r6-preflight --inbox <entrega> --draft <roteiro>` 
 ## R6 smoke-test técnico automático
 
 `output/r6_smoke/` é **local e não versionado** (ignorado por `.gitignore`). Contém somente `SMOKE_R6_*.json` produzidos por `python -m ldporto_studio r6-smoke --inbox <entrega>`; cada arquivo é marcado como `AUTOMATED_TECHNICAL_SMOKE_TEST_ONLY` e não representa seleção editorial humana. O comando também inspeciona IDs, timestamps e bloqueios contra o ZIP original, sem usar mídia. Continue usando `output/scripts/R6_REVIEW_*.json` exclusivamente para roteiros selecionados de forma explícita na GUI ou CLI.
+
+## Auditoria de mídia R6 (sem arquivos novos)
+
+O comando `r6-media-audit --inbox <pasta-da-entrega>` é **somente leitura**. Ele encontra e calcula o SHA256 de arquivos locais nos diretórios conhecidos, sem criar relatórios salvos, sem importar mídia nem marcar cortes como aprovados. Toda trilha `output/r6_smoke/` continua para testes técnicos de seleção; `output/scripts/` segue reservado a roteiros editoriais explicitamente escolhidos.
