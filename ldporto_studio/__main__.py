@@ -52,6 +52,11 @@ def main(argv=None):
     a.add_argument('--mode',choices=('preserve','solo_fit','smart_zoom','center_crop'),default='preserve')
     a.add_argument('--confirm-review-draft',action='store_true',
                    help='Confirmar que é somente roteiro pendente, não um ZIP R57 renderizável')
+    a=sub.add_parser('r6-preview-smoke',help='Gerar prévia técnica pequena da fonte SHA exata, sem aprovação nem R57')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--media',required=True,type=Path)
+    a.add_argument('--seconds',type=float,default=6)
+    a.add_argument('--confirm-preview-test',action='store_true')
     a=sub.add_parser('r6-media-audit',help='Localizar vídeos já baixados e comparar SHA256 com Analyzer (sem download)')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--media',type=Path,default=None,help='Arquivo local opcional fora dos locais gerenciados')
@@ -76,6 +81,12 @@ def main(argv=None):
     if args.cmd is None or args.cmd=='gui':
         from .gui import launch
         launch(getattr(args,'example',None))
+        return 0
+    if args.cmd=='r6-preview-smoke':
+        from .r6_preview_smoke import render_r6_technical_preview
+        result=render_r6_technical_preview(
+            args.inbox,args.media,confirm=args.confirm_preview_test,seconds=args.seconds)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-media-audit':
         from .r6_media_audit import audit_r6_media

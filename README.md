@@ -229,3 +229,15 @@ O diagnóstico procura arquivos de vídeo **somente em diretórios locais conhec
 - `NO_MANAGED_MEDIA_FOUND`: não encontrou vídeo nos diretórios gerenciados; informe manualmente um arquivo conhecido com `--media "C:\...\original.mp4"`, sem mover/copiar.
 
 A busca é limitada a 12 arquivos verificados e reporta `scan_truncated` se atingir o limite. Não varre a unidade C inteira. Não altera recibos, aprovação, `project.json`, R57, arquivos de mídia nem o estado dos cortes. `render_ready` e `human_approved` permanecem **false** independentemente do resultado. A associação controlada do vídeo e uma prévia técnica isolada serão tratadas depois que esta auditoria identificar uma fonte segura.
+
+## Piloto completo com vídeo real — prévia técnica R6
+
+O operador do Analyzer `scripts/windows/testing/PILOTO_FULL_DEFAULTS.ps1` executa as **duas suítes completas** antes de analisar vídeo novo. O Curator acrescenta `r6-preview-smoke`: dado o ZIP Analyzer validado e o arquivo original com **SHA256 exatamente igual**, escolhe um candidato somente para teste e produz **no máximo 8 segundos** de vídeo com áudio e quadro original preservado dentro de 360×640, em `output/r6_preview_smoke/` (ignorado pelo Git).
+
+```powershell
+python -m ldporto_studio r6-preview-smoke --inbox ".\\input\\analyzer\\<video_id>\\<run_id>" --media "C:\\...\\fonte_exata.mp4" --seconds 6 --confirm-preview-test
+```
+
+Esta saída é **somente uma prévia técnica de integração**: não aplica `smart_zoom`, não finge legendas/câmera revisadas, não é um Reel completo, não gera um pacote editorial R57, não aprova nem publica. O status será `TECHNICAL_PREVIEW_REVIEW_REQUIRED`; `render_ready=false`, `publication_ready=false`, `human_approved=false`. O arquivo tem recibo JSON SHA256, reexecução idempotente e recusa de arquivo já existente divergente.
+
+O próximo desenvolvimento P2 real continua sendo o adaptador R6 → plano/ativos R57, com verificação de áudio/câmera/transcrição, Stories apenas quando há evidência, prévias finais e aprovação humana explícita. Não confundir o piloto de vídeo com a homologação editorial.

@@ -111,3 +111,15 @@ python -m ldporto_studio r6-media-audit --inbox ".\input\analyzer\aUgESZsOGmY\f8
 ```
 
 Nenhuma interação, digitação de IDs, download ou render é necessário. O Curator verifica arquivos somente nas pastas gerenciadas atuais e legadas, com limite de 12 hashes, e devolve caminhos, SHA256 e estado `EXACT_SOURCE_FOUND`, `ALTERNATE_MEDIA_ONLY_REVIEW_REQUIRED` ou `NO_MANAGED_MEDIA_FOUND`. Fonte de outro local: acrescentar `--media "C:\...\original.mp4"` para verificação explícita. O programa não aprova vídeos com SHA diferente só porque têm o mesmo YouTube ID/duração.
+
+## Piloto completo com vídeo real — prévia técnica R6
+
+O operador do Analyzer `scripts/windows/testing/PILOTO_FULL_DEFAULTS.ps1` executa as **duas suítes completas** antes de analisar vídeo novo. O Curator acrescenta `r6-preview-smoke`: dado o ZIP Analyzer validado e o arquivo original com **SHA256 exatamente igual**, escolhe um candidato somente para teste e produz **no máximo 8 segundos** de vídeo com áudio e quadro original preservado dentro de 360×640, em `output/r6_preview_smoke/` (ignorado pelo Git).
+
+```powershell
+python -m ldporto_studio r6-preview-smoke --inbox ".\\input\\analyzer\\<video_id>\\<run_id>" --media "C:\\...\\fonte_exata.mp4" --seconds 6 --confirm-preview-test
+```
+
+Esta saída é **somente uma prévia técnica de integração**: não aplica `smart_zoom`, não finge legendas/câmera revisadas, não é um Reel completo, não gera um pacote editorial R57, não aprova nem publica. O status será `TECHNICAL_PREVIEW_REVIEW_REQUIRED`; `render_ready=false`, `publication_ready=false`, `human_approved=false`. O arquivo tem recibo JSON SHA256, reexecução idempotente e recusa de arquivo já existente divergente.
+
+O próximo desenvolvimento P2 real continua sendo o adaptador R6 → plano/ativos R57, com verificação de áudio/câmera/transcrição, Stories apenas quando há evidência, prévias finais e aprovação humana explícita. Não confundir o piloto de vídeo com a homologação editorial.
