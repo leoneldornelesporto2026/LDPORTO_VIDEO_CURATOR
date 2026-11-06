@@ -112,5 +112,28 @@ class R6AssetBindingsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'ASS'):
             audit_asset_bindings(self.inbox,self.draft,self.proposal,path,self.assets)
 
+
+    def test_cli_reports_required_files_without_writing(self):
+        from ldporto_studio.__main__ import main
+        import io
+        from contextlib import redirect_stdout
+        buffer=io.StringIO()
+        with redirect_stdout(buffer):
+            result=main(['r6-assets','--inbox',str(self.inbox),
+                         '--draft',str(self.draft),
+                         '--story-proposal',str(self.proposal)])
+        self.assertEqual(result,0)
+        record=json.loads(buffer.getvalue())
+        self.assertEqual(record['required_files'],9)
+        self.assertIsNone(record['template_path'])
+        self.assertFalse(record['r57_import_ready'])
+
+    def test_gui_button_requires_an_explicit_story_proposal(self):
+        file=Path(__file__).resolve().parents[1]/'ldporto_studio'/'r6_review_gui.py'
+        content=file.read_text(encoding='utf-8')
+        self.assertIn('CHECKLIST ASSETS R57',content)
+        self.assertIn('self.last_story_proposal_path is None',content)
+        self.assertIn('save_asset_template(',content)
+
 if __name__=='__main__':
     unittest.main()

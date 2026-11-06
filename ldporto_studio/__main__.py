@@ -56,6 +56,13 @@ def main(argv=None):
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path,help='Seleção R6 explícita já exportada')
     a.add_argument('--save',action='store_true',help='Salvar JSON de proposta em output/r6_bridge/')
+    a=sub.add_parser('r6-assets',help='Criar template e auditar capas/ASS/SRT reais, sem render')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--story-proposal',required=True,type=Path)
+    a.add_argument('--save-template',action='store_true')
+    a.add_argument('--bindings',type=Path)
+    a.add_argument('--assets-root',type=Path)
     a=sub.add_parser('r6-r57-plan',help='Preparar checklist auditável R6 -> R57, sem criar ZIP/Stories/approvals')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path,help='Roteiro R6 exportado após seleção explícita')
@@ -107,6 +114,22 @@ def main(argv=None):
                 'r57_import_ready':False,'human_approved':False,'saved_proposal':None}
         if args.save:
             result['saved_proposal']=str(export_story_proposal(args.inbox,args.draft))
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='r6-assets':
+        from .r6_asset_bindings import asset_template, save_asset_template, audit_asset_bindings
+        if (args.bindings is None) != (args.assets_root is None):
+            raise ValueError('Informe --bindings e --assets-root juntos')
+        template=asset_template(args.inbox,args.draft,args.story_proposal)
+        result={'status':'ASSET_PATHS_REQUIRED','clips':template['clip_count'],
+                'required_files':template['clip_count']*3,
+                'template_path':None,'r57_import_ready':False}
+        if args.save_template:
+            result['template_path']=str(save_asset_template(
+                args.inbox,args.draft,args.story_proposal))
+        if args.bindings is not None:
+            result['audit']=audit_asset_bindings(
+                args.inbox,args.draft,args.story_proposal,args.bindings,args.assets_root)
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-r57-plan':

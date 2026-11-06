@@ -285,3 +285,15 @@ python -m ldporto_studio r6-story-propose --inbox ".\input\analyzer\<video_id>\<
 ```
 
 Acrescente `--save` para persistir a proposta local. A revisão posterior pode ajustar os intervalos no JSON, mas `r6-r57-plan --story-proposal "caminho.json"` só aceita janelas ordenadas, não sobrepostas, cobrindo a fonte inteira, cada uma de até 60 segundos, e com proveniência SHA/runs correta. Flags de aprovação falsificadas são rejeitadas. Mesmo com a timeline proposta validada, continuam bloqueados os assets reais (capa/ASS/SRT), a verificação editorial das janelas e as aprovações de prévias/direitos; `r57_story_slots=[]`, `r57_import_ready=false` e nenhum ZIP executável é produzido.
+
+
+## P1.3 — Checklist de assets reais do Analyzer R6
+
+Depois de exportar a seleção R6 e a proposta de Stories, a janela **Segunda curadoria** oferece **CHECKLIST ASSETS R57**. O template é salvo em `output/r6_bridge/<sha-prefix>/R6_ASSETS_<hash>.json` e contém um Reel/Story por linha, com caminhos `thumbnail`, `caption_ass`, `caption_srt` vazios por padrão. Os 3 arquivos devem ser **arquivos reais** fornecidos pelo operador, com paths relativos a uma pasta local escolhida.
+
+CLI de inspeção (somente leitura):
+```powershell
+python -m ldporto_studio r6-assets --inbox "input/analyzer/<video_id>/<run_id>" --draft "output/scripts/<show>/R6_REVIEW_<hash>.json" --story-proposal "output/r6_bridge/<sha>/R6_STORY_PROPOSAL_<hash>.json"
+```
+
+Para salvar o template, inclua `--save-template`. Depois de preenchê-lo, acrescente `--bindings <template_preenchido.json> --assets-root <pasta_dos_arquivos>` para a auditoria. Ela verifica caminho relativo seguro, ausência de junctions, imagem PNG/JPEG válida, ASS com eventos, SRT com timestamps, SHA256 e proveniência dos cortes. **Validade estrutural não significa sincronização de legendas, aprovação das cenas, dos direitos ou do render**. Nenhum ZIP ou MP4 é gerado.

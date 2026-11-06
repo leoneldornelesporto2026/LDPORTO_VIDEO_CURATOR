@@ -113,6 +113,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
         story_actions.pack(fill='x',pady=(8,0))
         ttk.Button(story_actions,text='PROPOR STORIES (SEM APROVAR)',
                    command=self._propose_story_windows).pack(side='right')
+        ttk.Button(story_actions,text='CHECKLIST ASSETS R57',
+                   command=self._export_asset_template).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
                   text='Somente divisões técnicas da duração; confirme conteúdo e cortes depois.').pack(side='left')
         footer=ttk.Frame(outer)
@@ -267,6 +269,29 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             'Timeline técnica proposta',
             f'Proposta registrada em:\n{path}\n\n'
             'Divisões ainda precisam de revisão editorial; nenhum Story foi aprovado.',
+            parent=self)
+
+    def _export_asset_template(self):
+        if self.last_exported_path is None or self.last_story_proposal_path is None:
+            messagebox.showwarning('Roteiro e Stories necessários',
+                'Exporte os Reels R6 e a proposta de Stories primeiro.',parent=self)
+            return
+        if not messagebox.askyesno('Checklist de assets reais',
+                'Criar template JSON com caminhos vazios para capa, ASS e SRT?\n'
+                'Não cria mídias, legendas nem ZIP R57.',parent=self):
+            return
+        try:
+            from .r6_asset_bindings import save_asset_template
+            path=save_asset_template(
+                self.review['inbox_folder'], self.last_exported_path,
+                self.last_story_proposal_path)
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Checklist bloqueado',str(exc),parent=self)
+            return
+        self.selection_status.set('CHECKLIST ASSETS: '+str(path))
+        messagebox.showinfo('Template de assets salvo',
+            f'Arquivo:\n{path}\n\n'
+            'Preencha caminhos relativos dos arquivos reais e audite pela CLI.',
             parent=self)
 
     def _prepare_r57_plan(self):
