@@ -140,6 +140,34 @@ class R6CaptionDraftTests(unittest.TestCase):
                 export_caption_drafts(self.inbox,draft,proposal,destination_root=self.output)
             self.assertFalse(self.output.exists())
 
+    def test_empty_original_srt_must_not_generate_speech(self):
+        self._add_srt('\n')
+        draft,proposal=self._plan()
+        files,report=prepare_caption_drafts(self.inbox,draft,proposal)
+        self.assertEqual(files,{})
+        self.assertEqual(report['status'],'SOURCE_SRT_EMPTY_OR_NO_CUES')
+        self.assertEqual(report['clips_with_draft'],0)
+
+    def test_source_srt_not_manifested_is_refused_even_with_matching_zip_receipt(self):
+        self._add_srt()
+        with ZipFile(self.zip) as src:
+            records={name:src.read(name) for name in src.namelist()}
+        manifest=json.loads(records['SECOND_CURATION_MANIFEST.json'])
+        manifest['files']=[x for x in manifest['files']
+                           if x['path']!='transcript/transcript.srt']
+        records['SECOND_CURATION_MANIFEST.json']=json.dumps(manifest).encode('utf-8')
+        with ZipFile(self.zip,'w',ZIP_DEFLATED) as archive:
+            for name,blob in records.items():
+                archive.writestr(name,blob)
+        receipt_file=self.inbox/'ANALYZER_TO_CURATOR_HANDOFF.json'
+        receipt=json.loads(receipt_file.read_text(encoding='utf-8'))
+        receipt['zip']['bytes']=self.zip.stat().st_size
+        receipt['zip']['sha256']=sha256_file(self.zip)
+        receipt_file.write_text(json.dumps(receipt),encoding='utf-8')
+        draft,proposal=self._plan()
+        with self.assertRaisesRegex(ValueError,'não declarado'):
+            prepare_caption_drafts(self.inbox,draft,proposal)
+
     def test_existing_zip_tampering_is_refused(self):
         self._add_srt()
         draft,proposal=self._plan()

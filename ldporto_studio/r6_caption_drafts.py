@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+import stat
 import tempfile
 from zipfile import ZipFile
 
@@ -62,6 +63,8 @@ def parse_original_srt(raw, source_duration_ms):
         raise ValueError('SRT original não é UTF-8') from exc
     if '\x00' in text:
         raise ValueError('SRT contém NUL')
+    if not text.strip():
+        return []
     chunks = re.split(r'\n[ \t]*\n', text.strip())
     if len(chunks) > MAX_CUES:
         raise ValueError('Transcrição excede máximo de legendas')
@@ -133,11 +136,18 @@ def prepare_caption_drafts(inbox, draft, story_proposal):
     original = None
     with ZipFile(source) as archive:
         if SOURCE_MEMBER in archive.namelist():
+            manifest = json.loads(archive.read('SECOND_CURATION_MANIFEST.json'))
+            declared = {r['path']:r for r in manifest.get('files', [])
+                        if isinstance(r, dict) and isinstance(r.get('path'), str)}
             info = archive.getinfo(SOURCE_MEMBER)
-            if 0 < info.file_size <= MAX_SRT_BYTES:
-                original = archive.read(SOURCE_MEMBER)
-            else:
+            if not 0 < info.file_size <= MAX_SRT_BYTES:
                 raise ValueError('SRT R6 acima do limite')
+            entry = declared.get(SOURCE_MEMBER)
+            if not isinstance(entry, dict) or entry.get('bytes') != info.file_size:
+                raise ValueError('SRT não declarado corretamente no manifesto R6')
+            original = archive.read(SOURCE_MEMBER)
+            if sha256_bytes(original) != entry.get('sha256'):
+                raise ValueError('SRT R6 diverge do manifesto')
     clips = [('reels', c) for c in bridge['r57_reel_slots']]
     clips += [('stories', c) for c in bridge['r57_story_boundary_proposals']]
     captions = []
@@ -177,7 +187,9 @@ def prepare_caption_drafts(inbox, draft, story_proposal):
         raise ValueError('ZIP original alterado durante leitura das legendas')
     report = {
         'schema_version': VERSION,
-        'status': 'DRAFT_ASR_NEEDS_HUMAN_REVIEW' if cues else 'SOURCE_SRT_NOT_PRESENT',
+        'status': ('DRAFT_ASR_NEEDS_HUMAN_REVIEW' if cues else
+                   'SOURCE_SRT_EMPTY_OR_NO_CUES' if original is not None else
+                   'SOURCE_SRT_NOT_PRESENT'),
         'source': dict(provenance),
         'original_srt_member': SOURCE_MEMBER,
         'original_srt_sha256': source_srt_sha,
@@ -218,8 +230,14 @@ def export_caption_drafts(inbox, draft, story_proposal, destination_root=None):
         if json.loads(manifest_file.read_text(encoding='utf-8')) != report:
             raise ValueError('Manifesto anterior diverge')
         expected = {'CAPTION_DRAFT_MANIFEST.json'} | set(files)
+        descendants = list(folder.rglob('*'))
+        if any(p.is_symlink() or (
+                getattr(p.lstat(), 'st_file_attributes', 0) &
+                getattr(stat, 'FILE_ATTRIBUTE_REPARSE_POINT', 1024)
+        ) for p in descendants):
+            raise ValueError('Link/junction inesperado na saída de legendas')
         actual = {p.relative_to(folder).as_posix()
-                  for p in folder.rglob('*') if p.is_file()}
+                  for p in descendants if p.is_file()}
         if actual != expected:
             raise ValueError('Arquivos da pasta anterior divergentes')
         for name, data in files.items():
