@@ -254,8 +254,19 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
             if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop','dynamic'):
                 raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
         atomic_write(root/'CAMERA_PLAN.json',camera)
-    if require_reframe and camera.get('decision')=='preserve':
-        raise ValueError('Nenhuma região 9:16 validada; prévia horizontal antiga recusada')
+    if camera.get('decision')=='crop':
+        portrait_coverage=1.
+    elif camera.get('decision')=='dynamic':
+        portrait_coverage=sum(
+            max(0.,float(x['end'])-float(x['start']))
+            for x in camera.get('camera_regions',[]))/duration
+    else:
+        portrait_coverage=0.
+    camera['portrait_coverage_percent']=round(min(100.,portrait_coverage*100),1)
+    if require_reframe and portrait_coverage<.35:
+        raise ValueError(
+            f'Reenquadramento insuficiente: {portrait_coverage:.1%} em 9:16; '
+            'mínimo editorial 35%. Revise CAMERA_PLAN.json e evidências do Analyzer.')
     caption_report=None
     if draft_captions:
         from .caption_second_pass import inspect_caption_second_pass

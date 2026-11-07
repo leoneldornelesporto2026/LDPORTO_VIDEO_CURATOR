@@ -192,7 +192,16 @@ class RenderFeatureTests(unittest.TestCase):
         fallback={'requested':'smart_zoom','decision':'preserve',
                   'reason':'Test detector unavailable','camera_points':[]}
         with patch('ldporto_studio.smart_camera.analyze_camera',return_value=fallback):
-            with self.assertRaisesRegex(ValueError,'Nenhuma região 9:16'):
+            with self.assertRaisesRegex(ValueError,'Reenquadramento insuficiente'):
+                render_item(self.p,'REEL_01',preview=True,require_reframe=True)
+
+    def test_reframe_coverage_below_35_percent_is_not_a_success(self):
+        self.p.update('REEL_01',layout='smart_zoom')
+        weak={'requested':'smart_zoom','decision':'dynamic',
+              'camera_regions':[{'start':.1,'end':.4,'x':.5,'samples':2}],
+              'camera_points':[]}
+        with patch('ldporto_studio.smart_camera.analyze_camera',return_value=weak):
+            with self.assertRaisesRegex(ValueError,'mínimo editorial 35%'):
                 render_item(self.p,'REEL_01',preview=True,require_reframe=True)
 
     def test_solo_fit_ambiguous_falls_back_to_16_by_9(self):

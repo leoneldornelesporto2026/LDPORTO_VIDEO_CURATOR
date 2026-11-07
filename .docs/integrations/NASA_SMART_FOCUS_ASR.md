@@ -38,3 +38,8 @@ python -m unittest discover -s tests -p test_caption_second_pass.py -v
 ```
 
 Os testes com FFmpeg exercitam um MP4 sintético com áudio e ASS reais. Um teste PASS em fixture não significa revisão visual do NASA; esta precisa ser feita abrindo a prévia produzida.
+
+
+### Gate de cobertura 9:16
+
+Ao usar `--require-reframe`, o Studio exige que **pelo menos 35% da duração total** seja retrato real (crop 9:16) antes de iniciar o FFmpeg. No `CAMERA_PLAN.json` aparece `portrait_coverage_percent`; resultado abaixo do limiar é bloqueado com porcentagem explícita. Isso evita declarar sucesso quando quase todos os segundos continuam no 16:9 desfocado. Não é garantia de qualidade visual: ainda é necessária revisão da prévia completa.
