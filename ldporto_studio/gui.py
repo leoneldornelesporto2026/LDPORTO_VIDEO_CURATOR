@@ -193,6 +193,11 @@ class CuratorApp(tk.Tk):
         for label,fn in [('GERAR PRÉVIA',self.preview_selected),('ABRIR PRÉVIA',self.open_preview),
                          ('APROVAR PRÉVIA',self.approve_selected),('RENDER FINAL',self.final_selected)]:
             ttk.Button(actions,text=label,command=fn).pack(side='left',padx=(0,5))
+        review_tools=ttk.Frame(right);review_tools.pack(fill='x',pady=(3,6))
+        ttk.Button(review_tools,text='PRÉVIA INTELIGENTE + LEGENDAS',
+                   command=self.smart_caption_preview).pack(side='left',padx=(0,6))
+        ttk.Button(review_tools,text='ABRIR REVISÃO COM LEGENDAS',
+                   command=self.open_smart_caption_preview).pack(side='left')
         tools=ttk.Frame(right);tools.pack(fill='x',pady=4)
         for label,fn in [('Prévia de todos os Reels',lambda:self.batch('reels')),
                          ('Prévia de todos os Stories',lambda:self.batch('stories')),
@@ -613,6 +618,70 @@ class CuratorApp(tk.Tk):
           lambda:render_item(self.project,cid,preview=preview,
               progress=lambda value,item:self.q.put(('progress',value)),cancel=self.cancel))
 
+    def _find_analyzer_inbox_for_project(self):
+        """Find only source-SHA matching Analyzer receipts, never guess from title."""
+        source=self.project.package.source_sha
+        root=input_root()/'analyzer'
+        if not root.is_dir():
+            return None
+        video_id=self.project.package.plan.get('source_video_id')
+        bases=[root/video_id] if isinstance(video_id,str) and video_id else []
+        if not any(p.is_dir() for p in bases):
+            bases=[p for p in root.iterdir() if p.is_dir() and not p.is_symlink()]
+        matching=[]
+        for base in bases:
+            if not base.is_dir() or base.is_symlink():continue
+            for item in base.iterdir():
+                if not item.is_dir() or item.is_symlink():continue
+                receipt=item/'ANALYZER_TO_CURATOR_HANDOFF.json'
+                if not receipt.is_file() or receipt.stat().st_size>128*1024:
+                    continue
+                try:
+                    data=json.loads(receipt.read_text(encoding='utf-8'))
+                except (ValueError,OSError,UnicodeError):
+                    continue
+                if data.get('source_sha256')==source:
+                    matching.append(item)
+        return max(matching,key=lambda p:p.stat().st_mtime_ns) if matching else None
+
+    def smart_caption_preview(self):
+        if self.busy or not self.project or not self.selected:return
+        if not messagebox.askyesno(
+                'Prévia 9:16 com legendas ASR em revisão',
+                'Reenquadrar por pessoa/cena e mostrar a transcrição recebida'
+                ' na prévia, com aviso ASR NÃO CONFERIDO?\n\n'
+                'Esta é uma prévia editorial isolada. Não aprova nem publica. '
+                'O enquadramento deve atingir ao menos 35% do Reel.'):
+            return
+        cid=self.selected
+        try:
+            inbox=self._find_analyzer_inbox_for_project()
+            self.project.update(cid,layout='smart_zoom')
+            self.layout.set('smart_zoom')
+        except (OSError,ValueError,KeyError) as error:
+            return messagebox.showerror('Preparação bloqueada',str(error))
+        if inbox is None:
+            self.log_message('Analyzer correspondente não encontrado; tentativa com '
+                             'OpenCV local, sem fingir evidência R6.')
+        def work():
+            movie,report=render_item(
+                self.project,cid,preview=True,analyzer_inbox=inbox,
+                draft_captions=True,require_reframe=True,cancel=self.cancel,
+                progress=lambda value,item:self.q.put(('progress',value)))
+            return ('MP4 revisável: '+str(movie)+
+                    ' | retrato real '+str(report['camera_plan']['portrait_coverage_percent'])+'%')
+        self._task('Gerando revisão isolada com câmera inteligente + ASR...',work)
+
+    def open_smart_caption_preview(self):
+        if not self.project or not self.selected:return
+        root=self.project.dir/'outputs'/'caption_draft_previews'/self.selected
+        paths=list(root.glob('*/PREVIEW_ASR_DRAFT_540x960.mp4')) if root.is_dir() else []
+        if not paths:
+            return messagebox.showwarning(
+                'Sem prévia com ASR','Gere uma PRÉVIA INTELIGENTE + LEGENDAS primeiro.')
+        latest=max(paths,key=lambda p:p.stat().st_mtime_ns)
+        open_file(latest)
+
     def preview_selected(self):self._render(True)
     def final_selected(self):self._render(False)
 
@@ -674,7 +743,8 @@ class CuratorApp(tk.Tk):
         if self.busy or not self.project:return
         if not messagebox.askyesno('Aplicar enquadramento automático',
              'Alterar os Reels deste show para smart_zoom? O detector inspeciona quadros reais; '
-             'se não identificar um corpo inteiro sozinho com confiança, preserva o 16:9. '
+             'combina evidências de câmera, rosto e movimento localizado, '
+             'preservando cenas amplas quando necessário. '
              'Aprovações/prévias anteriores ficam desatualizadas para esses Reels. '
              'Stories não serão alterados. Continuar?'):
             return
