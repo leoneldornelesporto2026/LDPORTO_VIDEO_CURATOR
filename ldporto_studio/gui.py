@@ -625,7 +625,9 @@ class CuratorApp(tk.Tk):
         if not root.is_dir():
             return None
         video_id=self.project.package.plan.get('source_video_id')
-        bases=[root/video_id] if isinstance(video_id,str) and video_id else []
+        safe_id=(isinstance(video_id,str) and 1<=len(video_id)<=32
+                 and all(char.isalnum() or char in '_-' for char in video_id))
+        bases=[root/video_id] if safe_id else []
         if not any(p.is_dir() for p in bases):
             bases=[p for p in root.iterdir() if p.is_dir() and not p.is_symlink()]
         matching=[]

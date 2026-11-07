@@ -43,3 +43,8 @@ Os testes com FFmpeg exercitam um MP4 sintético com áudio e ASS reais. Um test
 ### Gate de cobertura 9:16
 
 Ao usar `--require-reframe`, o Studio exige que **pelo menos 35% da duração total** seja retrato real (crop 9:16) antes de iniciar o FFmpeg. No `CAMERA_PLAN.json` aparece `portrait_coverage_percent`; resultado abaixo do limiar é bloqueado com porcentagem explícita. Isso evita declarar sucesso quando quase todos os segundos continuam no 16:9 desfocado. Não é garantia de qualidade visual: ainda é necessária revisão da prévia completa.
+
+
+### Interface gráfica
+
+Abra o Curator Studio, selecione o projeto/REEL_01 e clique **PRÉVIA INTELIGENTE + LEGENDAS**. O Studio busca um recebimento R6 com o **mesmo SHA256 da mídia**, muda apenas o layout selecionado para `smart_zoom` (invalidando eventuais aprovações do enquadramento anterior) e prepara uma prévia técnica isolada. Depois clique **ABRIR REVISÃO COM LEGENDAS**. A GUI não confirma transcrição, não marca direitos e não publica; revisão auditiva continua necessária.

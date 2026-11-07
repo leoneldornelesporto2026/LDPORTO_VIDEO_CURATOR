@@ -104,6 +104,10 @@ class CaptionSecondPassTests(unittest.TestCase):
         self.assertIn("save_caption_second_pass_report",source)
         self.assertIn("if not p.exists():",source)
         self.assertIn("Conferi transcrição e áudio desta legenda",source)
+        self.assertIn("PRÉVIA INTELIGENTE + LEGENDAS",source)
+        self.assertIn("ABRIR REVISÃO COM LEGENDAS",source)
+        self.assertIn("draft_captions=True,require_reframe=True",source)
+        self.assertIn("data.get('source_sha256')==source",source)
 
 
 if __name__=="__main__":
