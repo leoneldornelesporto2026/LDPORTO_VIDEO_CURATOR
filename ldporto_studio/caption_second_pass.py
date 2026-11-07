@@ -26,7 +26,7 @@ def _plain(text):
 
 
 def _ass_time_ms(raw):
-    match=re.fullmatch(r"(\\d+):(\\d{2}):(\\d{2})\\.(\\d{2})",raw.strip())
+    match=re.fullmatch(r"(\d+):(\d{2}):(\d{2})\.(\d{2})",raw.strip())
     if not match:
         raise ValueError("Timestamp ASS malformado: "+raw)
     hh,mm,ss,cs=(int(value) for value in match.groups())

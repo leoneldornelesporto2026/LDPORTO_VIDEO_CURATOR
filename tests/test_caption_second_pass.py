@@ -67,8 +67,8 @@ class CaptionSecondPassTests(unittest.TestCase):
         self.assertFalse(result["captions_verified"])
 
     def test_shifted_ass_timestamps_are_flagged_without_claiming_audio_review(self):
-        shifted=(b"[Script Info]\\n[Events]\\n"
-                 b"Dialogue: 0,0:00:01.50,0:00:02.00,Default,,0,0,0,,Teste\\n")
+        shifted=(b"[Script Info]\n[Events]\n"
+                 b"Dialogue: 0,0:00:01.50,0:00:02.00,Default,,0,0,0,,Teste\n")
         with patch.object(self.project,"caption_payload",
                           return_value=shifted):
             report=inspect_caption_second_pass(self.project,"REEL_01")
