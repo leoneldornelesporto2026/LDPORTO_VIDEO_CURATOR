@@ -653,7 +653,8 @@ class CuratorApp(tk.Tk):
                 'Reenquadrar por pessoa/cena e mostrar a transcrição recebida'
                 ' na prévia, com aviso ASR NÃO CONFERIDO?\n\n'
                 'Esta é uma prévia editorial isolada. Não aprova nem publica. '
-                'O enquadramento deve atingir ao menos 35% do Reel.'):
+                'As cenas sem detecção confiável serão reenquadradas pelo centro '
+                'apenas para revisão, sujeitas a perda de conteúdo lateral.'):
             return
         cid=self.selected
         try:
@@ -668,7 +669,8 @@ class CuratorApp(tk.Tk):
         def work():
             movie,report=render_item(
                 self.project,cid,preview=True,analyzer_inbox=inbox,
-                draft_captions=True,require_reframe=True,cancel=self.cancel,
+                draft_captions=True,require_reframe=True,editorial_fill=True,
+                cancel=self.cancel,
                 progress=lambda value,item:self.q.put(('progress',value)))
             return ('MP4 revisável: '+str(movie)+
                     ' | retrato real '+str(report['camera_plan']['portrait_coverage_percent'])+'%')

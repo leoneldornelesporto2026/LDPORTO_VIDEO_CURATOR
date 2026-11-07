@@ -26,7 +26,9 @@ def main(argv=None):
             a.add_argument('--draft-captions',action='store_true',
                            help='Prévia separada com ASR não conferido e aviso visível')
             a.add_argument('--require-reframe',action='store_true',
-                           help='Falhar se nenhuma região real for reenquadrada 9:16')
+                           help='Falhar se reenquadramento vertical insuficiente')
+            a.add_argument('--editorial-fill',action='store_true',
+                           help='Reel 9:16 de revisão: preencher trechos incertos com crop central não aprovado; requer --draft-captions --require-reframe')
         if name=='associate':a.add_argument('--media',required=True,type=Path)
         if name in ('list','assets','batch-preview'):
             a.add_argument('--kind',choices=('all','reels','stories'),default='all' if name!='batch-preview' else 'reels')
@@ -430,7 +432,8 @@ def main(argv=None):
         from .rendering import render_item
         opts=(dict(analyzer_inbox=args.analyzer_inbox,
                    draft_captions=args.draft_captions,
-                   require_reframe=args.require_reframe)
+                   require_reframe=args.require_reframe,
+                   editorial_fill=args.editorial_fill)
               if args.cmd=='preview' else {})
         path,report=render_item(project,args.id,preview=args.cmd=='preview',**opts)
         print(path)

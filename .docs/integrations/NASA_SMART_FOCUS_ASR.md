@@ -14,7 +14,7 @@ Na raiz do Curator, a partir da `develop` atual, após execução dos testes:
 $repo = "C:\Users\leone\Documentos\Meus Projetos\LDPORTO_VIDEO_CURATOR"
 $workdir = Join-Path $repo "output\projects\NASA_R57_PILOT_fa68b736b2fb"
 $inbox = Join-Path $repo "input\analyzer\Eo2bUJcxASI\2131f80ae982b4dc"
-& .\.venv\Scripts\python.exe -m ldporto_studio preview --workdir $workdir --id REEL_01 --analyzer-inbox $inbox --draft-captions --require-reframe
+& .\.venv\Scripts\python.exe -m ldporto_studio preview --workdir $workdir --id REEL_01 --analyzer-inbox $inbox --draft-captions --require-reframe --editorial-fill
 ```
 
 Prévia independente em `output/projects/<projeto>/outputs/caption_draft_previews/REEL_01/<execução>/PREVIEW_ASR_DRAFT_540x960.mp4`. Ela contém áudio original, texto e tempos do ASR recebidos e aviso visual **ASR RASCUNHO - CONFERIR AUDIO**.
@@ -48,3 +48,8 @@ Ao usar `--require-reframe`, o Studio exige que **pelo menos 35% da duração to
 ### Interface gráfica
 
 Abra o Curator Studio, selecione o projeto/REEL_01 e clique **PRÉVIA INTELIGENTE + LEGENDAS**. O Studio busca um recebimento R6 com o **mesmo SHA256 da mídia**, muda apenas o layout selecionado para `smart_zoom` (invalidando eventuais aprovações do enquadramento anterior) e prepara uma prévia técnica isolada. Depois clique **ABRIR REVISÃO COM LEGENDAS**. A GUI não confirma transcrição, não marca direitos e não publica; revisão auditiva continua necessária.
+
+
+### Modo editorial 9:16 para diagnóstico de cobertura baixa
+
+Se o log indicar pouco enquadramento confirmado (ex.: 8,9% no NASA), use **somente na prévia isolada** `--editorial-fill` junto de `--draft-captions --require-reframe`. O Curator preserva as regiões seguras vindas do Analyzer e preenche as lacunas com um **crop central experimental 9:16**, para que o vídeo possa ser visto com legendas. O campo `portrait_coverage_percent` pode atingir 100% por recorte, mas o campo `verified_portrait_coverage_percent` continua com o valor realmente confirmado (8,9% no diagnóstico anterior). Todo o restante é `CENTER_CROP_REVIEW_REQUIRED` e precisa ser visto para evitar cortar astronautas ou elementos laterais. A prévia não é aprovável, não altera direitos nem substitui qualquer MP4 anterior.
