@@ -5,6 +5,7 @@ or changes approvals. Saving produces a media-free review script.
 """
 from __future__ import annotations
 
+import json
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 from .r6_review import export_editorial_draft, LAYOUTS
@@ -117,8 +118,10 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                    command=self._export_asset_template).pack(side='right',padx=(0,6))
         ttk.Button(story_actions,text='GERAR ZIP R57 (SÓ PRÉVIAS)',
                    command=self._build_preview_r57).pack(side='right',padx=(0,6))
+        ttk.Button(story_actions,text='EVIDÊNCIAS R6',
+                   command=self._export_r6_evidence).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
-                  text='Somente divisões técnicas da duração; confirme conteúdo e cortes depois.').pack(side='left')
+                  text='Materiais para revisar; sem aprovação.').pack(side='left')
         footer=ttk.Frame(outer)
         footer.pack(fill='x',pady=(8,0))
         self.selection_status=tk.StringVar(value='Nenhum marcado para o roteiro.')
@@ -271,6 +274,41 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             'Timeline técnica proposta',
             f'Proposta registrada em:\n{path}\n\n'
             'Divisões ainda precisam de revisão editorial; nenhum Story foi aprovado.',
+            parent=self)
+
+    def _export_r6_evidence(self):
+        if self.last_exported_path is None:
+            messagebox.showwarning(
+                'Exporte a seleção R6 primeiro',
+                'Marque os Reels desejados e exporte o roteiro R6.',parent=self)
+            return
+        if not messagebox.askyesno(
+                'Reaproveitar evidências do Analyzer?',
+                'Copiar somente contact sheets JPEG e transcrições originais que '
+                'já existirem no ZIP R6 validado?\n'
+                'São materiais para revisão, NÃO capas finais nem legendas aprovadas.',
+                parent=self):
+            return
+        self.configure(cursor='watch')
+        self.update_idletasks()
+        try:
+            from .r6_evidence_reuse import export_r6_evidence
+            folder=export_r6_evidence(
+                self.review['inbox_folder'], self.last_exported_path)
+            report=json.loads((folder/'EVIDENCE_REUSE_MANIFEST.json').read_text(encoding='utf-8'))
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Evidências não exportadas',str(exc),parent=self)
+            return
+        finally:
+            self.configure(cursor='')
+        self.selection_status.set('EVIDÊNCIAS R6: '+str(folder))
+        messagebox.showinfo(
+            'Evidências preservadas',
+            f"Contatos visuais existentes: {report['reused_visual_count']}\n"
+            f"Contatos visuais ausentes: {report['missing_visual_count']}\n"
+            f"Transcrições originais: {report['existing_transcript_count']}\n\n"
+            f'Pasta: {folder}\n\n'
+            'Revise e prepare capas e legendas reais separadamente.',
             parent=self)
 
     def _export_asset_template(self):

@@ -315,3 +315,16 @@ Um R57 de prévias é **importável**, mas os Stories foram apenas divididos tec
 ### Botão na segunda curadoria
 
 Depois de salvar o roteiro de Reels, propor Stories e preencher o checklist com os arquivos locais reais, o botão **GERAR ZIP R57 (SÓ PRÉVIAS)** solicita o JSON de assets preenchido, sua pasta raiz e confirmação explícita. O resultado é um ZIP validado pelo `CuradoriaPackage` na pasta `output/r6_bridge/`, sem importar projetos, associar mídia nem gerar vídeos automaticamente. A criação do projeto e a associação SHA exata da fonte acontecem depois, no fluxo normal do Studio.
+
+
+## P1.5 — Reaproveitar evidências R6 existentes sem reanalisar
+
+O comando `r6-evidence` consulta somente o ZIP recebido em `input/analyzer/<video_id>/<run_id>/` e o roteiro com seleção explícita de Reels. Os ZIPs e recibos originais são validados novamente por SHA256. Para cada Reel escolhido, um `visuals/<candidate_id>/contact_sheet.jpg` pode ser reutilizado **somente** se estiver realmente presente e declarado no catálogo R6. O mesmo vale para os arquivos literais `transcript/transcript.srt` e `transcript/relevant_segments.jsonl`. Ausências são relatadas, nunca preenchidas com arquivos fictícios.
+
+Inventário **somente leitura**, sem criar arquivos:
+```powershell
+python -m ldporto_studio r6-evidence --inbox "input/analyzer/<video_id>/<run_id>" --draft "output/scripts/<show>/R6_REVIEW_<hash>.json"
+```
+Para copiar somente evidências existentes e verificadas, acrescente `--save`. Elas ficam em `output/r6_bridge/<source-sha-prefix>/EVIDENCE_R6_<fingerprint>/` com `EVIDENCE_REUSE_MANIFEST.json` e hashes de todos os arquivos; a operação é idempotente, não sobrescreve alterações divergentes e não cria MP4, ASS ou imagens sintéticas. Há também o botão **EVIDÊNCIAS R6** na segunda curadoria, disponível após exportar uma seleção de Reels.
+
+**Importante:** contact sheets são referências visuais compostas, **não capas finais**. O SRT do Analyzer contém ASR original ainda sujeito à revisão; **não é uma legenda validada para qualquer corte**. Esses arquivos ficam isolados como evidências para revisão, sem serem associados automaticamente ao checklist de assets ou ao ZIP R57. Se o ZIP não contiver a evidência, a extração não roda inferência nem faz download. Qualquer imagem/legenda a usar efetivamente no R57 precisa passar pela seleção e auditoria de assets.

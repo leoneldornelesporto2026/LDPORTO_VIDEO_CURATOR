@@ -139,6 +139,34 @@ class R6EvidenceReuseTests(unittest.TestCase):
             export_r6_evidence(self.inbox,draft,destination_root=self.out)
         self.assertEqual(image.read_bytes(),b'changed')
 
+    def test_cli_read_only_and_explicit_copy(self):
+        from io import StringIO
+        from contextlib import redirect_stdout
+        from ldporto_studio.__main__ import main
+        self._add_real_evidence()
+        draft=self._draft()
+        args=['r6-evidence','--inbox',str(self.inbox),'--draft',str(draft)]
+        stdout=StringIO()
+        with redirect_stdout(stdout):
+            status=main(args)
+        self.assertEqual(status,0)
+        output=json.loads(stdout.getvalue())
+        self.assertEqual(output['reused_visual_count'],1)
+        self.assertIsNone(output['saved_evidence_dir'])
+        self.assertFalse(self.out.exists())
+        with redirect_stdout(StringIO()) as capture:
+            status=main(args+['--save'])
+        self.assertEqual(status,0)
+        saved=json.loads(capture.getvalue())['saved_evidence_dir']
+        self.assertTrue(Path(saved,'EVIDENCE_REUSE_MANIFEST.json').is_file())
+
+    def test_gui_button_requires_explicit_reel_selection(self):
+        source=(Path(__file__).resolve().parents[1] /
+                'ldporto_studio'/'r6_review_gui.py').read_text(encoding='utf-8')
+        self.assertIn("text='EVIDÊNCIAS R6'",source)
+        self.assertIn('self.last_exported_path is None:',source)
+        self.assertIn('export_r6_evidence(',source)
+
     def test_rejects_export_into_original_inbox(self):
         draft=self._draft()
         with self.assertRaisesRegex(ValueError,'sobrepõe'):
