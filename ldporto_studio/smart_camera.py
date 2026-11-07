@@ -275,34 +275,61 @@ def analyze_camera(source: str | Path, start: float, end: float, mode: str,
         cascade=cv2.CascadeClassifier(str(Path(cv2.data.haarcascades)/'haarcascade_frontalface_default.xml'))
         if cascade.empty():
             return {**base,'reason':'Detector de rostos indisponível: mantendo 16:9'}
+        from .scene_focus import face_focus, shot_changed, plan_shot_focus
+        profile_file=Path(cv2.data.haarcascades)/'haarcascade_profileface.xml'
+        profile=cv2.CascadeClassifier(str(profile_file)) if profile_file.is_file() else None
         duration=max(.1,end-start)
         count=max(4,min(max_samples,math.ceil(duration/1.7)))
         if count>1:
             stamps=[.25+(duration-.5)*i/(count-1) for i in range(count)] if duration>.5 else [duration*i/(count-1) for i in range(count)]
         else:stamps=[duration/2]
         seen=[]
+        focus_samples=[]
         previous=None
+        shot_id=0
         for idx,t in enumerate(stamps):
             cap.set(cv2.CAP_PROP_POS_MSEC,1000*(start+t))
             ok,frame=cap.read()
             if not ok or frame is None:
                 seen.append(None)
+                focus_samples.append({'t':t,'shot':shot_id,'kind':'UNKNOWN'})
                 previous=None
+                shot_id+=1
                 continue
-            # HOG is expensive; keep exact visual evidence in a smaller
-            # number of samples, and fill gaps with localized optical motion.
+            if previous is not None and shot_changed(previous,frame,cv2):
+                shot_id+=1
+            # Detect faces in EVERY sample; HOG body on one of every three.
+            # A static presenter needs face detection, not background motion.
+            face=face_focus(frame,cascade,profile,cv2)
             observed=_sample_people(frame,hog,cascade,cv2,t) if idx%3==0 else None
             if observed is None:
                 observed=_motion_focus(previous,frame,cv2,t,w,h)
+            if face is not None:
+                focus_samples.append({'t':t,'shot':shot_id,
+                                      'cx':face['cx'],'kind':face['kind']})
+            elif observed is not None and observed.people>1:
+                focus_samples.append({'t':t,'shot':shot_id,'kind':'GROUP'})
+            elif (observed is not None and
+                  not observed.motion_fallback and observed.people==1 and
+                  _valid_solo_subject(observed,(9/16)/(w/h))):
+                focus_samples.append({'t':t,'shot':shot_id,
+                                      'cx':observed.cx,'kind':'BODY'})
+            else:
+                focus_samples.append({'t':t,'shot':shot_id,'kind':'UNKNOWN'})
             seen.append(observed)
             previous=frame
         plan=decide_framing(seen,w,h,mode,duration)
+        # These suggestions may reposition a SECOND-CURATION draft, never
+        # certify an identity or override explicit R6 safe scene intervals.
+        plan['scene_focus_regions']=plan_shot_focus(
+            focus_samples,duration,w,h,max_scenes=7)
         if mode=='smart_zoom' and plan['decision']=='preserve':
             intervals=decide_scene_regions(seen,w,h,duration)
             if intervals['decision']=='dynamic':
                 plan={**plan,**intervals}
         plan['source_dimensions']={'width':w,'height':h}
-        plan['detector']='OpenCV_HOG_FACE_AND_LOCAL_MOTION_V3'
+        plan['detector']='OpenCV_HOG_FRONTAL_PROFILE_FACE_SHOT_V4'
+        plan['scene_focus_unverified']=True
         plan['motion_is_not_person_verification']=True
         plan['scene_aware']=mode=='smart_zoom'
         return plan
