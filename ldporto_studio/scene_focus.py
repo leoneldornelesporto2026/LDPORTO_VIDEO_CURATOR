@@ -44,7 +44,8 @@ def pick_dominant_face(boxes, frame_width):
         second=ordered[1][2]*ordered[1][3]
         if top < 1.9*max(1,second):
             return None
-    return leader
+    # Stable immutable bbox contract, even when OpenCV returned an ndarray.
+    return tuple(leader)
 
 
 def face_focus(frame, cascade, profile, cv2):
