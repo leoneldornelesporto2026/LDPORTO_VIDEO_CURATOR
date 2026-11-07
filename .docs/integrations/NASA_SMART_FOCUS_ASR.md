@@ -57,20 +57,20 @@ Se o log indicar pouco enquadramento confirmado (ex.: 8,9% no NASA), use **somen
 
 ## P0 — Legendas amarelas e foco inteligente por cena (7 nov 2026)
 
-- **Legendas no MP4:** o renderizador escreve exclusivamente a cópia \`outputs/.../captions.ass\` com amarelo opaco \`&H0000FFFF\`, contorno preto de 5 no PlayRes 1080, negrito e margem inferior 244 (aprox. 122 px na prévia 540×960). Texto, idioma, timestamps, marcas de karaokê e arquivos do Analyzer/Curator não são reescritos. O relatório traz \`caption_presentation.preset=YELLOW_HIGH_CONTRAST_V1\` e o SHA256 da ASS estilizada. O player pode sobrepor seus controles; observe legendas com o player em tela cheia para julgar contraste e margem.
-- **Câmera:** usando o MP4 exato, OpenCV verifica rostos frontais ou de perfil a cada amostra de até 42 quadros, detecta mudanças de cena, e pode seguir suavemente a posição horizontal dentro da mesma tomada. Não usa IA externa, downloads nem modelos pagos. \`scene_focus_regions\` identifica **sugestões para revisão**, não pessoas confirmadas.
-- **Prioridade:** recomendação solo segura do Analyzer > rosto/corpo por cena detectado no Curator > geometria R6 não certificada > recorte central experimental. A cópia gerada pelo modo \`--editorial-fill\` permanece tecnicamente 9:16; isto **não** prova que todos os rostos ficaram dentro do quadro. Confira \`scene_face_focus_percent\`, \`r6_unverified_guidance_percent\`, \`center_fallback_percent\` e \`verified_portrait_coverage_percent\` no \`CAMERA_PLAN.json\`. Se \`scene_face_focus_percent=0\`, o detector não conseguiu encontrar uma pessoa e o sistema não deve alegar rastreamento inteligente.
-- **Fluxo de legenda:** recebe a transcrição ASR do Analyzer na pasta \`input/analyzer\`; o Curator faz uma segunda checagem de texto e sincronismo. A prévia \`--draft-captions\` mostra o ASR enquanto ainda **não aprovado**, com watermark obrigatório. Revisão auditiva continua humana; não há segunda transcrição independente automática nem publicação.
-- **Preservação:** a prévia antiga, ZIP, análise, renders aprovados, mídia original e commits de outras branches continuam intocados. Os novos resultados ficam sob \`outputs/caption_draft_previews/...\`.
+- **Legendas no MP4:** o renderizador escreve exclusivamente a cópia `outputs/.../captions.ass` com amarelo opaco `&H0000FFFF`, contorno preto de 5 no PlayRes 1080, negrito e margem inferior 244 (aprox. 122 px na prévia 540×960). Texto, idioma, timestamps, marcas de karaokê e arquivos do Analyzer/Curator não são reescritos. O relatório traz `caption_presentation.preset=YELLOW_HIGH_CONTRAST_V1` e o SHA256 da ASS estilizada. O player pode sobrepor seus controles; observe legendas com o player em tela cheia para julgar contraste e margem.
+- **Câmera:** usando o MP4 exato, OpenCV verifica rostos frontais ou de perfil a cada amostra de até 42 quadros, detecta mudanças de cena, e pode seguir suavemente a posição horizontal dentro da mesma tomada. Não usa IA externa, downloads nem modelos pagos. `scene_focus_regions` identifica **sugestões para revisão**, não pessoas confirmadas.
+- **Prioridade:** recomendação solo segura do Analyzer > rosto/corpo por cena detectado no Curator > geometria R6 não certificada > recorte central experimental. A cópia gerada pelo modo `--editorial-fill` permanece tecnicamente 9:16; isto **não** prova que todos os rostos ficaram dentro do quadro. Confira `scene_face_focus_percent`, `r6_unverified_guidance_percent`, `center_fallback_percent` e `verified_portrait_coverage_percent` no `CAMERA_PLAN.json`. Se `scene_face_focus_percent=0`, o detector não conseguiu encontrar uma pessoa e o sistema não deve alegar rastreamento inteligente.
+- **Fluxo de legenda:** recebe a transcrição ASR do Analyzer na pasta `input/analyzer`; o Curator faz uma segunda checagem de texto e sincronismo. A prévia `--draft-captions` mostra o ASR enquanto ainda **não aprovado**, com watermark obrigatório. Revisão auditiva continua humana; não há segunda transcrição independente automática nem publicação.
+- **Preservação:** a prévia antiga, ZIP, análise, renders aprovados, mídia original e commits de outras branches continuam intocados. Os novos resultados ficam sob `outputs/caption_draft_previews/...`.
 
 ### Testes
 
-\`\`\`powershell
+```powershell
 python -m unittest discover -s tests -p test_yellow_caption_scene_focus.py -v
 python -m unittest discover -s tests -p test_visual_camera.py -v
 python -m unittest discover -s tests -p test_r6_camera_evidence.py -v
 python -m unittest discover -s tests -p test_editorial_camera_fill.py -v
 python -m unittest discover -s tests -p test_caption_second_pass.py -v
-\`\`\`
+```
 
 Os testes de câmera e FFmpeg em fixtures não substituem a conferência da nova prévia NASA de 74 segundos.
