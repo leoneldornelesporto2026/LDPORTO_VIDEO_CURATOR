@@ -26,6 +26,27 @@ def shot_changed(previous, frame, cv2):
         return False
 
 
+def pick_dominant_face(boxes, frame_width):
+    """Foreground-looking face wins only when clearly larger than background faces.
+
+    Small TV-monitor faces and crowded groups should not hijack the camera.
+    Still only a review suggestion: actual scene must be watched.
+    """
+    ordered=sorted(([int(v) for v in box] for box in boxes),
+                   key=lambda b:b[2]*b[3],reverse=True)
+    if not ordered or frame_width<=0:
+        return None
+    leader=ordered[0]
+    if leader[2]/frame_width<.045:
+        return None
+    if len(ordered)>1:
+        top=leader[2]*leader[3]
+        second=ordered[1][2]*ordered[1][3]
+        if top < 1.9*max(1,second):
+            return None
+    return leader
+
+
 def face_focus(frame, cascade, profile, cv2):
     """Find exactly one front/profile face, retaining edge-of-frame faces."""
     h,w=frame.shape[:2]
@@ -49,9 +70,10 @@ def face_focus(frame, cascade, profile, cv2):
             if len(faces)==1:
                 x,y,fw,fh=(int(v) for v in faces[0])
                 faces=[(gray.shape[1]-x-fw,y,fw,fh)]
-    if len(faces)!=1:
+    chosen=pick_dominant_face(faces,gray.shape[1])
+    if chosen is None:
         return None
-    x,y,fw,fh=(int(v) for v in faces[0])
+    x,y,fw,fh=chosen
     full_width=gray.shape[1]
     center=(x+fw/2)/full_width
     if not .015<=center<=.985 or fw<22:
