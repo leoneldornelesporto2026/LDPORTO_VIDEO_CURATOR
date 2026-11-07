@@ -369,3 +369,6 @@ P1.9 — Integração dos rascunhos ao checklist R57: ver [.docs/integrations/R6
 ## P2.0 — Buscar original exato no cache do Analyzer antes dos downloads legados
 
 `python -m ldporto_studio r6-media-audit --inbox "<input/analyzer/video/run>"` agora consulta primeiro o diretório específico `<LDPORTO_VIDEO_ANALYZER>/input/youtube/<video_id>` do repositório irmão, depois os caches locais já existentes do Curator. A opção `--analyzer-root "<caminho>"` permite informar a raiz explicitamente, sem procurar todo o disco. A auditoria continua **somente leitura**, limitada a no máximo 12 mídias, e exige SHA256 idêntico ao manifesto R6; vídeos de projetos legados com SHA diferente continuam apenas alternativas para revisão. O relatório explicita `analyzer_cache_checked` e `analyzer_cache_root`. Não há downloads, cópia de vídeo, reanálise, render, aprovação ou associação automática.
+
+
+Piloto NASA de rascunhos R6 → R57: consulte .docs/integrations/PILOTO_NASA_R57_RASCUNHO.md. O script scripts/windows/testing/PILOTO_NASA_R57_RASCUNHO.ps1 exige candidato e confirmação explícitos, sem aprovação automática.
