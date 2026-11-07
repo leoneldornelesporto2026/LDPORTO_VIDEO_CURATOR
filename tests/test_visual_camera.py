@@ -204,6 +204,34 @@ class RenderFeatureTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'mínimo editorial 35%'):
                 render_item(self.p,'REEL_01',preview=True,require_reframe=True)
 
+    def test_editorial_fill_asr_preview_requires_review_and_never_approves(self):
+        self.p.update('REEL_01',layout='smart_zoom')
+        r6_diagnostic={'requested':'smart_zoom','decision':'dynamic',
+                       'camera_regions':[{'start':.15,'end':.40,'x':.32,
+                                         'source':'ANALYZER_R6_SAFE_SOLO'}],
+                       'camera_points':[],'sample_count':42,'valid_samples':2}
+        with patch('ldporto_studio.smart_camera.analyze_camera',
+                   return_value=r6_diagnostic):
+            path,report=render_item(self.p,'REEL_01',preview=True,
+                                    draft_captions=True,require_reframe=True,
+                                    editorial_fill=True)
+        self.assertTrue(path.is_file())
+        self.assertTrue(report['captions_included'])
+        self.assertTrue(report['editorial_fill_unverified'])
+        self.assertTrue(report['asr_draft_review_only'])
+        self.assertFalse(report['publication_ready'])
+        self.assertFalse(report['captions_verified_by_human'])
+        self.assertGreater(report['unverified_portrait_coverage_percent'],0)
+        self.assertEqual(report['camera_plan']['portrait_coverage_percent'],100.)
+        self.assertFalse(self.p.preview_record('REEL_01'))
+        self.assertIsNone(self.p._item('REEL_01')['approval'])
+
+    def test_editorial_fill_disallowed_for_regular_or_final_render(self):
+        with self.assertRaisesRegex(ValueError,'só com prévia ASR isolada'):
+            render_item(self.p,'REEL_01',preview=False,editorial_fill=True)
+        with self.assertRaisesRegex(ValueError,'só com prévia ASR isolada'):
+            render_item(self.p,'REEL_01',preview=True,editorial_fill=True)
+
     def test_solo_fit_ambiguous_falls_back_to_16_by_9(self):
         self.p.update('REEL_01',layout='solo_fit')
         plan={'requested':'solo_fit','decision':'preserve','reason':'no reliable solo body',
