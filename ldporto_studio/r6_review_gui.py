@@ -132,6 +132,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                   text='Capas de quadros reais (requer vídeo SHA256 original)').pack(side='left')
         ttk.Button(cover_actions,text='RASCUNHOS DE CAPAS DA FONTE',
                    command=self._export_cover_drafts).pack(side='right')
+        ttk.Button(cover_actions,text='PREENCHER ASSETS COM RASCUNHOS',
+                   command=self._stage_existing_r6_assets).pack(side='right',padx=(0,6))
         footer=ttk.Frame(outer)
         footer.pack(fill='x',pady=(8,0))
         self.selection_status=tk.StringVar(value='Nenhum marcado para o roteiro.')
@@ -303,6 +305,57 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             'Contact sheets e ASR são somente materiais de revisão.'
         )
         messagebox.showinfo('Inventário do R6 original',details,parent=self)
+
+    def _stage_existing_r6_assets(self):
+        if self.last_exported_path is None or self.last_story_proposal_path is None:
+            messagebox.showwarning(
+                'Roteiro e Stories obrigatórios',
+                'Exporte primeiro os Reels e a proposta de Stories.',
+                parent=self)
+            return
+        covers=filedialog.askdirectory(
+            parent=self,title='Selecione a pasta COVERS_R6_DRAFT com manifesto')
+        if not covers:
+            return
+        captions=None
+        if messagebox.askyesno(
+                'Legendas disponíveis?',
+                'Você já gerou a pasta CAPTIONS_R6_DRAFT com SRT/ASS originais?\n'
+                'SIM para vinculá-la; NÃO para deixar legendas pendentes.',
+                parent=self):
+            captions=filedialog.askdirectory(
+                parent=self,title='Selecione a pasta CAPTIONS_R6_DRAFT')
+            if not captions:
+                return
+        if not messagebox.askyesno(
+                'Consolidar rascunhos?',
+                'Copiar SOMENTE arquivos existentes, verificando SHA256?\n'
+                'Arquivos ausentes permanecerão vazios.\n'
+                'Nenhuma aprovação ou publicação será registrada.',
+                parent=self):
+            return
+        self.configure(cursor='watch')
+        self.update_idletasks()
+        try:
+            from .r6_asset_staging import (
+                save_asset_staging, BINDINGS_NAME, MANIFEST_NAME)
+            folder=save_asset_staging(
+                self.review['inbox_folder'],self.last_exported_path,
+                self.last_story_proposal_path,covers,captions_dir=captions)
+            report=json.loads((folder/MANIFEST_NAME).read_text(encoding='utf-8'))
+        except (ValueError, OSError, TypeError, KeyError, RuntimeError) as exc:
+            messagebox.showerror('Checklist não preenchido',str(exc),parent=self)
+            return
+        finally:
+            self.configure(cursor='')
+        self.selection_status.set('ASSETS PARA REVISÃO: '+str(folder))
+        messagebox.showinfo(
+            'Rascunhos vinculados',
+            f"Assets existentes: {report['assets_available']}/{report['assets_required']}\n"
+            f"Pendências: {len(report['missing_assets'])}\n\n"
+            f"Bindings: {folder/BINDINGS_NAME}\n\n"
+            'Edite e revise as cópias antes do ZIP R57 de prévias.',
+            parent=self)
 
     def _export_cover_drafts(self):
         if self.last_exported_path is None or self.last_story_proposal_path is None:

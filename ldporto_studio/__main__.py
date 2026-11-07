@@ -86,6 +86,16 @@ def main(argv=None):
     a.add_argument('--save-template',action='store_true')
     a.add_argument('--bindings',type=Path)
     a.add_argument('--assets-root',type=Path)
+    a=sub.add_parser('r6-assets-prefill',
+                     help='Reunir PNGs e SRT/ASS reais no checklist R57, sem aprovação')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--story-proposal',required=True,type=Path)
+    a.add_argument('--covers-dir',required=True,type=Path)
+    a.add_argument('--captions-dir',type=Path,
+                   help='Opcional: sem ela, legendas permanecem pendentes')
+    a.add_argument('--save',action='store_true',
+                   help='Copiar rascunhos verificados para pasta isolada')
     a=sub.add_parser('r6-r57-preview-package',
                      help='Montar ZIP R57 válido só para importação/PRÉVIAS, sem finais ou aprovação')
     a.add_argument('--inbox',required=True,type=Path)
@@ -202,6 +212,34 @@ def main(argv=None):
         if args.bindings is not None:
             result['audit']=audit_asset_bindings(
                 args.inbox,args.draft,args.story_proposal,args.bindings,args.assets_root)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='r6-assets-prefill':
+        from .r6_asset_staging import (
+            prepare_asset_staging, save_asset_staging,
+            BINDINGS_NAME, MANIFEST_NAME)
+        if args.save:
+            folder=save_asset_staging(
+                args.inbox,args.draft,args.story_proposal,args.covers_dir,
+                captions_dir=args.captions_dir)
+            report=json.loads((folder/MANIFEST_NAME).read_text(encoding='utf-8'))
+            saved_folder=str(folder)
+            bindings_path=str(folder/BINDINGS_NAME)
+        else:
+            report=prepare_asset_staging(
+                args.inbox,args.draft,args.story_proposal,args.covers_dir,
+                captions_dir=args.captions_dir)
+            saved_folder=None
+            bindings_path=None
+        result={'status':report['status'],
+                'clip_count':report['clip_count'],
+                'assets_required':report['assets_required'],
+                'assets_available':report['assets_available'],
+                'missing_assets':report['missing_assets'],
+                'source_sha256':report['provenance']['source_sha256'],
+                'saved_staging_dir':saved_folder,'bindings_path':bindings_path,
+                'r57_import_ready':False,'human_approved':False,
+                'render_ready':False,'publication_ready':False}
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-r57-preview-package':

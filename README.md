@@ -361,3 +361,6 @@ python -m ldporto_studio r6-cover-drafts --inbox "<input/analyzer/video/run>" --
 Acrescente `--save --confirm-review-only` para criar uma pasta isolada `output/r6_bridge/<source-sha-prefix>/COVERS_R6_DRAFT_<fingerprint>/`, com os PNGs e `COVER_DRAFT_MANIFEST.json`. Use `--kind reels` ou `--kind stories` para lotes menores. O botão **RASCUNHOS DE CAPAS DA FONTE** na segunda curadoria abre o seletor de arquivo original e solicita confirmação explícita.
 
 **Importante:** os PNGs são quadros efetivamente extraídos do arquivo SHA-exato, mas não são capas finais aprovadas, não são automaticamente vinculados ao R57 e não concedem direitos de uso. O Curator não altera MP4 original, handoff R6, projetos existentes ou `release/main`. Sem mídia com SHA exato, a extração é bloqueada. A preparação exige FFprobe e a exportação exige FFmpeg instalado.
+
+
+P1.9 — Integração dos rascunhos ao checklist R57: ver [.docs/integrations/R6_ASSET_STAGING.md](.docs/integrations/R6_ASSET_STAGING.md). Nenhuma aprovação automática.
