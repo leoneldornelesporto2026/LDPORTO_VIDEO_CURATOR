@@ -88,6 +88,25 @@ class SafeCameraTests(unittest.TestCase):
         self.assertEqual(plan['decision'],'preserve')
         self.assertEqual(plan['camera_regions'],[])
 
+    def test_local_motion_is_editorial_focus_not_person_identification(self):
+        motion=[BodyObservation(float(i)*1.7,.48+.003*i,.24,.2,.55,
+                                motion_fallback=True,confidence=.8)
+                for i in range(8)]
+        whole=decide_framing(motion,1920,1080,'smart_zoom',13.6)
+        self.assertEqual(whole['decision'],'preserve')
+        scenes=decide_scene_regions(motion,1920,1080,13.6)
+        self.assertEqual(scenes['decision'],'dynamic')
+        self.assertTrue(scenes['camera_regions'])
+        self.assertEqual(scenes['camera_regions'][0]['source'],
+                         'MOTION_FOCUS_REVIEW_REQUIRED')
+
+    def test_motion_with_unstable_scene_does_not_crop_whole_video(self):
+        observed=[BodyObservation(float(i)*1.7,x,.24,.2,.55,
+                                  motion_fallback=True,confidence=.9)
+                  for i,x in enumerate((.25,.8,.1,.9,.2,.8,.1,.9))]
+        self.assertEqual(decide_scene_regions(observed,1920,1080,13.6)['decision'],
+                         'preserve')
+
     def test_smart_zoom_tracks_smoothly(self):
         single=[BodyObservation(float(i)*2,.40+.005*i,.12,.12,.72) for i in range(8)]
         plan=decide_framing(single,1920,1080,'smart_zoom',16)
@@ -145,6 +164,36 @@ class RenderFeatureTests(unittest.TestCase):
         self.assertEqual(report['media']['height'],960)
         self.assertFalse(report['publication_ready'])
         self.assertFalse(report['captions_included'])
+
+    def test_draft_caption_preview_burns_asr_without_project_approval(self):
+        self.p.update('REEL_01',layout='smart_zoom')
+        plan={'requested':'smart_zoom','decision':'dynamic',
+              'camera_regions':[{'start':.4,'end':1.6,'x':.5,'samples':3}],
+              'camera_points':[],'sample_count':6,'valid_samples':3}
+        with patch('ldporto_studio.smart_camera.analyze_camera',return_value=plan):
+            movie,report=render_item(self.p,'REEL_01',preview=True,
+                                     draft_captions=True,require_reframe=True)
+        self.assertTrue(movie.is_file())
+        self.assertEqual(movie.name,'PREVIEW_ASR_DRAFT_540x960.mp4')
+        self.assertIn('caption_draft_previews',movie.as_posix())
+        self.assertTrue(report['captions_included'])
+        self.assertTrue(report['asr_draft_review_only'])
+        self.assertFalse(report['captions_verified_by_human'])
+        self.assertFalse(report['publication_ready'])
+        self.assertFalse(self.p.preview_record('REEL_01'))
+        self.assertIsNone(self.p._item('REEL_01')['approval'])
+        self.assertTrue((movie.parent/'ASR_REVIEW_BANNER.png').is_file())
+        with self.assertRaisesRegex(ValueError,'prévia'):
+            self.p.approve('REEL_01',human_reviewed=True,
+                           verified_audio=True,verified_camera=True)
+
+    def test_reframe_gate_does_not_repeat_old_blurred_full_video(self):
+        self.p.update('REEL_01',layout='smart_zoom')
+        fallback={'requested':'smart_zoom','decision':'preserve',
+                  'reason':'Test detector unavailable','camera_points':[]}
+        with patch('ldporto_studio.smart_camera.analyze_camera',return_value=fallback):
+            with self.assertRaisesRegex(ValueError,'Nenhuma região 9:16'):
+                render_item(self.p,'REEL_01',preview=True,require_reframe=True)
 
     def test_solo_fit_ambiguous_falls_back_to_16_by_9(self):
         self.p.update('REEL_01',layout='solo_fit')
