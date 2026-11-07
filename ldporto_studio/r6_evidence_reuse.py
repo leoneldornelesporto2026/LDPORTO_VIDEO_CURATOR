@@ -79,6 +79,10 @@ def _verified_evidence(inbox, draft):
                     with Image.open(BytesIO(content)) as image:
                         if image.format != 'JPEG':
                             raise ValueError('Contact sheet não é JPEG')
+                        if (not 1 <= image.width <= 10000 or
+                                not 1 <= image.height <= 10000 or
+                                image.width * image.height > 40_000_000):
+                            raise ValueError('Dimensões de contact sheet fora do limite')
                         image.verify()
                 except OSError as exc:
                     raise ValueError('Contact sheet JPEG inválido') from exc
@@ -118,7 +122,8 @@ def _verified_evidence(inbox, draft):
     result = {
         'schema_version': VERSION,
         'type': 'REUSE_OF_EXISTING_ANALYZER_EVIDENCE_ONLY',
-        'status': 'SOURCE_EVIDENCE_AVAILABLE_REVIEW_PENDING',
+        'status': ('SOURCE_EVIDENCE_AVAILABLE_REVIEW_PENDING' if files
+                   else 'NO_REUSABLE_EVIDENCE_IN_R6'),
         'provenance': dict(plan['provenance']),
         'reels': reels,
         'files': files,
@@ -147,7 +152,13 @@ def _check_existing(folder, report):
     if json.loads(manifest_path.read_text(encoding='utf-8')) != report:
         raise ValueError('Manifesto de evidências existente divergente')
     expected = {x['output_relative_path'] for x in report['files']}
-    found = {p.relative_to(folder).as_posix() for p in folder.rglob('*') if p.is_file()}
+    descendants = list(folder.rglob('*'))
+    if any(p.is_symlink() or (
+            getattr(p.lstat(), 'st_file_attributes', 0) &
+            getattr(stat, 'FILE_ATTRIBUTE_REPARSE_POINT', 1024)
+    ) for p in descendants):
+        raise ValueError('Link/junction detectado na saída de evidências')
+    found = {p.relative_to(folder).as_posix() for p in descendants if p.is_file()}
     if found != expected | {'EVIDENCE_REUSE_MANIFEST.json'}:
         raise ValueError('Arquivos inesperados ou ausentes no destino')
     for item in report['files']:
@@ -162,6 +173,8 @@ def _check_existing(folder, report):
 def export_r6_evidence(inbox, draft, *, destination_root=None):
     """Explicit extraction; stable destination, no overwrites, original ZIP read-only."""
     archive_path, report = _verified_evidence(inbox, draft)
+    if not report['files']:
+        raise ValueError('Nenhuma evidência reutilizável no ZIP R6; não criar pasta vazia')
     root = (Path(destination_root).expanduser().resolve() if destination_root
             else application_root() / 'output' / 'r6_bridge')
     input_dir = Path(inbox).expanduser().resolve()

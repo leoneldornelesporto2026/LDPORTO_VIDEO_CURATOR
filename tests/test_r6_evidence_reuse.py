@@ -92,6 +92,14 @@ class R6EvidenceReuseTests(unittest.TestCase):
         self.assertFalse(list(self.out.rglob('*.png')))
         self.assertFalse((self.base/'output'/'projects').exists())
 
+    def test_empty_evidence_inventory_does_not_create_empty_export(self):
+        draft=self._draft()
+        report=inspect_r6_evidence(self.inbox,draft)
+        self.assertEqual(report['status'],'NO_REUSABLE_EVIDENCE_IN_R6')
+        with self.assertRaisesRegex(ValueError,'Nenhuma evidência'):
+            export_r6_evidence(self.inbox,draft,destination_root=self.out)
+        self.assertFalse(self.out.exists())
+
     def test_original_source_zip_mutated_is_blocked(self):
         self._add_real_evidence()
         draft=self._draft()
