@@ -328,3 +328,10 @@ python -m ldporto_studio r6-evidence --inbox "input/analyzer/<video_id>/<run_id>
 Para copiar somente evidências existentes e verificadas, acrescente `--save`. Elas ficam em `output/r6_bridge/<source-sha-prefix>/EVIDENCE_R6_<fingerprint>/` com `EVIDENCE_REUSE_MANIFEST.json` e hashes de todos os arquivos; a operação é idempotente, não sobrescreve alterações divergentes e não cria MP4, ASS ou imagens sintéticas. Há também o botão **EVIDÊNCIAS R6** na segunda curadoria, disponível após exportar uma seleção de Reels.
 
 **Importante:** contact sheets são referências visuais compostas, **não capas finais**. O SRT do Analyzer contém ASR original ainda sujeito à revisão; **não é uma legenda validada para qualquer corte**. Esses arquivos ficam isolados como evidências para revisão, sem serem associados automaticamente ao checklist de assets ou ao ZIP R57. Se o ZIP não contiver a evidência, a extração não roda inferência nem faz download. Qualquer imagem/legenda a usar efetivamente no R57 precisa passar pela seleção e auditoria de assets.
+
+
+## P1.6 — Inventário R6 antes da seleção editorial
+
+O comando `r6-evidence --inbox <pasta>` agora funciona SEM `--draft`, em modo somente leitura. Ele mostra todos os candidatos, contact sheets JPEG explicitamente referenciados no catálogo e no manifesto, disponibilidade dos originais `transcript/transcript.srt` e `transcript/relevant_segments.jsonl`, e SHA256. Nenhum Reel é selecionado, nenhum arquivo é escrito, nenhuma legenda é aprovada ou mídia é gerada. Na janela de segunda curadoria existe o botão **INVENTÁRIO R6 (SEM SELEÇÃO)** para consultar as contagens.
+
+Para copiar evidências reais continua obrigatório exportar uma seleção editorial e informar `--draft` com `--save`. Usar `--save` sem seleção é bloqueado. O inventário não converte contact sheet em capa nem ASR original em legenda final.

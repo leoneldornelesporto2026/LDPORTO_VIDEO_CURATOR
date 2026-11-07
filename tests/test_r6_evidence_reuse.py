@@ -207,6 +207,32 @@ class R6EvidenceReuseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             inspect_r6_inventory(self.inbox)
 
+    def test_cli_all_evidence_without_draft_is_safe_and_save_requires_draft(self):
+        from io import StringIO
+        from contextlib import redirect_stdout
+        from ldporto_studio.__main__ import main
+        args=['r6-evidence','--inbox',str(self.inbox)]
+        output=StringIO()
+        with redirect_stdout(output):
+            code=main(args)
+        self.assertEqual(code,0)
+        data=json.loads(output.getvalue())
+        self.assertEqual(data['candidate_count'],2)
+        self.assertIsNone(data['saved_evidence_dir'])
+        self.assertTrue(data['requires_explicit_editorial_selection'])
+        with self.assertRaisesRegex(ValueError,'informe --draft'):
+            main(args+['--save'])
+        self.assertFalse(self.out.exists())
+
+    def test_gui_inventory_requires_no_selection_or_export(self):
+        source=(Path(__file__).resolve().parents[1]/
+                'ldporto_studio'/'r6_review_gui.py').read_text(encoding='utf-8')
+        self.assertIn('INVENTÁRIO R6 (SEM SELEÇÃO)',source)
+        handler=source.split('    def _inspect_r6_inventory(self):')[1].split(
+            '    def _export_r6_evidence(self):')[0]
+        self.assertNotIn('last_exported_path',handler)
+        self.assertIn('inspect_r6_inventory(self.review',handler)
+
     def test_rejects_export_into_original_inbox(self):
         # Even if the R6 has no extractable evidence, an unsafe destination
         # must be refused before the empty-inventory check.

@@ -120,6 +120,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                    command=self._build_preview_r57).pack(side='right',padx=(0,6))
         ttk.Button(story_actions,text='EVIDÊNCIAS R6',
                    command=self._export_r6_evidence).pack(side='right',padx=(0,6))
+        ttk.Button(story_actions,text='INVENTÁRIO R6 (SEM SELEÇÃO)',
+                   command=self._inspect_r6_inventory).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
                   text='Materiais para revisar; sem aprovação.').pack(side='left')
         footer=ttk.Frame(outer)
@@ -275,6 +277,24 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             f'Proposta registrada em:\n{path}\n\n'
             'Divisões ainda precisam de revisão editorial; nenhum Story foi aprovado.',
             parent=self)
+
+    def _inspect_r6_inventory(self):
+        try:
+            from .r6_evidence_reuse import inspect_r6_inventory
+            inventory=inspect_r6_inventory(self.review['inbox_folder'])
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Inventário de evidências bloqueado',str(exc),parent=self)
+            return
+        details=(
+            f"Reels candidatos: {inventory['candidate_count']}\n"
+            f"Contact sheets disponíveis: {inventory['available_contact_sheets']}\n"
+            f"Contact sheets ausentes/indisponíveis: {inventory['unavailable_contact_sheets']}\n"
+            f"Transcrições disponíveis: {inventory['available_transcript_files']}\n"
+            f"Stories originais do Analyzer: {inventory['story_candidate_count']}\n\n"
+            'Nenhum candidato foi selecionado e nenhum arquivo foi criado.\n'
+            'Contact sheets e ASR são somente materiais de revisão.'
+        )
+        messagebox.showinfo('Inventário do R6 original',details,parent=self)
 
     def _export_r6_evidence(self):
         if self.last_exported_path is None:

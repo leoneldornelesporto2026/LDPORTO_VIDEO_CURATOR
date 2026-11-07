@@ -59,8 +59,8 @@ def main(argv=None):
     a=sub.add_parser('r6-evidence',
                      help='Inventariar/copiar somente evidências reais do ZIP R6 para revisão')
     a.add_argument('--inbox',required=True,type=Path)
-    a.add_argument('--draft',required=True,type=Path,
-                   help='Roteiro com Reels selecionados explicitamente')
+    a.add_argument('--draft',type=Path,
+                   help='Opcional; sem draft, inventaria todas as evidências R6 sem selecionar Reels')
     a.add_argument('--save',action='store_true',
                    help='Copiar JPEG/SRT/JSONL originais validados para output/r6_bridge/')
     a=sub.add_parser('r6-assets',help='Criar template e auditar capas/ASS/SRT reais, sem render')
@@ -135,11 +135,18 @@ def main(argv=None):
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-evidence':
-        from .r6_evidence_reuse import inspect_r6_evidence, export_r6_evidence
-        inventory=inspect_r6_evidence(args.inbox,args.draft)
-        result={**inventory,'saved_evidence_dir':None}
-        if args.save:
-            result['saved_evidence_dir']=str(export_r6_evidence(args.inbox,args.draft))
+        from .r6_evidence_reuse import (
+            inspect_r6_inventory, inspect_r6_evidence, export_r6_evidence)
+        if args.draft is None:
+            if args.save:
+                raise ValueError('Para --save, selecione os Reels e informe --draft')
+            result={**inspect_r6_inventory(args.inbox),'saved_evidence_dir':None}
+        else:
+            inventory=inspect_r6_evidence(args.inbox,args.draft)
+            result={**inventory,'saved_evidence_dir':None}
+            if args.save:
+                result['saved_evidence_dir']=str(export_r6_evidence(
+                    args.inbox,args.draft))
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-assets':
