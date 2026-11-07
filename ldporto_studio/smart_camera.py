@@ -26,10 +26,12 @@ class BodyObservation:
     people: int = 1
     faces: int = 0
     face_only: bool = False
+    motion_fallback: bool = False
+    confidence: float = 1.0
 
 
 def _valid_solo_subject(o, crop_ratio):
-    if o is None or o.people != 1 or o.faces > 1:
+    if o is None or o.people != 1 or o.faces > 1 or o.motion_fallback:
         return False
     if not all(math.isfinite(x) for x in (o.t,o.cx,o.width,o.y,o.height)):
         return False
@@ -44,8 +46,17 @@ def _valid_solo_subject(o, crop_ratio):
     return (o.height >= .30 and o.y >= .015 and o.y+o.height <= .985)
 
 
+def _valid_scene_focus(o, crop_ratio):
+    if _valid_solo_subject(o,crop_ratio):
+        return True
+    return (o is not None and o.motion_fallback is True and o.people==1
+            and o.faces<=1 and o.confidence>=.63
+            and math.isfinite(o.cx) and math.isfinite(o.width)
+            and .01<o.width<=crop_ratio and .02<=o.cx<=.98)
+
+
 def decide_scene_regions(observations, source_width, source_height, duration,
-                         *, min_samples=2, min_seconds=3.0):
+                         *, min_samples=2, min_seconds=2.8):
     """Conservative solo-person intervals inside an otherwise preserved 16:9 cut.
 
     At least 2 adjacent physical detections are necessary. Unknown/group
@@ -59,7 +70,7 @@ def decide_scene_regions(observations, source_width, source_height, duration,
     ratio=(9/16)/(source_width/source_height)
     if ratio >= .98:
         return {**result,'reason':'Fonte já é vertical'}
-    active=[_valid_solo_subject(o,ratio) for o in observations]
+    active=[_valid_scene_focus(o,ratio) for o in observations]
     regions=[]
     i=0
     while i < len(observations):
@@ -73,6 +84,10 @@ def decide_scene_regions(observations, source_width, source_height, duration,
         centers=[o.cx for o in sequence]
         # Scene cut or tracker jump: no crop for unstable group.
         stable=(max(centers)-min(centers)) <= .22
+        # Optical movement without a recognized face/body is an editorial
+        # candidate, not a verified lone person: require more observations.
+        motion_only=all(o.motion_fallback for o in sequence)
+        enough=len(sequence)>=max(min_samples,3 if motion_only else 2)
         left=(0 if i == 0 else (observations[i-1].t+sequence[0].t)/2
               if observations[i-1] is not None else sequence[0].t)
         right=(duration if j == len(observations)-1 else
@@ -80,14 +95,14 @@ def decide_scene_regions(observations, source_width, source_height, duration,
                if observations[j+1] is not None else sequence[-1].t)
         left=max(0.,min(duration,float(left)))
         right=max(0.,min(duration,float(right)))
-        if (len(sequence) >= min_samples and stable and
-                right-left >= min_seconds):
+        if (enough and stable and right-left >= min_seconds):
             half=ratio/2
             cx=max(half,min(1-half,statistics.median(centers)))
             x=(cx-half)/(1-ratio)
             regions.append({'start':round(left,3),'end':round(right,3),
                             'x':round(x,6),'samples':len(sequence),
-                            'source':'SINGLE_VISIBLE_SUBJECT'})
+                            'source':('MOTION_FOCUS_REVIEW_REQUIRED' if motion_only
+                                      else 'SINGLE_VISIBLE_SUBJECT')})
         i=j+1
     if not regions:
         return result
@@ -199,8 +214,46 @@ def _sample_people(frame, hog, face_cascade, cv2, timestamp: float):
     return None
 
 
+def _motion_focus(previous, frame, cv2, t, source_width, source_height):
+    """Localized optical motion as a FOCUS SUGGESTION, never a person ID.
+
+    Completely moving cameras, scene cuts, noisy footage, and weak activity
+    return None. Genuine detections always take priority.
+    """
+    if previous is None or frame is None:
+        return None
+    w,h=320,180
+    def gray(image):
+        scaled=cv2.resize(image,(w,h))
+        return cv2.GaussianBlur(cv2.cvtColor(scaled,cv2.COLOR_BGR2GRAY),(7,7),0)
+    diff=cv2.absdiff(gray(previous),gray(frame))
+    _,mask=cv2.threshold(diff,26,255,cv2.THRESH_BINARY)
+    cols=(mask>0).sum(axis=0)
+    amount=int(cols.sum())
+    total=w*h
+    if not int(total*.0025)<=amount<=int(total*.23):
+        return None
+    ratio=(9/16)/(source_width/source_height)
+    size=max(24,min(w,round(w*ratio)))
+    if size>=w:
+        return None
+    window=cols[:size].sum()
+    best,start=int(window),0
+    for x in range(1,w-size+1):
+        window+=int(cols[x+size-1])-int(cols[x-1])
+        if window>best:
+            best,start=int(window),x
+    concentration=best/amount
+    if concentration<.63:
+        return None
+    cx=(start+size/2)/w
+    return BodyObservation(t,cx,ratio*.82,.20,.55,
+                           people=1,faces=0,motion_fallback=True,
+                           confidence=float(concentration))
+
+
 def analyze_camera(source: str | Path, start: float, end: float, mode: str,
-                   *, max_samples: int=12) -> dict:
+                   *, max_samples: int=42) -> dict:
     """Inspect real source frames. Auto mode FALLS BACK to full 16:9 if uncertain."""
     base={'requested':mode,'decision':'preserve','sample_count':0,
           'valid_samples':0,'camera_points':[]}
@@ -223,22 +276,34 @@ def analyze_camera(source: str | Path, start: float, end: float, mode: str,
         if cascade.empty():
             return {**base,'reason':'Detector de rostos indisponível: mantendo 16:9'}
         duration=max(.1,end-start)
-        count=max(4,min(max_samples,math.ceil(duration/3)))
+        count=max(4,min(max_samples,math.ceil(duration/1.7)))
         if count>1:
             stamps=[.25+(duration-.5)*i/(count-1) for i in range(count)] if duration>.5 else [duration*i/(count-1) for i in range(count)]
         else:stamps=[duration/2]
         seen=[]
-        for t in stamps:
+        previous=None
+        for idx,t in enumerate(stamps):
             cap.set(cv2.CAP_PROP_POS_MSEC,1000*(start+t))
             ok,frame=cap.read()
-            seen.append(_sample_people(frame,hog,cascade,cv2,t) if ok and frame is not None else None)
+            if not ok or frame is None:
+                seen.append(None)
+                previous=None
+                continue
+            # HOG is expensive; keep exact visual evidence in a smaller
+            # number of samples, and fill gaps with localized optical motion.
+            observed=_sample_people(frame,hog,cascade,cv2,t) if idx%3==0 else None
+            if observed is None:
+                observed=_motion_focus(previous,frame,cv2,t,w,h)
+            seen.append(observed)
+            previous=frame
         plan=decide_framing(seen,w,h,mode,duration)
         if mode=='smart_zoom' and plan['decision']=='preserve':
             intervals=decide_scene_regions(seen,w,h,duration)
             if intervals['decision']=='dynamic':
                 plan={**plan,**intervals}
         plan['source_dimensions']={'width':w,'height':h}
-        plan['detector']='OpenCV_HOG_BODY_OR_SINGLE_FACE_V2'
+        plan['detector']='OpenCV_HOG_FACE_AND_LOCAL_MOTION_V3'
+        plan['motion_is_not_person_verification']=True
         plan['scene_aware']=mode=='smart_zoom'
         return plan
     except (ValueError, RuntimeError, cv2.error) as exc:
