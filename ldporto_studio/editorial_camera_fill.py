@@ -64,33 +64,40 @@ def build_editorial_fill(camera, duration, *, max_regions=24):
     # Use the original Analyzer's explicitly solo-person geometry even when
     # its safety gate could not certify a finished crop. This is NOT evidence
     # of a verified face/person; it only guides the review camera position.
-    proposals=camera.get("r6_review_regions",[])
-    if not isinstance(proposals,list):
-        raise ValueError("Sugestões R6 inválidas")
-    rows=sorted((_verified_row(r,duration) for r in proposals),
-                key=lambda r:-(r["end"]-r["start"]))[:8]
-    for proposal in rows:
-        remaining=[(proposal["start"],proposal["end"])]
-        for existing in selected:
-            next_remaining=[]
+    # Priority: certified Analyzer geometry > observed face/shot focus >
+    # uncertified Analyzer guidance > center-only trial crop. All proposed
+    # regions remain visibly unverified and cannot enter an approved render.
+    for key,limit,label in (
+            ("scene_focus_regions",7,"OpenCV rosto/cena"),
+            ("r6_review_regions",4,"Analyzer R6 não certificado")):
+        proposals=camera.get(key,[])
+        if not isinstance(proposals,list):
+            raise ValueError("Sugestões inválidas: "+label)
+        rows=sorted((_verified_row(r,duration) for r in proposals),
+                    key=lambda r:-(r["end"]-r["start"]))[:limit]
+        for proposal in rows:
+            remaining=[(proposal["start"],proposal["end"])]
+            for existing in selected:
+                next_remaining=[]
+                for a,b in remaining:
+                    if b<=existing["start"]+.001 or a>=existing["end"]-.001:
+                        next_remaining.append((a,b))
+                    else:
+                        if a<existing["start"]-.001:
+                            next_remaining.append((a,existing["start"]))
+                        if b>existing["end"]+.001:
+                            next_remaining.append((existing["end"],b))
+                remaining=next_remaining
             for a,b in remaining:
-                if b<=existing["start"]+.001 or a>=existing["end"]-.001:
-                    next_remaining.append((a,b))
-                else:
-                    if a<existing["start"]-.001:
-                        next_remaining.append((a,existing["start"]))
-                    if b>existing["end"]+.001:
-                        next_remaining.append((existing["end"],b))
-            remaining=next_remaining
-        for a,b in remaining:
-            if b-a>=.05:
-                selected.append(_clip_row(proposal,a,b))
-        selected.sort(key=lambda r:(r["start"],r["end"]))
+                if b-a>=.05:
+                    selected.append(_clip_row(proposal,a,b))
+            selected.sort(key=lambda r:(r["start"],r["end"]))
 
     regions=[]
     cursor=0.
     verified_seconds=0.
     guided_seconds=0.
+    face_seconds=0.
     for row in selected:
         a,b=row["start"],row["end"]
         if a>cursor+.001:
@@ -101,6 +108,9 @@ def build_editorial_fill(camera, duration, *, max_regions=24):
             verified_seconds+=b-a
         elif source=="ANALYZER_R6_SOLO_REVIEW_REQUIRED":
             guided_seconds+=b-a
+        elif source in ("OPENCV_FACE_FOCUS_REVIEW_REQUIRED",
+                        "OPENCV_BODY_FOCUS_REVIEW_REQUIRED"):
+            face_seconds+=b-a
         regions.append(row)
         cursor=b
     if cursor<duration-.001:
@@ -117,9 +127,12 @@ def build_editorial_fill(camera, duration, *, max_regions=24):
         "portrait_coverage_percent":100.,
         "verified_portrait_coverage_percent":round(verified_seconds/duration*100,1),
         "r6_unverified_guidance_percent":round(guided_seconds/duration*100,1),
+        "scene_face_focus_percent":round(face_seconds/duration*100,1),
+        "center_fallback_percent":round(max(
+            0.,duration-verified_seconds-guided_seconds-face_seconds)/duration*100,1),
         "editorial_unverified_coverage_percent":round(
             (duration-verified_seconds)/duration*100,1),
         "source_portrait_coverage_percent":100.,"review_required":True,
         "fallback_mode":"CENTER_CROP_REVIEW_REQUIRED",
-        "reason":"Regiões R6 seguras + foco R6 não certificado + recorte central de revisão",
+        "reason":"R6 seguro + foco de rosto por cena + R6 não certificado + centro somente como última opção",
     }
