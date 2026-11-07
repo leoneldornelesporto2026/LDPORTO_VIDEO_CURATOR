@@ -144,7 +144,7 @@ def export_cover_drafts(inbox, draft, story_proposal, media, *,
     input_dir = Path(inbox).expanduser().resolve()
     if (root == input_dir or root.is_relative_to(input_dir)
             or input_dir.is_relative_to(root)
-            or root == source or root.is_relative_to(source.parent)):
+            or root == source or root == source.parent):
         raise ValueError('Destino de capas sobrepõe a entrada R6 ou pasta da mídia')
     output_base = root / report['source_sha256'][:16]
     immutable = {key:value for key,value in report.items()
