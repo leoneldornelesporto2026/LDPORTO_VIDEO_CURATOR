@@ -325,8 +325,20 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
             # The static crop center changes at scene boundaries, not at 30fps.
             x_expr='0.5'
             for region in reversed(regions):
+                points=region.get('camera_points')
+                if points:
+                    if (not isinstance(points,list) or len(points)>24 or
+                            any(not isinstance(p,dict) or
+                                not all(k in p and isinstance(p[k],(int,float))
+                                        and math.isfinite(p[k]) for k in ('t','x'))
+                                or not region['start']-0.002<=p['t']<=region['end']+0.002
+                                or not 0<=p['x']<=1 for p in points)):
+                        raise ValueError('Keyframes do Analyzer inválidos para o corte')
+                    x_value=crop_x_expression(points)
+                else:
+                    x_value=f"{region['x']:.6f}"
                 x_expr=(f"if(between(t,{region['start']:.3f},{region['end']:.3f}),"
-                        f"{region['x']:.6f},{x_expr})")
+                        f"{x_value},{x_expr})")
             intervals='+'.join(
                 f"between(t,{row['start']:.3f},{row['end']:.3f})" for row in regions)
             filters.append(

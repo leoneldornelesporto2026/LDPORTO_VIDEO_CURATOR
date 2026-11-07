@@ -76,10 +76,36 @@ def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_h
             continue
         center=min(1-dims_ratio/2,max(dims_ratio/2,x0+w/2))
         normalized=(center-dims_ratio/2)/(1-dims_ratio)
-        regions.append({"start":round(left-start,3),"end":round(right-start,3),
-                        "x":round(normalized,6),
-                        "source":"ANALYZER_R6_SAFE_SOLO",
-                        "director_id":row.get("director_id")})
+        # Reuse temporal source Director points, not a fixed "person position"
+        # inferred from a single thumbnail. Never invent keyframes.
+        points=[]
+        camera=row.get("camera") or {}
+        keyframes=camera.get("keyframes",[]) if isinstance(camera,dict) else []
+        for key in keyframes if isinstance(keyframes,list) else []:
+            if not isinstance(key,dict):
+                continue
+            tm,center=key.get("time"),key.get("center")
+            if (not isinstance(tm,(int,float)) or not math.isfinite(tm)
+                    or not left<=tm<=right or
+                    not isinstance(center,(list,tuple)) or len(center)!=2 or
+                    not isinstance(center[0],(int,float)) or
+                    not math.isfinite(center[0]) or not 0<=center[0]<=1):
+                continue
+            cx=max(dims_ratio/2,min(1-dims_ratio/2,float(center[0])))
+            points.append({"t":round(float(tm)-start,3),
+                           "x":round((cx-dims_ratio/2)/(1-dims_ratio),6)})
+        points.sort(key=lambda p:p["t"])
+        # Require strictly increasing times, and avoid unbounded FFmpeg graphs.
+        points=[p for i,p in enumerate(points)
+                if i==0 or p["t"]>points[i-1]["t"]+0.001][:24]
+        region={"start":round(left-start,3),"end":round(right-start,3),
+                "x":round(normalized,6),
+                "source":"ANALYZER_R6_SAFE_SOLO",
+                "director_id":row.get("director_id")}
+        if len(points)>=2:
+            region["camera_points"]=points
+            region["tracking"]="SOURCE_DIRECTOR_HORIZONTAL_KEYFRAMES"
+        regions.append(region)
     regions=sorted(regions,key=lambda r:(r["start"],r["end"]))
     valid=[]
     for row in regions:

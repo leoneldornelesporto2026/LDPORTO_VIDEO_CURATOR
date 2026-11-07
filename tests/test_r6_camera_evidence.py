@@ -66,6 +66,23 @@ class R6CameraEvidenceTests(unittest.TestCase):
         self.assertEqual(row["source"],"ANALYZER_R6_SAFE_SOLO")
         self.assertEqual(len(report["source_zip_sha256"]),64)
 
+    def test_camera_handoff_tracks_safe_person_with_real_keyframe_times(self):
+        row=self._safe(12,22)
+        row["camera"]={"keyframes":[
+            {"time":12.,"center":[.30,.5],"zoom":1.0},
+            {"time":17.,"center":[.49,.5],"zoom":1.0},
+            {"time":22.,"center":[.67,.5],"zoom":1.0},
+        ]}
+        self._rewrite_camera([row])
+        info=read_safe_r6_camera(self.folder,"a"*64,12.,22.,1920,1080)
+        region=info["trusted_regions"][0]
+        self.assertEqual(region["tracking"],
+                         "SOURCE_DIRECTOR_HORIZONTAL_KEYFRAMES")
+        self.assertEqual([x["t"] for x in region["camera_points"]],
+                         [0.,5.,10.])
+        self.assertNotEqual(region["camera_points"][0]["x"],
+                            region["camera_points"][-1]["x"])
+
     def test_unsafe_wide_scene_remains_uncropped(self):
         unsafe=self._safe()
         unsafe["evidence"]["crop_geometrically_valid"]=False
