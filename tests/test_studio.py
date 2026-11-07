@@ -171,7 +171,13 @@ class SyntheticRenderingTests(unittest.TestCase):
             self.project.update('REEL_01',subtitles=True)
         self.project.update('REEL_01',captions_verified=True,subtitles=True)
         file,report=render_item(self.project,'REEL_01',preview=True)
-        self.assertEqual((file.parent/'captions.ass').read_bytes(),target.read_bytes())
+        from ldporto_studio.subtitle_style import make_yellow_ass
+        self.assertEqual((file.parent/'captions.ass').read_bytes(),
+                         make_yellow_ass(target.read_bytes()))
+        self.assertEqual(self.project.caption_payload('REEL_01'),target.read_bytes(),
+                         'Imported ASS original must never be overwritten')
+        self.assertEqual(report['caption_presentation']['preset'],
+                         'YELLOW_HIGH_CONTRAST_V1')
         self.assertTrue(report['captions_included'])
 
     def test_zz_reject_manifest_tampering(self):
