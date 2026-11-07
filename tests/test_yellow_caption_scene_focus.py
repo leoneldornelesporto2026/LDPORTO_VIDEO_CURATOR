@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import unittest
 
-from ldporto_studio.scene_focus import plan_shot_focus
+from ldporto_studio.scene_focus import plan_shot_focus, pick_dominant_face
 from ldporto_studio.subtitle_style import make_yellow_ass
 from ldporto_studio.editorial_camera_fill import build_editorial_fill
 
@@ -107,6 +107,14 @@ class SmartFramePositionTests(unittest.TestCase):
         self.assertEqual(frame["tracking"],"SMOOTH_FACE_WITHIN_SHOT_REVIEW_REQUIRED")
         self.assertGreaterEqual(len(frame["camera_points"]),2)
         self.assertLess(frame["camera_points"][0]["x"],frame["camera_points"][-1]["x"])
+
+    def test_background_monitor_faces_do_not_steal_presenter_frame(self):
+        boxes=[(30,20,35,35),(550,50,94,95),(165,34,30,28)]
+        self.assertEqual(pick_dominant_face(boxes,960),(550,50,94,95))
+        crowded=[(120,20,80,80),(320,35,75,77)]
+        self.assertIsNone(pick_dominant_face(crowded,960))
+        small_screen=[(10,20,28,32)]
+        self.assertIsNone(pick_dominant_face(small_screen,960))
 
     def test_no_subject_does_not_invent_one(self):
         observations=[
