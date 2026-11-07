@@ -30,12 +30,13 @@ def binaries():
 
 def render_code_signature():
     # Template and camera changes invalidate old preview approvals.
-    from . import smart_camera, visual_style, r6_camera_evidence, editorial_camera_fill, subtitle_style
+    from . import smart_camera, visual_style, r6_camera_evidence, editorial_camera_fill, subtitle_style, scene_focus
     hashes=(sha256_file(Path(__file__)),sha256_file(Path(smart_camera.__file__)),
             sha256_file(Path(visual_style.__file__)),
             sha256_file(Path(r6_camera_evidence.__file__)),
             sha256_file(Path(editorial_camera_fill.__file__)),
-            sha256_file(Path(subtitle_style.__file__)))
+            sha256_file(Path(subtitle_style.__file__)),
+            sha256_file(Path(scene_focus.__file__)))
     return sha256_bytes(''.join(hashes).encode('ascii'))
 
 

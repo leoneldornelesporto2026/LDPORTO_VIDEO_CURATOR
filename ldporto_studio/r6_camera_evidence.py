@@ -64,7 +64,8 @@ def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_h
         # Geometry can be useful for an EDITORIAL PROPOSAL even when the
         # Analyzer could not certify a crop. Never promote such a segment.
         proposed=(row.get("layout")=="single_person" or
-                  row.get("composition_intent")=="FOCUS_PERSON_9X16")
+                  row.get("composition_intent")=="FOCUS_PERSON_9X16" or
+                  row.get("recommended_composition")=="FOCUS_PERSON_9X16")
         if not (safe or proposed):
             continue
         rect=((row.get("crop") or {}).get("rect_end"))

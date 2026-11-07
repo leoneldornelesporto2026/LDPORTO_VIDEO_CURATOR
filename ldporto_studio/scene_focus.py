@@ -104,7 +104,7 @@ def plan_shot_focus(samples, duration, source_width, source_height,
         center=statistics.median(centers)
         half=ratio/2
         x=(max(half,min(1-half,center))-half)/(1-ratio)
-        candidates.append({
+        region={
             "start":round(left,3),"end":round(right,3),
             "x":round(max(0.,min(1.,x)),6),
             "source":"OPENCV_FACE_FOCUS_REVIEW_REQUIRED" if faces else
@@ -112,7 +112,22 @@ def plan_shot_focus(samples, duration, source_width, source_height,
             "focus_samples":len(focus),
             "shot_id":group[0]["shot"],
             "review_required":True,
-        })
+        }
+        if len(focus)>=3 and max(centers)-min(centers)>=.075:
+            # Smooth subject movement inside the same shot; never chase a
+            # detection across a scene cut or synthesize missing keyframes.
+            track=[]
+            ema=float(focus[0]["cx"])
+            for index,frame in enumerate(focus):
+                ema=.70*ema+.30*float(frame["cx"])
+                if index % max(1,len(focus)//5)==0 or index==len(focus)-1:
+                    current=max(half,min(1-half,ema))
+                    track.append({"t":round(float(frame["t"]),3),
+                                  "x":round((current-half)/(1-ratio),6)})
+            if len(track)>=2:
+                region["camera_points"]=track[:8]
+                region["tracking"]="SMOOTH_FACE_WITHIN_SHOT_REVIEW_REQUIRED"
+        candidates.append(region)
     # Long coherent shots are more valuable than unstable short cuts;
     # conserve FFmpeg region budget for certified R6 and human edits.
     candidates.sort(key=lambda r:(-(r["end"]-r["start"]),r["start"]))
