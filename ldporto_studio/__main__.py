@@ -20,6 +20,13 @@ def main(argv=None):
         a.add_argument('--workdir',required=True,type=Path)
         if name in ('preview','approve','final'):
             a.add_argument('--id',required=True)
+        if name=='preview':
+            a.add_argument('--analyzer-inbox',type=Path,
+                           help='Recebimento R6 original; usa recomendações de câmera seguras')
+            a.add_argument('--draft-captions',action='store_true',
+                           help='Prévia separada com ASR não conferido e aviso visível')
+            a.add_argument('--require-reframe',action='store_true',
+                           help='Falhar se nenhuma região real for reenquadrada 9:16')
         if name=='associate':a.add_argument('--media',required=True,type=Path)
         if name in ('list','assets','batch-preview'):
             a.add_argument('--kind',choices=('all','reels','stories'),default='all' if name!='batch-preview' else 'reels')
@@ -421,7 +428,11 @@ def main(argv=None):
                          ensure_ascii=False,indent=2))
     elif args.cmd in ('preview','final'):
         from .rendering import render_item
-        path,report=render_item(project,args.id,preview=args.cmd=='preview')
+        opts=(dict(analyzer_inbox=args.analyzer_inbox,
+                   draft_captions=args.draft_captions,
+                   require_reframe=args.require_reframe)
+              if args.cmd=='preview' else {})
+        path,report=render_item(project,args.id,preview=args.cmd=='preview',**opts)
         print(path)
         print(json.dumps(report,ensure_ascii=False,indent=2))
     elif args.cmd=='approve':
