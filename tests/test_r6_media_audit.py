@@ -108,6 +108,65 @@ class R6MediaAuditTests(unittest.TestCase):
         result=self.audit(max_files=1)
         self.assertLessEqual(result['hashed_media_count'],1)
 
+    def test_original_analyzer_cache_has_priority_and_exact_hash_gate(self):
+        self.filename.unlink()
+        cache=self.root/'LDPORTO_VIDEO_ANALYZER'/'input'/'youtube'/self.video_id
+        cache.mkdir(parents=True)
+        original=cache/'source.mp4'
+        original.write_bytes(b'Analyzer original mock bytes')
+        with patch('ldporto_studio.r6_media_audit.sha256_file',
+                   return_value='a'*64):
+            result=self.audit()
+        self.assertEqual(result['status'],'EXACT_SOURCE_FOUND')
+        self.assertEqual(result['media'][0]['location_type'],'ANALYZER_ORIGINAL_CACHE')
+        self.assertEqual(Path(result['media'][0]['path']),original)
+        self.assertTrue(result['analyzer_cache_checked'])
+        self.assertFalse(result['media_associated'])
+        self.assertFalse(result['files_modified'])
+        self.assertTrue(original.is_file())
+
+    def test_analyzer_cache_hash_mismatch_is_never_accepted(self):
+        self.filename.unlink()
+        cache=self.root/'LDPORTO_VIDEO_ANALYZER'/'input'/'youtube'/self.video_id
+        cache.mkdir(parents=True)
+        (cache/'source.mp4').write_bytes(b'wrong source bytes')
+        result=self.audit()
+        self.assertEqual(result['status'],'ALTERNATE_MEDIA_ONLY_REVIEW_REQUIRED')
+        self.assertEqual(result['exact_matches_count'],0)
+        self.assertEqual(result['media'][0]['location_type'],'ANALYZER_ORIGINAL_CACHE')
+        self.assertFalse(result['media'][0]['matches_analyzer'])
+
+    def test_cli_uses_explicit_analyzer_root_with_only_requested_video_id(self):
+        from ldporto_studio.__main__ import main
+        self.filename.unlink()
+        root=self.root/'custom analyzer'
+        right=root/'input'/'youtube'/self.video_id
+        wrong=root/'input'/'youtube'/'OTHER_VIDEO'
+        right.mkdir(parents=True)
+        wrong.mkdir(parents=True)
+        (right/'source.mp4').write_bytes(b'video for correct id')
+        (wrong/'unrelated.mp4').write_bytes(b'unrelated bytes')
+        stdout=StringIO()
+        with redirect_stdout(stdout):
+            code=main(['r6-media-audit','--inbox',str(self.inbox),
+                       '--analyzer-root',str(root)])
+        result=json.loads(stdout.getvalue())
+        self.assertEqual(code,0)
+        self.assertEqual(result['hashed_media_count'],1)
+        self.assertEqual(result['media'][0]['location_type'],'ANALYZER_ORIGINAL_CACHE')
+        self.assertEqual(Path(result['media'][0]['path']),right/'source.mp4')
+        self.assertTrue((wrong/'unrelated.mp4').is_file())
+
+    def test_alternate_project_downloads_are_not_claimed_to_be_exact_source(self):
+        self.filename.unlink()
+        old=self.projects/'unrelated_project'/'downloads'/'attempts'/'attempt'/'source.mp4'
+        old.parent.mkdir(parents=True)
+        old.write_bytes(b'foreign project media')
+        result=self.audit()
+        self.assertEqual(result['exact_matches_count'],0)
+        self.assertEqual(result['media'][0]['location_type'],'LEGACY_PROJECT_DOWNLOADS')
+        self.assertFalse(result['media'][0]['can_reuse_timestamps_without_reanalysis'])
+
     def test_cli_runs_without_ids_draft_or_network(self):
         with patch('ldporto_studio.r6_media_audit.application_root',return_value=self.app),\
              patch('ldporto_studio.r6_media_audit.project_output_root',return_value=self.projects),\

@@ -53,14 +53,21 @@ def _scan_root(root, *, depth_limit=4, budget=None):
             if _safe_media(candidate):
                 yield candidate
 
-def _managed_roots(video_id, app_root=None, projects_root=None, videos_root=None):
+def _managed_roots(video_id, app_root=None, projects_root=None, videos_root=None,
+                   analyzer_root=None):
     """Only roots established by the Curator; never search the entire home drive."""
     app=Path(app_root).expanduser().resolve() if app_root is not None else application_root()
     projects=(Path(projects_root).expanduser().resolve() if projects_root is not None
               else project_output_root())
     windows=(Path(videos_root).expanduser().resolve() if videos_root is not None
              else videos_download_root())
+    # Analyzer is a sibling repository in the supported Windows workspace.
+    # Scan ONLY the requested video ID's canonical local cache. Never
+    # search the entire Analyzer analysis/ tree or download a new source.
+    analyzer=(Path(analyzer_root).expanduser().resolve() if analyzer_root is not None
+              else app.parent/'LDPORTO_VIDEO_ANALYZER')
     roots=[
+        ('ANALYZER_ORIGINAL_CACHE', analyzer/'input'/'youtube'/video_id, 3),
         ('CURATOR_INPUT_VIDEOS', app/'input'/'videos'/video_id, 4),
         ('LEGACY_WINDOWS_VIDEOS',windows/video_id,4),
     ]
@@ -73,7 +80,8 @@ def _managed_roots(video_id, app_root=None, projects_root=None, videos_root=None
     return roots
 
 def audit_r6_media(inbox_directory, *, explicit_media=None, max_files=MAX_HASH_FILES,
-                   app_root=None, projects_root=None, videos_root=None):
+                   app_root=None, projects_root=None, videos_root=None,
+                   analyzer_root=None):
     """Scan known local folders, hash bounded candidates, return safe comparison.
 
     No download, no copies or associations. A different SHA256 is NOT a match
@@ -99,7 +107,8 @@ def audit_r6_media(inbox_directory, *, explicit_media=None, max_files=MAX_HASH_F
         candidates.append(('EXPLICIT_MEDIA',p))
         seen.add(p)
     if video_id is not None:
-        roots=_managed_roots(video_id,app_root,projects_root,videos_root)
+        roots=_managed_roots(
+            video_id,app_root,projects_root,videos_root,analyzer_root)
         for label,root,depth in roots:
             if budget['truncated']:
                 break
@@ -143,6 +152,12 @@ def audit_r6_media(inbox_directory, *, explicit_media=None, max_files=MAX_HASH_F
         'searched_directory_count':budget['dirs'],
         'scanned_entry_count':budget['entries'],
         'hashed_media_count':len(rows),
+        'analyzer_cache_checked':video_id is not None,
+        'analyzer_cache_root':(
+            str((Path(analyzer_root).expanduser().resolve() if analyzer_root is not None
+                 else (Path(app_root).expanduser().resolve() if app_root is not None
+                       else application_root()).parent/'LDPORTO_VIDEO_ANALYZER')
+                /'input'/'youtube'/video_id) if video_id is not None else None),
         'exact_matches_count':len(matches),
         'different_sha_count':len(mismatches),
         'scan_truncated':budget['truncated'],
@@ -154,5 +169,5 @@ def audit_r6_media(inbox_directory, *, explicit_media=None, max_files=MAX_HASH_F
         'files_modified':False,
         'next_step':('Review exact-source path and validate a technical preview in an isolated workspace'
                      if matches else
-                     'Locate original Analyzer media or explicitly verify an alternate MP4; no timestamps assumed'),
+                     'Analyzer original cache checked. Find original media by SHA256; do not use alternate timestamps'),
     }
