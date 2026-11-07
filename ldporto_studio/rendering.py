@@ -30,9 +30,10 @@ def binaries():
 
 def render_code_signature():
     # Template and camera changes invalidate old preview approvals.
-    from . import smart_camera, visual_style
+    from . import smart_camera, visual_style, r6_camera_evidence
     hashes=(sha256_file(Path(__file__)),sha256_file(Path(smart_camera.__file__)),
-            sha256_file(Path(visual_style.__file__)))
+            sha256_file(Path(visual_style.__file__)),
+            sha256_file(Path(r6_camera_evidence.__file__)))
     return sha256_bytes(''.join(hashes).encode('ascii'))
 
 
@@ -176,9 +177,30 @@ def extract_editorial_assets(project,kind='all',destination=None):
     return target,len(rows)
 
 
-def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
-    """Render preview or explicitly approved final, keeping every attempt isolated."""
+def _draft_caption_watermark(path, width, height):
+    """Non-removable in-render review notice, never a publication asset."""
+    from PIL import Image, ImageDraw
+    canvas=Image.new("RGBA",(width,height),(0,0,0,0))
+    draw=ImageDraw.Draw(canvas)
+    font=_font(max(17,round(width*.033)))
+    text="ASR RASCUNHO - CONFERIR AUDIO"
+    bbox=draw.textbbox((0,0),text,font=font)
+    content_width=bbox[2]-bbox[0]
+    x=max(8,(width-content_width)//2)
+    h=max(32,round(height*.052))
+    draw.rounded_rectangle((max(0,x-10),6,min(width,x+content_width+10),h),
+                           radius=7,fill=(0,0,0,207))
+    draw.text((x,9),text,font=font,fill=(255,218,70,255))
+    canvas.save(path)
+
+
+def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
+                analyzer_inbox=None,draft_captions:bool=False,
+                require_reframe:bool=False):
+    """Preview/final or isolated ASR review preview (never approvable)."""
     if cid not in project.package.clips: raise ValueError('Corte inexistente')
+    if draft_captions and not preview:
+        raise ValueError('Legendas não revisadas são permitidas somente na prévia técnica')
     if not preview and not project.approval_matches(cid):
         raise ValueError('Final bloqueado: assista e aprove a prévia da revisão atual')
     source=project.verified_media()
@@ -194,9 +216,12 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     if not (math.isfinite(duration) and duration>0.1):raise ValueError('Corte de duração inválida')
     width,height=(540,960) if preview else (1080,1920)
     run_id=datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')+'_'+uuid4().hex[:8]
-    root=project.dir/'outputs'/('previews' if preview else 'finals')/cid/run_id
+    category=('caption_draft_previews' if draft_captions else
+              ('previews' if preview else 'finals'))
+    root=project.dir/'outputs'/category/cid/run_id
     root.mkdir(parents=True,exist_ok=False)
-    movie=root/('PREVIEW_540x960.mp4' if preview else 'FINAL_1080x1920.mp4')
+    movie=root/('PREVIEW_ASR_DRAFT_540x960.mp4' if draft_captions else
+                ('PREVIEW_540x960.mp4' if preview else 'FINAL_1080x1920.mp4'))
     pending=root/'ENCODING.part.mp4'
     # Never overwrite the R57 package thumbnail.
     (root/'CAPA_PROPOSTA.png').write_bytes(project.package.data(clip.thumbnail))
@@ -206,6 +231,21 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     if s['layout'] in ('solo_fit','smart_zoom'):
         if preview:
             camera=analyze_camera(source,start,end,s['layout'])
+            if analyzer_inbox is not None:
+                from .r6_camera_evidence import read_safe_r6_camera
+                media=probe_media(source)
+                evidence=read_safe_r6_camera(
+                    analyzer_inbox,project.package.source_sha,start,end,
+                    media['width'],media['height'])
+                camera['r6_evidence']={k:v for k,v in evidence.items()
+                                       if k!='trusted_regions'}
+                trusted=evidence['trusted_regions']
+                if trusted:
+                    # R6 recommendations are evaluated per scene, not used
+                    # as a whole-video identity claim.
+                    camera.update(decision='dynamic',camera_regions=trusted,
+                                  camera_points=[],source='VERIFIED_ANALYZER_R6_SOLO',
+                                  reason='Geometria de pessoa isolada confirmada pelo Analyzer')
         else:
             verified_preview=project.preview_record(cid)
             if not verified_preview:
@@ -214,6 +254,15 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
             if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop','dynamic'):
                 raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
         atomic_write(root/'CAMERA_PLAN.json',camera)
+    if require_reframe and camera.get('decision')=='preserve':
+        raise ValueError('Nenhuma região 9:16 validada; prévia horizontal antiga recusada')
+    caption_report=None
+    if draft_captions:
+        from .caption_second_pass import inspect_caption_second_pass
+        caption_report=inspect_caption_second_pass(project,cid)
+        if (caption_report['cue_count']<=0 or
+                caption_report['ass_dialogue_count']<=0):
+            raise ValueError('Sem legendas reais do Analyzer para este corte; não inventar texto')
     use_title=bool(s['title_overlay'])
     # Premium cover uses a real frame of the source, not a fabricated thumbnail.
     cover_error=None
@@ -229,8 +278,12 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
         title_overlay(root/'TITLE_OVERLAY.png',s['title'],width,height,clip.kind,
                       footer=footer_for_project(project,clip.kind))
         cmd+=['-loop','1','-framerate','30','-i',str(root/'TITLE_OVERLAY.png')]
-    if s['subtitles']:
+    caption_enabled=bool(s['subtitles'] or draft_captions)
+    if caption_enabled:
         (root/'captions.ass').write_bytes(project.caption_payload(cid))
+    if draft_captions:
+        _draft_caption_watermark(root/'ASR_REVIEW_BANNER.png',width,height)
+        cmd+=['-loop','1','-framerate','30','-i',str(root/'ASR_REVIEW_BANNER.png')]
     filters=[f'[0:v]fps=30,trim=duration={duration:.3f},setpts=PTS-STARTPTS']
     dynamic=camera.get('decision')=='dynamic'
     if dynamic:
@@ -284,10 +337,14 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     if use_title:
         filters.append(f'[{current}][1:v]overlay=0:0:shortest=1:format=auto:enable=\'lt(t,3.2)\'[titled]')
         current='titled'
-    if s['subtitles']:
-        # Relative path so Windows drive letters never enter FFmpeg filter parsing.
-        filters.append(f'[{current}]ass=captions.ass,format=yuv420p[finished]')
-        current='finished'
+    if caption_enabled:
+        # Relative path: Windows drive letters must not enter the FFmpeg filter.
+        filters.append(f'[{current}]ass=captions.ass,format=yuv420p[captions]')
+        current='captions'
+    if draft_captions:
+        banner_idx=2 if use_title else 1
+        filters.append(f'[{current}][{banner_idx}:v]overlay=0:0:shortest=1:format=auto[review]')
+        current='review'
     cmd+=['-t',f'{duration:.3f}','-filter_complex',';'.join(filters),
           '-map',f'[{current}]','-map','0:a:0',
           '-c:v','libx264','-preset','veryfast' if preview else 'medium',
@@ -339,15 +396,23 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
                 'package_sha256':project.package.digest,
                 'clip':cid,'preview':preview,'mode':s['layout'],
                 'camera_plan':camera,'cover_error':cover_error,
-                'captions_included':s['subtitles'],
+                'captions_included':caption_enabled,
+                'asr_draft_review_only':draft_captions,
+                'caption_review_report':{
+                    'cue_count':caption_report['cue_count'],
+                    'flags':caption_report['flags'],
+                    'srt_sha256':caption_report['srt_sha256'],
+                    'ass_sha256':caption_report['ass_sha256']
+                } if caption_report else None,
                 'camera_verified_by_human':s['camera_reviewed'],
                 'captions_verified_by_human':s['captions_verified'],
                 'media':technical,'source_start':start,'source_end':end,
                 'sha256':sha256_file(movie),'rights_verified':s['rights_verified'],
                 'publication_ready':False}
         atomic_write(root/'RENDER_REPORT.json',report)
-        project.record_render(cid,movie,preview=preview,report=report)
-        if not preview:project.export_manifest()
+        if not draft_captions:
+            project.record_render(cid,movie,preview=preview,report=report)
+            if not preview:project.export_manifest()
         if progress:progress(1.,cid)
         return movie,report
     except Exception:
