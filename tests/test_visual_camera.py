@@ -178,6 +178,12 @@ class RenderFeatureTests(unittest.TestCase):
         self.assertIn('caption_draft_previews',movie.as_posix())
         self.assertTrue(report['captions_included'])
         self.assertTrue(report['asr_draft_review_only'])
+        self.assertEqual(report['caption_presentation']['preset'],
+                         'YELLOW_HIGH_CONTRAST_V1')
+        rendered_ass=(movie.parent/'captions.ass').read_text(encoding='utf-8')
+        self.assertIn('&H0000FFFF',rendered_ass)
+        self.assertIn(',1,5,2,2,94,94,244,1',rendered_ass)
+        self.assertEqual(report['caption_presentation']['original_ass_modified'],False)
         self.assertFalse(report['captions_verified_by_human'])
         self.assertFalse(report['publication_ready'])
         self.assertFalse(self.p.preview_record('REEL_01'))
@@ -209,7 +215,11 @@ class RenderFeatureTests(unittest.TestCase):
         r6_diagnostic={'requested':'smart_zoom','decision':'dynamic',
                        'camera_regions':[{'start':.15,'end':.40,'x':.32,
                                          'source':'ANALYZER_R6_SAFE_SOLO'}],
-                       'camera_points':[],'sample_count':42,'valid_samples':2}
+                       'camera_points':[],'sample_count':42,'valid_samples':2,
+                       'scene_focus_regions':[
+                           {'start':.5,'end':1.5,'x':.92,
+                            'source':'OPENCV_FACE_FOCUS_REVIEW_REQUIRED',
+                            'review_required':True}]}
         with patch('ldporto_studio.smart_camera.analyze_camera',
                    return_value=r6_diagnostic):
             path,report=render_item(self.p,'REEL_01',preview=True,
@@ -223,6 +233,10 @@ class RenderFeatureTests(unittest.TestCase):
         self.assertFalse(report['captions_verified_by_human'])
         self.assertGreater(report['unverified_portrait_coverage_percent'],0)
         self.assertEqual(report['camera_plan']['portrait_coverage_percent'],100.)
+        self.assertGreater(report['camera_plan']['scene_face_focus_percent'],0)
+        self.assertTrue(any(r['source']=='OPENCV_FACE_FOCUS_REVIEW_REQUIRED'
+                            and r['x']>.9
+                            for r in report['camera_plan']['camera_regions']))
         self.assertFalse(self.p.preview_record('REEL_01'))
         self.assertIsNone(self.p._item('REEL_01')['approval'])
 
