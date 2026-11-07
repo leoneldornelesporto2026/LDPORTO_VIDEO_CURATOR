@@ -25,18 +25,31 @@ def _plain(text):
     return " ".join(re.findall(r"\w+", text, flags=re.UNICODE))
 
 
+def _ass_time_ms(raw):
+    match=re.fullmatch(r"(\\d+):(\\d{2}):(\\d{2})\\.(\\d{2})",raw.strip())
+    if not match:
+        raise ValueError("Timestamp ASS malformado: "+raw)
+    hh,mm,ss,cs=(int(value) for value in match.groups())
+    if mm>=60 or ss>=60:
+        raise ValueError("Timestamp ASS fora do formato")
+    return ((hh*60+mm)*60+ss)*1000+cs*10
+
+
 def _ass_dialogue(ass):
     try:
         text=ass.decode("utf-8-sig")
     except UnicodeDecodeError as exc:
         raise ValueError("ASS de origem não está em UTF-8") from exc
-    events = []
+    events=[]
     for row in text.splitlines():
         if row.startswith("Dialogue:"):
             parts=row.split(":",1)[1].split(",",9)
             if len(parts)!=10:
                 raise ValueError("Diálogo ASS malformado")
-            events.append(parts[9])
+            a,b=_ass_time_ms(parts[1]),_ass_time_ms(parts[2])
+            if a>=b:
+                raise ValueError("Intervalo ASS invertido/zerado")
+            events.append({"start_ms":a,"end_ms":b,"text":parts[9]})
     return events
 
 
@@ -76,8 +89,14 @@ def inspect_caption_second_pass(project, cid):
             issues.append("LEITURA_RAPIDA_REVISAR")
         if len(text.strip())>120:
             issues.append("FALA_LONGA_REVISAR")
-        if i<len(dialogues) and _plain(dialogues[i])!=_plain(text):
-            issues.append("TEXTO_SRT_ASS_DIFERENTE")
+        if i<len(dialogues):
+            if _plain(dialogues[i]["text"])!=_plain(text):
+                issues.append("TEXTO_SRT_ASS_DIFERENTE")
+            # ASS stores centisecond timestamps; allow the quantization
+            # error, never a significant timeline shift.
+            if (abs(dialogues[i]["start_ms"]-start)>35 or
+                    abs(dialogues[i]["end_ms"]-end)>35):
+                issues.append("TEMPOS_SRT_ASS_DIFERENTES")
         if not text.strip():
             issues.append("TEXTO_VAZIO")
         flags += issues
@@ -98,7 +117,8 @@ def inspect_caption_second_pass(project, cid):
         "cue_count":len(cues),"ass_dialogue_count":len(dialogues),
         "flags":sorted(set(flags)),"cues":entries,
         "structural_text_consistency":not any(x in flags for x in
-            ("SEM_FALAS_NO_SRT","SRT_ASS_QUANTIDADE_DIFERENTE","TEXTO_SRT_ASS_DIFERENTE")),
+            ("SEM_FALAS_NO_SRT","SRT_ASS_QUANTIDADE_DIFERENTE",
+             "TEXTO_SRT_ASS_DIFERENTE","TEMPOS_SRT_ASS_DIFERENTES")),
         "original_analyzer_asr_may_contain_errors":True,
         "second_listening_pass_completed":False,
         "captions_verified":False,"human_approved":False,
