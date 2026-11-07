@@ -378,3 +378,6 @@ Câmera inteligente 9:16 por pessoa/cena e segunda curadoria de legendas: [.docs
 
 
 Reenquadramento 9:16 por cena e prévia com legendas ASR para revisão: [NASA SMART FOCUS + ASR](.docs/integrations/NASA_SMART_FOCUS_ASR.md).
+
+
+**P0 de vídeo:** [Legendas amarelas e enquadramento por cena](.docs/integrations/NASA_SMART_FOCUS_ASR.md) — cópias de ASS para render, face/profile tracking, corte de cena, testes e revisão humana.
