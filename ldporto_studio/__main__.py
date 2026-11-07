@@ -69,6 +69,16 @@ def main(argv=None):
     a.add_argument('--draft',required=True,type=Path)
     a.add_argument('--story-proposal',required=True,type=Path)
     a.add_argument('--save',action='store_true',help='Salvar rascunhos não aprovados em output/r6_bridge')
+    a=sub.add_parser('r6-cover-drafts',
+                     help='Extrair capas PNG para REVISÃO apenas do vídeo original SHA-exato')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--story-proposal',required=True,type=Path)
+    a.add_argument('--media',required=True,type=Path)
+    a.add_argument('--kind',choices=('all','reels','stories'),default='all')
+    a.add_argument('--save',action='store_true',help='Extrair PNGs em pasta de rascunhos')
+    a.add_argument('--confirm-review-only',action='store_true',
+                   help='Confirmo que são quadros técnicos não revisados')
     a=sub.add_parser('r6-assets',help='Criar template e auditar capas/ASS/SRT reais, sem render')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path)
@@ -162,6 +172,20 @@ def main(argv=None):
         if args.save:
             result['saved_drafts_dir']=str(export_caption_drafts(
                 args.inbox,args.draft,args.story_proposal))
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='r6-cover-drafts':
+        from .r6_cover_drafts import prepare_cover_drafts, export_cover_drafts
+        if args.save:
+            folder=export_cover_drafts(
+                args.inbox,args.draft,args.story_proposal,args.media,
+                kind=args.kind,confirm_review_only=args.confirm_review_only)
+            report=json.loads((folder/'COVER_DRAFT_MANIFEST.json').read_text(encoding='utf-8'))
+            result={**report,'saved_covers_dir':str(folder)}
+        else:
+            report=prepare_cover_drafts(
+                args.inbox,args.draft,args.story_proposal,args.media,kind=args.kind)
+            result={**report,'saved_covers_dir':None}
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-assets':

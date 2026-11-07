@@ -347,3 +347,17 @@ python -m ldporto_studio r6-caption-drafts --inbox ".\input\analyzer\<video_id>\
 ```
 
 Inclua `--save` para criar pasta content-addressed sob `output/r6_bridge/<source-sha-prefix>/CAPTIONS_R6_DRAFT_<hash>/`, com SHA256 em `CAPTION_DRAFT_MANIFEST.json`. Não altera ZIP R6, não associa ao checklist R57 automaticamente, não gera thumbnails nem vídeo. **Os tempos e textos ASR originais continuam não verificados**, inclusive nas bordas dos cortes; os arquivos não constituem legendas editoriais aprovadas. Use-os como base de edição e revisão humana antes de vincular SRT/ASS finais ao R57.
+
+
+## P1.8 — Capas PNG reais do vídeo Analyzer com SHA256 confirmado
+
+Selecione Reels no R6, exporte o roteiro e gere a proposta de Stories; informe o **vídeo original** (MP4/MKV/MOV) usado na análise. `r6-cover-drafts` valida o ZIP R6, roteiro, Stories e SHA256 do vídeo antes de extrair quadros. Uma divisão técnica de Story **não** equivale a aprovação editorial. O sistema captura o frame no meio de cada intervalo como PNG vertical 720×1280, preservando o enquadramento completo com bordas pretas em vez de inventar crop, foco, títulos ou conteúdo. Cada quadro tem SHA256 no manifesto de proveniência.
+
+Inspecionar sem gerar arquivos:
+```powershell
+python -m ldporto_studio r6-cover-drafts --inbox "<input/analyzer/video/run>" --draft "<R6_REVIEW.json>" --story-proposal "<R6_STORY_PROPOSAL.json>" --media "<video_original_exato.mp4>"
+```
+
+Acrescente `--save --confirm-review-only` para criar uma pasta isolada `output/r6_bridge/<source-sha-prefix>/COVERS_R6_DRAFT_<fingerprint>/`, com os PNGs e `COVER_DRAFT_MANIFEST.json`. Use `--kind reels` ou `--kind stories` para lotes menores. O botão **RASCUNHOS DE CAPAS DA FONTE** na segunda curadoria abre o seletor de arquivo original e solicita confirmação explícita.
+
+**Importante:** os PNGs são quadros efetivamente extraídos do arquivo SHA-exato, mas não são capas finais aprovadas, não são automaticamente vinculados ao R57 e não concedem direitos de uso. O Curator não altera MP4 original, handoff R6, projetos existentes ou `release/main`. Sem mídia com SHA exato, a extração é bloqueada. A preparação exige FFprobe e a exportação exige FFmpeg instalado.

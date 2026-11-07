@@ -126,6 +126,12 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                    command=self._export_caption_drafts).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
                   text='Materiais para revisar; sem aprovação.').pack(side='left')
+        cover_actions=ttk.Frame(outer)
+        cover_actions.pack(fill='x',pady=(5,0))
+        ttk.Label(cover_actions,
+                  text='Capas de quadros reais (requer vídeo SHA256 original)').pack(side='left')
+        ttk.Button(cover_actions,text='RASCUNHOS DE CAPAS DA FONTE',
+                   command=self._export_cover_drafts).pack(side='right')
         footer=ttk.Frame(outer)
         footer.pack(fill='x',pady=(8,0))
         self.selection_status=tk.StringVar(value='Nenhum marcado para o roteiro.')
@@ -297,6 +303,48 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             'Contact sheets e ASR são somente materiais de revisão.'
         )
         messagebox.showinfo('Inventário do R6 original',details,parent=self)
+
+    def _export_cover_drafts(self):
+        if self.last_exported_path is None or self.last_story_proposal_path is None:
+            messagebox.showwarning('Seleção e Stories necessários',
+                'Exporte os Reels escolhidos e a proposta de Stories primeiro.',
+                parent=self)
+            return
+        media=filedialog.askopenfilename(
+            parent=self,
+            title='Escolha o vídeo original exato usado pelo Analyzer',
+            filetypes=[('Vídeos originais','*.mp4 *.mkv *.mov *.m4v *.webm')])
+        if not media:
+            return
+        if not messagebox.askyesno(
+                'Capas técnicas para revisão',
+                'Confirmar extração de um quadro real por Reel e Story?\n'
+                'O arquivo será recusado se SHA256 for diferente do original.\n'
+                'Os PNGs serão rascunhos SEM aprovação ou publicação.',
+                parent=self):
+            return
+        self.configure(cursor='watch')
+        self.update_idletasks()
+        try:
+            from .r6_cover_drafts import export_cover_drafts
+            folder=export_cover_drafts(
+                self.review['inbox_folder'],self.last_exported_path,
+                self.last_story_proposal_path,media,confirm_review_only=True)
+            report=json.loads((folder/'COVER_DRAFT_MANIFEST.json').read_text(
+                encoding='utf-8'))
+        except (ValueError, OSError, TypeError, KeyError, RuntimeError) as exc:
+            messagebox.showerror('Capas não extraídas',str(exc),parent=self)
+            return
+        finally:
+            self.configure(cursor='')
+        self.selection_status.set('CAPAS PARA REVISÃO: '+str(folder))
+        messagebox.showinfo(
+            'Capas extraídas do original',
+            f"PNGs: {report['images_created']}\n"
+            f"Vídeo: {report['source_sha256'][:16]}...\n\n"
+            f'Pasta: {folder}\n\n'
+            'Quadros ainda exigem curadoria, enquadramento e direitos.',
+            parent=self)
 
     def _export_caption_drafts(self):
         if self.last_exported_path is None or self.last_story_proposal_path is None:
