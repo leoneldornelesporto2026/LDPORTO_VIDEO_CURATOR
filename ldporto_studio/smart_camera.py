@@ -25,6 +25,75 @@ class BodyObservation:
     height: float
     people: int = 1
     faces: int = 0
+    face_only: bool = False
+
+
+def _valid_solo_subject(o, crop_ratio):
+    if o is None or o.people != 1 or o.faces > 1:
+        return False
+    if not all(math.isfinite(x) for x in (o.t,o.cx,o.width,o.y,o.height)):
+        return False
+    if (o.width <= 0 or o.cx-o.width/2 < .01 or o.cx+o.width/2 > .99
+            or o.width*1.40 > crop_ratio):
+        return False
+    if o.face_only:
+        # Head-and-shoulders interviews rarely expose a full body. This is
+        # explicitly a FACE detection, not an invented full-body box.
+        return (o.faces == 1 and o.width >= .035 and o.height >= .035
+                and .015 <= o.y <= .72 and o.y+o.height <= .85)
+    return (o.height >= .30 and o.y >= .015 and o.y+o.height <= .985)
+
+
+def decide_scene_regions(observations, source_width, source_height, duration,
+                         *, min_samples=2, min_seconds=3.0):
+    """Conservative solo-person intervals inside an otherwise preserved 16:9 cut.
+
+    At least 2 adjacent physical detections are necessary. Unknown/group
+    frames create full-scene periods; no blind extrapolation through them.
+    """
+    result={'decision':'preserve','camera_regions':[],
+            'reason':'Sem sequência de pessoa única para corte vertical'}
+    if (source_width <= 0 or source_height <= 0 or duration <= 0
+            or not math.isfinite(duration) or len(observations) < 4):
+        return result
+    ratio=(9/16)/(source_width/source_height)
+    if ratio >= .98:
+        return {**result,'reason':'Fonte já é vertical'}
+    active=[_valid_solo_subject(o,ratio) for o in observations]
+    regions=[]
+    i=0
+    while i < len(observations):
+        if not active[i]:
+            i+=1
+            continue
+        j=i
+        while j+1 < len(observations) and active[j+1]:
+            j+=1
+        sequence=observations[i:j+1]
+        centers=[o.cx for o in sequence]
+        # Scene cut or tracker jump: no crop for unstable group.
+        stable=(max(centers)-min(centers)) <= .22
+        left=(0 if i == 0 else (observations[i-1].t+sequence[0].t)/2
+              if observations[i-1] is not None else sequence[0].t)
+        right=(duration if j == len(observations)-1 else
+               (sequence[-1].t+observations[j+1].t)/2
+               if observations[j+1] is not None else sequence[-1].t)
+        left=max(0.,min(duration,float(left)))
+        right=max(0.,min(duration,float(right)))
+        if (len(sequence) >= min_samples and stable and
+                right-left >= min_seconds):
+            half=ratio/2
+            cx=max(half,min(1-half,statistics.median(centers)))
+            x=(cx-half)/(1-ratio)
+            regions.append({'start':round(left,3),'end':round(right,3),
+                            'x':round(x,6),'samples':len(sequence),
+                            'source':'SINGLE_VISIBLE_SUBJECT'})
+        i=j+1
+    if not regions:
+        return result
+    return {'decision':'dynamic','camera_regions':regions,
+            'reason':'Alternar pessoa única 9:16 com cena completa 16:9',
+            'camera_points':[],'crop_fraction':round(ratio,6)}
 
 
 def decide_framing(observations: list[BodyObservation | None], source_width: int,
@@ -50,10 +119,7 @@ def decide_framing(observations: list[BodyObservation | None], source_width: int
         o=observation
         if not all(math.isfinite(x) for x in (o.t,o.cx,o.width,o.y,o.height)):
             continue
-        # Full visible body with generous lateral margin, never clipped at borders.
-        if (o.width<=0 or o.width*1.37>crop_ratio or
-            o.height<.30 or o.y<.015 or o.y+o.height>.985 or
-            o.cx-o.width/2 < .015 or o.cx+o.width/2 > .985):
+        if not _valid_solo_subject(o,crop_ratio):
             continue
         valid.append(o)
     base['valid_samples']=len(valid)
@@ -119,10 +185,18 @@ def _sample_people(frame, hog, face_cascade, cv2, timestamp: float):
     # Detect separate faces so solo crop cannot swallow another nearby musician.
     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     faces=face_cascade.detectMultiScale(gray,scaleFactor=1.2,minNeighbors=5,minSize=(24,24))
-    if len(bodies)!=1:
-        return BodyObservation(timestamp,.5,1.,0.,1.,people=len(bodies),faces=len(faces)) if len(bodies)>1 or len(faces)>1 else None
-    x,y,bw,bh,_=bodies[0]
-    return BodyObservation(timestamp,(x+bw/2)/w,bw/w,y/h,bh/h,people=1,faces=len(faces))
+    if len(bodies)>1 or len(faces)>1:
+        return BodyObservation(timestamp,.5,1.,0.,1.,people=len(bodies),
+                               faces=len(faces))
+    if len(bodies)==1:
+        x,y,bw,bh,_=bodies[0]
+        return BodyObservation(timestamp,(x+bw/2)/w,bw/w,y/h,bh/h,
+                               people=1,faces=len(faces))
+    if len(faces)==1:
+        x,y,fw,fh=[int(v) for v in faces[0]]
+        return BodyObservation(timestamp,(x+fw/2)/w,fw/w,y/h,fh/h,
+                               people=1,faces=1,face_only=True)
+    return None
 
 
 def analyze_camera(source: str | Path, start: float, end: float, mode: str,
@@ -159,8 +233,13 @@ def analyze_camera(source: str | Path, start: float, end: float, mode: str,
             ok,frame=cap.read()
             seen.append(_sample_people(frame,hog,cascade,cv2,t) if ok and frame is not None else None)
         plan=decide_framing(seen,w,h,mode,duration)
+        if mode=='smart_zoom' and plan['decision']=='preserve':
+            intervals=decide_scene_regions(seen,w,h,duration)
+            if intervals['decision']=='dynamic':
+                plan={**plan,**intervals}
         plan['source_dimensions']={'width':w,'height':h}
-        plan['detector']='OpenCV_HOG_FULLBODY_FACE_V1'
+        plan['detector']='OpenCV_HOG_BODY_OR_SINGLE_FACE_V2'
+        plan['scene_aware']=mode=='smart_zoom'
         return plan
     except (ValueError, RuntimeError, cv2.error) as exc:
         return {**base,'reason':f'Detecção indisponível: {type(exc).__name__}. Mantendo 16:9'}
