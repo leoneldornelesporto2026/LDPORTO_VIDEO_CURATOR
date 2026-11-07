@@ -154,9 +154,17 @@ def export_cover_drafts(inbox, draft, story_proposal, media, *,
         saved = json.loads(
             (destination / 'COVER_DRAFT_MANIFEST.json').read_text(encoding='utf-8'))
         for key, value in report.items():
-            if key not in ('images_created', 'frame_extraction_executed', 'status'):
-                if saved.get(key) != value:
-                    raise ValueError('Capas anteriores pertencem a outro roteiro ou mídia')
+            if key in ('images_created', 'frame_extraction_executed', 'status', 'clips'):
+                continue
+            if saved.get(key) != value:
+                raise ValueError('Capas anteriores pertencem a outro roteiro ou mídia')
+        previous_clips = saved.get('clips')
+        if not isinstance(previous_clips, list) or len(previous_clips) != len(report['clips']):
+            raise ValueError('Cortes das capas anteriores divergentes')
+        for expected, previous in zip(report['clips'], previous_clips):
+            if not isinstance(previous, dict) or any(
+                    previous.get(key) != value for key, value in expected.items()):
+                raise ValueError('Capas anteriores pertencem a outra seleção')
         return _validate_exported(destination, saved)
     ffmpeg, _ = binaries()
     output_base.mkdir(parents=True, exist_ok=True)
