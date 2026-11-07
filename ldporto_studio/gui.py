@@ -175,6 +175,8 @@ class CuratorApp(tk.Tk):
         ttk.Checkbutton(cf,text='Conferi transcrição e áudio desta legenda',variable=self.captions_verified).pack(anchor='w',pady=2)
         ttk.Checkbutton(cf,text='Incluir karaokê ASS no vídeo',variable=self.subtitles).pack(anchor='w',pady=2)
         ttk.Button(cf,text='VER SRT PARA REVISÃO',command=self.open_srt).pack(fill='x',pady=(7,0))
+        ttk.Button(cf,text='2ª CHECAGEM DE LEGENDAS (SRT/ASS)',
+                   command=self.second_caption_check).pack(fill='x',pady=(5,0))
         ttk.Button(cf,text='IMPORTAR ASS CORRIGIDA',command=self.import_ass).pack(fill='x',pady=(6,0))
         ttk.Button(cf,text='SALVAR EDIÇÃO',command=self.save_edit).pack(fill='x',pady=(6,0))
         sep=ttk.Separator(right);sep.pack(fill='x',pady=12)
@@ -554,9 +556,34 @@ class CuratorApp(tk.Tk):
         out=self.project.dir/'exports'/'review'/c.id
         out.mkdir(parents=True,exist_ok=True)
         p=out/'LEGENDA_RASCUNHO.srt'
-        p.write_bytes(self.project.package.data(c.caption_srt))
+        original=self.project.package.data(c.caption_srt)
+        if not p.exists():
+            p.write_bytes(original)
+        # Never clobber a local correction made after opening the draft.
         open_file(p)
-        self.log_message('SRT aberta para revisão; marcar "conferi" só após escutar o trecho original.')
+        self.log_message('SRT aberta sem sobrescrever edições existentes; '
+                         'confira palavras e tempos ouvindo o vídeo. '
+                         'A ASS corrigida deve ser importada separadamente.')
+
+    def second_caption_check(self):
+        if self.busy or not self.project or not self.selected:return
+        try:
+            from .caption_second_pass import save_caption_second_pass_report
+            result=save_caption_second_pass_report(self.project,self.selected)
+            report=json.loads(result.read_text(encoding='utf-8'))
+        except (ValueError,OSError,TypeError,KeyError) as exc:
+            return messagebox.showerror('Segunda checagem bloqueada',str(exc))
+        self.log_message('2ª checagem estrutural — ouvir o trecho antes de '
+                         'marcar texto e áudio conferidos: '+str(result))
+        messagebox.showinfo(
+            '2ª checagem da legenda (NÃO é aprovação)',
+            f"Linhas SRT: {report['cue_count']}\n"
+            f"Diálogos ASS: {report['ass_dialogue_count']}\n"
+            f"Alertas: {', '.join(report['flags']) or 'sem alertas estruturais'}\n\n"
+            'O sistema ainda NÃO verificou o áudio falado.\n'
+            'Ouça e corrija texto/tempos antes de ativar as legendas.\n\n'
+            f'Relatório: {result}')
+        open_file(result)
 
     def import_ass(self):
         if self.busy or not self.project or not self.selected:return

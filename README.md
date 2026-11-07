@@ -372,3 +372,6 @@ P1.9 — Integração dos rascunhos ao checklist R57: ver [.docs/integrations/R6
 
 
 Piloto NASA de rascunhos R6 → R57: consulte .docs/integrations/PILOTO_NASA_R57_RASCUNHO.md. O script scripts/windows/testing/PILOTO_NASA_R57_RASCUNHO.ps1 exige candidato e confirmação explícitos, sem aprovação automática.
+
+
+Câmera inteligente 9:16 por pessoa/cena e segunda curadoria de legendas: [.docs/integrations/TRANSCRICAO_SEGUNDA_CURADORIA.md](.docs/integrations/TRANSCRICAO_SEGUNDA_CURADORIA.md). A transcrição do Analyzer é matéria-prima, não legenda final; Git textual opcional via exportador oficial do Analyzer.

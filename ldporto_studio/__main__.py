@@ -28,6 +28,12 @@ def main(argv=None):
             a.add_argument('--watched',action='store_true')
             a.add_argument('--audio-ok',action='store_true')
             a.add_argument('--camera-ok',action='store_true')
+    a=sub.add_parser('captions-second-check',
+                     help='Auditar texto e tempos SRT/ASS da segunda curadoria, sem validar áudio')
+    a.add_argument('--workdir',required=True,type=Path)
+    a.add_argument('--id',required=True)
+    a.add_argument('--save',action='store_true',
+                   help='Salvar relatório de revisão pendente no projeto isolado')
     a=sub.add_parser('review-download',help='Vincular cópia baixada apenas para prévias revisáveis')
     a.add_argument('--workdir',required=True,type=Path)
     a.add_argument('--confirm-preview-review',action='store_true')
@@ -361,6 +367,17 @@ def main(argv=None):
             'stories':len(project.package.items('stories'))},indent=2))
         return 0
     project=Project(args.workdir)
+    if args.cmd=='captions-second-check':
+        from .caption_second_pass import (
+            inspect_caption_second_pass, save_caption_second_pass_report)
+        report=inspect_caption_second_pass(project,args.id)
+        if args.save:
+            report['saved_report_path']=str(save_caption_second_pass_report(
+                project,args.id))
+        else:
+            report['saved_report_path']=None
+        print(json.dumps(report,ensure_ascii=False,indent=2))
+        return 0
     if args.cmd=='review-download':
         print(json.dumps(project.review_download_for_previews(
             confirm_timeline=args.confirm_preview_review),ensure_ascii=False,indent=2))
