@@ -30,10 +30,11 @@ def binaries():
 
 def render_code_signature():
     # Template and camera changes invalidate old preview approvals.
-    from . import smart_camera, visual_style, r6_camera_evidence
+    from . import smart_camera, visual_style, r6_camera_evidence, editorial_camera_fill
     hashes=(sha256_file(Path(__file__)),sha256_file(Path(smart_camera.__file__)),
             sha256_file(Path(visual_style.__file__)),
-            sha256_file(Path(r6_camera_evidence.__file__)))
+            sha256_file(Path(r6_camera_evidence.__file__)),
+            sha256_file(Path(editorial_camera_fill.__file__)))
     return sha256_bytes(''.join(hashes).encode('ascii'))
 
 
@@ -177,13 +178,14 @@ def extract_editorial_assets(project,kind='all',destination=None):
     return target,len(rows)
 
 
-def _draft_caption_watermark(path, width, height):
+def _draft_caption_watermark(path, width, height, *, editorial_fill=False):
     """Non-removable in-render review notice, never a publication asset."""
     from PIL import Image, ImageDraw
     canvas=Image.new("RGBA",(width,height),(0,0,0,0))
     draw=ImageDraw.Draw(canvas)
     font=_font(max(17,round(width*.033)))
-    text="ASR RASCUNHO - CONFERIR AUDIO"
+    text=("ASR + CAMERA EM REVISAO" if editorial_fill
+          else "ASR RASCUNHO - CONFERIR AUDIO")
     bbox=draw.textbbox((0,0),text,font=font)
     content_width=bbox[2]-bbox[0]
     x=max(8,(width-content_width)//2)
@@ -196,11 +198,13 @@ def _draft_caption_watermark(path, width, height):
 
 def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
                 analyzer_inbox=None,draft_captions:bool=False,
-                require_reframe:bool=False):
+                require_reframe:bool=False,editorial_fill:bool=False):
     """Preview/final or isolated ASR review preview (never approvable)."""
     if cid not in project.package.clips: raise ValueError('Corte inexistente')
     if draft_captions and not preview:
         raise ValueError('Legendas não revisadas são permitidas somente na prévia técnica')
+    if editorial_fill and not (preview and draft_captions and require_reframe):
+        raise ValueError('Recorte editorial experimental só com prévia ASR isolada, exigir reenquadramento e revisão')
     if not preview and not project.approval_matches(cid):
         raise ValueError('Final bloqueado: assista e aprove a prévia da revisão atual')
     source=project.verified_media()
@@ -253,6 +257,9 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
             camera=verified_preview['report'].get('camera_plan') or {}
             if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop','dynamic'):
                 raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
+    if editorial_fill:
+        from .editorial_camera_fill import build_editorial_fill
+        camera=build_editorial_fill(camera,duration)
     if camera.get('decision')=='crop':
         portrait_coverage=1.
     elif camera.get('decision')=='dynamic':
@@ -294,7 +301,8 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
     if caption_enabled:
         (root/'captions.ass').write_bytes(project.caption_payload(cid))
     if draft_captions:
-        _draft_caption_watermark(root/'ASR_REVIEW_BANNER.png',width,height)
+        _draft_caption_watermark(root/'ASR_REVIEW_BANNER.png',width,height,
+                                 editorial_fill=editorial_fill)
         cmd+=['-loop','1','-framerate','30','-i',str(root/'ASR_REVIEW_BANNER.png')]
     filters=[f'[0:v]fps=30,trim=duration={duration:.3f},setpts=PTS-STARTPTS']
     dynamic=camera.get('decision')=='dynamic'
@@ -422,6 +430,11 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
                 'camera_plan':camera,'cover_error':cover_error,
                 'captions_included':caption_enabled,
                 'asr_draft_review_only':draft_captions,
+                'editorial_fill_unverified':editorial_fill,
+                'verified_portrait_coverage_percent':camera.get(
+                    'verified_portrait_coverage_percent',0.),
+                'unverified_portrait_coverage_percent':camera.get(
+                    'editorial_unverified_coverage_percent',0.),
                 'caption_review_report':{
                     'cue_count':caption_report['cue_count'],
                     'flags':caption_report['flags'],
