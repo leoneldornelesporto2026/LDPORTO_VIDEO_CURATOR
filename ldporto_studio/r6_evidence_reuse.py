@@ -31,6 +31,97 @@ LITERAL_TRANSCRIPT_FILES = {
 }
 
 
+def inspect_r6_inventory(inbox):
+    """Read-only inventory of ALL R6 candidates; never implies Reel selection."""
+    from .r6_review import read_analyzer_review
+
+    review = read_analyzer_review(inbox)
+    inspection = inspect_delivery(inbox)
+    if inspection['zip_sha256'] != review['source']['zip_sha256']:
+        raise ValueError('ZIP R6 alterado durante inventário')
+    zip_path = Path(inspection['package_path'])
+    with ZipFile(zip_path) as archive:
+        names = set(archive.namelist())
+        manifest = json.loads(archive.read('SECOND_CURATION_MANIFEST.json'))
+        members = {
+            row['path']: row for row in manifest.get('files', [])
+            if isinstance(row, dict) and isinstance(row.get('path'), str)
+        }
+        original = json.loads(archive.read('editorial/candidate_catalog.json'))['candidates']
+        if [row.get('candidate_id') for row in original] != [
+                row['candidate_id'] for row in review['candidates']]:
+            raise ValueError('Catálogo R6 mudou durante inventário')
+
+        def status(name, attributed=True):
+            if not isinstance(name, str):
+                return 'UNSAFE_CANDIDATE_ID'
+            if name not in names:
+                return 'MISSING'
+            if not attributed:
+                return 'NOT_ATTRIBUTED_TO_CANDIDATE'
+            row = members.get(name)
+            if not isinstance(row, dict):
+                return 'MISSING_R6_MANIFEST_ENTRY'
+            info = archive.getinfo(name)
+            if not 0 < info.file_size <= MAX_REUSE_FILE_BYTES or row.get('bytes') != info.file_size:
+                return 'OUTSIDE_REUSE_LIMIT'
+            if not isinstance(row.get('sha256'), str) or not re.fullmatch(
+                    r'[0-9a-f]{64}', row['sha256']):
+                return 'INVALID_R6_MANIFEST_DIGEST'
+            return 'AVAILABLE_FOR_REVIEW'
+
+        candidates = []
+        for row, raw in zip(review['candidates'], original):
+            cid = row['candidate_id']
+            safe_id = (re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,95}', cid)
+                       and '..' not in cid)
+            name = 'visuals/' + cid + '/contact_sheet.jpg' if safe_id else None
+            refs = raw.get('visual_refs')
+            attributed = isinstance(refs, list) and name in refs
+            state = status(name, attributed=attributed)
+            entry = {
+                'candidate_id': cid, 'start': row['start'], 'end': row['end'],
+                'visual_evidence_status': state,
+                'contact_sheet_ref': name if state == 'AVAILABLE_FOR_REVIEW' else None,
+                'blockers': row['blockers'], 'selected_for_reel': False,
+                'thumbnail_ready': False, 'captions_verified': False,
+            }
+            if state == 'AVAILABLE_FOR_REVIEW':
+                entry['contact_sheet_sha256'] = members[name]['sha256']
+            candidates.append(entry)
+        transcripts = {}
+        for name in LITERAL_TRANSCRIPT_FILES:
+            state = status(name)
+            entry = members[name] if state == 'AVAILABLE_FOR_REVIEW' else None
+            transcripts[name] = {
+                'status': state, 'bytes': entry['bytes'] if entry else None,
+                'sha256': entry['sha256'] if entry else None,
+                'content_reviewed': False,
+            }
+    if sha256_file(zip_path) != inspection['zip_sha256']:
+        raise ValueError('ZIP R6 modificado durante inventário')
+    visual_count = sum(row['visual_evidence_status'] == 'AVAILABLE_FOR_REVIEW'
+                       for row in candidates)
+    transcript_count = sum(row['status'] == 'AVAILABLE_FOR_REVIEW'
+                           for row in transcripts.values())
+    return {
+        'schema_version': 'ldporto-r6-evidence-inventory-1.0',
+        'status': 'R6_EVIDENCE_INVENTORIED_REVIEW_PENDING',
+        'source': review['source'],
+        'candidate_count': len(candidates),
+        'story_candidate_count': review['story_candidate_count'],
+        'available_contact_sheets': visual_count,
+        'unavailable_contact_sheets': len(candidates) - visual_count,
+        'available_transcript_files': transcript_count,
+        'transcripts': transcripts,
+        'candidates': candidates,
+        'requires_explicit_editorial_selection': True,
+        'original_zip_preserved': True, 'files_modified': False,
+        'inference_executed': False, 'r57_import_ready': False,
+        'human_approved': False, 'publication_ready': False,
+    }
+
+
 def _verified_evidence(inbox, draft):
     """Inventory real ZIP members without writing, reprocessing or inferring missing data."""
     plan = prepare_r57_bridge(inbox, draft)

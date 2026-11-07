@@ -175,6 +175,38 @@ class R6EvidenceReuseTests(unittest.TestCase):
         self.assertIn('self.last_exported_path is None:',source)
         self.assertIn('export_r6_evidence(',source)
 
+    def test_full_inventory_no_draft_preserves_everything(self):
+        from ldporto_studio.r6_evidence_reuse import inspect_r6_inventory
+        before=self.zip.read_bytes()
+        result=inspect_r6_inventory(self.inbox)
+        self.assertEqual(result['candidate_count'],2)
+        self.assertEqual(result['available_contact_sheets'],0)
+        self.assertEqual(result['available_transcript_files'],0)
+        self.assertTrue(result['requires_explicit_editorial_selection'])
+        self.assertTrue(all(not x['selected_for_reel'] for x in result['candidates']))
+        self.assertEqual(self.zip.read_bytes(),before)
+        self.assertFalse(self.out.exists())
+
+    def test_full_inventory_real_evidence_is_reference_only(self):
+        from ldporto_studio.r6_evidence_reuse import inspect_r6_inventory
+        self._add_real_evidence()
+        result=inspect_r6_inventory(self.inbox)
+        self.assertEqual(result['available_contact_sheets'],1)
+        self.assertEqual(result['unavailable_contact_sheets'],1)
+        self.assertEqual(result['available_transcript_files'],2)
+        self.assertEqual(result['candidates'][0]['contact_sheet_ref'],
+                         'visuals/CAND_001/contact_sheet.jpg')
+        self.assertEqual(len(result['candidates'][0]['contact_sheet_sha256']),64)
+        self.assertFalse(result['candidates'][0]['thumbnail_ready'])
+        self.assertFalse(result['transcripts']['transcript/transcript.srt']['content_reviewed'])
+        self.assertFalse(result['r57_import_ready'])
+
+    def test_inventory_refuses_modified_source_zip(self):
+        from ldporto_studio.r6_evidence_reuse import inspect_r6_inventory
+        self.zip.write_bytes(self.zip.read_bytes()+b'modification after receipt')
+        with self.assertRaises(ValueError):
+            inspect_r6_inventory(self.inbox)
+
     def test_rejects_export_into_original_inbox(self):
         # Even if the R6 has no extractable evidence, an unsafe destination
         # must be refused before the empty-inventory check.
