@@ -228,8 +228,17 @@ class R6EvidenceReuseTests(unittest.TestCase):
         source=(Path(__file__).resolve().parents[1]/
                 'ldporto_studio'/'r6_review_gui.py').read_text(encoding='utf-8')
         self.assertIn('INVENTÁRIO R6 (SEM SELEÇÃO)',source)
-        handler=source.split('    def _inspect_r6_inventory(self):')[1].split(
-            '    def _export_r6_evidence(self):')[0]
+        # Inspect the AST node, not the text between two method names.
+        # The GUI may add methods between inventory and evidence export.
+        import ast
+        tree=ast.parse(source)
+        owner=next(node for node in tree.body
+                   if isinstance(node, ast.ClassDef)
+                   and node.name=='AnalyzerR6ReviewDialog')
+        method=next(node for node in owner.body
+                    if isinstance(node, ast.FunctionDef)
+                    and node.name=='_inspect_r6_inventory')
+        handler=ast.get_source_segment(source, method)
         self.assertNotIn('last_exported_path',handler)
         self.assertIn('inspect_r6_inventory(self.review',handler)
 
