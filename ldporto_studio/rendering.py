@@ -253,7 +253,6 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
             camera=verified_preview['report'].get('camera_plan') or {}
             if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop','dynamic'):
                 raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
-        atomic_write(root/'CAMERA_PLAN.json',camera)
     if camera.get('decision')=='crop':
         portrait_coverage=1.
     elif camera.get('decision')=='dynamic':
@@ -263,6 +262,8 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
     else:
         portrait_coverage=0.
     camera['portrait_coverage_percent']=round(min(100.,portrait_coverage*100),1)
+    if s['layout'] in ('solo_fit','smart_zoom'):
+        atomic_write(root/'CAMERA_PLAN.json',camera)
     if require_reframe and portrait_coverage<.35:
         raise ValueError(
             f'Reenquadramento insuficiente: {portrait_coverage:.1%} em 9:16; '
