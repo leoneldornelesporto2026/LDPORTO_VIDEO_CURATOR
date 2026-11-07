@@ -30,11 +30,12 @@ def binaries():
 
 def render_code_signature():
     # Template and camera changes invalidate old preview approvals.
-    from . import smart_camera, visual_style, r6_camera_evidence, editorial_camera_fill
+    from . import smart_camera, visual_style, r6_camera_evidence, editorial_camera_fill, subtitle_style
     hashes=(sha256_file(Path(__file__)),sha256_file(Path(smart_camera.__file__)),
             sha256_file(Path(visual_style.__file__)),
             sha256_file(Path(r6_camera_evidence.__file__)),
-            sha256_file(Path(editorial_camera_fill.__file__)))
+            sha256_file(Path(editorial_camera_fill.__file__)),
+            sha256_file(Path(subtitle_style.__file__)))
     return sha256_bytes(''.join(hashes).encode('ascii'))
 
 
@@ -299,8 +300,14 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
                       footer=footer_for_project(project,clip.kind))
         cmd+=['-loop','1','-framerate','30','-i',str(root/'TITLE_OVERLAY.png')]
     caption_enabled=bool(s['subtitles'] or draft_captions)
+    styled_caption_sha=None
     if caption_enabled:
-        (root/'captions.ass').write_bytes(project.caption_payload(cid))
+        from .subtitle_style import make_yellow_ass
+        original_caption=project.caption_payload(cid)
+        # Presentation-only copy: the ASR, approved ASS and R57 original stay untouched.
+        rendered_caption=make_yellow_ass(original_caption)
+        styled_caption_sha=sha256_bytes(rendered_caption)
+        (root/'captions.ass').write_bytes(rendered_caption)
     if draft_captions:
         _draft_caption_watermark(root/'ASR_REVIEW_BANNER.png',width,height,
                                  editorial_fill=editorial_fill)
@@ -430,6 +437,14 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
                 'clip':cid,'preview':preview,'mode':s['layout'],
                 'camera_plan':camera,'cover_error':cover_error,
                 'captions_included':caption_enabled,
+                'caption_presentation':({
+                    'preset':'YELLOW_HIGH_CONTRAST_V1',
+                    'primary_colour_ass':'&H0000FFFF',
+                    'font_size_at_1080p':68,
+                    'margin_bottom_at_1080p':244,
+                    'rendered_ass_sha256':styled_caption_sha,
+                    'original_ass_modified':False,
+                } if caption_enabled else None),
                 'asr_draft_review_only':draft_captions,
                 'editorial_fill_unverified':editorial_fill,
                 'verified_portrait_coverage_percent':camera.get(
