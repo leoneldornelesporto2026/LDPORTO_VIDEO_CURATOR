@@ -220,7 +220,7 @@ class R6AssetStagingTests(unittest.TestCase):
              'ldporto_studio'/'r6_review_gui.py').read_text(encoding='utf-8')
         self.assertIn('PREENCHER ASSETS COM RASCUNHOS',gui)
         self.assertIn('save_asset_staging(',gui)
-        self.assertIn('R6_ASSET_BINDINGS_DRAFT.json',gui)
+        self.assertIn('BINDINGS_NAME, MANIFEST_NAME',gui)
 
 
 if __name__=='__main__':
