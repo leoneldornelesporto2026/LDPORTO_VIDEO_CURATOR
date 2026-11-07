@@ -211,7 +211,7 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
             if not verified_preview:
                 raise ValueError('Plano inteligente exige prévia aprovada')
             camera=verified_preview['report'].get('camera_plan') or {}
-            if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop'):
+            if camera.get('requested')!=s['layout'] or camera.get('decision') not in ('preserve','crop','dynamic'):
                 raise ValueError('Plano de câmera ausente/divergente na prévia aprovada')
         atomic_write(root/'CAMERA_PLAN.json',camera)
     use_title=bool(s['title_overlay'])
@@ -232,13 +232,46 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None):
     if s['subtitles']:
         (root/'captions.ass').write_bytes(project.caption_payload(cid))
     filters=[f'[0:v]fps=30,trim=duration={duration:.3f},setpts=PTS-STARTPTS']
-    if s['layout']=='preserve' or camera['decision']=='preserve':
-        filters[0] += ',split=2[bg][fg]'
+    dynamic=camera.get('decision')=='dynamic'
+    if dynamic:
+        regions=camera.get('camera_regions')
+        if (not isinstance(regions,list) or not 1<=len(regions)<=24):
+            raise ValueError('Plano smart zoom dinâmico inválido')
+        last_end=0.
+        for region in regions:
+            if not isinstance(region,dict):
+                raise ValueError('Região de câmera inválida')
+            a,b,x=(float(region[k]) for k in ('start','end','x'))
+            if (not all(math.isfinite(v) for v in (a,b,x))
+                    or not 0<=a<b<=duration+.002 or not 0<=x<=1
+                    or a<last_end):
+                raise ValueError('Região de câmera fora do corte ou sobreposta')
+            last_end=b
+    if s['layout']=='preserve' or camera['decision'] in ('preserve','dynamic'):
+        filters[0] += ',split=3[bg][fg][solo_src]' if dynamic else ',split=2[bg][fg]'
         filters.append(f'[bg]scale={width}:{height}:force_original_aspect_ratio=increase:force_divisible_by=2,'
                        f'crop={width}:{height},boxblur=luma_radius=20:luma_power=1[back]')
         filters.append(f'[fg]scale={width}:{height}:force_original_aspect_ratio=decrease:force_divisible_by=2,'
                        'setsar=1[front]')
-        filters.append('[back][front]overlay=(W-w)/2:(H-h)/2:shortest=1,format=yuv420p[base]')
+        filters.append('[back][front]overlay=(W-w)/2:(H-h)/2:shortest=1,format=yuv420p[preserved]' if dynamic
+                       else '[back][front]overlay=(W-w)/2:(H-h)/2:shortest=1,format=yuv420p[base]')
+        if dynamic:
+            # Leave the complete 16:9 scene visible by default. Overlay
+            # portrait crop ONLY during stable, separately detected solo shots.
+            # The static crop center changes at scene boundaries, not at 30fps.
+            x_expr='0.5'
+            for region in reversed(regions):
+                x_expr=(f"if(between(t,{region['start']:.3f},{region['end']:.3f}),"
+                        f"{region['x']:.6f},{x_expr})")
+            intervals='+'.join(
+                f"between(t,{row['start']:.3f},{row['end']:.3f})" for row in regions)
+            filters.append(
+                f"[solo_src]scale={width}:{height}:force_original_aspect_ratio=increase:"
+                f"force_divisible_by=2,crop={width}:{height}:'(iw-ow)*({x_expr})':"
+                "(ih-oh)/2,setsar=1[portrait]")
+            filters.append(
+                f"[preserved][portrait]overlay=0:0:shortest=1:"
+                f"enable='{intervals}',format=yuv420p[base]")
     else:
         if s['layout'] in ('solo_fit','smart_zoom'):
             x=crop_x_expression(camera['camera_points'])
