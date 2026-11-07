@@ -375,3 +375,6 @@ Piloto NASA de rascunhos R6 → R57: consulte .docs/integrations/PILOTO_NASA_R57
 
 
 Câmera inteligente 9:16 por pessoa/cena e segunda curadoria de legendas: [.docs/integrations/TRANSCRICAO_SEGUNDA_CURADORIA.md](.docs/integrations/TRANSCRICAO_SEGUNDA_CURADORIA.md). A transcrição do Analyzer é matéria-prima, não legenda final; Git textual opcional via exportador oficial do Analyzer.
+
+
+Reenquadramento 9:16 por cena e prévia com legendas ASR para revisão: [NASA SMART FOCUS + ASR](.docs/integrations/NASA_SMART_FOCUS_ASR.md).
