@@ -94,7 +94,8 @@ def prepare_cover_drafts(inbox, draft, story_proposal, media, *, kind='all'):
         'cover_width': COVER_WIDTH, 'cover_height': COVER_HEIGHT,
         'composition': 'PRESERVE_SOURCE_FULL_FRAME_WITH_PORTRAIT_PADDING',
         'clips': rows, 'clip_count': len(rows),
-        'images_created': 0, 'render_executed': False,
+        'images_created': 0, 'frame_extraction_executed': False,
+        'render_executed': False,
         'human_approved': False, 'caption_verified': False,
         'camera_verified': False, 'rights_verified': False,
         'r57_import_ready': False, 'publication_ready': False,
@@ -147,11 +148,15 @@ def export_cover_drafts(inbox, draft, story_proposal, media, *,
         raise ValueError('Destino de capas sobrepõe a entrada R6 ou pasta da mídia')
     output_base = root / report['source_sha256'][:16]
     immutable = {key:value for key,value in report.items()
-                 if key not in ('images_created','render_executed')}
+                 if key not in ('images_created','frame_extraction_executed','render_executed')}
     destination = output_base / ('COVERS_R6_DRAFT_' + fingerprint(immutable)[:20])
     if destination.exists():
         saved = json.loads(
             (destination / 'COVER_DRAFT_MANIFEST.json').read_text(encoding='utf-8'))
+        for key, value in report.items():
+            if key not in ('images_created', 'frame_extraction_executed', 'status'):
+                if saved.get(key) != value:
+                    raise ValueError('Capas anteriores pertencem a outro roteiro ou mídia')
         return _validate_exported(destination, saved)
     ffmpeg, _ = binaries()
     output_base.mkdir(parents=True, exist_ok=True)
@@ -194,7 +199,8 @@ def export_cover_drafts(inbox, draft, story_proposal, media, *,
         report.update({
             'status': 'COVER_DRAFTS_FROM_SOURCE_PENDING_HUMAN_REVIEW',
             'images_created': len(report['clips']),
-            'render_executed': True,
+            'frame_extraction_executed': True,
+            'render_executed': False,
         })
         (stage / 'COVER_DRAFT_MANIFEST.json').write_bytes(json_bytes(report))
         _validate_exported(stage, report)
