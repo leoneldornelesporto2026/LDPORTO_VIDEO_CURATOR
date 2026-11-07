@@ -242,7 +242,8 @@ def render_item(project,cid,*,preview:bool,progress=None,cancel=None,
                     analyzer_inbox,project.package.source_sha,start,end,
                     media['width'],media['height'])
                 camera['r6_evidence']={k:v for k,v in evidence.items()
-                                       if k!='trusted_regions'}
+                                       if k not in ('trusted_regions','review_regions')}
+                camera['r6_review_regions']=evidence.get('review_regions',[])
                 trusted=evidence['trusted_regions']
                 if trusted:
                     # R6 recommendations are evaluated per scene, not used

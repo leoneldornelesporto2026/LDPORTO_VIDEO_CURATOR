@@ -46,6 +46,22 @@ class EditorialFillTests(unittest.TestCase):
         self.assertEqual(len(original["camera_regions"]),2,
                          "Original safe regions must remain unmodified")
 
+    def test_uncertified_r6_person_guides_position_before_center_fallback(self):
+        source=self._nasa()
+        source["r6_review_regions"]=[
+            {"start":26.,"end":32.,"x":.80,
+             "source":"ANALYZER_R6_SOLO_REVIEW_REQUIRED",
+             "crop_geometrically_valid":False}
+        ]
+        result=build_editorial_fill(source,74.266667)
+        guided=[r for r in result["camera_regions"]
+                if r["source"]=="ANALYZER_R6_SOLO_REVIEW_REQUIRED"]
+        self.assertEqual(len(guided),1)
+        self.assertEqual((guided[0]["start"],guided[0]["end"]),(26.,32.))
+        self.assertEqual(guided[0]["x"],.80)
+        self.assertGreater(result["r6_unverified_guidance_percent"],0)
+        self.assertEqual(result["verified_portrait_coverage_percent"],8.9)
+
     def test_no_safe_detection_cannot_be_claimed_as_verified_person(self):
         original={"requested":"smart_zoom","decision":"preserve","camera_points":[]}
         result=build_editorial_fill(original,10.)

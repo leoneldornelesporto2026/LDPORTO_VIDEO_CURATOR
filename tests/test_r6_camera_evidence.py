@@ -91,6 +91,19 @@ class R6CameraEvidenceTests(unittest.TestCase):
         self.assertEqual(report["trusted_regions"],[])
         self.assertEqual(report["evidence_status"],"NO_VERIFIED_R6_SOLO_REGIONS")
 
+    def test_single_person_uncertified_geometry_is_review_only_guidance(self):
+        unsafe=self._safe()
+        unsafe["recommended_composition"]="SOURCE_FIT_BLUR"
+        unsafe["layout"]="single_person"
+        unsafe["evidence"]["crop_geometrically_valid"]=False
+        self._rewrite_camera([unsafe])
+        plan=read_safe_r6_camera(self.folder,"a"*64,12,28,1920,1080)
+        self.assertEqual(plan["trusted_regions"],[])
+        self.assertEqual(len(plan["review_regions"]),1)
+        self.assertEqual(plan["evidence_status"],"SOLO_REVIEW_PROPOSALS_ONLY")
+        self.assertEqual(plan["review_regions"][0]["source"],
+                         "ANALYZER_R6_SOLO_REVIEW_REQUIRED")
+
     def test_mismatched_source_sha_is_fatal(self):
         self._rewrite_camera([self._safe()])
         with self.assertRaisesRegex(ValueError,"outra mídia"):
