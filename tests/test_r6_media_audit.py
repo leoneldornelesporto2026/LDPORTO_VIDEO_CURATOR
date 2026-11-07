@@ -147,7 +147,10 @@ class R6MediaAuditTests(unittest.TestCase):
         (right/'source.mp4').write_bytes(b'video for correct id')
         (wrong/'unrelated.mp4').write_bytes(b'unrelated bytes')
         stdout=StringIO()
-        with redirect_stdout(stdout):
+        with patch('ldporto_studio.r6_media_audit.application_root',return_value=self.app),\
+             patch('ldporto_studio.r6_media_audit.project_output_root',return_value=self.projects),\
+             patch('ldporto_studio.r6_media_audit.videos_download_root',return_value=self.videos),\
+             redirect_stdout(stdout):
             code=main(['r6-media-audit','--inbox',str(self.inbox),
                        '--analyzer-root',str(root)])
         result=json.loads(stdout.getvalue())
