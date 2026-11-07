@@ -122,6 +122,8 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
                    command=self._export_r6_evidence).pack(side='right',padx=(0,6))
         ttk.Button(story_actions,text='INVENTÁRIO R6 (SEM SELEÇÃO)',
                    command=self._inspect_r6_inventory).pack(side='right',padx=(0,6))
+        ttk.Button(story_actions,text='RASCUNHOS DE LEGENDAS ASR',
+                   command=self._export_caption_drafts).pack(side='right',padx=(0,6))
         ttk.Label(story_actions,
                   text='Materiais para revisar; sem aprovação.').pack(side='left')
         footer=ttk.Frame(outer)
@@ -295,6 +297,43 @@ class AnalyzerR6ReviewDialog(tk.Toplevel):
             'Contact sheets e ASR são somente materiais de revisão.'
         )
         messagebox.showinfo('Inventário do R6 original',details,parent=self)
+
+    def _export_caption_drafts(self):
+        if self.last_exported_path is None or self.last_story_proposal_path is None:
+            messagebox.showwarning(
+                'Seleção e Stories necessários',
+                'Exporte primeiro os Reels escolhidos e a proposta de Stories.',
+                parent=self)
+            return
+        if not messagebox.askyesno(
+                'Gerar rascunhos de legendas?',
+                'Recortar os textos ASR originais e ajustar seus tempos por corte?\n'
+                'Texto e tempo NÃO foram revisados contra o áudio.\n'
+                'Não haverá aprovação, render ou publicação.',
+                parent=self):
+            return
+        self.configure(cursor='watch')
+        self.update_idletasks()
+        try:
+            from .r6_caption_drafts import export_caption_drafts
+            folder=export_caption_drafts(
+                self.review['inbox_folder'],self.last_exported_path,
+                self.last_story_proposal_path)
+            report=json.loads((folder/'CAPTION_DRAFT_MANIFEST.json').read_text(
+                encoding='utf-8'))
+        except (ValueError, OSError, TypeError, KeyError) as exc:
+            messagebox.showerror('Rascunhos de legendas bloqueados',str(exc),parent=self)
+            return
+        finally:
+            self.configure(cursor='')
+        self.selection_status.set('LEGENDAS RASCUNHO: '+str(folder))
+        messagebox.showinfo(
+            'Rascunhos criados para revisão',
+            f"Com texto ASR: {report['clips_with_draft']}\n"
+            f"Sem legendas de origem: {report['clips_without_cues']}\n\n"
+            f"Pasta: {folder}\n\n"
+            'Revise texto e tempo contra o vídeo antes de vincular ao R57.',
+            parent=self)
 
     def _export_r6_evidence(self):
         if self.last_exported_path is None:

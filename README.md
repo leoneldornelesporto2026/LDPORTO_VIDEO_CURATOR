@@ -335,3 +335,15 @@ Para copiar somente evidências existentes e verificadas, acrescente `--save`. E
 O comando `r6-evidence --inbox <pasta>` agora funciona SEM `--draft`, em modo somente leitura. Ele mostra todos os candidatos, contact sheets JPEG explicitamente referenciados no catálogo e no manifesto, disponibilidade dos originais `transcript/transcript.srt` e `transcript/relevant_segments.jsonl`, e SHA256. Nenhum Reel é selecionado, nenhum arquivo é escrito, nenhuma legenda é aprovada ou mídia é gerada. Na janela de segunda curadoria existe o botão **INVENTÁRIO R6 (SEM SELEÇÃO)** para consultar as contagens.
 
 Para copiar evidências reais continua obrigatório exportar uma seleção editorial e informar `--draft` com `--save`. Usar `--save` sem seleção é bloqueado. O inventário não converte contact sheet em capa nem ASR original em legenda final.
+
+
+## P1.7 — SRT e ASS de revisão por Reel e Story, reaproveitando ASR original
+
+Após a **seleção explícita de Reels** e a **proposta técnica de Stories**, o botão **RASCUNHOS DE LEGENDAS ASR** e o comando `r6-caption-drafts` podem ler exclusivamente `transcript/transcript.srt` do ZIP R6 já validado. Para cada corte selecionado, as falas que realmente se sobrepõem à janela são recortadas e o timestamp é convertido para o relógio do corte (começando em 0). São criados arquivos `captions_unverified.srt` e `captions_unverified.ass` **para revisão**. Trechos sem falas recebem `NO_ORIGINAL_ASR_CUES_FOR_CLIP`, nunca legendas inventadas.
+
+**Somente leitura**:
+```powershell
+python -m ldporto_studio r6-caption-drafts --inbox ".\input\analyzer\<video_id>\<run_id>" --draft "<R6_REVIEW.json>" --story-proposal "<R6_STORY_PROPOSAL.json>"
+```
+
+Inclua `--save` para criar pasta content-addressed sob `output/r6_bridge/<source-sha-prefix>/CAPTIONS_R6_DRAFT_<hash>/`, com SHA256 em `CAPTION_DRAFT_MANIFEST.json`. Não altera ZIP R6, não associa ao checklist R57 automaticamente, não gera thumbnails nem vídeo. **Os tempos e textos ASR originais continuam não verificados**, inclusive nas bordas dos cortes; os arquivos não constituem legendas editoriais aprovadas. Use-os como base de edição e revisão humana antes de vincular SRT/ASS finais ao R57.

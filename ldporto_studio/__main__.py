@@ -63,6 +63,12 @@ def main(argv=None):
                    help='Opcional; sem draft, inventaria todas as evidências R6 sem selecionar Reels')
     a.add_argument('--save',action='store_true',
                    help='Copiar JPEG/SRT/JSONL originais validados para output/r6_bridge/')
+    a=sub.add_parser('r6-caption-drafts',
+                     help='Preparar rascunhos SRT/ASS por corte usando ASR R6 original, sem aprovação')
+    a.add_argument('--inbox',required=True,type=Path)
+    a.add_argument('--draft',required=True,type=Path)
+    a.add_argument('--story-proposal',required=True,type=Path)
+    a.add_argument('--save',action='store_true',help='Salvar rascunhos não aprovados em output/r6_bridge')
     a=sub.add_parser('r6-assets',help='Criar template e auditar capas/ASS/SRT reais, sem render')
     a.add_argument('--inbox',required=True,type=Path)
     a.add_argument('--draft',required=True,type=Path)
@@ -147,6 +153,15 @@ def main(argv=None):
             if args.save:
                 result['saved_evidence_dir']=str(export_r6_evidence(
                     args.inbox,args.draft))
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 0
+    if args.cmd=='r6-caption-drafts':
+        from .r6_caption_drafts import prepare_caption_drafts, export_caption_drafts
+        files,report=prepare_caption_drafts(args.inbox,args.draft,args.story_proposal)
+        result={**report,'saved_drafts_dir':None}
+        if args.save:
+            result['saved_drafts_dir']=str(export_caption_drafts(
+                args.inbox,args.draft,args.story_proposal))
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 0
     if args.cmd=='r6-assets':
