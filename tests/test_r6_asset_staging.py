@@ -195,6 +195,37 @@ class R6AssetStagingTests(unittest.TestCase):
             prepare_asset_staging(self.inbox,self.draft,self.proposal,covers)
         self.assertFalse(self.output.exists())
 
+    def test_default_shared_r6_bridge_root_allows_sibling_cover_and_caption_drafts(self):
+        self._add_source_asr()
+        self._plan()
+        shared_root=self.root/'output'/'r6_bridge'
+        with self._cover_mocks():
+            covers=export_cover_drafts(
+                self.inbox,self.draft,self.proposal,self.media,
+                destination_root=shared_root,confirm_review_only=True)
+        captions=export_caption_drafts(
+            self.inbox,self.draft,self.proposal,destination_root=shared_root)
+        # Production defaults place cover/caption/staging folders under the
+        # same root. Neither original folder may be replaced or mutated.
+        cover_manifest=sha256_file(covers/'COVER_DRAFT_MANIFEST.json')
+        caption_manifest=sha256_file(captions/'CAPTION_DRAFT_MANIFEST.json')
+        with patch('ldporto_studio.r6_asset_staging.application_root',
+                   return_value=self.root):
+            staged=save_asset_staging(
+                self.inbox,self.draft,self.proposal,covers,captions_dir=captions)
+            second=save_asset_staging(
+                self.inbox,self.draft,self.proposal,covers,captions_dir=captions)
+        self.assertEqual(staged,second)
+        self.assertEqual(staged.parent,covers.parent)
+        self.assertNotEqual(staged,covers)
+        self.assertNotEqual(staged,captions)
+        self.assertEqual(sha256_file(covers/'COVER_DRAFT_MANIFEST.json'),cover_manifest)
+        self.assertEqual(sha256_file(captions/'CAPTION_DRAFT_MANIFEST.json'),caption_manifest)
+        report=audit_asset_bindings(
+            self.inbox,self.draft,self.proposal,staged/BINDINGS_NAME,staged)
+        self.assertEqual(report['assets_verified'],9)
+        self.assertFalse(report['human_approved'])
+
     def test_destination_over_original_inbox_is_refused(self):
         covers,_=self._source_artifacts()
         unsafe=self.inbox/'unsafe_output'

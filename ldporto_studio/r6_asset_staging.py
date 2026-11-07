@@ -202,13 +202,6 @@ def save_asset_staging(inbox, draft, story_proposal, covers_dir,
         raise ValueError('Nenhum asset existente para consolidar')
     root = (Path(destination_root).expanduser().resolve() if destination_root
             else application_root() / 'output' / 'r6_bridge')
-    protected = [Path(inbox).expanduser().resolve(),
-                 Path(covers_dir).expanduser().resolve()]
-    if captions_dir is not None:
-        protected.append(Path(captions_dir).expanduser().resolve())
-    for p in protected:
-        if root == p or root.is_relative_to(p) or p.is_relative_to(root):
-            raise ValueError('Destino de staging sobrepõe originais R6/rascunhos')
     out_root = root / report['provenance']['source_sha256'][:16]
     identity = {
         'source': report['provenance'], 'files': [
@@ -217,6 +210,17 @@ def save_asset_staging(inbox, draft, story_proposal, covers_dir,
         'caption_manifest_sha256': report['caption_manifest_sha256'],
     }
     destination = out_root / ('ASSETS_R6_STAGING_' + fingerprint(identity)[:20])
+    # Covers, captions and staging are distinct siblings under output/r6_bridge
+    # in the normal GUI workflow. Reject only paths where the actual staging
+    # directory would overlap a source directory, not their shared ancestor.
+    protected = [Path(inbox).expanduser().resolve(),
+                 Path(covers_dir).expanduser().resolve()]
+    if captions_dir is not None:
+        protected.append(Path(captions_dir).expanduser().resolve())
+    for original in protected:
+        if (destination == original or destination.is_relative_to(original)
+                or original.is_relative_to(destination)):
+            raise ValueError('Destino de staging sobrepõe originais R6/rascunhos')
     if destination.exists():
         return _check_existing(destination, report)
     out_root.mkdir(parents=True, exist_ok=True)
