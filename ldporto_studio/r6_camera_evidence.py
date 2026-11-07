@@ -18,7 +18,8 @@ MEMBER = "camera/shared_camera_handoff.json"
 
 def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_height):
     """Return explicit 9:16 source-relative regions, or a documented fallback."""
-    result={"trusted_regions":[],"evidence_status":"NO_R6_CAMERA_EVIDENCE",
+    result={"trusted_regions":[],"review_regions":[],
+            "evidence_status":"NO_R6_CAMERA_EVIDENCE",
             "source":"ANALYZER_R6_CANONICAL"}
     if inbox is None:
         return result
@@ -53,13 +54,21 @@ def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_h
         return {**result,"evidence_status":"SOURCE_ALREADY_PORTRAIT",
                 "source_zip_sha256":inspected["zip_sha256"]}
     regions=[]
+    review=[]
     for row in handoff.get("segments",[]):
-        if not isinstance(row,dict) or row.get("recommended_composition")!="FOCUS_PERSON_9X16":
+        if not isinstance(row,dict):
             continue
         evidence=row.get("evidence") or {}
+        safe=(row.get("recommended_composition")=="FOCUS_PERSON_9X16"
+              and evidence.get("crop_geometrically_valid") is True)
+        # Geometry can be useful for an EDITORIAL PROPOSAL even when the
+        # Analyzer could not certify a crop. Never promote such a segment.
+        proposed=(row.get("layout")=="single_person" or
+                  row.get("composition_intent")=="FOCUS_PERSON_9X16")
+        if not (safe or proposed):
+            continue
         rect=((row.get("crop") or {}).get("rect_end"))
-        if (evidence.get("crop_geometrically_valid") is not True or
-                not isinstance(rect,dict) or
+        if (not isinstance(rect,dict) or
                 not all(isinstance(rect.get(k),(int,float)) and
                         math.isfinite(rect[k]) for k in ("x","y","width","height"))):
             continue
@@ -105,8 +114,17 @@ def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_h
         if len(points)>=2:
             region["camera_points"]=points
             region["tracking"]="SOURCE_DIRECTOR_HORIZONTAL_KEYFRAMES"
-        regions.append(region)
+        if safe:
+            regions.append(region)
+        else:
+            region["source"]="ANALYZER_R6_SOLO_REVIEW_REQUIRED"
+            region["crop_geometrically_valid"]=False
+            review.append(region)
     regions=sorted(regions,key=lambda r:(r["start"],r["end"]))
+    # At most 8 long editorial suggestions: cap graph size and preserve
+    # certified segments. Shorter ambiguous suggestions remain unselected.
+    review=sorted(review,key=lambda r:r["end"]-r["start"],reverse=True)[:8]
+    review=sorted(review,key=lambda r:(r["start"],r["end"]))
     valid=[]
     for row in regions:
         if valid and row["start"]<valid[-1]["end"]-0.001:
@@ -116,7 +134,9 @@ def read_safe_r6_camera(inbox, source_sha256, start, end, source_width, source_h
                     "handoff_sha256":sha256(data).hexdigest()}
         valid.append(row)
     return {"trusted_regions":valid[:24],
+            "review_regions":review,
             "evidence_status":"SAFE_SOURCE_BOUND_SEGMENTS" if valid else
+                              "SOLO_REVIEW_PROPOSALS_ONLY" if review else
                               "NO_VERIFIED_R6_SOLO_REGIONS",
             "source":"ANALYZER_R6_CANONICAL",
             "source_zip_sha256":inspected["zip_sha256"],
