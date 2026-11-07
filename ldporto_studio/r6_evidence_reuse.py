@@ -173,13 +173,15 @@ def _check_existing(folder, report):
 def export_r6_evidence(inbox, draft, *, destination_root=None):
     """Explicit extraction; stable destination, no overwrites, original ZIP read-only."""
     archive_path, report = _verified_evidence(inbox, draft)
-    if not report['files']:
-        raise ValueError('Nenhuma evidência reutilizável no ZIP R6; não criar pasta vazia')
     root = (Path(destination_root).expanduser().resolve() if destination_root
             else application_root() / 'output' / 'r6_bridge')
     input_dir = Path(inbox).expanduser().resolve()
+    # Validate destination safety first, even when the source has no reusable
+    # evidence. Unsafe paths must never be masked by an empty-source error.
     if root == input_dir or root.is_relative_to(input_dir) or input_dir.is_relative_to(root):
         raise ValueError('Destino sobrepõe a entrada R6')
+    if not report['files']:
+        raise ValueError('Nenhuma evidência reutilizável no ZIP R6; não criar pasta vazia')
     root = root / report['provenance']['source_sha256'][:16]
     destination = root / ('EVIDENCE_R6_' + fingerprint(report)[:20])
     if destination.exists():

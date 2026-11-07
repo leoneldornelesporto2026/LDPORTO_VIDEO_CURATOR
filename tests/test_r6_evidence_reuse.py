@@ -176,6 +176,19 @@ class R6EvidenceReuseTests(unittest.TestCase):
         self.assertIn('export_r6_evidence(',source)
 
     def test_rejects_export_into_original_inbox(self):
+        # Even if the R6 has no extractable evidence, an unsafe destination
+        # must be refused before the empty-inventory check.
         draft=self._draft()
         with self.assertRaisesRegex(ValueError,'sobrepõe'):
             export_r6_evidence(self.inbox,draft,destination_root=self.inbox)
+        self.assertFalse((self.inbox/'EVIDENCE_REUSE_MANIFEST.json').exists())
+
+    def test_rejects_export_inside_inbox_with_real_evidence(self):
+        self._add_real_evidence()
+        draft=self._draft()
+        before=self.zip.read_bytes()
+        unsafe=self.inbox/'should_never_be_created'
+        with self.assertRaisesRegex(ValueError,'sobrepõe'):
+            export_r6_evidence(self.inbox,draft,destination_root=unsafe)
+        self.assertFalse(unsafe.exists())
+        self.assertEqual(self.zip.read_bytes(),before)
